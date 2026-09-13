@@ -133,7 +133,7 @@
 .fig__pin--row:hover span{translate:0 0}
 @media (max-width:1180px){.fig__pin--row{display:none}}
 
-.fig__pin--card{top:-12px; right:-12px; pointer-events:auto}
+.fig__pin--card{top:14px; right:14px; pointer-events:auto}
 .fig__pin--card span{left:auto; right:36px; top:-2px; translate:4px 0}
 .fig__pin--card:hover span{translate:0 0}
 @media (max-width:860px){.fig__pin--card{display:none}}
@@ -232,19 +232,21 @@
 }
 
 /* ---------- the cards ---------- */
-/* Two up, each in its own hairline box. A boxed card gives the numeral,
-   the heading and its line a container to sit in, which the open rows
-   never had — they relied on the rule below them to feel finished.
-   Hairline and 4px radius, no shadow: the house rules still hold.     */
+/* One box, six panes. Six floating boxes read as six separate things;
+   the beliefs are one set, so they share a frame and are divided by a
+   hairline instead of a gap. The dividers are the grid gap itself: the
+   container's hairline shows through a 1px gutter, so partitions never
+   double up and the last row needs no special case.                   */
 .cards{
   display:grid; grid-template-columns:repeat(2, 1fr);
-  gap:clamp(14px, 1.4vw, 22px);
+  gap:1px; background:var(--hairline);
+  border:1px solid var(--hairline); border-radius:var(--radius-card);
+  overflow:hidden;                /* squares the panes inside the radius */
 }
 .card{
   position:relative;
   display:grid; align-content:start; gap:12px;
   padding:clamp(24px, 2.4vw, 40px);
-  border:1px solid var(--hairline); border-radius:var(--radius-card);
   background:var(--bg);
 }
 .card__n{

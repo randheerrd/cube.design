@@ -57,21 +57,22 @@ html[data-mode="edition"] main{display:block; padding:0}
 .ed:first-child{border-top:0}
 .ed__in{max-width:var(--ed-max); margin-inline:auto}
 
-/* Section head: a mono marker on the left, the heading beside it.
-   Below 900px the marker sits above instead of alongside.            */
+/* Section head: the marker on its own line, the heading flush beneath it.
+   Everything starts at the same left edge, so the page has one margin
+   rather than a label column and a content column.                    */
 .ed__head{
-  display:grid; grid-template-columns:minmax(120px, 1fr) 3fr;
-  gap:clamp(20px, 3vw, 56px); align-items:start;
+  display:grid; grid-template-columns:1fr;
   margin-bottom:clamp(36px, 5vh, 72px);
 }
 .ed__label{
   margin:0; font-family:var(--mono); font-size:var(--ed-mark);
   letter-spacing:.02em; color:var(--ed-dim2); text-transform:uppercase;
-  padding-top:.5em;
 }
+/* Room for the frame chip, which hangs above the heading it names. */
+.ed__head > .ed__label{margin-bottom:clamp(46px, 6vh, 58px)}
 .ed__h{
   margin:0; font-size:var(--ed-h2); font-weight:500; line-height:1.04;
-  letter-spacing:var(--ed-t1); max-width:20ch;
+  letter-spacing:var(--ed-t1); max-width:24ch;
 }
 /* ---------- hero band ---------- */
 .ed--hero{
@@ -103,10 +104,8 @@ html[data-mode="edition"] main{display:block; padding:0}
 /* ---------- narrative band ---------- */
 /* Single column, held to a reading measure and offset into the grid so
    it lines up with the headings above it rather than the page edge.  */
-.ed-note{
-  display:grid; grid-template-columns:minmax(120px, 1fr) 3fr;
-  gap:clamp(20px, 3vw, 56px); align-items:start;
-}
+.ed-note{display:grid; grid-template-columns:1fr}
+.ed-note > .ed__label{margin-bottom:22px}
 .ed-note__body{max-width:64ch; display:grid; gap:20px}
 .ed-note__body p{
   margin:0; font-size:var(--ed-lead); line-height:1.55;
@@ -184,6 +183,7 @@ html[data-mode="edition"] main{display:block; padding:0}
 
 /* ---------- closing ---------- */
 .ed-cta{display:grid; gap:clamp(24px, 4vh, 44px); justify-items:start}
+.ed-cta > .ed__label{margin-bottom:clamp(22px, 3vh, 30px)}
 .ed-cta__h{
   margin:0; font-size:var(--ed-h2); font-weight:500; line-height:1.05;
   letter-spacing:var(--ed-t1); max-width:18ch;
@@ -212,8 +212,6 @@ html[data-mode="edition"] .reveal{transform:translateY(16px)}
   .ed-grid--3 > .ed-item:nth-child(3){border-top:1px solid var(--hairline)}
 }
 @media (max-width:900px){
-  .ed__head,.ed-note{grid-template-columns:1fr; gap:14px}
-  .ed__label{padding-top:0}
 }
 @media (max-width:640px){
   .ed-grid,.ed-grid--2{grid-template-columns:1fr}
