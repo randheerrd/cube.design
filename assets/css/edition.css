@@ -303,18 +303,3 @@ html[data-mode="edition"] .reveal{transform:translateY(16px)}
   margin:0; font-size:var(--ed-meta); line-height:1.55; letter-spacing:0;
   color:var(--ed-dim);
 }
-
-/* ---------- ownership, three ways ---------- */
-.ed-own{
-  display:grid; grid-template-columns:repeat(3, 1fr);
-  gap:clamp(16px, 2vw, 40px); margin:0;
-}
-.ed-own > div{display:grid; gap:5px}
-.ed-own dt{
-  font-family:var(--mono); font-size:var(--ed-mark); letter-spacing:.02em;
-  text-transform:uppercase; color:var(--ed-dim2);
-}
-.ed-own dd{
-  margin:0; font-size:var(--ed-meta); line-height:1.5; letter-spacing:0; color:var(--ink);
-}
-@media (max-width:760px){.ed-own{grid-template-columns:1fr; gap:12px}}

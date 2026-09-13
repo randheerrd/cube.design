@@ -1,0 +1,247 @@
+/* ============================================================
+   studio.css — the landing page's design-tool furniture
+   Loaded only for slugs in build.py's STUDIO set, on top of
+   edition.css. Everything is scoped to .page-index.
+
+   The conceit: the page looks like a file someone has open. A
+   column grid showing through, frames with their names hanging
+   off the corner, a selection with handles and a size chip,
+   redline measurements, comment pins, a couple of collaborators'
+   cursors — and rubber stamps that press in as you reach them.
+
+   All of it is drawn from scratch in the site's own palette.
+   Nothing here is chrome borrowed from a particular product; it
+   is the shared vocabulary of any drawing tool, in our orange.
+   ============================================================ */
+
+.page-index main{background:var(--bg)}
+
+/* ---------- column grid showing through ---------- */
+/* Twelve columns, barely there. Only two bands wear it, so it reads
+   as "the grid is on" rather than as wallpaper. */
+.gridov{
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+  max-width:var(--ed-max); margin-inline:auto;
+  display:grid; grid-template-columns:repeat(12, 1fr);
+  column-gap:clamp(12px, 1.6vw, 24px);
+}
+.gridov i{display:block; background:color-mix(in srgb, var(--accent) 6%, transparent)}
+@supports not (background: color-mix(in srgb, red 5%, transparent)){
+  .gridov i{background:rgba(255,81,0,.05)}
+}
+.gridov b{
+  position:absolute; top:6px; left:0; font-family:var(--mono);
+  font-size:10px; font-weight:400; color:var(--ed-dim2); opacity:.7;
+}
+@media (max-width:900px){.gridov{display:none}}
+
+/* ---------- a frame, with its name hanging off the corner ---------- */
+.fig{position:relative}
+.fig__name{
+  position:absolute; top:-21px; left:0; margin:0;
+  font-family:var(--mono); font-size:11px; letter-spacing:.02em;
+  color:var(--accent); white-space:nowrap; pointer-events:none;
+}
+.fig__name::before{content:"◇ "; opacity:.7}
+
+/* ---------- a selection: outline, four handles, a size chip ---------- */
+.fig--sel{outline:1px solid var(--accent); outline-offset:10px}
+.fig__h{position:absolute; width:7px; height:7px; background:var(--bg);
+  border:1px solid var(--accent); border-radius:1px; pointer-events:none}
+.fig__h--tl{top:-14px; left:-14px}
+.fig__h--tr{top:-14px; right:-14px}
+.fig__h--bl{bottom:-14px; left:-14px}
+.fig__h--br{bottom:-14px; right:-14px}
+.fig__dim{
+  position:absolute; bottom:-30px; left:50%; translate:-50% 0;
+  padding:3px 7px; border-radius:2px; background:var(--accent); color:var(--on-accent);
+  font-family:var(--mono); font-size:10px; letter-spacing:.02em; white-space:nowrap;
+  pointer-events:none;
+}
+
+/* The handles wink on as the frame arrives — a selection being made. */
+.fig__h,.fig__dim{opacity:0; transition:opacity .3s ease}
+.reveal.is-in .fig__h{opacity:1}
+.reveal.is-in .fig__h--tr{transition-delay:.08s}
+.reveal.is-in .fig__h--br{transition-delay:.16s}
+.reveal.is-in .fig__h--bl{transition-delay:.24s}
+.reveal.is-in .fig__dim{opacity:1; transition-delay:.32s}
+
+/* ---------- a comment pin ---------- */
+.fig__pin{
+  position:absolute; display:grid; place-items:center;
+  width:26px; height:26px; border-radius:50% 50% 50% 3px;
+  background:var(--accent); color:var(--on-accent);
+  font-family:var(--mono); font-size:11px; line-height:1;
+  cursor:default;
+}
+.fig__pin::after{
+  content:""; position:absolute; inset:-6px; border-radius:inherit;
+  border:1px solid var(--accent); opacity:0;
+  animation:pinping 3.4s cubic-bezier(.2,.7,.3,1) infinite;
+}
+@keyframes pinping{
+  0%{opacity:.6; scale:.8} 55%,100%{opacity:0; scale:1.25}
+}
+.fig__pin span{
+  position:absolute; left:34px; top:2px; padding:5px 9px; border-radius:3px;
+  background:var(--ink); color:var(--bg); font-size:11px; letter-spacing:0;
+  white-space:nowrap; opacity:0; translate:-4px 0; pointer-events:none;
+  transition:opacity .22s ease, translate .22s ease;
+}
+.fig__pin:hover span{opacity:1; translate:0 0}
+
+/* ---------- a collaborator's cursor ---------- */
+.cur{position:absolute; z-index:3; pointer-events:none; display:flex; align-items:flex-start}
+.cur svg{width:17px; height:17px; display:block; fill:var(--accent)}
+.cur b{
+  margin:11px 0 0 -2px; padding:3px 8px; border-radius:3px;
+  background:var(--accent); color:var(--on-accent);
+  font-family:var(--mono); font-size:10px; font-weight:400; letter-spacing:.02em;
+  white-space:nowrap;
+}
+.cur--b svg{fill:var(--ink)}
+.cur--b b{background:var(--ink); color:var(--bg)}
+.cur--1{animation:curdrift1 17s ease-in-out infinite}
+.cur--2{animation:curdrift2 23s ease-in-out infinite}
+@keyframes curdrift1{
+  0%,100%{translate:0 0}  30%{translate:52px 26px}
+  55%{translate:14px 58px} 80%{translate:70px 8px}
+}
+@keyframes curdrift2{
+  0%,100%{translate:0 0}  25%{translate:-44px 34px}
+  60%{translate:-10px -22px} 85%{translate:-58px 12px}
+}
+
+/* ---------- redline measurement ---------- */
+.meas{
+  position:absolute; display:flex; align-items:center; gap:6px;
+  font-family:var(--mono); font-size:10px; color:var(--accent); pointer-events:none;
+}
+.meas::before,.meas::after{content:""; flex:1 1 auto; height:1px; background:var(--accent); opacity:.5}
+.meas i{
+  position:absolute; top:-3px; width:1px; height:7px; background:var(--accent); opacity:.5;
+  font-style:normal;
+}
+.meas i:first-of-type{left:0}
+.meas i:last-of-type{right:0}
+
+/* ---------- the stamp ---------- */
+/* Pressed on, not faded in: it comes down big and crooked and settles. */
+.stamp{
+  display:inline-block; padding:9px 15px 8px;
+  border:2px solid var(--accent); border-radius:3px; color:var(--accent);
+  font-family:var(--mono); font-size:12px; letter-spacing:.16em; text-transform:uppercase;
+  rotate:-7deg; opacity:0;
+}
+.stamp em{display:block; font-style:normal; font-size:9px; opacity:.75; letter-spacing:.1em}
+.reveal.is-in .stamp{animation:stampdown .52s cubic-bezier(.2,1.5,.4,1) .15s forwards}
+@keyframes stampdown{
+  0%{opacity:0; scale:1.85; rotate:-24deg}
+  55%{opacity:1; scale:.95; rotate:-5deg}
+  100%{opacity:1; scale:1; rotate:-7deg}
+}
+.stamp--sq{rotate:5deg}
+.reveal.is-in .stamp--sq{animation-name:stampdown2}
+@keyframes stampdown2{
+  0%{opacity:0; scale:1.85; rotate:20deg}
+  55%{opacity:1; scale:.95; rotate:3deg}
+  100%{opacity:1; scale:1; rotate:5deg}
+}
+
+/* ---------- the compact index rows ---------- */
+/* The blog-index shape: number, title, one line, and a tag. A whole
+   chapter of the handbook fits in a screen and still scans.        */
+.rows{display:grid; border-top:1px solid var(--hairline)}
+.rowitem{
+  display:grid; grid-template-columns:62px minmax(0, 1.15fr) minmax(0, 1.6fr) auto;
+  gap:clamp(14px, 2vw, 40px); align-items:baseline;
+  padding:20px 0; border-bottom:1px solid var(--hairline);
+  position:relative; text-decoration:none; color:inherit;
+}
+.rowitem__n{
+  font-family:var(--mono); font-size:var(--ed-mark); color:var(--accent);
+}
+.rowitem__t{
+  margin:0; font-size:clamp(17px, 1.5vw, 22px); font-weight:500; line-height:1.2;
+  letter-spacing:var(--ed-t1);
+}
+.rowitem__d{
+  margin:0; font-size:var(--ed-meta); line-height:1.55; letter-spacing:0; color:var(--ed-dim);
+}
+.rowitem__tag{
+  font-family:var(--mono); font-size:10px; letter-spacing:.02em; text-transform:uppercase;
+  color:var(--ed-dim2); white-space:nowrap;
+}
+/* A hairline that wipes across the row — the only hover it needs. */
+.rowitem::after{
+  content:""; position:absolute; left:0; bottom:-1px; height:1px; width:0;
+  background:var(--accent); transition:width .45s cubic-bezier(.22,1,.36,1);
+}
+.rowitem:hover::after{width:100%}
+.rows:hover .rowitem{opacity:.5; transition:opacity .25s ease}
+.rows:hover .rowitem:hover{opacity:1}
+@media (max-width:860px){
+  .rowitem{grid-template-columns:46px 1fr; row-gap:6px}
+  .rowitem__d{grid-column:2}
+  .rowitem__tag{grid-column:2}
+}
+
+/* ---------- the process strip ---------- */
+/* Five phases on a rule with the gates drawn between them, measured
+   like a redline because the gaps are the point.                    */
+.strip{
+  display:grid; grid-template-columns:repeat(5, 1fr);
+  gap:clamp(12px, 1.6vw, 28px); position:relative; padding-top:34px;
+}
+.strip::before{
+  content:""; position:absolute; top:8px; left:0; right:0; height:1px;
+  background:var(--hairline);
+}
+.step{position:relative; display:grid; gap:9px; align-content:start}
+.step::before{
+  content:""; position:absolute; top:-30px; left:0;
+  width:9px; height:9px; border-radius:50%;
+  background:var(--bg); border:1px solid var(--ink);
+}
+.step--last::before{background:var(--accent); border-color:var(--accent)}
+.step__n{font-family:var(--mono); font-size:var(--ed-mark); color:var(--ed-dim2)}
+.step__t{
+  margin:0; font-size:clamp(18px, 1.7vw, 26px); font-weight:500; line-height:1.1;
+  letter-spacing:var(--ed-t1);
+}
+.step__g{
+  margin:0; padding-left:12px; border-left:2px solid var(--accent);
+  font-size:var(--ed-meta); line-height:1.5; letter-spacing:0; color:var(--ed-dim);
+}
+.step__g b{
+  display:block; font-family:var(--mono); font-size:10px; font-weight:400;
+  letter-spacing:.02em; text-transform:uppercase; color:var(--accent); margin-bottom:3px;
+}
+@media (max-width:900px){
+  .strip{grid-template-columns:1fr; gap:26px; padding-top:0}
+  .strip::before{display:none}
+  .step::before{position:static; margin-bottom:4px}
+}
+
+/* ---------- band intro for the landing page ---------- */
+.page-index .ed{border-top:1px solid var(--hairline)}
+.page-index .ed--grid{overflow:hidden}
+.page-index .ed--grid > .ed__in{position:relative; z-index:1}
+
+/* The handbook masthead: a blog's own byline row. */
+.mast{
+  display:flex; flex-wrap:wrap; align-items:center; gap:10px 22px;
+  font-family:var(--mono); font-size:var(--ed-mark); letter-spacing:.02em;
+  color:var(--ed-dim2); text-transform:uppercase;
+}
+.mast span{display:inline-flex; align-items:center; gap:8px}
+.mast span::before{
+  content:""; width:4px; height:4px; border-radius:50%; background:var(--accent);
+}
+
+@media (prefers-reduced-motion:reduce){
+  .cur--1,.cur--2,.fig__pin::after{animation:none}
+  .stamp{opacity:1; animation:none !important}
+  .rowitem::after,.rows:hover .rowitem{transition:none}
+}

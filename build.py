@@ -75,7 +75,15 @@ INTERNAL_PAGES = {"internal"}
 # pairing, numbered sections, a restrained 12-64px scale. They load
 # edition.css / edition.js on top of the usual pair and default to the dark
 # theme; a stored theme preference still wins. Everything else is untouched.
-EDITION = {"philosophy", "principles", "process"}
+EDITION = {"index", "philosophy", "principles", "process"}
+
+# Of those, the ones that default to the dark ground. The landing page
+# stays light so its first fold is untouched.
+DARK = {"philosophy", "principles", "process"}
+
+# The landing page also gets the design-tool furniture: column grids,
+# frame labels, selection boxes, comment pins, stamps.
+STUDIO = {"index"}
 
 
 EDITION_HEAD = (
@@ -83,6 +91,7 @@ EDITION_HEAD = (
     '?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">\n'
     '<link rel="stylesheet" href="assets/css/edition.css?v={v}">'
 )
+STUDIO_HEAD = '<link rel="stylesheet" href="assets/css/studio.css?v={v}">'
 EDITION_JS = '<script src="assets/js/edition.js?v={v}"></script>'
 
 
@@ -104,7 +113,8 @@ def asset_version():
     invisible behind a cached copy."""
     h = hashlib.sha256()
     for rel in ("css/site.css", "js/site.js",
-                "css/edition.css", "js/edition.js"):
+                "css/edition.css", "js/edition.js",
+                "css/studio.css"):
         h.update((ROOT / "assets" / rel).read_bytes())
     return h.hexdigest()[:8]
 
@@ -125,7 +135,7 @@ def page_mode(slug):
 def page_theme(slug):
     """Default theme. Only a default — the head script still lets a stored
     preference override it, so the toggle keeps working everywhere."""
-    return "dark" if slug in EDITION else "light"
+    return "dark" if slug in DARK else "light"
 
 
 def build():
@@ -158,7 +168,8 @@ def build():
                 .replace("{{MODE}}", page_mode(slug))
                 .replace("{{THEME}}", page_theme(slug))
                 .replace("{{EDITION_HEAD}}",
-                         EDITION_HEAD.format(v=version) if slug in EDITION else "")
+                         (EDITION_HEAD.format(v=version) if slug in EDITION else "")
+                         + ("\n" + STUDIO_HEAD.format(v=version) if slug in STUDIO else ""))
                 .replace("{{EDITION_JS}}",
                          EDITION_JS.format(v=version) if slug in EDITION else "")
                 .replace("{{ASSET_V}}", version)
