@@ -16,41 +16,6 @@
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------------------------------------------------------- */
-  /* Counters. The suffix stays pinned while the figure climbs, so
-     "+" and "%" never look like part of the number.              */
-  function initCount() {
-    var nums = document.querySelectorAll('[data-count]');
-    if (!nums.length) return;
-
-    function run(el) {
-      var to = parseFloat(el.getAttribute('data-count'));
-      if (isNaN(to)) return;
-      var suffix = el.getAttribute('data-suffix') || '';
-      if (reduced) { el.textContent = to + suffix; return; }
-
-      var t0 = 0, dur = 1100;
-      requestAnimationFrame(function step(t) {
-        if (!t0) t0 = t;
-        var p = Math.min((t - t0) / dur, 1);
-        var e = 1 - Math.pow(1 - p, 3);          /* ease-out cubic */
-        el.textContent = Math.round(to * e) + suffix;
-        if (p < 1) requestAnimationFrame(step);
-      });
-    }
-
-    if (!('IntersectionObserver' in window)) {
-      for (var j = 0; j < nums.length; j++) run(nums[j]);
-      return;
-    }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { run(e.target); io.unobserve(e.target); }
-      });
-    }, { rootMargin: '0px 0px -15% 0px' });
-    for (var i = 0; i < nums.length; i++) io.observe(nums[i]);
-  }
-
-  /* ---------------------------------------------------------- */
   /* The contents run under the hero and the menu drop-down. Real anchors,
      so both work with JS off; this only adds easing and a focus handoff. */
   function initAnchors() {
@@ -69,6 +34,5 @@
     })(links[i]);
   }
 
-  initCount();
   initAnchors();
 })();

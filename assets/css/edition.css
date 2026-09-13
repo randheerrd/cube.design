@@ -203,26 +203,6 @@ html[data-mode="edition"] main{display:block; padding:0}
   line-height:1.12; letter-spacing:var(--ed-t1); color:var(--ink);
 }
 
-/* ---------- stats bar ---------- */
-.ed-stats{
-  display:grid; grid-template-columns:repeat(4, 1fr);
-  gap:clamp(20px, 3vw, 48px);
-}
-.ed-stat{
-  display:grid; gap:10px; align-content:start;
-  padding-top:22px; border-top:1px solid var(--hairline);
-}
-.ed-stat__n{
-  font-size:clamp(38px, 4.2vw, 64px); font-weight:500; line-height:1;
-  letter-spacing:-0.05em; font-variant-numeric:tabular-nums;
-}
-.ed-stat__n em{font-style:normal; color:var(--accent)}
-.ed-stat__l{font-size:var(--ed-body); letter-spacing:var(--ed-t2)}
-.ed-stat__c{
-  font-family:var(--mono); font-size:var(--ed-mark); letter-spacing:.02em;
-  color:var(--ed-dim2); text-transform:uppercase;
-}
-
 /* ---------- the statement ---------- */
 /* One band that drops the grid entirely and just sets a sentence large.
    Inverted, so it reads as a full stop between sections.             */
@@ -271,7 +251,6 @@ html[data-mode="edition"] .reveal{transform:translateY(16px)}
 @media (max-width:1080px){
   .ed-grid{grid-template-columns:repeat(2, 1fr)}
   .ed-grid--3 > .ed-item:nth-child(3){border-top:1px solid var(--hairline)}
-  .ed-stats{grid-template-columns:repeat(2, 1fr)}
 }
 @media (max-width:900px){
   .ed__head,.ed-note,.ed-def{grid-template-columns:1fr; gap:14px}
@@ -279,7 +258,7 @@ html[data-mode="edition"] .reveal{transform:translateY(16px)}
   .ed-def{gap:8px}
 }
 @media (max-width:640px){
-  .ed-grid,.ed-grid--2,.ed-stats{grid-template-columns:1fr}
+  .ed-grid,.ed-grid--2{grid-template-columns:1fr}
   .ed-grid:hover > .ed-item{opacity:1}
 }
 @media (prefers-reduced-motion:reduce){

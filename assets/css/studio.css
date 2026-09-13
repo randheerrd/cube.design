@@ -202,43 +202,33 @@
 }
 
 /* ---------- the index rows ---------- */
-/* A statement of what we follow, not a manual: the heading is the whole
-   row, and the heading alone is the link. Nothing else is clickable, so
-   there is no ambiguity about what a click does.                       */
+/* Nothing here is clickable. The page is a statement of what we follow,
+   so the row carries its own line rather than sending you off to find it,
+   and there are no hover states pretending otherwise.                  */
 .rows{display:grid; border-top:1px solid var(--hairline)}
 .rowitem{
-  display:grid; grid-template-columns:64px 1fr;
-  gap:clamp(14px, 2vw, 40px); align-items:baseline;
-  padding:clamp(15px, 1.7vh, 24px) 0; border-bottom:1px solid var(--hairline);
-  transition:opacity .25s ease;
+  display:grid; grid-template-columns:64px minmax(0, 1.05fr) minmax(0, 1.35fr);
+  gap:clamp(14px, 2vw, 48px); align-items:baseline;
+  padding:clamp(16px, 1.9vh, 26px) 0; border-bottom:1px solid var(--hairline);
 }
 .rowitem__n{
   font-family:var(--mono); font-size:var(--ed-mark); color:var(--accent);
 }
 .rowitem__t{
-  margin:0; font-size:clamp(20px, 2.1vw, 34px); font-weight:500; line-height:1.14;
+  margin:0; font-size:clamp(19px, 1.9vw, 30px); font-weight:500; line-height:1.15;
   letter-spacing:var(--ed-t1);
 }
-.rowitem__t a{
-  color:inherit; text-decoration:none;
-  background-image:linear-gradient(var(--accent), var(--accent));
-  background-size:0% 1px; background-position:0 100%; background-repeat:no-repeat;
-  transition:background-size .42s cubic-bezier(.22,1,.36,1), color .25s ease;
+.rowitem__d{
+  margin:0; font-size:var(--ed-body); line-height:1.55; letter-spacing:0;
+  color:var(--ed-dim);
 }
-.rowitem__t a:hover{background-size:100% 1px; color:var(--accent)}
-.rowitem__t a:focus-visible{outline:2px solid var(--accent); outline-offset:4px}
-
-/* Hovering one row quiets the others, so a long list still has a focus. */
-.rows:hover > .rowitem{opacity:.45}
-.rows:hover > .rowitem:hover{opacity:1}
-@media (max-width:640px){
-  .rowitem{grid-template-columns:46px 1fr}
-  .rows:hover > .rowitem{opacity:1}
+@media (max-width:860px){
+  .rowitem{grid-template-columns:46px 1fr; row-gap:6px}
+  .rowitem__d{grid-column:2}
 }
 
 /* ---------- the process strip ---------- */
-/* Five names on a rule. The gates live one page down; here the sequence
-   is the whole message.                                               */
+/* Five names on a rule, each with the one thing that has to be true. */
 .strip{
   display:grid; grid-template-columns:repeat(5, 1fr);
   gap:clamp(12px, 1.6vw, 28px); position:relative; padding-top:38px;
@@ -247,7 +237,7 @@
   content:""; position:absolute; top:8px; left:0; right:0; height:1px;
   background:var(--hairline);
 }
-.step{position:relative; display:grid; gap:10px; align-content:start}
+.step{position:relative; display:grid; gap:9px; align-content:start}
 .step::before{
   content:""; position:absolute; top:-34px; left:0;
   width:9px; height:9px; border-radius:50%;
@@ -256,26 +246,17 @@
 .step--last::before{background:var(--accent); border-color:var(--accent)}
 .step__n{font-family:var(--mono); font-size:var(--ed-mark); color:var(--accent)}
 .step__t{
-  margin:0; font-size:clamp(20px, 2.1vw, 34px); font-weight:500; line-height:1.1;
+  margin:0; font-size:clamp(19px, 1.9vw, 30px); font-weight:500; line-height:1.1;
   letter-spacing:var(--ed-t1);
 }
-.step__t a{
-  color:inherit; text-decoration:none;
-  background-image:linear-gradient(var(--accent), var(--accent));
-  background-size:0% 1px; background-position:0 100%; background-repeat:no-repeat;
-  transition:background-size .42s cubic-bezier(.22,1,.36,1), color .25s ease;
+.step__d{
+  margin:0; font-size:var(--ed-meta); line-height:1.5; letter-spacing:0;
+  color:var(--ed-dim);
 }
-.step__t a:hover{background-size:100% 1px; color:var(--accent)}
 @media (max-width:900px){
   .strip{grid-template-columns:1fr; gap:22px; padding-top:0}
   .strip::before{display:none}
   .step::before{position:static; margin-bottom:4px}
-}
-
-/* ---------- the count that hangs off a heading ---------- */
-.cnt{
-  font-family:var(--mono); font-size:.34em; font-weight:400; letter-spacing:.02em;
-  color:var(--ed-dim2); vertical-align:super; margin-left:.3em; top:0;
 }
 
 /* ---------- a rotating ring, for the closing band ---------- */
