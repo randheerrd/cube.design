@@ -232,6 +232,12 @@
       if (menu.dataset.open !== 'true') return;
       if (!menu.contains(e.target) && !navpill.contains(e.target)) setOpen(false);
     });
+
+    /* The menu is a contents list for one page now, so picking a row has to
+       shut it — otherwise it sits over the band you just jumped to. */
+    menu.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('a')) setOpen(false);
+    });
   }
 
   function initTheme() {

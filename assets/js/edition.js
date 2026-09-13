@@ -51,10 +51,11 @@
   }
 
   /* ---------------------------------------------------------- */
-  /* The contents run under the hero. Real anchors, so they work
-     with JS off; this only adds the easing and a focus handoff.  */
+  /* The contents run under the hero and the menu drop-down. Real anchors,
+     so both work with JS off; this only adds easing and a focus handoff. */
   function initAnchors() {
-    var links = document.querySelectorAll('.ed-hero__toc a[href^="#"]');
+    var links = document.querySelectorAll(
+      '.ed-hero__toc a[href^="#"], .menu a[href^="#"]');
     for (var i = 0; i < links.length; i++) (function (a) {
       a.addEventListener('click', function (e) {
         var el = document.getElementById(a.getAttribute('href').slice(1));

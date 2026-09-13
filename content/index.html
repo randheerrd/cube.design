@@ -1,4 +1,4 @@
-  <section class="hero">
+  <section class="hero" id="top">
     <div class="stage" id="stage">
       <div class="cube-rig" id="rig">
         <div class="cube" id="cube"><!-- 6 faces x 9 tiles, injected --></div>
@@ -47,8 +47,8 @@
       <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
     </div>
 
-    <div class="cur cur--1" style="top:16%; right:9%" aria-hidden="true">
-      <svg viewBox="0 0 17 17"><path d="M2 1l13 7.4-5.9 1.4L6.4 16z"/></svg>
+    <div class="cur cur--a cur--1" style="top:15%; right:8%" aria-hidden="true">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path class="cur__p" d="M8 4 L8 32 L14.6 25.8 L19 35.5 L24.2 33.2 L19.9 23.8 L29 23.2 Z"/></svg>
       <b>Priyanka</b>
     </div>
 
@@ -57,7 +57,7 @@
         <p class="ed__label">/ 01 — Philosophy</p>
         <div class="fig reveal">
           <p class="fig__name">beliefs / 6</p>
-          <h2 class="ed__h">What we believe</h2>
+          <h2 class="ed__h">What we believe<sup class="cnt">(6)</sup></h2>
           <p class="ed__sub">Principles tell you what to do. Philosophy tells you why, so you
             can work out what to do when no principle covers the case in front of you.
             <strong>Listed in priority order — when two conflict, the lower number wins.</strong></p>
@@ -123,8 +123,8 @@
 
   <!-- ---------------------------------------------------------- -->
   <section class="ed" id="principles">
-    <div class="cur cur--b cur--2" style="bottom:14%; left:7%" aria-hidden="true">
-      <svg viewBox="0 0 17 17"><path d="M2 1l13 7.4-5.9 1.4L6.4 16z"/></svg>
+    <div class="cur cur--2" style="bottom:13%; left:6%" aria-hidden="true">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path class="cur__p" d="M8 4 L8 32 L14.6 25.8 L19 35.5 L24.2 33.2 L19.9 23.8 L29 23.2 Z"/></svg>
       <b>Arjun</b>
     </div>
 
@@ -133,7 +133,7 @@
         <p class="ed__label">/ 02 — Principles</p>
         <div class="fig reveal">
           <p class="fig__name">rules / 8</p>
-          <h2 class="ed__h">Eight rules with teeth</h2>
+          <h2 class="ed__h">Eight rules with teeth<sup class="cnt">(8)</sup></h2>
           <p class="ed__sub">A principle is only useful if it can lose an argument for you.
             Each carries its own stated exception — <strong>one of the eight has none at
             all.</strong></p>
@@ -212,7 +212,7 @@
         <p class="ed__label">/ 03 — Process</p>
         <div class="fig reveal">
           <p class="fig__name">phases / 5 · gates / 4</p>
-          <h2 class="ed__h">How work moves</h2>
+          <h2 class="ed__h">How work moves<sup class="cnt">(5)</sup></h2>
           <p class="ed__sub">The phases matter less than the gates between them. Each gate has
             an artefact that has to exist before the next phase starts.
             <strong>A ratchet, not a waterfall.</strong></p>
@@ -260,6 +260,11 @@
 
   <!-- ---------------------------------------------------------- -->
   <section class="ed" id="counted">
+    <div class="cur cur--3" style="top:34%; left:46%" aria-hidden="true">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path class="cur__p" d="M8 4 L8 32 L14.6 25.8 L19 35.5 L24.2 33.2 L19.9 23.8 L29 23.2 Z"/></svg>
+      <b>Randheer</b>
+    </div>
+
     <div class="ed__in">
       <div class="ed__head">
         <p class="ed__label">/ By the numbers</p>
@@ -298,7 +303,16 @@
   </section>
 
   <!-- ---------------------------------------------------------- -->
-  <section class="ed" id="more">
+  <section class="ed ed--grid" id="more">
+    <div class="ringwrap" style="--ring:560px; right:5%; top:calc(50% - 280px)"
+         aria-hidden="true">
+      <svg class="ring" viewBox="0 0 200 200">
+        <defs><path id="ringHome"
+          d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+        <text><textPath href="#ringHome">Cite the number, not the feeling — Cube.Design — </textPath></text>
+      </svg>
+    </div>
+
     <div class="ed__in">
       <div class="ed-cta reveal">
         <p class="ed__label">/ Read it properly</p>

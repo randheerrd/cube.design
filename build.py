@@ -65,8 +65,9 @@ PAGES = [
 ]
 
 # Built, but kept out of the menu. "internal" is reached through the footer
-# login; "craft" still lives at craft.html and is referenced from Process.
-HIDDEN = {"internal", "craft"}
+# login; "craft" is referenced from Process; "team" has its own button in the
+# top bar, so it does not need a second entry in the drop-down.
+HIDDEN = {"internal", "craft", "team"}
 
 # Guarded by INTERNAL_PASSWORD rather than SITE_PASSWORD.
 INTERNAL_PAGES = {"internal"}
@@ -95,15 +96,32 @@ STUDIO_HEAD = '<link rel="stylesheet" href="assets/css/studio.css?v={v}">'
 EDITION_JS = '<script src="assets/js/edition.js?v={v}"></script>'
 
 
+# The landing page carries the whole handbook, so the menu is a table of
+# contents for one page rather than a site map. A slug listed here points at
+# its band on index; anything absent still links to its own page.
+ANCHORS = {
+    "index":      "top",
+    "philosophy": "philosophy",
+    "principles": "principles",
+    "process":    "process",
+}
+
+
 def nav_html(current):
     """The pill drop-down. Single source of truth for site navigation."""
     rows = []
     visible = [p for p in PAGES if p[0] not in HIDDEN]
     for i, (slug, label, _, _) in enumerate(visible):
-        cur = ' aria-current="page"' if slug == current else ""
-        rows.append(
-            f'  <a href="{slug}.html"{cur}>{label} <small>{i:02d}</small></a>'
-        )
+        anchor = ANCHORS.get(slug)
+        if anchor:
+            # Same-document fragment on the landing page itself, so the
+            # browser jumps instead of reloading; a full path from anywhere else.
+            href = f"#{anchor}" if current == "index" else f"index.html#{anchor}"
+            cur = ""
+        else:
+            href = f"{slug}.html"
+            cur = ' aria-current="page"' if slug == current else ""
+        rows.append(f'  <a href="{href}"{cur}>{label} <small>{i:02d}</small></a>')
     return "\n".join(rows)
 
 
