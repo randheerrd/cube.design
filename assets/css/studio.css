@@ -125,8 +125,14 @@
   transition:opacity .22s ease, translate .22s ease;
 }
 .fig__pin:hover span{opacity:1; translate:0 0}
-/* On the corner of the card it belongs to, half outside the box, the way
-   a pin sits on the thing it is about. */
+/* Two placements. Beside a row it goes out into the page margin, because
+   a pin that covers the line it annotates is worse than no pin. On a card
+   it sits on the corner, half outside the box. */
+.fig__pin--row{right:-44px; top:50%; translate:0 -50%; pointer-events:auto}
+.fig__pin--row span{left:auto; right:36px; top:-2px; translate:4px 0}
+.fig__pin--row:hover span{translate:0 0}
+@media (max-width:1180px){.fig__pin--row{display:none}}
+
 .fig__pin--card{top:-12px; right:-12px; pointer-events:auto}
 .fig__pin--card span{left:auto; right:36px; top:-2px; translate:4px 0}
 .fig__pin--card:hover span{translate:0 0}
@@ -196,6 +202,33 @@
 @keyframes curdrift4{
   0%,100%{translate:0 0}  35%{translate:38px -18px}
   65%{translate:62px 22px} 88%{translate:12px 30px}
+}
+
+/* ---------- the index rows ---------- */
+/* Nothing here is clickable. The page is a statement of what we follow,
+   so the row carries its own line rather than sending you off to find it,
+   and there are no hover states pretending otherwise.                  */
+.rows{display:grid; border-top:1px solid var(--hairline)}
+.rowitem{
+  display:grid; grid-template-columns:64px minmax(0, 1.05fr) minmax(0, 1.35fr);
+  gap:clamp(14px, 2vw, 48px); align-items:baseline;
+  padding:clamp(16px, 1.9vh, 26px) 0; border-bottom:1px solid var(--hairline);
+  position:relative;
+}
+.rowitem__n{
+  font-family:var(--mono); font-size:var(--ed-mark); color:var(--accent);
+}
+.rowitem__t{
+  margin:0; font-size:clamp(19px, 1.9vw, 30px); font-weight:500; line-height:1.15;
+  letter-spacing:var(--ed-t1);
+}
+.rowitem__d{
+  margin:0; font-size:var(--ed-body); line-height:1.55; letter-spacing:0;
+  color:var(--ed-dim);
+}
+@media (max-width:860px){
+  .rowitem{grid-template-columns:46px 1fr; row-gap:6px}
+  .rowitem__d{grid-column:2}
 }
 
 /* ---------- the cards ---------- */
