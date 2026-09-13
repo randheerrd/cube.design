@@ -101,19 +101,6 @@ html[data-mode="edition"] main{display:block; padding:0}
 .ed-hero__lede strong{color:var(--ink); font-weight:500}
 
 /* A mono run of the page's own contents, sitting under the hero. */
-/* ---------- narrative band ---------- */
-/* Single column, held to a reading measure and offset into the grid so
-   it lines up with the headings above it rather than the page edge.  */
-.ed-note{display:grid; grid-template-columns:1fr}
-.ed-note > .ed__label{margin-bottom:22px}
-.ed-note__body{max-width:64ch; display:grid; gap:20px}
-.ed-note__body p{
-  margin:0; font-size:var(--ed-lead); line-height:1.55;
-  letter-spacing:var(--ed-t2); color:var(--ed-dim);
-}
-.ed-note__body p:first-child{color:var(--ink)}
-.ed-note__body strong{color:var(--ink); font-weight:500}
-
 /* ---------- numbered grid ---------- */
 /* The reference's core move: /01 /02 /03 in mono above a short title
    and a paragraph, on a plain three-column grid with hairlines.      */
@@ -183,7 +170,6 @@ html[data-mode="edition"] main{display:block; padding:0}
 
 /* ---------- closing ---------- */
 .ed-cta{display:grid; gap:clamp(24px, 4vh, 44px); justify-items:start}
-.ed-cta > .ed__label{margin-bottom:clamp(22px, 3vh, 30px)}
 .ed-cta__h{
   margin:0; font-size:var(--ed-h2); font-weight:500; line-height:1.05;
   letter-spacing:var(--ed-t1); max-width:18ch;

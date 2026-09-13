@@ -18,7 +18,7 @@
    labels, artboard bounds. Orange stays the brand: numbers, stamps, the
    ring, links. Nothing is ever both, so you always know whether you are
    looking at the work or at the tool holding it.                        */
-/* --sel draws lines and handles, which carry no text. --sel-ink is the
+/* --sel draws lines and corner marks, which carry no text. --sel-ink is the
    same hue taken dark enough that white type on it clears WCAG AA at the
    11-14px these chips use: #0d99ff would only reach about 3.1:1.        */
 .page-index{--sel:#0d99ff; --sel-ink:#0b72d6}
@@ -71,36 +71,6 @@
   0%{opacity:0; translate:0 8px; scale:.9}
   100%{opacity:1; translate:0 0; scale:1}
 }
-
-/* ---------- a selection: outline, four handles, a size chip ---------- */
-.fig--sel{outline:2px solid var(--sel); outline-offset:12px}
-.fig--sel{opacity:1; animation:none}
-.reveal.is-in.fig--sel{animation:selsnap .3s cubic-bezier(.2,1.3,.4,1) .28s backwards}
-@keyframes selsnap{
-  0%{outline-color:transparent; scale:.992}
-  40%{outline-color:var(--sel)}
-  100%{scale:1}
-}
-.fig__h{position:absolute; width:11px; height:11px; background:var(--bg);
-  border:2px solid var(--sel); border-radius:1px; pointer-events:none}
-.fig__h--tl{top:-17px; left:-17px}
-.fig__h--tr{top:-17px; right:-17px}
-.fig__h--bl{bottom:-17px; left:-17px}
-.fig__h--br{bottom:-17px; right:-17px}
-.fig__dim{
-  position:absolute; bottom:-36px; left:50%; translate:-50% 0;
-  padding:5px 11px 4px; border-radius:4px; background:var(--sel-ink); color:#fff;
-  font-family:var(--mono); font-size:12px; letter-spacing:.02em; white-space:nowrap;
-  pointer-events:none;
-}
-
-/* The handles wink on as the frame arrives — a selection being made. */
-.fig__h,.fig__dim{opacity:0; transition:opacity .3s ease}
-.reveal.is-in .fig__h{opacity:1; transition-delay:.36s}
-.reveal.is-in .fig__h--tr{transition-delay:.44s}
-.reveal.is-in .fig__h--br{transition-delay:.52s}
-.reveal.is-in .fig__h--bl{transition-delay:.6s}
-.reveal.is-in .fig__dim{opacity:1; transition-delay:.68s}
 
 /* ---------- a comment pin ---------- */
 .fig__pin{
@@ -323,18 +293,7 @@
 .page-index .ed--grid{overflow:hidden}          /* only the ring band needs a clip */
 .page-index .ed--grid > .ed__in{position:relative; z-index:1}
 
-/* The handbook masthead: a blog's own byline row. */
-.mast{
-  display:flex; flex-wrap:wrap; align-items:center; gap:10px 22px;
-  font-family:var(--mono); font-size:var(--ed-mark); letter-spacing:.02em;
-  color:var(--ed-dim2); text-transform:uppercase;
-}
-.mast span{display:inline-flex; align-items:center; gap:8px}
-.mast span::before{
-  content:""; width:4px; height:4px; border-radius:50%; background:var(--accent);
-}
-
 @media (prefers-reduced-motion:reduce){
   .cur--1,.cur--2,.cur--3,.cur--4,.cur::before,.ring,.fig__pin::after{animation:none}
-  .fig__name,.fig--sel{opacity:1; animation:none !important}
+  .fig__name{opacity:1; animation:none !important}
 }
