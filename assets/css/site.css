@@ -1,0 +1,1192 @@
+/* ============================================================
+   Cube.Design by GobbleCube — stylesheet
+   Design system per DESIGN-SPEC.md
+   Signature: -6% tracking everywhere, black nav pill, ruler ticks.
+   ============================================================ */
+:root{
+  /* Type */
+  --font: "General Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --tracking-tight: -0.06em;
+
+  --fs-micro: 12px;
+  --fs-nav:   16px;
+  --fs-mark:  14px;
+  --fs-h3:    22px;
+  --fs-h1:    clamp(40px, 7.4vw, 112px);
+  --fs-page:  clamp(34px, 5.4vw, 76px);
+  --fs-sec:   clamp(28px, 4vw, 56px);
+
+  /* Color — light */
+  --bg:        #ffffff;
+  --ink:       #000000;
+  --ink-2:     #808080;
+  --ink-3:     #c9c9c9;
+  --surface:   #000000;
+  --surface-2: #333333;
+  --on-dark:   #ffffff;
+  --accent:    #ff5100;
+  --on-accent: #000000;
+  --hairline:  rgba(0,0,0,.10);
+  --tile-bg:   #f2f2f2;
+  --glass:     rgba(255,255,255,.46);
+
+  /* Geometry */
+  --pill-h: 52px;
+  --radius-pill: 999px;
+  --radius-card: 4px;
+  --gutter: 24px;
+  --ruler-step: 50px;
+
+  /* Cube */
+  --cube: 500px;
+  --cube-half: 250px;
+  --cube-gap: 12px;
+  /* Same size as the outer cube, held just inside it. The 12px inset
+     (6px a side) keeps the glass off the photo panels — coplanar
+     faces would z-fight and flicker as the cube turns. */
+  --cube-inner: calc(var(--cube) - 12px);
+  --cube-inner-half: calc(var(--cube-inner) / 2);
+  /* Derived so the face always solves: 3*cell + 4*gap == cube
+     (three cells, two inner gaps, two edge paddings). Change the
+     gap alone and the grid still fills the face exactly. */
+  --cube-cell: calc((var(--cube) - 4 * var(--cube-gap)) / 3);
+  --cube-scale: 0.63;   /* 60% of 1.05 */
+  --perspective: 2000px;
+}
+:root[data-theme="dark"]{
+  --bg:#0a0a0a; --ink:#ffffff; --ink-2:#6f6f6f; --ink-3:#2e2e2e;
+  --surface:#ffffff; --surface-2:#e4e4e4; --on-dark:#000000;
+  --hairline:rgba(255,255,255,.12); --tile-bg:#161616;
+  --glass:rgba(255,255,255,.20);
+  --dot-rgb:255,255,255;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+html{scroll-behavior:smooth; scroll-padding-top:calc(var(--pill-h) + 48px)}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:var(--font); font-weight:500;
+  letter-spacing:var(--tracking-tight);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  transition:background-color .45s ease, color .45s ease;
+}
+a{color:inherit; text-decoration:none}
+img{display:block; max-width:100%}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+
+/* ============================================================
+   RULER GRID
+   ============================================================ */
+.ruler{position:fixed; inset:0; pointer-events:none; z-index:1; overflow:hidden}
+.ruler__rail{position:absolute; top:0; bottom:0; width:40px}
+.ruler__rail--left{left:0}
+.ruler__rail--right{right:0}
+.tick{position:absolute; left:0; display:flex; align-items:center; gap:6px}
+.tick__line{width:9px; height:1px; background:var(--ink-3)}
+.tick__num{
+  font-size:10px; line-height:1; color:var(--ink-3);
+  font-variant-numeric:tabular-nums; letter-spacing:0;
+  writing-mode:vertical-rl; transform:rotate(180deg);
+}
+.ruler__rail--right .tick{left:auto; right:0; flex-direction:row-reverse}
+
+/* ============================================================
+   TOP CHROME
+   ============================================================ */
+.topbar{
+  position:fixed; top:0; left:0; right:0; z-index:40;
+  height:calc(var(--pill-h) + 36px);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 var(--gutter);
+}
+.wordmark{font-size:var(--fs-mark); font-weight:500; letter-spacing:var(--tracking-tight)}
+
+.navpill{
+  position:absolute; left:50%; transform:translateX(-50%);
+  height:var(--pill-h); display:flex; align-items:center; gap:14px;
+  padding:0 6px 0 18px;
+  background:var(--surface); color:var(--on-dark);
+  border-radius:var(--radius-pill);
+  transition:background-color .45s ease, color .45s ease;
+}
+/* bars + label are one control, so the word "Menu" is clickable too */
+.burger{
+  color:inherit; background:none; border:0; padding:0; cursor:pointer;
+  display:flex; align-items:center; gap:14px;
+  font-family:inherit; font-weight:500;
+}
+.burger__bars{display:grid; gap:5px; width:26px; flex:none}
+.burger__bars span{display:block; height:1.5px; background:currentColor; border-radius:2px; transition:transform .3s ease, opacity .3s ease}
+.navpill.is-open .burger__bars span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.navpill.is-open .burger__bars span:nth-child(2){opacity:0}
+.navpill.is-open .burger__bars span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.navpill__label{font-size:var(--fs-nav); font-weight:500; letter-spacing:var(--tracking-tight); color:inherit}
+.iconbtn{
+  width:34px; height:34px; border-radius:50%;
+  border:1px solid color-mix(in srgb, currentColor 35%, transparent);
+  background:none; color:currentColor; cursor:pointer;
+  display:grid; place-items:center; padding:0;
+}
+.iconbtn svg{width:16px; height:16px}
+.iconbtn .moon{display:none}
+:root[data-theme="dark"] .iconbtn .sun{display:none}
+:root[data-theme="dark"] .iconbtn .moon{display:block}
+.chip{
+  min-width:58px; height:36px; padding:0 16px; border-radius:var(--radius-pill);
+  background:var(--surface-2); color:var(--on-dark);
+  display:grid; place-items:center;
+  font-size:var(--fs-micro); font-variant-numeric:tabular-nums; letter-spacing:0;
+}
+.btn-accent{
+  height:var(--pill-h); padding:0 24px; border-radius:var(--radius-pill);
+  background:var(--accent); color:var(--on-accent);
+  display:inline-grid; place-items:center;
+  font-size:var(--fs-micro); font-weight:400; letter-spacing:0;
+  border:0; cursor:pointer;
+  transition:transform .25s cubic-bezier(.22,1,.36,1);
+}
+.btn-accent:hover{transform:translateY(-2px)}
+
+/* drop-down menu */
+.menu{
+  position:fixed; top:calc(var(--pill-h) + 44px); left:50%; z-index:39;
+  transform:translateX(-50%) translateY(-8px) scale(.98);
+  width:min(420px, calc(100vw - 32px));
+  background:var(--surface); color:var(--on-dark);
+  border-radius:24px; padding:18px;
+  opacity:0; visibility:hidden;
+  transition:opacity .3s ease, transform .3s cubic-bezier(.22,1,.36,1), visibility .3s;
+}
+.menu[data-open="true"]{opacity:1; visibility:visible; transform:translateX(-50%) translateY(0) scale(1)}
+.menu a{display:flex; justify-content:space-between; align-items:baseline; padding:12px 10px; border-radius:12px; font-size:20px}
+.menu a:hover{background:color-mix(in srgb, currentColor 12%, transparent)}
+.menu a[aria-current="page"]{background:color-mix(in srgb, currentColor 12%, transparent)}
+.menu a small{opacity:.5; font-size:12px; letter-spacing:0; font-variant-numeric:tabular-nums}
+
+/* ============================================================
+   HERO + CUBE
+   ============================================================ */
+.hero{position:relative; z-index:2; min-height:100svh; display:grid; align-items:end}
+.stage{
+  position:absolute; inset:calc(var(--pill-h) + 24px) 0 0 0;
+  display:grid; place-items:center;
+  perspective:var(--perspective);
+  z-index:1;
+  cursor:grab;
+  user-select:none; -webkit-user-select:none;
+  touch-action:pan-y;        /* horizontal drag orbits, vertical still scrolls */
+}
+body.is-grabbing, body.is-grabbing .stage{cursor:grabbing}
+body.is-grabbing .face img{transition:none}   /* no lag while being dragged */
+.cube-rig{transform:scale(var(--cube-scale)); will-change:transform}
+.cube{
+  position:relative;
+  width:var(--cube); height:var(--cube);
+  transform-style:preserve-3d;
+  will-change:transform;
+}
+.face{
+  position:absolute; inset:0;
+  display:grid;
+  grid-template-columns:repeat(3, var(--cube-cell));
+  grid-template-rows:repeat(3, var(--cube-cell));
+  gap:var(--cube-gap);
+  padding:var(--cube-gap);
+
+  /* Frosted acrylic backing sheet. Sits behind the tiles on every face,
+     so the gaps read as milky panel instead of a window onto the photos
+     on the far side. The spec called for backface-visibility:visible —
+     deliberately overridden here so rear faces stop showing through. */
+  backface-visibility:hidden;
+  background:
+    linear-gradient(135deg,
+      color-mix(in srgb, var(--bg) 74%, transparent) 0%,
+      color-mix(in srgb, var(--bg) 58%, transparent) 55%,
+      color-mix(in srgb, var(--bg) 70%, transparent) 100%);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--ink) 12%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--bg) 90%, transparent);
+}
+.face img{
+  width:100%; height:100%; object-fit:cover;
+  background:var(--tile-bg);
+  border-radius:2px;
+  position:relative; z-index:1;
+  transition:transform .45s cubic-bezier(.22,1,.36,1);
+  will-change:transform;
+}
+/* lift one tile out of the grid on hover — it overlaps its neighbours
+   rather than pushing them, so the face keeps its geometry */
+.face img:hover{
+  transform:scale(1.42);
+  z-index:5;
+  border-radius:3px;
+}
+.face--f{transform:translateZ(var(--cube-half))}
+.face--b{transform:rotateY(180deg) translateZ(var(--cube-half))}
+.face--r{transform:rotateY(90deg)  translateZ(var(--cube-half))}
+.face--l{transform:rotateY(-90deg) translateZ(var(--cube-half))}
+.face--u{transform:rotateX(90deg)  translateZ(var(--cube-half))}
+.face--d{transform:rotateX(-90deg) translateZ(var(--cube-half))}
+
+/* ---- inner cube ----------------------------------------------
+   A smaller frosted-glass cube suspended inside the photo cube.
+   Unlike the outer faces this one keeps backface-visibility
+   visible, so you see its far walls through its near ones — that
+   double edge is what makes it read as glass rather than a box.
+   Mostly glimpsed through the 12px seams between the tiles.     */
+.inner{position:absolute; inset:0; transform-style:preserve-3d; pointer-events:none}
+.inner__f{
+  position:absolute; top:50%; left:50%;
+  width:var(--cube-inner); height:var(--cube-inner);
+  margin-top:calc(var(--cube-inner-half) * -1);
+  margin-left:calc(var(--cube-inner-half) * -1);
+  backface-visibility:visible;
+  border-radius:2px;
+  /* Orange core bleeding out into frosted white, exactly as in the
+     reference block. Six faces each carry the glow and backface stays
+     visible, so near and far walls overlay — the density builds toward
+     the centre on its own and reads volumetric rather than painted. */
+  background:
+    radial-gradient(circle at 50% 47%,
+      color-mix(in srgb, var(--accent) 82%, transparent) 0%,
+      color-mix(in srgb, var(--accent) 58%, transparent) 26%,
+      color-mix(in srgb, var(--accent) 30%, transparent) 48%,
+      color-mix(in srgb, var(--accent) 10%, transparent) 68%,
+      transparent 84%),
+    linear-gradient(135deg,
+      color-mix(in srgb, var(--glass) 92%, transparent) 0%,
+      var(--glass) 50%,
+      color-mix(in srgb, var(--glass) 88%, transparent) 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.42),
+    inset 0 1px 0 rgba(255,255,255,.55);
+}
+.inner__f--f{transform:translateZ(var(--cube-inner-half))}
+.inner__f--b{transform:rotateY(180deg) translateZ(var(--cube-inner-half))}
+.inner__f--r{transform:rotateY(90deg)  translateZ(var(--cube-inner-half))}
+.inner__f--l{transform:rotateY(-90deg) translateZ(var(--cube-inner-half))}
+.inner__f--u{transform:rotateX(90deg)  translateZ(var(--cube-inner-half))}
+.inner__f--d{transform:rotateX(-90deg) translateZ(var(--cube-inner-half))}
+
+.hero__foot{
+  position:relative; z-index:3;
+  padding:0 var(--gutter) 8vh;
+  display:grid; gap:28px;
+  pointer-events:none;            /* the cube stays reachable underneath */
+}
+.hero__title{
+  margin:0;
+  font-size:var(--fs-h1); font-weight:500;
+  line-height:1; letter-spacing:var(--tracking-tight);
+}
+.hero__title span{display:block}
+.hero__title .muted{color:var(--ink-2)}
+.hero__sub{
+  margin:0; max-width:44ch;
+  font-size:14px; line-height:1.5; letter-spacing:0; color:var(--ink-2);
+}
+.scroll-cue{
+  position:absolute; right:var(--gutter); bottom:8vh; z-index:3;
+  font-size:var(--fs-micro); color:var(--ink-2); letter-spacing:0;
+  writing-mode:vertical-rl;
+}
+
+/* ============================================================
+   PAGE HEADER (interior pages)
+   ============================================================ */
+.pagehead{
+  position:relative; z-index:2; background:var(--bg);
+  padding:calc(var(--pill-h) + 14vh) var(--gutter) 0;
+}
+.eyebrow{
+  display:flex; align-items:center; gap:10px;
+  font-size:var(--fs-micro); letter-spacing:0; color:var(--ink-2);
+  margin:0 0 20px;
+}
+.eyebrow .num{font-variant-numeric:tabular-nums}
+.eyebrow .dot{width:3px; height:3px; border-radius:50%; background:currentColor}
+.pagehead h1{
+  margin:0; max-width:16ch;
+  font-size:var(--fs-page); font-weight:500; line-height:1.02;
+  letter-spacing:var(--tracking-tight);
+}
+.pagehead .lede{
+  margin:28px 0 0; max-width:56ch;
+  font-size:18px; line-height:1.55; letter-spacing:0; color:var(--ink-2);
+}
+.pagehead .rule{margin-top:56px; border:0; border-top:1px solid var(--hairline)}
+
+/* ============================================================
+   SECTIONS + PROSE
+   ============================================================ */
+.section{position:relative; z-index:2; padding:12vh var(--gutter); background:var(--bg)}
+.section--tight{padding:8vh var(--gutter)}
+.section__head{
+  display:flex; align-items:baseline; justify-content:space-between;
+  gap:24px; padding-bottom:28px; border-bottom:1px solid var(--hairline);
+  margin-bottom:56px;
+}
+.section__head h2{margin:0; font-size:var(--fs-sec); font-weight:500; letter-spacing:var(--tracking-tight)}
+.section__head p{margin:0; max-width:34ch; color:var(--ink-2); font-size:14px; letter-spacing:0; line-height:1.5}
+
+.prose{max-width:68ch}
+.prose p{margin:0 0 20px; font-size:16px; line-height:1.65; letter-spacing:0; color:var(--ink-2)}
+.prose p.lead{font-size:20px; line-height:1.5; color:var(--ink)}
+.prose strong{color:var(--ink); font-weight:600}
+.prose em{font-style:italic}
+/* inline links only — a button inside prose keeps its own styling */
+.prose a:not(.headcta):not(.btn-accent){border-bottom:1px solid var(--ink-3); color:var(--ink)}
+.prose a:not(.headcta):not(.btn-accent):hover{border-color:var(--accent); color:var(--accent)}
+.prose h3{
+  margin:48px 0 16px; font-size:var(--fs-h3); font-weight:500;
+  line-height:1.15; letter-spacing:var(--tracking-tight); color:var(--ink);
+}
+.prose ul,.prose ol{margin:0 0 20px; padding-left:20px}
+.prose li{
+  margin:0 0 10px; font-size:16px; line-height:1.6;
+  letter-spacing:0; color:var(--ink-2);
+}
+.prose li::marker{color:var(--ink-3)}
+
+/* ============================================================
+   TENETS  (philosophy — big numbered beliefs)
+   ============================================================ */
+.tenet{
+  display:grid; grid-template-columns:120px 1fr;
+  gap:32px; padding:44px 0; border-top:1px solid var(--hairline);
+}
+.tenet:last-child{border-bottom:1px solid var(--hairline)}
+.tenet__n{
+  font-size:clamp(36px,4.4vw,64px); font-weight:500; line-height:.9;
+  letter-spacing:var(--tracking-tight); color:var(--ink-3);
+  font-variant-numeric:tabular-nums;
+}
+.tenet h3{margin:0 0 16px; font-size:clamp(22px,2.4vw,30px); font-weight:500; line-height:1.15; letter-spacing:var(--tracking-tight); max-width:24ch}
+.tenet p{margin:0 0 14px; max-width:62ch; font-size:16px; line-height:1.65; letter-spacing:0; color:var(--ink-2)}
+.tenet p:last-child{margin-bottom:0}
+
+/* ============================================================
+   PRINCIPLES  (numbered, with in-practice / when-it-bends)
+   ============================================================ */
+.principle{
+  border:1px solid var(--hairline); border-radius:var(--radius-card);
+  padding:32px; margin-bottom:16px;
+  display:grid; gap:20px;
+}
+.principle__top{display:grid; gap:12px}
+.principle__n{
+  font-size:var(--fs-micro); letter-spacing:0; color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.principle h3{margin:0; font-size:clamp(21px,2.3vw,28px); font-weight:500; line-height:1.15; letter-spacing:var(--tracking-tight); max-width:26ch}
+.principle__say{margin:0; max-width:62ch; font-size:16px; line-height:1.6; letter-spacing:0; color:var(--ink-2)}
+.principle__cols{
+  display:grid; grid-template-columns:1fr 1fr; gap:1px;
+  background:var(--hairline); border-top:1px solid var(--hairline);
+  margin:0 -32px -32px; padding-top:1px;
+}
+.principle__col{background:var(--bg); padding:24px 32px 28px}
+.principle__col h4{
+  margin:0 0 10px; font-size:var(--fs-micro); font-weight:500;
+  letter-spacing:0; color:var(--ink-2);
+}
+.principle__col p{margin:0; font-size:14px; line-height:1.6; letter-spacing:0; color:var(--ink-2)}
+.principle__col strong{color:var(--ink); font-weight:500}
+.principle__col ul{margin:0; padding-left:16px}
+.principle__col li{font-size:14px; line-height:1.6; letter-spacing:0; color:var(--ink-2); margin-bottom:6px}
+
+/* ============================================================
+   PROCESS STEPPER
+   ============================================================ */
+.phases{counter-reset:phase; border-top:1px solid var(--hairline)}
+.phase{
+  display:grid; grid-template-columns:170px 1fr 260px;
+  gap:40px; padding:48px 0; border-bottom:1px solid var(--hairline);
+}
+.phase__id{display:grid; gap:8px; align-content:start}
+.phase__n{
+  font-size:clamp(30px,3.4vw,48px); font-weight:500; line-height:.9;
+  letter-spacing:var(--tracking-tight); color:var(--ink-3); font-variant-numeric:tabular-nums;
+}
+.phase__time{font-size:var(--fs-micro); letter-spacing:0; color:var(--ink-2)}
+.phase__body h3{margin:0 0 14px; font-size:clamp(22px,2.4vw,30px); font-weight:500; line-height:1.15; letter-spacing:var(--tracking-tight)}
+.phase__body p{margin:0 0 14px; max-width:58ch; font-size:16px; line-height:1.65; letter-spacing:0; color:var(--ink-2)}
+.phase__body ul{margin:0; padding-left:18px}
+.phase__body li{font-size:15px; line-height:1.6; letter-spacing:0; color:var(--ink-2); margin-bottom:8px}
+.phase__side{display:grid; gap:18px; align-content:start}
+.phase__side h4{margin:0 0 8px; font-size:var(--fs-micro); letter-spacing:0; color:var(--ink-2); font-weight:500}
+.phase__side p{margin:0; font-size:14px; line-height:1.55; letter-spacing:0; color:var(--ink)}
+.gate{border-left:2px solid var(--accent); padding-left:14px}
+
+/* ============================================================
+   CALLOUTS / RULES
+   ============================================================ */
+.callout{
+  border:1px solid var(--hairline); border-radius:var(--radius-card);
+  padding:24px 28px; margin:32px 0; max-width:68ch;
+}
+.callout h4{
+  margin:0 0 10px; font-size:var(--fs-micro); font-weight:500;
+  letter-spacing:0; color:var(--ink-2);
+}
+.callout p{margin:0 0 12px; font-size:15px; line-height:1.6; letter-spacing:0; color:var(--ink)}
+.callout p:last-child{margin-bottom:0}
+.callout--rule{border-left:2px solid var(--accent)}
+.callout--warn{background:color-mix(in srgb, var(--ink) 4%, var(--bg))}
+
+/* checklist */
+.checklist{display:grid; gap:1px; background:var(--hairline); border:1px solid var(--hairline); border-radius:var(--radius-card); overflow:hidden}
+.checklist__row{background:var(--bg); padding:20px 24px; display:grid; grid-template-columns:24px 1fr; gap:16px; align-items:start}
+.checklist__box{width:14px; height:14px; margin-top:3px; border:1px solid var(--ink-3); border-radius:2px}
+.checklist__row h4{margin:0 0 6px; font-size:15px; font-weight:500; letter-spacing:var(--tracking-tight)}
+.checklist__row p{margin:0; font-size:14px; line-height:1.55; letter-spacing:0; color:var(--ink-2)}
+
+/* table */
+.table{width:100%; border-collapse:collapse; margin:28px 0; font-size:14px; letter-spacing:0}
+.table th,.table td{text-align:left; padding:14px 16px; border-bottom:1px solid var(--hairline); vertical-align:top}
+.table th{font-size:var(--fs-micro); font-weight:500; color:var(--ink-2)}
+.table td{color:var(--ink-2); line-height:1.55}
+.table td:first-child{color:var(--ink)}
+.table-wrap{overflow-x:auto}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{
+  position:relative; z-index:2; background:var(--bg);
+  border-top:1px solid var(--hairline);
+  padding:22px var(--gutter);
+  display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; align-items:center;
+  font-size:var(--fs-micro); letter-spacing:0; color:var(--ink-2);
+}
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+.reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1)}
+.reveal.is-in{opacity:1; transform:none}
+
+/* ============================================================
+   BREAKPOINTS
+   ============================================================ */
+@media (max-width:1024px){
+  :root{--cube-scale:.54}
+  .phase{grid-template-columns:120px 1fr; gap:28px}
+  .phase__side{grid-column:2}
+}
+@media (max-width:680px){
+  :root{--cube:340px; --cube-half:170px; --cube-gap:12px; --cube-scale:.6}
+  .ruler__rail--right{display:none}
+  .navpill__label{display:none}
+  .navpill{padding:0 6px 0 14px; gap:10px}
+  .btn-accent{padding:0 16px}
+  .tenet{grid-template-columns:1fr; gap:12px; padding:36px 0}
+  .phase{grid-template-columns:1fr; gap:16px}
+  .phase__side{grid-column:1}
+  .principle{padding:24px}
+  .principle__cols{grid-template-columns:1fr; margin:0 -24px -24px}
+  .principle__col{padding:20px 24px 24px}
+  .hero__sub{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important; transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+}
+
+/* ============================================================
+   TEAM — filters, roles
+   ============================================================ */
+/* roles — native <details>, so they open with JS disabled */
+/* no rules between roles — with only a couple of openings the lines
+   read as heavier than the content. Spacing does the separating. */
+.roles{display:grid; gap:6px}
+.role{border:0}
+.role > summary{
+  list-style:none; cursor:pointer; padding:30px 0;
+  display:grid; grid-template-columns:1fr auto 28px; gap:28px; align-items:center;
+}
+.role > summary::-webkit-details-marker{display:none}
+.role > summary:hover .role__title{color:var(--accent)}
+.role__title{font-size:clamp(20px,2.2vw,30px); font-weight:500; letter-spacing:var(--tracking-tight); transition:color .2s ease}
+.role__meta{display:flex; gap:10px; align-items:center; font-size:var(--fs-micro); letter-spacing:0; color:var(--ink-2)}
+.role__meta .dot{width:3px; height:3px; border-radius:50%; background:currentColor}
+.role__sign{position:relative; width:14px; height:14px; justify-self:end}
+.role__sign::before,.role__sign::after{
+  content:""; position:absolute; background:var(--ink); transition:transform .3s cubic-bezier(.22,1,.36,1);
+}
+.role__sign::before{left:0; top:6px; width:14px; height:1.5px}
+.role__sign::after{left:6px; top:0; width:1.5px; height:14px}
+.role[open] .role__sign::after{transform:rotate(90deg)}
+.role__body{
+  display:grid; grid-template-columns:1fr 1fr; gap:40px;
+  padding:0 0 36px; max-width:76ch;
+}
+.role__body h4{margin:0 0 10px; font-size:var(--fs-micro); font-weight:500; letter-spacing:0; color:var(--ink-2)}
+.role__body p{margin:0 0 12px; font-size:15px; line-height:1.6; letter-spacing:0; color:var(--ink-2)}
+.role__body ul{margin:0; padding-left:16px}
+.role__body li{font-size:15px; line-height:1.6; letter-spacing:0; color:var(--ink-2); margin-bottom:8px}
+.role__apply{grid-column:1/-1}
+.applybtn{
+  height:44px; padding:0 22px; border-radius:var(--radius-pill);
+  background:var(--ink); color:var(--bg);
+  display:inline-grid; place-items:center;
+  font-size:var(--fs-micro); letter-spacing:0;
+  transition:transform .25s cubic-bezier(.22,1,.36,1);
+}
+.applybtn:hover{transform:translateY(-2px)}
+
+@media (max-width:1024px){
+}
+@media (max-width:680px){
+  .role > summary{grid-template-columns:1fr 20px; gap:10px}
+  .role__meta{grid-column:1; grid-row:2}
+  .role__body{grid-template-columns:1fr; gap:24px}
+}
+
+/* ============================================================
+   FOOTER — internal access
+   ============================================================ */
+.footer__meta{display:flex; flex-wrap:wrap; gap:6px 20px; align-items:center}
+.footer__login{
+  font-family:inherit; font-weight:500; cursor:pointer;
+  display:inline-flex; align-items:center; gap:9px;
+  height:36px; padding:0 18px; border-radius:var(--radius-pill);
+  border:1px solid var(--hairline); color:var(--ink-2);
+  font-size:var(--fs-micro); letter-spacing:0;
+  transition:color .2s ease, border-color .2s ease, background-color .2s ease;
+}
+.footer__login svg{width:13px; height:13px}
+.footer__login:hover{background:var(--ink); border-color:var(--ink); color:var(--bg)}
+
+@media (max-width:680px){
+  .footer{flex-direction:column; align-items:flex-start; gap:24px}
+}
+
+/* ============================================================
+   COURTESY GATE
+   Hides the page behind a shared passphrase. The content is
+   still in the source — this stops casual readers, not anyone
+   who opens dev tools. See SITE_PASSWORD in build.py.
+   ============================================================ */
+.lockgate{display:none}
+:root[data-locked="true"] body > *:not(.lockgate){display:none !important}
+:root[data-locked="true"] body{overflow:hidden}
+:root[data-locked="true"][data-lockid="lockgate"] #lockgate,
+:root[data-locked="true"][data-lockid="intgate"] #intgate,
+.lockgate.is-open{
+  display:grid; place-items:center;
+  position:fixed; inset:0; z-index:100;
+  background:var(--bg); padding:var(--gutter);
+}
+.lockgate.is-open{overflow:auto}
+/* the dismiss control only exists when the gate is a modal over a public page */
+.lockgate__close{
+  display:none; position:absolute; top:calc(var(--pill-h) - 26px); right:var(--gutter);
+  width:40px; height:40px; border-radius:50%;
+  border:1px solid var(--hairline); background:none; color:var(--ink);
+  place-items:center; cursor:pointer; padding:0;
+}
+.lockgate__close svg{width:16px; height:16px}
+.lockgate__close:hover{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+.lockgate.is-open .lockgate__close{display:grid}
+.lockgate__box{display:grid; gap:14px; width:min(440px,100%)}
+.lockgate__mark{font-size:var(--fs-mark); letter-spacing:var(--tracking-tight); color:var(--ink-2)}
+.lockgate__title{
+  margin:0; font-size:clamp(34px,5vw,56px); font-weight:500;
+  line-height:1; letter-spacing:var(--tracking-tight);
+}
+.lockgate__note{margin:0 0 10px; font-size:14px; line-height:1.55; letter-spacing:0; color:var(--ink-2)}
+.lockgate__row{display:flex; gap:10px; flex-wrap:wrap}
+.lockgate__input{
+  flex:1 1 200px; height:var(--pill-h); padding:0 20px;
+  border:1px solid var(--hairline); border-radius:var(--radius-pill);
+  background:none; color:var(--ink);
+  font-family:inherit; font-weight:500; font-size:14px; letter-spacing:0;
+  transition:border-color .2s ease;
+}
+.lockgate__input::placeholder{color:var(--ink-3); letter-spacing:0}
+.lockgate__input:focus{outline:none; border-color:var(--ink)}
+.lockgate__err{margin:0; font-size:var(--fs-micro); letter-spacing:0; color:var(--accent)}
+.lockgate.is-wrong .lockgate__box{animation:lockgate-shake .4s ease}
+@keyframes lockgate-shake{
+  0%,100%{transform:translateX(0)}
+  20%{transform:translateX(-7px)}
+  40%{transform:translateX(7px)}
+  60%{transform:translateX(-4px)}
+  80%{transform:translateX(4px)}
+}
+
+/* ============================================================
+   INTERNAL — folder shelf + contents drawer
+   ============================================================ */
+.finder{position:relative; z-index:2; padding:calc(var(--pill-h) + 4vh) var(--gutter) 10vh}
+
+/* column head + rows, used inside the modal */
+.fx-head, .fx-row{
+  display:grid; grid-template-columns:minmax(0,1.5fr) 96px minmax(0,1fr);
+  gap:16px; align-items:center; padding:0 20px;
+}
+.fx-head{
+  height:30px; border-bottom:1px solid var(--hairline);
+  font-size:10px; letter-spacing:0; color:var(--ink-2); text-transform:uppercase;
+}
+.fx-list{overflow:auto}
+.fx-group[hidden]{display:none}
+.fx-row{
+  height:42px; border-bottom:1px solid var(--hairline);
+  color:var(--ink); cursor:pointer;
+}
+.fx-row:hover{background:var(--ink); color:var(--bg)}
+.fx-row:hover .fx-row__kind, .fx-row:hover .fx-row__where{color:inherit; opacity:.75}
+.fx-row__name{display:flex; align-items:center; gap:10px; min-width:0}
+.fx-row__name svg{width:15px; height:15px; flex:none}
+.fx-row__name b{font-weight:500; letter-spacing:var(--tracking-tight); font-size:13.5px;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.fx-row__kind{font-size:10px; letter-spacing:0; color:var(--ink-2); text-transform:uppercase}
+.fx-row__where{font-size:11px; letter-spacing:0; color:var(--ink-2);
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.fx-row[data-kind="download"] .fx-row__kind{color:var(--accent)}
+.fx-row:hover[data-kind="download"] .fx-row__kind{color:var(--accent)}
+
+@media (max-width:860px){
+  .fx-head, .fx-row{grid-template-columns:minmax(0,1fr) 84px}
+  .fx-row__where{display:none}
+}
+
+
+
+/* ============================================================
+   CANVAS
+   Dotted ground and centred content.
+   Kept as one block so it can be lifted out whole.
+   ============================================================ */
+:root{
+  --canvas-dot: 24px;
+  --maxw: 1060px;
+  --dot: color-mix(in srgb, var(--ink) 15%, transparent);
+  --dot-rgb: 0,0,0;
+}
+
+body{
+  background-image:radial-gradient(circle at 1px 1px, var(--dot) 1px, transparent 0);
+  background-size:var(--canvas-dot) var(--canvas-dot);
+  background-attachment:fixed;
+}
+
+/* sections go transparent so the canvas reads through them */
+.hero, .pagehead, .section, .finder, .footer{background:transparent}
+
+/* ---- centre the measure ---- */
+.pagehead, .section, .finder{
+  max-width:calc(var(--maxw) + var(--gutter) * 2);
+  margin-inline:auto;
+  text-align:center;
+}
+.pagehead h1{max-width:20ch; margin-inline:auto}
+.pagehead .lede{margin-inline:auto}
+.eyebrow{justify-content:center}
+
+.section__head{flex-direction:column; align-items:center; text-align:center; gap:14px}
+.section__head p{max-width:52ch}
+
+.prose{margin-inline:auto; text-align:center}
+.prose p, .prose h3{margin-inline:auto}
+.prose ul, .prose ol{list-style:none; padding-left:0; max-width:60ch; margin-inline:auto}
+.prose li{margin-inline:auto}
+
+.hero{justify-items:center}
+.hero__foot{justify-items:center; text-align:center}
+.hero__title, .hero__sub{margin-inline:auto}
+
+.tenet{grid-template-columns:1fr; justify-items:center; gap:14px; text-align:center}
+.tenet h3, .tenet p{margin-inline:auto}
+
+.principle{text-align:center}
+.principle h3, .principle__say{margin-inline:auto}
+.principle__col{text-align:center}
+.principle__col ul{list-style:none; padding-left:0}
+
+.phase{grid-template-columns:1fr; justify-items:center; gap:18px; text-align:center}
+.phase__id{justify-items:center}
+.phase__body p, .phase__body ul{margin-inline:auto}
+.phase__body ul{list-style:none; padding-left:0}
+.phase__side{justify-items:center; text-align:center}
+.gate{border-left:0; border-top:2px solid var(--accent); padding:12px 0 0}
+
+.callout{margin-inline:auto; text-align:center}
+.checklist__row{grid-template-columns:1fr; justify-items:center; text-align:center}
+.checklist__box{margin:0 auto 4px}
+
+
+
+
+/* tables, file rows and role listings stay left — centred rows of data
+   are unscannable, and a job listing is a list, not prose */
+.table th, .table td{text-align:left}
+.fx-row, .fx-head{text-align:left}
+.role, .role > summary, .role__title, .role__body{text-align:left}
+.role__body p, .role__body ul{margin-inline:0}
+
+.footer__meta{justify-content:flex-start}
+
+/* ---- homepage opts out of centring ----
+   The landing page is a cover, not a document: the headline sits
+   bottom-left against the cube, the way the spec draws it. */
+.page-index .hero{justify-items:start}
+.page-index .hero__foot{justify-items:start; text-align:left}
+.page-index .hero__title,
+.page-index .hero__sub{margin-inline:0}
+
+/* ---- wordmark lockup: name over a quiet attribution ---- */
+.wordmark{display:grid; gap:1px; line-height:1}
+.wordmark__name{
+  display:block;
+  font-size:var(--fs-mark); font-weight:500;
+  letter-spacing:var(--tracking-tight);
+}
+.wordmark__by{
+  display:block;
+  font-size:9.5px; font-weight:500; letter-spacing:.01em;
+  color:var(--ink-2);
+}
+.wordmark:hover .wordmark__by{color:var(--ink)}
+
+/* ============================================================
+   EDITORIAL
+   Graphic furniture — registration marks, ghost numerals, an
+   isometric cube ornament, section rules. Presentation only:
+   no content changes, all of it themed from tokens.
+   ============================================================ */
+
+/* ---- isometric cube ornament above every page title ---- */
+.pagehead{position:relative}
+.pagehead::before{
+  content:"";
+  display:block; width:46px; height:46px; margin:0 auto 26px;
+  background:var(--ink-3);
+  -webkit-mask:var(--iso) center/contain no-repeat;
+          mask:var(--iso) center/contain no-repeat;
+}
+:root{
+  --iso:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23000' stroke-width='3' stroke-linejoin='round'%3E%3Cpath d='M50 6 93 30v40L50 94 7 70V30Z'/%3E%3Cpath d='M50 6v44l43-20M50 50 7 30M50 50v44'/%3E%3C/svg%3E");
+}
+.page-index .pagehead::before{display:none}
+
+/* ---- accent tick above section heads ---- */
+.section__head{position:relative; padding-top:30px}
+.section__head::before{
+  content:""; position:absolute; top:0; left:50%; transform:translateX(-50%);
+  width:30px; height:2px; background:var(--accent);
+}
+
+/* ---- rule + diamond between stacked sections ---- */
+.section + .section::before{
+  content:""; position:absolute; top:0; left:14%; right:14%; height:1px;
+  background:linear-gradient(90deg, transparent, var(--hairline) 22%,
+                             var(--hairline) 78%, transparent);
+}
+.section + .section::after{
+  content:""; position:absolute; top:-4.5px; left:50%; margin-left:-4.5px;
+  width:9px; height:9px; transform:rotate(45deg);
+  background:var(--bg); border:1px solid var(--ink-3);
+}
+.section{position:relative}
+
+/* ---- registration marks, like a technical drawing ---- */
+.principle, .callout, .checklist{position:relative}
+.principle::before, .principle::after,
+.callout::before, .callout::after,
+.checklist::before, .checklist::after{
+  content:""; position:absolute; width:9px; height:9px; pointer-events:none;
+  background:
+    linear-gradient(var(--ink-3), var(--ink-3)) center/9px 1px no-repeat,
+    linear-gradient(var(--ink-3), var(--ink-3)) center/1px 9px no-repeat;
+}
+.principle::before, .callout::before, .checklist::before{top:-5px; left:-5px}
+.principle::after, .callout::after, .checklist::after{bottom:-5px; right:-5px}
+
+/* ---- ghost numerals ---- */
+.tenet__n, .phase__n{
+  font-size:clamp(72px, 10vw, 138px);
+  line-height:.78;
+  color:transparent;
+  -webkit-text-stroke:1.5px var(--ink-3);
+  letter-spacing:-0.04em;
+}
+.tenet:hover .tenet__n, .phase:hover .phase__n{
+  -webkit-text-stroke-color:var(--accent);
+  transition:none;
+}
+
+/* ---- principle number becomes a badge ---- */
+.principle__n{
+  display:inline-grid; place-items:center;
+  width:36px; height:36px; border-radius:50%;
+  border:1px solid var(--accent); color:var(--accent);
+  font-size:12px; margin:0 auto 4px;
+}
+
+/* ---- cards gain weight and lift ---- */
+.principle, .checklist{
+  transition:border-color .3s ease, transform .4s cubic-bezier(.22,1,.36,1);
+}
+.principle:hover{border-color:var(--ink); transform:translateY(-2px)}
+
+/* ---- reading rhythm ---- */
+.pagehead h1{font-size:clamp(38px, 6vw, 84px); line-height:.98}
+.pagehead .lede{font-size:19px; line-height:1.6}
+.prose p{font-size:17px; line-height:1.7}
+.prose p.lead{
+  font-size:clamp(21px, 2.4vw, 27px); line-height:1.4; color:var(--ink);
+  max-width:34ch;
+}
+.prose h3{position:relative; padding-top:22px; margin-top:56px}
+.prose h3::before{
+  content:""; position:absolute; top:0; left:50%; transform:translateX(-50%);
+  width:18px; height:1px; background:var(--ink-3);
+}
+
+/* ---- list items read as marks, not bullets ---- */
+.prose li, .phase__body li, .principle__col li{position:relative}
+.prose ul li{padding-top:12px}
+.prose ul li + li{border-top:1px solid var(--hairline)}
+
+/* ---- the gate block on Process gets a filled marker ---- */
+.gate{position:relative}
+.gate h4{color:var(--accent)}
+
+/* ---- checklist boxes read as ticks ---- */
+.checklist__box{border-color:var(--ink-2)}
+.checklist__row:hover .checklist__box{background:var(--accent); border-color:var(--accent)}
+
+/* ---- per-section ornaments -------------------------------
+   Each page's mark says what the page is about, drawn in the
+   same wireframe language as the cube. Set on the body class
+   so .pagehead::before picks it up with no markup change.   */
+body.page-philosophy{--iso:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23000' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M50 6 93 30v40L50 94 7 70V30Z'/%3E%3Cpath d='M50 6v44l43-20M50 50 7 30M50 50v44' opacity='.3'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23000' stroke='none'/%3E%3C/svg%3E")}
+body.page-principles{--iso:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23000' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M16 84h68L16 24Z'/%3E%3Cpath d='M28 72h34L28 42Z' opacity='.35'/%3E%3Cpath d='M34 84v8M50 84v8M66 84v8' opacity='.5'/%3E%3C/svg%3E")}
+body.page-process{--iso:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23000' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M16 78 38 58 62 64 84 26' opacity='.4'/%3E%3Ccircle cx='16' cy='78' r='7'/%3E%3Ccircle cx='38' cy='58' r='7'/%3E%3Ccircle cx='62' cy='64' r='7'/%3E%3Ccircle cx='84' cy='26' r='7' fill='%23000'/%3E%3C/svg%3E")}
+body.page-craft{--iso:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23000' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M24 90V22M76 90V22'/%3E%3Cpath d='M12 40h76' stroke-width='6'/%3E%3Cpath d='M24 56h-8M24 72h-8M76 56h8M76 72h8' opacity='.45'/%3E%3C/svg%3E")}
+body.page-team{--iso:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23000' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'%3E%3Ccircle cx='50' cy='32' r='17'/%3E%3Ccircle cx='30' cy='66' r='17'/%3E%3Ccircle cx='70' cy='66' r='17'/%3E%3C/svg%3E")}
+body.page-internal{--iso:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23000' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M10 32a8 8 0 0 1 8-8h21c3 0 5 1 7 3l5 6c2 2 4 3 7 3h24a8 8 0 0 1 8 8v34a8 8 0 0 1-8 8H18a8 8 0 0 1-8-8z'/%3E%3Cpath d='M10 44h80' opacity='.35'/%3E%3C/svg%3E")}
+
+/* ============================================================
+   CAREERS — structure borrowed from fin.ai/careers
+   ============================================================ */
+
+/* headline CTA — role count sitting under the lede */
+.headcta{
+  display:inline-flex; align-items:center; gap:10px;
+  margin-top:26px; padding:0 20px; height:42px;
+  border:1px solid var(--ink); border-radius:var(--radius-pill);
+  font-size:var(--fs-micro); letter-spacing:0; color:var(--ink);
+  transition:.25s cubic-bezier(.22,1,.36,1);
+}
+.headcta:hover{background:var(--ink); color:var(--bg); transform:translateY(-2px)}
+.headcta b{font-weight:500; font-variant-numeric:tabular-nums}
+
+/* ---- closing reel ----
+   The banner that used to carry a headline and a button is now just the film.
+   One control, centre-stage; it turns into a pause bar once the video runs and
+   fades out of the way so it never sits on top of the footage.               */
+.reel{
+  position:relative; margin:0; overflow:hidden;
+  border:1px solid var(--ink); border-radius:var(--radius-card);
+  background:var(--ink); aspect-ratio:16/9;
+}
+.reel__v{display:block; width:100%; height:100%; object-fit:cover}
+
+.reel__play{
+  position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+  width:96px; height:96px; padding:0; border:0; border-radius:var(--radius-pill);
+  background:var(--accent); color:var(--on-accent); cursor:pointer;
+  display:grid; place-items:center;
+  transition:transform .3s cubic-bezier(.22,1,.36,1), opacity .3s ease;
+}
+.reel__play svg{width:34px; height:34px; fill:currentColor}
+.reel__play:hover{transform:translate(-50%,-50%) scale(1.06)}
+.reel__play:focus-visible{outline:2px solid var(--bg); outline-offset:4px}
+
+/* pause bars are hidden until the video is playing, then they swap with the triangle */
+.reel__pause{display:none}
+.reel.is-playing .reel__tri{display:none}
+.reel.is-playing .reel__pause{display:block}
+
+/* once running, the button retreats to a corner and only returns on hover */
+.reel.is-playing .reel__play{
+  left:auto; right:22px; top:auto; bottom:22px; transform:none;
+  width:56px; height:56px; opacity:0;
+}
+.reel.is-playing .reel__play svg{width:20px; height:20px}
+.reel.is-playing:hover .reel__play,
+.reel.is-playing .reel__play:focus-visible{opacity:1}
+.reel.is-playing .reel__play:hover{transform:scale(1.06)}
+
+@media (prefers-reduced-motion:reduce){
+  .reel__play,.reel.is-playing .reel__play{transition:none}
+}
+
+.eeo{margin:26px auto 0; max-width:60ch; font-size:12px; line-height:1.6; letter-spacing:0; color:var(--ink-2)}
+
+@media (max-width:860px){
+}
+
+/* ---- team strip: the old gallery shape, now with people in it ----
+   Cards run in one row, every other one lifted, every third squared —
+   the same rhythm the decorative strip had. The offset lives in --dy so
+   the hover scale can compose with it instead of overwriting it.       */
+.crew{
+  display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr);
+  gap:10px; align-items:center; margin-top:7vh;
+}
+.crew__card{
+  --dy:0px; --rot:0deg;
+  position:relative; display:block; text-align:left;
+  transform:translateY(var(--dy)) rotate(var(--rot));
+  transition:transform .5s cubic-bezier(.22,1,.36,1), opacity .4s ease;
+}
+.crew__card:nth-child(2n){--dy:-16px}
+.crew__card:nth-child(3n){--rot:-2deg}
+.crew__card:nth-child(4n){--rot:1.6deg}
+
+/* the row focuses: everything recedes except the card under the cursor */
+.crew:hover .crew__card{opacity:.35}
+.crew:hover .crew__card:hover,
+.crew__card:focus-visible{opacity:1}
+
+.crew__card:hover, .crew__card:focus-visible{
+  transform:translateY(var(--dy)) rotate(0deg) scale(1.07); z-index:3;
+}
+.crew__shot{
+  position:relative; overflow:hidden;
+  border-radius:var(--radius-card); background:var(--tile-bg);
+}
+.crew__shot img{
+  width:100%; aspect-ratio:4/5; object-fit:cover; display:block;
+  filter:grayscale(1);
+  transform:scale(1.01);
+  transition:filter .55s ease, transform .8s cubic-bezier(.22,1,.36,1);
+}
+.crew__card:hover .crew__shot img,
+.crew__card:focus-visible .crew__shot img{filter:none; transform:scale(1.12)}
+.crew__card:nth-child(3n) .crew__shot img{aspect-ratio:1}
+.crew__over{
+  position:absolute; inset:0;
+  display:grid; grid-template-columns:1fr auto; align-items:end; align-content:end; gap:12px;
+  padding:14px; color:#fff;
+  background:linear-gradient(transparent 6%, rgba(0,0,0,.55) 40%, rgba(0,0,0,.92) 100%);
+  opacity:0; transform:translateY(14px);
+  transition:opacity .35s ease, transform .45s cubic-bezier(.22,1,.36,1);
+}
+.crew__card:hover .crew__over,
+.crew__card:focus-visible .crew__over{opacity:1; transform:none}
+.crew__id{display:grid; gap:3px; min-width:0}
+.crew__arrow{
+  display:grid; place-items:center; flex:none;
+  width:28px; height:28px; border-radius:50%;
+  border:1px solid rgba(255,255,255,.6); color:#fff;
+  font-size:12px; line-height:1;
+  transition:background-color .25s ease, color .25s ease, transform .35s cubic-bezier(.22,1,.36,1);
+}
+.crew__card:hover .crew__arrow{background:#fff; color:#000; border-color:#fff; transform:translate(2px,-2px)}
+.crew__oname{font-size:14px; font-weight:500; letter-spacing:var(--tracking-tight); line-height:1.15}
+.crew__orole{font-size:10px; letter-spacing:.04em; text-transform:uppercase; opacity:.72}
+
+/* ---- the open slots that bookend the row ---- */
+.crew__card--open .crew__shot{
+  display:grid; place-items:center; padding:16px;
+  aspect-ratio:4/5; background:none;
+  border:1px dashed var(--ink-3);
+  transition:border-color .3s ease, background-color .3s ease;
+}
+.crew__card:nth-child(3n).crew__card--open .crew__shot{aspect-ratio:1}
+.crew__open{
+  font-size:12px; line-height:1.35; letter-spacing:var(--tracking-tight);
+  color:var(--ink-2); text-align:center;
+}
+.crew__card--open:hover .crew__shot{border-color:var(--accent); background:color-mix(in srgb, var(--accent) 7%, transparent)}
+.crew__card--open:hover .crew__open{color:var(--accent)}
+.crew__opencta{
+  display:block; margin-top:8px;
+  font-size:10px; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--accent); opacity:0; transition:opacity .3s ease;
+}
+.crew__card--open:hover .crew__opencta{opacity:1}
+
+@media (max-width:860px){
+  .crew{grid-auto-flow:row; grid-template-columns:repeat(3,1fr)}
+  .crew__card{--dy:0px}
+}
+@media (max-width:520px){ .crew{grid-template-columns:repeat(2,1fr)} }
+
+/* ============================================================
+   LIVE DOT FIELD
+   Must stay last: the canvas replaces the CSS background dots,
+   and any body{background-image} declared after this would
+   bring the static grid back on top of it.
+   ============================================================ */
+.dots{position:fixed; inset:0; z-index:0; pointer-events:none}
+:root.has-dots body{background-image:none !important}
+
+/* ============================================================
+   MARQUEE — the life-at gallery, scrolling forever
+   Track holds the image set twice and travels exactly -50%, so
+   the second copy lands where the first began and the loop has
+   no seam. Pauses under the cursor.
+   ============================================================ */
+.section--bleed{max-width:none; padding-left:0; padding-right:0}
+.marquee{
+  overflow:hidden; width:100%; padding:26px 0;
+  -webkit-mask-image:linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+          mask-image:linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+.marquee__track{
+  display:flex; align-items:center; gap:14px; width:max-content;
+  animation:marquee 52s linear infinite;
+}
+.marquee:hover .marquee__track{animation-play-state:paused}
+@keyframes marquee{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(-50%,0,0)}
+}
+.marquee__item{flex:none; display:block; transform:translateY(0)}
+.marquee__item:nth-child(3n){transform:translateY(-20px)}
+.marquee__item:nth-child(4n){transform:translateY(16px)}
+.marquee__item img{
+  display:block; height:clamp(150px, 19vw, 240px); width:auto;
+  object-fit:cover; border-radius:var(--radius-card); background:var(--tile-bg);
+  filter:grayscale(1); transition:filter .5s ease;
+}
+.marquee:hover .marquee__item img{filter:none}
+
+@media (prefers-reduced-motion:reduce){
+  .marquee__track{animation:none}
+  .marquee{overflow-x:auto}
+}
+
+/* ---- contents drawer ---- */
+.fx-drawer{position:fixed; inset:0; z-index:60}
+.fx-drawer[hidden]{display:none}
+.fx-drawer__scrim{
+  position:absolute; inset:0;
+  background:color-mix(in srgb, var(--ink) 40%, transparent);
+  opacity:0; transition:opacity .4s ease;
+}
+.fx-drawer.is-open .fx-drawer__scrim{opacity:1}
+.fx-drawer__panel{
+  position:absolute; top:0; right:0; bottom:0;
+  width:min(500px, 94vw);
+  background:var(--bg); border-left:1px solid var(--ink);
+  display:grid; grid-template-rows:auto auto 1fr auto;
+  transform:translateX(100%);
+  transition:transform .5s cubic-bezier(.22,1,.36,1);
+}
+.fx-drawer.is-open .fx-drawer__panel{transform:none}
+.fx-drawer__head{
+  display:flex; align-items:center; gap:14px;
+  padding:22px 22px 18px; border-bottom:1px solid var(--hairline);
+}
+.fx-drawer__head h3{margin:0; font-size:22px; font-weight:500; letter-spacing:var(--tracking-tight)}
+.fx-drawer__count{font-size:var(--fs-micro); letter-spacing:0; color:var(--ink-2); margin-left:auto}
+.fx-drawer__close{
+  display:grid; place-items:center; width:30px; height:30px; padding:0; flex:none;
+  border:1px solid var(--hairline); border-radius:50%;
+  background:none; color:var(--ink); cursor:pointer;
+}
+.fx-drawer__close svg{width:14px; height:14px}
+.fx-drawer__close:hover{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+.fx-drawer__foot{
+  padding:14px 22px; border-top:1px solid var(--hairline);
+  font-size:10px; letter-spacing:0; color:var(--ink-2);
+}
+
+/* ---- folders: lift, tilt, and open on hover ---- */
+.fx-grid{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(168px, 1fr));
+  gap:16px; padding:32px 0 8px;
+}
+.fx-tile{
+  --tilt:0deg;
+  display:grid; justify-items:center; gap:14px;
+  padding:22px 12px 18px; border:0; background:none; cursor:pointer;
+  font-family:inherit; border-radius:8px;
+  transform:rotate(var(--tilt));
+  transition:transform .4s cubic-bezier(.22,1,.36,1);
+}
+.fx-tile:nth-child(3n){--tilt:-1.5deg}
+.fx-tile:nth-child(4n){--tilt:1.2deg}
+.fx-tile .mf{width:104px; height:auto; display:block}
+.fx-tile:hover, .fx-tile:focus-visible{transform:rotate(0deg) translateY(-6px) scale(1.05)}
+/* the front panel drops and shortens — the folder opens */
+.fx-tile .mf rect{
+  transform-box:fill-box; transform-origin:bottom center;
+  transition:transform .4s cubic-bezier(.22,1,.36,1);
+}
+.fx-tile:hover .mf rect, .fx-tile:focus-visible .mf rect{transform:translateY(7px) scaleY(.9)}
+.fx-tile__label{
+  font-size:11px; font-weight:500; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--ink);
+  padding:4px 9px; border-radius:4px; line-height:1.3; text-align:center;
+}
+.fx-tile:hover .fx-tile__label,
+.fx-tile:focus-visible .fx-tile__label{background:var(--ink); color:var(--bg)}
+.fx-tile__n{font-size:10px; letter-spacing:0; color:var(--ink-2); font-variant-numeric:tabular-nums}
+
+.fx-meta{
+  display:flex; justify-content:center; gap:10px; align-items:center;
+  margin:0 0 6px; font-size:var(--fs-micro); letter-spacing:0; color:var(--ink-2);
+}
+.fx-meta .dot{width:3px; height:3px; border-radius:50%; background:currentColor}
+
+/* ============================================================
+   PROCESS — flow diagram, phase rail, week strip
+   ============================================================ */
+.flow{width:100%; margin:0 auto}
+.flow svg{width:100%; height:auto; overflow:visible; font-family:var(--font)}
+.flow__rail{stroke:var(--ink-3); stroke-width:1; fill:none}
+.flow__gate path{stroke:var(--ink-3); stroke-width:1; stroke-dasharray:3 3}
+.flow__gatelabel{fill:var(--ink-3); font-size:9px; letter-spacing:.08em; text-anchor:middle}
+.flow__node{fill:var(--bg); stroke:var(--ink); stroke-width:1.5}
+.flow__node--last{fill:var(--accent); stroke:var(--accent)}
+.flow__num{fill:var(--ink); font-size:12px; font-weight:500; letter-spacing:-.04em;
+  text-anchor:middle; font-variant-numeric:tabular-nums}
+.flow__num--last{fill:var(--on-accent)}
+.flow__name{fill:var(--ink); font-size:17px; font-weight:500; letter-spacing:-.06em; text-anchor:middle}
+.flow__dur{fill:var(--ink-2); font-size:11px; text-anchor:middle}
+.flow__step{transition:opacity .3s ease}
+.flow:hover .flow__step{opacity:.35}
+.flow:hover .flow__step:hover{opacity:1}
+
+/* a rail threading the phase numerals together */
+.phases{position:relative}
+.phases::before{
+  content:""; position:absolute; left:50%; top:14px; bottom:14px; width:1px;
+  background:linear-gradient(var(--hairline), var(--hairline));
+}
+.phase__n{position:relative; z-index:1; padding:10px 14px}
+.phase__n::after{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:var(--bg);
+  -webkit-mask:radial-gradient(circle at 50% 50%, #000 62%, transparent 63%);
+          mask:radial-gradient(circle at 50% 50%, #000 62%, transparent 63%);
+}
+
+/* the week, as three fixed points */
+.week{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+  background:var(--hairline); border:1px solid var(--hairline);
+  max-width:60ch; margin:28px auto 0;
+}
+.week__day{background:var(--bg); padding:20px 16px; display:grid; gap:6px}
+.week__d{font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent)}
+.week__t{font-size:15px; font-weight:500; letter-spacing:var(--tracking-tight)}
+.week__m{font-size:11px; letter-spacing:0; color:var(--ink-2)}
+
+@media (max-width:680px){
+  .flow svg{min-width:620px}
+  .flow{overflow-x:auto}
+  .week{grid-template-columns:1fr}
+}
