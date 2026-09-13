@@ -211,29 +211,6 @@
 .meas i:first-of-type{left:0}
 .meas i:last-of-type{right:0}
 
-/* ---------- the stamp ---------- */
-/* Pressed on, not faded in: it comes down big and crooked and settles. */
-.stamp{
-  display:inline-block; padding:9px 15px 8px;
-  border:2px solid var(--accent); border-radius:3px; color:var(--accent);
-  font-family:var(--mono); font-size:12px; letter-spacing:.16em; text-transform:uppercase;
-  rotate:-7deg; opacity:0;
-}
-.stamp em{display:block; font-style:normal; font-size:9px; opacity:.75; letter-spacing:.1em}
-.reveal.is-in .stamp{animation:stampdown .52s cubic-bezier(.2,1.5,.4,1) .15s forwards}
-@keyframes stampdown{
-  0%{opacity:0; scale:1.85; rotate:-24deg}
-  55%{opacity:1; scale:.95; rotate:-5deg}
-  100%{opacity:1; scale:1; rotate:-7deg}
-}
-.stamp--sq{rotate:5deg}
-.reveal.is-in .stamp--sq{animation-name:stampdown2}
-@keyframes stampdown2{
-  0%{opacity:0; scale:1.85; rotate:20deg}
-  55%{opacity:1; scale:.95; rotate:3deg}
-  100%{opacity:1; scale:1; rotate:5deg}
-}
-
 /* ---------- the index rows ---------- */
 /* Nothing here is clickable. The page is a statement of what we follow,
    so the row carries its own line rather than sending you off to find it,
@@ -336,73 +313,5 @@
 @media (prefers-reduced-motion:reduce){
   .cur--1,.cur--2,.cur--3,.cur--4,.cur::before,.ring,.fig__pin::after{animation:none}
   .fig__name,.fig--sel{opacity:1; animation:none !important}
-  .stamp{opacity:1; animation:none !important}
   .rowitem::after,.rows:hover .rowitem{transition:none}
 }
-
-
-/* ============================================================
-   TOOL VOCABULARY
-   Glyphs a designer reads without a caption: a toolbar, a layers
-   list, component and instance marks, a pen path with its anchors.
-   All drawn here from plain geometry — squares, circles, diamonds,
-   a bezier — so nothing is lifted from any particular product.
-   ============================================================ */
-
-/* ---------- the floating toolbar ---------- */
-.tools{
-  display:inline-flex; align-items:center; gap:2px; padding:6px;
-  border-radius:13px; background:var(--ink); color:var(--bg);
-}
-.tools span{
-  width:34px; height:34px; display:grid; place-items:center; border-radius:9px;
-}
-.tools span[data-on]{background:var(--sel); color:#fff}
-.tools svg{
-  width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:1.5;
-  stroke-linecap:round; stroke-linejoin:round;
-}
-.tools svg .sld{fill:currentColor; stroke:none}
-.tools i{
-  display:block; width:1px; height:20px; margin:0 6px;
-  background:rgba(127,127,127,.45);
-}
-
-/* ---------- the layers list ---------- */
-/* Sits in the left column the section label leaves empty, and names the
-   parts of the band it is standing next to. */
-.ed__label + .layers,
-.ed__label + .tools,
-.ed__label + .penpath{margin-top:16px}
-.layers{
-  display:grid; gap:1px; margin:0; max-width:230px;
-  font-family:var(--mono); font-size:11px; letter-spacing:.01em; color:var(--ed-dim2);
-}
-.layers__t{
-  display:flex; align-items:center; gap:7px; padding:0 8px 9px;
-  text-transform:uppercase; letter-spacing:.14em; opacity:.8;
-}
-.layers__row{
-  display:flex; align-items:center; gap:8px;
-  padding:5px 8px; border-radius:4px; white-space:nowrap;
-}
-.layers__row--on{background:rgba(13,153,255,.12); color:var(--sel-ink)}
-.layers__row--in{padding-left:24px}
-.layers__row--in2{padding-left:40px}
-.layers svg{
-  width:13px; height:13px; flex:0 0 auto;
-  fill:none; stroke:currentColor; stroke-width:1.5;
-  stroke-linecap:round; stroke-linejoin:round;
-}
-.layers svg .sld{fill:currentColor; stroke:none}
-@media (max-width:900px){.layers,.tools{display:none}}
-
-/* ---------- a pen path, mid-edit ---------- */
-/* A bezier with its anchors and one pair of direction handles out — the
-   moment before a curve is committed. */
-.penpath{display:block; width:100%; height:auto; overflow:visible}
-.penpath__c{fill:none; stroke:var(--sel); stroke-width:1.6}
-.penpath__h{stroke:var(--sel); stroke-width:1; opacity:.55}
-.penpath__a{fill:var(--bg); stroke:var(--sel); stroke-width:1.6}
-.penpath__a--on{fill:var(--sel)}
-.penpath__d{fill:var(--sel)}
