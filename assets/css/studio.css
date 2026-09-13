@@ -117,42 +117,63 @@
   transition:opacity .22s ease, translate .22s ease;
 }
 .fig__pin:hover span{opacity:1; translate:0 0}
+/* Out in the page margin, clear of the row's own text — a pin that covers
+   the line it is commenting on is worse than no pin. */
+.fig__pin--row{right:-44px; top:50%; translate:0 -50%; pointer-events:auto}
+.fig__pin--row span{left:auto; right:36px; top:-2px; translate:4px 0}
+.fig__pin--row:hover span{translate:0 0}
+@media (max-width:1180px){.fig__pin--row{display:none}}
 
-/* ---------- a pointer on the canvas ---------- */
-/* Big, ink-filled, with a thick outline in the page colour so it reads on
-   any ground — and a click ring that fires on a slow loop, which is what
-   makes it look like somebody is working rather than a sticker.         */
-.cur{position:absolute; z-index:4; pointer-events:none; display:block}
-.cur svg{width:clamp(46px, 4.4vw, 74px); height:auto; display:block; overflow:visible}
+/* ---------- presence cursors ---------- */
+/* One per person on the team. The colour is the identity, so each cursor
+   sets --cur and both the arrow and its chip take it. The arrow is stroked
+   in the page colour and tilted slightly off-axis, which is what stops it
+   reading as a static icon.
+
+   Four hues is a deliberate exception to the one-accent-per-screen rule in
+   the Craft Bar: presence colour is how you tell people apart, and these
+   are chrome on the canvas rather than part of any screen's hierarchy.   */
+.cur{
+  position:absolute; z-index:4; pointer-events:none;
+  display:flex; flex-direction:column; align-items:flex-start;
+  --cur:var(--accent);
+}
+.cur svg{
+  width:clamp(26px, 2.3vw, 38px); height:auto; display:block; overflow:visible;
+  rotate:-9deg; margin-left:2px;
+}
 .cur__p{
-  fill:var(--ink); stroke:var(--bg); stroke-width:2.6;
-  stroke-linejoin:round; stroke-linecap:round;
-  paint-order:stroke fill;          /* the outline sits under the fill, not over it */
+  fill:var(--cur); stroke:var(--bg); stroke-width:2;
+  stroke-linejoin:round; paint-order:stroke fill;
 }
 .cur b{
-  display:inline-block; margin:-12px 0 0 30px; padding:6px 12px 5px; border-radius:5px;
-  background:var(--ink); color:var(--bg);
-  font-family:var(--mono); font-size:13px; font-weight:400; letter-spacing:.02em;
+  margin:-2px 0 0 16px; padding:5px 11px 6px; border-radius:8px;
+  background:var(--cur); color:#fff;
+  font-size:14px; font-weight:500; letter-spacing:-0.01em; line-height:1.15;
   white-space:nowrap;
 }
-.cur--a .cur__p{fill:var(--accent)}
-.cur--a b{background:var(--accent); color:var(--on-accent)}
+.cur--ink{--cur:#111111}
+.cur--blue{--cur:#2b6ff0}
+.cur--green{--cur:#12805c}
 
 /* the click */
 .cur::before{
-  content:""; position:absolute; top:4px; left:4px; width:18px; height:18px;
-  border-radius:50%; border:2px solid var(--accent); opacity:0;
+  content:""; position:absolute; top:3px; left:3px; width:16px; height:16px;
+  border-radius:50%; border:2px solid var(--cur); opacity:0;
   animation:curclick 6.5s cubic-bezier(.2,.7,.3,1) infinite;
 }
 @keyframes curclick{
   0%,68%{opacity:0; scale:.35}
-  74%{opacity:.95; scale:1}
+  74%{opacity:.9; scale:1}
   86%,100%{opacity:0; scale:2.7}
 }
 .cur--1{animation:curdrift1 17s ease-in-out infinite}
 .cur--2{animation:curdrift2 23s ease-in-out infinite}
 .cur--3{animation:curdrift3 13s ease-in-out infinite}
+.cur--4{animation:curdrift4 19s ease-in-out infinite}
+.cur--2::before{animation-delay:-3.4s}
 .cur--3::before{animation-duration:13s; animation-delay:-9.2s}
+.cur--4::before{animation-delay:-11s}
 @keyframes curdrift1{
   0%,100%{translate:0 0}  30%{translate:52px 26px}
   55%{translate:14px 58px} 80%{translate:70px 8px}
@@ -163,6 +184,10 @@
 }
 @keyframes curdrift3{
   0%,100%{translate:0 0}  40%{translate:-16px -12px}  70%{translate:9px -20px}
+}
+@keyframes curdrift4{
+  0%,100%{translate:0 0}  35%{translate:38px -18px}
+  65%{translate:62px 22px} 88%{translate:12px 30px}
 }
 
 /* ---------- redline measurement ---------- */
@@ -210,6 +235,7 @@
   display:grid; grid-template-columns:64px minmax(0, 1.05fr) minmax(0, 1.35fr);
   gap:clamp(14px, 2vw, 48px); align-items:baseline;
   padding:clamp(16px, 1.9vh, 26px) 0; border-bottom:1px solid var(--hairline);
+  position:relative;
 }
 .rowitem__n{
   font-family:var(--mono); font-size:var(--ed-mark); color:var(--accent);
@@ -300,7 +326,7 @@
 }
 
 @media (prefers-reduced-motion:reduce){
-  .cur--1,.cur--2,.cur--3,.cur::before,.ring,.fig__pin::after{animation:none}
+  .cur--1,.cur--2,.cur--3,.cur--4,.cur::before,.ring,.fig__pin::after{animation:none}
   .fig__name,.fig--sel{opacity:1; animation:none !important}
   .stamp{opacity:1; animation:none !important}
   .rowitem::after,.rows:hover .rowitem{transition:none}
