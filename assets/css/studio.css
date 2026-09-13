@@ -198,19 +198,6 @@
   65%{translate:62px 22px} 88%{translate:12px 30px}
 }
 
-/* ---------- redline measurement ---------- */
-.meas{
-  position:absolute; display:flex; align-items:center; gap:8px;
-  font-family:var(--mono); font-size:11px; color:var(--accent); pointer-events:none;
-}
-.meas::before,.meas::after{content:""; flex:1 1 auto; height:1px; background:var(--accent)}
-.meas i{
-  position:absolute; top:-4px; width:1px; height:9px; background:var(--accent);
-  font-style:normal;
-}
-.meas i:first-of-type{left:0}
-.meas i:last-of-type{right:0}
-
 /* ---------- the index rows ---------- */
 /* Nothing here is clickable. The page is a statement of what we follow,
    so the row carries its own line rather than sending you off to find it,
