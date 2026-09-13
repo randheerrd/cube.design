@@ -125,12 +125,12 @@
   transition:opacity .22s ease, translate .22s ease;
 }
 .fig__pin:hover span{opacity:1; translate:0 0}
-/* Out in the page margin, clear of the row's own text — a pin that covers
-   the line it is commenting on is worse than no pin. */
-.fig__pin--row{right:-44px; top:50%; translate:0 -50%; pointer-events:auto}
-.fig__pin--row span{left:auto; right:36px; top:-2px; translate:4px 0}
-.fig__pin--row:hover span{translate:0 0}
-@media (max-width:1180px){.fig__pin--row{display:none}}
+/* On the corner of the card it belongs to, half outside the box, the way
+   a pin sits on the thing it is about. */
+.fig__pin--card{top:-12px; right:-12px; pointer-events:auto}
+.fig__pin--card span{left:auto; right:36px; top:-2px; translate:4px 0}
+.fig__pin--card:hover span{translate:0 0}
+@media (max-width:860px){.fig__pin--card{display:none}}
 
 /* ---------- presence cursors ---------- */
 /* One per person on the team. The colour is the identity, so each cursor
@@ -198,32 +198,34 @@
   65%{translate:62px 22px} 88%{translate:12px 30px}
 }
 
-/* ---------- the index rows ---------- */
-/* Nothing here is clickable. The page is a statement of what we follow,
-   so the row carries its own line rather than sending you off to find it,
-   and there are no hover states pretending otherwise.                  */
-.rows{display:grid; border-top:1px solid var(--hairline)}
-.rowitem{
-  display:grid; grid-template-columns:64px minmax(0, 1.05fr) minmax(0, 1.35fr);
-  gap:clamp(14px, 2vw, 48px); align-items:baseline;
-  padding:clamp(16px, 1.9vh, 26px) 0; border-bottom:1px solid var(--hairline);
-  position:relative;
+/* ---------- the cards ---------- */
+/* Two up, each in its own hairline box. A boxed card gives the numeral,
+   the heading and its line a container to sit in, which the open rows
+   never had — they relied on the rule below them to feel finished.
+   Hairline and 4px radius, no shadow: the house rules still hold.     */
+.cards{
+  display:grid; grid-template-columns:repeat(2, 1fr);
+  gap:clamp(14px, 1.4vw, 22px);
 }
-.rowitem__n{
+.card{
+  position:relative;
+  display:grid; align-content:start; gap:12px;
+  padding:clamp(24px, 2.4vw, 40px);
+  border:1px solid var(--hairline); border-radius:var(--radius-card);
+  background:var(--bg);
+}
+.card__n{
   font-family:var(--mono); font-size:var(--ed-mark); color:var(--accent);
 }
-.rowitem__t{
-  margin:0; font-size:clamp(19px, 1.9vw, 30px); font-weight:500; line-height:1.15;
-  letter-spacing:var(--ed-t1);
+.card__t{
+  margin:0; font-size:clamp(19px, 1.9vw, 30px); font-weight:500; line-height:1.14;
+  letter-spacing:var(--ed-t1); max-width:20ch;
 }
-.rowitem__d{
+.card__d{
   margin:0; font-size:var(--ed-body); line-height:1.55; letter-spacing:0;
-  color:var(--ed-dim);
+  color:var(--ed-dim); max-width:44ch;
 }
-@media (max-width:860px){
-  .rowitem{grid-template-columns:46px 1fr; row-gap:6px}
-  .rowitem__d{grid-column:2}
-}
+@media (max-width:860px){.cards{grid-template-columns:1fr}}
 
 /* ---------- the process strip ---------- */
 /* Five names on a rule, each with the one thing that has to be true. */
@@ -300,5 +302,4 @@
 @media (prefers-reduced-motion:reduce){
   .cur--1,.cur--2,.cur--3,.cur--4,.cur::before,.ring,.fig__pin::after{animation:none}
   .fig__name,.fig--sel{opacity:1; animation:none !important}
-  .rowitem::after,.rows:hover .rowitem{transition:none}
 }
