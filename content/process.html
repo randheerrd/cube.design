@@ -3,34 +3,8 @@
       <p class="ed-hero__mark"><i></i> 03 — Process</p>
       <h1 class="ed-hero__h">Five phases, four gates, and
         <u>no way to skip forward</u> <em>quietly.</em></h1>
-      <p class="ed-hero__lede">The phases matter less than the gates between them. Each gate
-        has a specific artefact that has to exist before the next phase starts.
-        <strong>The process is a ratchet, not a waterfall:</strong> you can go back, but you
-        cannot skip ahead.</p>
-
-      <nav class="ed-hero__toc" aria-label="On this page">
-        <a href="#intake">Intake</a>
-        <a href="#phases">Five phases</a>
-        <a href="#rituals">Rituals</a>
-        <a href="#anti">Anti-patterns</a>
-      </nav>
-    </div>
-  </section>
-
-  <!-- ---------------------------------------------------------- -->
-  <section class="ed" id="intake">
-    <div class="ed__in">
-      <div class="ed-note">
-        <p class="ed__label">/ Before phase one</p>
-        <div class="ed-note__body">
-          <p>Work reaches design three ways — roadmap commitments, customer escalations, and
-            things we start ourselves. All three land in the same place and get the same
-            treatment.</p>
-          <p><strong>Nothing goes straight to Figma.</strong> A request that arrives as a
-            solution — "add a filter here" — we turn back into a problem before anyone opens
-            a file. That conversation takes ten minutes and saves a cycle.</p>
-        </div>
-      </div>
+      <p class="ed-hero__lede">A ratchet, not a waterfall. You can go back; you cannot go
+        ahead without closing the gate behind you.</p>
     </div>
   </section>
 
@@ -38,137 +12,68 @@
   <section class="ed" id="phases">
     <div class="ed__in">
       <div class="ed__head">
-        <p class="ed__label">/ How work moves</p>
-        <div>
-          <h2 class="ed__h">Frame, Explore, Decide, Build, Learn</h2>
-          <p class="ed__sub">Each phase names what it produces and what has to be true
-            before the next one starts. <strong>The gate is the part people skip.</strong></p>
-        </div>
+        <p class="ed__label">/ The phases</p>
+        <h2 class="ed__h">How work moves</h2>
       </div>
 
       <div class="ed-grid ed-grid--2">
         <article class="ed-item reveal">
           <p class="ed-n">/01</p>
           <h3>Frame</h3>
-          <p>Establish what decision we are improving and for whom. This is the phase most
-            often skipped and most expensive to skip — a beautifully executed answer to the
-            wrong question costs a full cycle.</p>
-          <ul>
-            <li>Name the user, the decision, and its frequency</li>
-            <li>Find out what they do today — including the spreadsheet they actually use</li>
-            <li>Agree one success measure with the PM, in advance</li>
-            <li>Write down the constraint that makes this hard</li>
-          </ul>
-          <div class="ed-sub">
-            <div>
-              <span class="ed-sub__k">Produces</span>
-              <p>A one-page brief. One page — if it needs more, the problem is not framed.</p>
-            </div>
-            <div>
-              <span class="ed-sub__k ed-sub__k--gate">Gate</span>
-              <p>PM and design lead both sign the success measure. No measure, no
-                exploration.</p>
-            </div>
-          </div>
+          <p>Name the decision, who makes it, and what they do today.</p>
         </article>
-
         <article class="ed-item reveal">
           <p class="ed-n">/02</p>
           <h3>Explore</h3>
-          <p>Deliberately divergent, deliberately cheap. The goal is to make the decision
-            space visible, not to find the answer on day one. Fidelity stays low on purpose —
-            polish creates commitment before commitment is earned.</p>
-          <ul>
-            <li>At least three genuinely different approaches, not three shades of one</li>
-            <li>One of them should be the boring version — often it wins</li>
-            <li>Greyscale until the structure is settled</li>
-            <li>Pull an engineer in early to sanity-check feasibility, not to approve</li>
-          </ul>
-          <div class="ed-sub">
-            <div>
-              <span class="ed-sub__k">Produces</span>
-              <p>Three options taken through critique, with the trade-offs written under
-                each.</p>
-            </div>
-            <div>
-              <span class="ed-sub__k ed-sub__k--gate">Gate</span>
-              <p>Critiqued by the team. An option nobody argued about was not explored.</p>
-            </div>
-          </div>
+          <p>Three genuinely different approaches, kept cheap.</p>
         </article>
-
         <article class="ed-item reveal">
           <p class="ed-n">/03</p>
           <h3>Decide</h3>
-          <p>Pick one and pressure-test it properly. This is where the four states get drawn,
-            the edge cases get named, and the design stops being a picture and becomes a
-            specification.</p>
-          <ul>
-            <li>Empty, loading, error and overflow states, all of them</li>
-            <li>Responsive behaviour and keyboard path</li>
-            <li>Test against the Craft Bar before review, not during</li>
-            <li>Record what was rejected and why — future-you will ask</li>
-          </ul>
-          <div class="ed-sub">
-            <div>
-              <span class="ed-sub__k">Produces</span>
-              <p>A decision record: the choice, the alternatives, the reasoning, the
-                trade-off accepted.</p>
-            </div>
-            <div>
-              <span class="ed-sub__k ed-sub__k--gate">Gate</span>
-              <p>Design review passed against the Craft Bar. Engineering has read the spec
-                and has no blocking questions.</p>
-            </div>
-          </div>
+          <p>Pick one, draw all four states, write down what was rejected.</p>
         </article>
-
         <article class="ed-item reveal">
           <p class="ed-n">/04</p>
           <h3>Build</h3>
-          <p>Design does not end at handoff, because handoff is not a thing that works. The
-            designer stays attached to the build and answers questions in hours, not at the
-            next ceremony.</p>
-          <ul>
-            <li>Designer available daily to whoever is implementing</li>
-            <li>Implementation review on staging, against real data, before merge</li>
-            <li>Changes made during build get reflected back into the file</li>
-            <li>Ship behind a flag where the change is significant</li>
-          </ul>
-          <div class="ed-sub">
-            <div>
-              <span class="ed-sub__k">Produces</span>
-              <p>Shipped software plus an updated source file that matches what shipped.</p>
-            </div>
-            <div>
-              <span class="ed-sub__k ed-sub__k--gate">Gate</span>
-              <p>Designer has seen it running with production-shaped data and signed off.</p>
-            </div>
-          </div>
+          <p>The designer stays attached until it ships.</p>
         </article>
-
         <article class="ed-item reveal">
           <p class="ed-n">/05</p>
           <h3>Learn</h3>
-          <p>The phase everyone drops when the next thing is urgent. We protect it because
-            without it the whole process is just opinion delivered on schedule.</p>
-          <ul>
-            <li>Check the success measure agreed in Frame — the actual one</li>
-            <li>Watch three real users, minimum, on the real thing</li>
-            <li>Write what we got wrong, publicly, in one paragraph</li>
-            <li>Feed anything general back into the system or this handbook</li>
-          </ul>
-          <div class="ed-sub">
-            <div>
-              <span class="ed-sub__k">Produces</span>
-              <p>A short written learning, shared in the team channel. One paragraph is
-                enough; zero is not.</p>
-            </div>
-            <div>
-              <span class="ed-sub__k ed-sub__k--gate">Gate</span>
-              <p>None — this phase closes the loop rather than opening one.</p>
-            </div>
-          </div>
+          <p>Check the measure we agreed in Frame.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------- -->
+  <section class="ed" id="gates">
+    <div class="ed__in">
+      <div class="ed__head">
+        <p class="ed__label">/ The gates</p>
+        <h2 class="ed__h">What has to be true first</h2>
+      </div>
+
+      <div class="ed-grid ed-grid--2">
+        <article class="ed-item reveal">
+          <p class="ed-n">/01</p>
+          <h3>Frame → Explore</h3>
+          <p>PM and design lead sign the success measure.</p>
+        </article>
+        <article class="ed-item reveal">
+          <p class="ed-n">/02</p>
+          <h3>Explore → Decide</h3>
+          <p>The team has critiqued the options.</p>
+        </article>
+        <article class="ed-item reveal">
+          <p class="ed-n">/03</p>
+          <h3>Decide → Build</h3>
+          <p>Design review passed against the Craft Bar.</p>
+        </article>
+        <article class="ed-item reveal">
+          <p class="ed-n">/04</p>
+          <h3>Build → Learn</h3>
+          <p>Designer has seen it running on real data.</p>
         </article>
       </div>
     </div>
@@ -178,8 +83,7 @@
   <section class="ed ed--say">
     <div class="ed__in">
       <p class="ed__label" style="margin-bottom:clamp(28px,4vh,52px)">/ The shape of it</p>
-      <p class="ed-say">A <u>ratchet</u>, not a waterfall. You can go back. You cannot skip
-        forward quietly.</p>
+      <p class="ed-say">A <u>ratchet</u>, not a waterfall.</p>
       <p class="ed-say__by">Four gates — Frame · Explore · Decide · Build</p>
     </div>
   </section>
@@ -189,75 +93,20 @@
     <div class="ed__in">
       <div class="ed__head">
         <p class="ed__label">/ The week</p>
-        <div>
-          <h2 class="ed__h">Two design syncs a week, and nothing else standing</h2>
-          <p class="ed__sub">Two fixed points. Everything between them is the work — if a
-            conversation can wait for the next sync, it waits.</p>
-        </div>
+        <h2 class="ed__h">Two design syncs, and nothing else standing</h2>
       </div>
 
       <div class="ed-grid ed-grid--2">
         <article class="ed-item reveal">
           <p class="ed-n">/01</p>
           <h3>Critique</h3>
-          <p>Work in progress only. Finished work is a demo, not a critique. The presenter
-            opens with the decision being improved and the feedback they want — not a tour of
-            the file.</p>
-          <p>Cite principles by number. Separate <strong>"this breaks a rule"</strong> from
-            <strong>"I would have done it differently"</strong> — only the first is
-            binding.</p>
+          <p>Work in progress only. Cite principles by number.</p>
         </article>
         <article class="ed-item reveal">
           <p class="ed-n">/02</p>
           <h3>Demo</h3>
-          <p>What actually shipped, shown running against real data, open to the whole
-            company.</p>
-          <p>It doubles as the week's kickoff: what each person is framing, exploring or
-            deciding next, and where they are stuck.</p>
+          <p>What shipped, shown running, open to the company.</p>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ---------------------------------------------------------- -->
-  <section class="ed" id="anti">
-    <div class="ed__in">
-      <div class="ed__head">
-        <p class="ed__label">/ Confession</p>
-        <div>
-          <h2 class="ed__h">Anti-patterns we have actually committed</h2>
-          <p class="ed__sub">Not hypotheticals. Each of these cost us a cycle, and each one
-            is the reason a gate exists.</p>
-        </div>
-      </div>
-
-      <div class="ed-defs">
-        <div class="ed-def">
-          <p class="ed-def__k">/01</p>
-          <p class="ed-def__v"><b>Solutioning in intake</b> A stakeholder describes a UI, we
-            build it, and nobody ever names the underlying decision.</p>
-        </div>
-        <div class="ed-def">
-          <p class="ed-def__k">/02</p>
-          <p class="ed-def__v"><b>Polishing during Explore</b> High fidelity too early makes
-            the first idea unkillable.</p>
-        </div>
-        <div class="ed-def">
-          <p class="ed-def__k">/03</p>
-          <p class="ed-def__v"><b>The silent gate</b> Moving to Build without a written
-            decision record, then relitigating the same choice three weeks later.</p>
-        </div>
-        <div class="ed-def">
-          <p class="ed-def__k">/04</p>
-          <p class="ed-def__v"><b>Handoff as a wall</b> Posting a link and disappearing. The
-            gap between the file and the build is filled by whoever is nearest, usually
-            badly.</p>
-        </div>
-        <div class="ed-def">
-          <p class="ed-def__k">/05</p>
-          <p class="ed-def__v"><b>Skipping Learn</b> Shipping and immediately starting the
-            next thing, so we never find out whether any of it worked.</p>
-        </div>
       </div>
     </div>
   </section>
