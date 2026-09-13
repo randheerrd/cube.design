@@ -14,6 +14,14 @@
    is the shared vocabulary of any drawing tool, in our orange.
    ============================================================ */
 
+/* Two colours, two jobs. Blue is tool chrome — selection, handles, frame
+   labels, artboard bounds. Orange stays the brand: numbers, stamps, the
+   ring, links. Nothing is ever both, so you always know whether you are
+   looking at the work or at the tool holding it.                        */
+/* --sel draws lines and handles, which carry no text. --sel-ink is the
+   same hue taken dark enough that white type on it clears WCAG AA at the
+   11-14px these chips use: #0d99ff would only reach about 3.1:1.        */
+.page-index{--sel:#0d99ff; --sel-ink:#0b72d6}
 .page-index main{background:var(--bg)}
 
 /* ---------- the pasteboard ---------- */
@@ -31,7 +39,7 @@
 .bounds{position:absolute; inset:-22px -18px; pointer-events:none; z-index:0}
 .bounds i{
   position:absolute; width:15px; height:15px;
-  border:0 solid var(--accent); opacity:.5;
+  border:0 solid var(--sel); opacity:.75;
 }
 .bounds i:nth-of-type(1){top:0; left:0;     border-top-width:1px; border-left-width:1px}
 .bounds i:nth-of-type(2){top:0; right:0;    border-top-width:1px; border-right-width:1px}
@@ -50,7 +58,7 @@
   position:absolute; top:-42px; left:-2px; margin:0;
   display:inline-flex; align-items:center; gap:7px;
   padding:7px 13px 6px; border-radius:4px;
-  background:var(--accent); color:var(--on-accent);
+  background:var(--sel-ink); color:#fff;
   font-family:var(--mono); font-size:14px; letter-spacing:.02em;
   white-space:nowrap; pointer-events:none;
   transform-origin:0 100%;
@@ -65,23 +73,23 @@
 }
 
 /* ---------- a selection: outline, four handles, a size chip ---------- */
-.fig--sel{outline:2px solid var(--accent); outline-offset:12px}
+.fig--sel{outline:2px solid var(--sel); outline-offset:12px}
 .fig--sel{opacity:1; animation:none}
 .reveal.is-in.fig--sel{animation:selsnap .3s cubic-bezier(.2,1.3,.4,1) .28s backwards}
 @keyframes selsnap{
   0%{outline-color:transparent; scale:.992}
-  40%{outline-color:var(--accent)}
+  40%{outline-color:var(--sel)}
   100%{scale:1}
 }
 .fig__h{position:absolute; width:11px; height:11px; background:var(--bg);
-  border:2px solid var(--accent); border-radius:1px; pointer-events:none}
+  border:2px solid var(--sel); border-radius:1px; pointer-events:none}
 .fig__h--tl{top:-17px; left:-17px}
 .fig__h--tr{top:-17px; right:-17px}
 .fig__h--bl{bottom:-17px; left:-17px}
 .fig__h--br{bottom:-17px; right:-17px}
 .fig__dim{
   position:absolute; bottom:-36px; left:50%; translate:-50% 0;
-  padding:5px 11px 4px; border-radius:4px; background:var(--accent); color:var(--on-accent);
+  padding:5px 11px 4px; border-radius:4px; background:var(--sel-ink); color:#fff;
   font-family:var(--mono); font-size:12px; letter-spacing:.02em; white-space:nowrap;
   pointer-events:none;
 }
@@ -331,3 +339,70 @@
   .stamp{opacity:1; animation:none !important}
   .rowitem::after,.rows:hover .rowitem{transition:none}
 }
+
+
+/* ============================================================
+   TOOL VOCABULARY
+   Glyphs a designer reads without a caption: a toolbar, a layers
+   list, component and instance marks, a pen path with its anchors.
+   All drawn here from plain geometry — squares, circles, diamonds,
+   a bezier — so nothing is lifted from any particular product.
+   ============================================================ */
+
+/* ---------- the floating toolbar ---------- */
+.tools{
+  display:inline-flex; align-items:center; gap:2px; padding:6px;
+  border-radius:13px; background:var(--ink); color:var(--bg);
+}
+.tools span{
+  width:34px; height:34px; display:grid; place-items:center; border-radius:9px;
+}
+.tools span[data-on]{background:var(--sel); color:#fff}
+.tools svg{
+  width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:1.5;
+  stroke-linecap:round; stroke-linejoin:round;
+}
+.tools svg .sld{fill:currentColor; stroke:none}
+.tools i{
+  display:block; width:1px; height:20px; margin:0 6px;
+  background:rgba(127,127,127,.45);
+}
+
+/* ---------- the layers list ---------- */
+/* Sits in the left column the section label leaves empty, and names the
+   parts of the band it is standing next to. */
+.ed__label + .layers,
+.ed__label + .tools,
+.ed__label + .penpath{margin-top:16px}
+.layers{
+  display:grid; gap:1px; margin:0; max-width:230px;
+  font-family:var(--mono); font-size:11px; letter-spacing:.01em; color:var(--ed-dim2);
+}
+.layers__t{
+  display:flex; align-items:center; gap:7px; padding:0 8px 9px;
+  text-transform:uppercase; letter-spacing:.14em; opacity:.8;
+}
+.layers__row{
+  display:flex; align-items:center; gap:8px;
+  padding:5px 8px; border-radius:4px; white-space:nowrap;
+}
+.layers__row--on{background:rgba(13,153,255,.12); color:var(--sel-ink)}
+.layers__row--in{padding-left:24px}
+.layers__row--in2{padding-left:40px}
+.layers svg{
+  width:13px; height:13px; flex:0 0 auto;
+  fill:none; stroke:currentColor; stroke-width:1.5;
+  stroke-linecap:round; stroke-linejoin:round;
+}
+.layers svg .sld{fill:currentColor; stroke:none}
+@media (max-width:900px){.layers,.tools{display:none}}
+
+/* ---------- a pen path, mid-edit ---------- */
+/* A bezier with its anchors and one pair of direction handles out — the
+   moment before a curve is committed. */
+.penpath{display:block; width:100%; height:auto; overflow:visible}
+.penpath__c{fill:none; stroke:var(--sel); stroke-width:1.6}
+.penpath__h{stroke:var(--sel); stroke-width:1; opacity:.55}
+.penpath__a{fill:var(--bg); stroke:var(--sel); stroke-width:1.6}
+.penpath__a--on{fill:var(--sel)}
+.penpath__d{fill:var(--sel)}

@@ -73,12 +73,6 @@ html[data-mode="edition"] main{display:block; padding:0}
   margin:0; font-size:var(--ed-h2); font-weight:500; line-height:1.04;
   letter-spacing:var(--ed-t1); max-width:20ch;
 }
-.ed__sub{
-  margin:18px 0 0; font-size:var(--ed-body); line-height:1.62;
-  letter-spacing:0; color:var(--ed-dim); max-width:56ch;
-}
-.ed__sub strong{color:var(--ink); font-weight:500}
-
 /* ---------- hero band ---------- */
 .ed--hero{
   padding-top:calc(var(--pill-h) + clamp(90px, 15vh, 190px));
@@ -106,17 +100,6 @@ html[data-mode="edition"] main{display:block; padding:0}
 .ed-hero__lede strong{color:var(--ink); font-weight:500}
 
 /* A mono run of the page's own contents, sitting under the hero. */
-.ed-hero__toc{
-  display:flex; flex-wrap:wrap; gap:8px 28px; margin-top:clamp(34px, 5vh, 60px);
-  padding-top:22px; border-top:1px solid var(--hairline);
-  font-family:var(--mono); font-size:var(--ed-mark); letter-spacing:.02em;
-}
-.ed-hero__toc a{
-  color:var(--ed-dim2); text-decoration:none; text-transform:uppercase;
-  transition:color .2s ease;
-}
-.ed-hero__toc a:hover{color:var(--accent)}
-
 /* ---------- narrative band ---------- */
 /* Single column, held to a reading measure and offset into the grid so
    it lines up with the headings above it rather than the page edge.  */
@@ -179,30 +162,6 @@ html[data-mode="edition"] main{display:block; padding:0}
 .ed-grid--2 .ed-item h3{max-width:22ch}
 .ed-grid--2 .ed-item p{max-width:52ch}
 
-/* ---------- a mono definition run ---------- */
-/* Label left, value right, one hairline row each. Carries the gates,
-   the exceptions and the ownership table without a <table> anywhere.  */
-.ed-defs{display:grid; gap:0}
-.ed-def{
-  display:grid; grid-template-columns:minmax(120px, 1fr) 3fr;
-  gap:clamp(20px, 3vw, 56px);
-  padding:22px 0; border-top:1px solid var(--hairline); align-items:baseline;
-}
-.ed-def:last-child{border-bottom:1px solid var(--hairline)}
-.ed-def__k{
-  font-family:var(--mono); font-size:var(--ed-mark); letter-spacing:.02em;
-  color:var(--ed-dim2); text-transform:uppercase;
-}
-.ed-def__v{
-  margin:0; font-size:var(--ed-body); line-height:1.6; letter-spacing:0;
-  color:var(--ed-dim); max-width:62ch;
-}
-.ed-def__v strong{color:var(--ink); font-weight:500}
-.ed-def__v b{
-  display:block; margin-bottom:6px; font-size:var(--ed-h3); font-weight:500;
-  line-height:1.12; letter-spacing:var(--ed-t1); color:var(--ink);
-}
-
 /* ---------- the statement ---------- */
 /* One band that drops the grid entirely and just sets a sentence large.
    Inverted, so it reads as a full stop between sections.             */
@@ -253,9 +212,8 @@ html[data-mode="edition"] .reveal{transform:translateY(16px)}
   .ed-grid--3 > .ed-item:nth-child(3){border-top:1px solid var(--hairline)}
 }
 @media (max-width:900px){
-  .ed__head,.ed-note,.ed-def{grid-template-columns:1fr; gap:14px}
+  .ed__head,.ed-note{grid-template-columns:1fr; gap:14px}
   .ed__label{padding-top:0}
-  .ed-def{gap:8px}
 }
 @media (max-width:640px){
   .ed-grid,.ed-grid--2{grid-template-columns:1fr}
@@ -263,22 +221,4 @@ html[data-mode="edition"] .reveal{transform:translateY(16px)}
 }
 @media (prefers-reduced-motion:reduce){
   .ed-item,.ed-link{transition:none}
-}
-
-/* ---------- what a phase hands over ---------- */
-/* Produces / Gate, hung under a grid item on its own hairline. The gate
-   takes the accent because it is the half people skip. */
-.ed-sub{
-  display:grid; gap:14px; margin-top:8px; padding-top:16px;
-  border-top:1px solid var(--hairline);
-}
-.ed-sub > div{display:grid; gap:4px}
-.ed-sub__k{
-  font-family:var(--mono); font-size:var(--ed-mark); letter-spacing:.02em;
-  text-transform:uppercase; color:var(--ed-dim2);
-}
-.ed-sub__k--gate{color:var(--accent)}
-.ed-sub p{
-  margin:0; font-size:var(--ed-meta); line-height:1.55; letter-spacing:0;
-  color:var(--ed-dim);
 }

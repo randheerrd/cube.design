@@ -16,11 +16,10 @@
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------------------------------------------------------- */
-  /* The contents run under the hero and the menu drop-down. Real anchors,
-     so both work with JS off; this only adds easing and a focus handoff. */
+  /* The menu is a contents list for one page. Real anchors, so it works
+     with JS off; this only adds easing and a focus handoff. */
   function initAnchors() {
-    var links = document.querySelectorAll(
-      '.ed-hero__toc a[href^="#"], .menu a[href^="#"]');
+    var links = document.querySelectorAll('.menu a[href^="#"]');
     for (var i = 0; i < links.length; i++) (function (a) {
       a.addEventListener('click', function (e) {
         var el = document.getElementById(a.getAttribute('href').slice(1));
