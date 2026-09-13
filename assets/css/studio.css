@@ -285,19 +285,26 @@
 /* ---------- a rotating ring, for the closing band ---------- */
 .ringwrap{
   position:absolute; z-index:0; pointer-events:none;
-  width:var(--ring,680px); height:var(--ring,680px);
+  width:var(--ring,300px); height:var(--ring,300px);
+  /* Parked in the right gutter and centred on the band, so the whole
+     circle is inside the clip — a cropped ring reads as stray type. */
+  right:clamp(4px, 3vw, 56px);
+  top:50%; margin-top:calc(var(--ring,300px) / -2);
 }
 .ring{display:block; width:100%; height:100%; animation:ringspin 34s linear infinite}
 .ring text{
-  font-size:10px; letter-spacing:.28em; text-transform:uppercase;
-  fill:var(--ink-3); opacity:.9; font-weight:500;
+  font-size:9px; letter-spacing:.22em; text-transform:uppercase;
+  fill:var(--ink-3); opacity:.75; font-weight:500;
 }
 @keyframes ringspin{to{rotate:360deg}}
 @media (max-width:860px){.ringwrap{display:none}}
 
 /* The closing band is sized around its ring: too short and the circle is
    cropped to a sliver that reads as loose type, not a ring. */
-.page-index #more{padding-block:clamp(104px, 15vh, 190px)}
+.page-index #more{
+  padding-block:clamp(80px, 11vh, 140px);
+  min-height:calc(300px + 96px);
+}
 
 /* ---------- band intro for the landing page ---------- */
 .page-index .ed{border-top:1px solid var(--hairline)}
