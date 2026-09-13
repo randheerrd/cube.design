@@ -1,150 +1,55 @@
-  <nav class="vindex" aria-label="On this page">
-    <a href="#f-flow">The shape</a>
-    <a href="#f01">01 Frame</a>
-    <a href="#f02">02 Explore</a>
-    <a href="#f03">03 Decide</a>
-    <a href="#f04">04 Build</a>
-    <a href="#f05">05 Learn</a>
-    <a href="#f-raci">Ownership</a>
-    <a href="#f-week">Rituals</a>
-    <a href="#f-anti">Anti-patterns</a>
-  </nav>
+  <section class="ed ed--hero">
+    <div class="ed__in">
+      <p class="ed-hero__mark"><i></i> 03 — Process</p>
+      <h1 class="ed-hero__h">Five phases, four gates, and
+        <u>no way to skip forward</u> <em>quietly.</em></h1>
+      <p class="ed-hero__lede">The phases matter less than the gates between them. Each gate
+        has a specific artefact that has to exist before the next phase starts.
+        <strong>The process is a ratchet, not a waterfall:</strong> you can go back, but you
+        cannot skip ahead.</p>
 
-  <div class="track">
+      <nav class="ed-hero__toc" aria-label="On this page">
+        <a href="#intake">Intake</a>
+        <a href="#phases">Five phases</a>
+        <a href="#owns">Who owns what</a>
+        <a href="#rituals">Rituals</a>
+        <a href="#anti">Anti-patterns</a>
+      </nav>
+    </div>
+  </section>
 
-
-    <!-- ---------------------------------------------------------- -->
-    <section class="panel panel--split" id="f-open" data-stamp="01 / 12 — Process" aria-label="Process">
-      <div class="rhead">
-        <p class="rhead__eyebrow"><span>03</span><span class="dot"></span><span>Process</span></p>
-        <h1 class="rhead__line">Five phases, and the
-          <span class="rotor">
-            <span>gates</span>
-            <span>artefacts</span>
-            <span>signatures</span>
-          </span>
-          between them
-        </h1>
-        <p class="rhead__lede">The phases matter less than the gates between them — each one
-          has a specific artefact that has to exist before the next phase starts.
-          <strong>The process is a ratchet, not a waterfall:</strong> you can go back, but you
-          cannot skip forward quietly.</p>
-        <span class="scrollhint"><i></i> Scroll sideways</span>
-      </div>
-
-      <p class="bigmark" data-drift="-46">Process</p>
-    </section>
-
-    <!-- ---------------------------------------------------------- -->
-    <section class="panel" id="f-flow" data-stamp="02 / 12 — The shape" aria-label="How work moves">
-      <div class="ringwrap" data-drift="70" style="--ring:1060px; left:calc(50% - 530px); top:calc(50% - 530px)">
-        <svg class="ring" viewBox="0 0 200 200" aria-hidden="true">
-          <defs><path id="procFlow" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
-          <text><textPath href="#procFlow">Frame · Explore · Decide · Build · Learn · Frame · Explore — </textPath></text>
-        </svg>
-      </div>
-
-      <div class="rcol" style="gap:clamp(28px,3vw,54px); width:min(1380px,86vw)">
-        <div class="rcol" style="gap:12px">
-          <p class="rlabel">The whole thing on one line</p>
-          <h2 class="rtitle">How work moves</h2>
+  <!-- ---------------------------------------------------------- -->
+  <section class="ed" id="intake">
+    <div class="ed__in">
+      <div class="ed-note">
+        <p class="ed__label">/ Before phase one</p>
+        <div class="ed-note__body">
+          <p>Work reaches design three ways — roadmap commitments, customer escalations, and
+            things we start ourselves. All three land in the same place and get the same
+            treatment.</p>
+          <p><strong>Nothing goes straight to Figma.</strong> A request that arrives as a
+            solution — "add a filter here" — gets converted back into a problem before anyone
+            opens a file. That conversation takes ten minutes and saves a cycle.</p>
         </div>
-
-        <div class="flow">
-          <svg viewBox="0 0 1000 150" role="img"
-               aria-label="Five phases in sequence — Frame, Explore, Decide, Build, Learn — with a gate between each.">
-          <path class="flow__rail" d="M100 66H900"/>
-          <path class="flow__pulse" d="M100 66H900"/>
-          <g class="flow__gate">
-            <path d="M200 52v28"/>
-            <text class="flow__gatelabel" x="200" y="98">gate</text>
-            <path d="M400 52v28"/>
-            <text class="flow__gatelabel" x="400" y="98">gate</text>
-            <path d="M600 52v28"/>
-            <text class="flow__gatelabel" x="600" y="98">gate</text>
-            <path d="M800 52v28"/>
-            <text class="flow__gatelabel" x="800" y="98">gate</text>
-          </g>
-          <g class="flow__step">
-            <text class="flow__dur" x="100" y="26">2–5 days</text>
-            <circle class="flow__node" cx="100" cy="66" r="15"/>
-            <text class="flow__num" x="100" y="71">01</text>
-            <text class="flow__name" x="100" y="132">Frame</text>
-          </g>
-          <g class="flow__step">
-            <text class="flow__dur" x="300" y="26">3–8 days</text>
-            <circle class="flow__node" cx="300" cy="66" r="15"/>
-            <text class="flow__num" x="300" y="71">02</text>
-            <text class="flow__name" x="300" y="132">Explore</text>
-          </g>
-          <g class="flow__step">
-            <text class="flow__dur" x="500" y="26">2–4 days</text>
-            <circle class="flow__node" cx="500" cy="66" r="15"/>
-            <text class="flow__num" x="500" y="71">03</text>
-            <text class="flow__name" x="500" y="132">Decide</text>
-          </g>
-          <g class="flow__step">
-            <text class="flow__dur" x="700" y="26">with the sprint</text>
-            <circle class="flow__node" cx="700" cy="66" r="15"/>
-            <text class="flow__num" x="700" y="71">04</text>
-            <text class="flow__name" x="700" y="132">Build</text>
-          </g>
-          <g class="flow__step">
-            <text class="flow__dur" x="900" y="26">2–6 weeks after</text>
-            <circle class="flow__node flow__node--last" cx="900" cy="66" r="15"/>
-            <text class="flow__num flow__node--last" x="900" y="71">05</text>
-            <text class="flow__name" x="900" y="132">Learn</text>
-          </g>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <!-- ---------------------------------------------------------- -->
-    <section class="panel panel--dark" id="f-intake" data-stamp="03 / 12 — Intake" aria-label="Intake">
-      <div class="rrow" style="align-items:center; gap:clamp(48px,7vw,150px)">
-        <h2 class="rtitle" style="font-size:clamp(30px,4vw,72px); max-width:13ch">
-          Nothing goes
-          <em style="font-style:normal; color:var(--accent)">straight to Figma.</em>
-        </h2>
-        <div class="rcol" style="max-width:44ch">
-          <p class="rlabel" style="color:rgba(255,255,255,.45)">Before phase one: intake</p>
-          <p class="rbody">Work reaches design three ways — roadmap commitments, customer
-            escalations, and things we start ourselves. All three land in the same place and
-            get the same treatment. A request that arrives as a solution
-            <strong>("add a filter here")</strong> gets converted back into a problem before
-            anyone opens a file.</p>
-        </div>
-
-        <svg class="mg" viewBox="0 0 260 200" role="img"
-             aria-label="Three inbound routes converging on one node, which sends a single path onward.">
-          <path class="mg__flow" d="M12 40h96q22 0 22 26v18"/>
-          <path class="mg__flow" d="M12 100h104"/>
-          <path class="mg__flow" d="M12 160h96q22 0 22-26v-18"/>
-          <circle cx="130" cy="100" r="14"/>
-          <circle class="mg__node" cx="130" cy="100" r="4"/>
-          <path class="mg__accent" d="M144 100h96"/>
-          <path class="mg__accent" d="M230 92l10 8-10 8"/>
-        </svg>
-      </div>
-    </section>
-
-    <!-- ---------------------------------------------------------- -->
-    <div class="vmar" aria-hidden="true">
-      <div class="vmar__track">
-        <span>Phase — Gate — Phase — Gate —</span>
-        <span>Phase — Gate — Phase — Gate —</span>
       </div>
     </div>
+  </section>
 
-    <!-- ---------------------------------------------------------- -->
-    <section class="panel" id="f01" data-stamp="04 / 12 — Frame" aria-label="Phase 01 Frame">
-      <div class="unit reveal">
-        <div class="unit__block" data-drift="-34" data-magnet="10" data-cursor="2–5 days">
-          <p class="unit__tag">Phase · 2–5 days</p>
-          <div><p class="unit__n">01</p><p class="unit__tag" style="opacity:1">Frame</p></div>
+  <!-- ---------------------------------------------------------- -->
+  <section class="ed" id="phases">
+    <div class="ed__in">
+      <div class="ed__head">
+        <p class="ed__label">/ How work moves</p>
+        <div>
+          <h2 class="ed__h">Frame, Explore, Decide, Build, Learn</h2>
+          <p class="ed__sub">Each phase names what it produces and what has to be true
+            before the next one starts. <strong>The gate is the part people skip.</strong></p>
         </div>
-        <div class="unit__card" data-drift="20">
+      </div>
+
+      <div class="ed-grid ed-grid--2">
+        <article class="ed-item reveal">
+          <p class="ed-n">/01 — 2–5 days</p>
           <h3>Frame</h3>
           <p>Establish what decision we are improving and for whom. This is the phase most
             often skipped and most expensive to skip — a beautifully executed answer to the
@@ -155,58 +60,46 @@
             <li>Agree one success measure with the PM, in advance</li>
             <li>Write down the constraint that makes this hard</li>
           </ul>
-          <div class="duo">
+          <div class="ed-sub">
             <div>
-              <p class="unit__h">Produces</p>
+              <span class="ed-sub__k">Produces</span>
               <p>A one-page brief. One page — if it needs more, the problem is not framed.</p>
             </div>
-            <div class="duo__gate">
-              <p class="unit__h">Gate</p>
-              <p>PM and design lead both sign the success measure. No measure, no exploration.</p>
+            <div>
+              <span class="ed-sub__k ed-sub__k--gate">Gate</span>
+              <p>PM and design lead both sign the success measure. No measure, no
+                exploration.</p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </article>
 
-    <section class="panel" id="f02" data-stamp="05 / 12 — Explore" aria-label="Phase 02 Explore">
-      <div class="unit reveal">
-        <div class="unit__block" data-drift="-34" data-magnet="10" data-cursor="3–8 days">
-          <p class="unit__tag">Phase · 3–8 days</p>
-          <div><p class="unit__n">02</p><p class="unit__tag" style="opacity:1">Explore</p></div>
-        </div>
-        <div class="unit__card" data-drift="20">
+        <article class="ed-item reveal">
+          <p class="ed-n">/02 — 3–8 days</p>
           <h3>Explore</h3>
           <p>Deliberately divergent, deliberately cheap. The goal is to make the decision
-            space visible, not to find the answer on day one. Fidelity stays low on purpose
-            — polish creates commitment before commitment is earned.</p>
+            space visible, not to find the answer on day one. Fidelity stays low on purpose —
+            polish creates commitment before commitment is earned.</p>
           <ul>
             <li>At least three genuinely different approaches, not three shades of one</li>
             <li>One of them should be the boring version — often it wins</li>
             <li>Greyscale until the structure is settled</li>
             <li>Pull an engineer in early to sanity-check feasibility, not to approve</li>
           </ul>
-          <div class="duo">
+          <div class="ed-sub">
             <div>
-              <p class="unit__h">Produces</p>
-              <p>Three options taken through critique, with the trade-offs written under each.</p>
+              <span class="ed-sub__k">Produces</span>
+              <p>Three options taken through critique, with the trade-offs written under
+                each.</p>
             </div>
-            <div class="duo__gate">
-              <p class="unit__h">Gate</p>
+            <div>
+              <span class="ed-sub__k ed-sub__k--gate">Gate</span>
               <p>Critiqued by the team. An option nobody argued about was not explored.</p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </article>
 
-    <section class="panel" id="f03" data-stamp="06 / 12 — Decide" aria-label="Phase 03 Decide">
-      <div class="unit reveal">
-        <div class="unit__block" data-drift="-34" data-magnet="10" data-cursor="2–4 days">
-          <p class="unit__tag">Phase · 2–4 days</p>
-          <div><p class="unit__n">03</p><p class="unit__tag" style="opacity:1">Decide</p></div>
-        </div>
-        <div class="unit__card" data-drift="20">
+        <article class="ed-item reveal">
+          <p class="ed-n">/03 — 2–4 days</p>
           <h3>Decide</h3>
           <p>Pick one and pressure-test it properly. This is where the four states get drawn,
             the edge cases get named, and the design stops being a picture and becomes a
@@ -217,29 +110,22 @@
             <li>Test against the Craft Bar before review, not during</li>
             <li>Record what was rejected and why — future-you will ask</li>
           </ul>
-          <div class="duo">
+          <div class="ed-sub">
             <div>
-              <p class="unit__h">Produces</p>
+              <span class="ed-sub__k">Produces</span>
               <p>A decision record: the choice, the alternatives, the reasoning, the
                 trade-off accepted.</p>
             </div>
-            <div class="duo__gate">
-              <p class="unit__h">Gate</p>
+            <div>
+              <span class="ed-sub__k ed-sub__k--gate">Gate</span>
               <p>Design review passed against the Craft Bar. Engineering has read the spec
                 and has no blocking questions.</p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </article>
 
-    <section class="panel" id="f04" data-stamp="07 / 12 — Build" aria-label="Phase 04 Build">
-      <div class="unit reveal">
-        <div class="unit__block" data-drift="-34" data-magnet="10" data-cursor="With the sprint">
-          <p class="unit__tag">Phase · with the sprint</p>
-          <div><p class="unit__n">04</p><p class="unit__tag" style="opacity:1">Build</p></div>
-        </div>
-        <div class="unit__card" data-drift="20">
+        <article class="ed-item reveal">
+          <p class="ed-n">/04 — with the sprint</p>
           <h3>Build</h3>
           <p>Design does not end at handoff, because handoff is not a thing that works. The
             designer stays attached to the build and answers questions in hours, not at the
@@ -250,27 +136,20 @@
             <li>Changes made during build get reflected back into the file</li>
             <li>Ship behind a flag where the change is significant</li>
           </ul>
-          <div class="duo">
+          <div class="ed-sub">
             <div>
-              <p class="unit__h">Produces</p>
+              <span class="ed-sub__k">Produces</span>
               <p>Shipped software plus an updated source file that matches what shipped.</p>
             </div>
-            <div class="duo__gate">
-              <p class="unit__h">Gate</p>
+            <div>
+              <span class="ed-sub__k ed-sub__k--gate">Gate</span>
               <p>Designer has seen it running with production-shaped data and signed off.</p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </article>
 
-    <section class="panel" id="f05" data-stamp="08 / 12 — Learn" aria-label="Phase 05 Learn">
-      <div class="unit reveal">
-        <div class="unit__block" data-drift="-34" data-magnet="10" data-cursor="2–6 weeks after">
-          <p class="unit__tag">Phase · 2–6 weeks after</p>
-          <div><p class="unit__n">05</p><p class="unit__tag" style="opacity:1">Learn</p></div>
-        </div>
-        <div class="unit__card" data-drift="20">
+        <article class="ed-item reveal">
+          <p class="ed-n">/05 — 2–6 weeks after</p>
           <h3>Learn</h3>
           <p>The phase everyone drops when the next thing is urgent. We protect it because
             without it the whole process is just opinion delivered on schedule.</p>
@@ -280,190 +159,177 @@
             <li>Write what we got wrong, publicly, in one paragraph</li>
             <li>Feed anything general back into the system or this handbook</li>
           </ul>
-          <div class="duo">
+          <div class="ed-sub">
             <div>
-              <p class="unit__h">Produces</p>
+              <span class="ed-sub__k">Produces</span>
               <p>A short written learning, shared in the team channel. One paragraph is
                 enough; zero is not.</p>
             </div>
-            <div class="duo__gate">
-              <p class="unit__h">Gate</p>
+            <div>
+              <span class="ed-sub__k ed-sub__k--gate">Gate</span>
               <p>None — this phase closes the loop rather than opening one.</p>
             </div>
           </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------- -->
+  <section class="ed ed--say">
+    <div class="ed__in">
+      <p class="ed__label" style="margin-bottom:clamp(28px,4vh,52px)">/ The shape of it</p>
+      <p class="ed-say">A <u>ratchet</u>, not a waterfall. You can go back. You cannot skip
+        forward quietly.</p>
+      <p class="ed-say__by">Four gates — Frame · Explore · Decide · Build</p>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------- -->
+  <section class="ed" id="owns">
+    <div class="ed__in">
+      <div class="ed__head">
+        <p class="ed__label">/ Ownership</p>
+        <div>
+          <h2 class="ed__h">Who owns what, phase by phase</h2>
+          <p class="ed__sub">Ambiguity about ownership is the most common reason a phase
+            stalls.</p>
         </div>
       </div>
-    </section>
 
-    <!-- ---------------------------------------------------------- -->
-    <section class="panel" id="f-raci" data-stamp="09 / 12 — Ownership" aria-label="Who does what">
-      <div class="rcol" style="width:min(1180px,84vw); gap:clamp(22px,2.4vw,42px)">
-        <div class="rrow" style="align-items:flex-end; justify-content:space-between; gap:40px">
-          <div class="rcol" style="gap:10px">
-            <p class="rlabel">Ownership</p>
-            <h2 class="rtitle">Who does what</h2>
-          </div>
-          <p class="rbody" style="max-width:34ch; margin-bottom:6px">Ambiguity about ownership
-            is the most common reason a phase stalls.</p>
+      <div class="ed-defs">
+        <div class="ed-def">
+          <p class="ed-def__k">/01 Frame</p>
+          <dl class="ed-own">
+            <div><dt>Design</dt><dd>The user and the decision</dd></div>
+            <div><dt>Product</dt><dd>The priority and the measure</dd></div>
+            <div><dt>Engineering</dt><dd>Feasibility flags</dd></div>
+          </dl>
         </div>
-        <div class="table-wrap reveal">
-          <table class="table">
-            <thead>
-              <tr><th>Phase</th><th>Design owns</th><th>Product owns</th><th>Engineering owns</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Frame</td><td>The user and the decision</td><td>The priority and the measure</td><td>Feasibility flags</td></tr>
-              <tr><td>Explore</td><td>The options</td><td>Business constraints</td><td>Cost of each option</td></tr>
-              <tr><td>Decide</td><td>The choice and the spec</td><td>Scope trade-offs</td><td>Technical approach</td></tr>
-              <tr><td>Build</td><td>Fidelity to intent</td><td>Sequencing</td><td>The implementation</td></tr>
-              <tr><td>Learn</td><td>Qualitative findings</td><td>The metric read</td><td>Instrumentation</td></tr>
-            </tbody>
-          </table>
+        <div class="ed-def">
+          <p class="ed-def__k">/02 Explore</p>
+          <dl class="ed-own">
+            <div><dt>Design</dt><dd>The options</dd></div>
+            <div><dt>Product</dt><dd>Business constraints</dd></div>
+            <div><dt>Engineering</dt><dd>Cost of each option</dd></div>
+          </dl>
         </div>
-      </div>
-    </section>
-
-    <!-- ---------------------------------------------------------- -->
-    <section class="panel" id="f-week" data-stamp="10 / 12 — Rituals" aria-label="Rituals">
-      <div class="rcol" style="width:min(1180px,84vw); gap:clamp(22px,2.4vw,40px)">
-        <div class="rcol" style="gap:10px">
-          <p class="rlabel">Three fixed points a week, and nothing else standing</p>
-          <h2 class="rtitle">Rituals</h2>
+        <div class="ed-def">
+          <p class="ed-def__k">/03 Decide</p>
+          <dl class="ed-own">
+            <div><dt>Design</dt><dd>The choice and the spec</dd></div>
+            <div><dt>Product</dt><dd>Scope trade-offs</dd></div>
+            <div><dt>Engineering</dt><dd>Technical approach</dd></div>
+          </dl>
         </div>
-
-        <div class="week reveal">
-          <div class="week__day">
-            <span class="week__d">Mon · 30 min</span>
-            <span class="week__t">Kickoff</span>
-            <span class="week__m">What each person is framing, exploring or deciding this
-              week, and where they are stuck.</span>
-          </div>
-          <div class="week__day">
-            <span class="week__d">Wed · 60 min</span>
-            <span class="week__t">Critique</span>
-            <span class="week__m">Work in progress only. Finished work is a demo, not a
-              critique.</span>
-          </div>
-          <div class="week__day">
-            <span class="week__d">Fri · 30 min</span>
-            <span class="week__t">Demo</span>
-            <span class="week__m">What actually shipped, shown running, open to the whole
-              company.</span>
-          </div>
+        <div class="ed-def">
+          <p class="ed-def__k">/04 Build</p>
+          <dl class="ed-own">
+            <div><dt>Design</dt><dd>Fidelity to intent</dd></div>
+            <div><dt>Product</dt><dd>Sequencing</dd></div>
+            <div><dt>Engineering</dt><dd>The implementation</dd></div>
+          </dl>
         </div>
-
-        <div class="callout callout--rule reveal" data-delay="120">
-          <h4>How to run critique</h4>
-          <p>The presenter opens with the decision being improved and the specific feedback
-            they want — not a tour of the file. Reviewers respond to <em>that</em> question
-            first. Critique is about whether the work serves the decision, not about what
-            each reviewer would have done instead.</p>
-          <p>Cite principles by number. Separate "this breaks a rule" from "I would have
-            done it differently" — only the first is binding.</p>
+        <div class="ed-def">
+          <p class="ed-def__k">/05 Learn</p>
+          <dl class="ed-own">
+            <div><dt>Design</dt><dd>Qualitative findings</dd></div>
+            <div><dt>Product</dt><dd>The metric read</dd></div>
+            <div><dt>Engineering</dt><dd>Instrumentation</dd></div>
+          </dl>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ---------------------------------------------------------- -->
-    <section class="panel panel--dark" id="f-anti" data-stamp="11 / 12 — Anti-patterns" aria-label="Anti-patterns">
-      <div class="ringwrap" data-drift="70" style="--ring:920px; right:-300px; top:calc(50% - 460px)">
-        <svg class="ring" viewBox="0 0 200 200" aria-hidden="true">
-          <defs><path id="procAnti" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
-          <text><textPath href="#procAnti">Every gate exists because we skipped it once — </textPath></text>
-        </svg>
-      </div>
-
-      <div class="rrow" style="gap:clamp(48px,6vw,140px); align-items:flex-start">
-        <div class="rcol" style="max-width:28ch">
-          <p class="rlabel" style="color:rgba(255,255,255,.45)">Confession</p>
-          <h2 class="rtitle">Anti-patterns we have actually committed</h2>
-          <p class="rbody">Not hypotheticals. Each of these cost us a cycle, and each one is
-            the reason a gate exists.</p>
-        </div>
-
-        <div class="acc">
-          <div class="acc__row is-open">
-            <button class="acc__q" type="button" aria-expanded="true" aria-controls="anti1" data-cursor="Open">
-              <span class="acc__n">/ 01</span>
-              <span class="acc__t">Solutioning in intake</span>
-              <span class="acc__x" aria-hidden="true"></span>
-            </button>
-            <div class="acc__a" id="anti1"><div>
-              <p>A stakeholder describes a UI, we build it, and nobody ever names the
-                underlying decision.</p>
-            </div></div>
-          </div>
-
-          <div class="acc__row">
-            <button class="acc__q" type="button" aria-expanded="false" aria-controls="anti2" data-cursor="Open">
-              <span class="acc__n">/ 02</span>
-              <span class="acc__t">Polishing during Explore</span>
-              <span class="acc__x" aria-hidden="true"></span>
-            </button>
-            <div class="acc__a" id="anti2"><div>
-              <p>High fidelity too early makes the first idea unkillable.</p>
-            </div></div>
-          </div>
-
-          <div class="acc__row">
-            <button class="acc__q" type="button" aria-expanded="false" aria-controls="anti3" data-cursor="Open">
-              <span class="acc__n">/ 03</span>
-              <span class="acc__t">The silent gate</span>
-              <span class="acc__x" aria-hidden="true"></span>
-            </button>
-            <div class="acc__a" id="anti3"><div>
-              <p>Moving to Build without a written decision record, then relitigating the
-                same choice three weeks later.</p>
-            </div></div>
-          </div>
-
-          <div class="acc__row">
-            <button class="acc__q" type="button" aria-expanded="false" aria-controls="anti4" data-cursor="Open">
-              <span class="acc__n">/ 04</span>
-              <span class="acc__t">Handoff as a wall</span>
-              <span class="acc__x" aria-hidden="true"></span>
-            </button>
-            <div class="acc__a" id="anti4"><div>
-              <p>Posting a link and disappearing. The gap between the file and the build is
-                filled by whoever is nearest, usually badly.</p>
-            </div></div>
-          </div>
-
-          <div class="acc__row">
-            <button class="acc__q" type="button" aria-expanded="false" aria-controls="anti5" data-cursor="Open">
-              <span class="acc__n">/ 05</span>
-              <span class="acc__t">Skipping Learn</span>
-              <span class="acc__x" aria-hidden="true"></span>
-            </button>
-            <div class="acc__a" id="anti5"><div>
-              <p>Shipping and immediately starting the next thing, so we never find out
-                whether any of it worked.</p>
-            </div></div>
-          </div>
+  <!-- ---------------------------------------------------------- -->
+  <section class="ed" id="rituals">
+    <div class="ed__in">
+      <div class="ed__head">
+        <p class="ed__label">/ The week</p>
+        <div>
+          <h2 class="ed__h">Three fixed points, and nothing else standing</h2>
+          <p class="ed__sub">Two hours of meetings a week. Everything else is the work.</p>
         </div>
       </div>
-    </section>
 
-    <!-- ---------------------------------------------------------- -->
-    <section class="panel" id="f-close" data-stamp="12 / 12 — Next" aria-label="Next">
-      <div class="ringwrap" data-drift="70" style="--ring:920px; right:-300px; top:calc(50% - 460px)">
-        <svg class="ring" viewBox="0 0 200 200" aria-hidden="true">
-          <defs><path id="procClose" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
-          <text><textPath href="#procClose">A ratchet, not a waterfall — A ratchet, not a waterfall — </textPath></text>
-        </svg>
+      <div class="ed-grid ed-grid--3">
+        <article class="ed-item reveal">
+          <p class="ed-n">Mon — 30 min</p>
+          <h3>Kickoff</h3>
+          <p>What each person is framing, exploring or deciding this week, and where they
+            are stuck.</p>
+        </article>
+        <article class="ed-item reveal">
+          <p class="ed-n">Wed — 60 min</p>
+          <h3>Critique</h3>
+          <p>Work in progress only. Finished work is a demo, not a critique. The presenter
+            opens with the decision being improved and the feedback they want — not a tour of
+            the file.</p>
+        </article>
+        <article class="ed-item reveal">
+          <p class="ed-n">Fri — 30 min</p>
+          <h3>Demo</h3>
+          <p>What actually shipped, shown running, open to the whole company.</p>
+        </article>
       </div>
+    </div>
+  </section>
 
-      <div class="rclose">
-        <p class="rlabel">Next</p>
-        <a class="rnext" data-magnet="14" href="craft.html" data-cursor="Open">
-          <span><u>Craft Bar</u></span><span>The checklist every screen clears</span>
-        </a>
-        <p class="rbody">The process says when a thing can move. The Craft Bar says whether it
-          is any good. <strong>Decide is where the two meet.</strong></p>
-        <div class="rfoot">
-          <span>© {{YEAR}} GobbleCube — Design</span>
-          <span>Living document — open a PR to change it.</span>
+  <!-- ---------------------------------------------------------- -->
+  <section class="ed" id="anti">
+    <div class="ed__in">
+      <div class="ed__head">
+        <p class="ed__label">/ Confession</p>
+        <div>
+          <h2 class="ed__h">Anti-patterns we have actually committed</h2>
+          <p class="ed__sub">Not hypotheticals. Each of these cost us a cycle, and each one
+            is the reason a gate exists.</p>
         </div>
       </div>
-    </section>
-  </div>
+
+      <div class="ed-defs">
+        <div class="ed-def">
+          <p class="ed-def__k">/01</p>
+          <p class="ed-def__v"><b>Solutioning in intake</b> A stakeholder describes a UI, we
+            build it, and nobody ever names the underlying decision.</p>
+        </div>
+        <div class="ed-def">
+          <p class="ed-def__k">/02</p>
+          <p class="ed-def__v"><b>Polishing during Explore</b> High fidelity too early makes
+            the first idea unkillable.</p>
+        </div>
+        <div class="ed-def">
+          <p class="ed-def__k">/03</p>
+          <p class="ed-def__v"><b>The silent gate</b> Moving to Build without a written
+            decision record, then relitigating the same choice three weeks later.</p>
+        </div>
+        <div class="ed-def">
+          <p class="ed-def__k">/04</p>
+          <p class="ed-def__v"><b>Handoff as a wall</b> Posting a link and disappearing. The
+            gap between the file and the build is filled by whoever is nearest, usually
+            badly.</p>
+        </div>
+        <div class="ed-def">
+          <p class="ed-def__k">/05</p>
+          <p class="ed-def__v"><b>Skipping Learn</b> Shipping and immediately starting the
+            next thing, so we never find out whether any of it worked.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------- -->
+  <section class="ed">
+    <div class="ed__in">
+      <div class="ed-cta">
+        <h2 class="ed-cta__h">The process says when a thing can move. The Craft Bar says
+          whether it is any good.</h2>
+        <div class="ed-links">
+          <a class="ed-link ed-link--accent" href="craft.html">Craft Bar <span>/04</span></a>
+          <a class="ed-link" href="philosophy.html">Philosophy <span>/01</span></a>
+          <a class="ed-link" href="principles.html">Principles <span>/02</span></a>
+        </div>
+      </div>
+    </div>
+  </section>

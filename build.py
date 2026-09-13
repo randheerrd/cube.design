@@ -71,15 +71,19 @@ HIDDEN = {"internal", "craft"}
 # Guarded by INTERNAL_PASSWORD rather than SITE_PASSWORD.
 INTERNAL_PAGES = {"internal"}
 
-# Pages that scroll sideways. A rail page is one viewport tall and many wide:
-# <main> becomes a flex row of full-height panels and a vertical wheel is mapped
-# onto the x-axis. These pages load rail.css / rail.js on top of the usual pair;
-# everything else is untouched and still scrolls normally.
-RAIL = {"philosophy", "principles", "process"}
+# The handbook pages, in the editorial treatment: dark ground, a sans/mono
+# pairing, numbered sections, a restrained 12-64px scale. They load
+# edition.css / edition.js on top of the usual pair and default to the dark
+# theme; a stored theme preference still wins. Everything else is untouched.
+EDITION = {"philosophy", "principles", "process"}
 
 
-RAIL_CSS = '<link rel="stylesheet" href="assets/css/rail.css?v={v}">'
-RAIL_JS = '<script src="assets/js/rail.js?v={v}"></script>'
+EDITION_HEAD = (
+    '<link href="https://fonts.googleapis.com/css2'
+    '?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">\n'
+    '<link rel="stylesheet" href="assets/css/edition.css?v={v}">'
+)
+EDITION_JS = '<script src="assets/js/edition.js?v={v}"></script>'
 
 
 def nav_html(current):
@@ -100,7 +104,7 @@ def asset_version():
     invisible behind a cached copy."""
     h = hashlib.sha256()
     for rel in ("css/site.css", "js/site.js",
-                "css/rail.css", "js/rail.js"):
+                "css/edition.css", "js/edition.js"):
         h.update((ROOT / "assets" / rel).read_bytes())
     return h.hexdigest()[:8]
 
@@ -114,8 +118,14 @@ def lock_mode(slug):
 
 
 def page_mode(slug):
-    """Scroll axis for a page: "rail" (sideways) or "page" (the normal way)."""
-    return "rail" if slug in RAIL else "page"
+    """Which treatment a page gets: "edition" or the original "page"."""
+    return "edition" if slug in EDITION else "page"
+
+
+def page_theme(slug):
+    """Default theme. Only a default — the head script still lets a stored
+    preference override it, so the toggle keeps working everywhere."""
+    return "dark" if slug in EDITION else "light"
 
 
 def build():
@@ -146,8 +156,11 @@ def build():
                 .replace("{{LOCK_MODE}}", lock_mode(slug))
                 .replace("{{INTERNAL_PASSWORD}}", INTERNAL_PASSWORD)
                 .replace("{{MODE}}", page_mode(slug))
-                .replace("{{RAIL_CSS}}", RAIL_CSS.format(v=version) if slug in RAIL else "")
-                .replace("{{RAIL_JS}}", RAIL_JS.format(v=version) if slug in RAIL else "")
+                .replace("{{THEME}}", page_theme(slug))
+                .replace("{{EDITION_HEAD}}",
+                         EDITION_HEAD.format(v=version) if slug in EDITION else "")
+                .replace("{{EDITION_JS}}",
+                         EDITION_JS.format(v=version) if slug in EDITION else "")
                 .replace("{{ASSET_V}}", version)
                 .replace("{{YEAR}}", str(year)))
         (DIST / f"{slug}.html").write_text(html, encoding="utf-8")

@@ -194,8 +194,6 @@
   function initProgress() {
     var el = document.getElementById('progress');
     if (!el) return;
-    /* Rail pages measure their own axis — see rail.js. */
-    if (document.documentElement.dataset.mode === 'rail') return;
     function onScroll() {
       var max = document.documentElement.scrollHeight - window.innerHeight;
       var pct = max > 0 ? Math.round((window.scrollY / max) * 100) : 0;
@@ -255,8 +253,6 @@
   function initReveal() {
     var items = document.querySelectorAll('.reveal');
     if (!items.length) return;
-    /* Rail pages reveal on the x-axis — rail.js owns that observer. */
-    if (document.documentElement.dataset.mode === 'rail') return;
     if (reduced || !('IntersectionObserver' in window)) {
       for (var j = 0; j < items.length; j++) items[j].classList.add('is-in');
       return;

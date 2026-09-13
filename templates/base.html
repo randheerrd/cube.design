@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light" data-mode="{{MODE}}">
+<html lang="en" data-theme="{{THEME}}" data-mode="{{MODE}}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css?v={{ASSET_V}}">
-{{RAIL_CSS}}
+{{EDITION_HEAD}}
 <script>
 /* Apply the stored theme before first paint so the pill never flashes. */
 try{var t=localStorage.getItem('gcd-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}
@@ -71,10 +71,6 @@ r.setAttribute('data-lockid',isInt?"intgate":"lockgate");}})();
   </form>
 </div>
 
-<!-- rail chrome: inert unless rail.css is loaded -->
-<div class="railbar" aria-hidden="true"><span class="railbar__fill" id="railbar"></span></div>
-<div class="rcursor" id="rcursor" aria-hidden="true"><span class="rcursor__label"></span></div>
-
 <header class="topbar">
   <a class="wordmark" href="index.html">
     <span class="wordmark__name">Cube.Design</span>
@@ -125,6 +121,6 @@ r.setAttribute('data-lockid',isInt?"intgate":"lockgate");}})();
 </footer>
 
 <script src="assets/js/site.js?v={{ASSET_V}}"></script>
-{{RAIL_JS}}
+{{EDITION_JS}}
 </body>
 </html>

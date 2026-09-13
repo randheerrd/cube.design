@@ -1,0 +1,320 @@
+/* ============================================================
+   edition.css — the handbook pages, editorial treatment
+   Loaded only for slugs in build.py's EDITION set, and scoped to
+   html[data-mode="edition"] so it cannot reach the other pages.
+
+   The system, in four rules:
+     · dark ground, white type, two greys and nothing else
+     · a sans for everything that speaks, a mono for everything
+       that labels — markers, counts, captions, meta
+     · one restrained scale, 12 to 64px. No 200px display type.
+     · -0.04em on headings, -0.02em in the middle, 0 on body
+
+   The accent stays GobbleCube's own #ff5100 rather than the
+   reference's red: the layout system is what is being adopted,
+   not somebody else's brand colour.
+   ============================================================ */
+
+html[data-mode="edition"]{
+  --mono: "Fragment Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* One scale, and it stops at 64. */
+  --ed-hero: clamp(34px, 4.6vw, 64px);
+  --ed-h2:   clamp(26px, 3.1vw, 48px);
+  --ed-h3:   clamp(20px, 1.9vw, 32px);
+  --ed-lead: clamp(17px, 1.35vw, 24px);
+  --ed-body: 16px;
+  --ed-meta: 13px;
+  --ed-mark: 12px;
+
+  --ed-t1: -0.04em;   /* headings */
+  --ed-t2: -0.02em;   /* leads, mid sizes */
+
+  --ed-max: 1240px;
+  --ed-pad: clamp(20px, 4vw, 64px);
+
+  --ed-dim: #8f8f8f;
+  --ed-dim2: #5e5e5e;
+}
+html[data-mode="edition"][data-theme="light"]{
+  --ed-dim: #6b6b6b;
+  --ed-dim2: #9a9a9a;
+}
+
+html[data-mode="edition"] body{background:var(--bg); color:var(--ink)}
+html[data-mode="edition"] main{display:block; padding:0}
+
+/* ---------- the band ---------- */
+/* Every section is a band: full-bleed ground, a centred measure inside,
+   and a hairline on top. The hairlines are the only structure the page
+   has, which is why they run edge to edge and the content does not.   */
+.ed{
+  position:relative; z-index:2;
+  padding:clamp(64px, 9vh, 128px) var(--ed-pad);
+  background:var(--bg);
+  border-top:1px solid var(--hairline);
+}
+.ed:first-child{border-top:0}
+.ed__in{max-width:var(--ed-max); margin-inline:auto}
+
+/* Section head: a mono marker on the left, the heading beside it.
+   Below 900px the marker sits above instead of alongside.            */
+.ed__head{
+  display:grid; grid-template-columns:minmax(120px, 1fr) 3fr;
+  gap:clamp(20px, 3vw, 56px); align-items:start;
+  margin-bottom:clamp(36px, 5vh, 72px);
+}
+.ed__label{
+  margin:0; font-family:var(--mono); font-size:var(--ed-mark);
+  letter-spacing:.02em; color:var(--ed-dim2); text-transform:uppercase;
+  padding-top:.5em;
+}
+.ed__h{
+  margin:0; font-size:var(--ed-h2); font-weight:500; line-height:1.04;
+  letter-spacing:var(--ed-t1); max-width:20ch;
+}
+.ed__sub{
+  margin:18px 0 0; font-size:var(--ed-body); line-height:1.62;
+  letter-spacing:0; color:var(--ed-dim); max-width:56ch;
+}
+.ed__sub strong{color:var(--ink); font-weight:500}
+
+/* ---------- hero band ---------- */
+.ed--hero{
+  padding-top:calc(var(--pill-h) + clamp(90px, 15vh, 190px));
+  padding-bottom:clamp(72px, 12vh, 150px);
+}
+.ed-hero__mark{
+  margin:0 0 clamp(28px, 4vh, 54px); display:flex; align-items:center; gap:12px;
+  font-family:var(--mono); font-size:var(--ed-mark); letter-spacing:.02em;
+  color:var(--ed-dim2); text-transform:uppercase;
+}
+.ed-hero__mark i{
+  display:block; width:34px; height:1px; background:var(--accent); font-style:normal;
+}
+.ed-hero__h{
+  margin:0; font-size:var(--ed-hero); font-weight:500; line-height:1.02;
+  letter-spacing:-0.045em; max-width:17ch;
+}
+.ed-hero__h em{font-style:normal; color:var(--ed-dim2)}
+.ed-hero__h u{text-decoration:none; color:var(--accent)}
+.ed-hero__lede{
+  margin:clamp(26px, 4vh, 46px) 0 0; max-width:58ch;
+  font-size:var(--ed-lead); line-height:1.48; letter-spacing:var(--ed-t2);
+  color:var(--ed-dim);
+}
+.ed-hero__lede strong{color:var(--ink); font-weight:500}
+
+/* A mono run of the page's own contents, sitting under the hero. */
+.ed-hero__toc{
+  display:flex; flex-wrap:wrap; gap:8px 28px; margin-top:clamp(34px, 5vh, 60px);
+  padding-top:22px; border-top:1px solid var(--hairline);
+  font-family:var(--mono); font-size:var(--ed-mark); letter-spacing:.02em;
+}
+.ed-hero__toc a{
+  color:var(--ed-dim2); text-decoration:none; text-transform:uppercase;
+  transition:color .2s ease;
+}
+.ed-hero__toc a:hover{color:var(--accent)}
+
+/* ---------- narrative band ---------- */
+/* Single column, held to a reading measure and offset into the grid so
+   it lines up with the headings above it rather than the page edge.  */
+.ed-note{
+  display:grid; grid-template-columns:minmax(120px, 1fr) 3fr;
+  gap:clamp(20px, 3vw, 56px); align-items:start;
+}
+.ed-note__body{max-width:64ch; display:grid; gap:20px}
+.ed-note__body p{
+  margin:0; font-size:var(--ed-lead); line-height:1.55;
+  letter-spacing:var(--ed-t2); color:var(--ed-dim);
+}
+.ed-note__body p:first-child{color:var(--ink)}
+.ed-note__body strong{color:var(--ink); font-weight:500}
+
+/* ---------- numbered grid ---------- */
+/* The reference's core move: /01 /02 /03 in mono above a short title
+   and a paragraph, on a plain three-column grid with hairlines.      */
+.ed-grid{
+  display:grid; grid-template-columns:repeat(3, 1fr);
+  column-gap:clamp(24px, 3vw, 56px); row-gap:0;
+}
+.ed-item{
+  padding:clamp(26px, 3vh, 44px) 0;
+  border-top:1px solid var(--hairline);
+  display:grid; align-content:start; gap:14px;
+}
+/* The first row's rule is the grid's own top edge. */
+.ed-grid--3 > .ed-item:nth-child(-n+3){border-top:1px solid var(--hairline)}
+.ed-n{
+  font-family:var(--mono); font-size:var(--ed-mark); letter-spacing:.02em;
+  color:var(--accent);
+}
+.ed-item h3{
+  margin:0; font-size:var(--ed-h3); font-weight:500; line-height:1.1;
+  letter-spacing:var(--ed-t1); max-width:16ch;
+}
+.ed-item p{
+  margin:0; font-size:var(--ed-body); line-height:1.6; letter-spacing:0;
+  color:var(--ed-dim); max-width:42ch;
+}
+.ed-item p + p{margin-top:-2px}
+.ed-item strong{color:var(--ink); font-weight:500}
+.ed-item ul{margin:2px 0 0; padding-left:16px; display:grid; gap:6px}
+.ed-item li{
+  font-size:var(--ed-meta); line-height:1.5; letter-spacing:0; color:var(--ed-dim);
+}
+.ed-item li strong{color:var(--ink); font-weight:500}
+.ed-item li::marker{color:var(--ed-dim2)}
+
+/* The numeral takes the accent and the title lifts on hover — the only
+   hover state on the page, so it reads as "this is a unit", not a link. */
+.ed-item{transition:opacity .3s ease}
+.ed-grid:hover > .ed-item{opacity:.45}
+.ed-grid:hover > .ed-item:hover{opacity:1}
+
+/* two-up variant, for longer entries */
+.ed-grid--2{grid-template-columns:repeat(2, 1fr)}
+.ed-grid--2 > .ed-item:nth-child(-n+2){border-top:1px solid var(--hairline)}
+.ed-grid--2 .ed-item h3{max-width:22ch}
+.ed-grid--2 .ed-item p{max-width:52ch}
+
+/* ---------- a mono definition run ---------- */
+/* Label left, value right, one hairline row each. Carries the gates,
+   the exceptions and the ownership table without a <table> anywhere.  */
+.ed-defs{display:grid; gap:0}
+.ed-def{
+  display:grid; grid-template-columns:minmax(120px, 1fr) 3fr;
+  gap:clamp(20px, 3vw, 56px);
+  padding:22px 0; border-top:1px solid var(--hairline); align-items:baseline;
+}
+.ed-def:last-child{border-bottom:1px solid var(--hairline)}
+.ed-def__k{
+  font-family:var(--mono); font-size:var(--ed-mark); letter-spacing:.02em;
+  color:var(--ed-dim2); text-transform:uppercase;
+}
+.ed-def__v{
+  margin:0; font-size:var(--ed-body); line-height:1.6; letter-spacing:0;
+  color:var(--ed-dim); max-width:62ch;
+}
+.ed-def__v strong{color:var(--ink); font-weight:500}
+.ed-def__v b{
+  display:block; margin-bottom:6px; font-size:var(--ed-h3); font-weight:500;
+  line-height:1.12; letter-spacing:var(--ed-t1); color:var(--ink);
+}
+
+/* ---------- stats bar ---------- */
+.ed-stats{
+  display:grid; grid-template-columns:repeat(4, 1fr);
+  gap:clamp(20px, 3vw, 48px);
+}
+.ed-stat{
+  display:grid; gap:10px; align-content:start;
+  padding-top:22px; border-top:1px solid var(--hairline);
+}
+.ed-stat__n{
+  font-size:clamp(38px, 4.2vw, 64px); font-weight:500; line-height:1;
+  letter-spacing:-0.05em; font-variant-numeric:tabular-nums;
+}
+.ed-stat__n em{font-style:normal; color:var(--accent)}
+.ed-stat__l{font-size:var(--ed-body); letter-spacing:var(--ed-t2)}
+.ed-stat__c{
+  font-family:var(--mono); font-size:var(--ed-mark); letter-spacing:.02em;
+  color:var(--ed-dim2); text-transform:uppercase;
+}
+
+/* ---------- the statement ---------- */
+/* One band that drops the grid entirely and just sets a sentence large.
+   Inverted, so it reads as a full stop between sections.             */
+.ed--say{
+  background:var(--ink); color:var(--bg);
+  border-top:0;
+  padding-block:clamp(88px, 14vh, 180px);
+}
+.ed-say{
+  margin:0; font-size:clamp(28px, 3.6vw, 56px); font-weight:500; line-height:1.08;
+  letter-spacing:var(--ed-t1); max-width:22ch;
+}
+.ed-say u{text-decoration:none; color:var(--accent)}
+.ed--say .ed__label{color:rgba(127,127,127,1)}
+.ed-say__by{
+  margin:clamp(24px, 4vh, 44px) 0 0; font-family:var(--mono);
+  font-size:var(--ed-mark); letter-spacing:.02em; text-transform:uppercase;
+  color:rgba(127,127,127,1);
+}
+
+/* ---------- closing ---------- */
+.ed-cta{display:grid; gap:clamp(24px, 4vh, 44px); justify-items:start}
+.ed-cta__h{
+  margin:0; font-size:var(--ed-h2); font-weight:500; line-height:1.05;
+  letter-spacing:var(--ed-t1); max-width:18ch;
+}
+.ed-links{display:flex; flex-wrap:wrap; gap:14px}
+.ed-link{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:0 22px; height:46px; border-radius:var(--radius-pill);
+  border:1px solid var(--hairline); color:var(--ink); text-decoration:none;
+  font-size:var(--ed-meta); letter-spacing:var(--ed-t2);
+  transition:background .25s ease, color .25s ease, border-color .25s ease;
+}
+.ed-link:hover{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+.ed-link--accent{background:var(--accent); border-color:var(--accent); color:var(--on-accent)}
+.ed-link--accent:hover{background:var(--accent); color:var(--on-accent); opacity:.86}
+.ed-link span{font-family:var(--mono); font-size:var(--ed-mark)}
+
+/* ---------- reveals ---------- */
+/* site.js already runs the observer on vertical pages; edition just wants
+   a smaller, quieter rise than the handbook's 24px.                    */
+html[data-mode="edition"] .reveal{transform:translateY(16px)}
+
+/* ---------- breakpoints ---------- */
+@media (max-width:1080px){
+  .ed-grid{grid-template-columns:repeat(2, 1fr)}
+  .ed-grid--3 > .ed-item:nth-child(3){border-top:1px solid var(--hairline)}
+  .ed-stats{grid-template-columns:repeat(2, 1fr)}
+}
+@media (max-width:900px){
+  .ed__head,.ed-note,.ed-def{grid-template-columns:1fr; gap:14px}
+  .ed__label{padding-top:0}
+  .ed-def{gap:8px}
+}
+@media (max-width:640px){
+  .ed-grid,.ed-grid--2,.ed-stats{grid-template-columns:1fr}
+  .ed-grid:hover > .ed-item{opacity:1}
+}
+@media (prefers-reduced-motion:reduce){
+  .ed-item,.ed-link{transition:none}
+}
+
+/* ---------- what a phase hands over ---------- */
+/* Produces / Gate, hung under a grid item on its own hairline. The gate
+   takes the accent because it is the half people skip. */
+.ed-sub{
+  display:grid; gap:14px; margin-top:8px; padding-top:16px;
+  border-top:1px solid var(--hairline);
+}
+.ed-sub > div{display:grid; gap:4px}
+.ed-sub__k{
+  font-family:var(--mono); font-size:var(--ed-mark); letter-spacing:.02em;
+  text-transform:uppercase; color:var(--ed-dim2);
+}
+.ed-sub__k--gate{color:var(--accent)}
+.ed-sub p{
+  margin:0; font-size:var(--ed-meta); line-height:1.55; letter-spacing:0;
+  color:var(--ed-dim);
+}
+
+/* ---------- ownership, three ways ---------- */
+.ed-own{
+  display:grid; grid-template-columns:repeat(3, 1fr);
+  gap:clamp(16px, 2vw, 40px); margin:0;
+}
+.ed-own > div{display:grid; gap:5px}
+.ed-own dt{
+  font-family:var(--mono); font-size:var(--ed-mark); letter-spacing:.02em;
+  text-transform:uppercase; color:var(--ed-dim2);
+}
+.ed-own dd{
+  margin:0; font-size:var(--ed-meta); line-height:1.5; letter-spacing:0; color:var(--ink);
+}
+@media (max-width:760px){.ed-own{grid-template-columns:1fr; gap:12px}}

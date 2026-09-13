@@ -1,196 +1,117 @@
-  <nav class="vindex" aria-label="On this page">
-    <a href="#b01">01 Decisions</a>
-    <a href="#b02">02 Confidence</a>
-    <a href="#b03">03 Density</a>
-    <a href="#b04">04 Trust</a>
-    <a href="#b05">05 Recovery</a>
-    <a href="#b06">06 Latency</a>
-  </nav>
+  <section class="ed ed--hero">
+    <div class="ed__in">
+      <p class="ed-hero__mark"><i></i> 01 — Philosophy</p>
+      <h1 class="ed-hero__h">Built by designers who have to
+        <u>live with the decision</u> <em>the next morning.</em></h1>
+      <p class="ed-hero__lede">Principles tell you what to do. Philosophy tells you why, so
+        you can work out what to do when no principle covers the case in front of you.
+        <strong>Six beliefs, in the order they matter.</strong></p>
 
-  <div class="track">
+      <nav class="ed-hero__toc" aria-label="On this page">
+        <a href="#why">Why this exists</a>
+        <a href="#beliefs">Six beliefs</a>
+        <a href="#counted">Counted</a>
+        <a href="#use">How to use it</a>
+      </nav>
+    </div>
+  </section>
 
-
-    <!-- ---------------------------------------------------------- -->
-    <section class="panel panel--split" id="p-open" data-stamp="01 / 09 — Philosophy" aria-label="Philosophy">
-      <div class="rhead">
-        <p class="rhead__eyebrow"><span>01</span><span class="dot"></span><span>Philosophy</span></p>
-        <h1 class="rhead__line">What we believe about
-          <span class="rotor">
-            <span>decisions</span>
-            <span>uncertainty</span>
-            <span>density</span>
-            <span>recovery</span>
-            <span>latency</span>
-          </span>
-        </h1>
-        <p class="rhead__lede">Principles tell you what to do. Philosophy tells you why, so you
-          can work out what to do when no principle covers the case in front of you.
-          <strong>Six beliefs, in the order they matter.</strong></p>
-        <span class="scrollhint"><i></i> Scroll sideways</span>
-      </div>
-
-      <p class="bigmark" data-drift="-46">Philosophy</p>
-    </section>
-
-    <!-- ---------------------------------------------------------- -->
-    <div class="vmar" aria-hidden="true">
-      <div class="vmar__track">
-        <span>Belief — Belief — Belief — Belief —</span>
-        <span>Belief — Belief — Belief — Belief —</span>
+  <!-- ---------------------------------------------------------- -->
+  <section class="ed" id="why">
+    <div class="ed__in">
+      <div class="ed-note">
+        <p class="ed__label">/ Where this came from</p>
+        <div class="ed-note__body">
+          <p>GobbleCube builds software that tells people what to do about their business.
+            That is a heavier promise than most software makes, and it changes what good
+            design means here.</p>
+          <p>A product that merely displays data can afford to be beautiful and vague. A
+            product that recommends a price change, flags a stockout or predicts next week's
+            demand cannot. <strong>Every screen we draw either earns a decision or wastes
+            someone's morning.</strong></p>
+          <p>So this is not a style guide. It is the shared answer to one question — what do
+            we believe about the people on the other side of the screen — written down so it
+            can be argued with rather than assumed.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- ---------------------------------------------------------- -->
-    <section class="panel" id="b01" data-stamp="02 / 09 — Decisions" aria-label="Belief 01">
-      <div class="unit reveal">
-        <div class="unit__block" data-drift="-34" data-magnet="10" data-cursor="Decisions">
-          <svg class="unit__glyph" viewBox="0 0 64 64" aria-hidden="true">
-            <path pathLength="1" d="M6 32h20M26 32 44 14M26 32l18 18" />
-            <circle pathLength="1" cx="48" cy="10" r="4" />
-            <circle pathLength="1" class="fill" cx="48" cy="54" r="4" />
-          </svg>
-          <div>
-            <p class="unit__n">01</p>
-            <p class="unit__tag">Belief</p>
-          </div>
+  <!-- ---------------------------------------------------------- -->
+  <section class="ed" id="beliefs">
+    <div class="ed__in">
+      <div class="ed__head">
+        <p class="ed__label">/ Core beliefs</p>
+        <div>
+          <h2 class="ed__h">Six beliefs, in the order they matter</h2>
+          <p class="ed__sub">Each one has cost us something to learn. They are listed in
+            priority order: <strong>when two of them conflict, the lower number wins.</strong></p>
         </div>
-        <div class="unit__card" data-drift="20">
+      </div>
+
+      <div class="ed-grid ed-grid--2">
+        <article class="ed-item reveal">
+          <p class="ed-n">/01</p>
           <h3>We design decisions, not dashboards</h3>
           <p>The unit of value is not a chart. It is a person changing their mind, or
             confirming it fast enough to move on. Before any layout exists, we can name the
             decision, who makes it, how often, and what they do today instead.</p>
           <p>This kills a whole class of work. "Give the user visibility into inventory" is
-            not a brief — it is a shrug. <strong>"Help a category manager decide which
-            twelve SKUs to reorder before Thursday's cutoff"</strong> is a brief, and it
-            tells you what to put on screen and what to leave off.</p>
-        </div>
-      </div>
-    </section>
+            not a brief — it is a shrug. <strong>"Help a category manager decide which twelve
+            SKUs to reorder before Thursday's cutoff"</strong> is a brief, and it tells you
+            what to put on screen and what to leave off.</p>
+        </article>
 
-    <section class="panel" id="b02" data-stamp="03 / 09 — Confidence" aria-label="Belief 02">
-      <div class="unit reveal">
-        <div class="unit__block" data-drift="-34" data-magnet="10" data-cursor="Confidence">
-          <svg class="unit__glyph" viewBox="0 0 64 64" aria-hidden="true">
-            <path pathLength="1" d="M8 32h48M8 24v16M56 24v16" />
-            <circle pathLength="1" class="fill" cx="26" cy="32" r="5" />
-          </svg>
-          <div>
-            <p class="unit__n">02</p>
-            <p class="unit__tag">Belief</p>
-          </div>
-        </div>
-        <div class="unit__card" data-drift="20">
+        <article class="ed-item reveal">
+          <p class="ed-n">/02</p>
           <h3>Confidence is a design material</h3>
           <p>We ship predictions. A prediction rendered in the same type, weight and colour
             as a recorded fact is a lie of formatting. Whenever the machine is guessing, the
             interface says so — and says how hard it is guessing.</p>
           <p>This is not a disclaimer in grey 11px at the bottom. Uncertainty is laid out
             with the same care as the number itself: ranges instead of false points, sample
-            sizes where they are small, an honest "not enough data" where that is the truth.
-            <strong>We would rather show less and be trusted than show more and be
-            checked.</strong></p>
-        </div>
-      </div>
-    </section>
+            sizes where they are small, an honest "not enough data" where that is the truth.</p>
+        </article>
 
-    <section class="panel" id="b03" data-stamp="04 / 09 — Density" aria-label="Belief 03">
-      <div class="ringwrap" data-drift="70" style="--ring:1000px; left:-380px; top:calc(50% - 500px)">
-        <svg class="ring" viewBox="0 0 200 200" aria-hidden="true">
-          <defs><path id="philDens" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
-          <text><textPath href="#philDens">Density is respect · Clutter is undifferentiated — </textPath></text>
-        </svg>
-      </div>
-
-      <div class="unit reveal">
-        <div class="unit__block" data-drift="-34" data-magnet="10" data-cursor="Density">
-          <svg class="unit__glyph" viewBox="0 0 64 64" aria-hidden="true">
-            <path pathLength="1" d="M8 12h48M8 24h48M8 36h48M8 48h48" />
-            <path pathLength="1" class="fill-stroke" d="M8 24h48" />
-          </svg>
-          <div>
-            <p class="unit__n">03</p>
-            <p class="unit__tag">Belief</p>
-          </div>
-        </div>
-        <div class="unit__card" data-drift="20">
+        <article class="ed-item reveal">
+          <p class="ed-n">/03</p>
           <h3>Density is respect</h3>
           <p>Our users are experts operating the same screens for six hours a day. Consumer
             minimalism — one number per card, endless whitespace, a wizard for everything —
             insults them and costs them scrolling. Give an expert more per screen, arranged
             well, not less arranged prettily.</p>
-          <p>Density is not clutter. Clutter is undifferentiated. Dense done right means a
-            strong visual hierarchy doing the work that whitespace does in consumer software:
-            weight, alignment, hairlines and restraint with colour.</p>
-        </div>
-      </div>
-    </section>
+          <p>Density is not clutter. Clutter is undifferentiated. <strong>Dense done right
+            means a strong visual hierarchy</strong> doing the work that whitespace does in
+            consumer software: weight, alignment, hairlines and restraint with colour.</p>
+        </article>
 
-    <section class="panel" id="b04" data-stamp="05 / 09 — Trust" aria-label="Belief 04">
-      <div class="unit reveal">
-        <div class="unit__block" data-drift="-34" data-magnet="10" data-cursor="Trust">
-          <svg class="unit__glyph" viewBox="0 0 64 64" aria-hidden="true">
-            <rect pathLength="1" x="6" y="10" width="52" height="44" rx="2" />
-            <rect pathLength="1" x="16" y="18" width="32" height="28" rx="2" />
-            <rect pathLength="1" class="fill" x="26" y="26" width="12" height="12" rx="1" />
-          </svg>
-          <div>
-            <p class="unit__n">04</p>
-            <p class="unit__tag">Belief</p>
-          </div>
-        </div>
-        <div class="unit__card" data-drift="20">
+        <article class="ed-item reveal">
+          <p class="ed-n">/04</p>
           <h3>The interface should shrink as trust grows</h3>
           <p>A new user needs the explanation, the breakdown, the "why am I seeing this."
-            A user in month nine needs the answer and a keyboard shortcut. Designs that
-            serve only the first day become furniture the rest of the year.</p>
+            A user in month nine needs the answer and a keyboard shortcut. Designs that serve
+            only the first day become furniture the rest of the year.</p>
           <p>So we build the explanation as something that can recede — collapsible, on
-            demand, remembered per user — rather than a permanent tax on the fluent. The
-            same feature should be able to feel like a tutorial and like a cockpit.</p>
-        </div>
-      </div>
-    </section>
+            demand, remembered per user — rather than a permanent tax on the fluent.
+            <strong>The same feature should be able to feel like a tutorial and like a
+            cockpit.</strong></p>
+        </article>
 
-    <section class="panel" id="b05" data-stamp="06 / 09 — Recovery" aria-label="Belief 05">
-      <div class="unit reveal">
-        <div class="unit__block" data-drift="-34" data-magnet="10" data-cursor="Recovery">
-          <svg class="unit__glyph" viewBox="0 0 64 64" aria-hidden="true">
-            <path pathLength="1" d="M8 20h34a10 10 0 0 1 0 20H16" />
-            <path pathLength="1" d="M24 32l-8 8 8 8" />
-            <circle pathLength="1" class="fill" cx="8" cy="20" r="4" />
-          </svg>
-          <div>
-            <p class="unit__n">05</p>
-            <p class="unit__tag">Belief</p>
-          </div>
-        </div>
-        <div class="unit__card" data-drift="20">
+        <article class="ed-item reveal">
+          <p class="ed-n">/05</p>
           <h3>We design the recovery, not the happy path</h3>
           <p>The happy path designs itself; it is the first thing anyone draws. The product
             is actually made of the other states — the feed that failed overnight, the SKU
             with no history, the forecast that was confidently wrong last week and has to be
             faced this week.</p>
-          <p>A flow is not designed until someone can get out of it. <strong>Every automated
-            action has a manual override, every recommendation can be dismissed with a
-            reason, and every error tells the user what to do next</strong> rather than what
-            went wrong internally.</p>
-        </div>
-      </div>
-    </section>
+          <p>A flow is not designed until someone can get out of it. Every automated action
+            has a manual override, every recommendation can be dismissed with a reason, and
+            <strong>every error tells the user what to do next</strong> rather than what went
+            wrong internally.</p>
+        </article>
 
-    <section class="panel" id="b06" data-stamp="07 / 09 — Latency" aria-label="Belief 06">
-      <div class="unit reveal">
-        <div class="unit__block" data-drift="-34" data-magnet="10" data-cursor="Latency">
-          <svg class="unit__glyph" viewBox="0 0 64 64" aria-hidden="true">
-            <path pathLength="1" d="M8 52V40M26 52V28M44 52V16" />
-            <path pathLength="1" d="M4 56h56" />
-            <circle pathLength="1" class="fill" cx="44" cy="16" r="4" />
-          </svg>
-          <div>
-            <p class="unit__n">06</p>
-            <p class="unit__tag">Belief</p>
-          </div>
-        </div>
-        <div class="unit__card" data-drift="20">
+        <article class="ed-item reveal">
+          <p class="ed-n">/06</p>
           <h3>Latency is a design problem</h3>
           <p>A query that takes nine seconds is a design failure before it is an engineering
             one, because we chose to ask for it. Speed is not something engineering adds
@@ -198,67 +119,104 @@
           <p>Practically: we design what the screen looks like at 200ms, at 2s and at 20s,
             and we treat a skeleton that never resolves as a bug in the design. If the honest
             answer is slow, the design says so and lets people go do something else.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------- -->
+  <section class="ed ed--say">
+    <div class="ed__in">
+      <p class="ed__label" style="margin-bottom:clamp(28px,4vh,52px)">/ The short version</p>
+      <p class="ed-say">We would rather show less and be <u>trusted</u> than show more and
+        be <u>checked</u>.</p>
+      <p class="ed-say__by">Belief 02 — Confidence is a design material</p>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------- -->
+  <section class="ed" id="counted">
+    <div class="ed__in">
+      <div class="ed__head">
+        <p class="ed__label">/ By the numbers</p>
+        <div>
+          <h2 class="ed__h">Small enough to hold in your head</h2>
+          <p class="ed__sub">A handbook nobody can recall is decoration. The whole system is
+            four numbers.</p>
         </div>
       </div>
-    </section>
 
-    <!-- ---------------------------------------------------------- -->
-    <section class="panel panel--dark" id="p-count" data-stamp="08 / 09 — Counted" aria-label="The handbook in numbers">
-      <div class="ringwrap" data-drift="70" style="--ring:880px; right:-270px; bottom:-390px">
-        <svg class="ring" viewBox="0 0 200 200" aria-hidden="true">
-          <defs><path id="philCount" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
-          <text><textPath href="#philCount">Six beliefs · Eight rules · Five phases · Four states — </textPath></text>
-        </svg>
-      </div>
-
-      <div class="rcol">
-        <p class="rlabel">The handbook, counted</p>
-        <h2 class="rtitle">Small enough to hold<br>in your head.</h2>
-        <div class="stats" style="margin-top:clamp(28px,3vw,56px)">
-          <div class="reveal">
-            <span class="stat__n" data-count="6">0</span>
-            <span class="stat__l">Beliefs</span>
-            <span class="stat__c">This page</span>
-          </div>
-          <div class="reveal" data-delay="80">
-            <span class="stat__n" data-count="8">0</span>
-            <span class="stat__l">Principles</span>
-            <span class="stat__c">Each one bends somewhere</span>
-          </div>
-          <div class="reveal" data-delay="160">
-            <span class="stat__n" data-count="5">0</span>
-            <span class="stat__l">Phases</span>
-            <span class="stat__c">Four gates between them</span>
-          </div>
-          <div class="reveal" data-delay="240">
-            <span class="stat__n" data-count="4">0</span>
-            <span class="stat__l">States</span>
-            <span class="stat__c">Or it does not ship</span>
-          </div>
+      <div class="ed-stats">
+        <div class="ed-stat reveal">
+          <span class="ed-stat__n" data-count="6">0</span>
+          <span class="ed-stat__l">Beliefs</span>
+          <span class="ed-stat__c">This page</span>
+        </div>
+        <div class="ed-stat reveal">
+          <span class="ed-stat__n" data-count="8">0</span>
+          <span class="ed-stat__l">Principles</span>
+          <span class="ed-stat__c">Each bends somewhere</span>
+        </div>
+        <div class="ed-stat reveal">
+          <span class="ed-stat__n" data-count="5">0</span>
+          <span class="ed-stat__l">Phases</span>
+          <span class="ed-stat__c">Four gates between</span>
+        </div>
+        <div class="ed-stat reveal">
+          <span class="ed-stat__n" data-count="4">0</span>
+          <span class="ed-stat__l">States</span>
+          <span class="ed-stat__c">Or it does not ship</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ---------------------------------------------------------- -->
-    <section class="panel" id="p-close" data-stamp="09 / 09 — Next" aria-label="Next">
-      <div class="ringwrap" data-drift="70" style="--ring:920px; right:-300px; top:calc(50% - 460px)">
-        <svg class="ring" viewBox="0 0 200 200" aria-hidden="true">
-          <defs><path id="philClose" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
-          <text><textPath href="#philClose">Belief without a rule is a mood — Cite the number — </textPath></text>
-        </svg>
-      </div>
-
-      <div class="rclose">
-        <p class="rlabel">Next</p>
-        <a class="rnext" data-magnet="14" href="principles.html" data-cursor="Open">
-          <span><u>Principles</u></span><span>02 — eight rules with teeth</span>
-        </a>
-        <p class="rbody">Beliefs are what you fall back on when nothing else applies. Rules are
-          what you cite in critique. <strong>Both, or neither works.</strong></p>
-        <div class="rfoot">
-          <span>© {{YEAR}} GobbleCube — Design</span>
-          <span>Living document — open a PR to change it.</span>
+  <!-- ---------------------------------------------------------- -->
+  <section class="ed" id="use">
+    <div class="ed__in">
+      <div class="ed__head">
+        <p class="ed__label">/ In the work</p>
+        <div>
+          <h2 class="ed__h">Three places this earns its keep</h2>
+          <p class="ed__sub">A handbook that only gets read in week one is a document. One
+            that gets cited on a Wednesday is a tool.</p>
         </div>
       </div>
-    </section>
-  </div>
+
+      <div class="ed-grid ed-grid--3">
+        <article class="ed-item reveal">
+          <p class="ed-n">/01</p>
+          <h3>In critique</h3>
+          <p>Cite a principle by number instead of saying "it feels off."
+            <strong>"This breaks 04 — the model's confidence isn't visible"</strong> is a
+            reviewable claim. "I'd maybe make it lighter?" is not.</p>
+        </article>
+        <article class="ed-item reveal">
+          <p class="ed-n">/02</p>
+          <h3>In review gates</h3>
+          <p>The Craft Bar is the checklist for design review. If a screen has no empty
+            state, it does not pass, regardless of how good the populated state looks.</p>
+        </article>
+        <article class="ed-item reveal">
+          <p class="ed-n">/03</p>
+          <h3>In onboarding</h3>
+          <p>A new designer reads this end to end in week one and runs a Frame session in
+            week two. If that is not true, the handbook is wrong and we fix the handbook.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------- -->
+  <section class="ed">
+    <div class="ed__in">
+      <div class="ed-cta">
+        <h2 class="ed-cta__h">Beliefs are what you fall back on. Rules are what you cite.</h2>
+        <div class="ed-links">
+          <a class="ed-link ed-link--accent" href="principles.html">Principles <span>/02</span></a>
+          <a class="ed-link" href="process.html">Process <span>/03</span></a>
+          <a class="ed-link" href="craft.html">Craft Bar <span>/04</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
