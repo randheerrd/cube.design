@@ -1,0 +1,65 @@
+# Builds the site and publishes it to GitHub Pages.
+#
+# dist/ is gitignored on purpose — the built output is derived, and keeping
+# it in the repo means every content edit shows up twice in the diff. This
+# runs build.py on the runner instead, so what ships is always what the
+# sources say.
+#
+# One-time setup in the repo: Settings -> Pages -> Source: "GitHub Actions".
+#
+# It deploys from kurawa-iteration, which is the live design. To track a
+# different branch, change the branch name below — that is the only line
+# that decides what the public URL shows.
+name: Deploy site
+
+on:
+  push:
+    branches: [kurawa-iteration]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never let two deploys race; the newer one wins.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # No dependencies to install — build.py is stdlib only.
+      - name: Build
+        run: python3 build.py
+
+      - name: Check the build produced every page
+        run: |
+          for p in index philosophy principles process craft team internal; do
+            test -s "dist/$p.html" || { echo "missing dist/$p.html"; exit 1; }
+          done
+          echo "7 pages built"
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
