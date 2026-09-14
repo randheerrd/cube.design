@@ -7,14 +7,14 @@
 #
 # One-time setup in the repo: Settings -> Pages -> Source: "GitHub Actions".
 #
-# It deploys from kurawa-iteration, which is the live design. To track a
-# different branch, change the branch name below — that is the only line
-# that decides what the public URL shows.
+# It deploys from main. To track a different branch, change the branch
+# name below — that is the only line that decides what the public URL
+# shows. The earlier horizontal-rail design is kept on rail-iteration.
 name: Deploy site
 
 on:
   push:
-    branches: [kurawa-iteration]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
