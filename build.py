@@ -42,9 +42,11 @@ PUBLIC = {"index"}
 # SITE_PASSWORD: knowing the handbook passphrase must not open the internal
 # shelf. Unrelated to any GobbleCube product login.
 #
-# Also OFF. To switch it back on, put a code back here:
-#     INTERNAL_PASSWORD = "gc-internal-2026"
-INTERNAL_PASSWORD = ""
+# ON. Note what this is and is not: the code is substituted into the page
+# source at build time, so anyone who views source can read it. It keeps
+# the shelf out of the way of casual visitors; it is not access control.
+# Put nothing behind it you would mind a stranger seeing.
+INTERNAL_PASSWORD = "Design@123"
 
 # slug, nav label, <title>, meta description
 PAGES = [
