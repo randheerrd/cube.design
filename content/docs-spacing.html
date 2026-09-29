@@ -1,0 +1,319 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html" aria-current="page">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+        <li><a href="#" aria-disabled="true">Inputs <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Banner &amp; Toasts <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Right Overlays <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Dropdown <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Date Selector <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Popup <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tab <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Side Nav <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Stepper <small>Soon</small></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-top">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Foundations</a></p>
+        <div class="docs-title__head">
+          <h1>Spacing</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Sep 2026</span>
+        </div>
+        <p class="docs-title__desc">A single 21-step scale, <code>0</code>&ndash;<code>72</code>, used for every padding,
+          margin and gap in the product &mdash; the token name is always the pixel value. The
+          <a href="docs-spacing-specifications.html">Specifications tab</a> lists every step.</p>
+      </div>
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="#" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5.5 1.5h2.5v4H5.5a2 2 0 0 1 0-4zM8 1.5h2.5a2 2 0 0 1 0 4H8zM5.5 5.5H8v4H5.5a2 2 0 0 1 0-4zM8 7.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM5.5 9.5H8v2a2 2 0 1 1-2.5-1.94z"/></svg>Figma</a>
+      </aside>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-spacing.html" role="tab" aria-selected="true">Guidelines</a>
+        <a href="docs-spacing-specifications.html" role="tab">Specifications</a>
+      </div>
+      <div class="docs-split">
+    <main class="docs-main">
+      <article class="docs-content">
+
+        <!-- ============ Live demo ============ -->
+        <section id="live-demo">
+          <h2>Live demo</h2>
+          <div class="docs-demo" style="flex-direction:column; align-items:stretch; gap:0">
+            <div style="display:flex; flex-direction:column; gap:16px; padding:24px; border:1px solid var(--hairline); border-radius:var(--radius-card); background:var(--bg); max-width:320px">
+              <div style="height:14px; border-radius:3px; background:color-mix(in srgb, var(--ink) 10%, transparent)"></div>
+              <div style="height:14px; border-radius:3px; background:color-mix(in srgb, var(--ink) 10%, transparent); width:70%"></div>
+            </div>
+          </div>
+          <p class="docs-demo__caption">A card built from two tokens: <code>SPACING[24]</code> padding around the
+            edge, <code>SPACING[16]</code> gap between the two lines inside it.</p>
+        </section>
+
+        <!-- ============ Introduction ============ -->
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>Every <code>margin</code>, <code>padding</code> and <code>gap</code> in Cube comes from one 21-step
+            scale. Unlike Heading or Body in <a href="docs-typography.html">Typography</a>, spacing has no named
+            variants &mdash; the token name <strong>is</strong> the pixel value, so <code>SPACING[16]</code> is
+            always <code>16px</code>, whichever of the three properties it's set on.</p>
+        </section>
+
+        <!-- ============ Scale ============ -->
+        <section id="scale">
+          <h2>Scale</h2>
+          <p>21 steps &mdash; denser at the small end, opening up above 20px. The
+            <a href="docs-spacing-specifications.html">Specifications tab</a> lists every one; here's which range
+            to reach for:</p>
+          <table class="docs-table">
+            <thead><tr><th>Token</th><th>Value</th><th>Typical usage</th></tr></thead>
+            <tbody>
+              <tr><td><code>0</code></td><td>0px</td><td>No spacing.</td></tr>
+              <tr><td><code>1-2</code></td><td>1&ndash;2px</td><td>Hairline gaps.</td></tr>
+              <tr><td><code>4</code></td><td>4px</td><td>Tight spacing &mdash; icon gaps, inline elements.</td></tr>
+              <tr><td><code>8</code></td><td>8px</td><td>Compact spacing &mdash; form fields, list items.</td></tr>
+              <tr><td><code>12-16</code></td><td>12&ndash;16px</td><td>Standard spacing &mdash; card padding, section gaps.</td></tr>
+              <tr><td><code>20-24</code></td><td>20&ndash;24px</td><td>Comfortable spacing &mdash; panel padding.</td></tr>
+              <tr><td><code>32-48</code></td><td>32&ndash;48px</td><td>Generous spacing &mdash; page sections.</td></tr>
+              <tr><td><code>64-72</code></td><td>64&ndash;72px</td><td>Large spacing &mdash; page-level separation.</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- ============ Applying spacing ============ -->
+        <section id="applying">
+          <h2>Applying spacing</h2>
+          <p>The token replaces the raw value on whichever CSS property is doing the work &mdash; a margin between
+            two stacked blocks, a padding around a card's content, or a gap on the flex/grid container arranging a
+            row of children:</p>
+          <pre class="docs-code"><code>import { SPACING } from './atoms/spacing';
+
+// Padding — a card's own inner edge
+padding: SPACING[16]     // 16px
+
+// Gap — space between children of a flex/grid container
+gap: SPACING[24]         // 24px
+
+// Margin — space between two stacked, unrelated blocks
+marginTop: SPACING[32]   // 32px</code></pre>
+          <p class="docs-demo__caption">Prefer a container's <code>gap</code> over margin on individual children
+            when the children are a row or a list &mdash; one token then controls every space between them, and
+            adding or removing an item never leaves a stray margin behind.</p>
+
+          <h3>Annotated example</h3>
+          <p>A redline the way a hand-off would mark it up: every gap between fields in this form is the same
+            token, <code>SPACING[32]</code> &mdash; one decision, applied consistently, rather than a fresh
+            judgment call at each field.</p>
+          <div class="space-anno">
+            <p class="space-anno__label">Workspace name</p>
+            <div class="space-anno__field">Myworkspace</div>
+            <div class="space-anno__gap" style="height:32px">
+              <span class="space-anno__gap-track"><span class="space-anno__gap-n">32</span></span>
+              <span class="space-anno__bracket"><i></i></span>
+              <span class="space-anno__token">SPACING[32]</span>
+            </div>
+
+            <p class="space-anno__label">Label</p>
+            <div class="space-anno__field space-anno__field--select">
+              <span>Choose an option</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+            <div class="space-anno__gap" style="height:32px">
+              <span class="space-anno__gap-track"><span class="space-anno__gap-n">32</span></span>
+              <span class="space-anno__bracket"><i></i></span>
+              <span class="space-anno__token">SPACING[32]</span>
+            </div>
+
+            <p class="space-anno__label"><span>Description (optional)</span><span>0/100</span></p>
+            <div class="space-anno__field space-anno__field--area">What is the purpose of this workspace?</div>
+            <div class="space-anno__gap" style="height:32px">
+              <span class="space-anno__gap-track"><span class="space-anno__gap-n">32</span></span>
+              <span class="space-anno__bracket"><i></i></span>
+              <span class="space-anno__token">SPACING[32]</span>
+            </div>
+
+            <p class="space-anno__label">Github or Gitlab repo URL</p>
+            <div class="space-anno__field">e.g. https://github.com/&lt;repository&gt;</div>
+            <p class="space-anno__caption">Enter the url of the repo that hosts your Terraform configuration files</p>
+            <div class="space-anno__gap" style="height:32px">
+              <span class="space-anno__gap-track"><span class="space-anno__gap-n">32</span></span>
+              <span class="space-anno__bracket"><i></i></span>
+              <span class="space-anno__token">SPACING[32]</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ Designing with space ============ -->
+        <section id="designing-with-space">
+          <h2>Designing with space</h2>
+          <ul>
+            <li><strong>Relationships</strong> &mdash; close elements read as related. <code>SPACING[4]</code>&ndash;<code>[8]</code>
+              between an icon and its label says "one control", the same gap a <a href="docs.html#content">Button</a>
+              uses.</li>
+            <li><strong>Hierarchy</strong> &mdash; more space around something raises its weight. A card's own
+              content stays tight (<code>[12]</code>&ndash;<code>[16]</code>); the gap between cards opens up
+              (<code>[16]</code>&ndash;<code>[24]</code>); whole page sections step up again to <code>[64]</code>/<code>[72]</code>.</li>
+            <li><strong>White space</strong> &mdash; even dense surfaces (a comparison table, a metric grid) keep a
+              minimum <code>SPACING[8]</code> between values, or adjacent numbers start to run together.</li>
+          </ul>
+        </section>
+
+        <!-- ============ FAQ ============ -->
+        <section id="faq">
+          <h2>FAQ</h2>
+          <h3>Can I use a value outside the scale?</h3>
+          <p>No &mdash; a value between two steps usually means the layout needs a second look, not a new token.</p>
+          <h3>Does spacing shrink for a dense table or a smaller screen?</h3>
+          <p>The scale doesn't change; a dense or narrow layout just reaches for a smaller existing step
+            (<code>4</code>&ndash;<code>8</code> instead of <code>12</code>&ndash;<code>16</code>). There's no
+            separate compact or mobile scale.</p>
+          <h3>How does this relate to the layout grid?</h3>
+          <p>Grid columns and gutters are a separate foundation. This scale is for space inside and between
+            components, not the column structure a page is laid out on.</p>
+        </section>
+
+      </article>
+    </main>
+
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#live-demo">Live demo</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#scale">Scale</a></li>
+        <li><a href="#applying">Applying spacing</a></li>
+        <li><a href="#designing-with-space">Designing with space</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </aside>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+})();
+</script>

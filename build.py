@@ -74,6 +74,10 @@ PAGES = [
      "The Cube type scale — Heading, Body and Small — and when to reach for each one."),
     ("docs-typography-specifications", "Typography specs", "Typography specifications — Cube Design System",
      "Every type style's family, weight, size, line-height and letter-spacing, plus the raw tokens."),
+    ("docs-spacing", "Spacing", "Spacing — Cube Design System",
+     "The Cube spacing scale — 21 steps from 0 to 72 — and when to reach for each one."),
+    ("docs-spacing-specifications", "Spacing specs", "Spacing specifications — Cube Design System",
+     "Every spacing step and its pixel value, plus the raw tokens."),
     ("docs-tooltips", "Tooltips", "Tooltips — Cube Design System",
      "Tooltip guidelines, anatomy, placement and accessibility for the Cube design system."),
     ("docs-tooltips-specifications", "Tooltip specs", "Tooltip specifications — Cube Design System",
@@ -89,7 +93,7 @@ PAGES = [
 # top bar, so it does not need a second entry in the drop-down.
 HIDDEN = {"internal", "craft", "team", "docs", "docs-tooltips", "docs-tooltips-specifications",
           "docs-buttons-specifications", "docs-typography", "docs-typography-specifications",
-          "docs-colors", "docs-colors-specifications"}
+          "docs-colors", "docs-colors-specifications", "docs-spacing", "docs-spacing-specifications"}
 
 # Guarded by INTERNAL_PASSWORD rather than SITE_PASSWORD.
 INTERNAL_PAGES = {"internal"}
@@ -113,7 +117,8 @@ STUDIO = {"index"}
 # handbook chrome (pill, rulers, footer) is hidden by docs.css.
 DOCS = {"docs", "docs-tooltips", "docs-tooltips-specifications", "docs-buttons-specifications",
         "docs-typography", "docs-typography-specifications",
-        "docs-colors", "docs-colors-specifications"}
+        "docs-colors", "docs-colors-specifications",
+        "docs-spacing", "docs-spacing-specifications"}
 
 
 EDITION_HEAD = (

@@ -195,8 +195,8 @@ body[class^="page-docs"],
 .docs-content ul{margin:0 0 16px; padding-left:20px}
 .docs-content li{margin:0 0 8px; font-size:16px; line-height:1.6; color:var(--ink-2)}
 .docs-content li::marker{color:var(--ink-3)}
-.docs-content a:not(.btn-accent):not(.headcta){color:var(--docs-link); border-bottom:1px solid transparent}
-.docs-content a:not(.btn-accent):not(.headcta):hover{border-bottom-color:currentColor}
+.docs-content a:not(.btn-accent):not(.headcta):not(.fb-card){color:var(--docs-link); border-bottom:1px solid transparent}
+.docs-content a:not(.btn-accent):not(.headcta):not(.fb-card):hover{border-bottom-color:currentColor}
 .docs-content code{
   font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:.88em;
   background:var(--docs-nav-bg); padding:1px 5px; border-radius:3px; color:var(--ink);
@@ -265,6 +265,52 @@ body[class^="page-docs"],
 .color-bed--dark .color-matrix td{border-bottom-color:rgba(255,255,255,.12)}
 .color-bed--dark .color-swatch__fill{border-color:rgba(255,255,255,.25)}
 .color-bed--dark .color-swatch__hex{color:rgba(255,255,255,.55)}
+
+/* ---- spacing scale (docs-spacing) ---- */
+.space-scale{display:flex; flex-direction:column; gap:10px; margin:16px 0 24px}
+.space-row{display:grid; grid-template-columns:52px 1fr 56px; align-items:center; gap:14px}
+.space-row__label{
+  font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:13px; font-weight:500;
+  color:var(--ink); text-align:right;
+}
+.space-row__track{height:20px; display:flex; align-items:center}
+.space-row__bar{height:10px; min-width:1px; border-radius:2px; background:var(--docs-link)}
+.space-row__value{font-size:12px; color:var(--ink-3)}
+.space-row[data-band="true"] .space-row__bar{background:var(--fb-c, var(--docs-link))}
+
+/* Annotated example: a real form with the gap between each field measured
+   and labelled, the way a redline hand-off would mark it up. */
+.space-anno{max-width:440px; margin:16px 0 24px}
+.space-anno__label{
+  display:flex; justify-content:space-between; margin:0 0 8px;
+  font-size:14px; color:var(--ink-2);
+}
+.space-anno__field{
+  height:52px; padding:0 16px; display:flex; align-items:center;
+  border:1px solid var(--hairline); border-radius:var(--radius-card);
+  background:var(--docs-nav-bg); color:var(--ink-3); font-size:15px;
+}
+.space-anno__field--select{justify-content:space-between}
+.space-anno__field--select svg{width:16px; height:16px; flex:none; color:var(--ink-3)}
+.space-anno__field--area{height:110px; align-items:flex-start; padding-top:14px}
+.space-anno__caption{margin:8px 0 0; font-size:13px; color:var(--ink-2)}
+.space-anno__gap{display:flex; align-items:stretch; gap:10px; margin:0}
+.space-anno__gap-track{
+  flex:1; display:flex; align-items:center; padding-left:10px;
+  background:color-mix(in srgb, #7c4dff 8%, transparent);
+}
+.space-anno__gap-n{background:#7c4dff; color:#fff; font-size:11px; font-weight:700; padding:3px 8px; border-radius:4px}
+.space-anno__bracket{position:relative; width:14px; flex:none}
+.space-anno__bracket::before,.space-anno__bracket::after,.space-anno__bracket i{
+  content:''; position:absolute; background:#7c4dff; display:block;
+}
+.space-anno__bracket::before{left:6px; top:0; bottom:0; width:2px}
+.space-anno__bracket::after{left:3px; top:0; width:8px; height:2px}
+.space-anno__bracket i{left:3px; bottom:0; width:8px; height:2px}
+.space-anno__token{
+  align-self:center; font-family:ui-monospace,"SF Mono",Menlo,monospace;
+  font-size:13px; font-weight:600; color:#7c4dff; white-space:nowrap;
+}
 
 /* ---- on this page ---- */
 .docs-toc{
@@ -413,8 +459,8 @@ body[class^="page-docs"],
   display:flex; align-items:baseline; gap:8px; padding:6px 10px;
   border-bottom:1px solid #363e45; white-space:nowrap;
 }
-.tt-card__title{margin:0; font-size:12px; font-weight:700; letter-spacing:0}
-.tt-card__subtitle{margin:0; font-size:10px; font-weight:500; letter-spacing:0; color:#bfc5cf}
+.tt-card .tt-card__title{margin:0; font-size:12px; font-weight:700; letter-spacing:0}
+.tt-card .tt-card__subtitle{margin:0; font-size:10px; font-weight:500; letter-spacing:0; color:#bfc5cf}
 .tt-card__table{display:table; width:100%; border-collapse:collapse}
 .tt-row{display:table-row}
 .tt-cell{
@@ -436,7 +482,7 @@ body[class^="page-docs"],
   display:flex; align-items:center; justify-content:space-between; gap:12px;
   padding:8px 10px; border-top:1px solid #363e45;
 }
-.tt-card__footer-info{margin:0; font-size:10px; font-style:italic; letter-spacing:0; color:#bfc5cf}
+.tt-card .tt-card__footer-info{margin:0; font-size:10px; font-style:italic; letter-spacing:0; color:#bfc5cf}
 .tt-card__btn{
   flex:none; padding:0; border:0; background:none; cursor:pointer;
   font-size:10px; font-weight:600; letter-spacing:0; color:#e3e7ea;
@@ -579,7 +625,7 @@ body[class^="page-docs"],
    Each card carries data-family so its accent dot, hover border and stage
    tint pick up that family's own color — a Destructive card reads as red
    throughout, not just on its sample buttons. */
-.fb-index{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:16px; margin:16px 0 32px}
+.fb-index{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin:16px 0 32px}
 .fb-card{
   display:flex; flex-direction:column; gap:14px; padding:20px;
   border:1px solid color-mix(in srgb, var(--ink) 14%, transparent); border-radius:var(--radius-card);
@@ -595,11 +641,11 @@ body[class^="page-docs"],
 .fb-card h3{margin:0; font-size:16px; font-weight:600; color:var(--ink)}
 .fb-card p{margin:0; font-size:13px; line-height:1.5; color:var(--ink-2)}
 .fb-card__stage{
-  display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px;
-  align-items:center; justify-items:start; min-height:44px;
-  padding:14px; border-radius:calc(var(--radius-card) - 4px);
+  display:flex; flex-wrap:nowrap; align-items:center; gap:8px; min-height:44px;
+  padding:14px; border-radius:calc(var(--radius-card) - 4px); overflow-x:auto;
   background:color-mix(in srgb, var(--fb-c, var(--ink)) 6%, var(--docs-nav-bg));
 }
+.fb-card__stage .fbtn{flex:none}
 .fb-card__count{font-size:12px; color:var(--ink-3)}
 .fb-card[data-family="core"]{--fb-c:#025be5}
 .fb-card[data-family="destructive"]{--fb-c:#d92d20}
@@ -611,7 +657,13 @@ body[class^="page-docs"],
 .fb-play{display:grid; grid-template-columns:minmax(0,280px) minmax(0,1fr); border:1px solid var(--hairline); border-radius:var(--radius-card); overflow:hidden; margin:16px 0 32px}
 .fb-play__controls{display:grid; gap:12px; padding:20px; border-right:1px solid var(--hairline); align-content:start}
 .fb-play__controls label{display:grid; gap:4px; font-size:12px; color:var(--ink-2)}
-.fb-play__controls select{height:32px; border:1px solid var(--hairline); border-radius:6px; background:var(--bg); color:var(--ink); padding:0 8px; font:inherit; font-size:13px}
+.fb-play__controls select{
+  height:32px; border:1px solid var(--hairline); border-radius:6px; background:var(--bg); color:var(--ink);
+  padding:0 28px 0 8px; font:inherit; font-size:13px; line-height:30px;
+  appearance:none; -webkit-appearance:none; -moz-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23808080' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 8px center; background-size:14px;
+}
 .fb-play__controls .fb-play__row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
 .fb-play__view{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; padding:40px 24px; min-height:260px}
 .fb-play__view.is-dark{background:#101114}
