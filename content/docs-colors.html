@@ -1,0 +1,391 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html" aria-current="page">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="#">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+        <li><a href="#" aria-disabled="true">Inputs <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Banner &amp; Toasts <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Right Overlays <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Dropdown <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Date Selector <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Popup <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tab <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Side Nav <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Stepper <small>Soon</small></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-top">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Foundations</a></p>
+        <div class="docs-title__head">
+          <h1>Color</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Sep 2026</span>
+        </div>
+        <p class="docs-title__desc">Five groups &mdash; <strong>Semantic</strong>, <strong>Accent</strong>, <strong>Brand</strong>, <strong>Neutral</strong> and
+          <strong>Platform</strong> &mdash; cover every color in the product, each an 11-step 50&ndash;950 scale. The
+          <a href="docs-colors-specifications.html">Specifications tab</a> lists every hex value and token name.</p>
+      </div>
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=99-15325" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5.5 1.5h2.5v4H5.5a2 2 0 0 1 0-4zM8 1.5h2.5a2 2 0 0 1 0 4H8zM5.5 5.5H8v4H5.5a2 2 0 0 1 0-4zM8 7.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM5.5 9.5H8v2a2 2 0 1 1-2.5-1.94z"/></svg>Figma</a>
+      </aside>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-colors.html" role="tab" aria-selected="true">Guidelines</a>
+        <a href="docs-colors-specifications.html" role="tab">Specifications</a>
+      </div>
+      <div class="docs-split">
+    <main class="docs-main">
+      <article class="docs-content">
+
+        <!-- ============ Live demo ============ -->
+        <section id="live-demo">
+          <h2>Live demo</h2>
+          <div class="docs-demo">
+            <span style="display:inline-flex; align-items:center; gap:6px; padding:6px 12px; border-radius:999px; background:#ebf3ff; color:#005bc0; font:600 13px/1 'DM Sans',sans-serif">&#9679; Primary</span>
+            <span style="display:inline-flex; align-items:center; gap:6px; padding:6px 12px; border-radius:999px; background:#e9f7ed; color:#3b8e4a; font:600 13px/1 'DM Sans',sans-serif">&#9679; Success</span>
+            <span style="display:inline-flex; align-items:center; gap:6px; padding:6px 12px; border-radius:999px; background:#ffecec; color:#c02121; font:600 13px/1 'DM Sans',sans-serif">&#9679; Error</span>
+            <span style="display:inline-flex; align-items:center; gap:6px; padding:6px 12px; border-radius:999px; background:#fff5d7; color:#7d6600; font:600 13px/1 'DM Sans',sans-serif">&#9679; Warning</span>
+          </div>
+          <p class="docs-demo__caption">Four semantic states, each built the same way: a 100-shade background paired with a 700-shade
+            (or darker) foreground for contrast &mdash; the pattern every semantic and accent color follows.</p>
+        </section>
+
+        <!-- ============ Overview ============ -->
+        <section id="overview">
+          <h2>Overview</h2>
+          <p>Every color in Cube belongs to one of five groups, each an 11-step scale from <code>50</code> (lightest tint)
+            to <code>950</code> (near-black shade):</p>
+          <table class="docs-table">
+            <thead><tr><th>Group</th><th>Scales</th><th>Purpose</th></tr></thead>
+            <tbody>
+              <tr><td>Semantic</td><td>Primary, Success, Error, Warning, Primary Text, Secondary Text, Disabled</td><td>UI states and text hierarchy &mdash; the tokens most components reach for.</td></tr>
+              <tr><td>Accent</td><td>Red, Pink, Blue, Purple, Green, Bronze, Orange, Light Blue</td><td>Chart series, badges and tags where a semantic meaning doesn't apply.</td></tr>
+              <tr><td>Brand</td><td>Brand</td><td>The GobbleCube brand color, from light tints to deep navy.</td></tr>
+              <tr><td>Neutral</td><td>White, Black (opacity scales)</td><td>Overlays, scrims, borders and subtle backgrounds &mdash; layered over any color.</td></tr>
+              <tr><td>Platform</td><td>Blinkit, Instamart, Zepto, FK Mins, Amazon, Nykaa</td><td>Partner-brand references for badges and chart legends, not for primary UI.</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- ============ Semantic colors ============ -->
+        <section id="semantic">
+          <h2>Semantic colors</h2>
+          <p>Reach for these first. Each token names a role, not a hue, so the meaning survives a re-theme. The ringed
+            swatch is the shade used most &mdash; the default action color, the default success green, and so on.</p>
+          <table class="docs-table color-matrix">
+            <thead><tr><th>Token</th><th>50</th><th>100</th><th>200</th><th>300</th><th>400</th><th>500</th><th>600</th><th>700</th><th>800</th><th>900</th><th>950</th></tr></thead>
+            <tbody>
+              <tr><td>Primary</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#f5f9ff"></span><span class="color-swatch__hex">#f5f9ff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ebf3ff"></span><span class="color-swatch__hex">#ebf3ff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#d6e7ff"></span><span class="color-swatch__hex">#d6e7ff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#a9ceff"></span><span class="color-swatch__hex">#a9ceff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#7cb5f5"></span><span class="color-swatch__hex">#7cb5f5</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#3f8fe6"></span><span class="color-swatch__hex">#3f8fe6</span></span></td><td data-base="true"><span class="color-swatch"><span class="color-swatch__fill" style="background:#006adc"></span><span class="color-swatch__hex">#006adc</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#005bc0"></span><span class="color-swatch__hex">#005bc0</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#004ca3"></span><span class="color-swatch__hex">#004ca3</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#003a7d"></span><span class="color-swatch__hex">#003a7d</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#00285a"></span><span class="color-swatch__hex">#00285a</span></span></td></tr>
+              <tr><td>Success</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#f4fbf6"></span><span class="color-swatch__hex">#f4fbf6</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#e9f7ed"></span><span class="color-swatch__hex">#e9f7ed</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#d3efdb"></span><span class="color-swatch__hex">#d3efdb</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#a7dfb8"></span><span class="color-swatch__hex">#a7dfb8</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#74c796"></span><span class="color-swatch__hex">#74c796</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#5ab57a"></span><span class="color-swatch__hex">#5ab57a</span></span></td><td data-base="true"><span class="color-swatch"><span class="color-swatch__fill" style="background:#46a758"></span><span class="color-swatch__hex">#46a758</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#3b8e4a"></span><span class="color-swatch__hex">#3b8e4a</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#2f753d"></span><span class="color-swatch__hex">#2f753d</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#245c2f"></span><span class="color-swatch__hex">#245c2f</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#173c1f"></span><span class="color-swatch__hex">#173c1f</span></span></td></tr>
+              <tr><td>Error</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#fff6f6"></span><span class="color-swatch__hex">#fff6f6</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ffecec"></span><span class="color-swatch__hex">#ffecec</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ffdada"></span><span class="color-swatch__hex">#ffdada</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ffb3b3"></span><span class="color-swatch__hex">#ffb3b3</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#f07c7c"></span><span class="color-swatch__hex">#f07c7c</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#e34d4d"></span><span class="color-swatch__hex">#e34d4d</span></span></td><td data-base="true"><span class="color-swatch"><span class="color-swatch__fill" style="background:#e42828"></span><span class="color-swatch__hex">#e42828</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#c02121"></span><span class="color-swatch__hex">#c02121</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#942c18"></span><span class="color-swatch__hex">#942c18</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#781414"></span><span class="color-swatch__hex">#781414</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#4f0d0d"></span><span class="color-swatch__hex">#4f0d0d</span></span></td></tr>
+              <tr><td>Warning</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#fff9e7"></span><span class="color-swatch__hex">#fff9e7</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#fff5d7"></span><span class="color-swatch__hex">#fff5d7</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ffefb6"></span><span class="color-swatch__hex">#ffefb6</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ffe790"></span><span class="color-swatch__hex">#ffe790</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ffda57"></span><span class="color-swatch__hex">#ffda57</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#fbcf0c"></span><span class="color-swatch__hex">#fbcf0c</span></span></td><td data-base="true"><span class="color-swatch"><span class="color-swatch__fill" style="background:#e9be00"></span><span class="color-swatch__hex">#e9be00</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#cda700"></span><span class="color-swatch__hex">#cda700</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#b08f00"></span><span class="color-swatch__hex">#b08f00</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#7d6600"></span><span class="color-swatch__hex">#7d6600</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#514200"></span><span class="color-swatch__hex">#514200</span></span></td></tr>
+              <tr><td>Primary Text</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#f4f6f7"></span><span class="color-swatch__hex">#f4f6f7</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#e3e7ea"></span><span class="color-swatch__hex">#e3e7ea</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#cad2d7"></span><span class="color-swatch__hex">#cad2d7</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#a6b4ba"></span><span class="color-swatch__hex">#a6b4ba</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#7a8d96"></span><span class="color-swatch__hex">#7a8d96</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#5f717b"></span><span class="color-swatch__hex">#5f717b</span></span></td><td data-base="true"><span class="color-swatch"><span class="color-swatch__fill" style="background:#515f69"></span><span class="color-swatch__hex">#515f69</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#465058"></span><span class="color-swatch__hex">#465058</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#3e464c"></span><span class="color-swatch__hex">#3e464c</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#373d42"></span><span class="color-swatch__hex">#373d42</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#101214"></span><span class="color-swatch__hex">#101214</span></span></td></tr>
+              <tr><td>Secondary Text</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#eff2f6"></span><span class="color-swatch__hex">#eff2f6</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#eef1f4"></span><span class="color-swatch__hex">#eef1f4</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#e0e5ea"></span><span class="color-swatch__hex">#e0e5ea</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#c2cbd4"></span><span class="color-swatch__hex">#c2cbd4</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#9ca6b5"></span><span class="color-swatch__hex">#9ca6b5</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#7f8a9e"></span><span class="color-swatch__hex">#7f8a9e</span></span></td><td data-base="true"><span class="color-swatch"><span class="color-swatch__fill" style="background:#69778b"></span><span class="color-swatch__hex">#69778b</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#586473"></span><span class="color-swatch__hex">#586473</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#404a54"></span><span class="color-swatch__hex">#404a54</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#363e45"></span><span class="color-swatch__hex">#363e45</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#23292e"></span><span class="color-swatch__hex">#23292e</span></span></td></tr>
+              <tr><td>Disabled</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#f6f6f6"></span><span class="color-swatch__hex">#f6f6f6</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#eeeeee"></span><span class="color-swatch__hex">#eeeeee</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#e0e0e0"></span><span class="color-swatch__hex">#e0e0e0</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#cfcfcf"></span><span class="color-swatch__hex">#cfcfcf</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#b5b5b5"></span><span class="color-swatch__hex">#b5b5b5</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#9e9e9e"></span><span class="color-swatch__hex">#9e9e9e</span></span></td><td data-base="true"><span class="color-swatch"><span class="color-swatch__fill" style="background:#878787"></span><span class="color-swatch__hex">#878787</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#6e6e6e"></span><span class="color-swatch__hex">#6e6e6e</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#4f4f4f"></span><span class="color-swatch__hex">#4f4f4f</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#2e2e2e"></span><span class="color-swatch__hex">#2e2e2e</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#1e1e1e"></span><span class="color-swatch__hex">#1e1e1e</span></span></td></tr>
+            </tbody>
+          </table>
+          <ul>
+            <li><strong>Primary</strong> &mdash; buttons, links, focus rings.</li>
+            <li><strong>Success</strong> &mdash; positive states and confirmations.</li>
+            <li><strong>Error</strong> &mdash; destructive actions and validation errors.</li>
+            <li><strong>Warning</strong> &mdash; caution and pending states.</li>
+            <li><strong>Primary Text</strong> &mdash; body text and headings.</li>
+            <li><strong>Secondary Text</strong> &mdash; helper text, labels and captions.</li>
+            <li><strong>Disabled</strong> &mdash; disabled inputs and inactive states, never interactive text.</li>
+          </ul>
+        </section>
+
+        <!-- ============ Accent colors ============ -->
+        <section id="accent">
+          <h2>Accent colors</h2>
+          <p>An extended palette for places a semantic meaning doesn't apply &mdash; a chart's category series, a
+            decorative tag, a badge distinguishing one item from another.</p>
+          <table class="docs-table color-matrix">
+            <thead><tr><th>Token</th><th>50</th><th>100</th><th>200</th><th>300</th><th>400</th><th>500</th><th>600</th><th>700</th><th>800</th><th>900</th><th>950</th></tr></thead>
+            <tbody>
+              <tr><td>Red</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#fff7f5"></span><span class="color-swatch__hex">#fff7f5</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ffedea"></span><span class="color-swatch__hex">#ffedea</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ffdad3"></span><span class="color-swatch__hex">#ffdad3</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ffb5a7"></span><span class="color-swatch__hex">#ffb5a7</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#f28a7b"></span><span class="color-swatch__hex">#f28a7b</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#e05c49"></span><span class="color-swatch__hex">#e05c49</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#da4224"></span><span class="color-swatch__hex">#da4224</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#b7371e"></span><span class="color-swatch__hex">#b7371e</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#942c18"></span><span class="color-swatch__hex">#942c18</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#712112"></span><span class="color-swatch__hex">#712112</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#4a160c"></span><span class="color-swatch__hex">#4a160c</span></span></td></tr>
+              <tr><td>Pink</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#fff5f9"></span><span class="color-swatch__hex">#fff5f9</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ffeaf3"></span><span class="color-swatch__hex">#ffeaf3</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ffd6e7"></span><span class="color-swatch__hex">#ffd6e7</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#f5a9ce"></span><span class="color-swatch__hex">#f5a9ce</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#e67cb5"></span><span class="color-swatch__hex">#e67cb5</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#d94fa0"></span><span class="color-swatch__hex">#d94fa0</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#cb378e"></span><span class="color-swatch__hex">#cb378e</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#a92e76"></span><span class="color-swatch__hex">#a92e76</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#87255f"></span><span class="color-swatch__hex">#87255f</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#651c47"></span><span class="color-swatch__hex">#651c47</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#42122f"></span><span class="color-swatch__hex">#42122f</span></span></td></tr>
+              <tr><td>Blue</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#f2f8ff"></span><span class="color-swatch__hex">#f2f8ff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#e6f2ff"></span><span class="color-swatch__hex">#e6f2ff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#cce4ff"></span><span class="color-swatch__hex">#cce4ff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#99c9ff"></span><span class="color-swatch__hex">#99c9ff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#66adfa"></span><span class="color-swatch__hex">#66adfa</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#3f9af7"></span><span class="color-swatch__hex">#3f9af7</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#1b8ff5"></span><span class="color-swatch__hex">#1b8ff5</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#1778cd"></span><span class="color-swatch__hex">#1778cd</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#1261a6"></span><span class="color-swatch__hex">#1261a6</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#0d497e"></span><span class="color-swatch__hex">#0d497e</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#083054"></span><span class="color-swatch__hex">#083054</span></span></td></tr>
+              <tr><td>Purple</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#faf5ff"></span><span class="color-swatch__hex">#faf5ff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#f3ebff"></span><span class="color-swatch__hex">#f3ebff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#e7d6ff"></span><span class="color-swatch__hex">#e7d6ff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#cfadff"></span><span class="color-swatch__hex">#cfadff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#b784e6"></span><span class="color-swatch__hex">#b784e6</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#9f5fd0"></span><span class="color-swatch__hex">#9f5fd0</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#8b37be"></span><span class="color-swatch__hex">#8b37be</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#742e9f"></span><span class="color-swatch__hex">#742e9f</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#542a79"></span><span class="color-swatch__hex">#542a79</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#40165b"></span><span class="color-swatch__hex">#40165b</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#2e123f"></span><span class="color-swatch__hex">#2e123f</span></span></td></tr>
+              <tr><td>Green</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#f4fbf6"></span><span class="color-swatch__hex">#f4fbf6</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#e9f7ed"></span><span class="color-swatch__hex">#e9f7ed</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#d3efdb"></span><span class="color-swatch__hex">#d3efdb</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#a7dfb8"></span><span class="color-swatch__hex">#a7dfb8</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#74c796"></span><span class="color-swatch__hex">#74c796</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#5ab57a"></span><span class="color-swatch__hex">#5ab57a</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#4ba75f"></span><span class="color-swatch__hex">#4ba75f</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#3f8e50"></span><span class="color-swatch__hex">#3f8e50</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#337541"></span><span class="color-swatch__hex">#337541</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#275c32"></span><span class="color-swatch__hex">#275c32</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#1a3c21"></span><span class="color-swatch__hex">#1a3c21</span></span></td></tr>
+              <tr><td>Bronze</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#f2fbfa"></span><span class="color-swatch__hex">#f2fbfa</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#e6f7f5"></span><span class="color-swatch__hex">#e6f7f5</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ccefeb"></span><span class="color-swatch__hex">#ccefeb</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#99dfd7"></span><span class="color-swatch__hex">#99dfd7</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#66c7be"></span><span class="color-swatch__hex">#66c7be</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#33b2a5"></span><span class="color-swatch__hex">#33b2a5</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#0e9888"></span><span class="color-swatch__hex">#0e9888</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#0c7f72"></span><span class="color-swatch__hex">#0c7f72</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#09665b"></span><span class="color-swatch__hex">#09665b</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#064c45"></span><span class="color-swatch__hex">#064c45</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#04312d"></span><span class="color-swatch__hex">#04312d</span></span></td></tr>
+              <tr><td>Orange</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#fff7f2"></span><span class="color-swatch__hex">#fff7f2</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ffefe6"></span><span class="color-swatch__hex">#ffefe6</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ffdfcc"></span><span class="color-swatch__hex">#ffdfcc</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ffc099"></span><span class="color-swatch__hex">#ffc099</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#f79a66"></span><span class="color-swatch__hex">#f79a66</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#fc7a3e"></span><span class="color-swatch__hex">#fc7a3e</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ed5f00"></span><span class="color-swatch__hex">#ed5f00</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#c74f00"></span><span class="color-swatch__hex">#c74f00</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#a13f00"></span><span class="color-swatch__hex">#a13f00</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#7a2f00"></span><span class="color-swatch__hex">#7a2f00</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#4f1e00"></span><span class="color-swatch__hex">#4f1e00</span></span></td></tr>
+              <tr><td>Light Blue</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#f2fbff"></span><span class="color-swatch__hex">#f2fbff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#e6f7ff"></span><span class="color-swatch__hex">#e6f7ff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#ccf0ff"></span><span class="color-swatch__hex">#ccf0ff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#99e1ff"></span><span class="color-swatch__hex">#99e1ff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#66d1f5"></span><span class="color-swatch__hex">#66d1f5</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#33c6ee"></span><span class="color-swatch__hex">#33c6ee</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#00bdea"></span><span class="color-swatch__hex">#00bdea</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#009fc5"></span><span class="color-swatch__hex">#009fc5</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#0081a0"></span><span class="color-swatch__hex">#0081a0</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#00627a"></span><span class="color-swatch__hex">#00627a</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#004050"></span><span class="color-swatch__hex">#004050</span></span></td></tr>
+            </tbody>
+          </table>
+          <ul>
+            <li><strong>Red</strong> &mdash; destructive badges, alerts.</li>
+            <li><strong>Pink</strong> &mdash; decorative highlights.</li>
+            <li><strong>Blue</strong> &mdash; informational badges, links.</li>
+            <li><strong>Purple</strong> &mdash; premium features, insights.</li>
+            <li><strong>Green</strong> &mdash; positive metrics, growth.</li>
+            <li><strong>Bronze</strong> &mdash; a cooler, teal-toned alternative to Green.</li>
+            <li><strong>Orange</strong> &mdash; warnings, in-progress states.</li>
+            <li><strong>Light Blue</strong> &mdash; sky and secondary information.</li>
+          </ul>
+        </section>
+
+        <!-- ============ Brand ============ -->
+        <section id="brand">
+          <h2>Brand</h2>
+          <p>The official GobbleCube brand scale. Reach for the ringed 600 shade for anything that should read as
+            "GobbleCube" specifically &mdash; a logo mark, an empty-state illustration, a marketing surface &mdash; not
+            as a substitute for Primary in product UI.</p>
+          <table class="docs-table color-matrix">
+            <thead><tr><th>Token</th><th>50</th><th>100</th><th>200</th><th>300</th><th>400</th><th>500</th><th>600</th><th>700</th><th>800</th><th>900</th><th>950</th></tr></thead>
+            <tbody>
+              <tr><td>Brand</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#f4f7ff"></span><span class="color-swatch__hex">#f4f7ff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#e9efff"></span><span class="color-swatch__hex">#e9efff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#d3dfff"></span><span class="color-swatch__hex">#d3dfff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#a7bfff"></span><span class="color-swatch__hex">#a7bfff</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#6f94fa"></span><span class="color-swatch__hex">#6f94fa</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#3a6ff5"></span><span class="color-swatch__hex">#3a6ff5</span></span></td><td data-base="true"><span class="color-swatch"><span class="color-swatch__fill" style="background:#034ced"></span><span class="color-swatch__hex">#034ced</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#033fcc"></span><span class="color-swatch__hex">#033fcc</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#0233a6"></span><span class="color-swatch__hex">#0233a6</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#022680"></span><span class="color-swatch__hex">#022680</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:#011852"></span><span class="color-swatch__hex">#011852</span></span></td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- ============ Neutrals ============ -->
+        <section id="neutrals">
+          <h2>Neutrals</h2>
+          <p>White and black opacity scales, not hex colors &mdash; each step is the same white or black at 10% more
+            alpha, so it layers transparently over whatever sits underneath. Used for overlays, scrim layers, borders
+            and subtle backgrounds.</p>
+          <h3>White</h3>
+          <div class="color-bed--dark">
+          <table class="docs-table color-matrix">
+            <thead><tr><th>Token</th><th>10</th><th>20</th><th>30</th><th>40</th><th>50</th><th>60</th><th>70</th><th>80</th><th>90</th><th>100</th></tr></thead>
+            <tbody>
+              <tr><td>White</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(255,255,255,0.1)"></span><span class="color-swatch__hex">.10</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(255,255,255,0.2)"></span><span class="color-swatch__hex">.20</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(255,255,255,0.3)"></span><span class="color-swatch__hex">.30</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(255,255,255,0.4)"></span><span class="color-swatch__hex">.40</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(255,255,255,0.5)"></span><span class="color-swatch__hex">.50</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(255,255,255,0.6)"></span><span class="color-swatch__hex">.60</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(255,255,255,0.7)"></span><span class="color-swatch__hex">.70</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(255,255,255,0.8)"></span><span class="color-swatch__hex">.80</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(255,255,255,0.9)"></span><span class="color-swatch__hex">.90</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(255,255,255,1.0)"></span><span class="color-swatch__hex">1</span></span></td></tr>
+            </tbody>
+          </table>
+          </div>
+          <h3>Black</h3>
+          <table class="docs-table color-matrix">
+            <thead><tr><th>Token</th><th>10</th><th>20</th><th>30</th><th>40</th><th>50</th><th>60</th><th>70</th><th>80</th><th>90</th><th>100</th></tr></thead>
+            <tbody>
+              <tr><td>Black</td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(0,0,0,0.1)"></span><span class="color-swatch__hex">.10</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(0,0,0,0.2)"></span><span class="color-swatch__hex">.20</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(0,0,0,0.3)"></span><span class="color-swatch__hex">.30</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(0,0,0,0.4)"></span><span class="color-swatch__hex">.40</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(0,0,0,0.5)"></span><span class="color-swatch__hex">.50</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(0,0,0,0.6)"></span><span class="color-swatch__hex">.60</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(0,0,0,0.7)"></span><span class="color-swatch__hex">.70</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(0,0,0,0.8)"></span><span class="color-swatch__hex">.80</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(0,0,0,0.9)"></span><span class="color-swatch__hex">.90</span></span></td><td><span class="color-swatch"><span class="color-swatch__fill" style="background:rgba(0,0,0,1.0)"></span><span class="color-swatch__hex">1</span></span></td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- ============ Platform semantics ============ -->
+        <section id="platforms">
+          <h2>Platform semantics</h2>
+          <p>Brand-color references for the e-commerce and quick-commerce platforms Cube's charts and comparisons
+            surface &mdash; a competitor badge, a chart legend entry, a branded row in a comparison table. They are
+            reference colors, not a palette to build primary UI from.</p>
+          <table class="docs-table platform-table">
+            <thead><tr><th>Platform</th><th>Primary shade</th><th>Note</th></tr></thead>
+            <tbody>
+              <tr><td>Blinkit</td><td class="platform-swatch"><span class="color-swatch"><span class="color-swatch__fill" style="background:#f8cb46"></span><span class="color-swatch__hex">#f8cb46</span></span></td><td>Yellow</td></tr>
+              <tr><td>Instamart</td><td class="platform-swatch"><span class="color-swatch"><span class="color-swatch__fill" style="background:#ff5200"></span><span class="color-swatch__hex">#ff5200</span></span></td><td>Orange</td></tr>
+              <tr><td>Zepto</td><td class="platform-swatch"><span class="color-swatch"><span class="color-swatch__fill" style="background:#950edb"></span><span class="color-swatch__hex">#950edb</span></span></td><td>Purple</td></tr>
+              <tr><td>FK Mins</td><td class="platform-swatch"><span class="color-swatch"><span class="color-swatch__fill" style="background:#b01f46"></span><span class="color-swatch__hex">#b01f46</span></span></td><td>Pink / crimson</td></tr>
+              <tr><td>Amazon</td><td class="platform-swatch"><span class="color-swatch"><span class="color-swatch__fill" style="background:#ff9900"></span><span class="color-swatch__hex">#ff9900</span></span></td><td>Orange</td></tr>
+              <tr><td>Nykaa</td><td class="platform-swatch"><span class="color-swatch"><span class="color-swatch__fill" style="background:#ff2d7a"></span><span class="color-swatch__hex">#ff2d7a</span></span></td><td>Pink</td></tr>
+            </tbody>
+          </table>
+          <p class="docs-demo__caption">Each platform is a full 50&ndash;950 scale, same shape as an Accent color &mdash;
+            see the <a href="docs-colors-specifications.html#platforms">Specifications tab</a> for every shade.</p>
+        </section>
+
+        <!-- ============ Usage ============ -->
+        <section id="usage">
+          <h2>Usage</h2>
+          <p>Reach for the token, not a hardcoded hex &mdash; the same values used to generate every swatch on this
+            page:</p>
+          <pre class="docs-code"><code>import { SEMANTIC_PRIMARY, ACCENT_BLUE, BRAND, NEUTRAL_BLACK } from './atoms/colors';
+
+// A token is a scale, indexed by shade
+const primaryAction = SEMANTIC_PRIMARY[600];   // #006adc
+const infoBadgeBg    = ACCENT_BLUE[100];       // #e6f2ff
+const infoBadgeText  = ACCENT_BLUE[700];       // #1778cd
+const scrimOverlay   = NEUTRAL_BLACK[50];      // rgba(0, 0, 0, 0.5)</code></pre>
+          <p class="docs-demo__caption">The recurring pattern: a light shade (50&ndash;100) for a background, the base
+            shade (500&ndash;600) for an icon or an active state, a dark shade (700&ndash;900) for text on that light
+            background.</p>
+        </section>
+
+        <!-- ============ Accessibility & contrast ============ -->
+        <section id="accessibility">
+          <h2>Accessibility &amp; contrast</h2>
+          <h3>Do</h3>
+          <ul>
+            <li>Pair a light background shade (50&ndash;100) with a dark text shade (700&ndash;900) from the same scale
+              &mdash; that combination is built to clear 4.5:1 contrast.</li>
+            <li>Pair meaning with a second signal &mdash; an icon, a label, an underline &mdash; never color alone, for
+              a person with color-vision deficiency.</li>
+            <li>Use <code>Primary Text</code> / <code>Secondary Text</code> for reading text, not a raw Accent shade.</li>
+          </ul>
+          <h3>Don't</h3>
+          <ul>
+            <li>Set text in a mid-scale shade (300&ndash;500) on a white background &mdash; it reads soft and often
+              fails contrast.</li>
+            <li>Use Error or Warning as the only indicator of a state &mdash; add the word "Error" or an icon too.</li>
+            <li>Invent a new hex value for "just this one case" &mdash; every color a screen needs already exists in
+              one of these five groups.</li>
+          </ul>
+        </section>
+
+        <!-- ============ Related ============ -->
+        <section id="related">
+          <h2>Related</h2>
+          <ul>
+            <li><a href="docs-colors-specifications.html">Color specifications</a></li>
+            <li><a href="docs-typography.html">Typography</a></li>
+            <li><a href="docs.html">Button</a></li>
+          </ul>
+        </section>
+
+        <!-- ============ Feedback ============ -->
+        <section id="feedback">
+          <h2>Feedback</h2>
+          <p>Help improve this page by leaving feedback, asking questions, or filing an issue on
+            <a href="#">GitHub</a>.</p>
+        </section>
+
+      </article>
+    </main>
+
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#live-demo">Live demo</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#semantic">Semantic colors</a></li>
+        <li><a href="#accent">Accent colors</a></li>
+        <li><a href="#brand">Brand</a></li>
+        <li><a href="#neutrals">Neutrals</a></li>
+        <li><a href="#platforms">Platform semantics</a></li>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#accessibility">Accessibility &amp; contrast</a></li>
+        <li><a href="#related">Related</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </aside>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+})();
+</script>

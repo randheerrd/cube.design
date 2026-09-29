@@ -1,0 +1,393 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="#">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs.html" aria-current="page">Buttons</a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+        <li><a href="#" aria-disabled="true">Inputs <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Banner &amp; Toasts <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Right Overlays <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Dropdown <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Date Selector <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Popup <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tab <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Side Nav <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Stepper <small>Soon</small></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-top">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Button</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Sep 2026</span>
+        </div>
+        <p class="docs-title__desc">Buttons trigger an action. Pick an action type, an emphasis and a size — this page helps you choose; the Specifications tab lists every variant.</p>
+      </div>
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-button--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 1.5 12.6 1a.5.5 0 0 1 .53.5v13a.5.5 0 0 1-.53.5L3 14.5a.5.5 0 0 1-.5-.5V2a.5.5 0 0 1 .5-.5zm6.3 3.2c0-.2.2-.4.4-.4.3 0 .5.1.7.3l.3-.4c-.3-.3-.6-.4-1-.4-.6 0-1 .4-1 .9 0 1 1.5.8 1.5 1.2 0 .2-.2.3-.4.3-.4 0-.6-.2-.8-.4l-.4.4c.3.3.7.5 1.2.5.6 0 1-.4 1-.9 0-1-1.5-.8-1.5-1.2z"/></svg>Storybook</a>
+        <a href="#"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5.5 1.5h2.5v4H5.5a2 2 0 0 1 0-4zM8 1.5h2.5a2 2 0 0 1 0 4H8zM5.5 5.5H8v4H5.5a2 2 0 0 1 0-4zM8 7.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM5.5 9.5H8v2a2 2 0 1 1-2.5-1.94z"/></svg>Figma</a>
+      </aside>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs.html" role="tab" aria-selected="true">Guidelines</a>
+        <a href="docs-buttons-specifications.html" role="tab">Specifications</a>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-button--docs" role="tab" target="_blank" rel="noopener noreferrer">
+          Code
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7 9"/></svg>
+          <span class="sr-only">(opens Storybook in a new tab)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <div class="docs-split">
+    <main class="docs-main">
+      <article class="docs-content">
+
+        <section id="live-demo">
+          <h2>Live demo</h2>
+          <div class="docs-demo">
+            <button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Core</span></button> <button class="fbtn" type="button" data-family="destructive" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Destructive</span></button> <button class="fbtn" type="button" data-family="supportive" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Supportive</span></button> <button class="fbtn" type="button" data-family="neutral" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Neutral</span></button>
+          </div>
+        </section>
+
+        <section id="overview">
+          <h2>Overview</h2>
+          <p>Buttons let a person trigger an action — submit a form, open a dialog, confirm a choice. Cube has
+            <strong>three button sets</strong> built from the same properties: the <strong>Action</strong> button
+            (Core, Destructive, Supportive), the <strong>Neutral</strong> button, and the <strong>Accent</strong> button.
+            Together they span roughly 2,600 variants, so this tab teaches how to <em>choose</em> — and the
+            <a href="docs-buttons-specifications.html">Specifications tab</a> is where you explore every one.</p>
+
+        </section>
+
+        <section id="choose">
+          <h2>Choose a button</h2>
+          <p>Pick in three steps: what kind of action is it (<em>action type</em>), how loud should it be
+            (<em>variant</em>), and how much room do you have (<em>size</em>).</p>
+          <div class="fb-index">
+            <a class="fb-card" data-family="core" href="docs-buttons-specifications.html#core">
+              <div class="fb-card__head"><span class="fb-card__dot" aria-hidden="true"></span><h3>Core</h3></div>
+              <p>The default action. Submit, save, continue.</p>
+              <div class="fb-card__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="core" data-variant="outlined" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="core" data-variant="naked" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div>
+              <span class="fb-card__count">Filled · Outlined · Naked</span>
+            </a>
+            <a class="fb-card" data-family="destructive" href="docs-buttons-specifications.html#destructive">
+              <div class="fb-card__head"><span class="fb-card__dot" aria-hidden="true"></span><h3>Destructive</h3></div>
+              <p>Delete, remove, revoke — hard to reverse.</p>
+              <div class="fb-card__stage"><button class="fbtn" type="button" data-family="destructive" data-variant="filled" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="destructive" data-variant="outlined" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="destructive" data-variant="naked" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div>
+              <span class="fb-card__count">Filled · Outlined · Naked</span>
+            </a>
+            <a class="fb-card" data-family="supportive" href="docs-buttons-specifications.html#supportive">
+              <div class="fb-card__head"><span class="fb-card__dot" aria-hidden="true"></span><h3>Supportive</h3></div>
+              <p>Confirm, approve, mark done — a positive outcome.</p>
+              <div class="fb-card__stage"><button class="fbtn" type="button" data-family="supportive" data-variant="filled" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="supportive" data-variant="outlined" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="supportive" data-variant="naked" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div>
+              <span class="fb-card__count">Filled · Outlined · Naked</span>
+            </a>
+            <a class="fb-card" data-family="neutral" href="docs-buttons-specifications.html#neutral">
+              <div class="fb-card__head"><span class="fb-card__dot" aria-hidden="true"></span><h3>Neutral</h3></div>
+              <p>Low-key actions on any surface, in light and dark.</p>
+              <div class="fb-card__stage"><button class="fbtn" type="button" data-family="neutral" data-variant="filled" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="neutral" data-variant="naked" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div>
+              <span class="fb-card__count">Filled · Outlined · Dashed · Naked</span>
+            </a>
+            <a class="fb-card" data-family="accent" href="docs-buttons-specifications.html#accent">
+              <div class="fb-card__head"><span class="fb-card__dot" aria-hidden="true"></span><h3>Accent</h3></div>
+              <p>Eight colours for tags, filters and categories.</p>
+              <div class="fb-card__stage"><button class="fbtn" type="button" data-color="purple" data-variant="filled" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-color="purple" data-variant="outlined" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-color="purple" data-variant="naked" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div>
+              <span class="fb-card__count">Filled · Outlined · Naked</span>
+            </a>
+          </div>
+          <table class="docs-table">
+            <thead><tr><th>Step</th><th>Property</th><th>Options</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Action type</td><td>Core (default), Destructive, Supportive — or use Neutral / Accent for non-action emphasis.</td></tr>
+              <tr><td>2</td><td>Variant</td><td>Filled (default) &gt; Outlined &gt; Naked. Neutral also has Dashed.</td></tr>
+              <tr><td>3</td><td>Size</td><td>Large, Medium (default), Small. Accent uses Medium, Small, Tiny.</td></tr>
+              <tr><td>4</td><td>Modifiers</td><td>Rounded, Icon-only, Density (Default / Comfortable / Fit content).</td></tr>
+            </tbody>
+          </table>
+          <div class="docs-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>
+            <p>Three separate components in code, each documented in Storybook: <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-button--docs" target="_blank" rel="noopener noreferrer">Button</a> (Neutral, Accent),
+              <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-semantic-semanticbutton--docs" target="_blank" rel="noopener noreferrer">SemanticButton</a> (Core, Destructive, Supportive), and
+              <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-iconbutton--docs" target="_blank" rel="noopener noreferrer">IconButton</a> (Icon-only).</p>
+          </div>
+        </section>
+
+        <section id="when-to-use">
+          <h2>When to use</h2>
+          <h3>Use a button</h3>
+          <p>Whenever an interaction changes state, submits data, or moves someone forward in a flow. If it
+            goes somewhere instead of doing something, it is usually a link.</p>
+          <h3>Don't use a button</h3>
+          <p>As plain navigation between pages with no side effect, or stacked more than once in
+            Filled at the same level — one Filled button per view keeps the intended action clear.</p>
+        </section>
+
+        <section id="core">
+          <h2>Core button</h2>
+          <p>The default action type. Its Filled variant is the single principal action on a view.</p>
+          <div class="docs-demo"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Save changes</span></button> <button class="fbtn" type="button" data-family="core" data-variant="outlined" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Save draft</span></button> <button class="fbtn" type="button" data-family="core" data-variant="naked" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Skip</span></button>
+            <p class="docs-demo__caption">Filled, Outlined and Naked — falling emphasis, same colour.</p></div>
+        </section>
+
+        <section id="destructive">
+          <h2>Destructive button</h2>
+          <p>Reserved for hard-to-reverse actions — delete, remove, revoke. Pair with a confirmation step and never
+            make it the default focus in a dialog.</p>
+          <div class="docs-demo"><button class="fbtn" type="button" data-family="destructive" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Delete</span></button> <button class="fbtn" type="button" data-family="destructive" data-variant="outlined" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Delete</span></button> <button class="fbtn" type="button" data-family="destructive" data-variant="naked" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Delete</span></button></div>
+        </section>
+
+        <section id="supportive">
+          <h2>Supportive button</h2>
+          <p>A positive, confirming outcome — approve, publish, mark done. Use sparingly so its meaning holds.</p>
+          <div class="docs-demo"><button class="fbtn" type="button" data-family="supportive" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Approve</span></button> <button class="fbtn" type="button" data-family="supportive" data-variant="outlined" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Approve</span></button> <button class="fbtn" type="button" data-family="supportive" data-variant="naked" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Approve</span></button></div>
+        </section>
+
+        <section id="neutral">
+          <h2>Neutral button</h2>
+          <p>For actions that shouldn't carry a colour meaning — toolbars, table rows, secondary controls. It's the
+            only set with a <strong>Dashed</strong> variant (for "add" placeholders) and a <strong>Dark</strong> mode
+            that inverts for dark surfaces.</p>
+          <div class="docs-demo"><button class="fbtn" type="button" data-family="neutral" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Filter</span></button> <button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Filter</span></button> <button class="fbtn" type="button" data-family="neutral" data-variant="dashed" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Add item</span></button> <button class="fbtn" type="button" data-family="neutral" data-variant="naked" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Filter</span></button></div>
+          <div class="docs-demo docs-stage--dark"><button class="fbtn" type="button" data-family="neutral" data-variant="filled" data-size="large" data-density="comfortable" data-mode="dark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Filter</span></button> <button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="large" data-density="comfortable" data-mode="dark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Filter</span></button> <button class="fbtn" type="button" data-family="neutral" data-variant="dashed" data-size="large" data-density="comfortable" data-mode="dark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Add item</span></button> <button class="fbtn" type="button" data-family="neutral" data-variant="naked" data-size="large" data-density="comfortable" data-mode="dark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Filter</span></button></div>
+        </section>
+
+        <section id="accent">
+          <h2>Accent button</h2>
+          <p>Eight colours for categorising — tags, filters, chart legends. Accent runs smaller (Medium, Small, Tiny)
+            and has no Pressed state.</p>
+          <div class="docs-demo"><button class="fbtn" type="button" data-color="pink" data-variant="filled" data-size="medium" data-density="comfortable">Pink</button><button class="fbtn" type="button" data-color="purple" data-variant="filled" data-size="medium" data-density="comfortable">Purple</button><button class="fbtn" type="button" data-color="orange" data-variant="filled" data-size="medium" data-density="comfortable">Orange</button><button class="fbtn" type="button" data-color="light-blue" data-variant="filled" data-size="medium" data-density="comfortable">Light Blue</button><button class="fbtn" type="button" data-color="bronze-green" data-variant="filled" data-size="medium" data-density="comfortable">Bronze Green</button><button class="fbtn" type="button" data-color="green" data-variant="filled" data-size="medium" data-density="comfortable">Green</button><button class="fbtn" type="button" data-color="blue" data-variant="filled" data-size="medium" data-density="comfortable">Blue</button><button class="fbtn" type="button" data-color="steel-blue" data-variant="filled" data-size="medium" data-density="comfortable">Steel Blue</button></div>
+        </section>
+
+        <section id="emphasis">
+          <h2>Emphasis</h2>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Save</span></button> <button class="fbtn" type="button" data-family="core" data-variant="outlined" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Cancel</span></button></div>
+              <p class="docs-dodont__cap">One Filled button per view, paired with a lower-emphasis action.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don't</p>
+              <div class="docs-dodont__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Save</span></button> <button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Save as draft</span></button></div>
+              <p class="docs-dodont__cap">Two Filled buttons compete and blur the intended action.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="sizing">
+          <h2>Sizing and density</h2>
+          <table class="docs-table">
+            <thead><tr><th>Size</th><th>Default</th><th>Comfortable</th><th>Use</th></tr></thead>
+            <tbody>
+              <tr><td>Large</td><td>36px</td><td>40px</td><td>Page-level actions, modal footers</td></tr>
+              <tr><td>Medium</td><td>28px</td><td>32px</td><td>Forms, cards, most product UI</td></tr>
+              <tr><td>Small</td><td>20px</td><td>24px</td><td>Dense tables and toolbars</td></tr>
+              <tr><td>Tiny <small>(Accent)</small></td><td colspan="2">16px</td><td>Inline tags and chips</td></tr>
+            </tbody>
+          </table>
+          <p><strong>Fit content</strong> (Naked only) drops the padding so a text action lines up with surrounding copy.</p>
+        </section>
+
+        <section id="modifiers">
+          <h2>Modifiers</h2>
+          <h3>Icons</h3>
+          <ul>
+            <li>Leading icon is shown by default; a trailing icon is available but hidden by default.</li>
+            <li>One icon per side, sized to the button (16px on Large).</li>
+          </ul>
+          <h3>Icon-only</h3>
+          <p>Square, same height as the button. Always give it an accessible label and a tooltip.</p>
+          <h3>Rounded</h3>
+          <p>Pill shape for filters and chips; keep one shape per group.</p>
+          <div class="docs-demo">
+            <button class="fbtn" type="button" data-variant="filled" data-size="large" data-density="comfortable" data-icononly="yes" aria-label="Add"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></button>
+            <button class="fbtn" type="button" data-variant="outlined" data-size="large" data-density="comfortable" data-icononly="yes" data-round="yes" aria-label="Add"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></button>
+            <button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-round="yes"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Rounded</span></button>
+            <button class="fbtn" type="button" data-variant="filled" data-size="large" data-density="comfortable">Next<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
+          </div>
+        </section>
+
+        <section id="states">
+          <h2>States</h2>
+          <p>Default, Hover, Pressed and Disabled — identical rules across every variant. Disabled is muted and
+            unfocusable; explain why with inline copy, not the button.</p>
+          <div class="docs-demo">
+            <button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Default</span></button> <button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-state="hover"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Hover</span></button> <button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-state="pressed"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Pressed</span></button> <button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-state="disabled"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Disabled</span></button>
+          </div>
+        </section>
+
+        <section id="content">
+          <h2>Content</h2>
+          <p>A label is a verb plus what it acts on — "Save changes", "Delete file". One to three words. Width
+            follows the label so longer translations never wrap.</p>
+        </section>
+
+        <section id="related">
+          <h2>Related</h2>
+          <ul><li><a href="docs-tooltips.html">Tooltip</a></li><li><a href="#">Icon</a></li><li><a href="#">Dropdown</a></li></ul>
+        </section>
+
+        <section id="feedback">
+          <h2>Feedback</h2>
+          <p>Help improve this page by leaving feedback, asking questions, or filing an issue on <a href="#">GitHub</a>.</p>
+        </section>
+
+      </article>
+    </main>
+
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#live-demo">Live demo</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#choose">Choose a button</a></li>
+        <li><a href="#when-to-use">When to use</a></li>
+        <li><a href="#core">Core</a></li>
+        <li><a href="#destructive">Destructive</a></li>
+        <li><a href="#supportive">Supportive</a></li>
+        <li><a href="#neutral">Neutral</a></li>
+        <li><a href="#accent">Accent</a></li>
+        <li><a href="#emphasis">Emphasis</a></li>
+        <li><a href="#sizing">Sizing and density</a></li>
+        <li><a href="#modifiers">Modifiers</a></li>
+        <li><a href="#states">States</a></li>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#related">Related</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </aside>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">© {{YEAR}} GobbleCube. Privacy · Terms · Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+})();
+</script>

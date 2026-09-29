@@ -643,6 +643,14 @@ body.is-grabbing .face img{transition:none}   /* no lag while being dragged */
 .fx-row:hover .fx-row__kind, .fx-row:hover .fx-row__where{color:inherit; opacity:.75}
 .fx-row__name{display:flex; align-items:center; gap:10px; min-width:0}
 .fx-row__name svg{width:15px; height:15px; flex:none}
+/* Favicons come from Google's fetcher, so we do not control what is behind
+   them — and the row inverts to dark on hover. A white chip keeps a dark
+   logo (OpenAI, Linear) visible in both states. */
+.fx-row__name .fx-fav{
+  width:16px; height:16px; flex:none; object-fit:contain;
+  background:#fff; padding:2px; border-radius:4px; box-sizing:content-box;
+  box-shadow:0 0 0 1px rgba(0,0,0,.07);
+}
 .fx-row__name b{font-weight:500; letter-spacing:var(--tracking-tight); font-size:13.5px;
   overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
 .fx-row__kind{font-size:10px; letter-spacing:0; color:var(--ink-2); text-transform:uppercase}
@@ -1135,6 +1143,17 @@ body.page-internal{--iso:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org
 .fx-tile:focus-visible .fx-tile__label{background:var(--ink); color:var(--bg)}
 .fx-tile__n{font-size:10px; letter-spacing:0; color:var(--ink-2); font-variant-numeric:tabular-nums}
 
+/* An empty folder still opens — it just reads as empty. The icon sits back
+   so a full folder is the thing the eye lands on first. */
+.fx-tile[data-empty] .mf{opacity:.42}
+.fx-tile[data-empty]:hover .mf,
+.fx-tile[data-empty]:focus-visible .mf{opacity:.7}
+.fx-tile[data-empty] .fx-tile__n{opacity:.7}
+.fx-empty{
+  margin:0; padding:34px 4px; text-align:center;
+  font-size:13px; line-height:1.6; letter-spacing:0; color:var(--ink-2);
+}
+
 .fx-meta{
   display:flex; justify-content:center; gap:10px; align-items:center;
   margin:0 0 6px; font-size:var(--fs-micro); letter-spacing:0; color:var(--ink-2);
@@ -1190,3 +1209,113 @@ body.page-internal{--iso:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org
   .flow{overflow-x:auto}
   .week{grid-template-columns:1fr}
 }
+
+/* ============================================================
+   DESIGN SYSTEM DOCS  (system.html)
+   Specimen furniture only. Every component shown on that page
+   is the real class; these rules just lay the specimens out.
+   ============================================================ */
+body.page-system{--iso:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23000' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'%3E%3Crect x='12' y='12' width='34' height='34'/%3E%3Crect x='54' y='12' width='34' height='34' opacity='.35'/%3E%3Crect x='12' y='54' width='34' height='34' opacity='.35'/%3E%3Ccircle cx='71' cy='71' r='17' fill='%23000' stroke='none'/%3E%3C/svg%3E")}
+
+.page-system code{
+  font-family:ui-monospace, "SF Mono", Menlo, monospace; font-size:.86em;
+  letter-spacing:0; color:var(--ink); white-space:nowrap;
+  background:color-mix(in srgb, var(--ink) 6%, var(--bg));
+  padding:1px 5px; border-radius:3px;
+}
+
+.ds-grid{display:grid; gap:20px; align-items:start; margin:0 0 32px}
+.ds-grid--2{grid-template-columns:1fr 1fr}
+.ds-grid--3{grid-template-columns:repeat(3,1fr)}
+.ds-grid .callout{margin:0; max-width:none; height:100%}
+.ds-grid .table{margin:0}
+
+.ds-h3{
+  margin:48px 0 16px; font-size:var(--fs-h3); font-weight:500;
+  line-height:1.15; letter-spacing:var(--tracking-tight);
+}
+.ds-note{margin:12px 0 0; font-size:14px; line-height:1.55; letter-spacing:0; color:var(--ink-2); max-width:62ch}
+
+/* swatches */
+.ds-swatches{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr));
+  gap:1px; border:1px solid var(--hairline);
+  border-radius:var(--radius-card); overflow:hidden; margin:0 0 8px;
+}
+/* hairlines are drawn per cell, so a short last row leaves no grey filler */
+.ds-swatch{background:var(--bg); padding:14px; display:grid; gap:4px; letter-spacing:0; text-align:left;
+  box-shadow:0 0 0 1px var(--hairline)}
+.ds-swatch__chip{
+  display:block; height:64px; margin-bottom:8px; border-radius:3px;
+  background:var(--sw); box-shadow:inset 0 0 0 1px var(--hairline);
+}
+.ds-swatch b{font-size:13px; font-weight:500; font-family:ui-monospace,"SF Mono",Menlo,monospace}
+.ds-swatch small{font-size:11px; color:var(--ink-2); font-variant-numeric:tabular-nums}
+.ds-swatch em{font-style:normal; font-size:12px; line-height:1.4; color:var(--ink-2)}
+/* the dark set previews on its own ground so the light chips are visible */
+.ds-swatches--dark{border-color:rgba(255,255,255,.12)}
+.ds-swatches--dark .ds-swatch{background:#0a0a0a; color:#fff; box-shadow:0 0 0 1px rgba(255,255,255,.12)}
+.ds-swatches--dark .ds-swatch small,
+.ds-swatches--dark .ds-swatch em{color:#6f6f6f}
+.ds-swatches--dark .ds-swatch__chip{box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+
+/* type specimens */
+.ds-type{border-top:1px solid var(--hairline); margin:40px 0 8px}
+.ds-type__row{
+  display:grid; grid-template-columns:220px 1fr; gap:32px; align-items:baseline;
+  padding:22px 0; border-bottom:1px solid var(--hairline); text-align:left;
+}
+.ds-type__meta{display:grid; gap:3px; letter-spacing:0; align-self:start}
+.ds-type__meta b{font-size:13px; font-weight:500; font-family:ui-monospace,"SF Mono",Menlo,monospace}
+.ds-type__meta small{font-size:11px; color:var(--ink-2); font-variant-numeric:tabular-nums}
+.ds-type__spec{font-weight:500; letter-spacing:var(--tracking-tight); line-height:1.1; overflow-wrap:anywhere}
+.ds-type__spec--body{font-size:16px; line-height:1.65; letter-spacing:0; color:var(--ink-2); max-width:62ch}
+.ds-type__spec--micro{font-size:var(--fs-micro); letter-spacing:0; color:var(--ink-2); font-variant-numeric:tabular-nums}
+
+/* spacing scale */
+.ds-scale{display:grid; gap:10px; align-content:start}
+.ds-scale .ds-note{margin:0 0 8px}
+.ds-scale__row{display:grid; grid-template-columns:28px 1fr; gap:12px; align-items:center}
+.ds-scale__row small{font-size:11px; letter-spacing:0; color:var(--ink-2); font-variant-numeric:tabular-nums; text-align:right}
+.ds-scale__row span{display:block; height:var(--w); width:var(--w); background:var(--accent); border-radius:1px}
+
+/* easing curve */
+.ds-motion{display:grid; grid-template-columns:120px 1fr; gap:24px; align-items:start; letter-spacing:0; text-align:left}
+.ds-motion svg{width:120px; height:120px; overflow:visible}
+.ds-motion__axis{stroke:var(--ink-3); stroke-width:1; fill:none}
+.ds-motion__curve{stroke:var(--ink); stroke-width:2.5; fill:none; stroke-linecap:round}
+.ds-motion__dot{fill:var(--accent)}
+.ds-motion b{display:block; font-size:14px; font-weight:500; margin-bottom:8px; font-family:ui-monospace,"SF Mono",Menlo,monospace}
+.ds-motion small{display:block; font-size:14px; line-height:1.55; color:var(--ink-2)}
+
+/* live component stage */
+.ds-demo{
+  display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:center;
+  padding:40px 28px; margin:24px 0 0;
+  border:1px solid var(--hairline); border-radius:var(--radius-card);
+  background:color-mix(in srgb, var(--ink) 2.5%, var(--bg));
+}
+.ds-demo .ds-note{flex:0 0 100%; max-width:none; text-align:center; margin:8px 0 0}
+.ds-demo--dark{background:var(--surface); color:var(--on-dark)}
+.ds-demo--stack{flex-direction:column; align-items:flex-start; gap:12px; text-align:left}
+.ds-demo--stack .eyebrow{margin:0}
+.ds-demo--stack .ds-note{text-align:left; margin:0}
+
+.ds-comp{padding:40px 0; border-top:1px solid var(--hairline)}
+.ds-comp:last-child{border-bottom:1px solid var(--hairline)}
+.ds-comp__head{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:8px}
+.ds-comp__head h3{margin:0; font-size:var(--fs-h3); font-weight:500; letter-spacing:var(--tracking-tight)}
+.ds-comp .table{margin:24px 0 0}
+.ds-comp .table .num, .ds-comp .table th.num{text-align:right; font-variant-numeric:tabular-nums}
+.ds-comp .checklist{margin-top:24px}
+.ds-comp .ds-grid{margin:24px 0 0}
+.ds-comp > .ds-note{margin-top:16px}
+
+@media (max-width:860px){
+  .ds-grid--2, .ds-grid--3{grid-template-columns:1fr}
+  .ds-type__row{grid-template-columns:1fr; gap:10px}
+  .ds-motion{grid-template-columns:1fr}
+}
+
+/* "Know more" under the design-system title */
+.pagehead__cta{margin-top:28px}

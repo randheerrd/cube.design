@@ -1,0 +1,646 @@
+/* ============================================================
+   DOCS SHELL  (docs.html)
+   Documentation-site structure: header, side nav, content
+   column, on-this-page rail, footer. Built on the site tokens.
+   ============================================================ */
+:root{
+  --docs-header: 56px;
+  --docs-nav: 256px;
+  --docs-toc: 200px;
+  --docs-nav-bg: color-mix(in srgb, var(--ink) 4%, var(--bg));
+  /* This page's own accent system — independent of the handbook's orange.
+     Blue for links/active state, red for the danger variant, precise
+     square corners on demo buttons: all borrowed from the reference
+     guidelines page this layout follows. */
+  --docs-link: #0f62fe;
+  --docs-link-hover: #0353e9;
+  --docs-danger: #da1e28;
+  --docs-danger-hover: #ba1b23;
+  --docs-secondary: #393939;
+  --docs-secondary-hover: #4c4c4c;
+}
+:root[data-theme="dark"]{
+  --docs-link: #4589ff;
+  --docs-link-hover: #6ea6ff;
+  --docs-danger: #ff8389;
+  --docs-danger-hover: #ffb3b8;
+  --docs-secondary: #6f6f6f;
+  --docs-secondary-hover: #8a8a8a;
+}
+
+/* The handbook chrome is replaced by the docs shell. Matches every docs
+   page's body class ("page-docs", "page-docs-tooltips", ...) by prefix, so
+   a new component page needs no edit here. */
+body[class^="page-docs"] .topbar, body[class^="page-docs"] .menu, body[class^="page-docs"] .ruler,
+body[class^="page-docs"] > .footer{display:none}
+body[class^="page-docs"]{letter-spacing:0}
+body[class^="page-docs"] > main{display:contents}
+
+/* The handbook's dot field (site.js "Dot field", or its static CSS fallback
+   in site.css) is a marketing-page flourish. Behind a documentation page's
+   dense body copy and data tables it just reads as noise, so docs pages get
+   a plain, solid page background instead — no dots, reactive or static.
+   Scoped by class prefix so a new component page needs no edit here. */
+body[class^="page-docs"] .dots{display:none}
+body[class^="page-docs"],
+:root.has-dots body[class^="page-docs"]{background-image:none !important}
+
+.docs{min-height:100vh; padding-top:var(--docs-header)}
+
+/* ---- header ---- */
+.docs-header{
+  position:fixed; top:0; left:0; right:0; z-index:50;
+  height:var(--docs-header); min-height:var(--docs-header); max-height:var(--docs-header);
+  display:flex; align-items:center; gap:24px; padding:0 16px 0 0; overflow:hidden;
+  background:var(--bg); border-bottom:1px solid var(--hairline);
+}
+.docs-header > *{flex-shrink:0}
+.docs-header__back{
+  display:flex; align-items:center; gap:6px; align-self:stretch; flex:none;
+  padding:0 18px; font-size:14px; font-weight:500; letter-spacing:0; color:var(--ink-2);
+  border-right:1px solid var(--hairline);
+}
+.docs-header__back:hover{color:var(--ink); background:var(--docs-nav-bg)}
+.docs-header__back svg{width:16px; height:16px; flex:none}
+.docs-header__menu{
+  display:none; width:var(--docs-header); height:var(--docs-header);
+  border:0; background:none; color:var(--ink); cursor:pointer; place-items:center;
+}
+.docs-header__menu svg{width:22px; height:22px}
+.docs-header__brand{
+  width:var(--docs-nav); flex:none; padding-left:24px;
+  font-size:15px; letter-spacing:0; color:var(--ink);
+}
+.docs-header__brand b{font-weight:600}
+.docs-header__search{
+  flex:1; max-width:480px; height:36px; display:flex; align-items:center; gap:10px;
+  padding:0 12px; border:1px solid var(--hairline); border-radius:var(--radius-card);
+  background:var(--docs-nav-bg); color:var(--ink-2);
+}
+.docs-header__search svg{width:16px; height:16px; flex:none}
+.docs-header__search input{
+  flex:1; min-width:0; border:0; background:none; outline:0; color:var(--ink);
+  font:inherit; font-size:14px;
+}
+.docs-header__links{margin-left:auto; display:flex; align-items:center; gap:4px}
+.docs-header__links a{
+  padding:8px 12px; border-radius:var(--radius-card); font-size:14px; color:var(--ink-2);
+}
+.docs-header__links a:hover{color:var(--ink); background:var(--docs-nav-bg)}
+
+/* ---- left nav ---- */
+.docs-nav{
+  position:fixed; top:var(--docs-header); bottom:0; left:0; z-index:40;
+  width:var(--docs-nav); overflow-y:auto; padding:16px 0 40px;
+  background:var(--docs-nav-bg); border-right:1px solid var(--hairline);
+}
+.docs-nav details{border-bottom:1px solid var(--hairline)}
+.docs-nav summary{
+  list-style:none; cursor:pointer; user-select:none;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:12px 24px; font-size:14px; font-weight:500; color:var(--ink);
+}
+.docs-nav summary::-webkit-details-marker{display:none}
+.docs-nav summary::after{
+  content:""; width:8px; height:8px; border-right:1.5px solid currentColor;
+  border-bottom:1.5px solid currentColor; transform:rotate(45deg); opacity:.6;
+  transition:transform .2s ease;
+}
+.docs-nav details[open] summary::after{transform:rotate(225deg)}
+.docs-nav ul{list-style:none; margin:0; padding:0 0 8px}
+.docs-nav li a{
+  display:block; padding:8px 24px 8px 40px; font-size:14px; color:var(--ink-2);
+  border-left:2px solid transparent;
+}
+.docs-nav li a:hover{color:var(--ink); background:color-mix(in srgb, var(--ink) 5%, transparent)}
+.docs-nav li a[aria-current="page"]{
+  color:var(--ink); font-weight:500; border-left-color:var(--docs-link);
+  background:color-mix(in srgb, var(--ink) 6%, transparent);
+}
+.docs-nav li a[aria-disabled="true"]{color:var(--ink-3); pointer-events:none; cursor:default}
+.docs-nav li a[aria-disabled="true"] small{
+  margin-left:6px; font-size:10px; font-weight:500; letter-spacing:.04em;
+  text-transform:uppercase; opacity:.7;
+}
+.docs-scrim{display:none}
+
+/* ---- body: content + rail ---- */
+.docs-body{
+  margin-left:var(--docs-nav); padding:0 48px;
+}
+.docs-split{display:grid; grid-template-columns:minmax(0,1fr) var(--docs-toc); gap:48px}
+.docs-main{min-width:0; padding:0 0 96px; max-width:760px}
+
+.docs-title__crumb{margin:0 0 12px; font-size:13px}
+.docs-title__crumb a{color:var(--docs-link)}
+.docs-title__head{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin:0 0 24px}
+.docs-title h1{
+  margin:0; font-size:clamp(32px,4vw,44px); font-weight:600; line-height:1.15;
+  letter-spacing:0; color:var(--ink);
+}
+.docs-badge{
+  display:inline-flex; align-items:center; height:22px; padding:0 10px;
+  border-radius:11px; font-size:12px; font-weight:500; letter-spacing:0;
+  background:color-mix(in srgb, var(--ink) 8%, var(--bg)); color:var(--ink-2);
+}
+.docs-title__desc{margin:0; font-size:18px; line-height:1.55; letter-spacing:0; color:var(--ink-2); max-width:64ch}
+.docs-meta{margin:0; font-size:14px; letter-spacing:0; color:var(--ink-2)}
+
+.docs-tabs{
+  display:flex; gap:0; margin:40px 0 40px; border-bottom:1px solid var(--hairline);
+  overflow-x:auto;
+}
+.docs-tabs a{
+  padding:12px 16px; font-size:14px; color:var(--ink-2); white-space:nowrap;
+  border-bottom:2px solid transparent; margin-bottom:-1px;
+}
+.docs-tabs a:hover{color:var(--ink)}
+.docs-tabs a[aria-selected="true"]{color:var(--ink); font-weight:600; border-bottom-color:var(--docs-link)}
+/* A tab that leaves the page (Code, to Storybook) gets a small external-link
+   glyph and opens in a new tab rather than taking over aria-selected — it's
+   a way out of the doc, not another panel of it. */
+.docs-tabs a[target="_blank"]{display:inline-flex; align-items:center; gap:5px}
+.docs-tabs a[target="_blank"] svg{width:12px; height:12px; flex:none; opacity:.65}
+.docs-tabs a[target="_blank"]:hover svg{opacity:1}
+/* A tab not written yet (Accessibility) is locked rather than live: a
+   lock glyph sits ahead of its label and it takes neither hover nor
+   click, the same "not yet" treatment as a Soon item in the side nav. */
+.docs-tabs a[aria-disabled="true"]{
+  display:inline-flex; align-items:center; gap:6px;
+  color:var(--ink-3); pointer-events:none; cursor:default;
+}
+.docs-tabs a[aria-disabled="true"] svg{width:13px; height:13px; flex:none; opacity:.75}
+
+.docs-content section{padding-bottom:16px; margin-bottom:40px}
+.docs-content h2{
+  margin:0 0 20px; padding-top:24px; font-size:26px; font-weight:600; line-height:1.25;
+  letter-spacing:0; scroll-margin-top:calc(var(--docs-header) + 24px);
+  border-top:1px solid var(--hairline); padding-top:40px;
+}
+.docs-content section:first-of-type h2{border-top:0; padding-top:0}
+.docs-content h3{margin:32px 0 12px; font-size:18px; font-weight:600; letter-spacing:0}
+
+/* A section heading with a supporting link (e.g. "View in Figma") docked
+   to its right, on the same baseline. */
+.docs-section-head{display:flex; align-items:flex-end; justify-content:space-between; gap:16px; flex-wrap:wrap}
+.docs-section-head h2{flex:1 1 auto}
+.docs-figma-link{
+  display:inline-flex; align-items:center; gap:6px; flex:none; margin-bottom:20px;
+  padding:6px 12px; border:1px solid var(--hairline); border-radius:999px;
+  font-size:13px; font-weight:500; color:var(--ink-2); white-space:nowrap;
+}
+.docs-figma-link:hover{color:var(--docs-link); border-color:var(--docs-link)}
+.docs-figma-link svg{width:14px; height:14px; flex:none}
+.docs-content p{margin:0 0 16px; font-size:16px; line-height:1.65; letter-spacing:0; color:var(--ink-2); max-width:68ch}
+.docs-content ul{margin:0 0 16px; padding-left:20px}
+.docs-content li{margin:0 0 8px; font-size:16px; line-height:1.6; color:var(--ink-2)}
+.docs-content li::marker{color:var(--ink-3)}
+.docs-content a:not(.btn-accent):not(.headcta){color:var(--docs-link); border-bottom:1px solid transparent}
+.docs-content a:not(.btn-accent):not(.headcta):hover{border-bottom-color:currentColor}
+.docs-content code{
+  font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:.88em;
+  background:var(--docs-nav-bg); padding:1px 5px; border-radius:3px; color:var(--ink);
+}
+.docs-code{
+  margin:0 0 16px; padding:16px 20px; border:1px solid var(--hairline); border-radius:var(--radius-card);
+  background:var(--docs-nav-bg); overflow-x:auto;
+}
+.docs-code code{
+  background:none; padding:0; font-size:13px; line-height:1.6; color:var(--ink); white-space:pre;
+}
+
+.docs-demo{
+  display:flex; flex-wrap:wrap; gap:16px; align-items:center;
+  padding:48px 32px; border:1px solid var(--hairline); border-radius:var(--radius-card);
+  background:var(--docs-nav-bg);
+}
+.docs-table{width:100%; border-collapse:collapse; margin:16px 0 24px; font-size:14px}
+.docs-table th,.docs-table td{text-align:left; padding:12px 16px; border-bottom:1px solid var(--hairline); vertical-align:top}
+.docs-table th{font-weight:500; color:var(--ink); background:var(--docs-nav-bg)}
+.docs-table td{color:var(--ink-2); line-height:1.55}
+.docs-table td code{white-space:nowrap}
+
+/* Typography scale tables: the sample cell renders in the real product
+   typeface at the exact spec of that row, so a developer can see and copy
+   the value in the same place. */
+.type-table td:first-child{white-space:nowrap}
+.type-table .type-sample{
+  margin:0; font-family:'DM Sans',var(--font),sans-serif; color:var(--ink);
+  white-space:nowrap;
+}
+
+/* ---- color scales (docs-colors) ---- */
+.color-group{margin:0 0 28px}
+.color-group__head{display:flex; align-items:center; gap:10px; margin:0 0 6px; flex-wrap:wrap}
+.color-group__head h3{margin:0; font-size:16px}
+.color-group__usage{margin:0 0 10px; font-size:14px; line-height:1.5; color:var(--ink-2)}
+.color-matrix{width:100%; border-collapse:collapse; margin:16px 0 24px; font-size:13px; table-layout:fixed}
+.color-matrix th,.color-matrix td{padding:8px 6px; border-bottom:1px solid var(--hairline); text-align:center; vertical-align:middle}
+.color-matrix th{font-weight:500; color:var(--ink-2); background:var(--docs-nav-bg); font-size:11px}
+.color-matrix td:first-child,.color-matrix th:first-child{
+  width:110px; text-align:left; font-weight:500; color:var(--ink); white-space:nowrap; padding-left:12px;
+}
+.color-swatch{display:flex; flex-direction:column; align-items:center; gap:4px}
+.color-swatch__fill{width:100%; height:30px; border-radius:5px; border:1px solid var(--hairline)}
+.color-swatch__hex{font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:9.5px; color:var(--ink-3); letter-spacing:0}
+.color-matrix td[data-base="true"] .color-swatch__fill{border:2px solid var(--ink); box-shadow:0 0 0 1px var(--bg)}
+.color-legend{display:flex; align-items:center; gap:6px; font-size:12px; color:var(--ink-2); margin:0 0 16px}
+.color-legend .color-swatch__fill{width:16px; height:16px; margin:0}
+
+/* Platform semantics: a name column instead of a shade matrix — one primary
+   swatch per row, not the full 50-950 scale (these exist for badges/legends,
+   not as a UI palette to build from). */
+.platform-table td.platform-swatch{width:64px}
+.platform-table .color-swatch__fill{height:36px; width:64px}
+
+/* A white opacity scale is invisible against the page's own white background,
+   so it renders on a dark bed instead — the same "over dark" context the
+   Neutrals story in Storybook uses. */
+.color-bed--dark{
+  padding:12px 8px 4px; border-radius:var(--radius-card); background:#1e1e1e; margin:0 0 24px;
+}
+.color-bed--dark .color-matrix{margin:0}
+.color-bed--dark .color-matrix th{background:#2a2a2a; color:rgba(255,255,255,.7)}
+.color-bed--dark .color-matrix th:first-child,.color-bed--dark .color-matrix td:first-child{color:#fff}
+.color-bed--dark .color-matrix td{border-bottom-color:rgba(255,255,255,.12)}
+.color-bed--dark .color-swatch__fill{border-color:rgba(255,255,255,.25)}
+.color-bed--dark .color-swatch__hex{color:rgba(255,255,255,.55)}
+
+/* ---- on this page ---- */
+.docs-toc{
+  position:sticky; top:calc(var(--docs-header) + 48px); align-self:start;
+  padding:0 0 0 16px; border-left:1px solid var(--hairline); margin-top:48px;
+}
+.docs-toc__title{margin:0 0 12px; font-size:12px; font-weight:500; color:var(--ink-2); text-transform:uppercase; letter-spacing:.04em}
+.docs-toc ul{list-style:none; margin:0; padding:0}
+.docs-toc li a{
+  display:block; padding:6px 0 6px 12px; margin-left:-17px; font-size:14px; color:var(--ink-2);
+  border-left:2px solid transparent;
+}
+.docs-toc li a:hover{color:var(--ink)}
+.docs-toc li a[aria-current="true"]{color:var(--ink); border-left-color:var(--docs-link)}
+
+/* ---- footer ---- */
+.docs-footer{
+  margin-left:var(--docs-nav); padding:48px 48px 32px;
+  background:var(--surface); color:var(--on-dark);
+}
+.docs-footer__cols{display:grid; grid-template-columns:2fr 1fr 1fr; gap:32px; max-width:1120px; margin-bottom:48px}
+.docs-footer h4{margin:0 0 12px; font-size:14px; font-weight:500}
+.docs-footer p{margin:0; font-size:14px; line-height:1.6; opacity:.7; max-width:40ch}
+.docs-footer a{display:block; padding:4px 0; font-size:14px; opacity:.7}
+.docs-footer a:hover{opacity:1}
+.docs-footer__legal{font-size:12px; opacity:.5}
+
+/* ---- demo buttons ----
+   Carbon's own shape: square corners, not the handbook's pill. These
+   classes exist only to illustrate the variants on this page — they are
+   not part of Cube's own component set. */
+.demo-btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  height:48px; padding:0 16px; border-radius:0; border:1px solid transparent;
+  font-size:14px; font-weight:400; letter-spacing:0; cursor:pointer;
+  transition:background-color .11s cubic-bezier(.2,0,.38,.9);
+}
+.demo-btn--primary{background:var(--docs-link); color:#fff}
+.demo-btn--primary:hover{background:var(--docs-link-hover)}
+.demo-btn--secondary{background:var(--docs-secondary); color:#fff}
+.demo-btn--secondary:hover{background:var(--docs-secondary-hover)}
+.demo-btn--tertiary{background:transparent; border-color:var(--docs-link); color:var(--docs-link)}
+.demo-btn--tertiary:hover{background:var(--docs-link); color:#fff}
+.demo-btn--ghost{background:transparent; color:var(--docs-link); padding:0 8px; height:auto}
+.demo-btn--ghost:hover{background:color-mix(in srgb, var(--docs-link) 10%, transparent)}
+.demo-btn--danger{background:var(--docs-danger); color:#fff}
+.demo-btn--danger:hover{background:var(--docs-danger-hover)}
+.demo-btn--danger-tertiary{background:transparent; border-color:var(--docs-danger); color:var(--docs-danger)}
+.demo-btn--danger-ghost{background:transparent; color:var(--docs-danger); padding:0 8px; height:auto}
+.demo-btn--icon{width:48px; padding:0}
+.demo-btn__group{display:flex; flex-wrap:wrap; gap:1px}
+.docs-demo__caption{flex:0 0 100%; margin:16px 0 0; font-size:13px; letter-spacing:0; color:var(--ink-2)}
+
+/* ---- do / don't ---- */
+.docs-dodont{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:16px 0 32px}
+.docs-dodont__card{border:1px solid var(--hairline); border-radius:var(--radius-card); overflow:hidden}
+.docs-dodont__head{
+  display:flex; align-items:center; gap:8px; padding:10px 16px; font-size:13px;
+  font-weight:600; letter-spacing:0;
+}
+.docs-dodont__head svg{width:16px; height:16px; flex:none}
+.docs-dodont__card--do .docs-dodont__head{background:color-mix(in srgb, #24a148 12%, var(--bg)); color:#24a148}
+.docs-dodont__card--dont .docs-dodont__head{background:color-mix(in srgb, var(--docs-danger) 12%, var(--bg)); color:var(--docs-danger)}
+.docs-dodont__stage{
+  display:flex; align-items:center; justify-content:center; gap:12px; min-height:120px;
+  padding:20px; background:var(--docs-nav-bg);
+}
+.docs-dodont__cap{margin:0; padding:14px 16px; font-size:13px; letter-spacing:0; line-height:1.5; color:var(--ink-2)}
+@media (max-width:680px){.docs-dodont{grid-template-columns:1fr}}
+
+/* ---- anatomy ---- */
+.docs-anatomy{
+  position:relative;
+  display:flex; flex-direction:column; align-items:center; gap:24px;
+  padding:48px 24px; border:1px solid var(--hairline); border-radius:var(--radius-card);
+  background:var(--docs-nav-bg); margin:16px 0 24px;
+}
+/* Redline-style annotation, drawn by script (real coordinates, not CSS
+   alone): a numbered marker sits in the margin beside the component, a
+   thin curved leader runs to a small target dot at the component's own
+   edge, at the height of the part being called out. The card's opaque
+   fill (position:relative + z-index:1, set on .tt-hover/.tt-card above)
+   naturally clips the inner half of each target dot, so it reads as
+   sitting right on the border rather than floating on top of content. */
+.docs-anatomy__lines{position:absolute; inset:0; width:100%; height:100%; pointer-events:none}
+.docs-anatomy__lines .docs-anatomy__leader{stroke:var(--ink-2); stroke-width:1; fill:none}
+.docs-anatomy__lines .docs-anatomy__target{fill:#fff; stroke:#262626; stroke-width:1.4}
+.docs-anatomy__lines .docs-anatomy__target-dot{fill:#262626}
+.docs-anatomy__lines .docs-anatomy__badge{fill:#262626}
+.docs-anatomy__lines .docs-anatomy__badge-n{
+  fill:#fff; font-size:11px; font-weight:700; font-family:var(--font);
+  text-anchor:middle; dominant-baseline:central;
+}
+.docs-anatomy__legend{position:relative; z-index:1; display:flex; flex-wrap:wrap; gap:12px; justify-content:center}
+.docs-anatomy__legend li{
+  display:flex; align-items:center; gap:8px; font-size:13px; letter-spacing:0; color:var(--ink-2);
+  list-style:none; margin:0;
+}
+.docs-anatomy__n{
+  display:inline-grid; place-items:center; width:18px; height:18px; border-radius:50%;
+  background:#262626; color:#fff; font-size:11px; font-weight:600; flex:none;
+}
+
+/* ---- specifications: color swatch + state tables ---- */
+.docs-swatch-row{display:flex; align-items:center; gap:10px}
+.docs-swatch-row__chip{
+  width:20px; height:20px; border-radius:4px; flex:none;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.14), 0 0 0 1px var(--hairline);
+}
+.docs-swatch-row code{white-space:nowrap}
+
+/* ---- tooltip: Standard Hover Tooltip ----
+   Rendered permanently open for illustration — in product a tooltip only
+   shows on hover or keyboard focus of its anchor. Colors are the design's
+   own dark-surface tokens, fixed regardless of site theme: a tooltip is
+   always a dark card, on both a light and a dark page. */
+.tt-hover{
+  position:relative; z-index:1;
+  display:inline-flex; align-items:flex-start; gap:4px; max-width:260px;
+  padding:6px 8px; border-radius:6px; background:#101214; color:#fff;
+}
+.tt-hover--fixed{width:240px}
+.tt-hover__icon{flex:none; width:14px; height:14px; margin-top:1px; color:#fff}
+.tt-hover__body{display:flex; flex-direction:column; gap:6px; min-width:0}
+.tt-hover__title{display:block; margin:0; font-size:12px; font-weight:500; letter-spacing:0; color:#fff}
+.tt-hover__text{display:block; font-size:12px; line-height:1.4; letter-spacing:0; color:#dbdfe4}
+.tt-hover:not(.tt-hover--fixed) .tt-hover__text{white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.tt-hover--fixed .tt-hover__text{white-space:normal}
+.tt-hover__btn{
+  align-self:flex-start; padding:0; border:0; background:none; cursor:pointer;
+  font-size:12px; font-weight:600; letter-spacing:0; color:#e3e7ea;
+}
+.tt-hover__btn:hover{color:#fff}
+
+/* ---- tooltip: Standard Trendline Tooltip + derived templates ----
+   header / table / footer, all optional. This is the shared card every
+   derived template (Platform-Trendline, SLA-Trendline, RCA, Geo-Intelligence,
+   ...) is assembled from. */
+.tt-card{
+  position:relative; z-index:1;
+  display:inline-flex; flex-direction:column; min-width:160px;
+  background:#1c1e1f; border:1px solid #363e45; border-radius:8px;
+  overflow:hidden; color:#fff;
+}
+.tt-card__header{
+  display:flex; align-items:baseline; gap:8px; padding:6px 10px;
+  border-bottom:1px solid #363e45; white-space:nowrap;
+}
+.tt-card__title{margin:0; font-size:12px; font-weight:700; letter-spacing:0}
+.tt-card__subtitle{margin:0; font-size:10px; font-weight:500; letter-spacing:0; color:#bfc5cf}
+.tt-card__table{display:table; width:100%; border-collapse:collapse}
+.tt-row{display:table-row}
+.tt-cell{
+  display:table-cell; padding:6px 10px; font-size:10px; letter-spacing:0;
+  border-bottom:1px solid #363e45; border-right:1px solid #363e45;
+  white-space:nowrap; vertical-align:middle;
+}
+.tt-row:last-child .tt-cell{border-bottom:0}
+.tt-cell:last-child{border-right:0}
+.tt-cell--head{font-weight:500; color:#bfc5cf}
+.tt-cell--right{text-align:right}
+.tt-cell--right .tt-value, .tt-cell--right .tt-delta{margin-left:4px}
+.tt-value{font-weight:600; color:#f5f5f8}
+.tt-legend{display:inline-block; width:8px; height:8px; margin-right:4px; border-radius:2px; vertical-align:middle}
+.tt-delta{font-weight:600; font-size:10px}
+.tt-delta--pos{color:#5ab57a}
+.tt-delta--neg{color:#e34d4d}
+.tt-card__footer{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:8px 10px; border-top:1px solid #363e45;
+}
+.tt-card__footer-info{margin:0; font-size:10px; font-style:italic; letter-spacing:0; color:#bfc5cf}
+.tt-card__btn{
+  flex:none; padding:0; border:0; background:none; cursor:pointer;
+  font-size:10px; font-weight:600; letter-spacing:0; color:#e3e7ea;
+}
+.tt-card__btn:hover{color:#fff}
+
+/* ---- live demo: metric label + info-icon trigger ----
+   The only place on this page a tooltip actually opens on hover/focus
+   rather than sitting permanently open for illustration — this is what a
+   person using the product actually sees. */
+.tt-trigger{position:relative; display:inline-flex; align-items:center; gap:6px}
+.tt-trigger__label{font-size:14px; letter-spacing:0; color:var(--ink)}
+.tt-trigger__icon{
+  display:inline-grid; place-items:center; width:18px; height:18px; padding:0;
+  border:0; border-radius:50%; background:none; color:var(--ink-2); cursor:help;
+}
+.tt-trigger__icon svg{width:15px; height:15px}
+.tt-trigger__icon:hover, .tt-trigger__icon:focus-visible{color:var(--docs-link)}
+.tt-trigger .tt-hover, .tt-trigger .tt-card{
+  position:absolute; left:50%; bottom:calc(100% + 10px); transform:translate(-50%,4px);
+  opacity:0; visibility:hidden; pointer-events:none; z-index:5;
+  transition:opacity .14s ease, transform .14s ease, visibility 0s linear .14s;
+}
+.tt-trigger:hover .tt-hover, .tt-trigger:focus-within .tt-hover,
+.tt-trigger:hover .tt-card, .tt-trigger:focus-within .tt-card{
+  opacity:1; visibility:visible; transform:translate(-50%,0);
+  transition:opacity .14s ease, transform .14s ease;
+}
+/* caret pointing from the popped tooltip back down at its trigger */
+.tt-trigger .tt-hover::after, .tt-trigger .tt-card::after{
+  content:""; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+  border:5px solid transparent; border-top-color:#101214;
+}
+.tt-trigger .tt-card::after{border-top-color:#1c1e1f}
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
+/* ---- inline note ---- */
+.docs-note{
+  display:flex; gap:12px; padding:16px; margin:16px 0 24px;
+  border-left:3px solid var(--docs-link); background:var(--docs-nav-bg);
+  border-radius:0 var(--radius-card) var(--radius-card) 0;
+}
+.docs-note svg{width:18px; height:18px; flex:none; margin-top:1px; color:var(--docs-link)}
+.docs-note p{margin:0; font-size:14px; line-height:1.55; letter-spacing:0; color:var(--ink)}
+
+/* ---- responsive ---- */
+@media (max-width:1200px){
+  .docs-body{grid-template-columns:1fr}
+  .docs-toc{display:none}
+}
+@media (max-width:860px){
+  .docs-header{gap:12px}
+  .docs-header__back{padding:0 14px}
+  .docs-header__back span{display:none}
+  .docs-header__menu{display:grid}
+  .docs-header__brand{width:auto; padding-left:0}
+  .docs-header__search{display:none}
+  .docs-header__links a{display:none}
+  .docs-nav{transform:translateX(-100%); transition:transform .3s cubic-bezier(.22,1,.36,1); z-index:60}
+  .docs.nav-open .docs-nav{transform:none}
+  .docs.nav-open .docs-scrim{display:block; position:fixed; inset:0; z-index:55; background:rgba(0,0,0,.4)}
+  .docs-body, .docs-footer{margin-left:0; padding-left:var(--gutter); padding-right:var(--gutter)}
+  .docs-footer__cols{grid-template-columns:1fr}
+}
+
+/* ============================================================
+   FIGMA BUTTON SET  (.fbtn)
+   The real Cube button, read from the Figma "Button" section:
+   3 component sets — Action (Core / Destructive / Supportive),
+   Neutral (light + dark), Accent (8 colours). Every axis is a
+   data attribute so a single element can show any of the ~2,600
+   variants. Radius 8px, DM Sans Semibold, no square corners.
+   ============================================================ */
+.fbtn{
+  --c:#025be5; --ch:#0148b8; --cp:#013a94; --on:#fff;
+  --h:40px; --fs:14px; --ic:16px; --p:14px; --g:8px;
+  display:inline-flex; align-items:center; justify-content:center; gap:var(--g);
+  height:var(--h); padding:0 var(--p); border-radius:8px; border:1px solid transparent;
+  font-family:'DM Sans',var(--font-body,inherit),sans-serif; font-weight:600; font-size:var(--fs); line-height:1;
+  letter-spacing:0; white-space:nowrap; cursor:pointer; color:var(--on); background:var(--c);
+  transition:background-color .12s ease,border-color .12s ease,color .12s ease;
+}
+.fbtn svg{width:var(--ic); height:var(--ic); flex:none}
+.fbtn[data-family="destructive"]{--c:#d92d20; --ch:#b42318; --cp:#912018}
+.fbtn[data-family="supportive"]{--c:#2f9e5b; --ch:#25804a; --cp:#1c633a}
+.fbtn[data-family="neutral"]{--c:#16181d; --ch:#33373f; --cp:#4b505a}
+.fbtn[data-family="neutral"][data-mode="dark"]{--c:#f4f5f7; --ch:#d9dce1; --cp:#bfc3ca; --on:#16181d}
+.fbtn[data-color="pink"]{--c:#e5487f; --ch:#c93468; --cp:#a82756}
+.fbtn[data-color="purple"]{--c:#7c4dff; --ch:#6538e6; --cp:#5229c4}
+.fbtn[data-color="orange"]{--c:#e8741a; --ch:#c75f0e; --cp:#a34c08}
+.fbtn[data-color="light-blue"]{--c:#1e9bd8; --ch:#1580b6; --cp:#0f6591}
+.fbtn[data-color="bronze-green"]{--c:#7a8b3a; --ch:#66762d; --cp:#536023}
+.fbtn[data-color="green"]{--c:#2f9e5b; --ch:#25804a; --cp:#1c633a}
+.fbtn[data-color="blue"]{--c:#2f6df0; --ch:#2456c9; --cp:#1b42a0}
+.fbtn[data-color="steel-blue"]{--c:#5b7c99; --ch:#496580; --cp:#3a5068}
+
+/* sizes: heights are Default / Comfortable from the Figma sets */
+.fbtn[data-size="large"]{--h:36px; --fs:14px; --ic:16px; --p:14px; --g:8px}
+.fbtn[data-size="large"][data-density="comfortable"]{--h:40px}
+.fbtn[data-size="medium"]{--h:28px; --fs:12px; --ic:14px; --p:12px; --g:6px}
+.fbtn[data-size="medium"][data-density="comfortable"]{--h:32px}
+.fbtn[data-size="small"]{--h:20px; --fs:10px; --ic:12px; --p:8px; --g:4px}
+.fbtn[data-size="small"][data-density="comfortable"]{--h:24px}
+.fbtn[data-size="tiny"]{--h:16px; --fs:10px; --ic:12px; --p:6px; --g:4px}
+.fbtn[data-density="fit"]{padding:0}
+
+/* emphasis */
+.fbtn[data-variant="outlined"]{background:transparent; border-color:var(--c); color:var(--c)}
+.fbtn[data-variant="dashed"]{background:transparent; border:1px dashed var(--c); color:var(--c)}
+.fbtn[data-variant="naked"]{background:transparent; color:var(--c)}
+.fbtn[data-variant="naked"][data-family="neutral"][data-mode="dark"],
+.fbtn[data-variant="outlined"][data-family="neutral"][data-mode="dark"],
+.fbtn[data-variant="dashed"][data-family="neutral"][data-mode="dark"]{color:var(--c)}
+
+/* shape */
+.fbtn[data-round="yes"]{border-radius:999px}
+.fbtn[data-icononly="yes"]{width:var(--h); padding:0}
+.fbtn[data-icononly="yes"] .fbtn__label,.fbtn[data-icononly="yes"] .fbtn__suffix{display:none}
+
+/* states — forced via data-state, and real :hover / :active for live use */
+.fbtn[data-variant="filled"]:hover,.fbtn[data-variant="filled"][data-state="hover"]{background:var(--ch)}
+.fbtn[data-variant="filled"]:active,.fbtn[data-variant="filled"][data-state="pressed"]{background:var(--cp)}
+.fbtn:not([data-variant="filled"]):hover,.fbtn:not([data-variant="filled"])[data-state="hover"]{background:color-mix(in srgb,var(--c) 10%,transparent)}
+.fbtn:not([data-variant="filled"]):active,.fbtn:not([data-variant="filled"])[data-state="pressed"]{background:color-mix(in srgb,var(--c) 18%,transparent)}
+.fbtn:focus-visible{outline:2px solid var(--c); outline-offset:2px}
+.fbtn:disabled,.fbtn[data-state="disabled"]{cursor:not-allowed; pointer-events:none;
+  background:#e6e8ec; color:#9aa0aa; border-color:transparent}
+.fbtn[data-variant="outlined"]:disabled,.fbtn[data-variant="outlined"][data-state="disabled"],
+.fbtn[data-variant="dashed"]:disabled,.fbtn[data-variant="dashed"][data-state="disabled"]{background:transparent; border-color:#c9cdd4}
+.fbtn[data-variant="naked"]:disabled,.fbtn[data-variant="naked"][data-state="disabled"]{background:transparent}
+.docs-stage--dark{background:#101114; border-radius:8px}
+.docs-stage--dark .fbtn[data-state="disabled"],.docs-stage--dark .fbtn:disabled{background:#2a2c31; color:#6b7078}
+.docs-stage--dark .fbtn[data-variant="outlined"][data-state="disabled"],.docs-stage--dark .fbtn[data-variant="dashed"][data-state="disabled"],
+.docs-stage--dark .fbtn[data-variant="naked"][data-state="disabled"]{background:transparent; border-color:#3a3d43}
+
+/* variant index cards (Guidelines)
+   Each card carries data-family so its accent dot, hover border and stage
+   tint pick up that family's own color — a Destructive card reads as red
+   throughout, not just on its sample buttons. */
+.fb-index{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:16px; margin:16px 0 32px}
+.fb-card{
+  display:flex; flex-direction:column; gap:14px; padding:20px;
+  border:1px solid color-mix(in srgb, var(--ink) 14%, transparent); border-radius:var(--radius-card);
+  color:inherit; text-decoration:none; background:var(--bg);
+  transition:border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+.fb-card:hover{
+  border-color:var(--fb-c, var(--docs-link));
+  box-shadow:0 6px 20px rgba(0,0,0,.07); transform:translateY(-2px);
+}
+.fb-card__head{display:flex; align-items:center; gap:8px}
+.fb-card__dot{width:8px; height:8px; border-radius:50%; background:var(--fb-c, var(--docs-link)); flex:none}
+.fb-card h3{margin:0; font-size:16px; font-weight:600; color:var(--ink)}
+.fb-card p{margin:0; font-size:13px; line-height:1.5; color:var(--ink-2)}
+.fb-card__stage{
+  display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px;
+  align-items:center; justify-items:start; min-height:44px;
+  padding:14px; border-radius:calc(var(--radius-card) - 4px);
+  background:color-mix(in srgb, var(--fb-c, var(--ink)) 6%, var(--docs-nav-bg));
+}
+.fb-card__count{font-size:12px; color:var(--ink-3)}
+.fb-card[data-family="core"]{--fb-c:#025be5}
+.fb-card[data-family="destructive"]{--fb-c:#d92d20}
+.fb-card[data-family="supportive"]{--fb-c:#2f9e5b}
+.fb-card[data-family="neutral"]{--fb-c:#6b7078}
+.fb-card[data-family="accent"]{--fb-c:#7c4dff}
+
+/* specifications: playground + matrix */
+.fb-play{display:grid; grid-template-columns:minmax(0,280px) minmax(0,1fr); border:1px solid var(--hairline); border-radius:var(--radius-card); overflow:hidden; margin:16px 0 32px}
+.fb-play__controls{display:grid; gap:12px; padding:20px; border-right:1px solid var(--hairline); align-content:start}
+.fb-play__controls label{display:grid; gap:4px; font-size:12px; color:var(--ink-2)}
+.fb-play__controls select{height:32px; border:1px solid var(--hairline); border-radius:6px; background:var(--bg); color:var(--ink); padding:0 8px; font:inherit; font-size:13px}
+.fb-play__controls .fb-play__row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.fb-play__view{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; padding:40px 24px; min-height:260px}
+.fb-play__view.is-dark{background:#101114}
+.fb-play__name{font-family:var(--font-mono,monospace); font-size:12px; color:var(--ink-2); text-align:center; max-width:52ch}
+.fb-play__view.is-dark .fb-play__name{color:#9aa0aa}
+.fb-filters{display:flex; flex-wrap:wrap; gap:8px; margin:16px 0}
+.fb-filters button{height:32px; padding:0 14px; border:1px solid var(--hairline); border-radius:999px; background:transparent; color:var(--ink); font:inherit; font-size:13px; cursor:pointer}
+.fb-filters button[aria-pressed="true"]{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+.fb-matrix{overflow-x:auto; border:1px solid var(--hairline); border-radius:var(--radius-card); margin:16px 0 32px}
+.fb-matrix table{border-collapse:collapse; min-width:100%}
+.fb-matrix th,.fb-matrix td{padding:12px 16px; border-bottom:1px solid var(--hairline); text-align:left; vertical-align:middle; font-size:12px; white-space:nowrap}
+.fb-matrix thead th{position:sticky; top:0; background:var(--docs-nav-bg); color:var(--ink-2); font-weight:500}
+.fb-matrix tbody th{color:var(--ink-2); font-weight:500}
+.fb-matrix tr:last-child td,.fb-matrix tr:last-child th{border-bottom:0}
+.fb-matrix--dark td,.fb-matrix--dark tbody th{background:#101114; color:#c9cdd4; border-color:#26282d}
+@media (max-width:820px){.fb-play{grid-template-columns:1fr}.fb-play__controls{border-right:0; border-bottom:1px solid var(--hairline)}}
+.fb-play__controls [hidden]{display:none}
+
+/* ---- page heading: title + description left, resources right ---- */
+.docs-top{display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:48px; align-items:end; padding:64px 0 0}
+.docs-title h1{font-size:clamp(40px,5vw,60px); font-weight:400; line-height:1.1}
+.docs-badge{background:color-mix(in srgb, var(--docs-link) 16%, var(--bg)); color:var(--docs-link)}
+.docs-title__desc{font-size:20px; line-height:1.5; color:var(--ink); max-width:760px}
+.docs-res{display:grid; gap:4px; justify-items:start; padding-bottom:4px}
+.docs-res__icon svg{width:24px; height:24px; color:var(--ink)}
+.docs-res__title{margin:8px 0 12px; font-size:15px; font-weight:600; color:var(--ink)}
+.docs-res a{display:inline-flex; align-items:center; gap:10px; padding:6px 0; font-size:14px; color:var(--docs-link)}
+.docs-res a:hover{text-decoration:underline}
+.docs-res a svg{width:16px; height:16px; flex:none}
+.docs-toc{top:calc(var(--docs-header) + 24px)}
+@media (max-width:1200px){.docs-split{grid-template-columns:1fr}}
+@media (max-width:760px){.docs-top{grid-template-columns:1fr; gap:24px; padding-top:40px}}

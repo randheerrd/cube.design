@@ -60,6 +60,24 @@ PAGES = [
      "Frame, Explore, Decide, Build, Learn — and what closes each gate."),
     ("craft",      "Craft Bar",  "Craft Bar — Cube.Design",
      "The quality bar every screen clears before it ships."),
+    ("system",     "Design System", "Design System — Cube.Design",
+     "Tokens, type, motion and components — the Cube design system, documented."),
+    ("docs",       "Docs",       "Documentation — Cube Design System",
+     "Reference documentation for the Cube design system: foundations, components, patterns."),
+    ("docs-buttons-specifications", "Button specs", "Button specifications — Cube Design System",
+     "Every property, size, state and colour of the Cube Button, with a variant explorer."),
+    ("docs-colors", "Color", "Color — Cube Design System",
+     "The Cube color system — Semantic, Accent, Brand, Neutral and Platform scales — and when to reach for each one."),
+    ("docs-colors-specifications", "Color specs", "Color specifications — Cube Design System",
+     "Every color scale's shade steps, hex values and token name, plus the raw tokens."),
+    ("docs-typography", "Typography", "Typography — Cube Design System",
+     "The Cube type scale — Heading, Body and Small — and when to reach for each one."),
+    ("docs-typography-specifications", "Typography specs", "Typography specifications — Cube Design System",
+     "Every type style's family, weight, size, line-height and letter-spacing, plus the raw tokens."),
+    ("docs-tooltips", "Tooltips", "Tooltips — Cube Design System",
+     "Tooltip guidelines, anatomy, placement and accessibility for the Cube design system."),
+    ("docs-tooltips-specifications", "Tooltip specs", "Tooltip specifications — Cube Design System",
+     "Color, state, typography and dimension values for the Tooltip component."),
     ("team",       "Join the team", "Team & Open Roles — Cube.Design",
      "How the design team is shaped, what we screen for, and what is open."),
     ("internal",   "Internal",   "Internal — Cube.Design",
@@ -69,7 +87,9 @@ PAGES = [
 # Built, but kept out of the menu. "internal" is reached through the footer
 # login; "craft" is referenced from Process; "team" has its own button in the
 # top bar, so it does not need a second entry in the drop-down.
-HIDDEN = {"internal", "craft", "team"}
+HIDDEN = {"internal", "craft", "team", "docs", "docs-tooltips", "docs-tooltips-specifications",
+          "docs-buttons-specifications", "docs-typography", "docs-typography-specifications",
+          "docs-colors", "docs-colors-specifications"}
 
 # Guarded by INTERNAL_PASSWORD rather than SITE_PASSWORD.
 INTERNAL_PAGES = {"internal"}
@@ -88,6 +108,13 @@ DARK = {"philosophy", "principles", "process"}
 # frame labels, selection boxes, comment pins, stamps.
 STUDIO = {"index"}
 
+# The design-system reference. Its own shell — header, side nav, content,
+# on-this-page rail, footer — in the manner of a documentation site. The
+# handbook chrome (pill, rulers, footer) is hidden by docs.css.
+DOCS = {"docs", "docs-tooltips", "docs-tooltips-specifications", "docs-buttons-specifications",
+        "docs-typography", "docs-typography-specifications",
+        "docs-colors", "docs-colors-specifications"}
+
 
 EDITION_HEAD = (
     '<link href="https://fonts.googleapis.com/css2'
@@ -95,6 +122,15 @@ EDITION_HEAD = (
     '<link rel="stylesheet" href="assets/css/edition.css?v={v}">'
 )
 STUDIO_HEAD = '<link rel="stylesheet" href="assets/css/studio.css?v={v}">'
+# The product's own typeface (DM Sans) — the button demos and the type-scale
+# samples on the Typography page both render in it, rather than silently
+# falling back to the docs shell's own General Sans.
+DOCS_HEAD = (
+    '<link href="https://fonts.googleapis.com/css2'
+    '?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"'
+    ' rel="stylesheet">\n'
+    '<link rel="stylesheet" href="assets/css/docs.css?v={v}">'
+)
 EDITION_JS = '<script src="assets/js/edition.js?v={v}"></script>'
 
 
@@ -134,7 +170,7 @@ def asset_version():
     h = hashlib.sha256()
     for rel in ("css/site.css", "js/site.js",
                 "css/edition.css", "js/edition.js",
-                "css/studio.css"):
+                "css/studio.css", "css/docs.css"):
         h.update((ROOT / "assets" / rel).read_bytes())
     return h.hexdigest()[:8]
 
@@ -189,7 +225,8 @@ def build():
                 .replace("{{THEME}}", page_theme(slug))
                 .replace("{{EDITION_HEAD}}",
                          (EDITION_HEAD.format(v=version) if slug in EDITION else "")
-                         + ("\n" + STUDIO_HEAD.format(v=version) if slug in STUDIO else ""))
+                         + ("\n" + STUDIO_HEAD.format(v=version) if slug in STUDIO else "")
+                         + ("\n" + DOCS_HEAD.format(v=version) if slug in DOCS else ""))
                 .replace("{{EDITION_JS}}",
                          EDITION_JS.format(v=version) if slug in EDITION else "")
                 .replace("{{ASSET_V}}", version)
