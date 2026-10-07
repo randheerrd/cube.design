@@ -1,0 +1,258 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a aria-current="true" href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html">Popup</a></li>
+        <li><a href="docs-overlays.html">Right Overlays</a></li>
+        <li class="docs-nav__group"><span class="docs-nav__parent">Selections</span>
+          <ul class="docs-nav__sub">
+            <li><a href="docs-selection.html">Selection-group</a></li>
+            <li><a href="docs-segmented.html">Segmented-controls</a></li>
+            <li><a href="docs-checkbox.html">Checkbox</a></li>
+            <li><a href="docs-radio.html" aria-current="page">Radio</a></li>
+          </ul>
+        </li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Radio</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">A radio lets people pick exactly one option from a small set. Use <strong>Radio-inline</strong> in forms and menus and <strong>Radio-chip</strong> for prominent choices. The <a href="docs-radio-specifications.html">Specifications tab</a> lists every value.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-radio.html" role="tab">Guidelines</a>
+        <a href="docs-radio-specifications.html" role="tab" aria-selected="true">Specifications</a>
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
+          Code
+          <span class="sr-only">(not in Storybook yet)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec">
+
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>All values in px.</p>
+          <h3>Radio control</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Size 14</th><th>Size 16</th><th>Notes</th></tr></thead><tbody><tr><td>Frame</td><td>14 &times; 14</td><td>16 &times; 16</td><td>Fixed</td></tr><tr><td>Circle</td><td>12 &times; 12</td><td>14 &times; 14</td><td>Inset 1</td></tr><tr><td>Ring, unselected</td><td>0.96</td><td>1.12</td><td>A filled ring, not a stroke</td></tr><tr><td>Ring, selected</td><td>3.36 (hole 5.28)</td><td>3.92 (hole 6.16)</td><td>The centre is knocked out</td></tr><tr><td>Pairs with label</td><td>12 / 16</td><td>14 / 18</td><td></td></tr><tr><td>Used in</td><td>Medium inline and chip</td><td>Large inline and chip</td><td></td></tr></tbody></table></div>
+          <h3>Radio-inline</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Medium</th><th>Large</th><th>Notes</th></tr></thead><tbody><tr><td>Height</td><td>16</td><td>18</td><td>Equals the label line-height</td></tr><tr><td>Control</td><td>14</td><td>16</td><td></td></tr><tr><td>Gap between items</td><td>4</td><td>6</td><td></td></tr><tr><td>Label</td><td>12 / 16 Medium, letter-spacing 0.1</td><td>14 / 18 Medium</td><td>SemiBold when selected</td></tr><tr><td>Gap label to info</td><td>2</td><td>2</td><td></td></tr><tr><td>Prefix icon</td><td>14</td><td>16</td><td></td></tr><tr><td>Info icon</td><td>14</td><td>14</td><td></td></tr><tr><td>Platform logo</td><td>20, radius 4</td><td>20, radius 4</td><td>Taller than the row</td></tr><tr><td>Pro tag / Lock</td><td>16 / 14</td><td>16 / 14</td><td></td></tr><tr><td>Corner radius (hover area)</td><td>6</td><td>6</td><td></td></tr><tr><td>Gap between rows in a group</td><td>8</td><td>12</td><td>Vertical stack</td></tr></tbody></table></div>
+          <h3>Radio-chip</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Medium</th><th>Large</th><th>Large, Description</th></tr></thead><tbody><tr><td>Height</td><td>28</td><td>32</td><td>54</td></tr><tr><td>Padding (H / V)</td><td>8 / 0</td><td>10 / 0</td><td>10 / 8</td></tr><tr><td>Gap between items</td><td>4</td><td>6</td><td>6 (label to description 4)</td></tr><tr><td>Corner radius</td><td>6</td><td>8</td><td>8</td></tr><tr><td>Border</td><td>1 inside</td><td>1 inside</td><td>1 inside</td></tr><tr><td>Control</td><td>14</td><td>16</td><td>16, top-aligned, 1px offset</td></tr><tr><td>Label</td><td>12 / 16 Medium</td><td>14 / 18 Medium</td><td>14 / 18 Medium</td></tr><tr><td>Description</td><td>&mdash;</td><td>&mdash;</td><td>12 / 16 Regular</td></tr><tr><td>Colour legend</td><td>10, radius 2</td><td>12, radius 3</td><td>&mdash;</td></tr><tr><td>Recommended</td><td>&mdash;</td><td>&mdash;</td><td>Pill, padding 3 / 6, 10 SemiBold</td></tr><tr><td>Count badge</td><td>Pill, padding 1 / 4, 9 / 12 SemiBold</td><td>Same</td><td>Same</td></tr><tr><td>Gap between chips</td><td>8</td><td>8</td><td>12</td></tr></tbody></table></div>
+        </section>
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <h3>Radio control</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>State</th><th>Ring</th><th>Centre</th></tr></thead><tbody><tr><td>Default</td><td>Secondary-text/700 <span class="msg-sw" style="background:#586473"></span>#586473</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td></tr><tr><td>Hover</td><td>Secondary-text/900 <span class="msg-sw" style="background:#363e45"></span>#363e45</td><td>Secondary-text/50 <span class="msg-sw" style="background:#f5f5f8"></span>#f5f5f8</td></tr><tr><td>Selected</td><td>Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5</td><td>Knocked out</td></tr><tr><td>Disabled</td><td>Disabled/400 <span class="msg-sw" style="background:#b5b5b5"></span>#b5b5b5</td><td>Disabled/50 <span class="msg-sw" style="background:#fafafa"></span>#fafafa</td></tr><tr><td>Selected, disabled</td><td>Disabled/400 <span class="msg-sw" style="background:#b5b5b5"></span>#b5b5b5, thick</td><td>Knocked out</td></tr></tbody></table></div>
+          <h3>Radio-inline label</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>State</th><th>Colour</th><th>Weight</th></tr></thead><tbody><tr><td>Default</td><td>Secondary-text/700 <span class="msg-sw" style="background:#586473"></span>#586473</td><td>Medium</td></tr><tr><td>Hovered</td><td>Secondary-text/900 <span class="msg-sw" style="background:#363e45"></span>#363e45</td><td>Medium</td></tr><tr><td>Selected</td><td>Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214</td><td>SemiBold</td></tr><tr><td>Disabled</td><td>Disabled/400 <span class="msg-sw" style="background:#b5b5b5"></span>#b5b5b5</td><td>Medium (SemiBold if selected)</td></tr></tbody></table></div>
+          <h3>Radio-chip</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>State</th><th>Fill</th><th>Border</th><th>Label</th><th>Description</th></tr></thead><tbody><tr><td>Default</td><td>White <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td>Secondary-text/800 <span class="msg-sw" style="background:#404a54"></span>#404a54</td><td>Secondary-text/700 <span class="msg-sw" style="background:#586473"></span>#586473</td></tr><tr><td>Hovered</td><td>White</td><td>Secondary-text/300 <span class="msg-sw" style="background:#bfc5cf"></span>#bfc5cf</td><td>Secondary-text/900 <span class="msg-sw" style="background:#363e45"></span>#363e45</td><td>Secondary-text/900</td></tr><tr><td>Selected</td><td>Primary/100 <span class="msg-sw" style="background:#eaf1ff"></span>#eaf1ff</td><td>Primary/400 <span class="msg-sw" style="background:#74a1f8"></span>#74a1f8</td><td>Primary/700 <span class="msg-sw" style="background:#024dc6"></span>#024dc6 SemiBold</td><td>Secondary-text/900</td></tr><tr><td>Disabled</td><td>White</td><td>Disabled/100 <span class="msg-sw" style="background:#efefef"></span>#efefef</td><td>Disabled/400 <span class="msg-sw" style="background:#b5b5b5"></span>#b5b5b5</td><td>Disabled/400</td></tr><tr><td>Selected, disabled</td><td>Disabled/50 <span class="msg-sw" style="background:#fafafa"></span>#fafafa</td><td>Disabled/200 <span class="msg-sw" style="background:#e1e1e1"></span>#e1e1e1</td><td>Disabled/400 SemiBold</td><td>Disabled/400</td></tr></tbody></table></div>
+          <h3>Chip badges</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Default / Hovered</th><th>Selected</th><th>Disabled</th></tr></thead><tbody><tr><td>Count</td><td>Steel Blue/200 <span class="msg-sw" style="background:#e7eef9"></span>#e7eef9, text <span class="msg-sw" style="background:#363e45"></span>#363e45</td><td>Primary/200 <span class="msg-sw" style="background:#d4e2ff"></span>#d4e2ff, text <span class="msg-sw" style="background:#012056"></span>#012056</td><td>Disabled/100 <span class="msg-sw" style="background:#efefef"></span>#efefef, text <span class="msg-sw" style="background:#9e9e9e"></span>#9e9e9e</td></tr><tr><td>Recommended</td><td>Primary/100 <span class="msg-sw" style="background:#eaf1ff"></span>#eaf1ff, text <span class="msg-sw" style="background:#025be5"></span>#025be5</td><td>Primary/200 <span class="msg-sw" style="background:#d4e2ff"></span>#d4e2ff, text <span class="msg-sw" style="background:#025be5"></span>#025be5</td><td>Disabled/100, text Disabled/500</td></tr><tr><td>Colour legend</td><td>Accent/Purple/500 <span class="msg-sw" style="background:#9f5fd0"></span>#9f5fd0</td><td></td><td></td></tr><tr><td>Pro tag</td><td>Gradient <span class="msg-sw" style="background:#9500ff"></span>#9500ff &rarr; <span class="msg-sw" style="background:#54b0e1"></span>#54b0e1 &rarr; <span class="msg-sw" style="background:#49ffb6"></span>#49ffb6</td><td></td><td></td></tr></tbody></table></div>
+        </section>
+        <section id="properties">
+          <h2>Properties</h2>
+          <h3>Selection-control/Radio</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Size</td><td>14 | 16</td><td>required</td><td>14</td><td>14 with 12px labels, 16 with 14px labels.</td></tr><tr><td>State</td><td>Default | Hover | Selected</td><td>required</td><td>Default</td><td>“Hover” here, “Hovered” on inline and chip.</td></tr><tr><td>Disabled</td><td>No | Yes</td><td>required</td><td>No</td><td>Hover + Disabled looks like Default + Disabled.</td></tr></tbody></table></div>
+          <h3>Selection/Selection-inline/Radio-inline</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Size</td><td>Medium | Large</td><td>required</td><td>Medium</td><td>Control 14 / 16, label 12 / 14.</td></tr><tr><td>State</td><td>Default | Hovered | Selected</td><td>required</td><td>Default</td><td></td></tr><tr><td>Disabled</td><td>No | Yes</td><td>required</td><td>No</td><td></td></tr><tr><td>Label</td><td>string</td><td>required</td><td>“Radio Label”</td><td>Short, parallel wording across the group.</td></tr><tr><td>Show Prefix Icon &middot; Prefix Icon</td><td>true | false &middot; icon</td><td>optional</td><td>false &middot; Cube</td><td></td></tr><tr><td>Show Platform</td><td>true | false</td><td>optional</td><td>false</td><td>20px platform logo.</td></tr><tr><td>Show Info ℹ️</td><td>true | false</td><td>optional</td><td>false</td><td>Info icon and tooltip.</td></tr><tr><td>Pro 💎</td><td>true | false</td><td>optional</td><td>false</td><td></td></tr><tr><td>Locked 🔒</td><td>true | false</td><td>optional</td><td>false</td><td>Disabled variants only.</td></tr></tbody></table></div>
+          <h3>Selection/Selection-chip/Radio-chip</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Size</td><td>Medium | Large</td><td>required</td><td>Medium</td><td>28 / 32 tall.</td></tr><tr><td>State</td><td>Default | Hovered | Selected</td><td>required</td><td>Default</td><td></td></tr><tr><td>Disabled</td><td>No | Yes</td><td>required</td><td>No</td><td></td></tr><tr><td>Description</td><td>No | Yes</td><td>required</td><td>No</td><td>A variant; Yes exists for Large only.</td></tr><tr><td>Selection control</td><td>true | false</td><td>optional</td><td>true</td><td>false hides the radio.</td></tr><tr><td>Recommended</td><td>true | false</td><td>optional</td><td>false</td><td>Description Yes only.</td></tr><tr><td>Count</td><td>true | false</td><td>optional</td><td>false</td><td></td></tr><tr><td>Show Color Legend</td><td>true | false</td><td>optional</td><td>false</td><td>Description No only.</td></tr><tr><td>Label, Prefix Icon, Platform, Info, Pro, Locked</td><td>as Radio-inline</td><td>optional</td><td>false</td><td></td></tr></tbody></table></div>
+        </section>
+        <section id="api">
+          <h2>API and behavior</h2>
+          <p>State and Disabled are separate axes &mdash; combine them, for example Selected + Disabled. In code a radio group holds one value; Hover and Hovered come from pointer events.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Rule</th><th>Notes</th></tr></thead><tbody><tr><td>Group</td><td>One <code>name</code>, one value</td><td>Inside a <code>fieldset</code> with a <code>legend</code></td></tr><tr><td>Keyboard</td><td>Arrow keys move the selection; Space selects</td><td>Tab stops on the selected option only</td></tr><tr><td>Selection</td><td>Exactly one, pre-selected</td><td></td></tr><tr><td>Disabled</td><td>Not focusable</td><td>Tooltip with the reason</td></tr><tr><td>Focus</td><td>2px Primary/600 ring</td><td>Not in Figma</td></tr></tbody></table></div>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+          <h3>Date-range list</h3>
+          <div class="msg-stage" style="justify-content:center"><div class="rdo-g rdo-g--v" role="radiogroup"><label class="rdo rdo--inline rdo--m"><input type="radio" name="rg55" checked><span class="rdo__c" aria-hidden="true"></span><span class="rdo__row"><span class="rdo__t">Last 7 days</span></span></label><label class="rdo rdo--inline rdo--m"><input type="radio" name="rg55"><span class="rdo__c" aria-hidden="true"></span><span class="rdo__row"><span class="rdo__t">Last 30 days</span></span></label><label class="rdo rdo--inline rdo--m"><input type="radio" name="rg55"><span class="rdo__c" aria-hidden="true"></span><span class="rdo__row"><span class="rdo__t">Custom range</span></span></label></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Component</td><td>Radio-inline, Medium</td><td></td></tr><tr><td>Group</td><td>Vertical, 8px gap</td><td>One option selected at all times</td></tr><tr><td>Default selection</td><td>Last 7 days</td><td>Pre-select the most common option</td></tr></tbody></table></div>
+          <h3>View switcher (no control)</h3>
+          <div class="msg-stage" style="justify-content:center"><div class="rdo-g rdo-g--h" role="radiogroup"><label class="rdo rdo--chip rdo--m rdo--noctl"><input type="radio" name="rg56" checked><span class="rdo__c" aria-hidden="true"></span><span class="rdo__row"><span class="rdo__t">Chart</span></span></label><label class="rdo rdo--chip rdo--m rdo--noctl"><input type="radio" name="rg56"><span class="rdo__c" aria-hidden="true"></span><span class="rdo__row"><span class="rdo__t">Table</span></span></label></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Component</td><td>Radio-chip, Medium</td><td></td></tr><tr><td>Selection control</td><td>false</td><td>Hides the radio</td></tr><tr><td>Label</td><td>“Chart” / “Table”</td><td>One word each</td></tr></tbody></table></div>
+          <h3>Choice with descriptions</h3>
+          <div class="msg-stage" style="justify-content:center"><div class="rdo-g rdo-g--h rdo-g--wrap"><label class="rdo rdo--chip rdo--l rdo--desc"><input type="radio" name="rg57" checked><span class="rdo__c" aria-hidden="true"></span><span class="rdo__col"><span class="rdo__row"><span class="rdo__t">Standard</span><span class="rdo__rec">Recommended</span></span><span class="rdo__d">For most teams</span></span></label><label class="rdo rdo--chip rdo--l rdo--desc"><input type="radio" name="rg57"><span class="rdo__c" aria-hidden="true"></span><span class="rdo__col"><span class="rdo__row"><span class="rdo__t">Advanced</span></span><span class="rdo__d">More reports and alerts</span></span></label></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Component</td><td>Radio-chip, Large</td><td></td></tr><tr><td>Description</td><td>Yes</td><td>Keep it to one line</td></tr><tr><td>Recommended</td><td>true (one option)</td><td>Guides the default choice</td></tr></tbody></table></div>
+        </section>
+        <section id="related">
+          <h2>Related components</h2>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>Use it instead when</th></tr></thead><tbody><tr><td><a href="docs-checkbox.html">Checkbox</a></td><td>Several options can be chosen, or a single yes / no.</td></tr><tr><td><a href="docs-toggle.html">Toggle</a></td><td>A setting turns on or off immediately.</td></tr><tr><td><a href="docs-segmented.html">Segmented control</a></td><td>Switching between two to four views of the same content.</td></tr><tr><td><a href="docs-dropdown.html">Dropdown</a></td><td>There are eight or more options.</td></tr></tbody></table></div>
+        </section>
+        <section id="source">
+          <h2>Source</h2>
+          <p>Values come from the <strong>Radio — Documentation</strong> frames in the Cube Core Figma file (Anatomy, Property, Color Annotation, Dimensions, API, Usage Guidelines) and the live <strong>Selection-control/Radio</strong>, <strong>Radio-inline</strong> and <strong>Radio-chip</strong> components. Figma has no “How to use” frame for Radio.</p>
+          <p class="docs-note">Where Figma disagrees with itself (this site follows the component unless noted): the API gives the control’s default Size as 16; the component’s is 14. The docs say Show Color Legend has no effect, but it shows a purple square on every chip without a description. On Large Radio-inline the selected label shrinks to 12/16 &mdash; a component bug; this site keeps 14/18 as documented. The Large chip with a description is radius 6 when selected and 8 otherwise. The selected centre is knocked out, not white. Ring widths are 0.96 / 1.12 and 3.36 / 3.92, not 1 and “about 4”. The Count and Recommended colours change with state, which the Color doc leaves out. Description is a variant (Large only), not an optional toggle. The docs say to use a prefix icon or a platform logo, not both, but the component allows both. The control uses “Hover” while inline and chip use “Hovered”. There is no focus or error state.</p>
+        </section>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7171-33627" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#api">API and behavior</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#related">Related components</a></li>
+        <li><a href="#source">Source</a></li>
+        </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+})();
+</script>

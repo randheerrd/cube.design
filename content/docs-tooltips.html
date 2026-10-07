@@ -26,7 +26,7 @@
     <details open>
       <summary>Getting started</summary>
       <ul>
-        <li><a href="#">About Cube</a></li>
+        <li><a aria-current="true" href="#">About Cube</a></li>
         <li><a href="#">Designing</a></li>
         <li><a href="#">Developing</a></li>
         <li><a href="#">Contributing</a></li>
@@ -60,7 +60,14 @@
         <li><a href="docs-messages.html">Message</a></li>
         <li><a href="docs-popup.html">Popup</a></li>
         <li><a href="docs-overlays.html">Right Overlays</a></li>
-        <li><a href="docs-selection.html">Selections</a></li>
+        <li class="docs-nav__group"><span class="docs-nav__parent">Selections</span>
+          <ul class="docs-nav__sub">
+            <li><a href="docs-selection.html">Selection-group</a></li>
+            <li><a href="docs-segmented.html">Segmented-controls</a></li>
+            <li><a href="docs-checkbox.html">Checkbox</a></li>
+            <li><a href="docs-radio.html">Radio</a></li>
+          </ul>
+        </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
@@ -99,535 +106,140 @@
 
   <!-- ============ Content ============ -->
   <div class="docs-body">
-      <div class="docs-top">
+      <div class="docs-split">
+    <main class="docs-main">
       <div class="docs-title">
         <p class="docs-title__crumb"><a href="#">Components</a></p>
         <div class="docs-title__head">
           <h1>Tooltip</h1>
           <span class="docs-badge">Stable</span>
-          <span class="docs-meta">Last updated Sep 2026</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
         </div>
-        <p class="docs-title__desc">Two tooltips: a <strong>Standard Tooltip</strong> for a short line of
-          supplementary text, and a <strong>Standard Trendline Tooltip</strong> — a small dark data card built
-          from three components (header, table, footer). Everything past that point on this page is an
-          example of the Trendline tooltip's own components assembled for one dashboard situation, not a
-          separate component.</p>
-      </div>
-      <aside class="docs-res" aria-label="Resources">
-        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
-        <p class="docs-res__title">Cube Core</p>
-        <a href="https://storybook.gobblecube.ai/?path=/docs/overlays-tooltip-tooltip--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 1.5 12.6 1a.5.5 0 0 1 .53.5v13a.5.5 0 0 1-.53.5L3 14.5a.5.5 0 0 1-.5-.5V2a.5.5 0 0 1 .5-.5zm6.3 3.2c0-.2.2-.4.4-.4.3 0 .5.1.7.3l.3-.4c-.3-.3-.6-.4-1-.4-.6 0-1 .4-1 .9 0 1 1.5.8 1.5 1.2 0 .2-.2.3-.4.3-.4 0-.6-.2-.8-.4l-.4.4c.3.3.7.5 1.2.5.6 0 1-.4 1-.9 0-1-1.5-.8-1.5-1.2z"/></svg>Storybook</a>
-        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=1366-102710" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5.5 1.5h2.5v4H5.5a2 2 0 0 1 0-4zM8 1.5h2.5a2 2 0 0 1 0 4H8zM5.5 5.5H8v4H5.5a2 2 0 0 1 0-4zM8 7.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM5.5 9.5H8v2a2 2 0 1 1-2.5-1.94z"/></svg>Figma</a>
-      </aside>
+        <p class="docs-title__desc">A <strong>Standard Tooltip</strong> gives a short line of extra text; a <strong>Trendline Tooltip</strong> is a small dark card with the exact numbers behind a chart mark. The <a href="docs-tooltips-specifications.html">Specifications tab</a> lists every value.</p>
       </div>
       <div class="docs-tabs" role="tablist" aria-label="Page sections">
         <a href="docs-tooltips.html" role="tab" aria-selected="true">Guidelines</a>
         <a href="docs-tooltips-specifications.html" role="tab">Specifications</a>
-        <a href="https://storybook.gobblecube.ai/?path=/docs/overlays-tooltip-tooltip--docs" role="tab" target="_blank" rel="noopener noreferrer">
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
           Code
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7 9"/></svg>
-          <span class="sr-only">(opens Storybook in a new tab)</span>
+          <span class="sr-only">(not in Storybook yet)</span>
         </a>
         <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
-          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
           Accessibility
           <span class="sr-only">(coming soon)</span>
         </a>
       </div>
-      <div class="docs-split">
-    <main class="docs-main">
-      <article class="docs-content">
+      <article class="docs-content docs-content--inp docs-content--spec">
 
-        <!-- ============ Live demo ============ -->
-        <section id="live-demo">
-          <h2>Live demo</h2>
-          <div class="docs-demo">
-            <div class="tt-trigger">
-              <span class="tt-trigger__label">Wt. Discount %</span>
-              <button class="tt-trigger__icon" type="button" aria-describedby="live-demo-standard">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>
-                <span class="sr-only">More info on Wt. Discount %</span>
-              </button>
-              <div class="tt-hover" id="live-demo-standard" role="tooltip">
-                <span class="tt-hover__text">Discount adjusted for seasonal demand</span>
-              </div>
-            </div>
-
-            <div class="tt-trigger">
-              <span class="tt-trigger__label">Offtake</span>
-              <button class="tt-trigger__icon" type="button" aria-describedby="live-demo-trendline">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>
-                <span class="sr-only">More info on Offtake</span>
-              </button>
-              <div class="tt-card" id="live-demo-trendline" role="tooltip">
-                <div class="tt-card__header">
-                  <p class="tt-card__title">08 Apr&rsquo;26</p>
-                  <p class="tt-card__subtitle">(vs Last Day)</p>
-                </div>
-                <div class="tt-card__table" role="table">
-                  <div class="tt-row" role="row">
-                    <div class="tt-cell tt-cell--head" role="columnheader">Platform</div>
-                    <div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Offtake</div>
-                  </div>
-                  <div class="tt-row" role="row">
-                    <div class="tt-cell" role="cell"><span class="tt-legend" style="background:#3aa0ff"></span>All Platforms</div>
-                    <div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span> <span class="tt-delta tt-delta--pos">+52.3%</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <section id="at-a-glance">
+          <h2>At a glance</h2>
+          <p>A tooltip answers “what is this value?” for one mark on a chart, a row in a table, a slice of a pie or a region on a map, without the user leaving the dashboard. There are two kinds.</p>
+          <div class="bx-quick">
+            <div><h3>Standard Tooltip</h3><p>One or two lines of <strong>plain text</strong>. Labels an icon, explains a flag or spells out an abbreviation.</p></div>
+            <div><h3>Trendline Tooltip</h3><p>A small dark card with <strong>real numbers</strong>: a value, a comparison period and a change. Built from a header, a table and a footer.</p></div>
+            <div><h3>Not a tooltip</h3><p>Something to click or fill in? Use a <a href="docs-popup.html">Popup</a> or a <a href="docs-overlays.html">Right overlay</a>. A note that must stay visible? Use a <a href="docs-messages.html">Message</a>.</p></div>
           </div>
-          <p class="docs-demo__caption">Hover or focus the <b>&#9432;</b> next to a metric name — this is how a
-            tooltip actually appears in product, not floating on its own. Left: a Standard Tooltip labels one
-            metric. Right: a Standard Trendline Tooltip, the composable card every example below is assembled
-            from.</p>
+          <div class="docs-demo"><div class="tt-live" data-tt-live><div class="tt-trigger"><span class="tt-trigger__label">Wt. Discount %</span><button class="tt-trigger__icon" type="button" aria-describedby="live-demo-standard"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg><span class="sr-only">More info on Wt. Discount %</span></button><div id="live-demo-standard" role="tooltip" class="tt-hover"><span class="tt-hover__text">Discount adjusted for seasonal demand</span></div></div><div class="tt-trigger"><span class="tt-trigger__label">Offtake</span><button class="tt-trigger__icon" type="button" aria-describedby="live-demo-trendline"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg><span class="sr-only">More info on Offtake</span></button><div id="live-demo-trendline" role="tooltip" class="tt-card"><div class="tt-card__header"><p class="tt-card__title">08 Apr’26</p><p class="tt-card__subtitle">(vs Last Day)</p></div><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">Platform</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Offtake</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#3aa0ff"></span>All Platforms</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span> <span class="tt-delta tt-delta--pos">+52.3%</span></div></div></div></div></div></div>
+            <p class="docs-demo__caption">Try it: hover or focus the &#9432; next to each metric. Left, a Standard Tooltip; right, a Trendline Tooltip.</p></div>
         </section>
-
-        <!-- ============ Overview ============ -->
-        <section id="overview">
-          <h2>Overview</h2>
-          <p>A tooltip answers "what is this value" for a single mark on a chart, a row in a table, a slice of a
-            pie, or a region on a map — without a person having to leave the dashboard they are reading. It comes
-            in two families:</p>
-          <table class="docs-table">
-            <thead><tr><th>Tooltip</th><th>Purpose</th></tr></thead>
-            <tbody>
-              <tr><td>Standard Tooltip</td><td>A short line (or two) of plain text. Labels an icon, explains
-                a flag, or spells out an abbreviation — the same job a conventional tooltip does anywhere else in
-                software.</td></tr>
-              <tr><td>Standard Trendline Tooltip</td><td>A dark card built from three components — header, table
-                and footer — that carries real numbers: a value, a comparison period, and a delta.</td></tr>
-            </tbody>
-          </table>
-          <p>Seven examples cover the recurring dashboard cases so a designer never assembles a data tooltip
-            from scratch: <strong>Platform-Trendline</strong>, <strong>Metric-summary-Trendline</strong>,
-            <strong>SLA-Trendline</strong>, <strong>SLA-Pie-chart</strong>, <strong>RCA</strong>,
-            <strong>RCA-Discount-deepdive</strong> and <strong>Geo-Intelligence</strong>. Each one is just the
-            Trendline tooltip's own header, table and footer components configured for that case — not a
-            component in its own right. See <a href="#examples">Examples</a> for what each is for.</p>
-
-          <h3>When to use</h3>
-          <p>Use a Standard Tooltip to label an icon-only control or clarify a term. Use a Standard Trendline
-            Tooltip — plain, or arranged as one of the examples below — whenever a chart, table or map needs to
-            surface the exact number, comparison period and change behind a mark that is otherwise only shown
-            visually — a bar's height, a pie slice's angle, a map region's shading.</p>
-
-          <h3>When not to use</h3>
-          <p>Do not use a tooltip as the only place a number lives — the underlying value should also be
-            reachable without hovering (a legend, an export, a detail view) for anyone on touch or with a
-            screen reader. Do not use a Standard Tooltip where a number, delta or table belongs; reach for
-            a Trendline Tooltip instead so the value is legible on its own, not folded into a sentence.</p>
+        <section id="which-one">
+          <h2>Which one do I use?</h2>
+          <p>Ask whether the tooltip carries words or numbers.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Situation</th><th>Use</th></tr></thead><tbody><tr><td>Label an icon-only button or explain a term</td><td><strong>Standard Tooltip</strong>, fit content</td></tr><tr><td>Explain a flag in two lines, with a next step</td><td><strong>Standard Tooltip</strong>, fixed width, with header and action</td></tr><tr><td>Show the exact number behind a bar, point or slice</td><td><strong>Trendline Tooltip</strong></td></tr><tr><td>A common dashboard case: platforms, SLA, RCA, geography</td><td>A <a href="#examples">Trendline example</a> rather than a custom card</td></tr><tr><td>A table that needs scrolling, or a form</td><td>Not a tooltip: a <a href="docs-overlays.html">Right overlay</a> or a <a href="docs-popup.html">Popup</a></td></tr><tr><td>The only place a number appears</td><td>Not a tooltip alone: also show it in a legend, export or detail view</td></tr></tbody></table></div>
         </section>
-
-        <!-- ============ Anatomy ============ -->
         <section id="anatomy">
-          <div class="docs-section-head">
-            <h2>Anatomy</h2>
-            <a class="docs-figma-link" href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=1366-102710&t=U8nRwi0Z4WIkf2ZO-1" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-              View in Figma
-              <span class="sr-only">(opens the Tooltip anatomy frame in a new tab)</span>
-            </a>
-          </div>
-
-          <h3>Standard Tooltip</h3>
-          <div class="docs-anatomy">
-            <div class="tt-hover tt-hover--fixed">
-              <span class="tt-hover__icon" data-anatomy-point="1">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>
-              </span>
-              <span class="tt-hover__body">
-                <span class="tt-hover__title" data-anatomy-point="2">Why is this flagged?</span>
-                <span class="tt-hover__text" data-anatomy-point="3">This SKU's discount deviates more than 15% from its category
-                  median.</span>
-                <button class="tt-hover__btn" type="button" data-anatomy-point="4">View SKU</button>
-              </span>
-            </div>
-            <ul class="docs-anatomy__legend">
-              <li><span class="docs-anatomy__n" data-n="1">1</span> Icon (optional)</li>
-              <li><span class="docs-anatomy__n" data-n="2">2</span> Header (optional)</li>
-              <li><span class="docs-anatomy__n" data-n="3">3</span> Body text</li>
-              <li><span class="docs-anatomy__n" data-n="4">4</span> Action button (optional)</li>
-            </ul>
-          </div>
-
-          <h3>Standard Trendline Tooltip</h3>
-          <div class="docs-anatomy">
-            <div class="tt-card">
-              <div class="tt-card__header" data-anatomy-point="1">
-                <p class="tt-card__title">Feb &rsquo;26</p>
-                <p class="tt-card__subtitle">(vs Last month)</p>
-              </div>
-              <div class="tt-card__table" role="table">
-                <div class="tt-row" role="row">
-                  <div class="tt-cell tt-cell--head" role="columnheader" data-anatomy-point="2">Column Header</div>
-                  <div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Column Header</div>
-                </div>
-                <div class="tt-row" role="row">
-                  <div class="tt-cell" role="cell"><span class="tt-legend" style="background:#3aa0ff"></span>Cell Value</div>
-                  <div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span> <span class="tt-delta tt-delta--pos">+52.3%</span></div>
-                </div>
-              </div>
-              <div class="tt-card__footer" data-anatomy-point="3">
-                <p class="tt-card__footer-info">Information</p>
-                <button class="tt-card__btn" type="button">Button</button>
-              </div>
-            </div>
-            <ul class="docs-anatomy__legend">
-              <li><span class="docs-anatomy__n" data-n="1">1</span> Header: title + comparison period</li>
-              <li><span class="docs-anatomy__n" data-n="2">2</span> Table: column headers, cells, color legend, delta</li>
-              <li><span class="docs-anatomy__n" data-n="3">3</span> Footer: info text + action button (both optional)</li>
-            </ul>
-          </div>
-
-          <div class="docs-note">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>
-            <p>Exact padding, radius, border and color values for every part numbered above live on the
-              <a href="docs-tooltips-specifications.html">Specifications tab</a>.</p>
+          <h2>Anatomy</h2>
+          <h3>1 &middot; Standard Tooltip</h3>
+          <p>Fixed width, with the icon, header and action turned on.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,left,top,right,bottom"><div class="bx-anatomy__zoom"><span class="tt-zoom"><div class="tt-hover tt-hover--fixed" data-anatomy="1"><span class="tt-hover__icon" data-anatomy="2"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg></span><span class="tt-hover__body"><span class="tt-hover__title" data-anatomy="3">Why is this flagged?</span><span class="tt-hover__text" data-anatomy="4">This SKU’s discount deviates more than 15% from its category median.</span><button class="tt-hover__btn" type="button" tabindex="-1" data-anatomy="5">View SKU</button></span></div></span></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>#</th><th>Element</th><th>Notes</th></tr></thead><tbody><tr><td><span class="bx-n">1</span></td><td>Container</td><td>Primary-text/950 (#101214), radius 6, padding 6 / 8. Hugs its text when Multi-line is No; 240 wide when Yes.</td></tr><tr><td><span class="bx-n">2</span></td><td>Icon</td><td>Optional. 14px, #bfc5cf. 4px from the text.</td></tr><tr><td><span class="bx-n">3</span></td><td>Header</td><td>Optional. 12px Medium, white.</td></tr><tr><td><span class="bx-n">4</span></td><td>Body text</td><td>12/16 Regular, Secondary-text/200 (#dbdfe4). Keep it to one to three lines.</td></tr><tr><td><span class="bx-n">5</span></td><td>Button</td><td>Optional. A Naked Neutral button, Dark. Only for tooltips that stay open on hover; see the accessibility note.</td></tr></tbody></table></div>
+          <h3>2 &middot; Trendline Tooltip</h3>
+          <p>The header, table and footer components, all turned on.</p>
+          <div class="bx-anatomy" data-bx-anatomy="bottom,top,left,left,right,right"><div class="bx-anatomy__zoom"><span class="tt-zoom"><div class="tt-card" data-anatomy="1"><div class="tt-card__header" data-anatomy="2"><p class="tt-card__title">Header</p><p class="tt-card__subtitle">(Sub text)</p></div><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader" data-anatomy="3">Column Header</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Column Header</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell" data-anatomy="4">Cell Value</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span> <span class="tt-delta tt-delta--pos" data-anatomy="5">+52.3%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Cell Value</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span> <span class="tt-delta tt-delta--pos">+65.8%</span></div></div></div><div class="tt-card__footer" data-anatomy="6"><p class="tt-card__footer-info">Information</p><button class="tt-card__btn" type="button" tabindex="-1">Button</button></div></div></span></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>#</th><th>Element</th><th>Notes</th></tr></thead><tbody><tr><td><span class="bx-n">1</span></td><td>Container</td><td>#1c1e1f, 1px Secondary-text/900 (#363e45) border, radius 8. Hugs its columns: 118 for the first, 100 for each other.</td></tr><tr><td><span class="bx-n">2</span></td><td>Tooltip header</td><td><code>.Tooltip-header</code>: Heading (the date) and Description (“vs Last month”). Toggle <code>Show header</code>.</td></tr><tr><td><span class="bx-n">3</span></td><td>Column header</td><td><code>.Tooltip-table-cell</code>, Header: the column label, Secondary-text/300. Toggle <code>Show Column Headers</code>.</td></tr><tr><td><span class="bx-n">4</span></td><td>Table cell</td><td><code>.Tooltip-table-cell</code>, Cell: a value with an optional colour legend and delta. Rows via <code>2nd row</code> / <code>More rows</code>; columns via <code>3rd Column</code> / <code>More Columns</code>.</td></tr><tr><td><span class="bx-n">5</span></td><td>Delta</td><td>The Delta component (Dark Theme, Small) inside a value cell. Toggle <code>Show Delta</code> on the cell.</td></tr><tr><td><span class="bx-n">6</span></td><td>Tooltip footer</td><td><code>.Tooltip-footer</code>: italic info text and a Naked button, such as “Click to expand”. Off by default; toggle <code>Show Footer</code>.</td></tr></tbody></table></div>
+        </section>
+        <section id="standard">
+          <h2>Standard Tooltip options</h2>
+          <h3>Width</h3>
+<div class="bx-options bx-options--2"><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-hover"><span class="tt-hover__text">Discount adjusted for seasonal demand</span></div></div></div><div class="bx-opt__body"><h3>Fit content <small>Default</small></h3><p>Sizes to its text and never wraps. Keep it to one short phrase.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-hover tt-hover--fixed"><span class="tt-hover__text">Discount adjusted for seasonal demand and platform-specific promotional calendar this month.</span></div></div></div><div class="bx-opt__body"><h3>Fixed <small>240</small></h3><p>240 wide and wraps to two lines. Use it once the text no longer fits on one line.</p></div></div></div>
+          <h3>Add-ons</h3>
+          <p>Each is optional. Turn on only what the moment needs.</p>
+<div class="bx-options bx-options--1"><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-hover tt-hover--fixed"><span class="tt-hover__icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg></span><span class="tt-hover__body"><span class="tt-hover__text">Shown when stock is below 7 days of cover.</span></span></div></div></div><div class="bx-opt__body"><h3>Icon</h3><p>Marks the tooltip as an explanation.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-hover tt-hover--fixed"><span class="tt-hover__body"><span class="tt-hover__title">Why is this flagged?</span><span class="tt-hover__text">Discount deviates more than 15% from the category median.</span></span></div></div></div><div class="bx-opt__body"><h3>Header</h3><p>A short question or label above the text.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-hover tt-hover--fixed"><span class="tt-hover__icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg></span><span class="tt-hover__body"><span class="tt-hover__title">Why is this flagged?</span><span class="tt-hover__text">Discount deviates more than 15% from the category median.</span><button class="tt-hover__btn" type="button" tabindex="-1">View SKU</button></span></div></div></div><div class="bx-opt__body"><h3>Action</h3><p>One next step. Also make it reachable without hovering.</p></div></div></div>
+        </section>
+        <section id="trendline">
+          <h2>Trendline Tooltip options</h2>
+          <p>Three components &mdash; header, table and footer &mdash; and every example below is just these, configured differently.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>What it does</th></tr></thead><tbody><tr><td><code>Tooltip-header</code></td><td>A bold title (the date the numbers describe) and a muted sub-text (the comparison period, such as “vs Last month”). Either can be off.</td></tr><tr><td><code>Tooltip-table-cell</code></td><td>Header or Cell, aligned left or right. A cell can carry a colour legend, a value and a delta, each toggled on its own.</td></tr><tr><td><code>Tooltip-footer</code></td><td>Muted info text on the left and an optional button on the right.</td></tr></tbody></table></div>
+          <h3>Header and footer</h3>
+<div class="bx-options bx-options--1"><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__header"><p class="tt-card__title">May’26</p><p class="tt-card__subtitle">(vs Last Month)</p></div><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#3aa0ff"></span>Offtake</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span> <span class="tt-delta tt-delta--pos">+52.3%</span></div></div></div></div></div></div><div class="bx-opt__body"><h3>Header on <small>Default</small></h3><p>Names the date and what it is compared with.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#17a398"></span>Transfer Issue</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">75.5%</span></div></div></div></div></div></div><div class="bx-opt__body"><h3>Header off</h3><p>For one value that needs no date, such as a pie slice.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">City</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. OSA%</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Delhi</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div></div><div class="tt-card__footer"><p class="tt-card__footer-info">Click to expand</p></div></div></div></div><div class="bx-opt__body"><h3>Footer</h3><p>A caveat, or one next step.</p></div></div></div>
+          <h3>Cells</h3>
+<div class="bx-options bx-options--1"><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#f2b84b"></span>Blinkit</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span> <span class="tt-delta tt-delta--pos">+65.8%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#ff5b33"></span>Instamart</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span> <span class="tt-delta tt-delta--neg">-18.9%</span></div></div></div></div></div></div><div class="bx-opt__body"><h3>Legend and delta</h3><p>The legend matches the series colour; the delta has a sign and a colour.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell" role="cell">Offtake</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Runrate</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div></div></div></div></div></div><div class="bx-opt__body"><h3>Value only</h3><p>For absolute numbers that aren’t a trend, such as losses.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">Metric</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Current</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Previous</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Wt. Discount %</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">12.5%</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">17.5%</span></div></div></div></div></div></div><div class="bx-opt__body"><h3>Header row</h3><p>Labels left-aligned, numbers right-aligned so digits line up.</p></div></div></div>
+        </section>
+        <section id="usage">
+          <h2>Common layouts</h2>
+          <p>Use the Standard Tooltip for short explanations and truncated text, and the Trendline Tooltip (or one of its examples) for chart data. Place it 8px from the trigger and keep it inside the viewport.</p>
+          <div class="bx-usage bx-usage--stack">
+            <figure><div class="bx-mock"><div class="tt-kpi"><span class="tt-kpi__l">Net revenue <span class="tt-kpi__i"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg></span></span><b>₹ 3.2 Cr</b><div class="tt-kpi__tip"><div class="tt-hover tt-hover--fixed"><span class="tt-hover__body"><span class="tt-hover__title">Net revenue</span><span class="tt-hover__text">Calculated after discounts; excludes returns and cancelled orders.</span></span></div></div></div></div><figcaption><b>Info icon definition</b>Hover or focus an info icon to see the metric’s definition. Multi-line, with a header.</figcaption></figure>
+            <figure><div class="bx-mock"><div class="tt-list"><span>Tata 1mg</span><span class="is-h">Wellbeing Nutrition Pvt. L…<span class="tt-list__tip"><div class="tt-hover"><span class="tt-hover__text">Wellbeing Nutrition Private Limited</span></div></span></span><span>Bearhugs</span></div></div><figcaption><b>Truncated text</b>A single-line tooltip shows the full value when text is cut off in a table cell.</figcaption></figure>
+            <figure><div class="bx-mock"><div class="tt-chart"><div class="tt-chart__bars"><i style="height:38%"></i><i style="height:56%"></i><i style="height:44%"></i><i class=is-h style="height:78%"></i><i style="height:50%"></i><i style="height:62%"></i></div><div class="tt-chart__tip"><div class="tt-card"><div class="tt-card__header"><p class="tt-card__title">06 Apr’26</p><p class="tt-card__subtitle">(vs Last Day)</p></div><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#f2b84b"></span>Blinkit</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span> <span class="tt-delta tt-delta--pos">+65.8%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#7c3aed"></span>Zepto</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span> <span class="tt-delta tt-delta--pos">+90.1%</span></div></div></div></div></div></div></div><figcaption><b>Chart hover</b>The Trendline Tooltip follows the hovered data point, 8px from the cursor.</figcaption></figure>
           </div>
         </section>
-
-        <!-- ============ Standard Tooltip ============ -->
-        <section id="standard-hover-tooltip">
-          <h2>Standard Tooltip</h2>
-          <p>A single line of plain text by default. It can grow an icon, a header and an action button, and can
-            switch from a fit-content single line to a fixed 240px width that wraps.</p>
-
-          <h3>Fit content vs. fixed width</h3>
-          <div class="docs-demo">
-            <div class="tt-hover">
-              <span class="tt-hover__text">Discount adjusted for seasonal demand</span>
-            </div>
-            <div class="tt-hover tt-hover--fixed">
-              <span class="tt-hover__text">Discount adjusted for seasonal demand and platform-specific
-                promotional calendar this month.</span>
-            </div>
-          </div>
-          <p class="docs-demo__caption">Fit-content (left) sizes to its text and never wraps — keep it to one
-            short phrase. Fixed-width (right) is 240px and wraps up to two lines; use it once the text can no
-            longer fit on one line.</p>
-
-          <h3>With icon, header and action</h3>
-          <div class="docs-demo">
-            <div class="tt-hover tt-hover--fixed">
-              <span class="tt-hover__icon">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>
-              </span>
-              <span class="tt-hover__body">
-                <span class="tt-hover__title">Why is this flagged?</span>
-                <span class="tt-hover__text">This SKU's discount deviates more than 15% from its category
-                  median.</span>
-                <button class="tt-hover__btn" type="button">View SKU</button>
-              </span>
-            </div>
-          </div>
-          <p class="docs-demo__caption">Icon, header and action button are each independently optional — turn on
-            only what the moment needs. See the accessibility note in <a href="#universal-behaviors">Universal
-            behaviors</a> before adding the button.</p>
-        </section>
-
-        <!-- ============ Standard Trendline Tooltip ============ -->
-        <section id="standard-trendline-tooltip">
-          <h2>Standard Trendline Tooltip</h2>
-          <p>Built from three components: a header naming the metric's period, a table of one or more rows, and
-            a footer for context or a next step. Every example in the next section is these same three
-            components, configured differently — none of them add a fourth.</p>
-
-          <h3>Components</h3>
-          <table class="docs-table">
-            <thead><tr><th>Component</th><th>Role</th></tr></thead>
-            <tbody>
-              <tr><td>Tooltip-header</td><td>A bold title (the comparison date) plus a muted sub-text (the
-                comparison period, e.g. "vs Last month"). Either can be turned off.</td></tr>
-              <tr><td>Tooltip-table-cell</td><td>Header or Cell, aligned left or right. A cell can carry a color
-                legend dot, a primary value, and a delta — each independently toggled.</td></tr>
-              <tr><td>Tooltip-footer</td><td>Muted info text on the left, an optional action button on the
-                right.</td></tr>
-            </tbody>
-          </table>
-
-          <h3>Color legend and delta</h3>
-          <div class="docs-demo">
-            <div class="tt-card">
-              <div class="tt-card__table" role="table">
-                <div class="tt-row" role="row">
-                  <div class="tt-cell" role="cell"><span class="tt-legend" style="background:#3aa0ff"></span>Series label</div>
-                  <div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span> <span class="tt-delta tt-delta--pos">+52.3%</span></div>
-                </div>
-                <div class="tt-row" role="row">
-                  <div class="tt-cell" role="cell"><span class="tt-legend" style="background:#e2574c"></span>Series label</div>
-                  <div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span> <span class="tt-delta tt-delta--neg">-18.9%</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="docs-demo__caption">The legend dot always matches that row's series color on the chart it
-            annotates. A delta is set in success green for a positive change and error red for a negative one —
-            never color alone without the leading + or &minus; sign, so the reading survives color blindness and
-            grayscale printing.</p>
-        </section>
-
-        <!-- ============ Examples ============ -->
         <section id="examples">
           <h2>Examples</h2>
-          <p>Not separate components — each one below is the Standard Trendline Tooltip's own header, table and
-            footer, arranged for a dashboard situation that comes up often enough to standardize. Reach for the
-            plain Standard Trendline Tooltip only when none of these fit.</p>
-          <table class="docs-table">
-            <thead><tr><th>Example</th><th>Purpose</th></tr></thead>
-            <tbody>
-              <tr><td>Platform-Trendline</td><td>Breaks a metric down by platform (All Platforms, Blinkit,
-                Instamart, Zepto&hellip;), each row color-coded to its series.</td></tr>
-              <tr><td>Metric-summary-Trendline</td><td>One or two headline metrics for a single entity — e.g.
-                Offtake, optionally with Runrate as a second row.</td></tr>
-              <tr><td>SLA-Trendline</td><td>A list of loss or issue metrics for one day, each with its own color
-                legend, no delta.</td></tr>
-              <tr><td>SLA-Pie-chart</td><td>The minimal case: one legend dot, one label, one percentage — for a
-                single pie or donut slice.</td></tr>
-              <tr><td>RCA</td><td>A small current-vs-previous comparison table with a computed change, for a
-                root-cause metric.</td></tr>
-              <tr><td>RCA-Discount-deepdive</td><td>A wider comparison table — brand rows against several metric
-                columns — for a root-cause deep dive.</td></tr>
-              <tr><td>Geo-Intelligence</td><td>A location breakdown with three drill-down depths: city cluster,
-                locality cluster, single locality.</td></tr>
-            </tbody>
-          </table>
-
-          <h3>Platform-Trendline</h3>
-          <p>A metric broken down by platform, each row color-coded to its series on the chart.</p>
-          <div class="docs-demo">
-            <div class="tt-card">
-              <div class="tt-card__header">
-                <p class="tt-card__title">06 Apr&rsquo;26</p>
-                <p class="tt-card__subtitle">(vs Last Day)</p>
-              </div>
-              <div class="tt-card__table" role="table">
-                <div class="tt-row" role="row">
-                  <div class="tt-cell tt-cell--head" role="columnheader">Platform</div>
-                  <div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Offtake</div>
-                </div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#3aa0ff"></span>All Platforms</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span> <span class="tt-delta tt-delta--pos">+52.3%</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#f2b84b"></span>Blinkit</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span> <span class="tt-delta tt-delta--pos">+65.8%</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#ff5b33"></span>Instamart</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span> <span class="tt-delta tt-delta--neg">-18.9%</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#7c3aed"></span>Zepto</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span> <span class="tt-delta tt-delta--pos">+90.1%</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#9ca33c"></span>BB Now</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span> <span class="tt-delta tt-delta--pos">+55.4%</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#17a398"></span>FK minutes</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span> <span class="tt-delta tt-delta--pos">+55.4%</span></div></div>
-              </div>
-            </div>
-          </div>
-
-          <h3>Metric-summary-Trendline</h3>
-          <p>One headline metric, with an optional second row (Runrate) for a fuller picture of the same
-            period.</p>
-          <div class="docs-demo">
-            <div class="tt-card">
-              <div class="tt-card__header"><p class="tt-card__title">May&rsquo;26</p><p class="tt-card__subtitle">(vs Last Month)</p></div>
-              <div class="tt-card__table" role="table">
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell">Offtake</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span> <span class="tt-delta tt-delta--pos">+52.3%</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell">Runrate</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span> <span class="tt-delta tt-delta--pos">+65.8%</span></div></div>
-              </div>
-            </div>
-            <div class="tt-card">
-              <div class="tt-card__header"><p class="tt-card__title">May&rsquo;26</p><p class="tt-card__subtitle">(vs Last Month)</p></div>
-              <div class="tt-card__table" role="table">
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell">Offtake</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span> <span class="tt-delta tt-delta--pos">+52.3%</span></div></div>
-              </div>
-            </div>
-          </div>
-          <p class="docs-demo__caption">Runrate&nbsp;=&nbsp;Yes (left) adds the second row; Runrate&nbsp;=&nbsp;No
-            (right) shows Offtake alone.</p>
-
-          <h3>SLA-Trendline</h3>
-          <p>A list of loss or issue metrics for a single day — no delta, since these are read as absolute loss,
-            not a trend.</p>
-          <div class="docs-demo">
-            <div class="tt-card">
-              <div class="tt-card__header"><p class="tt-card__title">02 May&rsquo;26</p><p class="tt-card__subtitle">(vs last day)</p></div>
-              <div class="tt-card__table" role="table">
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#e2574c"></span>Total Sales Loss</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#17a398"></span>Transfer Issues</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#e34d9c"></span>Listing Issue Loss</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#5ab57a"></span>Delivery Time Issue</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#7c3aed"></span>Missing PO</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#2fbfd6"></span>Fill Rate Issue</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span></div></div>
-              </div>
-            </div>
-          </div>
-
-          <h3>SLA-Pie-chart</h3>
-          <p>The minimal case: a single legend dot, a label and a percentage, for one slice of a pie or donut
-            chart.</p>
-          <div class="docs-demo">
-            <div class="tt-card">
-              <div class="tt-card__table" role="table">
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#17a398"></span>Transfer Issue</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">75.5%</span></div></div>
-              </div>
-            </div>
-          </div>
-
-          <h3>RCA</h3>
-          <p>A compact current-vs-previous comparison for one root-cause metric.</p>
-          <div class="docs-demo">
-            <div class="tt-card">
-              <div class="tt-card__table" role="table">
-                <div class="tt-row" role="row">
-                  <div class="tt-cell tt-cell--head" role="columnheader">Metric</div>
-                  <div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Current</div>
-                  <div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Previous</div>
-                  <div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Change</div>
-                </div>
-                <div class="tt-row" role="row">
-                  <div class="tt-cell" role="cell">Wt. Discount %</div>
-                  <div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">12.5%</span></div>
-                  <div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">17.5%</span></div>
-                  <div class="tt-cell tt-cell--right" role="cell"><span class="tt-delta tt-delta--pos">+20.6%</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <h3>RCA-Discount-deepdive</h3>
-          <p>A wider comparison table for a root-cause deep dive — one row per brand, one plain value per metric
-            column. No per-metric delta: with three or more metric columns a delta on every one crowds the row
-            and stretches short headers like "ASP" far from their own column; a single "Change" column, as in
-            RCA above, is reached for instead once a delta actually matters here.</p>
-          <div class="docs-demo">
-            <div class="tt-card">
-              <div class="tt-card__table" role="table">
-                <div class="tt-row" role="row">
-                  <div class="tt-cell tt-cell--head" role="columnheader">Brand</div>
-                  <div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">ASP</div>
-                  <div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. Discount %</div>
-                  <div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. PPU (x100)</div>
-                </div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell">Tata 1mg</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell">Bearhugs</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell">Careforce</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell">Lifelong</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell">Wellbeing Nutrition</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span></div></div>
-              </div>
-            </div>
-          </div>
-          <p class="docs-demo__caption">Wide tables like this can outgrow comfortable hover reading — consider a
-            side panel or a modal once a table needs to scroll to be read.</p>
-
-          <h3>Geo-Intelligence</h3>
-          <p>A location breakdown with three drill-down depths, each one a click away from the next: a cluster of
-            cities, a cluster of localities inside one city, and a single locality.</p>
-          <div class="docs-demo">
-            <div class="tt-card">
-              <div class="tt-card__table" role="table">
-                <div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">City</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. OSA%</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">DS Listing %</div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell">Delhi</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell">Gurgaon</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell">Noida</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div></div>
-              </div>
-              <div class="tt-card__footer"><p class="tt-card__footer-info">Click to expand</p></div>
-            </div>
-            <div class="tt-card">
-              <div class="tt-card__header"><p class="tt-card__title">Pune</p></div>
-              <div class="tt-card__table" role="table">
-                <div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">Locality</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. OSA%</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">DS Listing %</div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell">Kalyani Nagar</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell">Shivaji Nagar</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div></div>
-              </div>
-              <div class="tt-card__footer"><p class="tt-card__footer-info">Click to expand</p></div>
-            </div>
-            <div class="tt-card">
-              <div class="tt-card__header"><p class="tt-card__title">Pune</p></div>
-              <div class="tt-card__table" role="table">
-                <div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">Locality</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. OSA%</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">DS Listing %</div></div>
-                <div class="tt-row" role="row"><div class="tt-cell" role="cell">Kalyani Nagar</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div>
-              </div>
-              <div class="tt-card__footer"><p class="tt-card__footer-info">Click to expand</p></div>
-            </div>
-          </div>
-          <p class="docs-demo__caption">Left to right: City cluster &rarr; Locality cluster (scoped to the
-            clicked city) &rarr; single Locality. "Click to expand" is the same interactive-content trade-off
-            called out below — treat it as a link into a drill-down view, not a true hover-only tooltip.</p>
+          <p>These aren’t separate components. Each is the Trendline Tooltip’s header, table and footer set up for a common dashboard case &mdash; start from one of them before building your own.</p>
+<div class="bx-options bx-options--1"><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__header"><p class="tt-card__title">06 Apr’26</p><p class="tt-card__subtitle">(vs Last Day)</p></div><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">Platform</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Offtake</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#3aa0ff"></span>All Platforms</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span> <span class="tt-delta tt-delta--pos">+52.3%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#f2b84b"></span>Blinkit</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span> <span class="tt-delta tt-delta--pos">+65.8%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#ff5b33"></span>Instamart</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span> <span class="tt-delta tt-delta--neg">-18.9%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#7c3aed"></span>Zepto</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span> <span class="tt-delta tt-delta--pos">+90.1%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#9ca33c"></span>BB Now</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span> <span class="tt-delta tt-delta--pos">+55.4%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#17a398"></span>FK minutes</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span> <span class="tt-delta tt-delta--pos">+55.4%</span></div></div></div></div></div></div><div class="bx-opt__body"><h3>Platform-Trendline</h3><p>A metric broken down by platform, each row colour-coded to its series.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-row-demo"><div class="tt-card"><div class="tt-card__header"><p class="tt-card__title">May’26</p><p class="tt-card__subtitle">(vs Last Month)</p></div><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell" role="cell">Offtake</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span> <span class="tt-delta tt-delta--pos">+52.3%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Runrate</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span> <span class="tt-delta tt-delta--pos">+65.8%</span></div></div></div></div><div class="tt-card"><div class="tt-card__header"><p class="tt-card__title">May’26</p><p class="tt-card__subtitle">(vs Last Month)</p></div><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell" role="cell">Offtake</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span> <span class="tt-delta tt-delta--pos">+52.3%</span></div></div></div></div></div></div></div><div class="bx-opt__body"><h3>Metric-summary-Trendline</h3><p>One headline metric; Runrate adds a second row.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__header"><p class="tt-card__title">02 May’26</p><p class="tt-card__subtitle">(vs last day)</p></div><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#e2574c"></span>Total Sales Loss</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#17a398"></span>Transfer Issues</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#e34d9c"></span>Listing Issue Loss</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#5ab57a"></span>Delivery Time Issue</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#7c3aed"></span>Missing PO</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#2fbfd6"></span>Fill Rate Issue</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span></div></div></div></div></div></div><div class="bx-opt__body"><h3>SLA-Trendline</h3><p>Loss or issue metrics for one day. No delta &mdash; these are absolute losses, not a trend.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#17a398"></span>Transfer Issue</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">75.5%</span></div></div></div></div></div></div><div class="bx-opt__body"><h3>SLA-Pie-chart</h3><p>The smallest case: one legend, one label, one percentage.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">Metric</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Current</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Previous</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Change</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Wt. Discount %</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">12.5%</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">17.5%</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-delta tt-delta--pos">+20.6%</span></div></div></div></div></div></div><div class="bx-opt__body"><h3>RCA</h3><p>Current against previous for one root-cause metric, with a change column.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">Brand</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">ASP</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. Discount %</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. PPU (x100)</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Tata 1mg</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Bearhugs</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Careforce</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Lifelong</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Wellbeing Nutrition</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span></div></div></div></div></div></div><div class="bx-opt__body"><h3>RCA-Discount-deepdive</h3><p>Brands against several metrics. No delta per metric; add one Change column if it matters.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="tt-row-demo"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">City</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. OSA%</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">DS Listing %</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Delhi</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Gurgaon</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Noida</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div></div></div><div class="tt-card__footer"><p class="tt-card__footer-info">Click to expand</p></div></div><div class="tt-card"><div class="tt-card__header"><p class="tt-card__title">Pune</p></div><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">Locality</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. OSA%</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">DS Listing %</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Kalyani Nagar</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Shivaji Nagar</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div></div></div><div class="tt-card__footer"><p class="tt-card__footer-info">Click to expand</p></div></div><div class="tt-card"><div class="tt-card__header"><p class="tt-card__title">Pune</p></div><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">Locality</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. OSA%</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">DS Listing %</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Kalyani Nagar</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div></div><div class="tt-card__footer"><p class="tt-card__footer-info">Click to expand</p></div></div></div></div></div><div class="bx-opt__body"><h3>Geo-Intelligence</h3><p>Three drill-down levels: city cluster, then localities in the clicked city, then one locality.</p></div></div></div>
         </section>
-
-        <!-- ============ Content ============ -->
+        <section id="dos-donts">
+          <h2>Do’s and don’ts</h2>
+          <p>Seven rules in three groups. The first three come from the Figma usage guidelines.</p>
+<h3>Choosing</h3><div class="docs-dodont"><div class="docs-dodont__card docs-dodont__card--do"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="tt-hover"><span class="tt-hover__text">Excludes returns and cancellations</span></div></div></div><p class="docs-dodont__cap">Keep hover tooltips to one short sentence: a label, hint or definition.</p></div><div class="docs-dodont__card docs-dodont__card--dont"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="tt-hover tt-hover--fixed"><span class="tt-hover__text">Revenue is calculated after discounts and excludes returns and cancelled orders. To change the calculation, go to Settings → Metrics, select Revenue and pick a new formula. Changes apply to all dashboards within 24 hours.</span></div></div></div><p class="docs-dodont__cap">Don’t put paragraphs or instructions in a tooltip. Move long content into the page or a popover.</p></div></div>
+<div class="docs-dodont"><div class="docs-dodont__card docs-dodont__card--do"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__header"><p class="tt-card__title">06 Apr’26</p><p class="tt-card__subtitle">(vs Last Day)</p></div><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#f2b84b"></span>Blinkit</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span> <span class="tt-delta tt-delta--pos">+65.8%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#ff5b33"></span>Instamart</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span> <span class="tt-delta tt-delta--neg">-15.9%</span></div></div></div></div></div></div><p class="docs-dodont__cap">Use the Trendline Tooltip for data: rows, right-aligned values and deltas.</p></div><div class="docs-dodont__card docs-dodont__card--dont"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="tt-hover tt-hover--fixed"><span class="tt-hover__text">Blinkit 80.5 L (+65.8%), Instamart 55.8 L (−15.9%), Zepto 39.6 L (+90.1%)</span></div></div></div><p class="docs-dodont__cap">Don’t cram numbers into a text tooltip. Values become hard to scan and compare.</p></div></div>
+<h3>Numbers</h3><div class="docs-dodont"><div class="docs-dodont__card docs-dodont__card--do"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__header"><p class="tt-card__title">May’26</p><p class="tt-card__subtitle">(vs Last Month)</p></div><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">Metric</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Value</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Offtake</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span> <span class="tt-delta tt-delta--pos">+52.3%</span></div></div></div></div></div></div><p class="docs-dodont__cap">Show the comparison period in the header whenever deltas are shown.</p></div><div class="docs-dodont__card docs-dodont__card--dont"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">Metric</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Value</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Offtake</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span> <span class="tt-delta tt-delta--pos">+52.3%</span></div></div></div></div></div></div><p class="docs-dodont__cap">Don’t hide the header when showing deltas. Users can’t tell what the change is relative to.</p></div></div>
+<div class="docs-dodont"><div class="docs-dodont__card docs-dodont__card--do"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#f2b84b"></span>Blinkit</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span> <span class="tt-delta tt-delta--pos">+65.8%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#ff5b33"></span>Instamart</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span> <span class="tt-delta tt-delta--neg">-18.9%</span></div></div></div></div></div></div><p class="docs-dodont__cap">Always lead a delta with + or &minus;. The sign carries the meaning; the colour backs it up.</p></div><div class="docs-dodont__card docs-dodont__card--dont"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#f2b84b"></span>Blinkit</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span> <span class="tt-delta tt-delta--pos">65.8%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#ff5b33"></span>Instamart</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span> <span class="tt-delta tt-delta--neg">18.9%</span></div></div></div></div></div></div><p class="docs-dodont__cap">Don’t rely on colour alone. It fails for colour-blind users and in greyscale.</p></div></div>
+<div class="docs-dodont"><div class="docs-dodont__card docs-dodont__card--do"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell" role="cell">Offtake</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Runrate</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div></div></div></div></div></div><p class="docs-dodont__cap">Use Lakh (L) and Crore (Cr), like the rest of the dashboard.</p></div><div class="docs-dodont__card docs-dodont__card--dont"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell" role="cell">Offtake</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">32,000,000</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Runrate</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">8,050,000</span></div></div></div></div></div></div><p class="docs-dodont__cap">Don’t show raw digits. Long numbers are hard to compare in a small card.</p></div></div>
+<h3>Size and access</h3><div class="docs-dodont"><div class="docs-dodont__card docs-dodont__card--do"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="420"><div class="pm-fit__in" style="width:420px;display:flex;justify-content:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">Metric</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Current</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Previous</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Change</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Wt. Discount %</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">12.5%</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">17.5%</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-delta tt-delta--pos">+20.6%</span></div></div></div></div></div></div></div></div><p class="docs-dodont__cap">Keep the table small enough to read in one glance.</p></div><div class="docs-dodont__card docs-dodont__card--dont"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="520"><div class="pm-fit__in" style="width:520px;display:flex;justify-content:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">Brand</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">ASP</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. Discount %</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. PPU (x100)</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. OSA%</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Tata 1mg</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Bearhugs</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Careforce</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Lifelong</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Wellbeing Nutrition</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Himalaya</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">12.1 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">12.1 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">12.1 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">12.1 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Dabur</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">9.8 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">9.8 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">9.8 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">9.8 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Patanjali</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">8.4 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">8.4 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">8.4 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">8.4 L</span></div></div></div></div></div></div></div></div><p class="docs-dodont__cap">Don’t put a long or wide table in a tooltip. Once it needs scrolling, use a Right overlay.</p></div></div>
+<div class="docs-dodont"><div class="docs-dodont__card docs-dodont__card--do"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="320"><div class="pm-fit__in" style="width:320px;display:flex;justify-content:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">City</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. OSA%</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">DS Listing %</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Delhi</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Gurgaon</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Noida</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div></div></div><div class="tt-card__footer"><p class="tt-card__footer-info">Click to expand</p></div></div></div></div></div></div><p class="docs-dodont__cap">Make anything clickable inside a tooltip also reachable from the anchor itself, by keyboard and touch.</p></div><div class="docs-dodont__card docs-dodont__card--dont"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="tt-hover"><span class="tt-hover__text">Click to see localities</span></div></div></div><p class="docs-dodont__cap">Don’t hide an action behind hover only. Keyboard and touch users can’t reach it.</p></div></div>
+        </section>
         <section id="content">
-          <h2>Content</h2>
-          <h3>Numbers</h3>
-          <p>Values follow the Indian numbering convention already used across the product's dashboards: Lakh
-            (<code>L</code>) and Crore (<code>Cr</code>) rather than raw digits or thousands/millions — "3.2 Cr",
-            not "32,000,000". Percentages carry one decimal place.</p>
-          <h3>Deltas</h3>
-          <p>A delta always leads with an explicit <code>+</code> or <code>&minus;</code> sign before the number,
-            in success green for a gain and error red for a loss — the sign carries the meaning, the color
-            reinforces it. Never color the number without the sign, and never the reverse.</p>
-          <h3>Header</h3>
-          <p>The header's title is the point in time the row's numbers describe (a date or a month); the
-            sub-text is the comparison period ("vs Last Day", "vs Last Month"). Keep both short enough to sit on
-            one line without wrapping.</p>
-          <h3>Footer</h3>
-          <p>Footer info text is a short, italicized note — a data-freshness caveat, a caption — never a second
-            data point. A footer button is a single clear next step ("View details", "View SKU"), not a second
-            action competing for attention.</p>
-        </section>
-
-        <!-- ============ Universal behaviors ============ -->
-        <section id="universal-behaviors">
-          <h2>Universal behaviors</h2>
-          <h3>States</h3>
+          <h2>Writing content</h2>
           <ul>
-            <li><strong>Hidden</strong> &mdash; default. Nothing is rendered until the anchor mark, row or region
-              is hovered or focused.</li>
-            <li><strong>Visible</strong> &mdash; shown immediately on hover, positioned near the pointer so it
-              never covers the mark it is describing.</li>
-            <li><strong>Dismissed</strong> &mdash; hides the instant the pointer leaves the anchor, or on
-              <kbd>Esc</kbd>.</li>
+            <li><strong>Numbers</strong> &mdash; Lakh (L) and Crore (Cr): “3.2 Cr”, not “32,000,000”. Percentages have one decimal place.</li>
+            <li><strong>Deltas</strong> &mdash; always lead with + or &minus;, in green for a gain and red for a loss. Never colour without the sign.</li>
+            <li><strong>Header</strong> &mdash; the title is the date the numbers describe; the sub-text is the comparison period (“vs Last Day”). Keep both on one line.</li>
+            <li><strong>Footer</strong> &mdash; a short italic note, such as a data-freshness caveat, never a second data point. A footer button is one clear next step (“View SKU”).</li>
+            <li><strong>Standard Tooltip</strong> &mdash; a phrase, not a paragraph. No full stop on a single phrase.</li>
           </ul>
-          <h3>Interactions</h3>
-          <p>All tooltips on this page open on hover of their anchor. A Standard Tooltip may also open on
-            keyboard focus, the same as any conventional tooltip.</p>
-          <div class="docs-note">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>
-            <p><strong>The action button and "Click to expand" are a real accessibility trade-off, not an
-              oversight.</strong> A true <code>role="tooltip"</code> must never contain interactive content —
-              nothing inside it can be focused or clicked, per WCAG 1.4.13. The moment a tooltip carries a
-              "Button" or a "Click to expand" link, it is functioning as a small hover-triggered panel, not a
-              tooltip in the strict ARIA sense, and needs its own keyboard and touch path: the same action must
-              also be reachable by focusing and activating the anchor directly (e.g. Enter opens the same
-              drill-down a click would), never left reachable only by a mouse hover.</p>
-          </div>
         </section>
-
-        <!-- ============ Modifiers ============ -->
-        <section id="modifiers">
-          <h2>Modifiers</h2>
-          <h3>Width</h3>
-          <p>A Standard Tooltip is fit-content by default and switches to a fixed 240px once its text needs
-            to wrap. The Trendline Tooltip and every example built from it size to their table's content — width
-            is not set explicitly.</p>
-          <h3>Header / footer</h3>
-          <p>On the trendline family, header and footer are each independently optional — a single-row tooltip
-            like SLA-Pie-chart carries neither.</p>
-          <h3>Alignment</h3>
-          <p>A table-cell is set to Header or Cell, and to left or right alignment, independently per column —
-            labels read left-aligned, numbers read right-aligned so the digits line up down the column.</p>
+        <section id="behavior">
+          <h2>Behavior &amp; accessibility</h2>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>What to do</th></tr></thead><tbody><tr><td>States</td><td>Hidden by default; visible on hover of the anchor; dismissed when the pointer leaves or on Esc.</td></tr><tr><td>Keyboard</td><td>A Standard Tooltip also opens when its anchor gets keyboard focus.</td></tr><tr><td>Placement</td><td>8px from the trigger or cursor, never covering the mark it describes. Flip to the other side before running off screen; keep 16px from the bottom edge.</td></tr><tr><td>Semantics</td><td><code>role="tooltip"</code>, linked to the anchor with <code>aria-describedby</code>.</td></tr><tr><td>Interactive content</td><td>A real tooltip can’t contain anything focusable (WCAG 1.4.13). If it has a button or “Click to expand”, it is a small hover panel: the same action must also work by focusing the anchor and pressing Enter, and by tap.</td></tr><tr><td>Not the only source</td><td>Every number in a tooltip must also be reachable without hovering &mdash; a legend, an export or a detail view.</td></tr></tbody></table></div>
+          <p>Every dimension, colour and type value is on the <a href="docs-tooltips-specifications.html">Specifications tab</a>.</p>
         </section>
-
       </article>
     </main>
-
-    <!-- ============ On this page ============ -->
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=1366-102710" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
     <aside class="docs-toc" aria-label="On this page">
       <p class="docs-toc__title">On this page</p>
       <ul>
-        <li><a href="#live-demo">Live demo</a></li>
-        <li><a href="#overview">Overview</a></li>
+        <li><a href="#at-a-glance" aria-current="true">At a glance</a></li>
+        <li><a href="#which-one">Which one do I use?</a></li>
         <li><a href="#anatomy">Anatomy</a></li>
-        <li><a href="#standard-hover-tooltip">Standard Tooltip</a></li>
-        <li><a href="#standard-trendline-tooltip">Standard Trendline Tooltip</a></li>
+        <li><a href="#standard">Standard Tooltip options</a></li>
+        <li><a href="#trendline">Trendline Tooltip options</a></li>
+        <li><a href="#usage">Common layouts</a></li>
         <li><a href="#examples">Examples</a></li>
-        <li><a href="#content">Content</a></li>
-        <li><a href="#universal-behaviors">Universal behaviors</a></li>
-        <li><a href="#modifiers">Modifiers</a></li>
-      </ul>
+        <li><a href="#dos-donts">Do’s and don’ts</a></li>
+        <li><a href="#content">Writing content</a></li>
+        <li><a href="#behavior">Behavior &amp; accessibility</a></li>
+        </ul>
     </aside>
+    </div>
       </div>
   </div>
 
@@ -674,75 +286,46 @@
     document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
   }
 
-  /* Anatomy annotation — redline style: a numbered marker sits in the
-     margin beside the component, connected by a curved leader to a small
-     target dot at the component's own edge, at the height of the part
-     being called out. Drawn with real coordinates so it holds up at any
-     width. */
-  var svgNS = 'http://www.w3.org/2000/svg';
-  var BADGE_R = 11, TARGET_R = 5, OFFSET = 42, MIN_GAP = 28;
-  function drawAnatomyLines(){
-    document.querySelectorAll('.docs-anatomy').forEach(function(container){
-      var prev = container.querySelector('.docs-anatomy__lines');
-      if (prev) prev.remove();
-      var points = [].slice.call(container.querySelectorAll('[data-anatomy-point]'));
-      if (!points.length) return;
-      var component = container.querySelector('.tt-hover, .tt-card');
-      if (!component) return;
-      var cRect = container.getBoundingClientRect();
-      var compRect = component.getBoundingClientRect();
-      var edgeX = compRect.left - cRect.left;
-      points.sort(function(a, b){
-        return (+a.getAttribute('data-anatomy-point')) - (+b.getAttribute('data-anatomy-point'));
+  /* Tooltip demo: the first tooltip starts open; hovering or focusing any trigger takes over. */
+  document.querySelectorAll('[data-tt-live]').forEach(function(d){
+    var ts=[].slice.call(d.querySelectorAll('.tt-trigger'));
+    if(ts[0])ts[0].classList.add('is-open');
+    ts.forEach(function(t){['mouseenter','focusin'].forEach(function(e){t.addEventListener(e,function(){ts.forEach(function(x){x.classList.toggle('is-open',x===t);});});});});
+  });
+
+  function pmFit(){document.querySelectorAll('.pm-fit').forEach(function(w){var p=w.firstElementChild,W=+w.getAttribute('data-w');p.style.zoom=1;p.style.zoom=Math.min(1,w.clientWidth/W);});}
+  pmFit(); window.addEventListener('resize',pmFit);
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
       });
-      var bx = Math.max(BADGE_R + 2, edgeX - OFFSET);
-      var prevBy = -Infinity;
-      var svg = document.createElementNS(svgNS, 'svg');
-      svg.setAttribute('class', 'docs-anatomy__lines');
-      svg.setAttribute('aria-hidden', 'true');
-      svg.setAttribute('viewBox', '0 0 ' + cRect.width + ' ' + cRect.height);
-      points.forEach(function(el){
-        var n = el.getAttribute('data-anatomy-point');
-        var r = el.getBoundingClientRect();
-        var ty = r.top + r.height / 2 - cRect.top;
-        var by = Math.max(ty, prevBy + MIN_GAP);
-        prevBy = by;
-
-        var leader = document.createElementNS(svgNS, 'path');
-        leader.setAttribute('class', 'docs-anatomy__leader');
-        var midX = (bx + BADGE_R + edgeX) / 2;
-        leader.setAttribute('d', 'M' + (bx + BADGE_R) + ',' + by + ' C' + midX + ',' + by + ' ' + midX + ',' + ty + ' ' + edgeX + ',' + ty);
-        svg.appendChild(leader);
-
-        var target = document.createElementNS(svgNS, 'circle');
-        target.setAttribute('class', 'docs-anatomy__target');
-        target.setAttribute('cx', edgeX); target.setAttribute('cy', ty); target.setAttribute('r', TARGET_R);
-        svg.appendChild(target);
-        var targetDot = document.createElementNS(svgNS, 'circle');
-        targetDot.setAttribute('class', 'docs-anatomy__target-dot');
-        targetDot.setAttribute('cx', edgeX); targetDot.setAttribute('cy', ty); targetDot.setAttribute('r', 1.6);
-        svg.appendChild(targetDot);
-
-        var badge = document.createElementNS(svgNS, 'circle');
-        badge.setAttribute('class', 'docs-anatomy__badge');
-        badge.setAttribute('cx', bx); badge.setAttribute('cy', by); badge.setAttribute('r', BADGE_R);
-        svg.appendChild(badge);
-        var label = document.createElementNS(svgNS, 'text');
-        label.setAttribute('class', 'docs-anatomy__badge-n');
-        label.setAttribute('x', bx); label.setAttribute('y', by);
-        label.textContent = n;
-        svg.appendChild(label);
-      });
-      container.insertBefore(svg, container.firstChild);
+      box.appendChild(svg);
     });
   }
-  drawAnatomyLines();
-  window.addEventListener('load', drawAnatomyLines);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(drawAnatomyLines);
-  var lineResize;
-  window.addEventListener('resize', function(){
-    clearTimeout(lineResize);
-    lineResize = setTimeout(drawAnatomyLines, 150);
-  });
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
 })();
 </script>

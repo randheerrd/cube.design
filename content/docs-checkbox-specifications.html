@@ -1,0 +1,444 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html">Popup</a></li>
+        <li><a href="docs-overlays.html">Right Overlays</a></li>
+        <li class="docs-nav__group is-active"><span class="docs-nav__parent">Selections</span>
+          <ul class="docs-nav__sub">
+            <li><a href="docs-selection.html">Selection-group</a></li>
+            <li><a href="docs-segmented.html">Segmented-controls</a></li>
+            <li><a href="docs-checkbox.html" aria-current="page">Checkbox</a></li>
+            <li><a href="docs-radio.html">Radio</a></li>
+          </ul>
+        </li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Checkbox</h1>
+          <span class="docs-badge">New</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">Lets people pick zero, one or many options from a set. The family has five
+          components: the bare Check-box control (+ accent colours), Checkbox-inline (control + label, for lists) and
+          Checkbox-chip (bordered chip, for filter bars) (+ accent colours).</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-checkbox.html" role="tab">Guidelines</a>
+        <a href="docs-checkbox-specifications.html" role="tab" aria-selected="true">Specifications</a>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/controls-checkbox--docs" role="tab" target="_blank" rel="noopener noreferrer">
+          Code
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7 9"/></svg>
+          <span class="sr-only">(opens Storybook in a new tab)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--bt docs-content--dt docs-content--cb docs-content--spec">
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>Control sizes, heights, paddings, gaps, radii and type for every checkbox component. All values in px.</p>
+          <h3>Check-box control</h3>
+          <p>Selection-control/Check-box and Check-box-accent.</p>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Size = 14</th><th>Size = 16</th><th>Check-box-accent</th></tr></thead><tbody>
+              <tr><td>Frame (container)</td><td>14 × 14</td><td>16 × 16</td><td>14 × 14 (only size)</td></tr>
+              <tr><td>Box</td><td>12 × 12</td><td>14 × 14</td><td>12 × 12</td></tr>
+              <tr><td>Inset from frame</td><td>1</td><td>1</td><td>1</td></tr>
+              <tr><td>Box radius</td><td>3.43</td><td>4</td><td>3.43</td></tr>
+              <tr><td>Outline weight (unselected)</td><td>1</td><td>1</td><td>1</td></tr>
+              <tr><td>Glyph</td><td>Check / dash, knocked out</td><td>Check / dash, knocked out</td><td>Check only (no Intermediate)</td></tr>
+              <tr><td>Pairs with label</td><td>12 / 16</td><td>14 / 18</td><td>12 / 16</td></tr>
+              <tr><td>Used in</td><td>Inline &amp; chip &mdash; Medium</td><td>Inline &amp; chip &mdash; Large</td><td>Chip-accent &mdash; Medium</td></tr>
+            </tbody></table></div>
+          <h3>Checkbox-inline</h3>
+          <p>No fill, border or padding &mdash; the row hugs its content.</p>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Medium</th><th>Large</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Height</td><td>16</td><td>18</td><td>= label line-height</td></tr>
+              <tr><td>Control size</td><td>14</td><td>16</td><td>Nested Check-box Size</td></tr>
+              <tr><td>Gap between items</td><td>4</td><td>6</td><td>Control, prefix, label, trailing tags</td></tr>
+              <tr><td>Label font / line-height</td><td>12 / 16 Medium · +0.1</td><td>14 / 18 Medium · 0</td><td>SemiBold when Selected</td></tr>
+              <tr><td>Gap label ↔ info icon</td><td>2</td><td>2</td><td></td></tr>
+              <tr><td>Prefix icon</td><td>14 × 14</td><td>16 × 16</td><td>Swap via “Prefix Icon”</td></tr>
+              <tr><td>Platform logo</td><td>20 × 20 · radius 4</td><td>20 × 20 · radius 4</td><td>Taller than the row &mdash; allow for it in lists</td></tr>
+              <tr><td>Info icon</td><td>14 × 14</td><td>14 × 14</td><td></td></tr>
+              <tr><td>Pro tag / Lock icon</td><td>16 / 14</td><td>16 / 14</td><td></td></tr>
+              <tr><td>Corner radius (hover / focus area)</td><td>6</td><td>6</td><td></td></tr>
+              <tr><td>Row spacing in a list (recommended)</td><td>8</td><td>12</td><td>Between stacked checkboxes</td></tr>
+            </tbody></table></div>
+          <h3>Checkbox-chip</h3>
+          <p>Checkbox-chip-accent uses the Medium spec (only size).</p>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Medium</th><th>Large</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Height</td><td>28</td><td>32</td><td>Fixed</td></tr>
+              <tr><td>Horizontal padding</td><td>8 / 8</td><td>10 / 10</td><td>No vertical padding &mdash; content is centred</td></tr>
+              <tr><td>Gap between items</td><td>4</td><td>6</td><td></td></tr>
+              <tr><td>Corner radius</td><td>6</td><td>8</td><td></td></tr>
+              <tr><td>Border</td><td>1</td><td>1</td><td>Colour changes with State</td></tr>
+              <tr><td>Control size</td><td>14</td><td>16</td><td></td></tr>
+              <tr><td>Label font / line-height</td><td>12 / 16 Medium · +0.1</td><td>14 / 18 Medium · 0</td><td>SemiBold when Selected</td></tr>
+              <tr><td>Color legend</td><td>10 frame · 7 dot</td><td>10 frame · 7 dot</td><td>Trailing, after label</td></tr>
+              <tr><td>Gap between chips (recommended)</td><td>8</td><td>8</td><td>Wrap to new rows with 8 row gap</td></tr>
+            </tbody></table></div>
+          <div class="docs-demo bt-ref">
+            <div class="chp-row"><label class="cbx cbx--bare cbx--14"><input type="checkbox" checked aria-label="Size 14"><span class="cbx__box" aria-hidden="true"></span></label><label class="cbx cbx--bare cbx--16"><input type="checkbox" checked aria-label="Size 16"><span class="cbx__box" aria-hidden="true"></span></label><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label><label class="cbx cbx--inline cbx--l"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label><label class="cbx cbx--chip cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label><label class="cbx cbx--chip cbx--l"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></div>
+            <p class="docs-demo__caption">Real size: Check-box 14 · 16 · Checkbox-inline Medium · Large · Checkbox-chip Medium (28) · Large (32).</p>
+          </div>
+        </section>
+
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <p>Design-token mapping per state for every checkbox component. Use these tables when building new variants or reviewing implementation.</p>
+          <h3>Check-box &mdash; enabled</h3>
+          <p>The box and glyph are one vector: the outline / fill is region 1, the glyph is region 2.</p>
+          <div class="bx-scroll"><table class="docs-table cb-tok"><thead><tr><th>Element</th><th>Default</th><th>Hovered</th><th>Selected</th><th>Intermediate</th></tr></thead><tbody>
+              <tr><td>Box outline (1px)</td><td><span class="bt-swatch" style="background:#586473"></span><code>Secondary-text/700</code></td><td><span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code></td><td>&mdash; (filled)</td><td>&mdash; (filled)</td></tr>
+              <tr><td>Box fill</td><td>&mdash; (transparent)</td><td><span class="bt-swatch" style="background:#f5f5f8"></span><code>Secondary-text/50</code></td><td><span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td><td><span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td></tr>
+              <tr><td>Check / dash glyph</td><td>&mdash;</td><td>&mdash;</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>Neutrals/White/100</code></td><td>#FFFFFF (hard-coded) ⚠</td></tr>
+            </tbody></table></div>
+          <h3>Check-box &mdash; disabled</h3>
+          <p>Hovered · Disabled uses the same tokens as Default · Disabled.</p>
+          <div class="bx-scroll"><table class="docs-table cb-tok"><thead><tr><th>Element</th><th>Default</th><th>Hovered</th><th>Selected</th><th>Intermediate</th></tr></thead><tbody>
+              <tr><td>Box outline (1px)</td><td><span class="bt-swatch" style="background:#b5b5b5"></span><code>Disabled/400</code></td><td><span class="bt-swatch" style="background:#b5b5b5"></span><code>Disabled/400</code></td><td>&mdash; (filled)</td><td>&mdash; (filled)</td></tr>
+              <tr><td>Box fill</td><td><span class="bt-swatch" style="background:#fafafa"></span><code>Disabled/50</code></td><td><span class="bt-swatch" style="background:#fafafa"></span><code>Disabled/50</code></td><td><span class="bt-swatch" style="background:#b5b5b5"></span><code>Disabled/400</code></td><td><span class="bt-swatch" style="background:#b5b5b5"></span><code>Disabled/400</code></td></tr>
+              <tr><td>Check / dash glyph</td><td>&mdash;</td><td>&mdash;</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>Neutrals/White/100</code></td><td>#FFFFFF (hard-coded) ⚠</td></tr>
+            </tbody></table></div>
+          <h3>Check-box-accent &mdash; per colour</h3>
+          <p>Only the Selected fill changes per colour; Default / Hovered / Disabled-unselected use the base Check-box tokens. The glyph is always Neutrals/White/100.</p>
+          <div class="bx-scroll"><table class="docs-table cb-tok"><thead><tr><th>Colour</th><th>Selected fill</th><th>Selected · Disabled fill</th></tr></thead><tbody>
+              <tr><td><span class="segc-sw" style="background:#cb378e;width:24px;height:16px;border-radius:4px"></span> Pink</td><td><span class="bt-swatch" style="background:#cb378e"></span><code>Accent/Pink/600</code></td><td><span class="bt-swatch" style="background:#f5a9ce"></span><code>Accent/Pink/300</code></td></tr>
+              <tr><td><span class="segc-sw" style="background:#8b37be;width:24px;height:16px;border-radius:4px"></span> Purple</td><td><span class="bt-swatch" style="background:#8b37be"></span><code>Accent/Purple/600</code></td><td><span class="bt-swatch" style="background:#cfadff"></span><code>Accent/Purple/300</code></td></tr>
+              <tr><td><span class="segc-sw" style="background:#0e9888;width:24px;height:16px;border-radius:4px"></span> Bronze Green</td><td><span class="bt-swatch" style="background:#0e9888"></span><code>Accent/Bronze/600</code></td><td><span class="bt-swatch" style="background:#99dfd7"></span><code>Accent/Bronze/300</code></td></tr>
+              <tr><td><span class="segc-sw" style="background:#009fc5;width:24px;height:16px;border-radius:4px"></span> Light Blue</td><td><span class="bt-swatch" style="background:#009fc5"></span><code>Accent/Light Blue/700</code></td><td><span class="bt-swatch" style="background:#99e1ff"></span><code>Accent/Light Blue/300</code></td></tr>
+              <tr><td><span class="segc-sw" style="background:#da4224;width:24px;height:16px;border-radius:4px"></span> Red</td><td><span class="bt-swatch" style="background:#da4224"></span><code>Accent/Red/600</code></td><td><span class="bt-swatch" style="background:#ffb5a7"></span><code>Accent/Red/300</code></td></tr>
+              <tr><td><span class="segc-sw" style="background:#e9be00;width:24px;height:16px;border-radius:4px"></span> Yellow</td><td><span class="bt-swatch" style="background:#e9be00"></span><code>Semantics/Warning/600</code></td><td><span class="bt-swatch" style="background:#ffda57"></span><code>Semantics/Warning/400</code></td></tr>
+              <tr><td><span class="segc-sw" style="background:#3f8e50;width:24px;height:16px;border-radius:4px"></span> Green</td><td><span class="bt-swatch" style="background:#3f8e50"></span><code>Accent/Green/700</code></td><td><span class="bt-swatch" style="background:#a7dfb8"></span><code>Accent/Green/300</code></td></tr>
+              <tr><td><span class="segc-sw" style="background:#ed5f00;width:24px;height:16px;border-radius:4px"></span> Orange</td><td><span class="bt-swatch" style="background:#ed5f00"></span><code>Accent/Orange/600</code></td><td><span class="bt-swatch" style="background:#ffc099"></span><code>Accent/Orange/300</code></td></tr>
+            </tbody></table></div>
+          <h3>Checkbox-inline</h3>
+          <p>The container has no fill or border &mdash; only the label and nested control change.</p>
+          <div class="bx-scroll"><table class="docs-table cb-tok"><thead><tr><th>Element</th><th>Default</th><th>Hovered</th><th>Selected</th><th>Disabled</th></tr></thead><tbody>
+              <tr><td>Label colour</td><td><span class="bt-swatch" style="background:#586473"></span><code>Secondary-text/700</code></td><td><span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code></td><td><span class="bt-swatch" style="background:#101214"></span><code>Primary-text/950</code></td><td><span class="bt-swatch" style="background:#b5b5b5"></span><code>Disabled/400</code></td></tr>
+              <tr><td>Label weight</td><td>Medium</td><td>Medium</td><td>SemiBold</td><td>Medium</td></tr>
+              <tr><td>Nested control</td><td>Check-box · Default</td><td>Check-box · Default (outline darkens)</td><td>Check-box · Selected</td><td>Check-box · Disabled</td></tr>
+              <tr><td>Prefix / info icon</td><td><span class="bt-swatch" style="background:#2d3239"></span><code>Secondary-text/950</code></td><td><span class="bt-swatch" style="background:#2d3239"></span><code>Secondary-text/950</code></td><td><span class="bt-swatch" style="background:#2d3239"></span><code>Secondary-text/950</code></td><td>Prefix <span class="bt-swatch" style="background:#b5b5b5"></span><code>Disabled/400</code> · info <code>#69778b</code> ⚠</td></tr>
+            </tbody></table></div>
+          <h3>Checkbox-chip</h3>
+          <p>Selected · Disabled: fill Disabled/50, border Disabled/200. Hovered · Disabled: border Disabled/200.</p>
+          <div class="bx-scroll"><table class="docs-table cb-tok"><thead><tr><th>Element</th><th>Default</th><th>Hovered</th><th>Selected</th><th>Disabled</th></tr></thead><tbody>
+              <tr><td>Container fill</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>Neutrals/White/100</code></td><td><span class="bt-swatch" style="background:#ffffff"></span><code>Neutrals/White/100</code></td><td><span class="bt-swatch" style="background:#eaf1ff"></span><code>Primary/100</code></td><td><span class="bt-swatch" style="background:#ffffff"></span><code>Neutrals/White/100</code></td></tr>
+              <tr><td>Container border (1px)</td><td><span class="bt-swatch" style="background:#dbdfe4"></span><code>Secondary-text/200</code></td><td><span class="bt-swatch" style="background:#bfc5cf"></span><code>Secondary-text/300</code></td><td><span class="bt-swatch" style="background:#74a1f8"></span><code>Primary/400</code></td><td><span class="bt-swatch" style="background:#efefef"></span><code>Disabled/100</code></td></tr>
+              <tr><td>Label colour</td><td><span class="bt-swatch" style="background:#586473"></span><code>Secondary-text/700</code></td><td><span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code></td><td><span class="bt-swatch" style="background:#024dc6"></span><code>Primary/700</code></td><td><span class="bt-swatch" style="background:#b5b5b5"></span><code>Disabled/400</code></td></tr>
+              <tr><td>Label weight</td><td>Medium</td><td>Medium</td><td>SemiBold</td><td>Medium</td></tr>
+              <tr><td>Color legend dot</td><td><span class="bt-swatch" style="background:#cb378e"></span><code>Accent/Pink/600</code> (override per series)</td><td>&mdash;</td><td>&mdash;</td><td>Same dot at 40% opacity</td></tr>
+            </tbody></table></div>
+          <h3>Checkbox-chip-accent</h3>
+          <p>{Accent} = the chosen Color. Unselected states are identical to Checkbox-chip. Selected: {Accent}/100 fill · /300 border · /700 SemiBold label.
+            Selected · Disabled: {Accent}/50 fill · /200 border · /400 label. Yellow uses Semantics/Warning, with a /900 label (selected) and a /700 label (disabled).</p>
+          <div class="bx-scroll"><table class="docs-table cb-tok"><thead><tr><th>Colour</th><th>Selected · fill · border · label</th><th>Selected · Disabled · fill · border · label</th></tr></thead><tbody>
+              <tr><td>Pink</td><td><span class="bt-swatch" style="background:#ffeaf3"></span><code>#ffeaf3</code> · <span class="bt-swatch" style="background:#f5a9ce"></span><code>#f5a9ce</code> · <span class="bt-swatch" style="background:#a92e76"></span><code>#a92e76</code></td><td><span class="bt-swatch" style="background:#fff5f9"></span><code>#fff5f9</code> · <span class="bt-swatch" style="background:#ffd6e7"></span><code>#ffd6e7</code> · <span class="bt-swatch" style="background:#e67cb5"></span><code>#e67cb5</code></td></tr>
+              <tr><td>Purple</td><td><span class="bt-swatch" style="background:#f3ebff"></span><code>#f3ebff</code> · <span class="bt-swatch" style="background:#cfadff"></span><code>#cfadff</code> · <span class="bt-swatch" style="background:#742e9f"></span><code>#742e9f</code></td><td><span class="bt-swatch" style="background:#faf5ff"></span><code>#faf5ff</code> · <span class="bt-swatch" style="background:#e7d6ff"></span><code>#e7d6ff</code> · <span class="bt-swatch" style="background:#b784e6"></span><code>#b784e6</code></td></tr>
+              <tr><td>Bronze Green</td><td><span class="bt-swatch" style="background:#e6f7f5"></span><code>#e6f7f5</code> · <span class="bt-swatch" style="background:#99dfd7"></span><code>#99dfd7</code> · <span class="bt-swatch" style="background:#0c7f72"></span><code>#0c7f72</code></td><td><span class="bt-swatch" style="background:#f2fbfa"></span><code>#f2fbfa</code> · <span class="bt-swatch" style="background:#ccefeb"></span><code>#ccefeb</code> · <span class="bt-swatch" style="background:#66c7be"></span><code>#66c7be</code></td></tr>
+              <tr><td>Light Blue</td><td><span class="bt-swatch" style="background:#e6f7ff"></span><code>#e6f7ff</code> · <span class="bt-swatch" style="background:#99e1ff"></span><code>#99e1ff</code> · <span class="bt-swatch" style="background:#009fc5"></span><code>#009fc5</code></td><td><span class="bt-swatch" style="background:#f2fbff"></span><code>#f2fbff</code> · <span class="bt-swatch" style="background:#ccf0ff"></span><code>#ccf0ff</code> · <span class="bt-swatch" style="background:#66d1f5"></span><code>#66d1f5</code></td></tr>
+              <tr><td>Red</td><td><span class="bt-swatch" style="background:#ffedea"></span><code>#ffedea</code> · <span class="bt-swatch" style="background:#ffb5a7"></span><code>#ffb5a7</code> · <span class="bt-swatch" style="background:#b7371e"></span><code>#b7371e</code></td><td><span class="bt-swatch" style="background:#fff7f5"></span><code>#fff7f5</code> · <span class="bt-swatch" style="background:#ffdad3"></span><code>#ffdad3</code> · <span class="bt-swatch" style="background:#f28a7b"></span><code>#f28a7b</code></td></tr>
+              <tr><td>Yellow</td><td><span class="bt-swatch" style="background:#fff5d7"></span><code>#fff5d7</code> · <span class="bt-swatch" style="background:#ffe790"></span><code>#ffe790</code> · <span class="bt-swatch" style="background:#7d6600"></span><code>#7d6600</code></td><td><span class="bt-swatch" style="background:#fff9e7"></span><code>#fff9e7</code> · <span class="bt-swatch" style="background:#ffefb6"></span><code>#ffefb6</code> · <span class="bt-swatch" style="background:#cda700"></span><code>#cda700</code></td></tr>
+              <tr><td>Green</td><td><span class="bt-swatch" style="background:#e9f7ed"></span><code>#e9f7ed</code> · <span class="bt-swatch" style="background:#a7dfb8"></span><code>#a7dfb8</code> · <span class="bt-swatch" style="background:#3f8e50"></span><code>#3f8e50</code></td><td><span class="bt-swatch" style="background:#f4fbf6"></span><code>#f4fbf6</code> · <span class="bt-swatch" style="background:#d3efdb"></span><code>#d3efdb</code> · <span class="bt-swatch" style="background:#74c796"></span><code>#74c796</code></td></tr>
+              <tr><td>Orange</td><td><span class="bt-swatch" style="background:#ffefe6"></span><code>#ffefe6</code> · <span class="bt-swatch" style="background:#ffc099"></span><code>#ffc099</code> · <span class="bt-swatch" style="background:#c74f00"></span><code>#c74f00</code></td><td><span class="bt-swatch" style="background:#fff7f2"></span><code>#fff7f2</code> · <span class="bt-swatch" style="background:#ffdfcc"></span><code>#ffdfcc</code> · <span class="bt-swatch" style="background:#f79a66"></span><code>#f79a66</code></td></tr>
+            </tbody></table></div>
+          <h3>Pro tag</h3>
+          <div class="bx-scroll"><table class="docs-table cb-tok"><thead><tr><th>Element</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Fill</td><td>linear-gradient(150.68deg, #9500FF 22.38%, #54B0E1 78.91%, #49FFB6 107.75%)</td><td>Stays full colour on disabled variants</td></tr>
+              <tr><td>Glyph</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>Neutrals/White/100</code></td><td>12px gem</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="properties">
+          <h2>Properties</h2>
+          <p>Designers: pick the component, then set State, Disabled and Size, and switch on add-ons in the instance.
+            Developers: every component is one native checkbox &mdash; State maps to <code>checked</code> /
+            <code>indeterminate</code>, Disabled to <code>disabled</code>.</p>
+          <h3>Selection-control/Check-box</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>State</code></td><td>Default | Hovered | Selected | Intermediate</td><td>required</td><td>Default</td><td>Hovered is a design-only state; Intermediate = indeterminate.</td></tr>
+              <tr><td><code>Disabled</code></td><td>No | Yes</td><td>required</td><td>No</td><td></td></tr>
+              <tr><td><code>Size</code></td><td>14 | 16</td><td>required</td><td>14</td><td>Match the label size: 14 ↔ 12px, 16 ↔ 14px.</td></tr>
+            </tbody></table></div>
+          <h3>Selection-control/Check-box-accent</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>State</code></td><td>Default | Hovered | Selected</td><td>required</td><td>Default</td><td>No Intermediate.</td></tr>
+              <tr><td><code>Disabled</code></td><td>No | Yes</td><td>required</td><td>No</td><td></td></tr>
+              <tr><td><code>Color</code></td><td>Pink | Purple | Bronze Green | Light Blue | Green | Orange | Red | Yellow</td><td>required</td><td>Pink</td><td>Size 14 only.</td></tr>
+            </tbody></table></div>
+          <h3>Checkbox-inline &amp; Checkbox-chip</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>Size</code></td><td>Medium | Large</td><td>required</td><td>Medium</td><td>Nested Check-box 14 / 16.</td></tr>
+              <tr><td><code>State</code></td><td>Default | Hovered | Selected</td><td>required</td><td>Default</td><td>No Intermediate on inline / chip.</td></tr>
+              <tr><td><code>Disabled</code></td><td>No | Yes</td><td>required</td><td>No</td><td></td></tr>
+              <tr><td><code>Label</code></td><td>string</td><td>required</td><td>“Checkbox Label”</td><td>One line; truncates with an ellipsis.</td></tr>
+              <tr><td><code>Show Prefix Icon</code> · <code>Prefix Icon</code></td><td>true | false · Icon</td><td>optional</td><td>false · Cube</td><td>Use either a prefix icon or a platform logo.</td></tr>
+              <tr><td><code>Show Platform</code></td><td>true | false</td><td>optional</td><td>false</td><td>20px platform logo.</td></tr>
+              <tr><td><code>Show Info ℹ️</code></td><td>true | false</td><td>optional</td><td>false</td><td>Attach a tooltip.</td></tr>
+              <tr><td><code>Pro 💎</code></td><td>true | false</td><td>optional</td><td>false</td><td></td></tr>
+              <tr><td><code>Locked 🔒</code></td><td>true | false</td><td>optional</td><td>false</td><td>Only on Disabled = Yes variants.</td></tr>
+              <tr><td><code>Show Color Legend</code></td><td>true | false</td><td>optional</td><td>false</td><td>Chip only.</td></tr>
+            </tbody></table></div>
+          <h3>Checkbox-chip-accent</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>Size</code></td><td>Medium</td><td>required</td><td>Medium</td><td>Only size.</td></tr>
+              <tr><td><code>State</code> · <code>Disabled</code></td><td>as Checkbox-chip</td><td>required</td><td>Default · No</td><td></td></tr>
+              <tr><td><code>Color</code></td><td>8 accent colours</td><td>required</td><td>Pink</td><td></td></tr>
+              <tr><td><code>Label</code> · <code>Show Info ℹ️</code> · <code>Show Platform</code> · <code>Locked 🔒</code></td><td>as Checkbox-chip</td><td>optional</td><td>&mdash;</td><td>No Prefix Icon, Pro or Color Legend.</td></tr>
+            </tbody></table></div>
+          <h3>Behaviour rules (for developers)</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Value</td><td>Boolean per checkbox · array for a group</td><td>Default: unchecked, unless a saved value exists.</td></tr>
+              <tr><td>Intermediate</td><td><code>input.indeterminate = true</code></td><td>Parent only; derived from its children. Click → select all.</td></tr>
+              <tr><td>Hover</td><td>Code state (<code>:hover</code>)</td><td>No hover feedback while disabled.</td></tr>
+              <tr><td>Keyboard</td><td>Tab · Space</td><td>Disabled checkboxes are skipped.</td></tr>
+              <tr><td>Labelling</td><td><code>&lt;label&gt;</code> wraps the input</td><td>Bare check-boxes need an <code>aria-label</code>.</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="examples">
+          <h2>Configuration examples</h2>
+          <h3>Category filter (dropdown)</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><div class="cb-col"><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Snacks</span></span></label><label class="cbx cbx--inline cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Beverages</span></span></label><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Dairy</span></span></label></div><p>Several categories picked from a dropdown list.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Component</td><td>Checkbox-inline</td><td></td></tr>              <tr><td>Size</td><td>Medium</td><td>Dense lists</td></tr>              <tr><td>State</td><td>Selected / Default</td><td>Per option</td></tr>
+            </tbody></table>
+          </div>
+          <h3>Platform filter bar</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><div class="cb-wrap"><label class="cbx cbx--chip cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><img class="cbx__logo" src="assets/brand_logo/Flipkart.png" alt=""><span class="cbx__lbl"><span>Flipkart</span></span></label><label class="cbx cbx--chip cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><img class="cbx__logo" src="assets/brand_logo/Jio Mart.png" alt=""><span class="cbx__lbl"><span>JioMart</span></span></label></div><p>Filter a dashboard by platform.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Component</td><td>Checkbox-chip</td><td></td></tr>              <tr><td>Size</td><td>Medium</td><td></td></tr>              <tr><td>Show Platform</td><td>true</td><td>20px logo</td></tr>
+            </tbody></table>
+          </div>
+          <h3>Chart legend</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><div class="cb-wrap"><label class="cbx cbx--chip cbx--m" style="--cf:#cb378e;--cdf:#f5a9ce;--a100:#ffeaf3;--a300:#f5a9ce;--a700:#a92e76;--a50:#fff5f9;--a200:#ffd6e7;--a400:#e67cb5"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>MRP</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#8b37be;--cdf:#cfadff;--a100:#f3ebff;--a300:#cfadff;--a700:#742e9f;--a50:#faf5ff;--a200:#e7d6ff;--a400:#b784e6"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>SP</span></span></label></div><p>Show or hide chart series; each chip matches its line colour.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Component</td><td>Checkbox-chip-accent</td><td></td></tr>              <tr><td>Color</td><td>Pink · Purple</td><td>Match the series</td></tr>              <tr><td>State</td><td>Selected</td><td>Series visible</td></tr>
+            </tbody></table>
+          </div>
+        </section>
+
+        <section id="source">
+          <h2>Source</h2>
+          <p>Taken from the Checkbox documentation in the
+            <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7167-46643" target="_blank" rel="noopener noreferrer">Copy-of-GC-Design Figma file</a> (Anatomy,
+            Properties, Color and Dimensions frames) and the
+            <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7167-46592" target="_blank" rel="noopener noreferrer">checkbox library page</a>. Notes:</p>
+          <ul>
+            <li><strong>Usage and API frames are Button content.</strong> In Figma, “Checkbox Usage Guidelines” and “Checkbox API” are copies of the Button pages (only the title says Checkbox). The When to use, Common layouts, Do’s and don’ts, Writing content and Configuration examples sections here were written for this page from the checkbox anatomy and property notes &mdash; please review them. The property tables come from the library component sets.</li>
+            <li><strong>Hover inside inline / chip.</strong> The bare Check-box’s Hovered state has a Secondary-text/50 fill; inside Checkbox-inline and Checkbox-chip the hovered control has the darker outline but no fill. These pages follow that.</li>
+            <li><strong>Intermediate glyph</strong> is a hard-coded #FFFFFF instead of Neutrals/White/100 (Figma flags this itself). The state is named “Intermediate”; the standard term is indeterminate.</li>
+            <li><strong>Disabled add-ons.</strong> The Pro tag keeps its full-colour gradient and the info icon turns #69778B (not Disabled/400) on disabled variants, although the copy says disabled “greys out every element”.</li>
+            <li><strong>Selected · Disabled label weight.</strong> It is SemiBold at Large but Medium at Medium in the library; these pages use Medium for both.</li>
+            <li><strong>Yellow</strong> breaks the accent pattern: Warning/900 selected label, Warning/700 disabled label, Warning/400 disabled box (others use /700, /400, /300). Light Blue and Green use /700 for the box. “Bronze Green” is a teal.</li>
+            <li><strong>Chip add-ons</strong> say “same slots as inline” but don’t show Locked; the library has it on disabled chips. The chip’s disabled border is Disabled/100 in the table but Disabled/200 in one description.</li>
+            <li><strong>Colour legend</strong> mocks show a pink dot on a blue chip &mdash; in real use the dot matches the chart series.</li>
+            <li>Platform logos use the brand images already in this site (Flipkart, Amazon Fresh, JioMart); Figma uses Blinkit. Icons are redrawn equivalents of the Figma Cube, Info, Lock and Pro-gem assets.</li>
+            <li>In code: Storybook’s <a href="https://storybook.gobblecube.ai/?path=/docs/controls-checkbox--docs" target="_blank" rel="noopener noreferrer">Controls/Checkbox</a> and <a href="https://storybook.gobblecube.ai/?path=/docs/controls-groups-checkboxgroup--docs" target="_blank" rel="noopener noreferrer">CheckboxGroup</a>.</li>
+          </ul>
+        </section>
+<script src="assets/js/checkbox.js"></script>
+
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/controls-checkbox--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 1.5 12.6 1a.5.5 0 0 1 .53.5v13a.5.5 0 0 1-.53.5L3 14.5a.5.5 0 0 1-.5-.5V2a.5.5 0 0 1 .5-.5zm6.3 3.2c0-.2.2-.4.4-.4.3 0 .5.1.7.3l.3-.4c-.3-.3-.6-.4-1-.4-.6 0-1 .4-1 .9 0 1 1.5.8 1.5 1.2 0 .2-.2.3-.4.3-.4 0-.6-.2-.8-.4l-.4.4c.3.3.7.5 1.2.5.6 0 1-.4 1-.9 0-1-1.5-.8-1.5-1.2z"/></svg>Storybook</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7167-46592" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5.5 1.5h2.5v4H5.5a2 2 0 0 1 0-4zM8 1.5h2.5a2 2 0 0 1 0 4H8zM5.5 5.5H8v4H5.5a2 2 0 0 1 0-4zM8 7.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM5.5 9.5H8v2a2 2 0 1 1-2.5-1.94z"/></svg>Figma</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#examples">Configuration examples</a></li>
+        <li><a href="#source">Source</a></li>
+      </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
+})();
+</script>

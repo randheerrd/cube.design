@@ -85,6 +85,10 @@ PAGES = [
      "Input field guidelines — sizes, states, chips and content — and when to reach for each one."),
     ("docs-inputs-specifications", "Input specs", "Input specifications — Cube Design System",
      "Every dimension, color token and prop for the Input and its label sub-component."),
+    ("docs-radio", "Radio", "Radio — Cube Design System",
+     "Radio guidelines — the control, Radio-inline and Radio-chip, groups, writing and behaviour."),
+    ("docs-radio-specifications", "Radio specs", "Radio specifications — Cube Design System",
+     "Every dimension, colour token and property for the radio control, Radio-inline and Radio-chip."),
     ("docs-tabs", "Tabs", "Tabs — Cube Design System",
      "Tabs guidelines — primary and secondary tabs, anatomy, options, writing and behaviour."),
     ("docs-tabs-specifications", "Tabs specs", "Tabs specifications — Cube Design System",
@@ -125,7 +129,15 @@ PAGES = [
      "Right overlay guidelines — when to use it, header, body and footer options, and how to add one to a screen."),
     ("docs-overlays-specifications", "Right Overlay specs", "Right Overlay specifications — Cube Design System",
      "Every dimension, colour token and property for the Right overlay, its header, breadcrumb and footer."),
-    ("docs-selection", "Selections", "Selection Group — Cube Design System",
+    ("docs-checkbox", "Checkbox", "Checkbox — Cube Design System",
+     "Checkbox guidelines — check-box, inline and chip variants, states, add-ons and do’s & don’ts."),
+    ("docs-checkbox-specifications", "Checkbox specs", "Checkbox specifications — Cube Design System",
+     "Every dimension, colour token and property for the Check-box, Checkbox-inline and Checkbox-chip."),
+    ("docs-segmented", "Segmented-controls", "Segmented Control — Cube Design System",
+     "Segmented control guidelines — when to use it, types, sizes, accent colours and do’s & don’ts."),
+    ("docs-segmented-specifications", "Segmented Control specs", "Segmented Control specifications — Cube Design System",
+     "Every dimension, colour token and property for the Segmented control and its elements."),
+    ("docs-selection", "Selection-group", "Selection Group — Cube Design System",
      "Selection group guidelines — single vs multi select, chip vs inline, layout and wrap."),
     ("docs-selection-specifications", "Selection specs", "Selection Group specifications — Cube Design System",
      "Every dimension, colour token and property for the Selection group."),
@@ -155,13 +167,15 @@ HIDDEN = {"internal", "craft", "team", "docs", "docs-tooltips", "docs-tooltips-s
           "docs-colors", "docs-colors-specifications", "docs-spacing", "docs-spacing-specifications",
           "docs-inputs", "docs-inputs-specifications",
           "docs-banners", "docs-banners-specifications",
-          "docs-messages", "docs-messages-specifications", "docs-dropdown", "docs-dropdown-specifications", "docs-header", "docs-header-specifications", "docs-sidenav", "docs-sidenav-specifications", "docs-popup", "docs-popup-specifications", "docs-tabs", "docs-tabs-specifications",
+          "docs-messages", "docs-messages-specifications", "docs-dropdown", "docs-dropdown-specifications", "docs-header", "docs-header-specifications", "docs-sidenav", "docs-sidenav-specifications", "docs-popup", "docs-popup-specifications", "docs-tabs", "docs-tabs-specifications", "docs-radio", "docs-radio-specifications",
           "docs-chips", "docs-chips-specifications",
           "docs-dates", "docs-dates-specifications",
           "docs-toggle", "docs-toggle-specifications",
           "docs-overlays", "docs-overlays-specifications",
           "docs-stepper", "docs-stepper-specifications",
-          "docs-selection", "docs-selection-specifications"}
+          "docs-selection", "docs-selection-specifications",
+          "docs-segmented", "docs-segmented-specifications",
+          "docs-checkbox", "docs-checkbox-specifications"}
 
 # Guarded by INTERNAL_PASSWORD rather than SITE_PASSWORD.
 INTERNAL_PAGES = {"internal"}
@@ -189,13 +203,15 @@ DOCS = {"docs", "docs-tooltips", "docs-tooltips-specifications", "docs-buttons-s
         "docs-spacing", "docs-spacing-specifications",
         "docs-inputs", "docs-inputs-specifications",
           "docs-banners", "docs-banners-specifications",
-        "docs-messages", "docs-messages-specifications", "docs-dropdown", "docs-dropdown-specifications", "docs-header", "docs-header-specifications", "docs-sidenav", "docs-sidenav-specifications", "docs-popup", "docs-popup-specifications", "docs-tabs", "docs-tabs-specifications",
+        "docs-messages", "docs-messages-specifications", "docs-dropdown", "docs-dropdown-specifications", "docs-header", "docs-header-specifications", "docs-sidenav", "docs-sidenav-specifications", "docs-popup", "docs-popup-specifications", "docs-tabs", "docs-tabs-specifications", "docs-radio", "docs-radio-specifications",
         "docs-chips", "docs-chips-specifications",
         "docs-dates", "docs-dates-specifications",
           "docs-toggle", "docs-toggle-specifications",
           "docs-overlays", "docs-overlays-specifications",
           "docs-stepper", "docs-stepper-specifications",
-          "docs-selection", "docs-selection-specifications"}
+          "docs-selection", "docs-selection-specifications",
+          "docs-segmented", "docs-segmented-specifications",
+          "docs-checkbox", "docs-checkbox-specifications"}
 
 
 EDITION_HEAD = (
@@ -216,6 +232,18 @@ DOCS_HEAD = (
     '<script src="assets/js/docs-search.js?v={v}" defer></script>'
 )
 EDITION_JS = '<script src="assets/js/edition.js?v={v}"></script>'
+# Inline, right after the docs side nav: put the nav back where it was
+# scrolled before the click (each nav link is a full page load, which
+# would otherwise snap the list to the top), and if the current page's
+# link still isn't visible — arriving from search or a deep link — bring it
+# into view. Runs before first paint, so the nav never visibly jumps.
+DOCS_NAV_JS = (
+    "<script>(function(){var n=document.getElementById('docs-nav');if(!n)return;"
+    "try{var y=sessionStorage.getItem('docs-nav-y');if(y!==null)n.scrollTop=+y;}catch(e){}"
+    "var a=n.querySelector('a[aria-current=\"page\"]');if(a){var r=a.getBoundingClientRect(),b=n.getBoundingClientRect();"
+    "if(r.top<b.top||r.bottom>b.bottom)n.scrollTop+=r.top-b.top-(b.height-r.height)/2;}"
+    "addEventListener('pagehide',function(){try{sessionStorage.setItem('docs-nav-y',n.scrollTop);}catch(e){}});})();</script>"
+)
 
 
 # The landing page carries the whole handbook, so the menu is a table of
@@ -343,6 +371,9 @@ def build():
                          EDITION_JS.format(v=version) if slug in EDITION else "")
                 .replace("{{ASSET_V}}", version)
                 .replace("{{YEAR}}", str(year)))
+        if slug in DOCS:
+            html = html.replace("  </nav>\n  <div class=\"docs-scrim\"",
+                                "  </nav>\n" + DOCS_NAV_JS + "\n  <div class=\"docs-scrim\"", 1)
         (DIST / f"{slug}.html").write_text(html, encoding="utf-8")
         print(f"  +  dist/{slug}.html")
 

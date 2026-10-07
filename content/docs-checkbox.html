@@ -1,0 +1,521 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html">Popup</a></li>
+        <li><a href="docs-overlays.html">Right Overlays</a></li>
+        <li class="docs-nav__group is-active"><span class="docs-nav__parent">Selections</span>
+          <ul class="docs-nav__sub">
+            <li><a href="docs-selection.html">Selection-group</a></li>
+            <li><a href="docs-segmented.html">Segmented-controls</a></li>
+            <li><a href="docs-checkbox.html" aria-current="page">Checkbox</a></li>
+            <li><a href="docs-radio.html">Radio</a></li>
+          </ul>
+        </li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Checkbox</h1>
+          <span class="docs-badge">New</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">Lets people pick zero, one or many options from a set. The family has five
+          components: the bare Check-box control (+ accent colours), Checkbox-inline (control + label, for lists) and
+          Checkbox-chip (bordered chip, for filter bars) (+ accent colours).</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-checkbox.html" role="tab" aria-selected="true">Guidelines</a>
+        <a href="docs-checkbox-specifications.html" role="tab">Specifications</a>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/controls-checkbox--docs" role="tab" target="_blank" rel="noopener noreferrer">
+          Code
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7 9"/></svg>
+          <span class="sr-only">(opens Storybook in a new tab)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--bt docs-content--dt docs-content--cb">
+        <section id="at-a-glance">
+          <h2>At a glance</h2>
+          <p>Try it: tick some categories &mdash; “All categories” turns into a dash (Intermediate) when only some are
+            selected, and clicking it selects all. Then pick any platforms in the chip row. These are real checkboxes:
+            <kbd>Tab</kbd> to one and press <kbd>Space</kbd>.</p>
+          <div class="docs-demo">
+            <div class="chp-row" style="align-items:flex-start"><div class="cb-card" data-cbx-group data-cb-demo="cat"><p class="cb-card__t">Category</p><div class="cb-col"><label class="cbx cbx--inline cbx--l"><input type="checkbox" data-cbx-all><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>All categories</span></span></label><div class="cb-col" style="padding-left:22px"><label class="cbx cbx--inline cbx--l"><input type="checkbox" checked data-cbx-item><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Snacks</span></span></label><label class="cbx cbx--inline cbx--l"><input type="checkbox" data-cbx-item><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Beverages</span></span></label><label class="cbx cbx--inline cbx--l"><input type="checkbox" checked data-cbx-item><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Dairy</span></span></label><label class="cbx cbx--inline cbx--l"><input type="checkbox" data-cbx-item><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Personal care</span></span></label></div></div></div><div class="cb-card" data-cb-demo="plat"><p class="cb-card__t">Platforms</p><div class="cb-wrap"><label class="cbx cbx--chip cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><img class="cbx__logo" src="assets/brand_logo/Flipkart.png" alt=""><span class="cbx__lbl"><span>Flipkart</span></span></label><label class="cbx cbx--chip cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><img class="cbx__logo" src="assets/brand_logo/Amazon Fresh.png" alt=""><span class="cbx__lbl"><span>Amazon Fresh</span></span></label><label class="cbx cbx--chip cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><img class="cbx__logo" src="assets/brand_logo/Jio Mart.png" alt=""><span class="cbx__lbl"><span>JioMart</span></span></label><label class="cbx cbx--chip cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><img class="cbx__logo" src="assets/brand_logo/DMart.png" alt=""><span class="cbx__lbl"><span>DMart</span></span></label></div></div></div>
+            <p class="cb-out" aria-live="polite" data-cb-out style="text-align:center;margin-top:12px">2 of 4 categories · 1 platform selected</p>
+            <p class="docs-demo__caption">Checkbox-inline (Large) with a parent “select all”, and Checkbox-chip (Medium) with platform logos.</p>
+          </div>
+          <div class="bx-quick">
+            <div><h3>Check-box</h3><p>The bare <strong>control</strong> &mdash; tables, custom layouts, inside other components.</p></div>
+            <div><h3>Checkbox-inline</h3><p>Control + <strong>label</strong> &mdash; lists, dropdown menus, forms, settings.</p></div>
+            <div><h3>Checkbox-chip</h3><p>A bordered <strong>chip</strong> &mdash; filter bars and compact multi-select groups.</p></div>
+          </div>
+        </section>
+
+        <section id="when">
+          <h2>When to use</h2>
+          <p>Use a checkbox when people can pick <strong>any number</strong> of options &mdash; including none &mdash;
+            and each choice is independent. Pick the component by context first, then set State and Size.</p>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>You need to…</th><th>Use</th><th>Why</th></tr></thead><tbody>
+              <tr><td>Pick any number of options from a list</td><td><strong>Checkbox-inline</strong></td><td>Control + label; scans well in lists, menus and forms.</td></tr>
+              <tr><td>Filter a view with a few options in a bar</td><td><strong>Checkbox-chip</strong></td><td>Compact and clickable; the selected look is easy to spot.</td></tr>
+              <tr><td>Select rows in a table</td><td><strong>Check-box</strong> (bare)</td><td>The row itself is the label; a header checkbox selects all.</td></tr>
+              <tr><td>Filter chart series</td><td><strong>Checkbox-chip-accent</strong></td><td>The chip colour matches the series it shows or hides.</td></tr>
+              <tr><td>Pick exactly one option</td><td><a href='docs-selection.html'>Radio / Selection group</a></td><td>Checkboxes allow several; one-of-many needs a radio.</td></tr>
+              <tr><td>Turn a setting on or off instantly</td><td><a href='docs-toggle.html'>Toggle</a></td><td>A toggle applies at once; a checkbox usually waits for Save / Apply.</td></tr>
+              <tr><td>Switch between views</td><td><a href='docs-segmented.html'>Segmented control</a></td><td>Views are mutually exclusive.</td></tr>
+            </tbody></table></div>
+          <p>Need a titled group of checkboxes with consistent spacing? Use the <a href="docs-selection.html">Selection group</a> (Multi select).</p>
+        </section>
+
+        <section id="anatomy">
+          <h2>Anatomy</h2>
+          <h3>1 · Check-box control</h3>
+          <p>Selection-control/Check-box &mdash; the bare control used inside every other checkbox component. Shown: State = Selected, Size = 16, at 8×.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,top,bottom"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:8"><label class="cbx cbx--bare cbx--16" data-anatomy="1" data-stem="36"><input type="checkbox" checked tabindex="-1" aria-label="Checkbox Label"><span class="cbx__box" aria-hidden="true" data-anatomy="2" data-center data-stem="28"><i style="position:absolute;left:4px;top:4px;width:8px;height:7px" data-anatomy="3" data-center data-stem="36"></i></span></label></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Container</td><td>frame</td><td>Fixed 14 × 14 or 16 × 16 frame (Size property). Defines the hit area inside inline / chip components &mdash; never resize it manually.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Box</td><td>frame</td><td>Rounded square inset 1px inside the container (12 or 14px). Unselected: 1px outline (Secondary-text/700). Selected / Intermediate: solid fill (Primary/600, or accent colour).</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Check / dash glyph</td><td>vector</td><td>White check mark (Selected) or horizontal dash (Intermediate). Cut out of the same vector as the box &mdash; it is not a separate swappable icon.</td></tr>
+            </tbody></table></div>
+
+          <h3>2 · Checkbox-inline</h3>
+          <p>Selection/Selection-inline/Checkbox-inline &mdash; control + label, used in lists, dropdowns and forms. Shown: Size = Large, State = Selected, with Prefix Icon, Info and Pro enabled, at 3×.</p>
+          <div class="bx-anatomy" data-bx-anatomy="top,left,bottom,top,bottom,right"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:3"><label class="cbx cbx--inline cbx--l" data-anatomy="1" data-stem="36"><input type="checkbox" checked tabindex="-1"><span class="cbx__box" aria-hidden="true" data-anatomy="2" data-center data-stem="28"></span><svg class="cbx__ic" data-anatomy="3" data-center data-stem="36" viewBox="0 0 256 256" aria-hidden="true"><path d="M223.68 66.15 135.68 18a15.88 15.88 0 0 0-15.36 0l-88 48.17a16 16 0 0 0-8.32 14v95.64a16 16 0 0 0 8.32 14l88 48.17a15.88 15.88 0 0 0 15.36 0l88-48.17a16 16 0 0 0 8.32-14V80.18a16 16 0 0 0-8.32-14.03ZM128 32l80.34 44L128 120 47.66 76ZM40 90l80 43.78v85.79l-80-43.75Zm96 129.57v-85.75L216 90v85.78Z"/></svg><span class="cbx__lbl"><span data-anatomy="4" data-center data-stem="28">Checkbox Label</span><svg class="cbx__info" data-anatomy="5" data-center data-stem="36" viewBox="0 0 256 256" aria-hidden="true"><path d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24Zm0 192a88 88 0 1 1 88-88 88.1 88.1 0 0 1-88 88Zm16-40a8 8 0 0 1-8 8 16 16 0 0 1-16-16v-40a8 8 0 0 1 0-16 16 16 0 0 1 16 16v40a8 8 0 0 1 8 8Zm-32-92a12 12 0 1 1 12 12 12 12 0 0 1-12-12Z"/></svg></span><span class="cbx__pro" data-anatomy="6" data-center data-stem="28"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.6 2.2h4.8L10.6 5 6 10.2 1.4 5z" fill="#fff"/></svg></span></label></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Container</td><td>frame</td><td>Horizontal auto-layout, no fill, hugs content. Gap 4 (Medium) / 6 (Large). The whole row is the click target.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Check-box control</td><td>instance</td><td>Nested Selection-control/Check-box &mdash; Size 14 for Medium, 16 for Large. Its State follows the parent State.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Prefix icon / Platform logo</td><td>instance</td><td>Optional. “Show Prefix Icon” + “Prefix Icon” (instance swap, default Cube) or “Show Platform” (20px platform logo). Use one or the other, not both.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Label</td><td>text</td><td>TEXT property “Label”. DM Sans Medium 12/16 (Medium) or 14/18 (Large); becomes SemiBold + Primary-text/950 when Selected.</td></tr>
+              <tr><td><span class="bx-n">5</span></td><td>Info icon</td><td>instance</td><td>Optional “Show Info ℹ️” &mdash; sits right after the label; attach a tooltip explaining the option.</td></tr>
+              <tr><td><span class="bx-n">6</span></td><td>Pro tag</td><td>instance</td><td>Optional “Pro 💎” &mdash; marks options that need a paid plan. Pair with Locked 🔒 (disabled variants) when the user has no access.</td></tr>
+            </tbody></table></div>
+
+          <h3>3 · Checkbox-chip</h3>
+          <p>Selection/Selection-chip/Checkbox-chip &mdash; bordered chip with a checkbox, used in filter bars and multi-select groups. Shown: Size = Large, State = Selected, with Prefix Icon, Info and Color Legend enabled, at 3×.</p>
+          <div class="bx-anatomy" data-bx-anatomy="top,left,bottom,top,bottom,right"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:3"><label class="cbx cbx--chip cbx--l" style="--dot:#cb378e" data-anatomy="1" data-stem="36"><input type="checkbox" checked tabindex="-1"><span class="cbx__box" aria-hidden="true" data-anatomy="2" data-center data-stem="28"></span><svg class="cbx__ic" data-anatomy="3" data-center data-stem="36" viewBox="0 0 256 256" aria-hidden="true"><path d="M223.68 66.15 135.68 18a15.88 15.88 0 0 0-15.36 0l-88 48.17a16 16 0 0 0-8.32 14v95.64a16 16 0 0 0 8.32 14l88 48.17a15.88 15.88 0 0 0 15.36 0l88-48.17a16 16 0 0 0 8.32-14V80.18a16 16 0 0 0-8.32-14.03ZM128 32l80.34 44L128 120 47.66 76ZM40 90l80 43.78v85.79l-80-43.75Zm96 129.57v-85.75L216 90v85.78Z"/></svg><span class="cbx__lbl"><span data-anatomy="4" data-center data-stem="28">Checkbox Label</span><svg class="cbx__info" data-anatomy="5" data-center data-stem="36" viewBox="0 0 256 256" aria-hidden="true"><path d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24Zm0 192a88 88 0 1 1 88-88 88.1 88.1 0 0 1-88 88Zm16-40a8 8 0 0 1-8 8 16 16 0 0 1-16-16v-40a8 8 0 0 1 0-16 16 16 0 0 1 16 16v40a8 8 0 0 1 8 8Zm-32-92a12 12 0 1 1 12 12 12 12 0 0 1-12-12Z"/></svg></span><span class="cbx__dot" data-anatomy="6" data-center data-stem="28"></span></label></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Container</td><td>frame</td><td>Auto-layout chip: height 28 (Medium) / 32 (Large), padding 8 / 10, radius 6 / 8, 1px border. Fill and border change with State (see <a href='docs-checkbox-specifications.html#color-tokens'>Color tokens</a>).</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Check-box control</td><td>instance</td><td>Nested Check-box (14 / 16). Accent chips nest Check-box-accent in the matching colour.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Prefix icon / Platform logo</td><td>instance</td><td>Same optional slots as Checkbox-inline (“Show Prefix Icon” / “Prefix Icon” / “Show Platform”).</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Label</td><td>text</td><td>TEXT property “Label”. Medium weight; SemiBold + Primary/700 (or accent 700) when Selected.</td></tr>
+              <tr><td><span class="bx-n">5</span></td><td>Info icon</td><td>instance</td><td>Optional “Show Info ℹ️”.</td></tr>
+              <tr><td><span class="bx-n">6</span></td><td>Color legend</td><td>frame</td><td>Optional “Show Color Legend” &mdash; 7px dot that ties the chip to a chart series. Use when the chip filters a chart.</td></tr>
+            </tbody></table></div>
+
+          <h3>4 · Disabled &amp; Locked</h3>
+          <p>Disabled = Yes greys out the control and label. Locked 🔒 (available on disabled inline / chip variants) explains why an option is unavailable. Shown: Checkbox-inline, Large, Disabled, Locked, at 3×.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,top,bottom,right"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:3"><label class="cbx cbx--inline cbx--l"><input type="checkbox" disabled tabindex="-1"><span class="cbx__box" aria-hidden="true" data-anatomy="1" data-center data-stem="28"></span><span class="cbx__lbl"><span data-anatomy="2" data-center data-stem="28">Checkbox Label</span></span><span class="cbx__pro" data-anatomy="3" data-center data-stem="36"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.6 2.2h4.8L10.6 5 6 10.2 1.4 5z" fill="#fff"/></svg></span><svg class="cbx__lock" data-anatomy="4" data-center data-stem="36" viewBox="0 0 256 256" aria-hidden="true"><path d="M208 80h-32V56a48 48 0 0 0-96 0v24H48a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16ZM96 56a32 32 0 0 1 64 0v24H96Z"/></svg></label></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Disabled control</td><td>instance</td><td>Check-box with Disabled = Yes &mdash; Disabled/50 fill, Disabled/400 border (or Disabled/400 fill when selected).</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Disabled label</td><td>text</td><td>Label switches to Disabled/400. Keep the label readable &mdash; don’t hide unavailable options, disable them.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Pro tag</td><td>instance</td><td>Optional &mdash; tells the user the option is locked behind a plan.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Lock icon</td><td>instance</td><td>“Locked 🔒” &mdash; shown after the label on disabled variants. Add a tooltip with the reason / upgrade path.</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="family">
+          <h2>Component family</h2>
+          <p>Five components. Pick by context first, then configure State / Size.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom2"><label class="cbx cbx--bare cbx--16"><input type="checkbox" checked aria-label="Checkbox Label"><span class="cbx__box" aria-hidden="true"></span></label></div></div><div class="bx-opt__body"><h3>Check-box</h3><p>Bare control. Tables (row select), custom layouts, inside other components.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom2"><label class="cbx cbx--bare cbx--14" style="--cf:#cb378e;--cdf:#f5a9ce"><input type="checkbox" checked aria-label="Pink accent"><span class="cbx__box" aria-hidden="true"></span></label></div></div><div class="bx-opt__body"><h3>Check-box-accent</h3><p>Bare control in one of 8 accent colours &mdash; ties a selection to a chart series.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></div><div class="bx-opt__body"><h3>Checkbox-inline</h3><p>Control + label. Lists, dropdown menus, forms, settings.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><label class="cbx cbx--chip cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></div><div class="bx-opt__body"><h3>Checkbox-chip</h3><p>Bordered chip. Filter bars and compact multi-select groups.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><label class="cbx cbx--chip cbx--m" style="--cf:#cb378e;--cdf:#f5a9ce;--a100:#ffeaf3;--a300:#f5a9ce;--a700:#a92e76;--a50:#fff5f9;--a200:#ffd6e7;--a400:#e67cb5"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></div><div class="bx-opt__body"><h3>Checkbox-chip-accent</h3><p>Chip in an accent colour &mdash; chart legends that double as filters.</p></div></div></div>
+        </section>
+
+        <section id="checkbox">
+          <h2>Check-box</h2>
+          <p>Selection-control/Check-box. Four states, each with a Disabled version, shown at 2×. Hovered + Disabled looks identical to Default + Disabled (no hover feedback).</p>
+          <div class="bx-scroll"><table class="docs-table cb-states"><thead><tr><th>Disabled</th><th>Default</th><th>Hovered</th><th>Selected</th><th>Intermediate</th></tr></thead><tbody>
+              <tr><td><strong>No</strong></td><td><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--16"><input type="checkbox" tabindex="-1" aria-label="Default"><span class="cbx__box" aria-hidden="true"></span></label></span></td><td><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--16" data-hover><input type="checkbox" tabindex="-1" aria-label="Hovered"><span class="cbx__box" aria-hidden="true"></span></label></span></td><td><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--16"><input type="checkbox" checked tabindex="-1" aria-label="Selected"><span class="cbx__box" aria-hidden="true"></span></label></span></td><td><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--16"><input type="checkbox" data-indeterminate tabindex="-1" aria-label="Intermediate"><span class="cbx__box" aria-hidden="true"></span></label></span></td></tr>
+              <tr><td><strong>Yes</strong></td><td><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--16"><input type="checkbox" disabled tabindex="-1" aria-label="Default disabled"><span class="cbx__box" aria-hidden="true"></span></label></span></td><td><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--16"><input type="checkbox" disabled tabindex="-1" aria-label="Hovered disabled"><span class="cbx__box" aria-hidden="true"></span></label></span></td><td><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--16"><input type="checkbox" checked disabled tabindex="-1" aria-label="Selected disabled"><span class="cbx__box" aria-hidden="true"></span></label></span></td><td><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--16"><input type="checkbox" disabled data-indeterminate tabindex="-1" aria-label="Intermediate disabled"><span class="cbx__box" aria-hidden="true"></span></label></span></td></tr>
+            </tbody></table></div>
+          <ul>
+            <li><strong>Default</strong> &mdash; unchecked. 1px outline, Secondary-text/700.</li>
+            <li><strong>Hovered</strong> &mdash; pointer over the control or its label. Darker outline + light fill.</li>
+            <li><strong>Selected</strong> &mdash; checked. Primary/600 fill with white check.</li>
+            <li><strong>Intermediate</strong> &mdash; indeterminate: a parent whose children are partly selected. Clicking selects all.</li>
+            <li><strong>Disabled</strong> &mdash; unavailable. Selected · Disabled means checked but locked (e.g. a mandatory option).</li>
+          </ul>
+          <h3>Size</h3>
+          <p>Two sizes. Match the size to the label size used next to it.</p>
+          <div class="bx-options bx-options--two"><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom3"><label class="cbx cbx--bare cbx--14"><input type="checkbox" checked aria-label="Size 14"><span class="cbx__box" aria-hidden="true"></span></label></div></div><div class="bx-opt__body"><h3>Size = 14 <small>Default</small></h3><p>Pairs with 12px labels (Medium inline / chip). Dense tables and menus.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom3"><label class="cbx cbx--bare cbx--16"><input type="checkbox" checked aria-label="Size 16"><span class="cbx__box" aria-hidden="true"></span></label></div></div><div class="bx-opt__body"><h3>Size = 16</h3><p>Pairs with 14px labels (Large inline / chip). Forms and settings.</p></div></div></div>
+        </section>
+
+        <section id="inline">
+          <h2>Checkbox-inline</h2>
+          <p>Selection/Selection-inline/Checkbox-inline. The container has no fill or border &mdash; only the label and the nested control change.</p>
+          <div class="bx-scroll"><table class="docs-table cb-states"><thead><tr><th>State</th><th>Medium</th><th>Large</th><th>Label</th></tr></thead><tbody>
+              <tr><td><strong>Default</strong></td><td><label class="cbx cbx--inline cbx--m"><input type="checkbox" tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td><label class="cbx cbx--inline cbx--l"><input type="checkbox" tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td>Secondary-text/700, Medium</td></tr>
+              <tr><td><strong>Hovered</strong></td><td><label class="cbx cbx--inline cbx--m" data-hover><input type="checkbox" tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td><label class="cbx cbx--inline cbx--l" data-hover><input type="checkbox" tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td>Secondary-text/900</td></tr>
+              <tr><td><strong>Selected</strong></td><td><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td><label class="cbx cbx--inline cbx--l"><input type="checkbox" checked tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td>Primary-text/950, SemiBold</td></tr>
+              <tr><td><strong>Disabled</strong></td><td><label class="cbx cbx--inline cbx--m"><input type="checkbox" disabled tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td><label class="cbx cbx--inline cbx--l"><input type="checkbox" disabled tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td>Disabled/400</td></tr>
+              <tr><td><strong>Selected · Disabled</strong></td><td><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked disabled tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td><label class="cbx cbx--inline cbx--l"><input type="checkbox" checked disabled tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td>Disabled/400 &mdash; checked and locked</td></tr>
+            </tbody></table></div>
+          <h3>Size</h3>
+          <p>Size sets checkbox size, label size and gap.</p>
+          <div class="bx-options bx-options--two"><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom15"><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></div></div><div class="bx-opt__body"><h3>Medium <small>Default</small></h3><p>14px control, 12/16 label, 4px gap. Default for dropdowns, filters and tables.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom15"><label class="cbx cbx--inline cbx--l"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></div></div><div class="bx-opt__body"><h3>Large</h3><p>16px control, 14/18 label, 6px gap. Forms, settings and onboarding.</p></div></div></div>
+          <h3>Add-ons</h3>
+          <p>Optional slots (all off by default), shown at 1.5×. Combine sparingly &mdash; one leading visual + one trailing marker at most.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom15"><label class="cbx cbx--inline cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><svg class="cbx__ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M223.68 66.15 135.68 18a15.88 15.88 0 0 0-15.36 0l-88 48.17a16 16 0 0 0-8.32 14v95.64a16 16 0 0 0 8.32 14l88 48.17a15.88 15.88 0 0 0 15.36 0l88-48.17a16 16 0 0 0 8.32-14V80.18a16 16 0 0 0-8.32-14.03ZM128 32l80.34 44L128 120 47.66 76ZM40 90l80 43.78v85.79l-80-43.75Zm96 129.57v-85.75L216 90v85.78Z"/></svg><span class="cbx__lbl"><span>Checkbox Label</span></span></label></div></div><div class="bx-opt__body"><h3>Show Prefix Icon</h3><p>Leading icon (swap via “Prefix Icon”). For category / type cues.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom15"><label class="cbx cbx--inline cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><img class="cbx__logo" src="assets/brand_logo/Flipkart.png" alt=""><span class="cbx__lbl"><span>Flipkart</span></span></label></div></div><div class="bx-opt__body"><h3>Show Platform</h3><p>20px platform logo. For platform filters.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom15"><label class="cbx cbx--inline cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span><svg class="cbx__info" viewBox="0 0 256 256" aria-hidden="true"><path d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24Zm0 192a88 88 0 1 1 88-88 88.1 88.1 0 0 1-88 88Zm16-40a8 8 0 0 1-8 8 16 16 0 0 1-16-16v-40a8 8 0 0 1 0-16 16 16 0 0 1 16 16v40a8 8 0 0 1 8 8Zm-32-92a12 12 0 1 1 12 12 12 12 0 0 1-12-12Z"/></svg></span></label></div></div><div class="bx-opt__body"><h3>Show Info ℹ️</h3><p>Info icon after the label &mdash; attach a tooltip.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom15"><label class="cbx cbx--inline cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span><span class="cbx__pro"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.6 2.2h4.8L10.6 5 6 10.2 1.4 5z" fill="#fff"/></svg></span></label></div></div><div class="bx-opt__body"><h3>Pro 💎</h3><p>Marks premium options.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom15"><label class="cbx cbx--inline cbx--m"><input type="checkbox" disabled><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span><svg class="cbx__lock" viewBox="0 0 256 256" aria-hidden="true"><path d="M208 80h-32V56a48 48 0 0 0-96 0v24H48a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16ZM96 56a32 32 0 0 1 64 0v24H96Z"/></svg></label></div></div><div class="bx-opt__body"><h3>Locked 🔒</h3><p>Disabled variants only &mdash; shows why it is unavailable.</p></div></div></div>
+        </section>
+
+        <section id="chip">
+          <h2>Checkbox-chip</h2>
+          <p>Selection/Selection-chip/Checkbox-chip. The chip’s fill, border and label change with the state.</p>
+          <div class="bx-scroll"><table class="docs-table cb-states"><thead><tr><th>State</th><th>Medium</th><th>Large</th><th>Look</th></tr></thead><tbody>
+              <tr><td><strong>Default</strong></td><td><label class="cbx cbx--chip cbx--m"><input type="checkbox" tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td><label class="cbx cbx--chip cbx--l"><input type="checkbox" tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td>White fill, Secondary-text/200 border.</td></tr>
+              <tr><td><strong>Hovered</strong></td><td><label class="cbx cbx--chip cbx--m" data-hover><input type="checkbox" tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td><label class="cbx cbx--chip cbx--l" data-hover><input type="checkbox" tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td>Border Secondary-text/300, label darkens.</td></tr>
+              <tr><td><strong>Selected</strong></td><td><label class="cbx cbx--chip cbx--m"><input type="checkbox" checked tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td><label class="cbx cbx--chip cbx--l"><input type="checkbox" checked tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td>Primary/100 fill, Primary/400 border, Primary/700 SemiBold label.</td></tr>
+              <tr><td><strong>Disabled</strong></td><td><label class="cbx cbx--chip cbx--m"><input type="checkbox" disabled tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td><label class="cbx cbx--chip cbx--l"><input type="checkbox" disabled tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td>Disabled/100 border, Disabled/400 label.</td></tr>
+              <tr><td><strong>Selected · Disabled</strong></td><td><label class="cbx cbx--chip cbx--m"><input type="checkbox" checked disabled tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td><label class="cbx cbx--chip cbx--l"><input type="checkbox" checked disabled tabindex="-1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></td><td>Disabled/50 fill, Disabled/200 border.</td></tr>
+            </tbody></table></div>
+          <h3>Size</h3>
+          <p>Size sets chip height, padding, radius, control and label size.</p>
+          <div class="bx-options bx-options--two"><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom15"><label class="cbx cbx--chip cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></div></div><div class="bx-opt__body"><h3>Medium <small>Default</small></h3><p>28px tall, 8px padding, 6px radius. Default for filter bars.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom15"><label class="cbx cbx--chip cbx--l"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span></label></div></div><div class="bx-opt__body"><h3>Large</h3><p>32px tall, 10px padding, 8px radius. Standalone multi-select groups.</p></div></div></div>
+          <h3>Add-ons</h3>
+          <p>Same slots as inline, plus a colour legend dot. Shown at 1.5×.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom15"><label class="cbx cbx--chip cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><svg class="cbx__ic" viewBox="0 0 256 256" aria-hidden="true"><path d="M223.68 66.15 135.68 18a15.88 15.88 0 0 0-15.36 0l-88 48.17a16 16 0 0 0-8.32 14v95.64a16 16 0 0 0 8.32 14l88 48.17a15.88 15.88 0 0 0 15.36 0l88-48.17a16 16 0 0 0 8.32-14V80.18a16 16 0 0 0-8.32-14.03ZM128 32l80.34 44L128 120 47.66 76ZM40 90l80 43.78v85.79l-80-43.75Zm96 129.57v-85.75L216 90v85.78Z"/></svg><span class="cbx__lbl"><span>Checkbox Label</span></span></label></div></div><div class="bx-opt__body"><h3>Show Prefix Icon</h3><p>Leading icon.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom15"><label class="cbx cbx--chip cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><img class="cbx__logo" src="assets/brand_logo/Amazon Fresh.png" alt=""><span class="cbx__lbl"><span>Amazon Fresh</span></span></label></div></div><div class="bx-opt__body"><h3>Show Platform</h3><p>Platform logo.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom15"><label class="cbx cbx--chip cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span><svg class="cbx__info" viewBox="0 0 256 256" aria-hidden="true"><path d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24Zm0 192a88 88 0 1 1 88-88 88.1 88.1 0 0 1-88 88Zm16-40a8 8 0 0 1-8 8 16 16 0 0 1-16-16v-40a8 8 0 0 1 0-16 16 16 0 0 1 16 16v40a8 8 0 0 1 8 8Zm-32-92a12 12 0 1 1 12 12 12 12 0 0 1-12-12Z"/></svg></span></label></div></div><div class="bx-opt__body"><h3>Show Info ℹ️</h3><p>Info icon with tooltip.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom15"><label class="cbx cbx--chip cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span><span class="cbx__pro"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.6 2.2h4.8L10.6 5 6 10.2 1.4 5z" fill="#fff"/></svg></span></label></div></div><div class="bx-opt__body"><h3>Pro 💎</h3><p>Premium marker.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom15"><label class="cbx cbx--chip cbx--m"><input type="checkbox" disabled><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span><svg class="cbx__lock" viewBox="0 0 256 256" aria-hidden="true"><path d="M208 80h-32V56a48 48 0 0 0-96 0v24H48a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16ZM96 56a32 32 0 0 1 64 0v24H96Z"/></svg></label></div></div><div class="bx-opt__body"><h3>Locked 🔒</h3><p>Disabled variants only.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="cb-zoom15"><label class="cbx cbx--chip cbx--m" style="--dot:#cb378e"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Checkbox Label</span></span><span class="cbx__dot"></span></label></div></div><div class="bx-opt__body"><h3>Show Color Legend</h3><p>Series dot &mdash; when the chip filters a chart.</p></div></div></div>
+        </section>
+
+        <section id="accent">
+          <h2>Accent colours</h2>
+          <p>Accent versions tie a selection to a chart series. Unselected accent controls and chips look exactly like the
+            base ones &mdash; colour only appears when Selected.</p>
+          <h3>Check-box-accent</h3>
+          <p>Size 14 only, no Intermediate. Light Blue and Green use the /700 step for contrast; Yellow maps to Semantics/Warning.</p>
+          <div class="docs-demo"><div class="cb-sw"><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#cb378e;--cdf:#f5a9ce"><input type="checkbox" checked aria-label="Pink"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Pink</figcaption></figure><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#8b37be;--cdf:#cfadff"><input type="checkbox" checked aria-label="Purple"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Purple</figcaption></figure><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#0e9888;--cdf:#99dfd7"><input type="checkbox" checked aria-label="Bronze Green"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Bronze Green</figcaption></figure><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#009fc5;--cdf:#99e1ff"><input type="checkbox" checked aria-label="Light Blue"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Light Blue</figcaption></figure><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#da4224;--cdf:#ffb5a7"><input type="checkbox" checked aria-label="Red"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Red</figcaption></figure><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#e9be00;--cdf:#ffda57"><input type="checkbox" checked aria-label="Yellow"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Yellow</figcaption></figure><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#3f8e50;--cdf:#a7dfb8"><input type="checkbox" checked aria-label="Green"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Green</figcaption></figure><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#ed5f00;--cdf:#ffc099"><input type="checkbox" checked aria-label="Orange"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Orange</figcaption></figure></div><p class="docs-demo__caption">Selected, at 2×.</p></div>
+          <div class="docs-demo"><div class="cb-sw"><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#cb378e;--cdf:#f5a9ce"><input type="checkbox" checked disabled aria-label="Pink disabled"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Pink</figcaption></figure><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#8b37be;--cdf:#cfadff"><input type="checkbox" checked disabled aria-label="Purple disabled"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Purple</figcaption></figure><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#0e9888;--cdf:#99dfd7"><input type="checkbox" checked disabled aria-label="Bronze Green disabled"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Bronze Green</figcaption></figure><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#009fc5;--cdf:#99e1ff"><input type="checkbox" checked disabled aria-label="Light Blue disabled"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Light Blue</figcaption></figure><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#da4224;--cdf:#ffb5a7"><input type="checkbox" checked disabled aria-label="Red disabled"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Red</figcaption></figure><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#e9be00;--cdf:#ffda57"><input type="checkbox" checked disabled aria-label="Yellow disabled"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Yellow</figcaption></figure><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#3f8e50;--cdf:#a7dfb8"><input type="checkbox" checked disabled aria-label="Green disabled"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Green</figcaption></figure><figure><span class="cb-zoom2" style="display:inline-flex"><label class="cbx cbx--bare cbx--14" style="--cf:#ed5f00;--cdf:#ffc099"><input type="checkbox" checked disabled aria-label="Orange disabled"><span class="cbx__box" aria-hidden="true"></span></label></span><figcaption>Orange</figcaption></figure></div><p class="docs-demo__caption">Selected · Disabled keeps a tint of the colour (/300) instead of grey, so series stay recognisable.</p></div>
+          <h3>Checkbox-chip-accent</h3>
+          <p>Medium only. No Prefix Icon, Pro or Color Legend slots; Platform, Info and Locked are available.</p>
+          <div class="docs-demo"><div class="cb-wrap" style="justify-content:center;max-width:560px;margin:0 auto"><label class="cbx cbx--chip cbx--m" style="--cf:#cb378e;--cdf:#f5a9ce;--a100:#ffeaf3;--a300:#f5a9ce;--a700:#a92e76;--a50:#fff5f9;--a200:#ffd6e7;--a400:#e67cb5"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Pink</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#8b37be;--cdf:#cfadff;--a100:#f3ebff;--a300:#cfadff;--a700:#742e9f;--a50:#faf5ff;--a200:#e7d6ff;--a400:#b784e6"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Purple</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#0e9888;--cdf:#99dfd7;--a100:#e6f7f5;--a300:#99dfd7;--a700:#0c7f72;--a50:#f2fbfa;--a200:#ccefeb;--a400:#66c7be"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Bronze Green</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#009fc5;--cdf:#99e1ff;--a100:#e6f7ff;--a300:#99e1ff;--a700:#009fc5;--a50:#f2fbff;--a200:#ccf0ff;--a400:#66d1f5"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Light Blue</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#da4224;--cdf:#ffb5a7;--a100:#ffedea;--a300:#ffb5a7;--a700:#b7371e;--a50:#fff7f5;--a200:#ffdad3;--a400:#f28a7b"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Red</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#e9be00;--cdf:#ffda57;--a100:#fff5d7;--a300:#ffe790;--a700:#7d6600;--a50:#fff9e7;--a200:#ffefb6;--a400:#cda700"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Yellow</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#3f8e50;--cdf:#a7dfb8;--a100:#e9f7ed;--a300:#a7dfb8;--a700:#3f8e50;--a50:#f4fbf6;--a200:#d3efdb;--a400:#74c796"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Green</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#ed5f00;--cdf:#ffc099;--a100:#ffefe6;--a300:#ffc099;--a700:#c74f00;--a50:#fff7f2;--a200:#ffdfcc;--a400:#f79a66"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Orange</span></span></label></div>
+            <p class="docs-demo__caption">Selected &mdash; tinted fill ({Accent}/100), {Accent}/300 border, {Accent}/700 label.</p></div>
+          <div class="docs-demo"><div class="cb-wrap" style="justify-content:center;max-width:560px;margin:0 auto"><label class="cbx cbx--chip cbx--m" style="--cf:#cb378e;--cdf:#f5a9ce;--a100:#ffeaf3;--a300:#f5a9ce;--a700:#a92e76;--a50:#fff5f9;--a200:#ffd6e7;--a400:#e67cb5"><input type="checkbox" checked disabled><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Pink</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#8b37be;--cdf:#cfadff;--a100:#f3ebff;--a300:#cfadff;--a700:#742e9f;--a50:#faf5ff;--a200:#e7d6ff;--a400:#b784e6"><input type="checkbox" checked disabled><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Purple</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#0e9888;--cdf:#99dfd7;--a100:#e6f7f5;--a300:#99dfd7;--a700:#0c7f72;--a50:#f2fbfa;--a200:#ccefeb;--a400:#66c7be"><input type="checkbox" checked disabled><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Bronze Green</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#009fc5;--cdf:#99e1ff;--a100:#e6f7ff;--a300:#99e1ff;--a700:#009fc5;--a50:#f2fbff;--a200:#ccf0ff;--a400:#66d1f5"><input type="checkbox" checked disabled><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Light Blue</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#da4224;--cdf:#ffb5a7;--a100:#ffedea;--a300:#ffb5a7;--a700:#b7371e;--a50:#fff7f5;--a200:#ffdad3;--a400:#f28a7b"><input type="checkbox" checked disabled><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Red</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#e9be00;--cdf:#ffda57;--a100:#fff5d7;--a300:#ffe790;--a700:#7d6600;--a50:#fff9e7;--a200:#ffefb6;--a400:#cda700"><input type="checkbox" checked disabled><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Yellow</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#3f8e50;--cdf:#a7dfb8;--a100:#e9f7ed;--a300:#a7dfb8;--a700:#3f8e50;--a50:#f4fbf6;--a200:#d3efdb;--a400:#74c796"><input type="checkbox" checked disabled><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Green</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#ed5f00;--cdf:#ffc099;--a100:#ffefe6;--a300:#ffc099;--a700:#c74f00;--a50:#fff7f2;--a200:#ffdfcc;--a400:#f79a66"><input type="checkbox" checked disabled><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Orange</span></span></label></div>
+            <p class="docs-demo__caption">Selected · Disabled &mdash; lighter tint ({Accent}/50 fill, /200 border, /400 label).</p></div>
+        </section>
+
+        <section id="usage">
+          <h2>Common layouts</h2>
+          <p>Bare check-boxes for table rows, Checkbox-inline in menus and forms, chips in filter bars, and accent chips
+            as chart legends that double as filters.</p>
+          <div class="bx-usage">
+            <figure>
+              <div class="bx-mock"><div class="cb-card" data-cbx-group style="max-width:420px;padding:0;overflow:hidden"><table class="cb-tbl"><thead><tr><th style="width:24px"><label class="cbx cbx--bare cbx--14"><input type="checkbox" aria-label="Select all rows" data-cbx-all><span class="cbx__box" aria-hidden="true"></span></label></th><th>Product</th><th>Category</th><th>Price</th></tr></thead><tbody><tr><td><label class="cbx cbx--bare cbx--14"><input type="checkbox" aria-label="Select Lay’s Classic 52g" data-cbx-item><span class="cbx__box" aria-hidden="true"></span></label></td><td>Lay’s Classic 52g</td><td>Snacks</td><td>₹20</td></tr><tr><td><label class="cbx cbx--bare cbx--14"><input type="checkbox" checked aria-label="Select Amul Taaza 1L" data-cbx-item><span class="cbx__box" aria-hidden="true"></span></label></td><td>Amul Taaza 1L</td><td>Dairy</td><td>₹68</td></tr><tr><td><label class="cbx cbx--bare cbx--14"><input type="checkbox" aria-label="Select Coca-Cola 750ml" data-cbx-item><span class="cbx__box" aria-hidden="true"></span></label></td><td>Coca-Cola 750ml</td><td>Beverages</td><td>₹40</td></tr></tbody></table></div></div>
+              <figcaption><b>Table row selection</b>Check-box · 14 &mdash; the header checkbox selects all rows and shows a dash when only some are selected.</figcaption>
+            </figure>
+            <figure>
+              <div class="bx-mock"><div class="cb-menu"><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Snacks</span></span></label><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Beverages</span></span></label><label class="cbx cbx--inline cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Dairy</span></span></label><label class="cbx cbx--inline cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Personal care</span></span></label><label class="cbx cbx--inline cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Home care</span></span></label><hr><label class="cbx cbx--inline cbx--m"><input type="checkbox" disabled><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Baby care</span></span><svg class="cbx__lock" viewBox="0 0 256 256" aria-hidden="true"><path d="M208 80h-32V56a48 48 0 0 0-96 0v24H48a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16ZM96 56a32 32 0 0 1 64 0v24H96Z"/></svg></label></div></div>
+              <figcaption><b>Dropdown multi-select</b>Checkbox-inline · Medium &mdash; one row per option; unavailable options stay visible, disabled with a lock.</figcaption>
+            </figure>
+            <figure>
+              <div class="bx-mock"><div class="cb-card"><p class="cb-card__t">Sales by platform</p><div class="cb-wrap"><label class="cbx cbx--chip cbx--m" style="--cf:#cb378e;--cdf:#f5a9ce;--a100:#ffeaf3;--a300:#f5a9ce;--a700:#a92e76;--a50:#fff5f9;--a200:#ffd6e7;--a400:#e67cb5"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Flipkart</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#8b37be;--cdf:#cfadff;--a100:#f3ebff;--a300:#cfadff;--a700:#742e9f;--a50:#faf5ff;--a200:#e7d6ff;--a400:#b784e6"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Amazon</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#ed5f00;--cdf:#ffc099;--a100:#ffefe6;--a300:#ffc099;--a700:#c74f00;--a50:#fff7f2;--a200:#ffdfcc;--a400:#f79a66"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>JioMart</span></span></label></div></div></div>
+              <figcaption><b>Chart legend filter</b>Checkbox-chip-accent &mdash; each chip’s colour matches its chart series.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="dos-donts">
+          <h2>Do’s and don’ts</h2>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="cb-col"><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Email me weekly reports</span></span></label><label class="cbx cbx--inline cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Include out-of-stock SKUs</span></span></label></div></div>
+              <p class="docs-dodont__cap">Write labels as a clear statement that is true when checked.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="cb-col"><label class="cbx cbx--inline cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Don’t exclude inactive SKUs</span></span></label><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>No weekly emails</span></span></label></div></div>
+              <p class="docs-dodont__cap">Don’t use negative labels &mdash; “checked” should never mean “no”.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="cb-col"><label class="cbx cbx--radio cbx--inline cbx--m"><input type="radio" name="dd1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Daily</span></span></label><label class="cbx cbx--radio cbx--inline cbx--m"><input type="radio" name="dd1" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Weekly</span></span></label><label class="cbx cbx--radio cbx--inline cbx--m"><input type="radio" name="dd1"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Monthly</span></span></label></div></div>
+              <p class="docs-dodont__cap">Use radios when only one option can be picked.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="cb-col"><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Daily</span></span></label><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Weekly</span></span></label><label class="cbx cbx--inline cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Monthly</span></span></label></div></div>
+              <p class="docs-dodont__cap">Don’t use checkboxes for mutually exclusive options.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="cb-col" data-cbx-group><label class="cbx cbx--inline cbx--m"><input type="checkbox" data-cbx-all><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>All categories</span></span></label><div class="cb-col" style="padding-left:18px"><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked data-cbx-item><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Snacks</span></span></label><label class="cbx cbx--inline cbx--m"><input type="checkbox" data-cbx-item><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Dairy</span></span></label></div></div></div>
+              <p class="docs-dodont__cap">Show Intermediate on a parent when only some children are selected.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="cb-col"><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>All categories</span></span></label><div class="cb-col" style="padding-left:18px"><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Snacks</span></span></label><label class="cbx cbx--inline cbx--m"><input type="checkbox"><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Dairy</span></span></label></div></div></div>
+              <p class="docs-dodont__cap">Don’t show the parent as fully checked when some children aren’t.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="cb-col"><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Snacks</span></span></label><label class="cbx cbx--inline cbx--m"><input type="checkbox" disabled><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Baby care</span></span><span class="cbx__pro"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.6 2.2h4.8L10.6 5 6 10.2 1.4 5z" fill="#fff"/></svg></span><svg class="cbx__lock" viewBox="0 0 256 256" aria-hidden="true"><path d="M208 80h-32V56a48 48 0 0 0-96 0v24H48a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16ZM96 56a32 32 0 0 1 64 0v24H96Z"/></svg></label></div></div>
+              <p class="docs-dodont__cap">Disable unavailable options, add Locked and a tooltip with the reason.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="cb-col"><label class="cbx cbx--inline cbx--m"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Snacks</span></span></label></div></div>
+              <p class="docs-dodont__cap">Don’t hide options people can’t use &mdash; they won’t know they exist.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="cb-wrap"><label class="cbx cbx--chip cbx--m" style="--cf:#cb378e;--cdf:#f5a9ce;--a100:#ffeaf3;--a300:#f5a9ce;--a700:#a92e76;--a50:#fff5f9;--a200:#ffd6e7;--a400:#e67cb5"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Flipkart</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#8b37be;--cdf:#cfadff;--a100:#f3ebff;--a300:#cfadff;--a700:#742e9f;--a50:#faf5ff;--a200:#e7d6ff;--a400:#b784e6"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Amazon</span></span></label></div></div>
+              <p class="docs-dodont__cap">Use accent chips only when each colour matches a chart series.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="cb-wrap"><label class="cbx cbx--chip cbx--m" style="--cf:#3f8e50;--cdf:#a7dfb8;--a100:#e9f7ed;--a300:#a7dfb8;--a700:#3f8e50;--a50:#f4fbf6;--a200:#d3efdb;--a400:#74c796"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>New</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#ed5f00;--cdf:#ffc099;--a100:#ffefe6;--a300:#ffc099;--a700:#c74f00;--a50:#fff7f2;--a200:#ffdfcc;--a400:#f79a66"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Sale</span></span></label><label class="cbx cbx--chip cbx--m" style="--cf:#8b37be;--cdf:#cfadff;--a100:#f3ebff;--a300:#cfadff;--a700:#742e9f;--a50:#faf5ff;--a200:#e7d6ff;--a400:#b784e6"><input type="checkbox" checked><span class="cbx__box" aria-hidden="true"></span><span class="cbx__lbl"><span>Top 10</span></span></label></div></div>
+              <p class="docs-dodont__cap">Don’t use accent colours as decoration &mdash; use the base Checkbox-chip.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="content">
+          <h2>Writing content</h2>
+          <ul>
+            <li><strong>Labels</strong> &mdash; short and positive, sentence case: “Include out-of-stock SKUs”, not “Don’t exclude…”.</li>
+            <li><strong>Parallel</strong> &mdash; options in one list are the same kind of thing (all categories, all platforms).</li>
+            <li><strong>Order</strong> &mdash; most-used first, or a natural order (alphabetical for long lists).</li>
+            <li><strong>One line</strong> &mdash; labels truncate with an ellipsis; put extra detail in the Info tooltip, not the label.</li>
+            <li><strong>Locked</strong> &mdash; the tooltip says why and how to get access: “Available on the Pro plan”.</li>
+          </ul>
+        </section>
+
+        <section id="behavior">
+          <h2>Behavior &amp; accessibility</h2>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>What to do</th></tr></thead><tbody>
+              <tr><td>Click target</td><td>The whole row (inline) or chip is clickable, not just the 14 / 16px box.</td></tr>
+              <tr><td>Independent</td><td>Each checkbox toggles on its own. Zero, one or many can be selected.</td></tr>
+              <tr><td>Intermediate</td><td>Only on a parent. Click → selects all children; click again → clears them. It is set from code (<code>input.indeterminate</code>), never by the user directly.</td></tr>
+              <tr><td>Apply</td><td>In forms, values save with the form’s button. In filter bars, apply on change (or with an Apply button for slow queries).</td></tr>
+              <tr><td>Semantics</td><td>A native <code>&lt;input type=&quot;checkbox&quot;&gt;</code> inside its <code>&lt;label&gt;</code>. Bare check-boxes need an <code>aria-label</code> (e.g. “Select row: Amul Taaza 1L”). Group related ones in a <code>fieldset</code> + <code>legend</code>.</td></tr>
+              <tr><td>Keyboard</td><td><kbd>Tab</kbd> moves between checkboxes; <kbd>Space</kbd> toggles. Disabled checkboxes are skipped.</td></tr>
+              <tr><td>Focus</td><td>Show a visible 2px Primary/600 focus ring around the box (inline) or the chip.</td></tr>
+            </tbody></table></div>
+          <p>Every exact value &mdash; dimensions, colour tokens and the full property list &mdash; is on the
+            <a href="docs-checkbox-specifications.html">Specifications tab</a>.</p>
+        </section>
+<script src="assets/js/checkbox.js"></script>
+<script>
+(function(){
+  function upd(){
+    var out = document.querySelector('[data-cb-out]');
+    if(!out) return;
+    var cat = document.querySelectorAll('[data-cb-demo="cat"] input[data-cbx-item]:checked').length;
+    var pl = document.querySelectorAll('[data-cb-demo="plat"] input:checked').length;
+    out.textContent = cat + ' of 4 categories · ' + pl + (pl === 1 ? ' platform' : ' platforms') + ' selected';
+  }
+  document.addEventListener('change', function(e){ if(e.target.closest('[data-cb-demo]')) upd(); });
+})();
+</script>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/controls-checkbox--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 1.5 12.6 1a.5.5 0 0 1 .53.5v13a.5.5 0 0 1-.53.5L3 14.5a.5.5 0 0 1-.5-.5V2a.5.5 0 0 1 .5-.5zm6.3 3.2c0-.2.2-.4.4-.4.3 0 .5.1.7.3l.3-.4c-.3-.3-.6-.4-1-.4-.6 0-1 .4-1 .9 0 1 1.5.8 1.5 1.2 0 .2-.2.3-.4.3-.4 0-.6-.2-.8-.4l-.4.4c.3.3.7.5 1.2.5.6 0 1-.4 1-.9 0-1-1.5-.8-1.5-1.2z"/></svg>Storybook</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7167-46592" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5.5 1.5h2.5v4H5.5a2 2 0 0 1 0-4zM8 1.5h2.5a2 2 0 0 1 0 4H8zM5.5 5.5H8v4H5.5a2 2 0 0 1 0-4zM8 7.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM5.5 9.5H8v2a2 2 0 1 1-2.5-1.94z"/></svg>Figma</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#at-a-glance" aria-current="true">At a glance</a></li>
+        <li><a href="#when">When to use</a></li>
+        <li><a href="#anatomy">Anatomy</a></li>
+        <li><a href="#family">Component family</a></li>
+        <li><a href="#checkbox">Check-box</a></li>
+        <li><a href="#inline">Checkbox-inline</a></li>
+        <li><a href="#chip">Checkbox-chip</a></li>
+        <li><a href="#accent">Accent colours</a></li>
+        <li><a href="#usage">Common layouts</a></li>
+        <li><a href="#dos-donts">Do’s and don’ts</a></li>
+        <li><a href="#content">Writing content</a></li>
+        <li><a href="#behavior">Behavior &amp; accessibility</a></li>
+      </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
+})();
+</script>

@@ -26,7 +26,7 @@
     <details open>
       <summary>Getting started</summary>
       <ul>
-        <li><a href="#">About Cube</a></li>
+        <li><a aria-current="true" href="#">About Cube</a></li>
         <li><a href="#">Designing</a></li>
         <li><a href="#">Developing</a></li>
         <li><a href="#">Contributing</a></li>
@@ -60,7 +60,14 @@
         <li><a href="docs-messages.html">Message</a></li>
         <li><a href="docs-popup.html">Popup</a></li>
         <li><a href="docs-overlays.html">Right Overlays</a></li>
-        <li><a href="docs-selection.html">Selections</a></li>
+        <li class="docs-nav__group"><span class="docs-nav__parent">Selections</span>
+          <ul class="docs-nav__sub">
+            <li><a href="docs-selection.html">Selection-group</a></li>
+            <li><a href="docs-segmented.html">Segmented-controls</a></li>
+            <li><a href="docs-checkbox.html">Checkbox</a></li>
+            <li><a href="docs-radio.html">Radio</a></li>
+          </ul>
+        </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
@@ -99,148 +106,104 @@
 
   <!-- ============ Content ============ -->
   <div class="docs-body">
-      <div class="docs-top">
+      <div class="docs-split">
+    <main class="docs-main">
       <div class="docs-title">
         <p class="docs-title__crumb"><a href="#">Components</a></p>
         <div class="docs-title__head">
           <h1>Tooltip</h1>
           <span class="docs-badge">Stable</span>
-          <span class="docs-meta">Last updated Sep 2026</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
         </div>
-        <p class="docs-title__desc">Two tooltips: a <strong>Standard Tooltip</strong> for a short line of
-          supplementary text, and a <strong>Standard Trendline Tooltip</strong> — a small dark data card built
-          from three components (header, table, footer). Everything past that point on this page is an
-          example of the Trendline tooltip's own components assembled for one dashboard situation, not a
-          separate component.</p>
-      </div>
-      <aside class="docs-res" aria-label="Resources">
-        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
-        <p class="docs-res__title">Cube Core</p>
-        <a href="https://storybook.gobblecube.ai/?path=/docs/overlays-tooltip-tooltip--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 1.5 12.6 1a.5.5 0 0 1 .53.5v13a.5.5 0 0 1-.53.5L3 14.5a.5.5 0 0 1-.5-.5V2a.5.5 0 0 1 .5-.5zm6.3 3.2c0-.2.2-.4.4-.4.3 0 .5.1.7.3l.3-.4c-.3-.3-.6-.4-1-.4-.6 0-1 .4-1 .9 0 1 1.5.8 1.5 1.2 0 .2-.2.3-.4.3-.4 0-.6-.2-.8-.4l-.4.4c.3.3.7.5 1.2.5.6 0 1-.4 1-.9 0-1-1.5-.8-1.5-1.2z"/></svg>Storybook</a>
-        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=1366-102710" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5.5 1.5h2.5v4H5.5a2 2 0 0 1 0-4zM8 1.5h2.5a2 2 0 0 1 0 4H8zM5.5 5.5H8v4H5.5a2 2 0 0 1 0-4zM8 7.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM5.5 9.5H8v2a2 2 0 1 1-2.5-1.94z"/></svg>Figma</a>
-      </aside>
+        <p class="docs-title__desc">A <strong>Standard Tooltip</strong> gives a short line of extra text; a <strong>Trendline Tooltip</strong> is a small dark card with the exact numbers behind a chart mark. The <a href="docs-tooltips-specifications.html">Specifications tab</a> lists every value.</p>
       </div>
       <div class="docs-tabs" role="tablist" aria-label="Page sections">
         <a href="docs-tooltips.html" role="tab">Guidelines</a>
         <a href="docs-tooltips-specifications.html" role="tab" aria-selected="true">Specifications</a>
-        <a href="#" role="tab">Code</a>
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
+          Code
+          <span class="sr-only">(not in Storybook yet)</span>
+        </a>
         <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
-          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
           Accessibility
           <span class="sr-only">(coming soon)</span>
         </a>
       </div>
-      <div class="docs-split">
-    <main class="docs-main">
-      <article class="docs-content">
+      <article class="docs-content docs-content--inp docs-content--spec">
 
-        <!-- ============ Color ============ -->
-        <section id="color">
-          <h2>Color</h2>
-          <p>Both tooltip families are a fixed dark surface regardless of site theme — a tooltip reads as a small
-            piece of floating UI, not a themed page element.</p>
-          <table class="docs-table">
-            <thead><tr><th>Token</th><th>Value</th><th>Used for</th></tr></thead>
-            <tbody>
-              <tr><td class="docs-swatch-row"><span class="docs-swatch-row__chip" style="background:#101214"></span> Surface (hover)</td><td><code>#101214</code></td><td>Standard Tooltip background</td></tr>
-              <tr><td class="docs-swatch-row"><span class="docs-swatch-row__chip" style="background:#1c1e1f"></span> Surface (card)</td><td><code>#1c1e1f</code></td><td>Standard Trendline Tooltip background</td></tr>
-              <tr><td class="docs-swatch-row"><span class="docs-swatch-row__chip" style="background:#363e45"></span> Border</td><td><code>#363e45</code></td><td>Card border, header/footer rule, cell dividers</td></tr>
-              <tr><td class="docs-swatch-row"><span class="docs-swatch-row__chip" style="background:#ffffff"></span> Text — primary</td><td><code>#ffffff</code></td><td>Hover title, trendline title, cell values</td></tr>
-              <tr><td class="docs-swatch-row"><span class="docs-swatch-row__chip" style="background:#dbdfe4"></span> Text — muted (hover)</td><td><code>#dbdfe4</code></td><td>Standard Tooltip body text</td></tr>
-              <tr><td class="docs-swatch-row"><span class="docs-swatch-row__chip" style="background:#bfc5cf"></span> Text — muted (card)</td><td><code>#bfc5cf</code></td><td>Subtitle, column headers, footer info</td></tr>
-              <tr><td class="docs-swatch-row"><span class="docs-swatch-row__chip" style="background:#5ab57a"></span> Delta — positive</td><td><code>#5ab57a</code></td><td>Gain, always paired with a leading <code>+</code></td></tr>
-              <tr><td class="docs-swatch-row"><span class="docs-swatch-row__chip" style="background:#e34d4d"></span> Delta — negative</td><td><code>#e34d4d</code></td><td>Loss, always paired with a leading <code>&minus;</code></td></tr>
-            </tbody>
-          </table>
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>All values in px. The examples reuse these components, so they inherit this spec unchanged.</p>
+          <h3>Standard Tooltip</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Padding</td><td>6 / 8</td><td></td></tr><tr><td>Radius</td><td>6</td><td></td></tr><tr><td>Icon</td><td>14</td><td>4px from the text</td></tr><tr><td>Gap: header, text, action</td><td>6</td><td></td></tr><tr><td>Width</td><td>Hugs its text (Multi-line No), or 240 fixed (Yes)</td><td>Single-line has no width cap in Figma; keep it short</td></tr><tr><td>Gaps</td><td>Icon to text 4; header, body and button 6</td><td></td></tr></tbody></table></div>
+          <h3>Trendline Tooltip</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Column width</td><td>118 first, 100 others</td><td>The card is as wide as its columns</td></tr><tr><td>Radius</td><td>8</td><td></td></tr><tr><td>Border</td><td>1</td><td></td></tr><tr><td>Header padding</td><td>6 / 10</td><td></td></tr><tr><td>Cell padding</td><td>6 / 10</td><td>Cells divided by 1px lines</td></tr><tr><td>Footer padding</td><td>8 / 10</td><td></td></tr><tr><td>Colour legend</td><td>8, radius 2</td><td>4px from the label</td></tr></tbody></table></div>
+          <h3>Placement</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th></tr></thead><tbody><tr><td>Offset</td><td>8 from the trigger or cursor</td></tr><tr><td>Position</td><td>Never covers the mark it describes</td></tr><tr><td>Edge</td><td>Flips to the other side before leaving the viewport</td></tr><tr><td>Bottom clearance</td><td>At least 16</td></tr></tbody></table></div>
         </section>
-
-        <!-- ============ Interactive state color ============ -->
-        <section id="interactive-state-color">
-          <h2>Interactive state color</h2>
-          <p>The only interactive elements inside a tooltip are its optional action buttons — "View SKU",
-            "Button", "Click to expand." Both families share the same two states.</p>
-          <table class="docs-table">
-            <thead><tr><th>Element</th><th>Default</th><th>Hover / focus</th></tr></thead>
-            <tbody>
-              <tr><td>Hover tooltip action button</td><td><code>#e3e7ea</code></td><td><code>#ffffff</code></td></tr>
-              <tr><td>Trendline card action button</td><td><code>#e3e7ea</code></td><td><code>#ffffff</code></td></tr>
-            </tbody>
-          </table>
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <p>Both tooltips are a fixed dark surface in light and dark themes.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Value</th><th>Used for</th></tr></thead><tbody><tr><td>Surface: standard</td><td><span class="msg-sw" style="background:#101214"></span>#101214</td><td>Standard Tooltip background</td></tr><tr><td>Surface: card</td><td><span class="msg-sw" style="background:#1c1e1f"></span>#1c1e1f</td><td>Trendline Tooltip background</td></tr><tr><td>Border</td><td><span class="msg-sw" style="background:#363e45"></span>#363e45</td><td>Card border, header and footer rule, cell dividers</td></tr><tr><td>Text: primary</td><td><span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Standard header, card title</td></tr><tr><td>Text: value</td><td><span class="msg-sw" style="background:#f5f5f8"></span>#f5f5f8</td><td>Cell values</td></tr><tr><td>Icon (standard)</td><td><span class="msg-sw" style="background:#bfc5cf"></span>#bfc5cf</td><td>Standard Tooltip icon</td></tr><tr><td>Text: muted (standard)</td><td><span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td>Standard Tooltip body text</td></tr><tr><td>Text: muted (card)</td><td><span class="msg-sw" style="background:#bfc5cf"></span>#bfc5cf</td><td>Sub-text, column headers, footer info</td></tr><tr><td>Delta: positive</td><td><span class="msg-sw" style="background:#5ab57a"></span>#5ab57a</td><td>A gain, always with a leading +</td></tr><tr><td>Delta: negative</td><td><span class="msg-sw" style="background:#e34d4d"></span>#e34d4d</td><td>A loss, always with a leading &minus;</td></tr><tr><td>Action button</td><td><span class="msg-sw" style="background:#e3e7ea"></span>#e3e7ea &rarr; <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Default, then hover and focus</td></tr></tbody></table></div>
         </section>
-
-        <!-- ============ Typography ============ -->
         <section id="typography">
           <h2>Typography</h2>
-          <table class="docs-table">
-            <thead><tr><th>Element</th><th>Size</th><th>Weight</th></tr></thead>
-            <tbody>
-              <tr><td>Hover tooltip — header</td><td>12px</td><td>500</td></tr>
-              <tr><td>Hover tooltip — body text</td><td>12px</td><td>400</td></tr>
-              <tr><td>Trendline card — title</td><td>12px</td><td>700</td></tr>
-              <tr><td>Trendline card — subtitle</td><td>10px</td><td>500</td></tr>
-              <tr><td>Table cell — header</td><td>10px</td><td>500</td></tr>
-              <tr><td>Table cell — value</td><td>10px</td><td>600</td></tr>
-              <tr><td>Delta</td><td>10px</td><td>600</td></tr>
-              <tr><td>Footer info (italic)</td><td>10px</td><td>400</td></tr>
-              <tr><td>Footer / action button</td><td>10&ndash;12px</td><td>600</td></tr>
-            </tbody>
-          </table>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Size</th><th>Weight</th></tr></thead><tbody><tr><td>Standard: header</td><td>12</td><td>Medium 500</td></tr><tr><td>Standard: body</td><td>12</td><td>Regular 400</td></tr><tr><td>Card title</td><td>12 / 16</td><td>SemiBold 600</td></tr><tr><td>Card sub-text</td><td>10</td><td>Medium 500</td></tr><tr><td>Column header</td><td>10</td><td>Medium 500</td></tr><tr><td>Value</td><td>10</td><td>SemiBold 600</td></tr><tr><td>Delta</td><td>10</td><td>SemiBold 600</td></tr><tr><td>Footer info</td><td>10, italic</td><td>Regular 400</td></tr><tr><td>Action and footer button</td><td>10 to 12</td><td>SemiBold 600</td></tr></tbody></table></div>
         </section>
-
-        <!-- ============ Structure ============ -->
-        <section id="structure">
-          <h2>Structure</h2>
-          <p>Every example in the <a href="docs-tooltips.html#examples">Examples</a> section is these same
-            components, so it inherits this spec unchanged — none of them override padding, radius or border.</p>
-          <h3>Standard Tooltip</h3>
-          <table class="docs-table">
-            <thead><tr><th>Property</th><th>Value</th></tr></thead>
-            <tbody>
-              <tr><td>Padding</td><td>6px 8px</td></tr>
-              <tr><td>Border radius</td><td>6px</td></tr>
-              <tr><td>Icon size</td><td>14px</td></tr>
-              <tr><td>Icon-to-body gap</td><td>4px</td></tr>
-              <tr><td>Fixed width (wrapping variant)</td><td>240px</td></tr>
-            </tbody>
-          </table>
-          <h3>Standard Trendline Tooltip</h3>
-          <table class="docs-table">
-            <thead><tr><th>Property</th><th>Value</th></tr></thead>
-            <tbody>
-              <tr><td>Min-width</td><td>160px</td></tr>
-              <tr><td>Border radius</td><td>8px</td></tr>
-              <tr><td>Border width</td><td>1px</td></tr>
-              <tr><td>Header padding</td><td>6px 10px</td></tr>
-              <tr><td>Cell padding</td><td>6px 10px</td></tr>
-              <tr><td>Footer padding</td><td>8px 10px</td></tr>
-              <tr><td>Color-legend swatch</td><td>8px, 2px radius</td></tr>
-            </tbody>
-          </table>
+        <section id="properties">
+          <h2>Properties</h2>
+          <h3>Tooltip/Standard-hover-tooltip</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Multi-line</td><td>No | Yes</td><td>No</td><td>Yes fixes the width at 240 so text wraps.</td></tr><tr><td>Icon &middot; Icons</td><td>true | false &middot; icon</td><td>false &middot; Info</td><td>Swap the icon with Icons.</td></tr><tr><td>Header</td><td>true | false</td><td>false</td><td></td></tr><tr><td>Button</td><td>true | false</td><td>false</td><td>A Naked Neutral button, Medium, Dark.</td></tr><tr><td>Cursor Pointer</td><td>true | false</td><td>false</td><td>Shows the pointer in mock-ups only.</td></tr></tbody></table></div>
+          <h3>Tooltip/Standard-trendline-tooltip</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Show header</td><td>true | false</td><td>true</td><td></td></tr><tr><td>Show Column Headers</td><td>true | false</td><td>true</td><td></td></tr><tr><td>2nd row &middot; More rows</td><td>true | false</td><td>false</td><td></td></tr><tr><td>3rd Column &middot; More Columns</td><td>true | false</td><td>false</td><td></td></tr><tr><td>Show Footer</td><td>true | false</td><td>false</td><td></td></tr><tr><td>Cursor Pointor</td><td>true | false</td><td>true</td><td>Spelled “Pointor” in Figma. Mock-ups only.</td></tr></tbody></table></div>
+          <h3>Sub-components</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>Property</th><th>Values</th><th>Default</th></tr></thead><tbody><tr><td>.Tooltip-header</td><td>Heading &middot; Description</td><td>true | false</td><td>true &middot; true</td></tr><tr><td>.Tooltip-table-cell</td><td>Property 1</td><td>Header | Cell</td><td>Header</td></tr><tr><td>.Tooltip-table-cell</td><td>Align</td><td>Left &larr; | Right &rarr;</td><td>Left</td></tr><tr><td>.Tooltip-table-cell</td><td>Primary Value &middot; Show Color-legend &middot; Show Delta</td><td>true | false</td><td>true &middot; false &middot; false</td></tr><tr><td>.Tooltip-footer</td><td>Show Information &middot; Show Button</td><td>true | false</td><td>true &middot; true</td></tr></tbody></table></div>
         </section>
-
-        <!-- ============ Default placement ============ -->
-        <section id="default-placement">
-          <h2>Default placement</h2>
-          <p>A tooltip is positioned near the pointer or the focused anchor, offset just far enough that it never
-            covers the mark, row or region it is describing. It flips to the opposite side of its anchor before it
-            would run past the viewport edge, and keeps a minimum 16px clearance from the bottom of the page at
-            every position.</p>
+        <section id="api">
+          <h2>API and behavior</h2>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Rule</th><th>Notes</th></tr></thead><tbody><tr><td>Trigger</td><td>Hover of the anchor; focus for the Standard Tooltip</td><td>Show without delay</td></tr><tr><td>Dismiss</td><td>Pointer leaves the anchor, or Esc</td><td></td></tr><tr><td>Semantics</td><td><code>role="tooltip"</code> + <code>aria-describedby</code></td><td>Nothing focusable inside a true tooltip</td></tr><tr><td>Interactive content</td><td>Button or “Click to expand”</td><td>The same action must work from the anchor by keyboard and tap</td></tr><tr><td>Data</td><td>Never the only place a number lives</td><td>Also in a legend, export or detail view</td></tr></tbody></table></div>
         </section>
-
+        <section id="examples">
+          <h2>Examples</h2>
+          <h3>Platform breakdown</h3>
+          <div class="msg-stage" style="justify-content:center"><div class="tt-card"><div class="tt-card__header"><p class="tt-card__title">06 Apr’26</p><p class="tt-card__subtitle">(vs Last Day)</p></div><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">Platform</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Offtake</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#3aa0ff"></span>All Platforms</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span> <span class="tt-delta tt-delta--pos">+52.3%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#f2b84b"></span>Blinkit</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span> <span class="tt-delta tt-delta--pos">+65.8%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#ff5b33"></span>Instamart</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span> <span class="tt-delta tt-delta--neg">-18.9%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#7c3aed"></span>Zepto</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">39.6 L</span> <span class="tt-delta tt-delta--pos">+90.1%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#9ca33c"></span>BB Now</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span> <span class="tt-delta tt-delta--pos">+55.4%</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell"><span class="tt-legend" style="background:#17a398"></span>FK minutes</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">15.9 L</span> <span class="tt-delta tt-delta--pos">+55.4%</span></div></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>Setting</th><th>Notes</th></tr></thead><tbody><tr><td>Tooltip-header</td><td>Title + Sub-text</td><td>“06 Apr’26 (vs Last Day)”</td></tr><tr><td>Tooltip-table-cell</td><td>Header row; Legend + Value + Delta</td><td>One row per platform</td></tr><tr><td>Tooltip-footer</td><td>Off</td><td></td></tr></tbody></table></div>
+          <h3>Drill-down</h3>
+          <div class="msg-stage" style="justify-content:center"><div class="tt-card"><div class="tt-card__table" role="table"><div class="tt-row" role="row"><div class="tt-cell tt-cell--head" role="columnheader">City</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">Wt. OSA%</div><div class="tt-cell tt-cell--head tt-cell--right" role="columnheader">DS Listing %</div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Delhi</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">3.2 Cr</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Gurgaon</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">80.5 L</span></div></div><div class="tt-row" role="row"><div class="tt-cell" role="cell">Noida</div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div><div class="tt-cell tt-cell--right" role="cell"><span class="tt-value">55.8 L</span></div></div></div><div class="tt-card__footer"><p class="tt-card__footer-info">Click to expand</p></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>Setting</th><th>Notes</th></tr></thead><tbody><tr><td>Tooltip-header</td><td>Off</td><td></td></tr><tr><td>Tooltip-table-cell</td><td>Header row; Value only</td><td>Three columns</td></tr><tr><td>Tooltip-footer</td><td>Info “Click to expand”</td><td>Also opens from the anchor with Enter</td></tr></tbody></table></div>
+        </section>
+        <section id="related">
+          <h2>Related components</h2>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>Use it instead when</th></tr></thead><tbody><tr><td><a href="docs-overlays.html">Right Overlay</a></td><td>The content is a long table, needs scrolling or has several actions.</td></tr><tr><td><a href="docs-popup.html">Popup</a></td><td>The user must decide something before continuing.</td></tr><tr><td><a href="docs-messages.html">Message</a></td><td>The note must stay visible next to the content.</td></tr></tbody></table></div>
+        </section>
+        <section id="source">
+          <h2>Source</h2>
+          <p>Values come from the <strong>Tooltip — Documentation</strong> frames in the Cube Core Figma file (Anatomy, Property, Color Annotation, Dimensions, API, Usage Guidelines) and the live <strong>Tooltips</strong> components. Figma has no “How to use” frame for Tooltip.</p>
+          <p class="docs-note">Where Figma disagrees with itself (this site follows the component): the trendline fill #1c1e1f isn’t bound to a token. The API writes Align as “Left- | Right -&gt;”; the values are “Left &lt;-” and “Right -&gt;”. The footer property is “Show Information ” with a trailing space, and the default footer text is misspelled “Informartion”; “Cursor Pointor” is also misspelled. The standalone .Tooltip-header uses padding 8 / 10 and Bold 12, but inside the trendline it is 6 / 10 and SemiBold 12/16 (used here). The cell’s default delta points down (red) while the docs show green. The doc lists the templates as one set, but on the canvas they are separate components. Single-line hover tooltips have no maximum width.</p>
+        </section>
       </article>
     </main>
-
-    <!-- ============ On this page ============ -->
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=1366-102710" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
     <aside class="docs-toc" aria-label="On this page">
       <p class="docs-toc__title">On this page</p>
       <ul>
-        <li><a href="#color">Color</a></li>
-        <li><a href="#interactive-state-color">Interactive state color</a></li>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
         <li><a href="#typography">Typography</a></li>
-        <li><a href="#structure">Structure</a></li>
-        <li><a href="#default-placement">Default placement</a></li>
-      </ul>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#api">API and behavior</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#related">Related components</a></li>
+        <li><a href="#source">Source</a></li>
+        </ul>
     </aside>
+    </div>
       </div>
   </div>
 

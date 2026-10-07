@@ -60,7 +60,14 @@
         <li><a href="docs-messages.html">Message</a></li>
         <li><a href="docs-popup.html">Popup</a></li>
         <li><a href="docs-overlays.html">Right Overlays</a></li>
-        <li><a href="docs-selection.html">Selections</a></li>
+        <li class="docs-nav__group"><span class="docs-nav__parent">Selections</span>
+          <ul class="docs-nav__sub">
+            <li><a href="docs-selection.html">Selection-group</a></li>
+            <li><a href="docs-segmented.html">Segmented-controls</a></li>
+            <li><a href="docs-checkbox.html">Checkbox</a></li>
+            <li><a href="docs-radio.html">Radio</a></li>
+          </ul>
+        </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
@@ -124,8 +131,8 @@
           <div class="docs-demo" style="flex-direction:column; align-items:stretch; gap:4px">
             <p style="margin:0; font-family:'Cube Rupee','DM Sans',sans-serif; font-weight:600; font-size:28px; line-height:36px; letter-spacing:-0.1px; color:var(--ink)">Wt. Discount % is trending down</p>
             <p style="margin:0; font-family:'Cube Rupee','DM Sans',sans-serif; font-weight:500; font-size:14px; line-height:18px; color:var(--ink-2)">B2 / Medium &mdash; the size for large controls: a Large button, tab or input.</p>
+            <p class="docs-demo__caption" style="margin-top:20px">H3 (28/36, Semibold) over B2 / Medium (14/18) &mdash; a metric headline over its supporting line. Every sample on this page uses the real text styles.</p>
           </div>
-          <p class="docs-demo__caption">H3 (28/36, Semibold) over B2 / Medium (14/18) &mdash; a metric headline over its supporting line. Every sample on this page uses the real text styles.</p>
         </section>
 
         <!-- ============ Overview ============ -->
@@ -214,7 +221,7 @@
           <h2>Which style do I use?</h2>
           <p>Find the job, use the style. Based on how the existing components are built &mdash; following it keeps new
             screens consistent.</p>
-          <table class="docs-table type-table">
+          <table class="docs-table type-table ty-scale">
             <thead><tr><th>Role</th><th>Text style</th><th>Sample</th><th>Where</th></tr></thead>
             <tbody>
               <tr><td>Page title</td><td><code>Heading/H4</code></td><td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:24px; line-height:32px">Revenue overview</p></td><td>Top of a page</td></tr>
@@ -257,7 +264,7 @@
             bound to each value.</p>
           <h3>Heading</h3>
           <p>Page and section titles. All Semibold (H6 also has a Medium version).</p>
-          <table class="docs-table type-table">
+          <table class="docs-table type-table ty-scale">
             <thead><tr><th>Style</th><th>Sample</th><th>Size / line-height</th><th>Letter-spacing</th></tr></thead>
             <tbody>
               <tr>
@@ -306,7 +313,7 @@
           </table>
           <h3>Body</h3>
           <p>Content, labels, values, buttons. B3 (12px) is the workhorse of the product.</p>
-          <table class="docs-table type-table">
+          <table class="docs-table type-table ty-scale">
             <thead><tr><th>Style</th><th>Sample</th><th>Size / line-height</th><th>Letter-spacing</th></tr></thead>
             <tbody>
               <tr>
@@ -337,7 +344,7 @@
           </table>
           <h3>Small</h3>
           <p>Captions, chips, badges, helper text, chart labels.</p>
-          <table class="docs-table type-table">
+          <table class="docs-table type-table ty-scale">
             <thead><tr><th>Style</th><th>Sample</th><th>Size / line-height</th><th>Letter-spacing</th></tr></thead>
             <tbody>
               <tr>
@@ -371,11 +378,13 @@
           <p>&ldquo;-Compact&rdquo; styles set line-height = font size (12/12, 10/10). Use them only inside fixed-height
             elements (table cells, badges, chips) where extra line-height would push content off-centre. Never for
             multi-line text.</p>
-          <div class="docs-demo" style="gap:48px; justify-content:center; align-items:flex-start">
-            <div class="ty-cmp"><div style="line-height:32px">Two lines of text<br>show the difference</div><code>line-height 32px &rarr; B3 &middot; 12/16</code></div>
-            <div class="ty-cmp"><div style="line-height:24px">Two lines of text<br>show the difference</div><code>line-height 24px &rarr; B3-Compact &middot; 12/12</code></div>
+          <div class="docs-demo">
+            <div style="display:flex; flex-wrap:wrap; gap:48px; justify-content:center; align-items:flex-start">
+              <div class="ty-cmp"><div style="line-height:32px">Two lines of text<br>show the difference</div><code>line-height 32px &rarr; B3 &middot; 12/16</code></div>
+              <div class="ty-cmp"><div style="line-height:24px">Two lines of text<br>show the difference</div><code>line-height 24px &rarr; B3-Compact &middot; 12/12</code></div>
+            </div>
+            <p class="docs-demo__caption">Shown at a scaled-up font size to illustrate the 12/16 vs 12/12 ratio.</p>
           </div>
-          <p class="docs-demo__caption">Shown at a scaled-up font size to illustrate the 12/16 vs 12/12 ratio.</p>
         </section>
 
         <!-- ============ Weights & italics ============ -->
@@ -388,9 +397,9 @@
           <div class="bx-scroll"><table class="docs-table ty-matrix">
             <thead><tr><th>Size</th><th>Regular</th><th>Medium</th><th>Semibold</th><th>Bold</th></tr></thead>
             <tbody>
-              <tr><th scope="row">H1 &middot; 36</th><td class="ty-none">&mdash;</td><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:600; font-size:36px; line-height:44px; letter-spacing:-0.3px">Aa Revenue</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H1</span></td><td class="ty-none">&mdash;</td></tr>
-              <tr><th scope="row">H2 &middot; 32</th><td class="ty-none">&mdash;</td><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:600; font-size:32px; line-height:40px; letter-spacing:-0.2px">Aa Revenue</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H2</span></td><td class="ty-none">&mdash;</td></tr>
-              <tr><th scope="row">H3 &middot; 28</th><td class="ty-none">&mdash;</td><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:600; font-size:28px; line-height:36px; letter-spacing:-0.1px">Aa Revenue</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H3</span></td><td class="ty-none">&mdash;</td></tr>
+              <tr><th scope="row">H1 &middot; 36</th><td class="ty-none">&mdash;</td><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:600; font-size:36px; line-height:44px; letter-spacing:-0.3px">Aa</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H1</span></td><td class="ty-none">&mdash;</td></tr>
+              <tr><th scope="row">H2 &middot; 32</th><td class="ty-none">&mdash;</td><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:600; font-size:32px; line-height:40px; letter-spacing:-0.2px">Aa</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H2</span></td><td class="ty-none">&mdash;</td></tr>
+              <tr><th scope="row">H3 &middot; 28</th><td class="ty-none">&mdash;</td><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:600; font-size:28px; line-height:36px; letter-spacing:-0.1px">Aa</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H3</span></td><td class="ty-none">&mdash;</td></tr>
               <tr><th scope="row">H4 &middot; 24</th><td class="ty-none">&mdash;</td><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:600; font-size:24px; line-height:32px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H4</span></td><td class="ty-none">&mdash;</td></tr>
               <tr><th scope="row">H5 &middot; 20</th><td class="ty-none">&mdash;</td><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:600; font-size:20px; line-height:28px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H5</span></td><td class="ty-none">&mdash;</td></tr>
               <tr><th scope="row">H6 &middot; 18</th><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:500; font-size:18px; line-height:24px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H6-Medium</span></td><td><span style="display:block; font-weight:600; font-size:18px; line-height:24px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H6</span></td><td class="ty-none">&mdash;</td></tr>
