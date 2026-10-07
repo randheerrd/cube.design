@@ -50,7 +50,7 @@
       <ul>
         <li><a href="docs.html" aria-current="page">Buttons</a></li>
         <li><a href="docs-tooltips.html">Tooltips</a></li>
-        <li><a href="#" aria-disabled="true">Inputs <small>Soon</small></a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
         <li><a href="#" aria-disabled="true">Banner &amp; Toasts <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
@@ -103,7 +103,7 @@
           <span class="docs-badge">Stable</span>
           <span class="docs-meta">Last updated Sep 2026</span>
         </div>
-        <p class="docs-title__desc">Every property, size, state and colour of the Button — the exact build. The <a href="docs.html">Guidelines tab</a> covers which to pick.</p>
+        <p class="docs-title__desc">The exact build: API, colour tokens per state, dimensions and ready-made configurations — plus an explorer that gives you the spec and the code for any button. The <a href="docs.html">Guidelines tab</a> covers which to pick.</p>
       </div>
       <aside class="docs-res" aria-label="Resources">
         <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
@@ -131,90 +131,284 @@
       <article class="docs-content">
 
         <section id="explorer">
+
           <h2>Variant explorer</h2>
-          <p>Set any combination and see the exact button, with its Figma variant name.</p>
+          <p>Configure any button and read off its exact spec: the Figma variant name, every dimension, the colour
+            token for each part in the chosen state, and the code to use. Copy any of it.</p>
           <div class="fb-play" id="fb-play">
             <div class="fb-play__controls">
-              <label>Set<select id="p-set"><option value="action">Action</option><option value="neutral">Neutral</option><option value="accent">Accent</option></select></label>
+              <label>Family<select id="p-set"><option value="action">Action</option><option value="neutral">Neutral</option><option value="accent">Accent</option></select></label>
               <label id="l-family">Action type<select id="p-family"><option value="core">Core</option><option value="destructive">Destructive</option><option value="supportive">Supportive</option></select></label>
               <label id="l-color" hidden>Color<select id="p-color"></select></label>
               <label id="l-mode" hidden>Mode<select id="p-mode"><option value="light">Light</option><option value="dark">Dark</option></select></label>
               <label>Variant<select id="p-variant"></select></label>
               <div class="fb-play__row">
                 <label>Size<select id="p-size"></select></label>
-                <label>Density<select id="p-density"><option value="default">Default</option><option value="comfortable">Comfortable</option></select></label>
+                <label id="l-density">Height &amp; spacing<select id="p-density"></select></label>
               </div>
               <div class="fb-play__row">
                 <label>State<select id="p-state"></select></label>
-                <label>Label<select id="p-icon"><option value="no">Text + icon</option><option value="yes">Icon only</option></select></label>
+                <label>Shape<select id="p-round"><option value="no">Rounded = No</option><option value="yes">Rounded = Yes</option></select></label>
               </div>
-              <label>Shape<select id="p-round"><option value="no">Square (8px)</option><option value="yes">Rounded (pill)</option></select></label>
+              <label>Button text<input id="p-text" type="text" value="Button" style="height:32px;border:1px solid var(--hairline);border-radius:6px;background:var(--bg);color:var(--ink);padding:0 8px;font:inherit;font-size:13px"></label>
+              <label class="bx-check"><input type="checkbox" id="p-icon"> Icon-only</label>
+              <label class="bx-check"><input type="checkbox" id="p-prefix" checked> Show prefix</label>
+              <label class="bx-check"><input type="checkbox" id="p-suffix"> Show suffix</label>
             </div>
             <div class="fb-play__view" id="p-view">
               <div id="p-stage"></div>
               <code class="fb-play__name" id="p-name"></code>
             </div>
+            <div class="bx-inspect">
+              <div><h4>Dimensions</h4><dl id="p-dims"></dl></div>
+              <div><h4>Colour · <span id="p-state-name">Default</span></h4><dl id="p-colors"></dl></div>
+              <div style="grid-column:1 / -1; border-left:0; border-top:1px solid var(--hairline)"><h4>Code</h4>
+                <div class="bx-snippet bx-snippet--inline"><pre class="docs-code"><code id="p-code"></code></pre><button class="bx-copy" type="button" data-copy>Copy</button></div>
+              </div>
+            </div>
           </div>
         </section>
+        <section id="api">
 
-        <section id="properties">
-          <h2>Properties</h2>
-          <p>Every button is a combination of the properties below. The Figma sets hold 936 Action, 816 Neutral and
-            864 Accent variants; these tables are the whole system.</p>
-          <table class="docs-table">
-            <thead><tr><th>Property</th><th>Values</th><th>Default</th></tr></thead>
+          <h2>API</h2>
+          <p>Width hugs content. Variant axes (Variant, Action Type, Size, Height &amp; Spacing, State, Rounded, Icon-Only)
+            are Figma variant properties; Button Text, Show Prefix / Suffix and Prefix / Suffix Value are component
+            properties. The code column is the matching prop on the Storybook <code>Button</code>.</p>
+          <h3>Button/Action-Button</h3>
+          <div class="bx-scroll"><table class="docs-table bx-api">
+            <thead><tr><th>Property</th><th>Values</th><th>Default</th><th>Code</th><th>Notes</th></tr></thead>
             <tbody>
-              <tr><td>Variant</td><td>Filled, Outlined, Naked (Neutral adds Dashed)</td><td>Filled</td></tr>
-              <tr><td>Action type</td><td>Core, Destructive, Supportive</td><td>Core</td></tr>
-              <tr><td>Size</td><td>Large, Medium, Small (Accent: Medium, Small, Tiny)</td><td>Medium</td></tr>
-              <tr><td>Density</td><td>Default, Comfortable, Fit content (Naked only)</td><td>Default</td></tr>
-              <tr><td>State</td><td>Default, Hover, Pressed, Disabled (Accent has no Pressed)</td><td>Default</td></tr>
-              <tr><td>Rounded</td><td>No, Yes</td><td>No</td></tr>
-              <tr><td>Icon-only</td><td>No, Yes</td><td>No</td></tr>
-              <tr><td>Mode <small>(Neutral)</small></td><td>Light, Dark</td><td>Light</td></tr>
-              <tr><td>Color <small>(Accent)</small></td><td>Pink, Purple, Orange, Light Blue, Bronze Green, Green, Blue, Steel Blue</td><td>—</td></tr>
+              <tr><td><strong>Variant</strong></td><td>Filled · Outlined · Naked</td><td>Filled</td><td><code>variant</code></td><td>CTA emphasis. Filled = primary, Outlined = secondary, Naked = tertiary / inline.</td></tr>
+              <tr><td><strong>Action Type</strong></td><td>Core · Destructive · Supportive</td><td>Core</td><td><code>intent</code></td><td>Semantic colour ramp — Primary, Error or Success tokens.</td></tr>
+              <tr><td><strong>Size</strong></td><td>Large · Medium · Small</td><td>Medium</td><td><code>size</code> lg · md · sm</td><td>Font size, icon size and radius. Exact px under Dimensions.</td></tr>
+              <tr><td><strong>Height &amp; Spacing</strong></td><td>Default · Comfortable · Fit Content</td><td>Default</td><td><code>density</code></td><td>Container height, padding and gap. Fit Content exists only for Variant = Naked.</td></tr>
+              <tr><td><strong>State</strong></td><td>Default · Hovered · Pressed · Disabled</td><td>Default</td><td><code>disabled</code></td><td>In code, Hovered / Pressed come from pointer events; Disabled sets <code>disabled</code> and removes pointer events.</td></tr>
+              <tr><td><strong>Rounded</strong> <span class="bx-opt-tag">optional</span></td><td>No · Yes</td><td>No</td><td><code>rounded</code></td><td>Yes = pill (100px radius). A circle when combined with Icon-Only.</td></tr>
+              <tr><td><strong>Icon-Only</strong> <span class="bx-opt-tag">optional</span></td><td>No · Yes</td><td>No</td><td><code>&lt;IconButton&gt;</code></td><td>Hides label and suffix; the container becomes square. Requires <code>ariaLabel</code> and a tooltip.</td></tr>
+              <tr><td><strong>Button Text</strong></td><td>string</td><td>“Button”</td><td><code>label</code></td><td>TEXT property. Short, verb-first label. Ignored when Icon-Only = Yes.</td></tr>
+              <tr><td><strong>Show Prefix</strong> <span class="bx-opt-tag">optional</span></td><td>true · false</td><td>true</td><td><code>prefix</code></td><td>Toggles the leading icon slot.</td></tr>
+              <tr><td><strong>Show Suffix</strong> <span class="bx-opt-tag">optional</span></td><td>true · false</td><td>false</td><td><code>suffix</code></td><td>Toggles the trailing icon slot — for dropdown / navigation affordances.</td></tr>
+              <tr><td><strong>Prefix Value</strong> <span class="bx-opt-tag">optional</span></td><td>Icon component</td><td>Plus (Bold)</td><td><code>prefix={&lt;Icon /&gt;}</code></td><td>Instance swap — any icon. Renders only when Show Prefix = true. Also the icon used when Icon-Only = Yes (<code>icon</code> on IconButton).</td></tr>
+              <tr><td><strong>Suffix Value</strong> <span class="bx-opt-tag">optional</span></td><td>Icon component</td><td>CaretRight (Bold)</td><td><code>suffix={&lt;Icon /&gt;}</code></td><td>Instance swap — any icon. Renders only when Show Suffix = true.</td></tr>
+            </tbody>
+          </table></div>
+          <h3>Button/Neutral-Button</h3>
+          <p>Same API as Action-Button, minus Action Type. Only the differing properties are listed.</p>
+          <div class="bx-scroll"><table class="docs-table bx-api">
+            <thead><tr><th>Property</th><th>Values</th><th>Default</th><th>Code</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Variant</strong></td><td>Outlined · Naked · Dashed · Filled</td><td>Outlined</td><td><code>variant</code></td><td>Adds Dashed (for “add new” / empty-slot actions). Filled is a dark, high-emphasis neutral.</td></tr>
+              <tr><td><strong>Mode</strong> <span class="bx-opt-tag">optional</span></td><td>Light · Dark</td><td>Light</td><td>—</td><td>Switches to inverted tokens for dark surfaces.</td></tr>
+              <tr><td><strong>Action Type</strong></td><td>—</td><td>—</td><td><code>intent=&quot;neutral&quot;</code></td><td>Not available — neutral buttons are colour-neutral by definition.</td></tr>
+            </tbody>
+          </table></div>
+          <h3>Button/Accent-Button</h3>
+          <p>Tinted buttons in 8 accent colours with their own compact size scale. Only the differing properties are listed.</p>
+          <div class="bx-scroll"><table class="docs-table bx-api">
+            <thead><tr><th>Property</th><th>Values</th><th>Default</th><th>Code</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Color</strong></td><td>Pink · Purple · Orange · Light Blue · Bronze Green · Green · Blue · Steel Blue</td><td>Pink</td><td>—</td><td>Accent ramp. Keep a colour tied to one meaning (e.g. a channel or segment).</td></tr>
+              <tr><td><strong>Size</strong></td><td>Medium · Small · Tiny</td><td>Medium</td><td>—</td><td>24 / 20 / 16 px tall. No Height &amp; Spacing axis.</td></tr>
+              <tr><td><strong>State</strong></td><td>Default · Hovered · Disabled</td><td>Default</td><td>—</td><td>No Pressed state.</td></tr>
+              <tr><td><strong>Icon Only</strong> <span class="bx-opt-tag">optional</span></td><td>No · Yes</td><td>No</td><td>—</td><td>Note the property name has no hyphen (“Icon Only”).</td></tr>
+              <tr><td><strong>Show Suffix</strong> <span class="bx-opt-tag">optional</span></td><td>true · false</td><td>true</td><td>—</td><td>Suffix is visible by default on Accent (hidden on Action / Neutral).</td></tr>
+              <tr><td><strong>Button Text</strong></td><td>string</td><td>“Accent”</td><td>—</td><td>Default text differs from the other families.</td></tr>
+            </tbody>
+          </table></div>
+          <div class="docs-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg><p><strong>Figma ↔ code gaps.</strong> Storybook’s <code>Button</code> has no props for Accent colours, the Dashed variant or Neutral Dark mode, and adds values Figma doesn’t have (<code>variant</code> tonal / subtle, <code>intent</code> ambient / chrome, sizes xs / xl / xxl, <code>loading</code>). Treat the Figma set as the design contract and flag any gap to engineering. Icon-only buttons are <code>IconButton</code> (<code>icon</code>, <code>ariaLabel</code>); <code>SemanticButton</code> takes just <code>label</code> and <code>intent</code>.</p></div>
+        </section>
+        <section id="color">
+
+          <h2>Color tokens</h2>
+          <p>The design-token mapping per state for each family. Label and icon always share the same token. A dash
+            (—) means “same as Default”. Names drop the shared <code>Semantics/</code> prefix (so <code>Disabled/100</code> is <code>Semantics/Disabled/100</code>). Hover a swatch for its hex; the token name is the contract.</p>
+          <h3>Action-Button</h3>
+          <p>Tokens use a <code>{Ramp}</code> placeholder, resolved by Action Type:</p>
+          <div class="bx-scroll"><table class="docs-table">
+            <thead><tr><th>Action Type</th><th>{Ramp}</th><th>Base (/600)</th><th>Outlined border</th></tr></thead>
+            <tbody>
+              <tr><td>Core</td><td><code>Semantics/Primary</code></td><td><span class="tok" title="#025be5"><i style="background:#025be5"></i><span>Primary/<wbr>600</span></span></td><td>Border hover / pressed: /500 · /600</td></tr>
+              <tr><td>Destructive</td><td><code>Semantics/Error</code></td><td><span class="tok" title="#e42828"><i style="background:#e42828"></i><span>Error/<wbr>600</span></span></td><td>Border hover / pressed: /700 · /800</td></tr>
+              <tr><td>Supportive</td><td><code>Semantics/Success</code></td><td><span class="tok" title="#46a758"><i style="background:#46a758"></i><span>Success/<wbr>600</span></span></td><td>Border hover / pressed: /700 · /800</td></tr>
+            </tbody>
+          </table></div>
+          <div class="bx-scroll"><table class="docs-table bx-tokens">
+            <thead><tr><th>Element</th><th>Default</th><th>Hovered</th><th>Pressed</th><th>Disabled</th></tr></thead>
+            <tbody>
+              <tr><td>Filled · Container fill</td><td><span class="tok" title="#025be5 (Core)"><i style="background:#025be5"></i><span>{Ramp}/<wbr>600</span></span></td><td><span class="tok" title="#024dc6 (Core)"><i style="background:#024dc6"></i><span>{Ramp}/<wbr>700</span></span></td><td><span class="tok" title="#0140a5 (Core)"><i style="background:#0140a5"></i><span>{Ramp}/<wbr>800</span></span></td><td><span class="tok" title="#efefef"><i style="background:#efefef"></i><span>Disabled/<wbr>100</span></span></td></tr>
+              <tr><td>Filled · Label / icon</td><td><span class="tok" title="#ffffff"><i style="background:#ffffff"></i><span>Neutrals/<wbr>White/<wbr>100</span></span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok" title="#9e9e9e"><i style="background:#9e9e9e"></i><span>Disabled/<wbr>500</span></span></td></tr>
+              <tr><td>Outlined · Container fill</td><td><span class="tok" title="#ffffff"><i style="background:#ffffff"></i><span>Neutrals/<wbr>White/<wbr>100</span></span></td><td><span class="tok" title="#f5f8ff (Core)"><i style="background:#f5f8ff"></i><span>{Ramp}/<wbr>50</span></span></td><td><span class="tok" title="#eaf1ff (Core)"><i style="background:#eaf1ff"></i><span>{Ramp}/<wbr>100</span></span></td><td><span class="tok" title="#ffffff"><i style="background:#ffffff"></i><span>Neutrals/<wbr>White/<wbr>100</span></span></td></tr>
+              <tr><td>Outlined · Border (1px)</td><td><span class="tok" title="#74a1f8 (Core)"><i style="background:#74a1f8"></i><span>{Ramp}/<wbr>400</span></span></td><td><span class="tok" title="#3b7eee (Core)"><i style="background:#3b7eee"></i><span>{Ramp}/<wbr>500</span></span></td><td><span class="tok" title="#025be5 (Core)"><i style="background:#025be5"></i><span>{Ramp}/<wbr>600</span></span></td><td><span class="tok" title="#efefef"><i style="background:#efefef"></i><span>Disabled/<wbr>100</span></span></td></tr>
+              <tr><td>Outlined · Label / icon</td><td><span class="tok" title="#025be5 (Core)"><i style="background:#025be5"></i><span>{Ramp}/<wbr>600</span></span></td><td><span class="tok" title="#024dc6 (Core)"><i style="background:#024dc6"></i><span>{Ramp}/<wbr>700</span></span></td><td><span class="tok" title="#0140a5 (Core)"><i style="background:#0140a5"></i><span>{Ramp}/<wbr>800</span></span></td><td><span class="tok" title="#b5b5b5"><i style="background:#b5b5b5"></i><span>Disabled/<wbr>400</span></span></td></tr>
+              <tr><td>Naked · Container fill</td><td><span class="tok tok--none">none</span></td><td><span class="tok" title="#f5f8ff (Core)"><i style="background:#f5f8ff"></i><span>{Ramp}/<wbr>50</span></span></td><td><span class="tok" title="#eaf1ff (Core)"><i style="background:#eaf1ff"></i><span>{Ramp}/<wbr>100</span></span></td><td><span class="tok tok--none">none</span></td></tr>
+              <tr><td>Naked · Label / icon</td><td><span class="tok" title="#025be5 (Core)"><i style="background:#025be5"></i><span>{Ramp}/<wbr>600</span></span></td><td><span class="tok" title="#024dc6 (Core)"><i style="background:#024dc6"></i><span>{Ramp}/<wbr>700</span></span></td><td><span class="tok" title="#0140a5 (Core)"><i style="background:#0140a5"></i><span>{Ramp}/<wbr>800</span></span></td><td><span class="tok" title="#b5b5b5"><i style="background:#b5b5b5"></i><span>Disabled/<wbr>400</span></span></td></tr>
+              <tr><td>Naked Fit Content · fill</td><td><span class="tok tok--none">none</span></td><td><span class="tok tok--none">none</span></td><td><span class="tok tok--none">none</span></td><td><span class="tok tok--none">none</span></td></tr>
+            </tbody>
+          </table></div>
+          <h3>Neutral-Button — Light mode</h3>
+          <p>Default mode. Dashed shares fill and label tokens with Outlined; only the border differs (1px, dash 2 / 2).</p>
+          <div class="bx-scroll"><table class="docs-table bx-tokens">
+            <thead><tr><th>Element</th><th>Default</th><th>Hovered</th><th>Pressed</th><th>Disabled</th></tr></thead>
+            <tbody>
+              <tr><td>Filled · Container fill</td><td><span class="tok" title="#101214"><i style="background:#101214"></i><span>Primary-text/<wbr>950</span></span></td><td><span class="tok" title="#373d42"><i style="background:#373d42"></i><span>Primary-text/<wbr>900</span></span></td><td><span class="tok" title="#373d42"><i style="background:#373d42"></i><span>Primary-text/<wbr>900</span></span></td><td><span class="tok" title="#efefef"><i style="background:#efefef"></i><span>Disabled/<wbr>100</span></span></td></tr>
+              <tr><td>Filled · Label / icon</td><td><span class="tok" title="#f4f6f7"><i style="background:#f4f6f7"></i><span>Primary-text/<wbr>50</span></span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok" title="#b5b5b5"><i style="background:#b5b5b5"></i><span>Disabled/<wbr>400</span></span></td></tr>
+              <tr><td>Outlined · Container fill</td><td><span class="tok" title="#ffffff"><i style="background:#ffffff"></i><span>Neutrals/<wbr>White/<wbr>100</span></span></td><td><span class="tok" title="#f4f6f7"><i style="background:#f4f6f7"></i><span>Primary-text/<wbr>50</span></span></td><td><span class="tok" title="#e3e7ea"><i style="background:#e3e7ea"></i><span>Primary-text/<wbr>100</span></span></td><td><span class="tok" title="#ffffff"><i style="background:#ffffff"></i><span>Neutrals/<wbr>White/<wbr>100</span></span></td></tr>
+              <tr><td>Outlined · Border (1px)</td><td><span class="tok" title="#dbdfe4"><i style="background:#dbdfe4"></i><span>Secondary-text/<wbr>200</span></span></td><td><span class="tok" title="#bfc5cf"><i style="background:#bfc5cf"></i><span>Secondary-text/<wbr>300</span></span></td><td><span class="tok" title="#7f8a9e"><i style="background:#7f8a9e"></i><span>Secondary-text/<wbr>500</span></span></td><td><span class="tok" title="#efefef"><i style="background:#efefef"></i><span>Disabled/<wbr>100</span></span></td></tr>
+              <tr><td>Outlined · Label / icon</td><td><span class="tok" title="#373d42"><i style="background:#373d42"></i><span>Primary-text/<wbr>900</span></span></td><td><span class="tok" title="#101214"><i style="background:#101214"></i><span>Primary-text/<wbr>950</span></span></td><td><span class="tok" title="#101214"><i style="background:#101214"></i><span>Primary-text/<wbr>950</span></span></td><td><span class="tok" title="#b5b5b5"><i style="background:#b5b5b5"></i><span>Disabled/<wbr>400</span></span></td></tr>
+              <tr><td>Dashed · Border (dashed)</td><td><span class="tok" title="#bfc5cf"><i style="background:#bfc5cf"></i><span>Secondary-text/<wbr>300</span></span></td><td><span class="tok" title="#7f8a9e"><i style="background:#7f8a9e"></i><span>Secondary-text/<wbr>500</span></span></td><td><span class="tok" title="#69778b"><i style="background:#69778b"></i><span>Secondary-text/<wbr>600</span></span></td><td><span class="tok" title="#efefef"><i style="background:#efefef"></i><span>Disabled/<wbr>100</span></span></td></tr>
+              <tr><td>Naked · Container fill</td><td><span class="tok tok--none">none</span></td><td><span class="tok" title="#f4f6f7"><i style="background:#f4f6f7"></i><span>Primary-text/<wbr>50</span></span></td><td><span class="tok" title="#e3e7ea"><i style="background:#e3e7ea"></i><span>Primary-text/<wbr>100</span></span></td><td><span class="tok tok--none">none</span></td></tr>
+              <tr><td>Naked · Label / icon</td><td><span class="tok" title="#373d42"><i style="background:#373d42"></i><span>Primary-text/<wbr>900</span></span></td><td><span class="tok" title="#101214"><i style="background:#101214"></i><span>Primary-text/<wbr>950</span></span></td><td><span class="tok" title="#101214"><i style="background:#101214"></i><span>Primary-text/<wbr>950</span></span></td><td><span class="tok" title="#b5b5b5"><i style="background:#b5b5b5"></i><span>Disabled/<wbr>400</span></span></td></tr>
+            </tbody>
+          </table></div>
+          <h3>Neutral-Button — Dark mode</h3>
+          <p>Mode = Dark, for dark surfaces. Outlined, Dashed and Naked have no resting fill.</p>
+          <div class="bx-scroll"><table class="docs-table bx-tokens">
+            <thead><tr><th>Element</th><th>Default</th><th>Hovered</th><th>Pressed</th><th>Disabled</th></tr></thead>
+            <tbody>
+              <tr><td>Filled · Container fill</td><td><span class="tok" title="#eff2f6"><i style="background:#eff2f6"></i><span>Secondary-text/<wbr>50</span></span></td><td><span class="tok" title="#eef1f4"><i style="background:#eef1f4"></i><span>Secondary-text/<wbr>100</span></span></td><td><span class="tok" title="#eef1f4"><i style="background:#eef1f4"></i><span>Secondary-text/<wbr>100</span></span></td><td><span class="tok" title="#6e6e6e"><i style="background:#6e6e6e"></i><span>Disabled/<wbr>700</span></span></td></tr>
+              <tr><td>Filled · Label / icon</td><td><span class="tok" title="#101214"><i style="background:#101214"></i><span>Primary-text/<wbr>950</span></span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok" title="#b5b5b5"><i style="background:#b5b5b5"></i><span>Disabled/<wbr>400</span></span></td></tr>
+              <tr><td>Outlined · Container fill</td><td><span class="tok tok--none">none</span></td><td><span class="tok" title="#373d42"><i style="background:#373d42"></i><span>Primary-text/<wbr>900</span></span></td><td><span class="tok" title="#373d42"><i style="background:#373d42"></i><span>Primary-text/<wbr>900</span></span></td><td><span class="tok tok--none">none</span></td></tr>
+              <tr><td>Outlined · Border (1px)</td><td><span class="tok" title="#404a54"><i style="background:#404a54"></i><span>Secondary-text/<wbr>800</span></span></td><td><span class="tok" title="#586473"><i style="background:#586473"></i><span>Secondary-text/<wbr>700</span></span></td><td><span class="tok" title="#7f8a9e"><i style="background:#7f8a9e"></i><span>Secondary-text/<wbr>500</span></span></td><td><span class="tok" title="#2e2e2e"><i style="background:#2e2e2e"></i><span>Disabled/<wbr>900</span></span></td></tr>
+              <tr><td>Outlined · Label / icon</td><td><span class="tok" title="#e3e7ea"><i style="background:#e3e7ea"></i><span>Primary-text/<wbr>100</span></span></td><td><span class="tok" title="#f4f6f7"><i style="background:#f4f6f7"></i><span>Primary-text/<wbr>50</span></span></td><td><span class="tok" title="#f4f6f7"><i style="background:#f4f6f7"></i><span>Primary-text/<wbr>50</span></span></td><td><span class="tok" title="#878787"><i style="background:#878787"></i><span>Disabled/<wbr>600</span></span></td></tr>
+              <tr><td>Dashed · Border (dashed)</td><td><span class="tok" title="#586473"><i style="background:#586473"></i><span>Secondary-text/<wbr>700</span></span></td><td><span class="tok" title="#69778b"><i style="background:#69778b"></i><span>Secondary-text/<wbr>600</span></span></td><td><span class="tok" title="#bfc5cf"><i style="background:#bfc5cf"></i><span>Secondary-text/<wbr>300</span></span></td><td><span class="tok" title="#2e2e2e"><i style="background:#2e2e2e"></i><span>Disabled/<wbr>900</span></span></td></tr>
+              <tr><td>Naked · Container fill</td><td><span class="tok tok--none">none</span></td><td><span class="tok" title="#373d42"><i style="background:#373d42"></i><span>Primary-text/<wbr>900</span></span></td><td><span class="tok" title="#373d42"><i style="background:#373d42"></i><span>Primary-text/<wbr>900</span></span></td><td><span class="tok tok--none">none</span></td></tr>
+              <tr><td>Naked · Label / icon</td><td><span class="tok" title="#e3e7ea"><i style="background:#e3e7ea"></i><span>Primary-text/<wbr>100</span></span></td><td><span class="tok" title="#f4f6f7"><i style="background:#f4f6f7"></i><span>Primary-text/<wbr>50</span></span></td><td><span class="tok" title="#f4f6f7"><i style="background:#f4f6f7"></i><span>Primary-text/<wbr>50</span></span></td><td><span class="tok" title="#878787"><i style="background:#878787"></i><span>Disabled/<wbr>600</span></span></td></tr>
+            </tbody>
+          </table></div>
+          <h3>Accent-Button</h3>
+          <p><code>{Accent}</code> = Accent/Pink, Purple, Orange, Light Blue, Bronze, Green, Steel Blue. <strong>Blue</strong> maps to
+            Semantics/Primary with a /600 label; <strong>Steel Blue</strong> uses /200 fill and /900 label. Accent has no Pressed state.</p>
+          <div class="bx-scroll"><table class="docs-table bx-tokens">
+            <thead><tr><th>Element</th><th>Default</th><th>Hovered</th><th>Pressed</th><th>Disabled</th></tr></thead>
+            <tbody>
+              <tr><td>Filled · Container fill</td><td><span class="tok" title="#ffeaf3 (Pink)"><i style="background:#ffeaf3"></i><span>{Accent}/<wbr>100</span></span></td><td><span class="tok" title="#ffd6e7 (Pink)"><i style="background:#ffd6e7"></i><span>{Accent}/<wbr>200</span></span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#f6f6f6"><i style="background:#f6f6f6"></i><span>Disabled/<wbr>50</span></span></td></tr>
+              <tr><td>Filled · Label / icon</td><td><span class="tok" title="#a92e76 (Pink)"><i style="background:#a92e76"></i><span>{Accent}/<wbr>700</span></span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#9e9e9e"><i style="background:#9e9e9e"></i><span>Disabled/<wbr>500</span></span></td></tr>
+              <tr><td>Outlined · Container fill</td><td><span class="tok" title="#ffffff"><i style="background:#ffffff"></i><span>Neutrals/<wbr>White/<wbr>100</span></span></td><td><span class="tok" title="#fff5f9 (Pink)"><i style="background:#fff5f9"></i><span>{Accent}/<wbr>50</span></span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#ffffff"><i style="background:#ffffff"></i><span>Neutrals/<wbr>White/<wbr>100</span></span></td></tr>
+              <tr><td>Outlined · Border (1px)</td><td><span class="tok" title="#ffd6e7 (Pink)"><i style="background:#ffd6e7"></i><span>{Accent}/<wbr>200</span></span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#e0e0e0"><i style="background:#e0e0e0"></i><span>Disabled/<wbr>200</span></span></td></tr>
+              <tr><td>Outlined · Label / icon</td><td><span class="tok" title="#a92e76 (Pink)"><i style="background:#a92e76"></i><span>{Accent}/<wbr>700</span></span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#b5b5b5"><i style="background:#b5b5b5"></i><span>Disabled/<wbr>400</span></span></td></tr>
+              <tr><td>Naked · Container fill</td><td><span class="tok tok--none">none</span></td><td><span class="tok" title="#fff5f9 (Pink)"><i style="background:#fff5f9"></i><span>{Accent}/<wbr>50</span></span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok tok--none">none</span></td></tr>
+              <tr><td>Naked · Label / icon</td><td><span class="tok" title="#a92e76 (Pink)"><i style="background:#a92e76"></i><span>{Accent}/<wbr>700</span></span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#9e9e9e"><i style="background:#9e9e9e"></i><span>Disabled/<wbr>500</span></span></td></tr>
+            </tbody>
+          </table></div>
+        </section>
+        <section id="states">
+
+          <h2>State reference</h2>
+          <p>How each state looks — pair these with the token tables above when checking an implementation.</p>
+          <h3>Action / Filled / Core</h3>
+          <div class="bx-states"><div class="bx-state"><b>Default</b><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><span>fill Primary/600 · text White/100</span></div><div class="bx-state"><b>Hovered</b><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-state="hover" tabindex="-1"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><span>Δ fill Primary/700</span></div><div class="bx-state"><b>Pressed</b><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-state="pressed" tabindex="-1"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><span>Δ fill Primary/800</span></div><div class="bx-state"><b>Disabled</b><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-state="disabled" disabled tabindex="-1"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><span>Δ fill Disabled/100, text Disabled/500</span></div></div>
+          <h3>Neutral / Outlined / Light</h3>
+          <div class="bx-states"><div class="bx-state"><b>Default</b><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="large" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><span>border Secondary-text/200 · text Primary-text/900</span></div><div class="bx-state"><b>Hovered</b><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="large" data-density="comfortable" data-state="hover" tabindex="-1"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><span>Δ fill Primary-text/50, border Secondary-text/300</span></div><div class="bx-state"><b>Pressed</b><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="large" data-density="comfortable" data-state="pressed" tabindex="-1"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><span>Δ fill Primary-text/100, border Secondary-text/500</span></div><div class="bx-state"><b>Disabled</b><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="large" data-density="comfortable" data-state="disabled" disabled tabindex="-1"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><span>Δ border Disabled/100, text Disabled/400</span></div></div>
+        </section>
+        <section id="dimensions">
+
+          <h2>Dimensions</h2>
+          <p>Heights, paddings, gaps, radii, font and icon sizes for every Size and Height &amp; Spacing option. All values in px; width hugs content. Font is DM Sans SemiBold (600).</p>
+          <div class="bx-sizes"><div><b>Large</b><div class="bx-sizes__row"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="default"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><span>Default 36px · Comfortable 40px</span></div><div><b>Medium</b><div class="bx-sizes__row"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="medium" data-density="default"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="medium" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><span>Default 28px · Comfortable 32px</span></div><div><b>Small</b><div class="bx-sizes__row"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="small" data-density="default"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="small" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><span>Default 20px · Comfortable 24px</span></div></div>
+          <h3>Action &amp; Neutral</h3>
+          <p>Applies to Button/Action-Button and Button/Neutral-Button (identical specs).</p>
+          <div class="bx-scroll"><table class="docs-table">
+            <thead><tr><th>Attribute</th><th>Large</th><th>Medium</th><th>Small</th></tr></thead>
+            <tbody>
+              <tr><td>Height — Default</td><td><code>36</code></td><td><code>28</code></td><td><code>20</code></td></tr>
+              <tr><td>Height — Comfortable</td><td><code>40</code></td><td><code>32</code></td><td><code>24</code></td></tr>
+              <tr><td>Height — Fit Content (Naked)</td><td><code>18 (= line-height)</code></td><td><code>16 (= line-height)</code></td><td><code>12 (= line-height)</code></td></tr>
+              <tr><td>Horizontal padding — Default</td><td><code>12 / 12</code></td><td><code>10 / 10</code></td><td><code>6 / 6</code></td></tr>
+              <tr><td>Horizontal padding — Comfortable</td><td><code>14 / 14</code></td><td><code>12 / 12</code></td><td><code>8 / 8</code></td></tr>
+              <tr><td>Horizontal padding — Fit Content</td><td><code>0</code></td><td><code>0</code></td><td><code>0</code></td></tr>
+              <tr><td>Gap icon ↔ label — Default</td><td><code>6</code></td><td><code>4</code></td><td><code>4</code></td></tr>
+              <tr><td>Gap icon ↔ label — Comfortable</td><td><code>8</code></td><td><code>6</code></td><td><code>4</code></td></tr>
+              <tr><td>Corner radius — Rounded = No</td><td><code>8</code></td><td><code>6</code></td><td><code>6</code></td></tr>
+              <tr><td>Corner radius — Rounded = Yes</td><td><code>100 (pill)</code></td><td><code>100 (pill)</code></td><td><code>100 (pill)</code></td></tr>
+              <tr><td>Label font / line-height</td><td><code>14 / 18 SemiBold</code></td><td><code>12 / 16 SemiBold</code></td><td><code>10 / 12 SemiBold</code></td></tr>
+              <tr><td>Letter-spacing</td><td><code>0</code></td><td><code>0.1</code></td><td><code>0.1</code></td></tr>
+              <tr><td>Prefix / Suffix icon size</td><td><code>16 × 16</code></td><td><code>14 × 14</code></td><td><code>10 × 10 (suffix 12)</code></td></tr>
+              <tr><td>Icon-only (Default / Comfortable)</td><td><code>36 / 40 square</code></td><td><code>28 / 32 square</code></td><td><code>20 / 24 square</code></td></tr>
+              <tr><td>Border (Outlined / Dashed)</td><td><code>1 (dash 2 / 2)</code></td><td><code>1 (dash 2 / 2)</code></td><td><code>1 (dash 2 / 2)</code></td></tr>
+            </tbody>
+          </table></div>
+          <h3>Accent</h3>
+          <p>Button/Accent-Button uses its own, more compact scale. No Height &amp; Spacing axis.</p>
+          <div class="bx-scroll"><table class="docs-table">
+            <thead><tr><th>Attribute</th><th>Medium</th><th>Small</th><th>Tiny</th></tr></thead>
+            <tbody>
+              <tr><td>Height</td><td><code>24</code></td><td><code>20</code></td><td><code>16</code></td></tr>
+              <tr><td>Horizontal padding</td><td><code>8 / 8</code></td><td><code>6 / 6</code></td><td><code>5 / 5</code></td></tr>
+              <tr><td>Gap icon ↔ label</td><td><code>4</code></td><td><code>4</code></td><td><code>2</code></td></tr>
+              <tr><td>Corner radius — Rounded = No</td><td><code>6</code></td><td><code>6</code></td><td><code>4</code></td></tr>
+              <tr><td>Corner radius — Rounded = Yes</td><td><code>100 (pill)</code></td><td><code>100 (pill)</code></td><td><code>100 (pill)</code></td></tr>
+              <tr><td>Label font / line-height</td><td><code>12 / 16 SemiBold</code></td><td><code>10 / 12 SemiBold</code></td><td><code>10 / 12 SemiBold</code></td></tr>
+              <tr><td>Prefix / Suffix icon size</td><td><code>12 × 12</code></td><td><code>10 × 10</code></td><td><code>10 × 10</code></td></tr>
+              <tr><td>Icon-only size</td><td><code>24 square</code></td><td><code>20 square</code></td><td><code>16 square</code></td></tr>
+            </tbody>
+          </table></div>
+        </section>
+        <section id="examples">
+
+          <h2>Configuration examples</h2>
+          <p>Common set-ups with every property spelled out — copy the configuration in Figma, or the snippet in code.</p>
+          <h3>Primary form CTA</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable"><span class="fbtn__label">Save changes</span></button><p>The main submit action of a form or page. Text-only, Large, Comfortable.</p></div>
+            <table class="docs-table">
+            <thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>Component</td><td><code>Button/Action-Button</code></td><td></td></tr>
+              <tr><td>Variant</td><td>Filled</td><td>Highest emphasis — one per view.</td></tr>
+              <tr><td>Action Type</td><td>Core</td><td>Primary ramp.</td></tr>
+              <tr><td>Size</td><td>Large</td><td>Page-level CTA.</td></tr>
+              <tr><td>Height &amp; Spacing</td><td>Comfortable</td><td>40px tall.</td></tr>
+              <tr><td>Show Prefix</td><td>false</td><td>Text-only for a clean CTA.</td></tr>
+              <tr><td>Button Text</td><td>“Save changes”</td><td>Verb-first, specific.</td></tr>
             </tbody>
           </table>
+            <div class="bx-snippet"><pre class="docs-code"><code>&lt;Button label=&quot;Save changes&quot; size=&quot;lg&quot; density=&quot;comfortable&quot; /&gt;</code></pre><button class="bx-copy" type="button" data-copy>Copy</button></div>
+          </div>
+          <h3>Destructive secondary action</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="medium"><span class="fbtn__label">Cancel</span></button> <button class="fbtn" type="button" data-family="destructive" data-variant="outlined" data-size="medium"><span class="fbtn__label">Delete</span></button><p>A delete / remove action in a dialog footer, next to a neutral Cancel.</p></div>
+            <table class="docs-table">
+            <thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>Component</td><td><code>Button/Action-Button</code></td><td></td></tr>
+              <tr><td>Variant</td><td>Outlined</td><td>Use Filled only for the final confirm step.</td></tr>
+              <tr><td>Action Type</td><td>Destructive</td><td>Error ramp.</td></tr>
+              <tr><td>Size</td><td>Medium</td><td>Default dialog size.</td></tr>
+              <tr><td>Show Prefix</td><td>false</td><td></td></tr>
+              <tr><td>Button Text</td><td>“Delete”</td><td>Name the object when possible (“Delete report”).</td></tr>
+            </tbody>
+          </table>
+            <div class="bx-snippet"><pre class="docs-code"><code>&lt;Button label=&quot;Delete&quot; variant=&quot;outlined&quot; intent=&quot;destructive&quot; /&gt;</code></pre><button class="bx-copy" type="button" data-copy>Copy</button></div>
+          </div>
+          <h3>Dropdown trigger</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="medium"><span class="fbtn__label">Last 7 days</span><svg class="fbtn__suffix" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3.5 4.5 4.5L6 12.5"/></svg></button><p>A neutral button that opens a menu — e.g. a date-range or filter picker.</p></div>
+            <table class="docs-table">
+            <thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>Component</td><td><code>Button/Neutral-Button</code></td><td></td></tr>
+              <tr><td>Variant</td><td>Outlined</td><td>Default neutral.</td></tr>
+              <tr><td>Mode</td><td>Light</td><td></td></tr>
+              <tr><td>Size</td><td>Medium</td><td></td></tr>
+              <tr><td>Show Prefix</td><td>false</td><td></td></tr>
+              <tr><td>Show Suffix</td><td>true</td><td>CaretRight signals a menu; rotate or swap to CaretDown if preferred.</td></tr>
+              <tr><td>Button Text</td><td>“Last 7 days”</td><td>Shows the current selection.</td></tr>
+            </tbody>
+          </table>
+            <div class="bx-snippet"><pre class="docs-code"><code>&lt;Button label=&quot;Last 7 days&quot; variant=&quot;outlined&quot; intent=&quot;neutral&quot; suffix={&lt;CaretRight /&gt;} /&gt;</code></pre><button class="bx-copy" type="button" data-copy>Copy</button></div>
+          </div>
         </section>
-
         <section id="matrix">
+
           <h2>Full matrix</h2>
-          <p>Each set laid out as in Figma: variants down the side, size across the top, one row per state.</p>
-          <div class="docs-note">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>
-            <p>Three separate components in code, each documented in Storybook: <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-button--docs" target="_blank" rel="noopener noreferrer">Button</a> (Neutral, Accent),
-              <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-semantic-semanticbutton--docs" target="_blank" rel="noopener noreferrer">SemanticButton</a> (Core, Destructive, Supportive below), and
-              <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-iconbutton--docs" target="_blank" rel="noopener noreferrer">IconButton</a> (Icon-only).</p>
-          </div>
+          <p>Each set laid out as in Figma: variants down the side, size across the top, one row per state (shown at Comfortable).</p>
+          <div class="docs-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg><p>Three separate components in code, each documented in Storybook: <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-button--docs" target="_blank" rel="noopener noreferrer">Button</a>, <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-semantic-semanticbutton--docs" target="_blank" rel="noopener noreferrer">SemanticButton</a> and <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-iconbutton--docs" target="_blank" rel="noopener noreferrer">IconButton</a> (icon-only).</p></div>
           <div class="fb-filters" id="fb-filters" role="group" aria-label="Show set"></div>
-        </section>
-
-        <section id="core"><h2>Core</h2><div class="fb-matrix" data-set="core"></div></section>
-        <section id="destructive"><h2>Destructive</h2><div class="fb-matrix" data-set="destructive"></div></section>
-        <section id="supportive"><h2>Supportive</h2><div class="fb-matrix" data-set="supportive"></div></section>
-        <section id="neutral"><h2>Neutral</h2>
-          <div class="fb-matrix" data-set="neutral"></div>
-          <div class="fb-matrix fb-matrix--dark" data-set="neutral-dark"></div>
-        </section>
-        <section id="accent"><h2>Accent</h2>
-          <p>Eight colours; shown here at Medium, Default density.</p>
-          <div class="fb-matrix" data-set="accent"></div>
-        </section>
-
-        <section id="tokens">
-          <h2>Tokens</h2>
-          <table class="docs-table">
-            <thead><tr><th>Token</th><th>Values</th></tr></thead>
-            <tbody>
-              <tr><td>Height</td><td>40 · 36 · 32 · 28 · 24 · 20 (Accent Tiny 16)</td></tr>
-              <tr><td>Horizontal padding</td><td>14 · 12 · 10 · 8 · 6</td></tr>
-              <tr><td>Gap</td><td>8 · 6 · 4</td></tr>
-              <tr><td>Icon size</td><td>18 · 16 · 14 · 12</td></tr>
-              <tr><td>Font size</td><td>16 · 14 · 12 · 10 — DM Sans Semibold</td></tr>
-              <tr><td>Corner radius</td><td>8px (Rounded: full pill)</td></tr>
-              <tr><td>Core / primary</td><td><code>semantics/primary/600</code> #025be5</td></tr>
-            </tbody>
-          </table>
+          <div id="core"><h3>Core</h3><div class="fb-matrix" data-set="core"></div></div>
+          <div id="destructive"><h3>Destructive</h3><div class="fb-matrix" data-set="destructive"></div></div>
+          <div id="supportive"><h3>Supportive</h3><div class="fb-matrix" data-set="supportive"></div></div>
+          <div id="neutral"><h3>Neutral</h3><div class="fb-matrix" data-set="neutral"></div><div class="fb-matrix fb-matrix--dark" data-set="neutral-dark"></div></div>
+          <div id="accent"><h3>Accent</h3><p>Eight colours; shown at Medium.</p><div class="fb-matrix" data-set="accent"></div></div>
         </section>
 
       </article>
@@ -224,14 +418,12 @@
       <p class="docs-toc__title">On this page</p>
       <ul>
         <li><a href="#explorer">Variant explorer</a></li>
-        <li><a href="#properties">Properties</a></li>
+        <li><a href="#api">API</a></li>
+        <li><a href="#color">Color tokens</a></li>
+        <li><a href="#states">State reference</a></li>
+        <li><a href="#dimensions">Dimensions</a></li>
+        <li><a href="#examples">Examples</a></li>
         <li><a href="#matrix">Full matrix</a></li>
-        <li><a href="#core">Core</a></li>
-        <li><a href="#destructive">Destructive</a></li>
-        <li><a href="#supportive">Supportive</a></li>
-        <li><a href="#neutral">Neutral</a></li>
-        <li><a href="#accent">Accent</a></li>
-        <li><a href="#tokens">Tokens</a></li>
       </ul>
     </aside>
       </div>
@@ -284,20 +476,121 @@
 
 <script>
 (function(){
-  var PLUS='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg>';
+  var PLUS='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg>';
+  var CARET='<svg class="fbtn__suffix" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3.5 4.5 4.5L6 12.5"/></svg>';
   var COLORS=[["pink","Pink"],["purple","Purple"],["orange","Orange"],["light-blue","Light Blue"],["bronze-green","Bronze Green"],["green","Green"],["blue","Blue"],["steel-blue","Steel Blue"]];
   var cap=function(s){return s.charAt(0).toUpperCase()+s.slice(1);};
+  var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
+
+  /* ---- button markup (mirrors the .fbtn data-attribute API in docs.css) ---- */
   function el(o){
-    var a=[['data-variant',o.variant],['data-size',o.size],['data-density',o.density||'comfortable']];
+    var a=[['data-variant',o.variant],['data-size',o.size]];
+    if(o.density)a.push(['data-density',o.density]);
     if(o.family)a.push(['data-family',o.family]);
     if(o.color)a.push(['data-color',o.color]);
-    if(o.mode)a.push(['data-mode',o.mode]);
+    if(o.mode==='dark')a.push(['data-mode','dark']);
     if(o.state&&o.state!=='default')a.push(['data-state',o.state]);
     if(o.round==='yes')a.push(['data-round','yes']);
-    if(o.icon==='yes')a.push(['data-icononly','yes']);
+    if(o.icon)a.push(['data-icononly','yes']);
     var at=a.map(function(x){return x[0]+'="'+x[1]+'"';}).join(' ');
-    return '<button class="fbtn" type="button" tabindex="-1" '+at+(o.state==='disabled'?' disabled':'')+' aria-label="Button">'+PLUS+'<span class="fbtn__label">Button</span></button>';
+    var label=o.text==null?'Button':o.text;
+    var inner=(o.prefix!==false||o.icon?PLUS:'')+(o.icon?'':'<span class="fbtn__label">'+esc(label)+'</span>'+(o.suffix?CARET:''));
+    return '<button class="fbtn" type="button" tabindex="-1" '+at+(o.state==='disabled'?' disabled':'')+' aria-label="'+esc(label)+'">'+inner+'</button>';
   }
+
+  /* ---- Figma token tables: [Default, Hovered, Pressed, Disabled] ---- */
+  var HEX={};
+  function ramp(p,d){for(var k in d)HEX[p+'/'+k]=d[k];}
+  ramp('Semantics/Primary',{50:'#f5f8ff',100:'#eaf1ff',200:'#d4e2ff',400:'#74a1f8',500:'#3b7eee',600:'#025be5',700:'#024dc6',800:'#0140a5'});
+  ramp('Semantics/Error',{50:'#fff6f6',100:'#ffecec',400:'#f07c7c',500:'#e34d4d',600:'#e42828',700:'#c02121',800:'#942c18'});
+  ramp('Semantics/Success',{50:'#f4fbf6',100:'#e9f7ed',400:'#74c796',500:'#5ab57a',600:'#46a758',700:'#3b8e4a',800:'#2f753d'});
+  ramp('Semantics/Primary-text',{50:'#f4f6f7',100:'#e3e7ea',900:'#373d42',950:'#101214'});
+  ramp('Semantics/Secondary-text',{50:'#eff2f6',100:'#eef1f4',200:'#dbdfe4',300:'#bfc5cf',500:'#7f8a9e',600:'#69778b',700:'#586473',800:'#404a54'});
+  ramp('Semantics/Disabled',{50:'#f6f6f6',100:'#efefef',200:'#e0e0e0',400:'#b5b5b5',500:'#9e9e9e',600:'#878787',700:'#6e6e6e',900:'#2e2e2e'});
+  HEX['Neutrals/White/100']='#ffffff';
+  ramp('Accent/Pink',{50:'#fff5f9',100:'#ffeaf3',200:'#ffd6e7',700:'#a92e76'});
+  ramp('Accent/Purple',{50:'#faf5ff',100:'#f3ebff',200:'#e7d6ff',700:'#742e9f'});
+  ramp('Accent/Orange',{50:'#fff7f2',100:'#ffefe6',200:'#ffdfcc',700:'#c74f00'});
+  ramp('Accent/Light Blue',{50:'#f2fbff',100:'#e6f7ff',200:'#ccf0ff',700:'#009fc5'});
+  ramp('Accent/Bronze',{50:'#f2fbfa',100:'#e6f7f5',200:'#ccefeb',700:'#0c7f72'});
+  ramp('Accent/Green',{50:'#f4fbf6',100:'#e9f7ed',200:'#d3efdb',700:'#3f8e50'});
+  ramp('Accent/Steel Blue',{50:'#f7faff',200:'#e7eef9',300:'#d5e0f2',900:'#304a77'});
+  var ACC={pink:['Accent/Pink',100,200,700],purple:['Accent/Purple',100,200,700],orange:['Accent/Orange',100,200,700],
+    'light-blue':['Accent/Light Blue',100,200,700],'bronze-green':['Accent/Bronze',100,200,700],green:['Accent/Green',100,200,700],
+    blue:['Semantics/Primary',100,200,600],'steel-blue':['Accent/Steel Blue',200,300,900]};
+  var W='Neutrals/White/100',D='Semantics/Disabled/',PT='Semantics/Primary-text/',ST='Semantics/Secondary-text/';
+  function tokens(o){
+    var v=o.variant, t={fill:null,border:null,label:null};
+    if(o.set==='action'){
+      var p='Semantics/'+{core:'Primary',destructive:'Error',supportive:'Success'}[o.family]+'/', core=o.family==='core';
+      if(v==='filled'){t.fill=[p+600,p+700,p+800,D+100];t.label=[W,W,W,D+500];}
+      if(v==='outlined'){t.fill=[W,p+50,p+100,W];t.border=[p+400,p+(core?500:700),p+(core?600:800),D+100];t.label=[p+600,p+700,p+800,D+400];}
+      if(v==='naked'){t.fill=o.density==='fit'?['none','none','none','none']:['none',p+50,p+100,'none'];t.label=[p+600,p+700,p+800,D+400];}
+    }else if(o.set==='neutral'&&o.mode!=='dark'){
+      if(v==='filled'){t.fill=[PT+950,PT+900,PT+900,D+100];t.label=[PT+50,PT+50,PT+50,D+400];}
+      if(v==='outlined'||v==='dashed'){t.fill=[W,PT+50,PT+100,W];t.label=[PT+900,PT+950,PT+950,D+400];
+        t.border=v==='dashed'?[ST+300,ST+500,ST+600,D+100]:[ST+200,ST+300,ST+500,D+100];}
+      if(v==='naked'){t.fill=o.density==='fit'?['none','none','none','none']:['none',PT+50,PT+100,'none'];t.label=[PT+900,PT+950,PT+950,D+400];}
+    }else if(o.set==='neutral'){
+      if(v==='filled'){t.fill=[ST+50,ST+100,ST+100,D+700];t.label=[PT+950,PT+950,PT+950,D+400];}
+      if(v==='outlined'||v==='dashed'){t.fill=['none',PT+900,PT+900,'none'];t.label=[PT+100,PT+50,PT+50,D+600];
+        t.border=v==='dashed'?[ST+700,ST+600,ST+300,D+900]:[ST+800,ST+700,ST+500,D+900];}
+      if(v==='naked'){t.fill=['none',PT+900,PT+900,'none'];t.label=[PT+100,PT+50,PT+50,D+600];}
+    }else{
+      var a=ACC[o.color],b=a[0]+'/';
+      if(v==='filled'){t.fill=[b+a[1],b+a[2],null,D+50];t.label=[b+a[3],b+a[3],null,D+500];}
+      if(v==='outlined'){t.fill=[W,b+50,null,W];var bd=b+(a[1]===100?200:a[2]);t.border=[bd,bd,null,D+200];t.label=[b+a[3],b+a[3],null,D+400];}
+      if(v==='naked'){t.fill=['none',b+50,null,'none'];t.label=[b+a[3],b+a[3],null,D+500];}
+    }
+    return t;
+  }
+  function tokHTML(name){
+    if(!name||name==='none')return '<span class="tok tok--none">none</span>';
+    var hx=HEX[name];
+    return '<span class="tok" title="'+(hx||'')+'"><i style="background:'+(hx||'transparent')+'"></i>'+esc(name)+(hx?' <span style="color:var(--ink-3)">'+hx+'</span>':'')+'</span>';
+  }
+
+  /* ---- dimensions (Figma Dimensions panel) ---- */
+  var AN={large:{default:[36,12,6],comfortable:[40,14,8],fit:[18,0,6],r:8,font:'14 / 18',ls:'0',ic:16,sx:16},
+          medium:{default:[28,10,4],comfortable:[32,12,6],fit:[16,0,4],r:6,font:'12 / 16',ls:'0.1',ic:14,sx:14},
+          small:{default:[20,6,4],comfortable:[24,8,4],fit:[12,0,4],r:6,font:'10 / 12',ls:'0.1',ic:10,sx:12}};
+  var AC={medium:[24,8,4,6,'12 / 16',12],small:[20,6,4,6,'10 / 12',10],tiny:[16,5,2,4,'10 / 12',10]};
+  function dims(o){
+    var h,p,g,r,f,ic,sx,ls;
+    if(o.set==='accent'){var a=AC[o.size];h=a[0];p=a[1];g=a[2];r=a[3];f=a[4];ic=sx=a[5];ls='0.1';}
+    else{var s=AN[o.size],d=s[o.density];h=d[0];p=d[1];g=d[2];r=s.r;f=s.font;ic=s.ic;sx=s.sx;ls=s.ls;}
+    var rows=[['Height',o.icon?h+' × '+h+' (square)':h+'px'],['Padding (L / R)',o.icon?'0':p+' / '+p],
+      ['Gap icon ↔ label',o.icon?'—':g+'px'],['Corner radius',o.round==='yes'?(o.icon?'100 (circle)':'100 (pill)'):r+'px'],
+      ['Label',o.icon?'—':'DM Sans SemiBold '+f+', tracking '+ls],['Icon',o.icon?ic+' × '+ic:ic+' × '+ic+(o.suffix&&sx!==ic?' (suffix '+sx+')':'')]];
+    if(o.variant==='outlined'||o.variant==='dashed')rows.push(['Border',o.variant==='dashed'?'1px dashed (2 / 2)':'1px solid']);
+    return rows;
+  }
+
+  /* ---- code snippet: Storybook props, defaults omitted ---- */
+  var SIZE={large:'lg',medium:'md',small:'sm'};
+  function code(o){
+    var gaps=[];
+    if(o.set==='accent')gaps.push('Accent colours');
+    if(o.variant==='dashed')gaps.push('Dashed');
+    if(o.mode==='dark')gaps.push('Dark mode');
+    var pr=[], comp=o.icon?'IconButton':'Button';
+    if(o.icon)pr.push('icon={<Plus />}','ariaLabel="'+(o.text||'Add')+'"');else pr.push('label="'+o.text+'"');
+    if(o.variant!=='filled'&&o.variant!=='dashed')pr.push('variant="'+o.variant+'"');
+    if(o.variant==='dashed')pr.push('variant="outlined"');
+    var intent=o.set==='neutral'?'neutral':o.set==='action'?o.family:null;
+    if(intent&&intent!=='core')pr.push('intent="'+intent+'"');
+    if(o.set!=='accent'&&o.size!=='medium')pr.push('size="'+SIZE[o.size]+'"');
+    if(o.set!=='accent'&&!o.icon&&o.density!=='default')pr.push('density="'+o.density+'"');
+    if(o.round==='yes')pr.push('rounded');
+    if(o.state==='disabled')pr.push('disabled');
+    if(!o.icon&&o.prefix)pr.push('prefix={<Plus />}');
+    if(!o.icon&&o.suffix)pr.push('suffix={<CaretRight />}');
+    var s='<'+comp+' '+pr.join(' ')+' />';
+    if(o.state==='hover'||o.state==='pressed')s='// '+cap(o.state==='hover'?'hovered':'pressed')+' comes from :hover / :active — no prop\n'+s;
+    if(gaps.length)s='// '+gaps.join(', ')+': no Button prop in Storybook yet — closest match below\n'+s;
+    return s;
+  }
+
   /* ---- explorer ---- */
   var $=function(i){return document.getElementById(i);};
   function opts(sel,list){sel.innerHTML=list.map(function(x){return '<option value="'+x[0]+'">'+x[1]+'</option>';}).join('');}
@@ -306,76 +599,94 @@
             accent:[['filled','Filled'],['outlined','Outlined'],['naked','Naked']]};
   var SIZES={action:[['large','Large'],['medium','Medium'],['small','Small']],neutral:[['large','Large'],['medium','Medium'],['small','Small']],accent:[['medium','Medium'],['small','Small'],['tiny','Tiny']]};
   var STATES={action:['default','hover','pressed','disabled'],neutral:['default','hover','pressed','disabled'],accent:['default','hover','disabled']};
+  var SNAME={default:'Default',hover:'Hovered',pressed:'Pressed',disabled:'Disabled'};
+  var SI={default:0,hover:1,pressed:2,disabled:3};
   opts($('p-color'),COLORS);
+  function keep(sel,v){if([].some.call(sel.options,function(x){return x.value===v;}))sel.value=v;}
   function sync(){
-    var set=$('p-set').value;
+    var set=$('p-set').value,v=$('p-variant').value,s=$('p-size').value,st=$('p-state').value,d=$('p-density').value;
     $('l-family').hidden=set!=='action';$('l-color').hidden=set!=='accent';$('l-mode').hidden=set!=='neutral';
-    var v=$('p-variant').value,s=$('p-size').value,st=$('p-state').value;
-    opts($('p-variant'),VARS[set]);opts($('p-size'),SIZES[set]);opts($('p-state'),STATES[set].map(function(x){return [x,cap(x)];}));
-    if(VARS[set].some(function(x){return x[0]===v;}))$('p-variant').value=v;
-    if(SIZES[set].some(function(x){return x[0]===s;}))$('p-size').value=s;
-    if(STATES[set].indexOf(st)>-1)$('p-state').value=st;
+    $('l-density').hidden=set==='accent';
+    opts($('p-variant'),VARS[set]);keep($('p-variant'),v);
+    opts($('p-size'),SIZES[set]);keep($('p-size'),s||'medium');
+    opts($('p-state'),STATES[set].map(function(x){return [x,SNAME[x]];}));keep($('p-state'),st);
+    var dens=[['default','Default'],['comfortable','Comfortable']];
+    if($('p-variant').value==='naked')dens.push(['fit','Fit Content']);
+    opts($('p-density'),dens);keep($('p-density'),d);
     draw();
   }
+  function state(){
+    var set=$('p-set').value;
+    return {set:set,variant:$('p-variant').value,size:$('p-size').value,
+      density:set==='accent'?null:$('p-density').value,state:$('p-state').value,round:$('p-round').value,
+      icon:$('p-icon').checked,prefix:$('p-prefix').checked,suffix:$('p-suffix').checked,text:$('p-text').value||'Button',
+      family:set==='action'?$('p-family').value:set==='neutral'?'neutral':null,
+      color:set==='accent'?$('p-color').value:null,mode:set==='neutral'?$('p-mode').value:null};
+  }
   function draw(){
-    var set=$('p-set').value,o={variant:$('p-variant').value,size:$('p-size').value,density:$('p-density').value,state:$('p-state').value,round:$('p-round').value,icon:$('p-icon').value};
-    var dark=set==='neutral'&&$('p-mode').value==='dark';
-    if(set==='action')o.family=$('p-family').value;
-    if(set==='neutral'){o.family='neutral';o.mode=$('p-mode').value;}
-    if(set==='accent')o.color=$('p-color').value;
+    var o=state(), dark=o.mode==='dark';
     $('p-stage').innerHTML=el(o);
     $('p-view').classList.toggle('is-dark',dark);
     var name=['Variant='+cap(o.variant)];
-    if(set==='action')name.push('Action Type='+cap(o.family));
-    if(set==='accent')name.push('Color='+$('p-color').selectedOptions[0].text);
-    name.push('Size='+cap(o.size),'Height & Spacing='+cap(o.density),'State='+cap(o.state));
-    if(set==='neutral')name.push('Mode='+cap($('p-mode').value));
-    name.push('Rounded='+(o.round==='yes'?'Yes':'No'),'Icon-Only='+(o.icon==='yes'?'Yes':'No'));
+    if(o.set==='action')name.push('Action Type='+cap(o.family));
+    if(o.set==='accent')name.push('Color='+$('p-color').selectedOptions[0].text);
+    name.push('Size='+cap(o.size));
+    if(o.set!=='accent')name.push('Height & Spacing='+(o.density==='fit'?'Fit Content':cap(o.density)));
+    name.push('State='+SNAME[o.state]);
+    if(o.set==='neutral')name.push('Mode='+cap(o.mode));
+    name.push('Rounded='+(o.round==='yes'?'Yes':'No'),(o.set==='accent'?'Icon Only=':'Icon-Only=')+(o.icon?'Yes':'No'));
     $('p-name').textContent=name.join(', ');
+    $('p-dims').innerHTML=dims(o).map(function(r){return '<dt>'+r[0]+'</dt><dd>'+r[1]+'</dd>';}).join('');
+    var t=tokens(o), i=SI[o.state];
+    $('p-state-name').textContent=SNAME[o.state];
+    var rows=[['Container fill',t.fill&&t.fill[i]],['Border',t.border?t.border[i]:'none'],['Label / icon',t.label&&t.label[i]]];
+    $('p-colors').innerHTML=rows.map(function(r){return '<dt>'+r[0]+'</dt><dd>'+tokHTML(r[1])+'</dd>';}).join('');
+    $('p-code').textContent=code(o);
   }
-  ['p-set'].forEach(function(i){$(i).addEventListener('change',sync);});
-  ['p-family','p-color','p-mode','p-variant','p-size','p-density','p-state','p-round','p-icon'].forEach(function(i){$(i).addEventListener('change',draw);});
+  /* Changing family resets the component properties to that family's Figma
+     defaults: Show Prefix on, Show Suffix on only for Accent, and the default
+     Button Text ("Accent" on Accent, "Button" elsewhere) unless it was edited. */
+  $('p-set').addEventListener('change',function(){
+    var acc=this.value==='accent', t=$('p-text');
+    $('p-prefix').checked=true; $('p-suffix').checked=acc;
+    if(t.value==='Button'||t.value==='Accent')t.value=acc?'Accent':'Button';
+    sync();
+  });
+  $('p-variant').addEventListener('change',sync);
+  ['p-family','p-color','p-mode','p-size','p-density','p-state','p-round','p-icon','p-suffix'].forEach(function(i){$(i).addEventListener('change',draw);});
+  $('p-prefix').addEventListener('change',draw);
+  $('p-text').addEventListener('input',draw);
   sync();
-  /* ---- matrices ---- */
+
+  /* ---- full matrix ---- */
   function matrix(host){
-    var set=host.getAttribute('data-set'),dark=set==='neutral-dark';
-    var base=set.replace('-dark','');
+    var set=host.getAttribute('data-set'),dark=set==='neutral-dark',base=set.replace('-dark','');
     var acc=base==='accent',variants=base==='neutral'?['filled','outlined','dashed','naked']:['filled','outlined','naked'];
     var sizes=acc?['medium','small','tiny']:['large','medium','small'];
     var states=acc?['default','hover','disabled']:['default','hover','pressed','disabled'];
-    var cols=acc?COLORS:[[null,null]];
     var h='<table><thead><tr><th>'+(dark?'Dark mode':'Variant')+'</th><th>State</th>';
     sizes.forEach(function(s){h+='<th>'+cap(s)+(acc?'':' · Text')+'</th>'+(acc?'':'<th>'+cap(s)+' · Icon-only</th>');});
     h+='</tr></thead><tbody>';
-    var rows=acc?COLORS.map(function(c){return {label:c[1],color:c[0]};}):variants.map(function(v){return {label:cap(v),variant:v};});
-    if(acc){
-      variants.forEach(function(v){rows.forEach(function(r){});});
-    }
     var list=[];
     if(acc){variants.forEach(function(v){COLORS.forEach(function(c){list.push({label:cap(v)+' · '+c[1],variant:v,color:c[0]});});});}
     else{variants.forEach(function(v){list.push({label:cap(v),variant:v});});}
     list.forEach(function(r){
-      var sts=acc?['default']:states; /* accent: state shown by hover/disabled columns below */
-      (acc?['default','hover','disabled']:states).forEach(function(st,i){
-        if(acc&&i>0&&false)return;
-        h+='<tr>'+(i===0?'<th rowspan="'+(acc?3:states.length)+'">'+r.label+'</th>':'')+'<th>'+cap(st)+'</th>';
+      states.forEach(function(st,i){
+        h+='<tr>'+(i===0?'<th rowspan="'+states.length+'">'+r.label+'</th>':'')+'<th>'+SNAME[st]+'</th>';
         sizes.forEach(function(s){
-          var o={variant:r.variant,size:s,density:'comfortable',state:st};
+          var o={variant:r.variant,size:s,density:acc?null:'comfortable',state:st};
           if(base==='neutral'){o.family='neutral';if(dark)o.mode='dark';}
-          else if(acc){o.color=r.color;}
+          else if(acc){o.color=r.color;o.prefix=false;o.text='Accent';}
           else o.family=base;
           h+='<td>'+el(o)+'</td>';
-          if(!acc){var o2={};for(var k in o)o2[k]=o[k];o2.icon='yes';h+='<td>'+el(o2)+'</td>';}
+          if(!acc){var o2={};for(var k in o)o2[k]=o[k];o2.icon=true;h+='<td>'+el(o2)+'</td>';}
         });
         h+='</tr>';
       });
     });
     host.innerHTML=h+'</tbody></table>';
-    if(dark)host.parentNode.classList.add('has-dark');
   }
   [].forEach.call(document.querySelectorAll('.fb-matrix'),matrix);
-  /* dark table: force neutral-dark buttons to render on the dark surface */
-  /* ---- set filter ---- */
   var sets=[['all','All'],['core','Core'],['destructive','Destructive'],['supportive','Supportive'],['neutral','Neutral'],['accent','Accent']];
   var f=$('fb-filters');
   f.innerHTML=sets.map(function(s,i){return '<button type="button" data-f="'+s[0]+'" aria-pressed="'+(i===0)+'">'+s[1]+'</button>';}).join('');
@@ -383,9 +694,15 @@
     var b=e.target.closest('button');if(!b)return;
     [].forEach.call(f.children,function(x){x.setAttribute('aria-pressed',x===b);});
     var k=b.getAttribute('data-f');
-    ['core','destructive','supportive','neutral','accent'].forEach(function(id){
-      $(id).hidden=!(k==='all'||k===id);
-    });
+    ['core','destructive','supportive','neutral','accent'].forEach(function(id){$(id).hidden=!(k==='all'||k===id);});
+  });
+
+  /* ---- copy buttons: copy the snippet (or the variant name) beside them ---- */
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-copy]');if(!b)return;
+    var src=b.parentNode.querySelector('code');if(!src)return;
+    var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy';},1400);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(src.textContent).then(done,function(){});}
   });
 })();
 </script>

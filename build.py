@@ -78,6 +78,10 @@ PAGES = [
      "The Cube spacing scale — 21 steps from 0 to 72 — and when to reach for each one."),
     ("docs-spacing-specifications", "Spacing specs", "Spacing specifications — Cube Design System",
      "Every spacing step and its pixel value, plus the raw tokens."),
+    ("docs-inputs", "Inputs", "Input — Cube Design System",
+     "Input field guidelines — sizes, states, chips and content — and when to reach for each one."),
+    ("docs-inputs-specifications", "Input specs", "Input specifications — Cube Design System",
+     "Every dimension, color token and prop for the Input and its label sub-component."),
     ("docs-tooltips", "Tooltips", "Tooltips — Cube Design System",
      "Tooltip guidelines, anatomy, placement and accessibility for the Cube design system."),
     ("docs-tooltips-specifications", "Tooltip specs", "Tooltip specifications — Cube Design System",
@@ -93,7 +97,8 @@ PAGES = [
 # top bar, so it does not need a second entry in the drop-down.
 HIDDEN = {"internal", "craft", "team", "docs", "docs-tooltips", "docs-tooltips-specifications",
           "docs-buttons-specifications", "docs-typography", "docs-typography-specifications",
-          "docs-colors", "docs-colors-specifications", "docs-spacing", "docs-spacing-specifications"}
+          "docs-colors", "docs-colors-specifications", "docs-spacing", "docs-spacing-specifications",
+          "docs-inputs", "docs-inputs-specifications"}
 
 # Guarded by INTERNAL_PASSWORD rather than SITE_PASSWORD.
 INTERNAL_PAGES = {"internal"}
@@ -118,7 +123,8 @@ STUDIO = {"index"}
 DOCS = {"docs", "docs-tooltips", "docs-tooltips-specifications", "docs-buttons-specifications",
         "docs-typography", "docs-typography-specifications",
         "docs-colors", "docs-colors-specifications",
-        "docs-spacing", "docs-spacing-specifications"}
+        "docs-spacing", "docs-spacing-specifications",
+        "docs-inputs", "docs-inputs-specifications"}
 
 
 EDITION_HEAD = (

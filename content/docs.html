@@ -50,7 +50,7 @@
       <ul>
         <li><a href="docs.html" aria-current="page">Buttons</a></li>
         <li><a href="docs-tooltips.html">Tooltips</a></li>
-        <li><a href="#" aria-disabled="true">Inputs <small>Soon</small></a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
         <li><a href="#" aria-disabled="true">Banner &amp; Toasts <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
@@ -103,7 +103,7 @@
           <span class="docs-badge">Stable</span>
           <span class="docs-meta">Last updated Sep 2026</span>
         </div>
-        <p class="docs-title__desc">Buttons trigger an action. Pick an action type, an emphasis and a size — this page helps you choose; the Specifications tab lists every variant.</p>
+        <p class="docs-title__desc">A clickable control that triggers an action. Three families — Action, Neutral and Accent — share one anatomy: a container, optional prefix and suffix icons, and a text label, plus an icon-only mode.</p>
       </div>
       <aside class="docs-res" aria-label="Resources">
         <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
@@ -130,184 +130,208 @@
     <main class="docs-main">
       <article class="docs-content">
 
-        <section id="live-demo">
-          <h2>Live demo</h2>
+        <section id="at-a-glance">
+
+          <h2>At a glance</h2>
+          <p>Three decisions set every button: <strong>how important</strong> the action is (Variant),
+            <strong>what it means</strong> (Action Type) and <strong>how much room</strong> it has (Size).
+            Get those right and the rest — states, colour, spacing — comes from the component.</p>
           <div class="docs-demo">
-            <button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Core</span></button> <button class="fbtn" type="button" data-family="destructive" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Destructive</span></button> <button class="fbtn" type="button" data-family="supportive" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Supportive</span></button> <button class="fbtn" type="button" data-family="neutral" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Neutral</span></button>
+            <button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable"><span class="fbtn__label">Save changes</span></button>
+            <button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="large" data-density="comfortable"><span class="fbtn__label">Cancel</span></button>
+            <button class="fbtn" type="button" data-family="core" data-variant="naked" data-size="large" data-density="comfortable"><span class="fbtn__label">View all</span><svg class="fbtn__suffix" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3.5 4.5 4.5L6 12.5"/></svg></button>
+            <p class="docs-demo__caption">One Filled primary, a Neutral Outlined secondary, a Naked tertiary — the hierarchy most screens need.</p>
+          </div>
+          <div class="bx-quick">
+            <div><h3>1 · Emphasis</h3><p>One <strong>Filled</strong> per view. <strong>Outlined</strong> or Neutral for secondary, <strong>Naked</strong> for tertiary and inline.</p></div>
+            <div><h3>2 · Meaning</h3><p><strong>Core</strong> to proceed, <strong>Destructive</strong> for anything irreversible, <strong>Supportive</strong> to confirm or approve.</p></div>
+            <div><h3>3 · Room</h3><p><strong>Large</strong> for page CTAs and forms, <strong>Medium</strong> (default) almost everywhere, <strong>Small</strong> in dense tables.</p></div>
           </div>
         </section>
+        <section id="anatomy">
 
-        <section id="overview">
-          <h2>Overview</h2>
-          <p>Buttons let a person trigger an action — submit a form, open a dialog, confirm a choice. Cube has
-            <strong>three button sets</strong> built from the same properties: the <strong>Action</strong> button
-            (Core, Destructive, Supportive), the <strong>Neutral</strong> button, and the <strong>Accent</strong> button.
-            Together they span roughly 2,600 variants, so this tab teaches how to <em>choose</em> — and the
-            <a href="docs-buttons-specifications.html">Specifications tab</a> is where you explore every one.</p>
-
-        </section>
-
-        <section id="choose">
-          <h2>Choose a button</h2>
-          <p>Pick in three steps: what kind of action is it (<em>action type</em>), how loud should it be
-            (<em>variant</em>), and how much room do you have (<em>size</em>).</p>
-          <div class="fb-index">
-            <a class="fb-card" data-family="core" href="docs-buttons-specifications.html#core">
-              <div class="fb-card__head"><span class="fb-card__dot" aria-hidden="true"></span><h3>Core</h3></div>
-              <p>The default action. Submit, save, continue.</p>
-              <div class="fb-card__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="core" data-variant="outlined" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="core" data-variant="naked" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div>
-              <span class="fb-card__count">Filled · Outlined · Naked</span>
-            </a>
-            <a class="fb-card" data-family="destructive" href="docs-buttons-specifications.html#destructive">
-              <div class="fb-card__head"><span class="fb-card__dot" aria-hidden="true"></span><h3>Destructive</h3></div>
-              <p>Delete, remove, revoke — hard to reverse.</p>
-              <div class="fb-card__stage"><button class="fbtn" type="button" data-family="destructive" data-variant="filled" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="destructive" data-variant="outlined" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="destructive" data-variant="naked" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div>
-              <span class="fb-card__count">Filled · Outlined · Naked</span>
-            </a>
-            <a class="fb-card" data-family="supportive" href="docs-buttons-specifications.html#supportive">
-              <div class="fb-card__head"><span class="fb-card__dot" aria-hidden="true"></span><h3>Supportive</h3></div>
-              <p>Confirm, approve, mark done — a positive outcome.</p>
-              <div class="fb-card__stage"><button class="fbtn" type="button" data-family="supportive" data-variant="filled" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="supportive" data-variant="outlined" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="supportive" data-variant="naked" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div>
-              <span class="fb-card__count">Filled · Outlined · Naked</span>
-            </a>
-            <a class="fb-card" data-family="neutral" href="docs-buttons-specifications.html#neutral">
-              <div class="fb-card__head"><span class="fb-card__dot" aria-hidden="true"></span><h3>Neutral</h3></div>
-              <p>Low-key actions on any surface, in light and dark.</p>
-              <div class="fb-card__stage"><button class="fbtn" type="button" data-family="neutral" data-variant="filled" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-family="neutral" data-variant="naked" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div>
-              <span class="fb-card__count">Filled · Outlined · Dashed · Naked</span>
-            </a>
-            <a class="fb-card" data-family="accent" href="docs-buttons-specifications.html#accent">
-              <div class="fb-card__head"><span class="fb-card__dot" aria-hidden="true"></span><h3>Accent</h3></div>
-              <p>Eight colours for tags, filters and categories.</p>
-              <div class="fb-card__stage"><button class="fbtn" type="button" data-color="purple" data-variant="filled" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-color="purple" data-variant="outlined" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button><button class="fbtn" type="button" data-color="purple" data-variant="naked" data-size="small" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div>
-              <span class="fb-card__count">Filled · Outlined · Naked</span>
-            </a>
+          <h2>Anatomy</h2>
+          <p>Every family shares one anatomy: a container, an optional prefix icon, a text label and an optional
+            suffix icon. Shown: Action / Filled / Core / Large / Comfortable with prefix and suffix enabled.</p>
+          <div class="bx-anatomy" data-bx-anatomy="top,left,bottom,right">
+            <div class="bx-anatomy__zoom">
+              <button class="fbtn" type="button" tabindex="-1" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-anatomy="1"><span data-anatomy="2" style="display:inline-flex"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></span><span class="fbtn__label" data-anatomy="3">Button</span><span data-anatomy="4" style="display:inline-flex"><svg class="fbtn__suffix" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3.5 4.5 4.5L6 12.5"/></svg></span></button>
+            </div>
           </div>
-          <table class="docs-table">
-            <thead><tr><th>Step</th><th>Property</th><th>Options</th></tr></thead>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table">
+            <thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Code</th><th>Notes</th></tr></thead>
             <tbody>
-              <tr><td>1</td><td>Action type</td><td>Core (default), Destructive, Supportive — or use Neutral / Accent for non-action emphasis.</td></tr>
-              <tr><td>2</td><td>Variant</td><td>Filled (default) &gt; Outlined &gt; Naked. Neutral also has Dashed.</td></tr>
-              <tr><td>3</td><td>Size</td><td>Large, Medium (default), Small. Accent uses Medium, Small, Tiny.</td></tr>
-              <tr><td>4</td><td>Modifiers</td><td>Rounded, Icon-only, Density (Default / Comfortable / Fit content).</td></tr>
+              <tr><td><span class="bx-n">1</span></td><td>Container</td><td><code>Variant</code>, <code>Size</code>, <code>Height &amp; Spacing</code>, <code>Rounded</code></td><td><code>variant</code> <code>size</code> <code>density</code> <code>rounded</code></td><td>Auto-layout frame that holds the content. Carries fill, border, corner radius, height and horizontal padding. Width hugs the content.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Prefix icon</td><td><code>Show Prefix</code> · <code>Prefix Value</code></td><td><code>prefix</code></td><td>Optional leading icon (instance swap). On by default and defaults to <em>Plus</em>; swap in any icon from the library.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Label</td><td><code>Button Text</code></td><td><code>label</code></td><td>DM Sans SemiBold; size scales with Size. A short, verb-first action — “Save”, “Add filter”.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Suffix icon</td><td><code>Show Suffix</code> · <code>Suffix Value</code></td><td><code>suffix</code></td><td>Optional trailing icon. Off by default and defaults to <em>CaretRight</em>; use it for dropdown and navigation affordances.</td></tr>
             </tbody>
-          </table>
+          </table></div>
+
+          <h3>Icon-only</h3>
+          <p>With Icon-Only = Yes the label and suffix are removed and the container becomes a square
+            (width = height). There's no visible text, so it always needs an accessible name and a tooltip.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,top">
+            <div class="bx-anatomy__zoom">
+              <button class="fbtn" type="button" tabindex="-1" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-icononly="yes" aria-label="Add" data-anatomy="1"><span data-anatomy="2" style="display:inline-flex"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></span></button>
+            </div>
+          </div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table">
+            <thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Code</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Container</td><td><code>Icon-Only = Yes</code></td><td><code>&lt;IconButton&gt;</code></td><td>Square — 40 / 36 / 32 / 28 / 24 / 20 px depending on Size and Height &amp; Spacing. Rounded = Yes makes it a circle.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Icon</td><td><code>Prefix Value</code></td><td><code>icon</code> + <code>ariaLabel</code></td><td>A single icon, sized by Size: 16 / 14 / 10 px.</td></tr>
+            </tbody>
+          </table></div>
+        </section>
+        <section id="families">
+
+          <h2>Button families</h2>
+          <p>Three component sets share the same anatomy and API. Pick the family by intent first, then configure its Variant.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="medium" data-density="comfortable"><span class="fbtn__label">Save</span></button><button class="fbtn" type="button" data-family="destructive" data-variant="filled" data-size="medium" data-density="comfortable"><span class="fbtn__label">Delete</span></button><button class="fbtn" type="button" data-family="supportive" data-variant="filled" data-size="medium" data-density="comfortable"><span class="fbtn__label">Approve</span></button></div><div class="bx-opt__body"><h3>Action</h3><p>Primary, destructive and supportive actions. The only family with an Action Type axis.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Button/Action-Button</span><span class="bx-chip bx-chip--code"><b>Code</b>intent=&quot;core&quot;…</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="medium" data-density="comfortable"><span class="fbtn__label">Cancel</span></button><button class="fbtn" type="button" data-family="neutral" data-variant="naked" data-size="medium" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Filters</span></button></div><div class="bx-opt__body"><h3>Neutral</h3><p>Low-emphasis, colour-neutral actions — Cancel, Filters, Export. Adds a Dashed variant and a Dark mode.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Button/Neutral-Button</span><span class="bx-chip bx-chip--code"><b>Code</b>intent=&quot;neutral&quot;</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-color="pink" data-variant="filled" data-size="medium"><span class="fbtn__label">Instagram</span></button><button class="fbtn" type="button" data-color="light-blue" data-variant="filled" data-size="medium"><span class="fbtn__label">Google Ads</span></button></div><div class="bx-opt__body"><h3>Accent</h3><p>Tinted, category-coded actions in 8 accent colours. Sizes Medium / Small / Tiny; no Pressed state.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Button/Accent-Button</span></div></div></div></div>
+        </section>
+        <section id="variant">
+
+          <h2>Variant</h2>
+          <p>How important the action is. Filled is the highest emphasis, Outlined is secondary, Naked is the lowest.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Filled <small>Default</small></h3><p>Primary action on a surface. Use at most one Filled Core button per view or section.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Variant=Filled</span><span class="bx-chip bx-chip--code"><b>Code</b>variant=&quot;filled&quot;</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="outlined" data-size="large" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Outlined</h3><p>Secondary action next to a Filled button, or a standalone action of medium weight.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Variant=Outlined</span><span class="bx-chip bx-chip--code"><b>Code</b>variant=&quot;outlined&quot;</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="naked" data-size="large" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Naked</h3><p>Tertiary and inline actions — “View all”, table row actions, links inside cards.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Variant=Naked</span><span class="bx-chip bx-chip--code"><b>Code</b>variant=&quot;naked&quot;</span></div></div></div></div>
+        </section>
+        <section id="action-type">
+
+          <h2>Action type</h2>
+          <p>What the action means. It picks the colour ramp every Variant and State draws from — so the colour
+            itself tells people what will happen.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Save</span></button><button class="fbtn" type="button" data-family="core" data-variant="outlined" data-size="large" data-density="comfortable"><span class="fbtn__label">Save</span></button></div><div class="bx-opt__body"><h3>Core <small>Default</small></h3><p>Neutral-positive actions — Save, Apply, Continue. Primary colour ramp.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Action Type=Core</span><span class="bx-chip bx-chip--code"><b>Code</b>intent=&quot;core&quot;</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="destructive" data-variant="filled" data-size="large" data-density="comfortable"><span class="fbtn__label">Delete</span></button><button class="fbtn" type="button" data-family="destructive" data-variant="outlined" data-size="large" data-density="comfortable"><span class="fbtn__label">Remove</span></button></div><div class="bx-opt__body"><h3>Destructive</h3><p>Irreversible or risky actions — Delete, Remove, Revoke. Error colour ramp.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Action Type=Destructive</span><span class="bx-chip bx-chip--code"><b>Code</b>intent=&quot;destructive&quot;</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="supportive" data-variant="filled" data-size="large" data-density="comfortable"><span class="fbtn__label">Approve</span></button><button class="fbtn" type="button" data-family="supportive" data-variant="outlined" data-size="large" data-density="comfortable"><span class="fbtn__label">Mark done</span></button></div><div class="bx-opt__body"><h3>Supportive</h3><p>Confirming and success actions — Approve, Mark as done. Success colour ramp.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Action Type=Supportive</span><span class="bx-chip bx-chip--code"><b>Code</b>intent=&quot;supportive&quot;</span></div></div></div></div>
+        </section>
+        <section id="size">
+
+          <h2>Size</h2>
+          <p>Size sets the font size, icon size and corner radius. Height comes from Size together with Height &amp; Spacing. Keep every button in a group the same size.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Large</h3><p>14px text, 16px icons, 8px radius. Page-level CTAs and forms.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Size=Large</span><span class="bx-chip bx-chip--code"><b>Code</b>size=&quot;lg&quot;</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="medium"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Medium <small>Default</small></h3><p>12px text, 14px icons, 6px radius. Toolbars, cards, dialogs.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Size=Medium</span><span class="bx-chip bx-chip--code"><b>Code</b>size=&quot;md&quot;</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="small"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Small</h3><p>10px text, 10px icons, 6px radius. Dense tables, filter bars, inline controls.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Size=Small</span><span class="bx-chip bx-chip--code"><b>Code</b>size=&quot;sm&quot;</span></div></div></div></div>
+        </section>
+        <section id="density">
+
+          <h2>Height &amp; spacing</h2>
+          <p>How dense the container is. Fit Content is available on the Naked variant only.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="medium" data-density="default"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Default <small>Default</small></h3><p>Compact height and padding — 36 / 28 / 20 px tall (Large / Medium / Small).</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Height &amp; Spacing=Default</span><span class="bx-chip bx-chip--code"><b>Code</b>density=&quot;default&quot;</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="medium" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Comfortable</h3><p>Roomier height and padding — 40 / 32 / 24 px tall.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Height &amp; Spacing=Comfortable</span><span class="bx-chip bx-chip--code"><b>Code</b>density=&quot;comfortable&quot;</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="naked" data-size="medium" data-density="fit"><span class="fbtn__label">View all</span><svg class="fbtn__suffix" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3.5 4.5 4.5L6 12.5"/></svg></button></div><div class="bx-opt__body"><h3>Fit Content</h3><p>Naked only. No padding; height hugs the text — for inline, link-like actions.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Height &amp; Spacing=Fit Content</span><span class="bx-chip bx-chip--code"><b>Code</b>density=&quot;fit&quot;</span></div></div></div></div>
+        </section>
+        <section id="state">
+
+          <h2>State</h2>
+          <p>Default is the resting state; the others come from interaction. In code, Hovered and Pressed come from
+            pointer events — you only ever set <code>disabled</code>.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Default</h3><p>Resting state.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>State=Default</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-state="hover" tabindex="-1"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Hovered</h3><p>Pointer over the button. One step darker on the ramp.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>State=Hovered</span><span class="bx-chip bx-chip--code"><b>Code</b>:hover</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-state="pressed" tabindex="-1"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Pressed</h3><p>While the button is being clicked or tapped. Two steps darker.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>State=Pressed</span><span class="bx-chip bx-chip--code"><b>Code</b>:active</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-state="disabled" disabled tabindex="-1"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Disabled</h3><p>Not interactive: disabled tokens, no pointer events. Explain why nearby — the button can't.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>State=Disabled</span><span class="bx-chip bx-chip--code"><b>Code</b>disabled</span></div></div></div></div>
+        </section>
+        <section id="shape">
+
+          <h2>Rounded &amp; icon-only</h2>
+          <p>Shape modifiers that combine with every Variant, Size and State. Keep one shape per group.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Rounded = No <small>Default</small></h3><p>Default. 8px (Large) or 6px (Medium / Small) corner radius.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Rounded=No</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-round="yes"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Rounded = Yes</h3><p>Pill shape — 100px radius. For chip-like or floating contexts.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Rounded=Yes</span><span class="bx-chip bx-chip--code"><b>Code</b>rounded</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-icononly="yes" aria-label="Add"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></button></div><div class="bx-opt__body"><h3>Icon-only</h3><p>Square button with a single icon. Requires a tooltip and an aria-label.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Icon-Only=Yes</span><span class="bx-chip bx-chip--code"><b>Code</b>&lt;IconButton&gt;</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-round="yes" data-icononly="yes" aria-label="Add"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></button></div><div class="bx-opt__body"><h3>Icon-only + Rounded</h3><p>Circular icon button — FABs, compact toolbars.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Icon-Only=Yes, Rounded=Yes</span><span class="bx-chip bx-chip--code"><b>Code</b>&lt;IconButton rounded&gt;</span></div></div></div></div>
+        </section>
+        <section id="neutral">
+
+          <h2>Neutral variants &amp; mode</h2>
+          <p>Neutral buttons carry no colour meaning, so they sit calmly beside a primary action. Every variant also has a Dark mode for dark surfaces.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="neutral" data-variant="filled" data-size="large" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Filled</h3><p>Highest-emphasis neutral. Dark fill, light text.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Variant=Filled</span><span class="bx-chip bx-chip--code"><b>Code</b>variant=&quot;filled&quot;</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="large" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Outlined <small>Default</small></h3><p>Secondary actions like Cancel.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Variant=Outlined</span><span class="bx-chip bx-chip--code"><b>Code</b>variant=&quot;outlined&quot;</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="neutral" data-variant="dashed" data-size="large" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Add new</span></button></div><div class="bx-opt__body"><h3>Dashed</h3><p>“Add new” and empty-slot actions.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Variant=Dashed</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-family="neutral" data-variant="naked" data-size="large" data-density="comfortable"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Naked</h3><p>Lowest-emphasis neutral. Toolbar and inline actions.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Variant=Naked</span><span class="bx-chip bx-chip--code"><b>Code</b>variant=&quot;naked&quot;</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage docs-stage--dark"><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="large" data-density="comfortable" data-mode="dark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Button</span></button></div><div class="bx-opt__body"><h3>Mode = Dark</h3><p>Inverted tokens for dark surfaces (shown: Outlined).</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Mode=Dark</span></div></div></div></div>
+        </section>
+        <section id="accent">
+
+          <h2>Accent colours &amp; sizes</h2>
+          <p>Accent buttons code categories — channels, segments — in 8 colours × Filled / Outlined / Naked. They use their
+            own compact scale (Medium 24px, Small 20px, Tiny 16px) and have Default, Hovered and Disabled states only.</p>
+          <div class="docs-demo"><button class="fbtn" type="button" data-color="pink" data-variant="filled" data-size="medium"><span class="fbtn__label">Pink</span></button><button class="fbtn" type="button" data-color="purple" data-variant="filled" data-size="medium"><span class="fbtn__label">Purple</span></button><button class="fbtn" type="button" data-color="orange" data-variant="filled" data-size="medium"><span class="fbtn__label">Orange</span></button><button class="fbtn" type="button" data-color="light-blue" data-variant="filled" data-size="medium"><span class="fbtn__label">Light Blue</span></button><button class="fbtn" type="button" data-color="bronze-green" data-variant="filled" data-size="medium"><span class="fbtn__label">Bronze Green</span></button><button class="fbtn" type="button" data-color="green" data-variant="filled" data-size="medium"><span class="fbtn__label">Green</span></button><button class="fbtn" type="button" data-color="blue" data-variant="filled" data-size="medium"><span class="fbtn__label">Blue</span></button><button class="fbtn" type="button" data-color="steel-blue" data-variant="filled" data-size="medium"><span class="fbtn__label">Steel Blue</span></button>
+            <p class="docs-demo__caption">Keep one colour per meaning across the product — if Instagram is pink on one screen, it's pink everywhere.</p></div>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-color="purple" data-variant="filled" data-size="medium"><span class="fbtn__label">Accent</span></button><button class="fbtn" type="button" data-color="purple" data-variant="outlined" data-size="medium"><span class="fbtn__label">Accent</span></button><button class="fbtn" type="button" data-color="purple" data-variant="naked" data-size="medium"><span class="fbtn__label">Accent</span></button></div><div class="bx-opt__body"><h3>Variants</h3><p>Filled is a tint (/100 fill, /700 label); Outlined adds a /200 border; Naked is label only.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Variant</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><button class="fbtn" type="button" data-color="purple" data-variant="filled" data-size="medium"><span class="fbtn__label">Accent</span></button><button class="fbtn" type="button" data-color="purple" data-variant="filled" data-size="small"><span class="fbtn__label">Accent</span></button><button class="fbtn" type="button" data-color="purple" data-variant="filled" data-size="tiny"><span class="fbtn__label">Accent</span></button></div><div class="bx-opt__body"><h3>Sizes</h3><p>Medium, Small and Tiny — 24 / 20 / 16 px. No Height &amp; Spacing axis.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Size=Medium | Small | Tiny</span></div></div></div></div>
           <div class="docs-note">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>
-            <p>Three separate components in code, each documented in Storybook: <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-button--docs" target="_blank" rel="noopener noreferrer">Button</a> (Neutral, Accent),
-              <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-semantic-semanticbutton--docs" target="_blank" rel="noopener noreferrer">SemanticButton</a> (Core, Destructive, Supportive), and
-              <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-iconbutton--docs" target="_blank" rel="noopener noreferrer">IconButton</a> (Icon-only).</p>
+            <p>Accent, Dashed and Neutral Dark mode aren't props on the Storybook <code>Button</code> today. Check with engineering before designing with them, or treat them as a request for the component.</p>
           </div>
         </section>
+        <section id="usage">
 
-        <section id="when-to-use">
-          <h2>When to use</h2>
-          <h3>Use a button</h3>
-          <p>Whenever an interaction changes state, submits data, or moves someone forward in a flow. If it
-            goes somewhere instead of doing something, it is usually a link.</p>
-          <h3>Don't use a button</h3>
-          <p>As plain navigation between pages with no side effect, or stacked more than once in
-            Filled at the same level — one Filled button per view keeps the intended action clear.</p>
+          <h2>Common layouts</h2>
+          <p>Set up a clear hierarchy: one Filled primary action, Outlined or Neutral for secondary, Naked for tertiary and inline actions.</p>
+          <div class="bx-usage">
+            <figure>
+              <div class="bx-mock">
+                <p class="bx-mock__title">Discard this draft?</p>
+                <p class="bx-mock__text">Your unsaved changes will be lost. This can't be undone.</p>
+                <div class="bx-mock__foot"><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="medium"><span class="fbtn__label">Cancel</span></button><button class="fbtn" type="button" data-family="destructive" data-variant="filled" data-size="medium"><span class="fbtn__label">Discard</span></button></div>
+              </div>
+              <figcaption><b>Dialog footer</b>Secondary (Neutral Outlined) on the left, primary on the right. Destructive confirms use Action Type = Destructive.</figcaption>
+            </figure>
+            <figure>
+              <div class="bx-mock">
+                <div class="bx-mock__row"><p class="bx-mock__title" style="font-size:18px">Campaigns</p><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="medium"><span class="fbtn__label">Export</span></button><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="medium"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">New campaign</span></button></div>
+                <p class="bx-mock__text">12 active · 3 drafts</p>
+              </div>
+              <figcaption><b>Page header</b>One Filled Core CTA per page header. Supporting actions use Neutral Outlined.</figcaption>
+            </figure>
+            <figure>
+              <div class="bx-mock">
+                <div class="bx-mock__row"><p class="bx-mock__title" style="font-size:14px">Top channels</p><button class="fbtn" type="button" data-family="core" data-variant="naked" data-size="medium" data-density="fit"><span class="fbtn__label">View all</span><svg class="fbtn__suffix" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3.5 4.5 4.5L6 12.5"/></svg></button></div>
+                <div class="bx-mock__row"><span class="bx-mock__item">Instagram</span><button class="fbtn" type="button" data-family="neutral" data-variant="naked" data-size="medium" data-icononly="yes" aria-label="Add Instagram"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></button></div>
+                <div class="bx-mock__row"><span class="bx-mock__item">Google Ads</span><button class="fbtn" type="button" data-family="neutral" data-variant="naked" data-size="medium" data-icononly="yes" aria-label="Add Google Ads"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></button></div>
+              </div>
+              <figcaption><b>Inline &amp; row actions</b>Naked (Fit Content) for link-like actions; icon-only Naked for compact row actions — always with a tooltip.</figcaption>
+            </figure>
+          </div>
         </section>
+        <section id="dos-donts">
 
-        <section id="core">
-          <h2>Core button</h2>
-          <p>The default action type. Its Filled variant is the single principal action on a view.</p>
-          <div class="docs-demo"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Save changes</span></button> <button class="fbtn" type="button" data-family="core" data-variant="outlined" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Save draft</span></button> <button class="fbtn" type="button" data-family="core" data-variant="naked" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Skip</span></button>
-            <p class="docs-demo__caption">Filled, Outlined and Naked — falling emphasis, same colour.</p></div>
-        </section>
-
-        <section id="destructive">
-          <h2>Destructive button</h2>
-          <p>Reserved for hard-to-reverse actions — delete, remove, revoke. Pair with a confirmation step and never
-            make it the default focus in a dialog.</p>
-          <div class="docs-demo"><button class="fbtn" type="button" data-family="destructive" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Delete</span></button> <button class="fbtn" type="button" data-family="destructive" data-variant="outlined" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Delete</span></button> <button class="fbtn" type="button" data-family="destructive" data-variant="naked" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Delete</span></button></div>
-        </section>
-
-        <section id="supportive">
-          <h2>Supportive button</h2>
-          <p>A positive, confirming outcome — approve, publish, mark done. Use sparingly so its meaning holds.</p>
-          <div class="docs-demo"><button class="fbtn" type="button" data-family="supportive" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Approve</span></button> <button class="fbtn" type="button" data-family="supportive" data-variant="outlined" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Approve</span></button> <button class="fbtn" type="button" data-family="supportive" data-variant="naked" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Approve</span></button></div>
-        </section>
-
-        <section id="neutral">
-          <h2>Neutral button</h2>
-          <p>For actions that shouldn't carry a colour meaning — toolbars, table rows, secondary controls. It's the
-            only set with a <strong>Dashed</strong> variant (for "add" placeholders) and a <strong>Dark</strong> mode
-            that inverts for dark surfaces.</p>
-          <div class="docs-demo"><button class="fbtn" type="button" data-family="neutral" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Filter</span></button> <button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Filter</span></button> <button class="fbtn" type="button" data-family="neutral" data-variant="dashed" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Add item</span></button> <button class="fbtn" type="button" data-family="neutral" data-variant="naked" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Filter</span></button></div>
-          <div class="docs-demo docs-stage--dark"><button class="fbtn" type="button" data-family="neutral" data-variant="filled" data-size="large" data-density="comfortable" data-mode="dark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Filter</span></button> <button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="large" data-density="comfortable" data-mode="dark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Filter</span></button> <button class="fbtn" type="button" data-family="neutral" data-variant="dashed" data-size="large" data-density="comfortable" data-mode="dark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Add item</span></button> <button class="fbtn" type="button" data-family="neutral" data-variant="naked" data-size="large" data-density="comfortable" data-mode="dark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Filter</span></button></div>
-        </section>
-
-        <section id="accent">
-          <h2>Accent button</h2>
-          <p>Eight colours for categorising — tags, filters, chart legends. Accent runs smaller (Medium, Small, Tiny)
-            and has no Pressed state.</p>
-          <div class="docs-demo"><button class="fbtn" type="button" data-color="pink" data-variant="filled" data-size="medium" data-density="comfortable">Pink</button><button class="fbtn" type="button" data-color="purple" data-variant="filled" data-size="medium" data-density="comfortable">Purple</button><button class="fbtn" type="button" data-color="orange" data-variant="filled" data-size="medium" data-density="comfortable">Orange</button><button class="fbtn" type="button" data-color="light-blue" data-variant="filled" data-size="medium" data-density="comfortable">Light Blue</button><button class="fbtn" type="button" data-color="bronze-green" data-variant="filled" data-size="medium" data-density="comfortable">Bronze Green</button><button class="fbtn" type="button" data-color="green" data-variant="filled" data-size="medium" data-density="comfortable">Green</button><button class="fbtn" type="button" data-color="blue" data-variant="filled" data-size="medium" data-density="comfortable">Blue</button><button class="fbtn" type="button" data-color="steel-blue" data-variant="filled" data-size="medium" data-density="comfortable">Steel Blue</button></div>
-        </section>
-
-        <section id="emphasis">
-          <h2>Emphasis</h2>
+          <h2>Do's and don'ts</h2>
+          <h3>Emphasis</h3>
           <div class="docs-dodont">
             <div class="docs-dodont__card docs-dodont__card--do">
               <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
-              <div class="docs-dodont__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Save</span></button> <button class="fbtn" type="button" data-family="core" data-variant="outlined" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Cancel</span></button></div>
-              <p class="docs-dodont__cap">One Filled button per view, paired with a lower-emphasis action.</p>
+              <div class="docs-dodont__stage"><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="large" data-density="comfortable"><span class="fbtn__label">Cancel</span></button><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable"><span class="fbtn__label">Save</span></button></div>
+              <p class="docs-dodont__cap">Use one Filled primary per view and pair it with a lower-emphasis secondary.</p>
             </div>
             <div class="docs-dodont__card docs-dodont__card--dont">
               <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don't</p>
-              <div class="docs-dodont__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Save</span></button> <button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Save as draft</span></button></div>
-              <p class="docs-dodont__cap">Two Filled buttons compete and blur the intended action.</p>
+              <div class="docs-dodont__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable"><span class="fbtn__label">Cancel</span></button><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable"><span class="fbtn__label">Save</span></button></div>
+              <p class="docs-dodont__cap">Don't place two Filled Core buttons side by side — people can't tell which action is primary.</p>
+            </div>
+          </div>
+          <h3>Meaning</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><button class="fbtn" type="button" data-family="destructive" data-variant="filled" data-size="large" data-density="comfortable"><span class="fbtn__label">Delete report</span></button></div>
+              <p class="docs-dodont__cap">Use Action Type = Destructive for delete, remove and other irreversible actions.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don't</p>
+              <div class="docs-dodont__stage"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable"><span class="fbtn__label">Delete report</span></button></div>
+              <p class="docs-dodont__cap">Don't use Core (blue) for destructive actions — the colour must signal risk.</p>
+            </div>
+          </div>
+          <h3>Labels &amp; sizing</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="large" data-density="comfortable"><span class="fbtn__label">Back</span></button><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable"><span class="fbtn__label">Continue</span></button></div>
+              <p class="docs-dodont__cap">Keep labels short and verb-first, and keep every button in a group the same Size.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don't</p>
+              <div class="docs-dodont__stage"><button class="fbtn" type="button" data-family="neutral" data-variant="outlined" data-size="small"><span class="fbtn__label">Back</span></button><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable"><span class="fbtn__label">Click here to continue</span></button></div>
+              <p class="docs-dodont__cap">Don't use vague or long labels, and don't mix sizes within one group.</p>
             </div>
           </div>
         </section>
-
-        <section id="sizing">
-          <h2>Sizing and density</h2>
-          <table class="docs-table">
-            <thead><tr><th>Size</th><th>Default</th><th>Comfortable</th><th>Use</th></tr></thead>
-            <tbody>
-              <tr><td>Large</td><td>36px</td><td>40px</td><td>Page-level actions, modal footers</td></tr>
-              <tr><td>Medium</td><td>28px</td><td>32px</td><td>Forms, cards, most product UI</td></tr>
-              <tr><td>Small</td><td>20px</td><td>24px</td><td>Dense tables and toolbars</td></tr>
-              <tr><td>Tiny <small>(Accent)</small></td><td colspan="2">16px</td><td>Inline tags and chips</td></tr>
-            </tbody>
-          </table>
-          <p><strong>Fit content</strong> (Naked only) drops the padding so a text action lines up with surrounding copy.</p>
-        </section>
-
-        <section id="modifiers">
-          <h2>Modifiers</h2>
-          <h3>Icons</h3>
-          <ul>
-            <li>Leading icon is shown by default; a trailing icon is available but hidden by default.</li>
-            <li>One icon per side, sized to the button (16px on Large).</li>
-          </ul>
-          <h3>Icon-only</h3>
-          <p>Square, same height as the button. Always give it an accessible label and a tooltip.</p>
-          <h3>Rounded</h3>
-          <p>Pill shape for filters and chips; keep one shape per group.</p>
-          <div class="docs-demo">
-            <button class="fbtn" type="button" data-variant="filled" data-size="large" data-density="comfortable" data-icononly="yes" aria-label="Add"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></button>
-            <button class="fbtn" type="button" data-variant="outlined" data-size="large" data-density="comfortable" data-icononly="yes" data-round="yes" aria-label="Add"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></button>
-            <button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-round="yes"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Rounded</span></button>
-            <button class="fbtn" type="button" data-variant="filled" data-size="large" data-density="comfortable">Next<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
-          </div>
-        </section>
-
-        <section id="states">
-          <h2>States</h2>
-          <p>Default, Hover, Pressed and Disabled — identical rules across every variant. Disabled is muted and
-            unfocusable; explain why with inline copy, not the button.</p>
-          <div class="docs-demo">
-            <button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" ><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Default</span></button> <button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-state="hover"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Hover</span></button> <button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-state="pressed"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Pressed</span></button> <button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="large" data-density="comfortable" data-state="disabled"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg><span class="fbtn__label">Disabled</span></button>
-          </div>
-        </section>
-
         <section id="content">
-          <h2>Content</h2>
-          <p>A label is a verb plus what it acts on — "Save changes", "Delete file". One to three words. Width
-            follows the label so longer translations never wrap.</p>
+
+          <h2>Writing labels</h2>
+          <ul>
+            <li><strong>Verb first, specific object.</strong> “Save changes”, “Delete report”, “Add filter” — not “OK”, “Yes” or “Click here”.</li>
+            <li><strong>One to three words.</strong> Width hugs the label, so long text makes long buttons.</li>
+            <li><strong>Name the object on destructive actions</strong> when you can — “Delete report”, not just “Delete”.</li>
+            <li><strong>Dropdown triggers show the current value</strong> — “Last 7 days” with a trailing caret.</li>
+            <li><strong>Icon-only buttons still have a label</strong> — it lives in <code>aria-label</code> and the tooltip.</li>
+          </ul>
+          <p>Every exact value — heights, paddings, colour tokens per state, and the full API — is on the
+            <a href="docs-buttons-specifications.html">Specifications tab</a>.</p>
         </section>
 
       </article>
@@ -316,20 +340,20 @@
     <aside class="docs-toc" aria-label="On this page">
       <p class="docs-toc__title">On this page</p>
       <ul>
-        <li><a href="#live-demo">Live demo</a></li>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#choose">Choose a button</a></li>
-        <li><a href="#when-to-use">When to use</a></li>
-        <li><a href="#core">Core</a></li>
-        <li><a href="#destructive">Destructive</a></li>
-        <li><a href="#supportive">Supportive</a></li>
+        <li><a href="#at-a-glance">At a glance</a></li>
+        <li><a href="#anatomy">Anatomy</a></li>
+        <li><a href="#families">Button families</a></li>
+        <li><a href="#variant">Variant</a></li>
+        <li><a href="#action-type">Action type</a></li>
+        <li><a href="#size">Size</a></li>
+        <li><a href="#density">Height &amp; spacing</a></li>
+        <li><a href="#state">State</a></li>
+        <li><a href="#shape">Rounded &amp; icon-only</a></li>
         <li><a href="#neutral">Neutral</a></li>
         <li><a href="#accent">Accent</a></li>
-        <li><a href="#emphasis">Emphasis</a></li>
-        <li><a href="#sizing">Sizing and density</a></li>
-        <li><a href="#modifiers">Modifiers</a></li>
-        <li><a href="#states">States</a></li>
-        <li><a href="#content">Content</a></li>
+        <li><a href="#usage">Common layouts</a></li>
+        <li><a href="#dos-donts">Do's and don'ts</a></li>
+        <li><a href="#content">Writing labels</a></li>
       </ul>
     </aside>
       </div>
@@ -377,5 +401,36 @@
     });},{rootMargin:'-20% 0px -70% 0px'});
     document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
   }
+  /* Button anatomy — Figma-style redlines: a dashed outline round each part,
+     a short stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout, so it holds at any width and after the font loads. */
+  var NS='http://www.w3.org/2000/svg', STEM=34, R=11;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawButtonAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+Math.min(w/2,18);ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+w/2;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawButtonAnatomy();
+  window.addEventListener('load',drawButtonAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawButtonAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawButtonAnatomy,150);});
 })();
 </script>

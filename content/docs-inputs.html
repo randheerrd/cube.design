@@ -1,0 +1,458 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+        <li><a href="docs-inputs.html" aria-current="page">Inputs</a></li>
+        <li><a href="#" aria-disabled="true">Banner &amp; Toasts <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Right Overlays <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Dropdown <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Date Selector <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Popup <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tab <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Side Nav <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Stepper <small>Soon</small></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-top">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Input</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">A single-line or multi-line text field, in three sizes and five states. Pick a
+          size and decide which optional parts &mdash; prefix, suffix, helper text &mdash; the field needs; the
+          <a href="docs-inputs-specifications.html">Specifications tab</a> lists every token.</p>
+      </div>
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/elements-input-v1--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 1.5 12.6 1a.5.5 0 0 1 .53.5v13a.5.5 0 0 1-.53.5L3 14.5a.5.5 0 0 1-.5-.5V2a.5.5 0 0 1 .5-.5zm6.3 3.2c0-.2.2-.4.4-.4.3 0 .5.1.7.3l.3-.4c-.3-.3-.6-.4-1-.4-.6 0-1 .4-1 .9 0 1 1.5.8 1.5 1.2 0 .2-.2.3-.4.3-.4 0-.6-.2-.8-.4l-.4.4c.3.3.7.5 1.2.5.6 0 1-.4 1-.9 0-1-1.5-.8-1.5-1.2z"/></svg>Storybook</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=1332-19242" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5.5 1.5h2.5v4H5.5a2 2 0 0 1 0-4zM8 1.5h2.5a2 2 0 0 1 0 4H8zM5.5 5.5H8v4H5.5a2 2 0 0 1 0-4zM8 7.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM5.5 9.5H8v2a2 2 0 1 1-2.5-1.94z"/></svg>Figma</a>
+      </aside>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-inputs.html" role="tab" aria-selected="true">Guidelines</a>
+        <a href="docs-inputs-specifications.html" role="tab">Specifications</a>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/elements-input-v1--docs" role="tab" target="_blank" rel="noopener noreferrer">
+          Code
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7 9"/></svg>
+          <span class="sr-only">(opens Storybook in a new tab)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <div class="docs-split">
+    <main class="docs-main">
+      <article class="docs-content">
+
+        <section id="at-a-glance">
+          <h2>At a glance</h2>
+          <p>Three decisions set every field: <strong>what kind of value</strong> it takes (Type), <strong>how much
+            room</strong> it has (Size) and <strong>what it needs to tell people</strong> (label, helper, prefix,
+            suffix and validation). Get those right and the rest &mdash; states, colour, spacing &mdash; comes from
+            the component.</p>
+          <div class="docs-demo">
+            <div style="width:100%;max-width:320px"><div class="field field--md " style="max-width:none"><div class="field__toprow"><span class="field__label">Email<span class="field__req">*</span></span></div><div class="field__box"><input placeholder="name@company.com" readonly></div><p class="field__helper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>We'll send a receipt here</p></div></div>
+            <p class="docs-demo__caption">A required label, a placeholder that shows the format, and one line of helper text &mdash; the setup most fields need.</p>
+          </div>
+          <div class="bx-quick">
+            <div><h3>1 &middot; Type</h3><p><strong>Default</strong> for one value, <strong>Text area</strong> for a paragraph, <strong>Chips</strong> for a list of tokens.</p></div>
+            <div><h3>2 &middot; Room</h3><p><strong>Medium</strong> (default) almost everywhere, <strong>Large</strong> for hero forms and mobile, <strong>Small</strong> in dense tables and filters.</p></div>
+            <div><h3>3 &middot; Feedback</h3><p>A visible <strong>label</strong> always; <strong>helper text</strong> before the mistake; a specific <strong>error</strong> after it.</p></div>
+          </div>
+        </section>
+
+        <section id="anatomy">
+          <h2>Anatomy</h2>
+          <p>Every type shares one anatomy: a label, an input row with an optional prefix and suffix, and an optional
+            helper message. Shown: Default / Medium with prefix, suffix and helper enabled. Width is parent-driven
+            &mdash; the field fills its container.</p>
+          <div class="bx-anatomy" data-bx-anatomy="top,top,bottom,left,right,bottom">
+            <div class="bx-anatomy__zoom" style="transform:scale(1.35)">
+              <div class="field field--md" style="width:300px;max-width:300px">
+                <div class="field__toprow"><span class="field__label"><span data-anatomy="1">Field label</span><span class="field__req" data-anatomy="2">*</span></span></div>
+                <div class="field__box">
+                  <span class="field__icon" data-anatomy="4" style="width:auto;font-weight:500">&#8377;</span>
+                  <input data-anatomy="3" data-center placeholder="0.00" readonly>
+                  <span class="field__icon" data-anatomy="5" style="width:auto;font-weight:500">%</span>
+                </div>
+                <p class="field__helper" data-anatomy="6" style="width:fit-content"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>Helper message</p>
+              </div>
+            </div>
+          </div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Code</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Field label</td><td><code>Show label</code></td><td><code>label</code></td><td>Text that identifies what the field is for. It is the field's accessible name.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Required indicator</td><td><code>Required</code> (label)</td><td><code>isMandatory</code></td><td>Red asterisk after the label. Also sets <code>aria-required</code>.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Input value / placeholder</td><td>&mdash;</td><td><code>value</code> <code>placeholder</code></td><td>What the person types. When empty, the placeholder shows in a lower-emphasis colour.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Prefix</td><td><code>Show Prefix</code> &middot; <code>Prefix</code></td><td><code>prefix</code></td><td>Optional leading icon or unit, e.g. a currency symbol. Off by default; swap in any icon.</td></tr>
+              <tr><td><span class="bx-n">5</span></td><td>Suffix</td><td><code>Show Suffix</code> &middot; <code>Suffix</code></td><td><code>suffix</code></td><td>Optional trailing icon or unit. Swaps to a validation icon (check, warning) during validation.</td></tr>
+              <tr><td><span class="bx-n">6</span></td><td>Helper message</td><td><code>Show Helper Text</code></td><td><code>helperText</code> <code>errorText</code></td><td>Guidance, a character count or an error, below the field. One line.</td></tr>
+            </tbody></table></div>
+
+          <h3>Label sub-component</h3>
+          <p>The label is its own composable piece, <code>text-field-label</code>, shared by every field type. It wraps
+            the label text, an optional required indicator, an optional info icon and an optional character count.</p>
+          <div class="bx-anatomy" data-bx-anatomy="top,top,bottom,top">
+            <div class="bx-anatomy__zoom" style="transform:scale(1.35)">
+              <div class="field field--md" style="width:300px;max-width:300px">
+                <div class="field__toprow"><span class="field__label"><span data-anatomy="1">Field label</span><span class="field__req" data-anatomy="2">*</span><svg class="field__info" data-anatomy="3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg></span><span class="field__count" data-anatomy="4">0/100</span></div>
+                <div class="field__box"><input placeholder="Text" readonly></div>
+              </div>
+            </div>
+          </div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Code</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Field label</td><td><code>label</code></td><td><code>label</code></td><td>Always visible; used by screen readers as the accessible name.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Required indicator</td><td><code>required</code></td><td><code>isMandatory</code></td><td>Asterisk appended after the label. Hidden when optional.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Info icon</td><td><code>showInfo</code></td><td><code>isShowInfo</code> <code>onInfoClick</code></td><td>Optional tooltip trigger for extra guidance. Hidden by default.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Character count</td><td><code>showCount</code> &middot; <code>count</code></td><td><code>maxCharCount</code></td><td>e.g. &ldquo;0/100&rdquo;, aligned to the trailing edge. Enable only when the field has a max length.</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="type">
+          <h2>Type</h2>
+          <p>Three layout types. Pick the one that matches the kind of input you need; every type shares the same label, helper and validation behaviour.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md " style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Field label<span class="field__req">*</span></span></div><div class="field__box"><input placeholder="Text" readonly></div></div></div><div class="bx-opt__body"><h3>Default</h3><p>Single-line free text &mdash; names, emails, numbers, search. The common case.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Type=Default</span><span class="bx-chip bx-chip--code"><b>Code</b><code>InputV1</code></span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md field--textarea" style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Field label<span class="field__req">*</span></span></div><div class="field__box"><textarea rows="3" placeholder="Text" readonly></textarea></div></div></div><div class="bx-opt__body"><h3>Text area</h3><p>Multi-line input that grows vertically &mdash; descriptions, comments, notes.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Type=Text area</span><span class="bx-chip bx-chip--code"><b>Code</b><code>TextAreaV1</code></span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md " style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Field label<span class="field__req">*</span></span></div><div class="field__box"><div class="field__chips"><span class="field__chip">Mango <button type="button" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></span><span class="field__chip">Pear <button type="button" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></span></div></div></div></div><div class="bx-opt__body"><h3>Chips</h3><p>Tokenized input &mdash; each entry becomes a removable chip. Tags, recipients, multi-select.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Type=Chips</span><span class="bx-chip bx-chip--code"><b>Code</b><code>InputChips</code></span></div></div></div></div>
+        </section>
+
+        <section id="size">
+          <h2>Size</h2>
+          <p>Three heights. Pick by the density of the surrounding screen.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--lg " style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Field label<span class="field__req">*</span></span></div><div class="field__box"><input placeholder="Text" readonly></div></div></div><div class="bx-opt__body"><h3>Large <small>36px</small></h3><p>Largest tap target. Hero forms, primary CTAs, mobile.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Size=Large</span><span class="bx-chip bx-chip--code"><b>Code</b><code>size=&quot;large&quot;</code></span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md " style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Field label<span class="field__req">*</span></span></div><div class="field__box"><input placeholder="Text" readonly></div></div></div><div class="bx-opt__body"><h3>Medium <small>32px</small></h3><p>Default size. Use everywhere unless you have a specific reason.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Size=Medium</span><span class="bx-chip bx-chip--code"><b>Code</b><code>size=&quot;medium&quot;</code></span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--sm " style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Field label<span class="field__req">*</span></span></div><div class="field__box"><input placeholder="Text" readonly></div></div></div><div class="bx-opt__body"><h3>Small <small>28px</small></h3><p>Compact. Dense tables, filter bars, inline editors.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Size=Small</span><span class="bx-chip bx-chip--code"><b>Code</b><code>size=&quot;small&quot;</code></span></div></div></div></div>
+          <p>Exact heights, paddings and font sizes are on the <a href="docs-inputs-specifications.html#dimensions">Specifications tab</a>.</p>
+        </section>
+
+        <section id="state">
+          <h2>State</h2>
+          <p>Default is the resting state; the others come from interaction or validation. In code, Hovered and Focused come from pointer and keyboard events &mdash; you only ever set <code>errorText</code> and <code>disabled</code>.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md " style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Field label<span class="field__req">*</span></span></div><div class="field__box"><input placeholder="Text" readonly></div></div></div><div class="bx-opt__body"><h3>Default</h3><p>Resting state. No focus, no validation message.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>State=Default</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md " style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Field label<span class="field__req">*</span></span></div><div class="field__box" style="border-color:#dbdfe4"><input placeholder="Text" readonly></div></div></div><div class="bx-opt__body"><h3>Hovered</h3><p>Pointer is over the field. Subtle border emphasis.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>State=Hovered</span><span class="bx-chip bx-chip--code"><b>Code</b><code>:hover</code></span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md field--focused" style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Field label<span class="field__req">*</span></span></div><div class="field__box"><input placeholder="Text" readonly></div></div></div><div class="bx-opt__body"><h3>Focused</h3><p>Field has keyboard focus. A 2px <code>Primary/500</code> focus ring.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>State=Focused</span><span class="bx-chip bx-chip--code"><b>Code</b><code>:focus-within</code></span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md field--error" style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Field label<span class="field__req">*</span></span></div><div class="field__box"><input value="name@company" readonly><svg class="field__icon" style="color:#e42828" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg></div><p class="field__helper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>This is required</p></div></div><div class="bx-opt__body"><h3>Error</h3><p>Validation failed. Border turns red, suffix swaps to a warning icon, helper shows the message.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>State=Error</span><span class="bx-chip bx-chip--code"><b>Code</b><code>errorText</code></span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md field--disabled" style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Field label<span class="field__req">*</span></span></div><div class="field__box"><input placeholder="Text" readonly disabled></div></div></div><div class="bx-opt__body"><h3>Disabled</h3><p>Not interactive. Muted colours, no pointer events.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>State=Disabled</span><span class="bx-chip bx-chip--code"><b>Code</b><code>disabled</code></span></div></div></div></div>
+        </section>
+
+        <section id="prefix-suffix">
+          <h2>Prefix &amp; suffix</h2>
+          <p>Two optional slots sit inside the input row. Both accept any icon component. Use them to tell people <em>what kind</em> of value belongs here, not to decorate. A field has exactly one trailing slot &mdash; swap its content for the current status instead of adding a second icon.</p>
+          <div class="bx-options bx-options--two"><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md " style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Amount<span class="field__req">*</span></span></div><div class="field__box"><span class="field__icon" style="width:auto;font-weight:500">&#8377;</span><input placeholder="0.00" readonly></div></div></div><div class="bx-opt__body"><h3>Prefix</h3><p>A leading unit or icon, e.g. a currency symbol. Sits before the value and never moves.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Show Prefix &middot; Prefix</span><span class="bx-chip bx-chip--code"><b>Code</b><code>prefix</code></span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md " style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Discount<span class="field__req">*</span></span></div><div class="field__box"><input placeholder="0" readonly><span class="field__icon" style="width:auto;font-weight:500">%</span></div></div></div><div class="bx-opt__body"><h3>Suffix</h3><p>A trailing unit or icon, e.g. <code>%</code>. Defaults to a unit.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Show Suffix &middot; Suffix</span><span class="bx-chip bx-chip--code"><b>Code</b><code>suffix</code></span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md field--focused" style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Email<span class="field__req">*</span></span></div><div class="field__box"><input value="name@company.com" readonly><svg class="field__icon" style="color:#3d7fed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg></div></div></div><div class="bx-opt__body"><h3>Inline validation</h3><p>While focused, the suffix swaps to a check icon in <code>Primary/500</code> to confirm the value is accepted.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Inline Validation=true</span><span class="bx-chip bx-chip--code"><b>Code</b><code>suffix</code></span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md field--error" style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Email<span class="field__req">*</span></span></div><div class="field__box"><input value="name@company" readonly><svg class="field__icon" style="color:#e42828" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg></div><p class="field__helper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>Enter a valid email address</p></div></div><div class="bx-opt__body"><h3>Error</h3><p>The suffix becomes a red warning icon. <code>Show Suffix</code> must be on for it to appear.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>State=Error</span><span class="bx-chip bx-chip--code"><b>Code</b><code>errorText</code></span></div></div></div></div>
+        </section>
+
+        <section id="chips">
+          <h2>Chips &amp; overflow</h2>
+          <p>When Type = Chips, the input row hosts removable chip instances instead of free text. Chips wrap until the field's width is exceeded; beyond that, collapse the overflow into a single &ldquo;+N more&rdquo; chip rather than letting the field grow vertically. The threshold isn't enforced by the component &mdash; it's a layout convention that depends on the field's width and each chip's label length.</p>
+          <div class="bx-options bx-options--wide"><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md " style="width:100%"><div class="field__toprow"><span class="field__label">Field label<span class="field__req">*</span></span></div><div class="field__box"><div class="field__chips"><span class="field__chip">Mango <button type="button" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></span><span class="field__chip">Pineapple <button type="button" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></span><span class="field__chip">Strawberry <button type="button" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></span></div></div></div></div><div class="bx-opt__body"><h3>Chips fit</h3><p>Up to about 3 chips fit comfortably on a medium-width field. All remain individually removable.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Value filled=yes</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md " style="width:100%"><div class="field__toprow"><span class="field__label">Field label<span class="field__req">*</span></span></div><div class="field__box"><div class="field__chips"><span class="field__chip">Mango <button type="button" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></span><span class="field__chip">Pineapple <button type="button" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></span><span class="field__chip field__chip--more">+4 more</span></div></div></div></div><div class="bx-opt__body"><h3>Overflow</h3><p>Beyond the field's width, hidden chips collapse into &ldquo;+N more&rdquo;; tapping it opens an overflow menu with the rest.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Layout convention</span></div></div></div></div>
+        </section>
+
+        <section id="validation">
+          <h2>Validation &amp; errors</h2>
+          <p>A field moves through a predictable sequence. Designing and building to the same one keeps every form in the product behaving the same way.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md " style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Phone number<span class="field__req">*</span></span></div><div class="field__box"><input placeholder="98765 43210" readonly></div><p class="field__helper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>10 digits, no country code</p></div></div><div class="bx-opt__body"><h3>1 &middot; Guide</h3><p>Helper text sets expectations before anyone types.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>Show Helper Text=true</span><span class="bx-chip bx-chip--code"><b>Code</b><code>helperText</code></span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md field--focused" style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Phone number<span class="field__req">*</span></span></div><div class="field__box"><input value="98765 4321" readonly></div><p class="field__helper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>10 digits, no country code</p></div></div><div class="bx-opt__body"><h3>2 &middot; Focus</h3><p>The focus ring confirms where typing will land.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>State=Focused</span></div></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="field field--md field--error" style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Phone number<span class="field__req">*</span></span></div><div class="field__box"><input value="98765 4321" readonly><svg class="field__icon" style="color:#e42828" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg></div><p class="field__helper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>Enter all 10 digits</p></div></div><div class="bx-opt__body"><h3>3 &middot; Correct</h3><p>Error replaces the helper text and says what to fix.</p><div class="bx-meta"><span class="bx-chip bx-chip--figma"><b>Figma</b>State=Error</span><span class="bx-chip bx-chip--code"><b>Code</b><code>errorText</code></span></div></div></div></div>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Rule</th><th>Why</th></tr></thead><tbody>
+              <tr><td>Validate on blur or submit, not on every keystroke.</td><td>Telling someone they're wrong before they've finished typing is noise.</td></tr>
+              <tr><td>Once a field is in Error, re-validate as they type and clear it the moment it's valid.</td><td>The error should never outlive the problem.</td></tr>
+              <tr><td>Error text replaces helper text &mdash; it doesn't stack under it.</td><td>The helper row is one line. Two lines of small text are unreadable.</td></tr>
+              <tr><td>Never signal an error with colour alone.</td><td>The border, the warning icon and the message together make it perceivable without colour.</td></tr>
+              <tr><td>Set <code>Error text = false</code> only when a message sits elsewhere (e.g. a form-level summary).</td><td>The icon alone doesn't say what to fix.</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="usage">
+          <h2>Common layouts</h2>
+          <p>Start from one of these and change only what you must. Keep one size per group and let the container set the width.</p>
+          <div class="bx-usage">
+            <figure>
+              <div class="bx-mock">
+                <p class="bx-mock__title">Create your account</p>
+                <div class="field field--md " style="max-width:none"><div class="field__toprow"><span class="field__label">Full name<span class="field__req">*</span></span></div><div class="field__box"><input placeholder="Enter your name" readonly></div><p class="field__helper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>As it appears on your ID</p></div>
+                <div class="field field--md field--error" style="max-width:none"><div class="field__toprow"><span class="field__label">Work email<span class="field__req">*</span></span></div><div class="field__box"><input value="name@company" readonly><svg class="field__icon" style="color:#e42828" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg></div><p class="field__helper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>Enter a valid email address</p></div>
+              </div>
+              <figcaption><b>Form</b>Labels always visible, helper text before the mistake, a specific error after it. Stack fields in one column at one size.</figcaption>
+            </figure>
+            <figure>
+              <div class="bx-mock">
+                <div class="bx-mock__row"><p class="bx-mock__title" style="font-size:14px">Filters</p></div>
+                <div class="bx-mock__row" style="gap:8px"><div class="field field--sm " style="flex:1"><div class="field__box"><input placeholder="Search" readonly></div></div><div class="field field--sm " style="flex:1"><div class="field__box"><span class="field__icon" style="width:auto;font-weight:500">&#8377;</span><input placeholder="0" readonly></div></div></div>
+              </div>
+              <figcaption><b>Filter bar</b>Small size in a row. When context supplies the label, turn <code>Show label</code> off; keep the placeholder as an example, not as the label.</figcaption>
+            </figure>
+            <figure>
+              <div class="bx-mock">
+                <p class="bx-mock__title" style="font-size:16px">Set a budget</p>
+                <div class="field field--md " style="max-width:none"><div class="field__toprow"><span class="field__label">Daily budget<span class="field__req">*</span></span></div><div class="field__box"><span class="field__icon" style="width:auto;font-weight:500">&#8377;</span><input placeholder="0.00" readonly></div><p class="field__helper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>Up to two decimal places</p></div>
+              </div>
+              <figcaption><b>Amount</b>A numeric field with a currency prefix; the helper clarifies the allowed format.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="dos-donts">
+          <h2>Do's and don'ts</h2>
+          <h3>Labels &amp; helper text</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="field field--md " style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Email<span class="field__req">*</span></span></div><div class="field__box"><input placeholder="name@company.com" readonly></div></div></div>
+              <p class="docs-dodont__cap">Keep a visible label. It stays on screen while typing and is the field's accessible name.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don't</p>
+              <div class="docs-dodont__stage"><div class="field field--md " style="width:100%;max-width:240px"><div class="field__box"><input placeholder="Email" readonly></div></div></div>
+              <p class="docs-dodont__cap">Don't rely on the placeholder alone. It disappears as soon as the person types and isn't a label.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="field field--md " style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Password<span class="field__req">*</span></span></div><div class="field__box"><input placeholder="" readonly></div><p class="field__helper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>At least 8 characters</p></div></div>
+              <p class="docs-dodont__cap">Put format rules in helper text so people know them before they type.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don't</p>
+              <div class="docs-dodont__stage"><div class="field field--md " style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Password<span class="field__req">*</span></span></div><div class="field__box"><input placeholder="At least 8 characters" readonly></div></div></div>
+              <p class="docs-dodont__cap">Don't put instructions in the placeholder. They vanish the moment typing starts.</p>
+            </div>
+          </div>
+          <h3>Errors</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="field field--md field--error" style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Email<span class="field__req">*</span></span></div><div class="field__box"><input value="name@company" readonly><svg class="field__icon" style="color:#e42828" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg></div><p class="field__helper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>Enter a valid email address</p></div></div>
+              <p class="docs-dodont__cap">Say what to fix: &ldquo;Enter a valid email address&rdquo;.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don't</p>
+              <div class="docs-dodont__stage"><div class="field field--md field--error" style="width:100%;max-width:240px"><div class="field__toprow"><span class="field__label">Email<span class="field__req">*</span></span></div><div class="field__box"><input value="name@company" readonly><svg class="field__icon" style="color:#e42828" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg></div><p class="field__helper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg>Invalid</p></div></div>
+              <p class="docs-dodont__cap">Don't say only that something is wrong. &ldquo;Invalid&rdquo; gives no way to recover.</p>
+            </div>
+          </div>
+          <h3>Layout &amp; sizing</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div style="display:flex;gap:12px;width:100%;max-width:340px"><div class="field field--md " style="width:50%"><div class="field__toprow"><span class="field__label">First name<span class="field__req">*</span></span></div><div class="field__box"><input value="Asha" readonly></div></div><div class="field field--md " style="width:50%"><div class="field__toprow"><span class="field__label">Last name<span class="field__req">*</span></span></div><div class="field__box"><input value="Rao" readonly></div></div></div></div>
+              <p class="docs-dodont__cap">Use one size per row or group so heights and baselines line up.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don't</p>
+              <div class="docs-dodont__stage"><div style="display:flex;gap:12px;align-items:flex-end;width:100%;max-width:340px"><div class="field field--lg " style="width:50%"><div class="field__toprow"><span class="field__label">First name<span class="field__req">*</span></span></div><div class="field__box"><input value="Asha" readonly></div></div><div class="field field--sm " style="width:50%"><div class="field__toprow"><span class="field__label">Last name<span class="field__req">*</span></span></div><div class="field__box"><input value="Rao" readonly></div></div></div></div>
+              <p class="docs-dodont__cap">Don't mix sizes side by side. Mismatched heights look like a layout bug.</p>
+            </div>
+          </div>
+          <ul>
+            <li>Use Text area only when the value can genuinely run long &mdash; a description, a comment.</li>
+            <li>Don't use Chips for a single value &mdash; that's a plain Default field.</li>
+            <li>Don't let a Chips field grow vertically to fit every chip; collapse the overflow.</li>
+            <li>Don't style a border, radius or height by hand &ldquo;just for this form&rdquo;. Every size already has its own spec.</li>
+            <li>Don't leave a field in Error after the value has been fixed.</li>
+          </ul>
+        </section>
+
+        <section id="content">
+          <h2>Writing content</h2>
+          <ul>
+            <li><strong>Label</strong> &mdash; a short noun phrase: &ldquo;Work email&rdquo;, &ldquo;Daily budget&rdquo;. Always visible; never replaced by the placeholder.</li>
+            <li><strong>Placeholder</strong> &mdash; an example of the expected value (&ldquo;name@company.com&rdquo;), not instructions.</li>
+            <li><strong>Helper text</strong> &mdash; one short line of guidance shown <em>before</em> a person makes a mistake.</li>
+            <li><strong>Error text</strong> &mdash; replaces the helper once validation fails and states what to fix: &ldquo;Enter a valid email address&rdquo;, not &ldquo;Invalid&rdquo;.</li>
+            <li><strong>Required</strong> &mdash; mark a field required only when submitting without it is genuinely blocked.</li>
+          </ul>
+        </section>
+
+        <section id="behavior">
+          <h2>Behavior &amp; accessibility</h2>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>What to do</th></tr></thead><tbody>
+              <tr><td>Keyboard</td><td><kbd>Tab</kbd> moves focus into and out of the field; the focus ring must always be visible. In Chips, <kbd>Enter</kbd> turns the typed text into a chip and <kbd>Backspace</kbd> on an empty field removes the last one.</td></tr>
+              <tr><td>Label</td><td>The label is the accessible name. Pass <code>label</code> even when design hides it, and don't replace it with a placeholder.</td></tr>
+              <tr><td>Required</td><td><code>isMandatory</code> sets <code>aria-required="true"</code> on the input as well as showing the asterisk.</td></tr>
+              <tr><td>Errors</td><td>Link the error message to the input with <code>aria-describedby</code> and set <code>aria-invalid="true"</code> while in Error, so screen readers announce it.</td></tr>
+              <tr><td>Disabled</td><td>Not focusable and not submitted. If someone needs to read the value but not edit it, use a read-only presentation instead.</td></tr>
+              <tr><td>Touch targets</td><td>Prefer Large on mobile. Small is for pointer-driven, dense desktop UI only.</td></tr>
+              <tr><td>Width</td><td>Width is parent-driven. Make sure the container is wide enough for the longest expected value and the label.</td></tr>
+            </tbody></table></div>
+          <p>Every exact value &mdash; heights, paddings, colour tokens per state, and the full API &mdash; is on the
+            <a href="docs-inputs-specifications.html">Specifications tab</a>.</p>
+        </section>
+
+      </article>
+    </main>
+
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#at-a-glance">At a glance</a></li>
+        <li><a href="#anatomy">Anatomy</a></li>
+        <li><a href="#type">Type</a></li>
+        <li><a href="#size">Size</a></li>
+        <li><a href="#state">State</a></li>
+        <li><a href="#prefix-suffix">Prefix &amp; suffix</a></li>
+        <li><a href="#chips">Chips &amp; overflow</a></li>
+        <li><a href="#validation">Validation &amp; errors</a></li>
+        <li><a href="#usage">Common layouts</a></li>
+        <li><a href="#dos-donts">Do's and don'ts</a></li>
+        <li><a href="#content">Writing content</a></li>
+        <li><a href="#behavior">Behavior &amp; accessibility</a></li>
+      </ul>
+    </aside>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=34, R=11;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18);
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
+})();
+</script>
