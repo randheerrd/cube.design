@@ -1,0 +1,616 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-chips.html" aria-current="page">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Right Overlays <small>Soon</small></a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Date Selector <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Popup <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tab <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Side Nav <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Stepper <small>Soon</small></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Chips, Tags &amp; Legends</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">Small coloured labels that sit next to data. <strong>Chips</strong> label a value or
+          category, <strong>Tags</strong> show a key → value pair, and <strong>Legends</strong> name a chart series.
+          Use a <strong>Sementic</strong> preset whenever one exists for your data; otherwise configure a
+          <strong>Standard</strong> one.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-chips.html" role="tab" aria-selected="true">Guidelines</a>
+        <a href="docs-chips-specifications.html" role="tab">Specifications</a>
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
+          Code
+          <span class="sr-only">(not in Storybook yet)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--bt docs-content--chp">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-car" viewBox="0 0 19.2 19.2"><path d="M18 7.8H17.19L15.1065 3.1125C15.0122 2.90042 14.8584 2.72023 14.6638 2.59377C14.4692 2.46731 14.2421 2.4 14.01 2.4H5.19C4.9579 2.4 4.73079 2.46731 4.53617 2.59377C4.34156 2.72023 4.18779 2.90042 4.0935 3.1125L2.01 7.8H1.2C1.04087 7.8 0.888258 7.86321 0.775736 7.97574C0.663214 8.08826 0.6 8.24087 0.6 8.4C0.6 8.55913 0.663214 8.71174 0.775736 8.82426C0.888258 8.93679 1.04087 9 1.2 9H1.8V15C1.8 15.3183 1.92643 15.6235 2.15147 15.8485C2.37652 16.0736 2.68174 16.2 3 16.2H4.8C5.11826 16.2 5.42348 16.0736 5.64853 15.8485C5.87357 15.6235 6 15.3183 6 15V14.4H13.2V15C13.2 15.3183 13.3264 15.6235 13.5515 15.8485C13.7765 16.0736 14.0817 16.2 14.4 16.2H16.2C16.5183 16.2 16.8235 16.0736 17.0485 15.8485C17.2736 15.6235 17.4 15.3183 17.4 15V9H18C18.1591 9 18.3117 8.93679 18.4243 8.82426C18.5368 8.71174 18.6 8.55913 18.6 8.4C18.6 8.24087 18.5368 8.08826 18.4243 7.97574C18.3117 7.86321 18.1591 7.8 18 7.8ZM6 11.4H4.2C4.04087 11.4 3.88826 11.3368 3.77574 11.2243C3.66321 11.1117 3.6 10.9591 3.6 10.8C3.6 10.6409 3.66321 10.4883 3.77574 10.3757C3.88826 10.2632 4.04087 10.2 4.2 10.2H6C6.15913 10.2 6.31174 10.2632 6.42426 10.3757C6.53679 10.4883 6.6 10.6409 6.6 10.8C6.6 10.9591 6.53679 11.1117 6.42426 11.2243C6.31174 11.3368 6.15913 11.4 6 11.4ZM15 11.4H13.2C13.0409 11.4 12.8883 11.3368 12.7757 11.2243C12.6632 11.1117 12.6 10.9591 12.6 10.8C12.6 10.6409 12.6632 10.4883 12.7757 10.3757C12.8883 10.2632 13.0409 10.2 13.2 10.2H15C15.1591 10.2 15.3117 10.2632 15.4243 10.3757C15.5368 10.4883 15.6 10.6409 15.6 10.8C15.6 10.9591 15.5368 11.1117 15.4243 11.2243C15.3117 11.3368 15.1591 11.4 15 11.4ZM3.32325 7.8L5.19 3.6H14.01L15.8768 7.8H3.32325Z"/></symbol><symbol id="i-info" viewBox="0 0 24 24"><path d="M12 2.25C10.0716 2.25 8.18657 2.82183 6.58319 3.89317C4.97981 4.96452 3.73013 6.48726 2.99217 8.26884C2.25422 10.0504 2.06114 12.0108 2.43734 13.9021C2.81355 15.7934 3.74215 17.5307 5.10571 18.8943C6.46927 20.2579 8.20655 21.1865 10.0979 21.5627C11.9892 21.9389 13.9496 21.7458 15.7312 21.0078C17.5127 20.2699 19.0355 19.0202 20.1068 17.4168C21.1782 15.8134 21.75 13.9284 21.75 12C21.7473 9.41498 20.7192 6.93661 18.8913 5.10872C17.0634 3.28084 14.585 2.25273 12 2.25ZM12 20.25C10.3683 20.25 8.77325 19.7661 7.41655 18.8596C6.05984 17.9531 5.00242 16.6646 4.37799 15.1571C3.75357 13.6496 3.59019 11.9908 3.90852 10.3905C4.22685 8.79016 5.01259 7.32015 6.16637 6.16637C7.32015 5.01259 8.79016 4.22685 10.3905 3.90852C11.9908 3.59019 13.6496 3.75357 15.1571 4.37799C16.6646 5.00242 17.9531 6.05984 18.8596 7.41655C19.7661 8.77325 20.25 10.3683 20.25 12C20.2475 14.1873 19.3775 16.2843 17.8309 17.8309C16.2843 19.3775 14.1873 20.2475 12 20.25ZM13.5 16.5C13.5 16.6989 13.421 16.8897 13.2803 17.0303C13.1397 17.171 12.9489 17.25 12.75 17.25C12.3522 17.25 11.9706 17.092 11.6893 16.8107C11.408 16.5294 11.25 16.1478 11.25 15.75V12C11.0511 12 10.8603 11.921 10.7197 11.7803C10.579 11.6397 10.5 11.4489 10.5 11.25C10.5 11.0511 10.579 10.8603 10.7197 10.7197C10.8603 10.579 11.0511 10.5 11.25 10.5C11.6478 10.5 12.0294 10.658 12.3107 10.9393C12.592 11.2206 12.75 11.6022 12.75 12V15.75C12.9489 15.75 13.1397 15.829 13.2803 15.9697C13.421 16.1103 13.5 16.3011 13.5 16.5ZM10.5 7.875C10.5 7.6525 10.566 7.43499 10.6896 7.24998C10.8132 7.06498 10.9889 6.92078 11.1945 6.83564C11.4 6.75049 11.6262 6.72821 11.8445 6.77162C12.0627 6.81502 12.2632 6.92217 12.4205 7.0795C12.5778 7.23684 12.685 7.43729 12.7284 7.65552C12.7718 7.87375 12.7495 8.09995 12.6644 8.30552C12.5792 8.51109 12.435 8.68679 12.25 8.8104C12.065 8.93402 11.8475 9 11.625 9C11.3266 9 11.0405 8.88147 10.8295 8.6705C10.6185 8.45952 10.5 8.17337 10.5 7.875Z"/></symbol><symbol id="i-arrow" viewBox="0 0 19.2 19.2"><path d="M16.8368 10.2368L11.4368 15.6368C11.2677 15.8058 11.0384 15.9008 10.7993 15.9008C10.5601 15.9008 10.3308 15.8058 10.1618 15.6368C9.99268 15.4677 9.89769 15.2384 9.89769 14.9993C9.89769 14.7601 9.99268 14.5308 10.1618 14.3618L14.025 10.5H3C2.76131 10.5 2.53239 10.4052 2.3636 10.2364C2.19482 10.0676 2.1 9.8387 2.1 9.6C2.1 9.36131 2.19482 9.13239 2.3636 8.9636C2.53239 8.79482 2.76131 8.7 3 8.7H14.025L10.1633 4.836C9.99417 4.66692 9.89919 4.43761 9.89919 4.1985C9.89919 3.95939 9.99417 3.73008 10.1633 3.561C10.3323 3.39192 10.5616 3.29694 10.8008 3.29694C11.0399 3.29694 11.2692 3.39192 11.4383 3.561L16.8383 8.961C16.9222 9.04473 16.9887 9.1442 17.0341 9.25372C17.0794 9.36324 17.1027 9.48064 17.1026 9.59919C17.1024 9.71773 17.0789 9.83508 17.0333 9.94449C16.9877 10.0539 16.9209 10.1532 16.8368 10.2368Z"/></symbol><symbol id="i-pie-slice" viewBox="0 0 19.2 19.2"><path d="M7.5 8.73225C7.59123 8.67958 7.66699 8.60381 7.71965 8.51258C7.77231 8.42134 7.80002 8.31785 7.8 8.2125V2.8125C7.79946 2.71684 7.77606 2.6227 7.73175 2.53792C7.68744 2.45314 7.6235 2.38019 7.54526 2.32514C7.46702 2.2701 7.37676 2.23456 7.282 2.22149C7.18723 2.20842 7.09072 2.21819 7.0005 2.25C5.24923 2.86981 3.77649 4.09398 2.84701 5.70245C1.91754 7.31092 1.59229 9.19819 1.92975 11.025C1.94724 11.1195 1.98716 11.2084 2.04615 11.2842C2.10515 11.36 2.18149 11.4206 2.26875 11.4608C2.34739 11.4975 2.43318 11.5165 2.52 11.5163C2.62531 11.5163 2.72878 11.4886 2.82 11.436L7.5 8.73225ZM6.6 3.7215V7.866L3.009 9.93825C3 9.825 3 9.711 3 9.6C3.00106 8.38377 3.33772 7.19142 3.9729 6.15423C4.60807 5.11704 5.51714 4.27523 6.6 3.7215ZM17.4 9.6C17.4006 11.3123 16.8377 12.9773 15.7981 14.338C14.7586 15.6987 13.3002 16.6795 11.6479 17.1291C9.99564 17.5786 8.24133 17.472 6.65567 16.8256C5.07001 16.1793 3.74111 15.0291 2.874 13.5525C2.83358 13.4843 2.80707 13.4088 2.79602 13.3303C2.78496 13.2517 2.78958 13.1718 2.80959 13.0951C2.82961 13.0184 2.86463 12.9464 2.91263 12.8833C2.96063 12.8202 3.02066 12.7673 3.08925 12.7275L9 9.28725V2.4C9 2.24087 9.06321 2.08826 9.17574 1.97574C9.28826 1.86321 9.44087 1.8 9.6 1.8C10.9612 1.80069 12.2985 2.1574 13.4791 2.8347C14.6598 3.51201 15.6428 4.48635 16.3305 5.661C16.3388 5.673 16.3463 5.685 16.3538 5.69775C16.3613 5.7105 16.3688 5.7255 16.3755 5.739C17.0485 6.91438 17.4017 8.24559 17.4 9.6Z"/></symbol><symbol id="i-scales" viewBox="0 0 19.2 19.2"><path d="M17.9573 9.975L15.5572 3.975C15.5124 3.86404 15.4353 3.76904 15.336 3.70222C15.2367 3.63539 15.1197 3.59979 15 3.6C14.9563 3.60067 14.9128 3.60595 14.8703 3.61575L10.2 4.65V3C10.2 2.84087 10.1368 2.68826 10.0243 2.57574C9.91174 2.46321 9.75913 2.4 9.6 2.4C9.44087 2.4 9.28826 2.46321 9.17574 2.57574C9.06321 2.68826 9 2.84087 9 3V4.9185L4.07025 6.01575C3.97521 6.03649 3.88663 6.08003 3.81216 6.14261C3.73769 6.2052 3.67955 6.28495 3.64275 6.375L1.24275 12.375C1.21404 12.4465 1.19952 12.5229 1.2 12.6C1.2 14.3483 3.0405 15 4.2 15C5.3595 15 7.2 14.3483 7.2 12.6C7.20048 12.5229 7.18596 12.4465 7.15725 12.375L5.019 7.03275L9 6.15V15.6H7.8C7.64087 15.6 7.48826 15.6632 7.37574 15.7757C7.26321 15.8883 7.2 16.0409 7.2 16.2C7.2 16.3591 7.26321 16.5117 7.37574 16.6243C7.48826 16.7368 7.64087 16.8 7.8 16.8H11.4C11.5591 16.8 11.7117 16.7368 11.8243 16.6243C11.9368 16.5117 12 16.3591 12 16.2C12 16.0409 11.9368 15.8883 11.8243 15.7757C11.7117 15.6632 11.5591 15.6 11.4 15.6H10.2V5.8815L14.025 5.0325L12.0428 9.975C12.014 10.0465 11.9995 10.1229 12 10.2C12 11.9483 13.8405 12.6 15 12.6C16.1595 12.6 18 11.9483 18 10.2C18.0005 10.1229 17.986 10.0465 17.9573 9.975ZM5.95725 12.6H2.4465L4.2 8.2155L5.95725 12.6ZM13.2503 10.2L15 5.8155L16.7535 10.2H13.2503Z"/></symbol><symbol id="i-medal" viewBox="0 0 19.2 19.2"><path d="M16.2 7.2C16.2007 6.08775 15.9202 4.99338 15.3847 4.01852C14.8492 3.04366 14.0761 2.21994 13.137 1.62388C12.198 1.02781 11.1235 0.678724 10.0135 0.609046C8.9034 0.539368 7.79373 0.751357 6.78752 1.22532C5.78132 1.69929 4.91121 2.41986 4.25802 3.3201C3.60483 4.22035 3.18974 5.27106 3.05132 6.37466C2.91289 7.47827 3.05561 8.59895 3.46622 9.63263C3.87684 10.6663 4.54202 11.5795 5.4 12.2873V18C5.39993 18.1023 5.42602 18.203 5.47581 18.2924C5.5256 18.3818 5.59743 18.4569 5.68446 18.5108C5.77149 18.5646 5.87084 18.5952 5.97307 18.5998C6.07529 18.6044 6.17699 18.5828 6.2685 18.537L9.6 16.875L12.9323 18.5408C13.0158 18.5807 13.1074 18.601 13.2 18.6C13.3591 18.6 13.5117 18.5368 13.6243 18.4243C13.7368 18.3117 13.8 18.1591 13.8 18V12.2873C14.5507 11.669 15.1552 10.8922 15.5702 10.0126C15.9851 9.13305 16.2002 8.17253 16.2 7.2ZM4.2 7.2C4.2 6.13198 4.5167 5.08795 5.11006 4.19992C5.70342 3.3119 6.54679 2.61976 7.53351 2.21105C8.52023 1.80234 9.60599 1.6954 10.6535 1.90376C11.701 2.11212 12.6632 2.62642 13.4184 3.38162C14.1736 4.13683 14.6879 5.09902 14.8962 6.14651C15.1046 7.19401 14.9977 8.27977 14.589 9.26649C14.1802 10.2532 13.4881 11.0966 12.6001 11.6899C11.7121 12.2833 10.668 12.6 9.6 12.6C8.16832 12.5984 6.79573 12.029 5.78338 11.0166C4.77103 10.0043 4.20159 8.63168 4.2 7.2ZM5.4 7.2C5.4 6.36932 5.64633 5.55729 6.10783 4.86661C6.56933 4.17592 7.22528 3.63759 7.99273 3.31971C8.76018 3.00182 9.60466 2.91864 10.4194 3.0807C11.2341 3.24276 11.9825 3.64277 12.5698 4.23015C13.1572 4.81753 13.5572 5.5659 13.7193 6.38062C13.8814 7.19534 13.7982 8.03982 13.4803 8.80727C13.1624 9.57472 12.6241 10.2307 11.9334 10.6922C11.2427 11.1537 10.4307 11.4 9.6 11.4C8.48646 11.3988 7.41886 10.9559 6.63147 10.1685C5.84407 9.38114 5.40119 8.31354 5.4 7.2Z"/></symbol><symbol id="i-copy" viewBox="0 0 18 18"><path d="M15.1875 1.96875H6.1875C5.96372 1.96875 5.74911 2.05764 5.59088 2.21588C5.43264 2.37411 5.34375 2.58872 5.34375 2.8125V5.34375H2.8125C2.58872 5.34375 2.37411 5.43264 2.21588 5.59088C2.05764 5.74911 1.96875 5.96372 1.96875 6.1875V15.1875C1.96875 15.4113 2.05764 15.6259 2.21588 15.7841C2.37411 15.9424 2.58872 16.0312 2.8125 16.0312H11.8125C12.0363 16.0312 12.2509 15.9424 12.4091 15.7841C12.5674 15.6259 12.6562 15.4113 12.6562 15.1875V12.6562H15.1875C15.4113 12.6562 15.6259 12.5674 15.7841 12.4091C15.9424 12.2509 16.0312 12.0363 16.0312 11.8125V2.8125C16.0312 2.58872 15.9424 2.37411 15.7841 2.21588C15.6259 2.05764 15.4113 1.96875 15.1875 1.96875ZM10.9688 14.3438H3.65625V7.03125H10.9688V14.3438ZM14.3438 10.9688H12.6562V6.1875C12.6562 5.96372 12.5674 5.74911 12.4091 5.59088C12.2509 5.43264 12.0363 5.34375 11.8125 5.34375H7.03125V3.65625H14.3438V10.9688Z"/></symbol><symbol id="i-pie" viewBox="0 0 14 14"><path d="M7 1.3125C5.87512 1.3125 4.7755 1.64607 3.84019 2.27102C2.90489 2.89597 2.17591 3.78423 1.74544 4.82349C1.31496 5.86274 1.20233 7.00631 1.42178 8.10958C1.64124 9.21284 2.18292 10.2263 2.97833 11.0217C3.77374 11.8171 4.78716 12.3588 5.89042 12.5782C6.99369 12.7977 8.13726 12.685 9.17651 12.2546C10.2158 11.8241 11.104 11.0951 11.729 10.1598C12.3539 9.2245 12.6875 8.12488 12.6875 7C12.6859 5.49207 12.0862 4.04636 11.0199 2.98009C9.95364 1.91382 8.50793 1.31409 7 1.3125ZM7 2.1875C7.77044 2.18781 8.52955 2.3731 9.2135 2.72778C9.89745 3.08246 10.4862 3.59616 10.9304 4.2257L7 6.49469V2.1875ZM7 11.8125C6.22956 11.8122 5.47045 11.6269 4.7865 11.2722C4.10255 10.9175 3.51375 10.4038 3.06961 9.7743L11.369 4.98313C11.7074 5.71635 11.8559 6.52295 11.8008 7.32863C11.7456 8.13431 11.4886 8.91316 11.0534 9.59343C10.6182 10.2737 10.0188 10.8335 9.31049 11.2213C8.60212 11.6091 7.80757 11.8124 7 11.8125Z"/></symbol><symbol id="i-list-mag" viewBox="0 0 14 14"><path d="M1.75 3.5C1.75 3.38397 1.79609 3.27269 1.87814 3.19064C1.96019 3.10859 2.07147 3.0625 2.1875 3.0625H11.8125C11.9285 3.0625 12.0398 3.10859 12.1219 3.19064C12.2039 3.27269 12.25 3.38397 12.25 3.5C12.25 3.61603 12.2039 3.72731 12.1219 3.80936C12.0398 3.89141 11.9285 3.9375 11.8125 3.9375H2.1875C2.07147 3.9375 1.96019 3.89141 1.87814 3.80936C1.79609 3.72731 1.75 3.61603 1.75 3.5ZM2.1875 7.4375H6.125C6.24103 7.4375 6.35231 7.39141 6.43436 7.30936C6.51641 7.22731 6.5625 7.11603 6.5625 7C6.5625 6.88397 6.51641 6.77269 6.43436 6.69064C6.35231 6.60859 6.24103 6.5625 6.125 6.5625H2.1875C2.07147 6.5625 1.96019 6.60859 1.87814 6.69064C1.79609 6.77269 1.75 6.88397 1.75 7C1.75 7.11603 1.79609 7.22731 1.87814 7.30936C1.96019 7.39141 2.07147 7.4375 2.1875 7.4375ZM7 10.0625H2.1875C2.07147 10.0625 1.96019 10.1086 1.87814 10.1906C1.79609 10.2727 1.75 10.384 1.75 10.5C1.75 10.616 1.79609 10.7273 1.87814 10.8094C1.96019 10.8914 2.07147 10.9375 2.1875 10.9375H7C7.11603 10.9375 7.22731 10.8914 7.30936 10.8094C7.39141 10.7273 7.4375 10.616 7.4375 10.5C7.4375 10.384 7.39141 10.2727 7.30936 10.1906C7.22731 10.1086 7.11603 10.0625 7 10.0625ZM12.997 10.1905L11.8869 9.07813C12.1853 8.62577 12.3052 8.07873 12.2234 7.54301C12.1415 7.00729 11.8637 6.52103 11.4438 6.17846C11.0238 5.83588 10.4917 5.66138 9.95044 5.68876C9.40919 5.71614 8.89738 5.94346 8.51417 6.32667C8.13096 6.70988 7.90364 7.22169 7.87626 7.76294C7.84888 8.30418 8.02338 8.83633 8.36596 9.25625C8.70853 9.67618 9.19479 9.95399 9.73051 10.0359C10.2662 10.1177 10.8133 9.99782 11.2656 9.69938L12.3758 10.8095C12.4579 10.8916 12.5692 10.9377 12.6853 10.9377C12.8014 10.9377 12.9128 10.8916 12.9948 10.8095C13.0769 10.7274 13.1231 10.6161 13.1231 10.5C13.1231 10.3839 13.0769 10.2726 12.9948 10.1905H12.997Z"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M19.5459 17.9541C19.7573 18.1654 19.876 18.4521 19.876 18.7509C19.876 19.0498 19.7573 19.3365 19.5459 19.5478C19.3346 19.7592 19.0479 19.8779 18.7491 19.8779C18.4502 19.8779 18.1635 19.7592 17.9522 19.5478L12 13.5938L6.04594 19.5459C5.83459 19.7573 5.54795 19.876 5.24906 19.876C4.95018 19.876 4.66353 19.7573 4.45219 19.5459C4.24084 19.3346 4.12211 19.0479 4.12211 18.7491C4.12211 18.4502 4.24084 18.1635 4.45219 17.9522L10.4063 12L4.45406 6.04594C4.24272 5.83459 4.12399 5.54795 4.12399 5.24906C4.12399 4.95018 4.24272 4.66353 4.45406 4.45219C4.66541 4.24084 4.95205 4.12211 5.25094 4.12211C5.54982 4.12211 5.83647 4.24084 6.04781 4.45219L12 10.4063L17.9541 4.45125C18.1654 4.23991 18.4521 4.12117 18.7509 4.12117C19.0498 4.12117 19.3365 4.23991 19.5478 4.45125C19.7592 4.66259 19.8779 4.94924 19.8779 5.24813C19.8779 5.54701 19.7592 5.83366 19.5478 6.045L13.5938 12L19.5459 17.9541Z"/></symbol></svg>
+        <section id="at-a-glance">
+          <h2>At a glance</h2>
+          <p>Five related components share one shape: a small rounded container with an optional leading icon, a label
+            and an optional trailing icon. <strong>Pick the most specific one first</strong> &mdash; if a Sementic
+            version exists for your data, use it; otherwise use the Standard one.</p>
+          <div class="docs-demo">
+            <div class="chp-glance">
+              <div class="chp-sku"><span class="chp-sku__img" style="width:32px;height:32px"></span><div><p class="chp-sku__name">NM Face – Cleansing Men</p><div class="chp-row chp-row--start"><span class="chp" data-color="orange" data-size="small"><svg aria-hidden="true"><use href="#i-scales"/></svg><span class="chp__lbl">100 gms</span></span><span class="chp" data-color="light-blue" data-size="small"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="chp__lbl">00.0%</span></span><span class="chp" data-color="yellow" data-size="small"><svg aria-hidden="true"><use href="#i-medal"/></svg><span class="chp__lbl">in (X)</span></span></div></div></div>
+              <div class="chp-row chp-row--start"><span class="chp chp--tag" data-color="primary" data-size="small"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Platform</span><svg class="chp__arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="chp__lbl">Blinkit</span></span><span class="chp chp--tag" data-color="primary" data-size="small"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">City</span><svg class="chp__arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="chp__lbl">Mumbai</span></span></div>
+              <div class="chp-row chp-row--start"><span class="lgd" data-color="pink" data-size="small"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">This week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="purple" data-size="small"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Last week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span></div>
+            </div>
+            <p class="docs-demo__caption">Sementic chips under a SKU name, tags for applied filters, and legends above a chart.</p>
+          </div>
+          <div class="bx-quick">
+            <div><h3>Chip</h3><p>Labels <strong>a value or category</strong> &mdash; “100 gms”, “Cat: Snacks”.</p></div>
+            <div><h3>Tag</h3><p>Shows <strong>a key → value pair</strong> &mdash; a filter, rule or mapping.</p></div>
+            <div><h3>Legend</h3><p>Names <strong>a chart series</strong>, in the series colour.</p></div>
+          </div>
+        </section>
+
+        <section id="which">
+          <h2>Which one do I use?</h2>
+          <p>Answer top to bottom and stop at the first “yes”.</p>
+          <div class="bx-scroll"><table class="docs-table chp-which"><thead><tr><th>#</th><th>Question</th><th>Use</th></tr></thead><tbody>
+              <tr><td>1</td><td>Is it a chart legend for a known metric (Top Selling, Grammage, Consumption / Offtake / KW share)?</td><td><strong>Sementic-legend</strong></td></tr>
+              <tr><td>2</td><td>Is it any other chart legend?</td><td><strong>Standard-legend</strong></td></tr>
+              <tr><td>3</td><td>Is it a value of a known data type (Grammage, Offtake %, Category, ASIN, MRP, SP, GMV, NSR, Top Selling)?</td><td><strong>Sementic-chip</strong></td></tr>
+              <tr><td>4</td><td>Does it show a key and a value together (filter, rule, mapping)?</td><td><strong>Standard-tag</strong></td></tr>
+              <tr><td>5</td><td>Anything else (category, status, label)?</td><td><strong>Standard-chip</strong></td></tr>
+              <tr><td>6</td><td>Can the user click it to select or filter?</td><td><strong class="chp-no">Not here</strong> &mdash; use Selection chips (Checkbox-chip / Radio-chip).</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="anatomy">
+          <h2>Anatomy</h2>
+          <h3>Standard-chip</h3>
+          <p>The base chip. Shown: Filled · Primary Blue · Medium, with Prefix Icon and Suffix Icon on.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,top,bottom,right"><div class="bx-anatomy__zoom"><div style="zoom:4"><span class="chp" data-anatomy="1" data-color="primary"><svg aria-hidden="true" data-anatomy="2" data-center data-stem="28"><use href="#i-car"/></svg><span class="chp__lbl" data-anatomy="3" data-center data-stem="28">Snacks</span><svg aria-hidden="true" data-anatomy="4" data-center data-stem="28"><use href="#i-info"/></svg></span></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Container</td><td><code>Type</code> <code>Color</code> <code>Size</code></td><td>Auto-layout, hugs content. Filled → tinted background (Color/100); Outlined → 1px border (Color/200), no fill. Radius 4–8 (100 when Is Rounded).</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Prefix icon</td><td><code>Prefix Icon</code><br><code>Prefix</code></td><td>On by default; swap defaults to Car. 10–14px. Use an icon that explains the value type.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Label</td><td><code>Label</code></td><td>SemiBold 10–12px, in the darker step of the colour (Color/600–900). 1–3 words or a short value.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Suffix icon</td><td><code>Suffix Icon</code><br><code>Suffix</code></td><td>Off by default; swap defaults to Info. Usually Info (tooltip), a caret or a close.</td></tr>
+            </tbody></table></div>
+          <h3>Sementic-chip</h3>
+          <p>A preset Standard-chip for one data type. Shown: Use case = Grammage.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,top,bottom"><div class="bx-anatomy__zoom"><div style="zoom:6"><span class="chp" data-anatomy="1" data-color="orange" data-size="small"><svg aria-hidden="true" data-anatomy="2" data-center data-stem="28"><use href="#i-scales"/></svg><span class="chp__lbl" data-anatomy="3" data-center data-stem="28">100 gms</span></span></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Preset wrapper</td><td><code>Use case</code></td><td>One Standard-chip (Filled · Small) with colour and icon locked to the data type. You only pick the Use case.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Type icon</td><td>fixed</td><td>Fixed per use case &mdash; Scales for Grammage, ChartPieSlice for Offtake, Medal for Top Selling.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Value</td><td>text override</td><td>Edit the value (“100 gms”, “12.4%”). Keep the preset’s format.</td></tr>
+            </tbody></table></div>
+          <h3>Standard-tag</h3>
+          <p>Key → value. Shown: Primary Blue · Medium with prefix and suffix on.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,top,bottom,top,bottom,right"><div class="bx-anatomy__zoom"><div style="zoom:4"><span class="chp chp--tag" data-anatomy="1" data-color="primary"><svg aria-hidden="true" data-anatomy="2" data-center data-stem="28"><use href="#i-car"/></svg><span class="chp__lbl" data-anatomy="3" data-center data-stem="28">Brand</span><svg class="chp__arrow" aria-hidden="true" data-anatomy="4" data-center data-stem="28"><use href="#i-arrow"/></svg><span class="chp__lbl" data-anatomy="5" data-center data-stem="28">Dettol</span><svg aria-hidden="true" data-anatomy="6" data-center data-stem="28"><use href="#i-info"/></svg></span></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Container</td><td><code>Color</code> <code>Size</code></td><td>Same as Standard-chip, Filled only. 12 colours, 3 sizes, Rounded option.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Prefix icon</td><td><code>Prefix Icon</code></td><td>Boolean + swap.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Key</td><td><code>Label</code></td><td>What is being described &mdash; Brand, City, Rule.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Arrow</td><td>fixed</td><td>ArrowRight (Bold) at 50% &mdash; reads as “is / maps to”.</td></tr>
+              <tr><td><span class="bx-n">5</span></td><td>Value</td><td>text override</td><td>The value &mdash; Dettol, Mumbai, &gt; 20%. ⚠ Not a TEXT property; edit the layer.</td></tr>
+              <tr><td><span class="bx-n">6</span></td><td>Suffix icon</td><td><code>Suffix Icon</code></td><td>Info, or close (×) for removable tags.</td></tr>
+            </tbody></table></div>
+          <h3>Standard-legend</h3>
+          <p>Chart legend chip. Shown: Pink · Medium, prefix and suffix on.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,top,bottom,right"><div class="bx-anatomy__zoom"><div style="zoom:5"><span class="lgd" data-anatomy="1" data-color="pink"><svg aria-hidden="true" data-anatomy="2" data-center data-stem="28"><use href="#i-pie-slice"/></svg><span class="lgd__lbl" data-anatomy="3" data-center data-stem="28">Revenue</span><svg class="lgd__info" aria-hidden="true" data-anatomy="4" data-center data-stem="28"><use href="#i-info"/></svg></span></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Container</td><td><code>Color</code> <code>Size</code></td><td>Tinted fill (Color/100) + 1px border (Color/200). Slightly more padding than chips. 9 colours, 4 sizes.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Series icon</td><td><code>Show Prefix</code><br><code>Prefix Icon</code></td><td>Chart-type icon, ChartPieSlice by default, in the series colour.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Series name</td><td>text override</td><td>The metric or series name. ⚠ Not a TEXT property.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Info</td><td><code>Show Suffix</code><br><code>Suffix Icon</code></td><td>Tooltip explaining how the metric is calculated.</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="type">
+          <h2>Type</h2>
+          <p>Filled is the default and the most visible. Outlined is quieter &mdash; use it when many chips sit together
+            or on tinted backgrounds.</p>
+          <div class="bx-options bx-options--two"><div class="bx-opt"><div class="bx-opt__stage"><div class="chp-row"><span class="chp" data-color="primary"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Primary Blue</span></span><span class="chp" data-color="pink"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Pink</span></span><span class="chp" data-color="orange"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Orange</span></span><span class="chp" data-color="light-blue"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Light Blue</span></span><span class="chp" data-color="bronze"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Bronze</span></span><span class="chp" data-color="purple"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Purple</span></span></div></div><div class="bx-opt__body"><h3>Filled <small>Default</small></h3><p>Tinted background (Color/100), label in the darker step. No border.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="chp-row"><span class="chp" data-color="primary" data-type="outlined"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Primary Blue</span></span><span class="chp" data-color="pink" data-type="outlined"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Pink</span></span><span class="chp" data-color="orange" data-type="outlined"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Orange</span></span><span class="chp" data-color="light-blue" data-type="outlined"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Light Blue</span></span><span class="chp" data-color="bronze" data-type="outlined"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Bronze</span></span><span class="chp" data-color="purple" data-type="outlined"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Purple</span></span></div></div><div class="bx-opt__body"><h3>Outlined</h3><p>1px border (Color/200), no fill. Quieter.</p></div></div></div>
+        </section>
+
+        <section id="color">
+          <h2>Colour</h2>
+          <p>Pick colour for <strong>meaning, not decoration</strong>. Status colours carry a judgement; accents only
+            tell categories apart. Tags use the same 12 colours.</p>
+          <div class="bx-options bt-list"><div class="bx-opt"><div class="bx-opt__stage"><div class="chp-row"><span class="chp" data-color="red"><span class="chp__lbl">Negative</span></span><span class="chp" data-color="green"><span class="chp__lbl">Positive</span></span><span class="chp" data-color="yellow"><span class="chp__lbl">Warning</span></span><span class="chp" data-color="sec"><span class="chp__lbl">Neutral</span></span><span class="chp" data-color="disabled"><span class="chp__lbl">Unavailable</span></span></div></div><div class="bx-opt__body"><h3>Status</h3><p><strong>Red</strong> negative · <strong>Green</strong> positive · <strong>Yellow</strong> warning · <strong>Sec. Text</strong> neutral · <strong>Disabled</strong> unavailable.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="chp-row"><span class="chp" data-color="primary"><span class="chp__lbl">Primary Blue</span></span><span class="chp" data-color="pink"><span class="chp__lbl">Pink</span></span><span class="chp" data-color="orange"><span class="chp__lbl">Orange</span></span><span class="chp" data-color="light-blue"><span class="chp__lbl">Light Blue</span></span><span class="chp" data-color="bronze"><span class="chp__lbl">Bronze</span></span><span class="chp" data-color="purple"><span class="chp__lbl">Purple</span></span><span class="chp" data-color="steel"><span class="chp__lbl">Steel Blue</span></span></div></div><div class="bx-opt__body"><h3>Categories</h3><p>Primary Blue, Pink, Purple, Orange, Bronze, Light Blue and Steel Blue. Keep one colour per meaning across a screen.</p></div></div></div>
+        </section>
+
+        <section id="size">
+          <h2>Size</h2>
+          <p>Four heights. A chip should never be taller than the text it labels.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><span class="chp" data-color="primary" data-size="tiny"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Text</span></span></div><div class="bx-opt__body"><h3>Tiny <small>18px</small></h3><p>Dense tables and lists.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><span class="chp" data-color="primary" data-size="small"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Text</span></span></div><div class="bx-opt__body"><h3>Small <small>20px</small></h3><p>Default. Tables, cards, Sementic chips.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><span class="chp" data-color="primary"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Text</span></span></div><div class="bx-opt__body"><h3>Medium <small>24px</small></h3><p>Cards and panels.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><span class="chp" data-color="primary" data-size="large"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Text</span></span></div><div class="bx-opt__body"><h3>Large <small>28px</small></h3><p>Headers and hero areas only &mdash; rarely.</p></div></div></div>
+        </section>
+
+        <section id="shape">
+          <h2>Shape &amp; icons</h2>
+          <p>Keep one shape per area. Swap the prefix to an icon that explains the value &mdash; never leave the default Car
+            on an unrelated chip.</p>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><span class="chp" data-color="pink" data-rounded><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Text</span></span></div><div class="bx-opt__body"><h3>Is Rounded</h3><p>Pill shape (radius 100) for status- or filter-like chips.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="chp-row"><span class="chp" data-color="pink" data-icononly aria-label="Car"><svg aria-hidden="true"><use href="#i-car"/></svg></span><span class="chp" data-color="pink" data-rounded data-icononly aria-label="Car"><svg aria-hidden="true"><use href="#i-car"/></svg></span></div></div><div class="bx-opt__body"><h3>Icon Only</h3><p>Square or circle, icon only. Always add a tooltip.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="chp-row"><span class="chp" data-color="primary"><span class="chp__lbl">Text</span></span><span class="chp" data-color="primary"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Text</span></span><span class="chp" data-color="primary"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Text</span><svg aria-hidden="true"><use href="#i-info"/></svg></span><span class="chp" data-color="primary"><span class="chp__lbl">Text</span><svg aria-hidden="true"><use href="#i-info"/></svg></span></div></div><div class="bx-opt__body"><h3>Prefix · Suffix</h3><p>No icons · prefix only (default) · both · suffix only.</p></div></div></div>
+        </section>
+
+        <section id="sementic">
+          <h2>Sementic chips</h2>
+          <p>Twelve ready-made presets, one per data type. Pick the Use case and the colour and icon follow, so the same
+            data looks the same on every screen. All are Small.</p>
+          <div class="bx-options bt-list"><div class="bx-opt"><div class="bx-opt__stage"><div class="chp-row"><span class="chp" data-color="orange" data-size="small"><svg aria-hidden="true"><use href="#i-scales"/></svg><span class="chp__lbl">100 gms</span></span><span class="chp" data-color="light-blue" data-size="small"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="chp__lbl">00.0%</span></span><span class="chp" data-color="pink" data-size="small"><span class="chp__lbl"><span class="chp__pre">Cat:</span> Category 01</span></span><span class="chp" data-color="sec" data-size="small"><span class="chp__lbl"><span class="chp__pre">ASIN ID:</span> 221S245</span><svg aria-hidden="true"><use href="#i-copy"/></svg></span><span class="chp" data-color="sec" data-size="small"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="chp__lbl">00.0%</span></span><span class="chp" data-color="purple" data-size="small"><svg aria-hidden="true"><use href="#i-pie"/></svg><span class="chp__lbl">00.0%</span></span><span class="chp" data-color="bronze" data-size="small"><svg aria-hidden="true"><use href="#i-list-mag"/></svg><span class="chp__lbl">00.0%</span></span><span class="chp" data-color="yellow" data-size="small"><svg aria-hidden="true"><use href="#i-medal"/></svg><span class="chp__lbl">in (X)</span></span><span class="chp" data-color="mrp" data-size="small"><span class="chp__lbl">MRP</span></span><span class="chp" data-color="sp" data-size="small"><span class="chp__lbl">SP</span></span><span class="chp" data-color="gmv" data-size="small"><span class="chp__lbl">GMV</span></span><span class="chp" data-color="nsr" data-size="small"><span class="chp__lbl">NSR</span></span></div></div><div class="bx-opt__body"><h3>Use case</h3><p>Grammage · Category Offtake · Category Name · ASIN ID · Brand Offtake · Consumption Share · Keyword Vol. Share · Top Selling · MRP · SP · GMV · NSR</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="chp-row"><span class="chp" data-color="orange" data-size="small" data-dim><svg aria-hidden="true"><use href="#i-scales"/></svg><span class="chp__lbl">100 gms</span></span><span class="chp" data-color="light-blue" data-size="small" data-dim><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="chp__lbl">00.0%</span></span><span class="chp" data-color="pink" data-size="small" data-dim><span class="chp__lbl"><span class="chp__pre">Cat:</span> Category 01</span></span><span class="chp" data-color="sec" data-size="small" data-dim><span class="chp__lbl"><span class="chp__pre">ASIN ID:</span> 221S245</span><svg aria-hidden="true"><use href="#i-copy"/></svg></span><span class="chp" data-color="sec" data-size="small" data-dim><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="chp__lbl">00.0%</span></span><span class="chp" data-color="purple" data-size="small" data-dim><svg aria-hidden="true"><use href="#i-pie"/></svg><span class="chp__lbl">00.0%</span></span></div></div><div class="bx-opt__body"><h3>De-emphasized = Yes</h3><p>60% opacity &mdash; for secondary or repeated info in dense tables.</p></div></div><div class="bx-opt"><div class="bx-opt__stage chp-dark docs-stage--dark"><div class="chp-row"><span class="chp" data-color="orange" data-size="small" data-dark><svg aria-hidden="true"><use href="#i-scales"/></svg><span class="chp__lbl">100 gms</span></span><span class="chp" data-color="light-blue" data-size="small" data-dark><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="chp__lbl">00.0%</span></span><span class="chp" data-color="pink" data-size="small" data-dark><span class="chp__lbl"><span class="chp__pre">Cat:</span> Category 01</span></span><span class="chp" data-color="sec" data-size="small" data-dark><span class="chp__lbl"><span class="chp__pre">ASIN ID:</span> 221S245</span><svg aria-hidden="true"><use href="#i-copy"/></svg></span><span class="chp" data-color="sec" data-size="small" data-dark><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="chp__lbl">00.0%</span></span><span class="chp" data-color="purple" data-size="small" data-dark><svg aria-hidden="true"><use href="#i-pie"/></svg><span class="chp__lbl">00.0%</span></span></div></div><div class="bx-opt__body"><h3>Dark Mode = Yes</h3><p>For dark surfaces &mdash; tooltips and dark headers.</p></div></div></div>
+        </section>
+
+        <section id="tags">
+          <h2>Tags</h2>
+          <p>A tag joins a key and a value with an arrow &mdash; “Brand → Dettol”. Same colours as chips, Small / Medium /
+            Large, with a Rounded option. Swap the suffix to a close icon when the tag can be removed.</p>
+          <div class="bx-options bx-options--two"><div class="bx-opt"><div class="bx-opt__stage"><div class="chp-row"><span class="chp chp--tag" data-color="primary" data-size="small"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Text</span><svg class="chp__arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="chp__lbl">Text</span></span><span class="chp chp--tag" data-color="primary"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Text</span><svg class="chp__arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="chp__lbl">Text</span></span><span class="chp chp--tag" data-color="primary" data-size="large"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Text</span><svg class="chp__arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="chp__lbl">Text</span></span></div></div><div class="bx-opt__body"><h3>Size</h3><p>Small 20 · Medium 24 · Large 28.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="chp-row"><span class="chp chp--tag" data-color="bronze"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Brand</span><svg class="chp__arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="chp__lbl">Dettol</span></span><span class="chp chp--tag" data-color="purple" data-rounded><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">City</span><svg class="chp__arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="chp__lbl">Mumbai</span></span><span class="chp chp--tag" data-color="primary"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Platform</span><svg class="chp__arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="chp__lbl">Blinkit</span><svg aria-hidden="true"><use href="#i-x"/></svg></span></div></div><div class="bx-opt__body"><h3>Colour · Rounded · Removable</h3><p>Pick colour like a chip and keep one shape per group. Swap the suffix to × for applied filters.</p></div></div></div>
+        </section>
+
+        <section id="legends">
+          <h2>Legends</h2>
+          <p>Legends name a chart series. Set the colour to the series colour, keep the order of the chart, and keep Info on
+            when the metric needs explaining. Known metrics have Sementic presets.</p>
+          <div class="bx-options bt-list"><div class="bx-opt"><div class="bx-opt__stage"><div class="chp-row"><span class="lgd" data-color="neutral"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Neutral</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="light-blue"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Light blue</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="bronze"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Bronze green</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="green"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Green</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="purple"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Purple</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="pink"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Pink</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="orange"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Orange</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="yellow"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Yellow</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="steel"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Steel Blue</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span></div></div><div class="bx-opt__body"><h3>Standard-legend · 9 colours</h3><p>Neutral, Light blue, Bronze green, Green, Purple, Pink, Orange, Yellow, Steel Blue.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="chp-row"><span class="lgd" data-color="pink" data-size="tiny"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Label</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="pink" data-size="small"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Label</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="pink"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Label</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="pink" data-size="large"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Label</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span></div></div><div class="bx-opt__body"><h3>Size</h3><p>Tiny 20 · Small 24 · Medium 28 · Large 32.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="chp-row"><span class="lgd" data-color="steel"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Brand Offtake Share</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="light-blue"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Cat. Offtake Share</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="purple"><svg aria-hidden="true"><use href="#i-pie"/></svg><span class="lgd__lbl">Consumption Share</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="orange"><svg aria-hidden="true"><use href="#i-scales"/></svg><span class="lgd__lbl">Grammage</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="bronze"><svg aria-hidden="true"><use href="#i-list-mag"/></svg><span class="lgd__lbl">Keyword Vol. Share</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="yellow"><svg aria-hidden="true"><use href="#i-medal"/></svg><span class="lgd__lbl">Top Selling</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span></div></div><div class="bx-opt__body"><h3>Sementic-legend</h3><p>Six metric presets, Medium / Small / Tiny.</p></div></div></div>
+        </section>
+
+        <section id="usage">
+          <h2>Common layouts</h2>
+          <p>Chips sit next to data to label it. Tags show applied conditions. Legends sit above or beside charts. All of
+            them are read-only labels.</p>
+          <div class="bx-usage">
+            <figure>
+              <div class="bx-mock">
+                <div class="chp-sku"><span class="chp-sku__img" style="width:32px;height:32px"></span><div><p class="chp-sku__name">NM Face – Cleansing Men</p><div class="chp-row chp-row--start"><span class="chp" data-color="orange" data-size="small"><svg aria-hidden="true"><use href="#i-scales"/></svg><span class="chp__lbl">100 gms</span></span><span class="chp" data-color="light-blue" data-size="small"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="chp__lbl">00.0%</span></span></div></div></div>
+                <div class="chp-sku"><span class="chp-sku__img" style="width:32px;height:32px"></span><div><p class="chp-sku__name">Dettol Handwash 200ml</p><div class="chp-row chp-row--start"><span class="chp" data-color="orange" data-size="small"><svg aria-hidden="true"><use href="#i-scales"/></svg><span class="chp__lbl">100 gms</span></span><span class="chp" data-color="yellow" data-size="small"><svg aria-hidden="true"><use href="#i-medal"/></svg><span class="chp__lbl">in (X)</span></span></div></div></div>
+                <div class="chp-sku"><span class="chp-sku__img" style="width:32px;height:32px"></span><div><p class="chp-sku__name">Tata Salt 1kg</p><div class="chp-row chp-row--start"><span class="chp" data-color="orange" data-size="small"><svg aria-hidden="true"><use href="#i-scales"/></svg><span class="chp__lbl">100 gms</span></span><span class="chp" data-color="sec" data-size="small"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="chp__lbl">00.0%</span></span></div></div></div>
+              </div>
+              <figcaption><b>In a table</b>Sementic chips under the SKU name, at Small.</figcaption>
+            </figure>
+            <figure>
+              <div class="bx-mock">
+                <p class="chp-mock__label">Filters applied</p>
+                <div class="chp-row chp-row--start"><span class="chp chp--tag" data-color="primary" data-size="small"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Platform</span><svg class="chp__arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="chp__lbl">Blinkit</span><svg aria-hidden="true"><use href="#i-x"/></svg></span><span class="chp chp--tag" data-color="primary" data-size="small"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">City</span><svg class="chp__arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="chp__lbl">Mumbai</span><svg aria-hidden="true"><use href="#i-x"/></svg></span><span class="chp chp--tag" data-color="primary" data-size="small"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Category</span><svg class="chp__arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="chp__lbl">Snacks</span><svg aria-hidden="true"><use href="#i-x"/></svg></span></div>
+              </div>
+              <figcaption><b>Applied filters</b>One tag per active condition.</figcaption>
+            </figure>
+            <figure>
+              <div class="bx-mock">
+                <div class="chp-chartcard"><p class="chp-chartcard__title">Weekly sales</p><div class="chp-row chp-row--start chp-chartcard__legend"><span class="lgd" data-color="pink" data-size="small" data-series="0"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">This week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="purple" data-size="small" data-series="1"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Last week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span></div><div class="chp-chartcard__plot" style="height:130px"><canvas role="img" aria-label="Line chart: This week, Last week" data-chp-chart='{"labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "series": [{"label": "This week", "color": "#a92e76", "data": [42, 48, 45, 56, 53, 61, 66], "dashed": false}, {"label": "Last week", "color": "#742e9f", "data": [35, 39, 37, 44, 41, 47, 50], "dashed": false}]}'></canvas></div></div>
+              </div>
+              <figcaption><b>Chart legend</b>Legend chips match the series colours and order. Click a legend to hide its series.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="dos-donts">
+          <h2>Do’s and don’ts</h2>
+          <h3>Choosing the component</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="chp-row"><span class="chp" data-color="orange" data-size="small"><svg aria-hidden="true"><use href="#i-scales"/></svg><span class="chp__lbl">100 gms</span></span><span class="chp" data-color="yellow" data-size="small"><svg aria-hidden="true"><use href="#i-medal"/></svg><span class="chp__lbl">in (X)</span></span></div></div>
+              <p class="docs-dodont__cap">Use the Sementic chip when one exists for your data. The same data looks the same on every screen.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="chp-row"><span class="chp" data-color="green" data-size="small"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">100 gms</span></span><span class="chp" data-color="pink" data-size="small"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">in (X)</span></span></div></div>
+              <p class="docs-dodont__cap">Don’t rebuild a data-type chip from a Standard chip in another colour. “100 gms” in green here and orange elsewhere breaks recognition.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="chp-row"><span class="chp" data-color="primary"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Snacks</span></span><span class="chp" data-color="primary"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Beverages</span></span></div></div>
+              <p class="docs-dodont__cap">Use chips and tags as labels; use Selection chips for things people pick. Read-only chips have no hover, selected or focus states.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="chp-row"><span class="chp" data-color="primary" data-type="outlined"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">All</span></span><span class="chp" data-color="primary"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Selected?</span></span><span class="chp" data-color="primary" data-type="outlined"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Other</span></span></div></div>
+              <p class="docs-dodont__cap">Don’t use Standard-chip as a clickable filter. It looks static and gives no feedback when clicked.</p>
+            </div>
+          </div>
+          <h3>Colour meaning</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="chp-row"><span class="chp" data-color="green"><span class="chp__lbl">In stock</span></span><span class="chp" data-color="red"><span class="chp__lbl">Out of stock</span></span></div></div>
+              <p class="docs-dodont__cap">Pick colour for meaning: Red negative, Green positive, Yellow warning, Sec. Text neutral. People read colour before text.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="chp-row"><span class="chp" data-color="red"><span class="chp__lbl">Snacks</span></span><span class="chp" data-color="green"><span class="chp__lbl">Beverages</span></span></div></div>
+              <p class="docs-dodont__cap">Don’t use Red or Green for neutral categories. A red “Snacks” chip reads as an error.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="chp-row"><span class="chp" data-color="purple" data-size="small"><span class="chp__lbl">Personal care</span></span><span class="chp" data-color="purple" data-size="small"><span class="chp__lbl">Personal care</span></span></div></div>
+              <p class="docs-dodont__cap">Keep one colour per meaning across a screen, so colour becomes a reliable cue.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="chp-row"><span class="chp" data-color="pink" data-size="small"><span class="chp__lbl">Tag</span></span><span class="chp" data-color="orange" data-size="small"><span class="chp__lbl">Tag</span></span><span class="chp" data-color="light-blue" data-size="small"><span class="chp__lbl">Tag</span></span><span class="chp" data-color="bronze" data-size="small"><span class="chp__lbl">Tag</span></span><span class="chp" data-color="yellow" data-size="small"><span class="chp__lbl">Tag</span></span></div></div>
+              <p class="docs-dodont__cap">Don’t give every chip a different colour “to look lively”. A rainbow of chips is noise.</p>
+            </div>
+          </div>
+          <h3>Size &amp; density</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="chp-sku"><span class="chp-sku__img" style="width:32px;height:32px"></span><div><p class="chp-sku__name">Dettol Handwash 200ml</p><div class="chp-row chp-row--start"><span class="chp" data-color="orange" data-size="small"><svg aria-hidden="true"><use href="#i-scales"/></svg><span class="chp__lbl">100 gms</span></span><span class="chp" data-color="yellow" data-size="small"><svg aria-hidden="true"><use href="#i-medal"/></svg><span class="chp__lbl">in (X)</span></span></div></div></div></div>
+              <p class="docs-dodont__cap">Use Small or Tiny chips in tables and dense lists. Chips shouldn’t be taller than the text they label.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="chp-sku"><span class="chp-sku__img" style="width:32px;height:32px"></span><div><p class="chp-sku__name">Dettol Handwash 200ml</p><div class="chp-row chp-row--start"><span class="chp" data-color="orange" data-size="large"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">200 ml</span></span><span class="chp" data-color="yellow" data-size="large"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">in (X)</span></span></div></div></div></div>
+              <p class="docs-dodont__cap">Don’t use Large chips inside table rows. They push the row height up and dominate the data.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="chp-row"><span class="chp" data-color="primary" data-size="small"><span class="chp__lbl">Snacks</span></span><span class="chp" data-color="primary" data-size="small"><span class="chp__lbl">Dairy</span></span><span class="chp" data-color="primary" data-size="small"><span class="chp__lbl">Beverages</span></span></div></div>
+              <p class="docs-dodont__cap">Keep one size and one shape in a group. A consistent rhythm makes groups scannable.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="chp-row"><span class="chp" data-color="primary" data-size="tiny"><span class="chp__lbl">Snacks</span></span><span class="chp" data-color="primary" data-size="large" data-rounded><span class="chp__lbl">Dairy</span></span><span class="chp" data-color="primary" data-size="small" data-type="outlined"><span class="chp__lbl">Beverages</span></span></div></div>
+              <p class="docs-dodont__cap">Don’t mix sizes, or rounded and square chips, side by side. It looks broken.</p>
+            </div>
+          </div>
+          <h3>Content</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="chp-row"><span class="chp" data-color="primary"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Top 10</span></span><span class="chp" data-color="orange" data-size="small"><svg aria-hidden="true"><use href="#i-scales"/></svg><span class="chp__lbl">100 gms</span></span></div></div>
+              <p class="docs-dodont__cap">Keep labels short: 1–3 words or a formatted value. Chips are glanceable labels.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="chp-narrow"><span class="chp" data-color="primary"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">This product is in the top 10 this week</span></span></div></div>
+              <p class="docs-dodont__cap">Don’t write sentences inside a chip. Long chips truncate and lose the point.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="chp-row"><span class="chp" data-color="orange" data-size="small"><svg aria-hidden="true"><use href="#i-scales"/></svg><span class="chp__lbl">100 gms</span></span><span class="chp" data-color="yellow" data-size="small"><svg aria-hidden="true"><use href="#i-medal"/></svg><span class="chp__lbl">in (X)</span></span></div></div>
+              <p class="docs-dodont__cap">Use icons that explain the value &mdash; Scales for weight, Medal for rank.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><span class="chp" data-color="primary"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Snacks</span></span></div>
+              <p class="docs-dodont__cap">Don’t leave the default Car icon on unrelated chips. A car next to “Snacks” confuses people.</p>
+            </div>
+          </div>
+          <h3>Tags &amp; legends</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><span class="chp chp--tag" data-color="primary"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Brand</span><svg class="chp__arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="chp__lbl">Dettol</span></span></div>
+              <p class="docs-dodont__cap">Tags are key → value, both short (“Brand → Dettol”). It reads like a rule or filter.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><span class="chp chp--tag" data-color="primary"><svg aria-hidden="true"><use href="#i-car"/></svg><span class="chp__lbl">Status</span><svg class="chp__arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="chp__lbl">Active</span></span></div>
+              <p class="docs-dodont__cap">Don’t use a tag where a single chip is enough. “Status → Active” is just an “Active” chip.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="chp-chartcard"><div class="chp-row chp-row--start chp-chartcard__legend"><span class="lgd" data-color="pink" data-size="small" data-series="0"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">This week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="purple" data-size="small" data-series="1"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Last week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span></div><div class="chp-chartcard__plot" style="height:110px"><canvas role="img" aria-label="Line chart: This week, Last week" data-chp-chart='{"labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "series": [{"label": "This week", "color": "#a92e76", "data": [42, 48, 45, 56, 53, 61, 66], "dashed": false}, {"label": "Last week", "color": "#742e9f", "data": [35, 39, 37, 44, 41, 47, 50], "dashed": false}]}'></canvas></div></div></div>
+              <p class="docs-dodont__cap">Match the legend to the series colour and order of the chart, so people map legend → line instantly.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="chp-chartcard"><div class="chp-row chp-row--start chp-chartcard__legend"><span class="lgd" data-color="green" data-size="small" data-series="0"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">This week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="orange" data-size="small" data-series="1"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Last week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span></div><div class="chp-chartcard__plot" style="height:110px"><canvas role="img" aria-label="Line chart: This week, Last week" data-chp-chart='{"labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "series": [{"label": "This week", "color": "#a92e76", "data": [42, 48, 45, 56, 53, 61, 66], "dashed": false}, {"label": "Last week", "color": "#742e9f", "data": [35, 39, 37, 44, 41, 47, 50], "dashed": false}]}'></canvas></div></div></div>
+              <p class="docs-dodont__cap">Don’t use legend colours that differ from the chart. Nobody can tell which line is which.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="content">
+          <h2>Writing content</h2>
+          <ul>
+            <li><strong>Chip labels</strong> &mdash; 1–3 words or a formatted value: “Top 10”, “100 gms”, “12.4%”.</li>
+            <li><strong>Sementic values</strong> &mdash; keep the preset’s format: “200 ml”, “12.4%”, “Cat: Snacks”.</li>
+            <li><strong>Tags</strong> &mdash; key → value, both short: “Brand → Dettol”, “City → Mumbai”.</li>
+            <li><strong>Legends</strong> &mdash; the metric or series name, exactly as the chart’s tooltip calls it.</li>
+            <li><strong>Long labels</strong> &mdash; truncate with an ellipsis and show the full text in a tooltip; never wrap.</li>
+          </ul>
+        </section>
+
+        <section id="behavior">
+          <h2>Behavior &amp; accessibility</h2>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>What to do</th></tr></thead><tbody>
+              <tr><td>Width</td><td>Hugs content, up to a max-width. Truncate long labels with an ellipsis + tooltip; never wrap.</td></tr>
+              <tr><td>Interactive</td><td>Chips have no hover, selected or focus states. For selectable filters use Selection chips (Checkbox-chip / Radio-chip).</td></tr>
+              <tr><td>Removable tags</td><td>Swap the suffix to × when the tag is an applied filter; the × is a button with an accessible name (“Remove Brand: Dettol”).</td></tr>
+              <tr><td>Clickable legends</td><td>If clicking toggles the series, add a hidden state at 50% opacity and expose it with <code>aria-pressed</code>.</td></tr>
+              <tr><td>Icon only</td><td>Give the chip an <code>aria-label</code> and a tooltip &mdash; there’s no visible text.</td></tr>
+              <tr><td>Colour</td><td>Never rely on colour alone &mdash; keep the text.</td></tr>
+            </tbody></table></div>
+          <p>Every exact value &mdash; dimensions, colour tokens and the full property list &mdash; is on the
+            <a href="docs-chips-specifications.html">Specifications tab</a>.</p>
+        </section>
+
+        <section id="how-to-use">
+          <h2>Adding one to a screen</h2>
+          <h3>Sementic-chip</h3>
+          <ol class="bt-steps">
+            <li><strong>Insert and pick the Use case.</strong> Assets → “Sementic-chip”. Set Use case to your data type &mdash; colour and icon are set for you.</li>
+            <li><strong>Type the value.</strong> Double-click the text and enter the real value in the preset format (“200 ml”, “12.4%”, “Cat: Snacks”).</li>
+            <li><strong>Adjust emphasis or surface.</strong> De-emphasized = Yes for secondary chips in dense tables; Dark Mode = Yes on dark surfaces.</li>
+          </ol>
+          <h3>Standard-chip</h3>
+          <ol class="bt-steps">
+            <li><strong>Insert and type the label.</strong> Assets → “Standard-chip”. Change the Label property.</li>
+            <li><strong>Choose colour by meaning.</strong> Red negative · Green positive · Yellow warning · Sec. Text neutral · Disabled unavailable · accents for categories.</li>
+            <li><strong>Pick type, size and shape.</strong> Filled (default) or Outlined. Tiny / Small in tables, Medium in cards, Large rarely. Is Rounded for pills; Icon Only for compact (+ tooltip).</li>
+            <li><strong>Set the icons.</strong> Swap “Prefix” to an icon that explains the value. Suffix Icon for Info or close.</li>
+          </ol>
+          <h3>Tag or legend</h3>
+          <ol class="bt-steps">
+            <li><strong>Tag: key → value.</strong> Assets → “Standard-tag”. Edit the key and the value; pick colour and size like a chip. Swap Suffix to close if it can be removed.</li>
+            <li><strong>Legend: match the chart.</strong> Known metric → Sementic-legend (pick Use case); otherwise Standard-legend with Color = the series colour.</li>
+          </ol>
+          <h3>Size guide</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Where</th><th>Chip / tag</th><th>Legend</th></tr></thead><tbody>
+              <tr><td>Table rows, dense lists</td><td>Tiny or Small</td><td>&mdash;</td></tr>
+              <tr><td>Cards, panels</td><td>Small or Medium</td><td>Small</td></tr>
+              <tr><td>Above charts</td><td>&mdash;</td><td>Small or Medium</td></tr>
+              <tr><td>Headers, hero areas</td><td>Medium or Large</td><td>Medium or Large</td></tr>
+            </tbody></table></div>
+          <h3>Before you hand off</h3>
+          <ul class="bt-check">
+            <li>Sementic component used wherever the data type has one.</li>
+            <li>Colours mean something and are consistent on the screen.</li>
+            <li>One size and shape per group; Small / Tiny in tables.</li>
+            <li>Labels are short; values formatted like the preset.</li>
+            <li>No default “Car” icon left on unrelated chips.</li>
+            <li>Legend colours match the chart series.</li>
+            <li>No Status-deprecated chips used.</li>
+            <li>Nothing clickable built from Standard-chip (use Selection chips).</li>
+          </ul>
+        </section>
+<script src="assets/js/vendor/chart.umd.min.js" defer></script>
+<script defer>
+window.addEventListener('DOMContentLoaded',function(){
+  if(!window.Chart) return;
+  var F="'Cube Rupee', 'DM Sans', system-ui, sans-serif";
+  Chart.defaults.font.family=F; Chart.defaults.font.size=10; Chart.defaults.color='#69778b';
+  document.querySelectorAll('canvas[data-chp-chart]').forEach(function(cv){
+    var cfg=JSON.parse(cv.getAttribute('data-chp-chart'));
+    var chart=new Chart(cv,{type:'line',
+      data:{labels:cfg.labels,datasets:cfg.series.map(function(s){return {label:s.label,data:s.data,borderColor:s.color,
+        backgroundColor:s.color,borderWidth:2,borderDash:s.dashed?[4,4]:[],tension:.35,pointRadius:0,pointHoverRadius:3,
+        pointHoverBorderWidth:2,pointHoverBackgroundColor:'#fff'};})},
+      options:{responsive:true,maintainAspectRatio:false,animation:false,interaction:{mode:'index',intersect:false},
+        layout:{padding:{top:4,right:4}},
+        plugins:{legend:{display:false},
+          tooltip:{backgroundColor:'#0f111b',titleColor:'#fff',bodyColor:'#bfc5cf',padding:8,cornerRadius:6,boxWidth:8,boxHeight:8,
+            boxPadding:4,usePointStyle:true,titleFont:{family:F,size:11,weight:'600'},bodyFont:{family:F,size:11},
+            callbacks:{label:function(c){return ' '+c.dataset.label+': \u20b9'+c.parsed.y+'k';}}}},
+        scales:{x:{grid:{display:false},border:{color:'#e8eaee'},ticks:{padding:4}},
+          y:{beginAtZero:false,suggestedMin:30,grid:{color:'#f0f2f5'},border:{display:false},
+            ticks:{maxTicksLimit:4,padding:6,callback:function(v){return '\u20b9'+v+'k';}}}}}});
+    // Legend chips toggle their series: hidden = 50% opacity (behaviour rule)
+    var card=cv.closest('.chp-chartcard');
+    card.querySelectorAll('.lgd[data-series]').forEach(function(l){
+      var i=+l.getAttribute('data-series');
+      l.setAttribute('role','button'); l.setAttribute('tabindex','0'); l.setAttribute('aria-pressed','true');
+      function t(){var v=chart.isDatasetVisible(i); chart.setDatasetVisibility(i,!v); chart.update();
+        l.toggleAttribute('data-off',v); l.setAttribute('aria-pressed',String(!v));}
+      l.addEventListener('click',t);
+      l.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();t();}});
+    });
+  });
+});
+</script>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7340-175649" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma docs</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=665-7114" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma library</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#at-a-glance" aria-current="true">At a glance</a></li>
+        <li><a href="#which">Which one do I use?</a></li>
+        <li><a href="#anatomy">Anatomy</a></li>
+        <li><a href="#type">Type</a></li>
+        <li><a href="#color">Colour</a></li>
+        <li><a href="#size">Size</a></li>
+        <li><a href="#shape">Shape &amp; icons</a></li>
+        <li><a href="#sementic">Sementic chips</a></li>
+        <li><a href="#tags">Tags</a></li>
+        <li><a href="#legends">Legends</a></li>
+        <li><a href="#usage">Common layouts</a></li>
+        <li><a href="#dos-donts">Do’s and don’ts</a></li>
+        <li><a href="#content">Writing content</a></li>
+        <li><a href="#behavior">Behavior &amp; accessibility</a></li>
+        <li><a href="#how-to-use">Adding one to a screen</a></li>
+      </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
+})();
+</script>

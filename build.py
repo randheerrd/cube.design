@@ -82,6 +82,22 @@ PAGES = [
      "Input field guidelines — sizes, states, chips and content — and when to reach for each one."),
     ("docs-inputs-specifications", "Input specs", "Input specifications — Cube Design System",
      "Every dimension, color token and prop for the Input and its label sub-component."),
+    ("docs-dropdown", "Dropdown", "Dropdown — Cube Design System",
+     "Dropdown guidelines — field, menu types, selection modes and behaviour — and when to reach for each one."),
+    ("docs-dropdown-specifications", "Dropdown specs", "Dropdown specifications — Cube Design System",
+     "Every dimension, colour token and property for the Dropdown field, menu and rows."),
+    ("docs-messages", "Message", "Message — Cube Design System",
+     "Message guidelines — sentiment, type, size, placement and writing — and when to reach for each one."),
+    ("docs-messages-specifications", "Message specs", "Message specifications — Cube Design System",
+     "Every dimension, colour token and property for the Message."),
+    ("docs-banners", "Banner & Toast", "Banner & Toast — Cube Design System",
+     "Banner and Toast guidelines — types, anatomy, behaviour and content — and when to reach for each one."),
+    ("docs-banners-specifications", "Banner & Toast specs", "Banner & Toast specifications — Cube Design System",
+     "Every dimension, color token and prop for the Banner and the Toast."),
+    ("docs-chips", "Chips, Tags & Legends", "Chips, Tags & Legends — Cube Design System",
+     "Chip, Tag and Legend guidelines — Standard vs Sementic, colour, size and content — and when to reach for each one."),
+    ("docs-chips-specifications", "Chips specs", "Chips, Tags & Legends specifications — Cube Design System",
+     "Every dimension, colour token and property for Chips, Tags and Legends."),
     ("docs-tooltips", "Tooltips", "Tooltips — Cube Design System",
      "Tooltip guidelines, anatomy, placement and accessibility for the Cube design system."),
     ("docs-tooltips-specifications", "Tooltip specs", "Tooltip specifications — Cube Design System",
@@ -98,7 +114,10 @@ PAGES = [
 HIDDEN = {"internal", "craft", "team", "docs", "docs-tooltips", "docs-tooltips-specifications",
           "docs-buttons-specifications", "docs-typography", "docs-typography-specifications",
           "docs-colors", "docs-colors-specifications", "docs-spacing", "docs-spacing-specifications",
-          "docs-inputs", "docs-inputs-specifications"}
+          "docs-inputs", "docs-inputs-specifications",
+          "docs-banners", "docs-banners-specifications",
+          "docs-messages", "docs-messages-specifications", "docs-dropdown", "docs-dropdown-specifications",
+          "docs-chips", "docs-chips-specifications"}
 
 # Guarded by INTERNAL_PASSWORD rather than SITE_PASSWORD.
 INTERNAL_PAGES = {"internal"}
@@ -124,7 +143,10 @@ DOCS = {"docs", "docs-tooltips", "docs-tooltips-specifications", "docs-buttons-s
         "docs-typography", "docs-typography-specifications",
         "docs-colors", "docs-colors-specifications",
         "docs-spacing", "docs-spacing-specifications",
-        "docs-inputs", "docs-inputs-specifications"}
+        "docs-inputs", "docs-inputs-specifications",
+          "docs-banners", "docs-banners-specifications",
+        "docs-messages", "docs-messages-specifications", "docs-dropdown", "docs-dropdown-specifications",
+        "docs-chips", "docs-chips-specifications"}
 
 
 EDITION_HEAD = (
@@ -138,7 +160,7 @@ STUDIO_HEAD = '<link rel="stylesheet" href="assets/css/studio.css?v={v}">'
 # falling back to the docs shell's own General Sans.
 DOCS_HEAD = (
     '<link href="https://fonts.googleapis.com/css2'
-    '?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"'
+    '?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500;1,9..40,600&display=swap"'
     ' rel="stylesheet">\n'
     '<link rel="stylesheet" href="assets/css/docs.css?v={v}">'
 )

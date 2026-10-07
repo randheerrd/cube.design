@@ -1,3 +1,8 @@
+/* ₹ fix: DM Sans' rupee glyph is wrong, so U+20B9 comes from the patched
+   Cube DM Sans (assets/font) everywhere; every other character is untouched. */
+@font-face{font-family:"Cube Rupee"; src:url("../font/DMSans-RupeeFix.ttf") format("truetype"); font-weight:100 1000; font-style:normal; font-display:swap; unicode-range:U+20B9}
+@font-face{font-family:"Cube Rupee"; src:url("../font/DMSans-Italic-RupeeFix.ttf") format("truetype"); font-weight:100 1000; font-style:italic; font-display:swap; unicode-range:U+20B9}
+
 /* ============================================================
    Cube.Design by GobbleCube — stylesheet
    Design system per DESIGN-SPEC.md
@@ -5,7 +10,7 @@
    ============================================================ */
 :root{
   /* Type */
-  --font: "General Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font: "Cube Rupee", "General Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   --tracking-tight: -0.06em;
 
   --fs-micro: 12px;

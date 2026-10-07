@@ -26,7 +26,7 @@
     <details open>
       <summary>Getting started</summary>
       <ul>
-        <li><a href="#">About Cube</a></li>
+        <li><a aria-current="true" href="#">About Cube</a></li>
         <li><a href="#">Designing</a></li>
         <li><a href="#">Developing</a></li>
         <li><a href="#">Contributing</a></li>
@@ -51,12 +51,14 @@
         <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-tooltips.html">Tooltips</a></li>
         <li><a href="docs-inputs.html" aria-current="page">Inputs</a></li>
-        <li><a href="#" aria-disabled="true">Banner &amp; Toasts <small>Soon</small></a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
         <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Right Overlays <small>Soon</small></a></li>
-        <li><a href="#" aria-disabled="true">Dropdown <small>Soon</small></a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
         <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Date Selector <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Popup <small>Soon</small></a></li>
@@ -95,24 +97,18 @@
 
   <!-- ============ Content ============ -->
   <div class="docs-body">
-      <div class="docs-top">
+      <div class="docs-split">
+    <main class="docs-main">
       <div class="docs-title">
         <p class="docs-title__crumb"><a href="#">Components</a></p>
         <div class="docs-title__head">
           <h1>Input</h1>
           <span class="docs-badge">Stable</span>
-          <span class="docs-meta">Last updated Sep 2026</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
         </div>
-        <p class="docs-title__desc">Every dimension, color token and prop, for the Input and its label
-          sub-component &mdash; the exact build. The <a href="docs-inputs.html">Guidelines tab</a> covers which
-          size and state to pick.</p>
-      </div>
-      <aside class="docs-res" aria-label="Resources">
-        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
-        <p class="docs-res__title">Cube Core</p>
-        <a href="https://storybook.gobblecube.ai/?path=/docs/elements-input-v1--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 1.5 12.6 1a.5.5 0 0 1 .53.5v13a.5.5 0 0 1-.53.5L3 14.5a.5.5 0 0 1-.5-.5V2a.5.5 0 0 1 .5-.5zm6.3 3.2c0-.2.2-.4.4-.4.3 0 .5.1.7.3l.3-.4c-.3-.3-.6-.4-1-.4-.6 0-1 .4-1 .9 0 1 1.5.8 1.5 1.2 0 .2-.2.3-.4.3-.4 0-.6-.2-.8-.4l-.4.4c.3.3.7.5 1.2.5.6 0 1-.4 1-.9 0-1-1.5-.8-1.5-1.2z"/></svg>Storybook</a>
-        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7126-54578" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5.5 1.5h2.5v4H5.5a2 2 0 0 1 0-4zM8 1.5h2.5a2 2 0 0 1 0 4H8zM5.5 5.5H8v4H5.5a2 2 0 0 1 0-4zM8 7.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM5.5 9.5H8v2a2 2 0 1 1-2.5-1.94z"/></svg>Figma</a>
-      </aside>
+        <p class="docs-title__desc">A single-line or multi-line text field, in three sizes and five states. Pick a
+          size and decide which optional parts &mdash; prefix, suffix, helper text &mdash; the field needs; the
+          <a href="docs-inputs-specifications.html">Specifications tab</a> lists every token.</p>
       </div>
       <div class="docs-tabs" role="tablist" aria-label="Page sections">
         <a href="docs-inputs.html" role="tab">Guidelines</a>
@@ -128,9 +124,7 @@
           <span class="sr-only">(coming soon)</span>
         </a>
       </div>
-      <div class="docs-split">
-    <main class="docs-main">
-      <article class="docs-content">
+      <article class="docs-content docs-content--inp docs-content--spec">
 
         <!-- ============ Dimensions ============ -->
         <section id="dimensions">
@@ -151,9 +145,9 @@
               <tr><td>Gap: label &rarr; input</td><td>4px</td><td>4px</td><td>2px</td></tr>
               <tr><td>Gap: input &rarr; helper</td><td>4px</td><td>4px</td><td>2px</td></tr>
               <tr><td>Helper strip height</td><td>12px</td><td>12px</td><td>12px</td></tr>
-              <tr><td>Label font / line-height</td><td>12 / 16 (<code>B3</code>)</td><td>12 / 16 (<code>B3</code>)</td><td>10 / 12 (<code>S1</code>)</td></tr>
-              <tr><td>Input text font / line-height</td><td>14 / 18 (<code>B2</code>)</td><td>12 / 16 (<code>B3</code>)</td><td>12 / 16 (<code>B3</code>)</td></tr>
-              <tr><td>Helper font / line-height</td><td>10 / 12 (<code>S1</code>)</td><td>10 / 12 (<code>S1</code>)</td><td>10 / 12 (<code>S1</code>)</td></tr>
+              <tr><td>Label font / line-height</td><td>12 / 16 (B3)</td><td>12 / 16 (B3)</td><td>10 / 12 (S1)</td></tr>
+              <tr><td>Input text font / line-height</td><td>14 / 18 (B2)</td><td>12 / 16 (B3)</td><td>12 / 16 (B3)</td></tr>
+              <tr><td>Helper font / line-height</td><td>10 / 12 (S1)</td><td>10 / 12 (S1)</td><td>10 / 12 (S1)</td></tr>
               <tr><td>Prefix / suffix icon size</td><td>16 &times; 16</td><td>14 &times; 14</td><td>12 &times; 12</td></tr>
             </tbody>
           </table>
@@ -182,7 +176,7 @@
         <!-- ============ Properties ============ -->
         <section id="properties">
           <h2>Properties</h2>
-          <p>The Figma component's own variant and instance-swap API.</p>
+          <p>The Figma component’s own variant and instance-swap API.</p>
           <table class="docs-table">
             <thead><tr><th>Property</th><th>Value(s)</th><th>Default</th><th>Notes</th></tr></thead>
             <tbody>
@@ -205,7 +199,7 @@
           <table class="docs-table">
             <thead><tr><th>Property</th><th>Value(s)</th><th>Default</th><th>Notes</th></tr></thead>
             <tbody>
-              <tr><td><code>label</code></td><td>string</td><td>"Field label"</td><td>The label string. Used by screen readers for the field's accessible name.</td></tr>
+              <tr><td><code>label</code></td><td>string</td><td>"Field label"</td><td>The label string. Used by screen readers for the field’s accessible name.</td></tr>
               <tr><td><code>required</code></td><td>true | false</td><td>false</td><td>Shows the asterisk. Sets <code>aria-required=true</code> on the bound input.</td></tr>
               <tr><td><code>showInfo</code></td><td>true | false</td><td>false</td><td>Shows the info-tooltip icon next to the label.</td></tr>
               <tr><td><code>showCount</code></td><td>true | false</td><td>false</td><td>Shows the trailing character count (e.g. "0/100"). Pair with a <code>maxLength</code> on the input.</td></tr>
@@ -289,7 +283,7 @@
             </tbody>
           </table>
           <p class="docs-demo__caption">Note its own <code>xs</code>/<code>sm</code>/<code>md</code>/<code>lg</code>
-            size scale doesn't map 1:1 onto InputV1's Small/Medium/Large — check against the
+            size scale doesn’t map 1:1 onto InputV1’s Small/Medium/Large — check against the
             <a href="https://storybook.gobblecube.ai/?path=/docs/controls-dateinput--docs" target="_blank" rel="noopener noreferrer">DateInput docs in Storybook</a>
             before assuming parity.</p>
         </section>
@@ -301,13 +295,19 @@
             <strong>Copy-of-GC-Design</strong> Figma file. The React props (<code>InputV1</code>/<code>TextAreaV1</code>)
             are mirrored in the
             <a href="https://storybook.gobblecube.ai/?path=/docs/elements-input-v1--docs" target="_blank" rel="noopener noreferrer">Input V1 docs in Storybook</a>,
-            built against <strong>GC_DesignSystem_2026</strong> &mdash; the canonical source for the component's
+            built against <strong>GC_DesignSystem_2026</strong> &mdash; the canonical source for the component’s
             behavior. Where the two disagree, Storybook wins.</p>
         </section>
 
       </article>
     </main>
-
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/elements-input-v1--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Storybook</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7126-54578" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
     <aside class="docs-toc" aria-label="On this page">
       <p class="docs-toc__title">On this page</p>
       <ul>
@@ -319,6 +319,7 @@
         <li><a href="#source">Source</a></li>
       </ul>
     </aside>
+    </div>
       </div>
   </div>
 

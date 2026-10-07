@@ -51,12 +51,14 @@
         <li><a href="docs.html" aria-current="page">Buttons</a></li>
         <li><a href="docs-tooltips.html">Tooltips</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
-        <li><a href="#" aria-disabled="true">Banner &amp; Toasts <small>Soon</small></a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
         <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Right Overlays <small>Soon</small></a></li>
-        <li><a href="#" aria-disabled="true">Dropdown <small>Soon</small></a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
         <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Date Selector <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Popup <small>Soon</small></a></li>
@@ -95,7 +97,8 @@
 
   <!-- ============ Content ============ -->
   <div class="docs-body">
-      <div class="docs-top">
+      <div class="docs-split">
+    <main class="docs-main">
       <div class="docs-title">
         <p class="docs-title__crumb"><a href="#">Components</a></p>
         <div class="docs-title__head">
@@ -103,14 +106,7 @@
           <span class="docs-badge">Stable</span>
           <span class="docs-meta">Last updated Sep 2026</span>
         </div>
-        <p class="docs-title__desc">The exact build: API, colour tokens per state, dimensions and ready-made configurations — plus an explorer that gives you the spec and the code for any button. The <a href="docs.html">Guidelines tab</a> covers which to pick.</p>
-      </div>
-      <aside class="docs-res" aria-label="Resources">
-        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
-        <p class="docs-res__title">Cube Core</p>
-        <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-button--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 1.5 12.6 1a.5.5 0 0 1 .53.5v13a.5.5 0 0 1-.53.5L3 14.5a.5.5 0 0 1-.5-.5V2a.5.5 0 0 1 .5-.5zm6.3 3.2c0-.2.2-.4.4-.4.3 0 .5.1.7.3l.3-.4c-.3-.3-.6-.4-1-.4-.6 0-1 .4-1 .9 0 1 1.5.8 1.5 1.2 0 .2-.2.3-.4.3-.4 0-.6-.2-.8-.4l-.4.4c.3.3.7.5 1.2.5.6 0 1-.4 1-.9 0-1-1.5-.8-1.5-1.2z"/></svg>Storybook</a>
-        <a href="#"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5.5 1.5h2.5v4H5.5a2 2 0 0 1 0-4zM8 1.5h2.5a2 2 0 0 1 0 4H8zM5.5 5.5H8v4H5.5a2 2 0 0 1 0-4zM8 7.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM5.5 9.5H8v2a2 2 0 1 1-2.5-1.94z"/></svg>Figma</a>
-      </aside>
+        <p class="docs-title__desc">A clickable control that triggers an action. Three families — Action, Neutral and Accent — share one anatomy: a container, optional prefix and suffix icons, and a text label, plus an icon-only mode.</p>
       </div>
       <div class="docs-tabs" role="tablist" aria-label="Page sections">
         <a href="docs.html" role="tab">Guidelines</a>
@@ -126,9 +122,7 @@
           <span class="sr-only">(coming soon)</span>
         </a>
       </div>
-      <div class="docs-split">
-    <main class="docs-main">
-      <article class="docs-content">
+      <article class="docs-content docs-content--inp docs-content--spec">
 
         <section id="explorer">
 
@@ -413,7 +407,13 @@
 
       </article>
     </main>
-
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/buttons-button--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 1.5 12.6 1a.5.5 0 0 1 .53.5v13a.5.5 0 0 1-.53.5L3 14.5a.5.5 0 0 1-.5-.5V2a.5.5 0 0 1 .5-.5zm6.3 3.2c0-.2.2-.4.4-.4.3 0 .5.1.7.3l.3-.4c-.3-.3-.6-.4-1-.4-.6 0-1 .4-1 .9 0 1 1.5.8 1.5 1.2 0 .2-.2.3-.4.3-.4 0-.6-.2-.8-.4l-.4.4c.3.3.7.5 1.2.5.6 0 1-.4 1-.9 0-1-1.5-.8-1.5-1.2z"/></svg>Storybook</a>
+        <a href="#"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5.5 1.5h2.5v4H5.5a2 2 0 0 1 0-4zM8 1.5h2.5a2 2 0 0 1 0 4H8zM5.5 5.5H8v4H5.5a2 2 0 0 1 0-4zM8 7.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM5.5 9.5H8v2a2 2 0 1 1-2.5-1.94z"/></svg>Figma</a>
+      </aside>
     <aside class="docs-toc" aria-label="On this page">
       <p class="docs-toc__title">On this page</p>
       <ul>
@@ -426,6 +426,7 @@
         <li><a href="#matrix">Full matrix</a></li>
       </ul>
     </aside>
+    </div>
       </div>
   </div>
 

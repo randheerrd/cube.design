@@ -1,0 +1,496 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-banners.html" aria-current="page">Banner &amp; Toasts</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Right Overlays <small>Soon</small></a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Date Selector <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Popup <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tab <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Side Nav <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Stepper <small>Soon</small></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Banner &amp; Toast</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">Two ways to tell people something happened: a full-width <strong>Banner</strong> for status that stays, and a dark <strong>Toast</strong> that confirms an action and disappears on its own. The <a href="docs-banners-specifications.html">Specifications tab</a> lists every token.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-banners.html" role="tab" aria-selected="true">Guidelines</a>
+        <a href="docs-banners-specifications.html" role="tab">Specifications</a>
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
+          Code
+          <span class="sr-only">(not in Storybook yet)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--bt">
+        <section id="at-a-glance">
+          <h2>At a glance</h2>
+          <p>Two ways to tell people something happened. A <strong>Banner</strong> is a full-width strip at the top of
+            the page for page- or account-level status that <strong>stays</strong>. A <strong>Toast</strong> is a small
+            dark pop-up that confirms an action the person just took and <strong>disappears on its own</strong>.</p>
+          <div class="docs-demo">
+            <div class="bt-stage"><div class="bt-frame bt-frame--toast"><div class="bnr bnr--brand" role="status"><img class="bnr__icon" src="assets/img/bt/banner-brand.svg" alt=""><p class="bnr__msg">New: Geo Intelligence is now available for all workspaces!</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div><div class="bt-frame__nav">Campaigns<i></i></div><div class="bt-frame__page"><span class="bt-frame__bar bt-frame__bar--s"></span><span class="bt-frame__bar bt-frame__bar--m"></span><span class="bt-frame__bar"></span><span class="bt-frame__bar bt-frame__bar--m"></span></div><div class="tst tst--success tst--live" role="status"><img class="tst__icon" src="assets/img/bt/toast-success.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Report exported</p><p class="tst__desc">Your report is ready in Downloads.</p></div><span class="tst__action">Open<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div></div>
+            <p class="docs-demo__caption">A Brand banner for status that stays, and a Success toast for the action just taken &mdash; they don’t compete.</p>
+          </div>
+          <div class="bx-quick">
+            <div><h3>Banner</h3><p>Page or account <strong>status that stays</strong> &mdash; an outage, an overdue payment, an announcement.</p></div>
+            <div><h3>Toast</h3><p>Quick <strong>feedback on an action</strong> the person just took &mdash; saved, exported, failed.</p></div>
+            <div><h3>Inline message</h3><p>Information about <strong>one section or field</strong>. Use Communication / Messaging instead.</p></div>
+          </div>
+        </section>
+
+        <section id="anatomy">
+          <h2>Anatomy</h2>
+          <h3>Banner</h3>
+          <p>Shown: Type = Error, the only type with actions. The bar is full page width; the message sits centred with its
+            icon and actions.</p>
+          <div class="bx-anatomy" data-bx-anatomy="bottom,top,bottom,top,bottom,top">
+            <div class="bx-anatomy__zoom" style="width:100%">
+              <div class="bnr bnr--error bnr--actions" role="alert" data-anatomy="1"><img class="bnr__icon" src="assets/img/bt/banner-error.svg" alt="" data-anatomy="2" data-stem="28"><p class="bnr__msg" data-anatomy="3" data-center data-stem="28">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><span class="bnr__btn" data-anatomy="4" data-center data-stem="28">Pay now</span><span class="bnr__link" data-anatomy="5" data-center data-stem="28">View invoice</span><img class="bnr__close" src="assets/img/bt/banner-close-2.svg" alt="Dismiss" data-anatomy="6" data-center data-stem="28"></div>
+            </div>
+          </div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Banner bar</td><td><code>Banner</code></td><td>Full page width (1440 in mocks), 32px tall (36 with actions), padding 8 / 12, 1px bottom border. Fill colour = Type.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Type icon</td><td><code>Type</code></td><td>16px icon in the Type colour (Error/600, Warning/600, Success/700…).</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Message</td><td>text override</td><td>12/16 Regular, Primary-text/950. Bold the key value (amount, date). One sentence.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Action button</td><td>layer</td><td>Optional &mdash; Neutral Outlined Small, dark fill (e.g. “Pay now”). Error and Warning banners only.</td></tr>
+              <tr><td><span class="bx-n">5</span></td><td>Link</td><td>layer</td><td>Optional &mdash; Naked button / link (“View invoice”).</td></tr>
+              <tr><td><span class="bx-n">6</span></td><td>Close</td><td><code>Show close</code></td><td>× dismisses the banner. Hide it when the issue must be fixed first (e.g. account suspended).</td></tr>
+            </tbody></table></div>
+
+          <h3>Toast</h3>
+          <p>Shown: Type = Toast-warning, at 1.5×. Every toast shares the same dark surface &mdash; only the icon and the
+            timer bar change with Type.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,top,top,right,bottom,right,bottom">
+            <div class="bx-anatomy__zoom">
+              <div class="tst tst--warning" role="status" data-anatomy="1" style="zoom:1.5"><img class="tst__icon" src="assets/img/bt/toast-warning.svg" alt="" data-anatomy="2" data-center data-stem="24"><div class="tst__body"><div class="tst__text"><p class="tst__title" data-anatomy="3" data-center data-stem="24">Main heading</p><p class="tst__desc" data-anatomy="4" data-stem="32">Please note the new attribute added will be shown under all the values.</p></div><span class="tst__action" data-anatomy="5" data-center data-stem="24">Button<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close" data-anatomy="6" data-center data-stem="24"><span class="tst__timer" data-anatomy="7" data-stem="24"></span></div>
+            </div>
+          </div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Toast container</td><td><code>Toast</code></td><td>317px wide, dark fill (#0F111B), radius 12, padding 10 / 12 / 14, shadow 0 4 12 at 12%.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Type icon</td><td><code>Type</code></td><td>16px &mdash; CheckCircle (success), Warning, Clock (progress), WarningCircle (error), in the Type colour.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Title</td><td>text override</td><td>SemiBold 14/18, White. What happened, in 2–5 words.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Description</td><td>text override</td><td>Regular 12/16, Secondary-text/300. Optional detail, max 2 lines.</td></tr>
+              <tr><td><span class="bx-n">5</span></td><td>Action</td><td>layer</td><td>Optional Naked button with arrow (“View changes →”). One action only.</td></tr>
+              <tr><td><span class="bx-n">6</span></td><td>Close</td><td>layer</td><td>Icon-only Naked button &mdash; closes immediately.</td></tr>
+              <tr><td><span class="bx-n">7</span></td><td>Timer bar</td><td>layer</td><td>4px bar along the bottom in the Type colour. Shrinks from full width to 0 as the toast auto-dismisses.</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="banner-type">
+          <h2>Banner type</h2>
+          <p>Type sets the sentiment: background, border and icon colour. Pick it from what the message means, not from
+            how loud you want it to be.</p>
+          <div class="bx-options bt-list"><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--error bnr--actions" role="alert"><img class="bnr__icon" src="assets/img/bt/banner-error.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><span class="bnr__btn">Pay now</span><span class="bnr__link">View invoice</span><img class="bnr__close" src="assets/img/bt/banner-close-2.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Error <small>Urgency</small></h3><p>Something is broken or blocked. The only type that can carry an action button and a link.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--warning" role="status"><img class="bnr__glow" src="assets/img/bt/banner-glow.svg" alt="" style="right:-190px;top:-220px"><img class="bnr__glow" src="assets/img/bt/banner-glow.svg" alt="" style="left:-110px;top:-340px"><img class="bnr__icon" src="assets/img/bt/banner-warning.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Warning <small>Important</small></h3><p>Needs attention soon &mdash; an expiring plan, delayed data.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--success" role="status"><img class="bnr__icon" src="assets/img/bt/banner-success.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Success</h3><p>A page-level change completed.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--brand" role="status"><img class="bnr__icon" src="assets/img/bt/banner-brand.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Brand <small>Announcement</small></h3><p>Product news and new features.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--neutral" role="status"><img class="bnr__icon" src="assets/img/bt/banner-neutral.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close-2.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Neutral <small>Information</small></h3><p>Information that needs no action.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--welcome" role="status"><img class="bnr__icon" src="assets/img/bt/banner-welcome.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Welcome <small>Greeting</small></h3><p>Onboarding and festive greetings, on a gradient.</p></div></div></div>
+        </section>
+
+        <section id="show-close">
+          <h2>Show close</h2>
+          <p>Whether people can dismiss the banner. On by default; turn it off only when the issue has to be fixed first.</p>
+          <div class="bx-options bt-list"><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--neutral" role="status"><img class="bnr__icon" src="assets/img/bt/banner-neutral.svg" alt=""><p class="bnr__msg">Your workspace data refreshes every day at 6:00 AM.</p><img class="bnr__close" src="assets/img/bt/banner-close-2.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Show close = true <small>Default</small></h3><p>People can dismiss it once they’ve read it. Remember the dismissal per person and per message.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--error bnr--noclose bnr--actions" role="alert"><img class="bnr__icon" src="assets/img/bt/banner-error.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><span class="bnr__btn">Pay now</span><span class="bnr__link">View invoice</span></div></div><div class="bx-opt__body"><h3>Show close = false</h3><p>Must-fix issues people can’t dismiss &mdash; account suspended, payment overdue.</p></div></div></div>
+        </section>
+
+        <section id="toast-type">
+          <h2>Toast type</h2>
+          <p>Type sets the icon and the timer-bar colour. The toast itself is always dark.</p>
+          <div class="bx-options bx-options--two"><div class="bx-opt"><div class="bx-opt__stage"><div class="tst tst--success" role="status"><img class="tst__icon" src="assets/img/bt/toast-success.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Main heading</p><p class="tst__desc">Please note the new attribute added will be shown under all the values.</p></div><span class="tst__action">Button<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div><div class="bx-opt__body"><h3>Success</h3><p>The action completed. Auto-dismisses after about 4s.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="tst tst--warning" role="status"><img class="tst__icon" src="assets/img/bt/toast-warning.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Main heading</p><p class="tst__desc">Please note the new attribute added will be shown under all the values.</p></div><span class="tst__action">Button<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div><div class="bx-opt__body"><h3>Warning</h3><p>It worked, with a caveat. Auto-dismisses after about 6s.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="tst tst--progress" role="status"><img class="tst__icon" src="assets/img/bt/toast-progress.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Main heading</p><p class="tst__desc">Please note the new attribute added will be shown under all the values.</p></div><span class="tst__action">Button<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div><div class="bx-opt__body"><h3>Progress</h3><p>A background task is running. Stays until the task ends, then swaps to Success or Error.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="tst tst--error" role="alert"><img class="tst__icon" src="assets/img/bt/toast-error.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Main heading</p><p class="tst__desc">Please note the new attribute added will be shown under all the values.</p></div><span class="tst__action">Button<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div><div class="bx-opt__body"><h3>Error</h3><p>The action failed. Stays 8s or more, or until closed.</p></div></div></div>
+        </section>
+
+        <section id="behavior">
+          <h2>Behavior</h2>
+          <h3>Banner</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Rule</th><th>What to do</th></tr></thead><tbody>
+              <tr><td>Placement</td><td>Top of the viewport, full width, above the navbar. It pushes the layout down &mdash; never overlaps it.</td></tr>
+              <tr><td>Count</td><td>One at a time. Show the most severe and queue the rest.</td></tr>
+              <tr><td>Dismiss</td><td>× when Show close is on. Remember the dismissal per person and per message.</td></tr>
+              <tr><td>Persistence</td><td>Stays until resolved or dismissed. Show it again if the condition comes back.</td></tr>
+            </tbody></table></div>
+          <h3>Toast</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Rule</th><th>What to do</th></tr></thead><tbody>
+              <tr><td>Placement</td><td>Top-right, just below the page header, 24px from the right edge. Stack downward 8px apart, max 3; the oldest drops off.</td></tr>
+              <tr><td>Auto-dismiss</td><td>Success ~4s · Warning ~6s · Error 8s+ or until closed. Progress stays until the task ends.</td></tr>
+              <tr><td>Timer bar</td><td>Animates from 100% to 0. Pause on hover and on focus.</td></tr>
+              <tr><td>Action</td><td>One, optional &mdash; “View”, “Undo”, “Retry”.</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="usage">
+          <h2>Common layouts</h2>
+          <p>A banner reports status that stays; a toast confirms an action. They can appear together without competing.</p>
+          <div class="bx-usage">
+            <figure>
+              <div class="bt-frame"><div class="bnr bnr--error bnr--noclose bnr--actions" role="alert"><img class="bnr__icon" src="assets/img/bt/banner-error.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><span class="bnr__btn">Pay now</span><span class="bnr__link">View invoice</span></div><div class="bt-frame__nav">Campaigns<i></i></div><div class="bt-frame__page"><span class="bt-frame__bar bt-frame__bar--s"></span><span class="bt-frame__bar bt-frame__bar--m"></span><span class="bt-frame__bar"></span><span class="bt-frame__bar bt-frame__bar--m"></span></div></div>
+              <figcaption><b>Banner &mdash; account issue</b>Error banner across the very top. The navbar and page move down by its height.</figcaption>
+            </figure>
+            <figure>
+              <div class="bt-frame bt-frame--toast"><div class="bt-frame__nav">Campaigns<i></i></div><div class="bt-frame__page"><span class="bt-frame__bar bt-frame__bar--s"></span><span class="bt-frame__bar bt-frame__bar--m"></span><span class="bt-frame__bar"></span><span class="bt-frame__bar bt-frame__bar--m"></span></div><div class="tst tst--success" role="status"><img class="tst__icon" src="assets/img/bt/toast-success.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Report exported</p><p class="tst__desc">Your report is ready in Downloads.</p></div><span class="tst__action">Open<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div>
+              <figcaption><b>Toast &mdash; action feedback</b>A Success toast at the top-right, just below the header, after exporting.</figcaption>
+            </figure>
+            <figure>
+              <div class="bt-frame bt-frame--toast"><div class="bnr bnr--brand" role="status"><img class="bnr__icon" src="assets/img/bt/banner-brand.svg" alt=""><p class="bnr__msg">New: Geo Intelligence is now available for all workspaces!</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div><div class="bt-frame__nav">Campaigns<i></i></div><div class="bt-frame__page"><span class="bt-frame__bar bt-frame__bar--s"></span><span class="bt-frame__bar bt-frame__bar--m"></span><span class="bt-frame__bar"></span><span class="bt-frame__bar bt-frame__bar--m"></span></div><div class="tst tst--progress" role="status"><img class="tst__icon" src="assets/img/bt/toast-progress.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Export in progress…</p><p class="tst__desc">We’ll notify you when it’s ready.</p></div></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div>
+              <figcaption><b>Both together</b>A banner for status plus a toast for an action &mdash; they don’t compete.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="dos-donts">
+          <h2>Do’s and don’ts</h2>
+          <h3>Choosing the right component</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="bnr bnr--error bnr--noclose bnr--actions" role="alert"><img class="bnr__icon" src="assets/img/bt/banner-error.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><span class="bnr__btn">Pay now</span><span class="bnr__link">View invoice</span></div></div>
+              <p class="docs-dodont__cap">Use a Banner for page / account status that stays &mdash; an overdue payment must stay visible until it’s fixed.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="tst tst--error" role="alert"><img class="tst__icon" src="assets/img/bt/toast-error.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Payment overdue</p><p class="tst__desc">Clear Rs. 11,038.90 to avoid suspension.</p></div><span class="tst__action">Pay now<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div>
+              <p class="docs-dodont__cap">Don’t use a Toast for something people must act on. Toasts vanish after a few seconds &mdash; they may never see it.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="tst tst--success" role="status"><img class="tst__icon" src="assets/img/bt/toast-success.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Changes saved</p></div><span class="tst__action">Undo<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div>
+              <p class="docs-dodont__cap">Use a Toast for quick feedback on an action. It confirms without interrupting the flow.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="bnr bnr--success" role="status"><img class="bnr__icon" src="assets/img/bt/banner-success.svg" alt=""><p class="bnr__msg">Changes saved.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div>
+              <p class="docs-dodont__cap">Don’t use a Banner to say “Saved”. A page-wide strip for a small confirmation is too loud and stays too long.</p>
+            </div>
+          </div>
+          <h3>Sentiment &amp; colour</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="bnr bnr--warning" role="status"><img class="bnr__glow" src="assets/img/bt/banner-glow.svg" alt="" style="right:-190px;top:-220px"><img class="bnr__glow" src="assets/img/bt/banner-glow.svg" alt="" style="left:-110px;top:-340px"><img class="bnr__icon" src="assets/img/bt/banner-warning.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div>
+              <p class="docs-dodont__cap">Match the Type to the message: Error for problems, Success for completed, Brand for news. Colour says how serious it is before anyone reads.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="bnr bnr--error bnr--actions" role="alert"><img class="bnr__icon" src="assets/img/bt/banner-error.svg" alt=""><p class="bnr__msg">New: Geo Intelligence is now available for all workspaces!</p><span class="bnr__btn">Pay now</span><span class="bnr__link">View invoice</span><img class="bnr__close" src="assets/img/bt/banner-close-2.svg" alt="Dismiss"></div></div>
+              <p class="docs-dodont__cap">Don’t use a red Error banner for a product announcement. People learn to panic at red &mdash; or to ignore it.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="bnr bnr--welcome" role="status"><img class="bnr__icon" src="assets/img/bt/banner-welcome.svg" alt=""><p class="bnr__msg">Welcome to GobbleCube, Riya! Here’s a quick tour.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div>
+              <p class="docs-dodont__cap">Use the Welcome gradient only for greetings and onboarding. It keeps it special and friendly.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="bnr bnr--welcome" role="status"><img class="bnr__icon" src="assets/img/bt/banner-welcome.svg" alt=""><p class="bnr__msg">Your data sync failed. Please reconnect Blinkit.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div>
+              <p class="docs-dodont__cap">Don’t use Welcome for warnings or errors. The cheerful style hides the seriousness.</p>
+            </div>
+          </div>
+          <h3>Writing</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="bnr bnr--warning" role="status"><img class="bnr__glow" src="assets/img/bt/banner-glow.svg" alt="" style="right:-190px;top:-220px"><img class="bnr__glow" src="assets/img/bt/banner-glow.svg" alt="" style="left:-110px;top:-340px"><img class="bnr__icon" src="assets/img/bt/banner-warning.svg" alt=""><p class="bnr__msg">Your plan expires on <b>31 May</b>. Renew to keep your dashboards.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div>
+              <p class="docs-dodont__cap">Keep banners to one sentence and bold the key value. One line fits the 32px bar and is scannable.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="bnr bnr--warning" role="status"><img class="bnr__glow" src="assets/img/bt/banner-glow.svg" alt="" style="right:-190px;top:-220px"><img class="bnr__glow" src="assets/img/bt/banner-glow.svg" alt="" style="left:-110px;top:-340px"><img class="bnr__icon" src="assets/img/bt/banner-warning.svg" alt=""><p class="bnr__msg">Your plan expires on 31 May. Also, data for Zepto is delayed by 2 hours. Also, a new report template is available. Also, please verify your email address before next week.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div>
+              <p class="docs-dodont__cap">Don’t write paragraphs or several messages in one banner. It truncates and nobody reads it.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="tst tst--success" role="status"><img class="tst__icon" src="assets/img/bt/toast-success.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Report exported</p><p class="tst__desc">Find it in Downloads.</p></div><span class="tst__action">Open<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div>
+              <p class="docs-dodont__cap">Say what happened in the title, in 2–5 words. People glance at toasts &mdash; the title carries the meaning.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="tst tst--error" role="alert"><img class="tst__icon" src="assets/img/bt/toast-error.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Error</p><p class="tst__desc">Something went wrong.</p></div><span class="tst__action">Retry<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div>
+              <p class="docs-dodont__cap">Don’t write vague titles like “Success” or “Error”. Nobody can tell which action it refers to.</p>
+            </div>
+          </div>
+          <h3>Quantity &amp; placement</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="bt-stage"><div class="bnr bnr--error bnr--actions" role="alert"><img class="bnr__icon" src="assets/img/bt/banner-error.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><span class="bnr__btn">Pay now</span><span class="bnr__link">View invoice</span><img class="bnr__close" src="assets/img/bt/banner-close-2.svg" alt="Dismiss"></div></div></div>
+              <p class="docs-dodont__cap">Show one banner at a time &mdash; the most severe. Stacked banners push content down and dilute urgency.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="bt-stage" style="gap:0"><div class="bnr bnr--error bnr--actions" role="alert"><img class="bnr__icon" src="assets/img/bt/banner-error.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><span class="bnr__btn">Pay now</span><span class="bnr__link">View invoice</span><img class="bnr__close" src="assets/img/bt/banner-close-2.svg" alt="Dismiss"></div><div class="bnr bnr--warning" role="status"><img class="bnr__glow" src="assets/img/bt/banner-glow.svg" alt="" style="right:-190px;top:-220px"><img class="bnr__glow" src="assets/img/bt/banner-glow.svg" alt="" style="left:-110px;top:-340px"><img class="bnr__icon" src="assets/img/bt/banner-warning.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div><div class="bnr bnr--brand" role="status"><img class="bnr__icon" src="assets/img/bt/banner-brand.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div></div>
+              <p class="docs-dodont__cap">Don’t stack several banners. The page loses 100+ px and people ignore all of them.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="bt-stage"><div class="bt-frame bt-frame--toast"><div class="bt-frame__nav">Campaigns<i></i></div><div class="bt-frame__page"><span class="bt-frame__bar bt-frame__bar--s"></span><span class="bt-frame__bar bt-frame__bar--m"></span><span class="bt-frame__bar"></span><span class="bt-frame__bar bt-frame__bar--m"></span></div><div class="tst tst--success" role="status"><img class="tst__icon" src="assets/img/bt/toast-success.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Changes saved</p></div><span class="tst__action">Undo<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div></div></div>
+              <p class="docs-dodont__cap">Keep toasts in the top-right corner, max 3 stacked. A consistent spot means people know where to look.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="bt-stage"><div class="bt-frame bt-frame--toast bt-frame--mid"><div class="bt-frame__nav">Campaigns<i></i></div><div class="bt-frame__page"><span class="bt-frame__bar bt-frame__bar--s"></span><span class="bt-frame__bar bt-frame__bar--m"></span><span class="bt-frame__bar"></span><span class="bt-frame__bar bt-frame__bar--m"></span></div><div class="tst tst--success" role="status"><img class="tst__icon" src="assets/img/bt/toast-success.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Changes saved</p></div><span class="tst__action">Undo<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div></div></div>
+              <p class="docs-dodont__cap">Don’t place toasts in the middle of the page. They cover what the person is working on.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="content">
+          <h2>Writing content</h2>
+          <ul>
+            <li><strong>Banner message</strong> &mdash; one sentence. Bold the key value: an amount, a date, a name.</li>
+            <li><strong>Banner actions</strong> &mdash; Error and Warning only, and only when the person can fix it right away: “Pay now”, “View invoice”.</li>
+            <li><strong>Toast title</strong> &mdash; what happened, in 2–5 words: “Report exported”, not “Success”.</li>
+            <li><strong>Toast description</strong> &mdash; optional, max 2 lines. Delete the layer when the title says it all.</li>
+            <li><strong>Toast action</strong> &mdash; optional, one verb: “View”, “Undo”, “Retry”.</li>
+            <li><strong>No placeholders</strong> &mdash; never hand off “Main heading” or “Button”.</li>
+          </ul>
+        </section>
+
+        <section id="accessibility">
+          <h2>Accessibility</h2>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>What to do</th></tr></thead><tbody>
+              <tr><td>Banner semantics</td><td><code>role="status"</code> for information; <code>role="alert"</code> for errors.</td></tr>
+              <tr><td>Toast semantics</td><td><code>role="status"</code> with <code>aria-live="polite"</code>; errors use <code>"assertive"</code>.</td></tr>
+              <tr><td>Focus</td><td>Never move focus to a toast. Its action and close button are reachable by <kbd>Tab</kbd> while it’s on screen.</td></tr>
+              <tr><td>Timing</td><td>Pause the timer on hover and on focus, so people who need longer can read it.</td></tr>
+              <tr><td>Colour</td><td>Type colour is never the only signal &mdash; the icon and the words carry the meaning too.</td></tr>
+              <tr><td>Close</td><td>Icon-only close buttons need an accessible name: “Dismiss” / “Close notification”.</td></tr>
+            </tbody></table></div>
+          <p>Every exact value &mdash; dimensions, colour tokens per type and the full property list &mdash; is on the
+            <a href="docs-banners-specifications.html">Specifications tab</a>.</p>
+        </section>
+
+        <section id="how-to-use">
+          <h2>Adding one to a screen</h2>
+          <h3>Banner</h3>
+          <ol class="bt-steps">
+            <li><strong>Place it at the very top.</strong> Search Assets for “Banner”. Put it at X 0, Y 0 of the screen frame, full width (1440). Move the navbar and page down by the banner height (32 / 36) &mdash; don’t overlap.</li>
+            <li><strong>Pick the Type.</strong> Error, Warning, Success, Brand, Neutral or Welcome. Swap the icon only if a suggested icon fits better.</li>
+            <li><strong>Write the message.</strong> One sentence; bold the key value. Error / Warning: add the action button + link if the person can fix it right away.</li>
+            <li><strong>Decide if it can be closed.</strong> Show close = false for issues that must be fixed (overdue payment, suspension). Otherwise keep the ×.</li>
+          </ol>
+          <h3>Toast</h3>
+          <ol class="bt-steps">
+            <li><strong>Place it top-right.</strong> Search Assets for “Toast”. Place it just below the page header, 24px from the right edge. Several toasts stack downward 8px apart, max 3.</li>
+            <li><strong>Pick the Type.</strong> Success, Warning, Progress or Error &mdash; matching the result. Progress is for background tasks; swap it to Success / Error in the next frame of the flow.</li>
+            <li><strong>Write title, description and action.</strong> Title: what happened. Description: optional, max 2 lines. Action: optional, one verb. Delete the layers you don’t need.</li>
+            <li><strong>Annotate timing.</strong> Note for developers: auto-dismiss (success ~4s, warning ~6s, error 8s+ or until closed), pause on hover.</li>
+          </ol>
+          <h3>Before you hand off</h3>
+          <ul class="bt-check">
+            <li>Banner or Toast chosen correctly &mdash; status that stays vs. feedback on an action.</li>
+            <li>Type matches the sentiment.</li>
+            <li>Banner: full width at the top, layout pushed down, one at a time.</li>
+            <li>Banner: Show close decided.</li>
+            <li>Toast: top-right, max 3, title says what happened.</li>
+            <li>Toast: timing and actions annotated for developers.</li>
+            <li>No placeholder text left (“Main heading”, “Button”).</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7304-165115" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#at-a-glance" aria-current="true">At a glance</a></li>
+        <li><a href="#anatomy">Anatomy</a></li>
+        <li><a href="#banner-type">Banner type</a></li>
+        <li><a href="#show-close">Show close</a></li>
+        <li><a href="#toast-type">Toast type</a></li>
+        <li><a href="#behavior">Behavior</a></li>
+        <li><a href="#usage">Common layouts</a></li>
+        <li><a href="#dos-donts">Do’s and don’ts</a></li>
+        <li><a href="#content">Writing content</a></li>
+        <li><a href="#accessibility">Accessibility</a></li>
+        <li><a href="#how-to-use">Adding one to a screen</a></li>
+      </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
+})();
+</script>

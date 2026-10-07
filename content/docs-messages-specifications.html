@@ -1,0 +1,246 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a aria-current="true" href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="docs-messages.html" aria-current="page">Message</a></li>
+        <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Right Overlays <small>Soon</small></a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Date Selector <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Popup <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tab <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Side Nav <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Stepper <small>Soon</small></a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Message</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">A small inline strip that sits next to the content it is about &mdash; to inform, warn, confirm success or flag an error for one specific area. Choose the colour by meaning, then Type, Size and Width; the <a href="docs-messages-specifications.html">Specifications tab</a> lists every value.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-messages.html" role="tab">Guidelines</a>
+        <a href="docs-messages-specifications.html" role="tab" aria-selected="true">Specifications</a>
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
+          Code
+          <span class="sr-only">(not in Storybook yet)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec">
+
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>All values in px.</p>
+          <h3>Single statement</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Size</th><th>Height</th><th>Padding (V / H)</th><th>Text</th></tr></thead><tbody><tr><td>Large</td><td>32</td><td>8 / 8</td><td>12 / 16 Medium</td></tr><tr><td>Medium</td><td>28</td><td>6 / 8</td><td>12 / 16 Medium</td></tr><tr><td>Small</td><td>24</td><td>4 / 6</td><td>12 / 16 Medium</td></tr><tr><td>Tiny</td><td>20</td><td>4 / 6</td><td>10 / 12 Medium</td></tr></tbody></table></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th></tr></thead><tbody><tr><td>Radius · border</td><td>6 · 1</td></tr><tr><td>Icon · gap</td><td>14 (12 at Tiny) · 4 between icon and text · 8 between content and actions</td></tr></tbody></table></div>
+          <h3>With header and width</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>With Header height</td><td>50 (34 Naked)</td><td>Medium only</td></tr><tr><td>Padding · gap</td><td>8 · 8 between rows · 2 between header and message</td><td></td></tr><tr><td>Bottom actions indent</td><td>20</td><td>Aligns under the text</td></tr><tr><td>Width = Fit Content</td><td>Hugs the text</td><td></td></tr><tr><td>Width = Fixed or fill</td><td>300 default, stretches to the container</td><td>Truncates after 2 lines (1 to 4 depending on the use case)</td></tr></tbody></table></div>
+          <h3>Visual reference</h3>
+          <p>Sizes at real size (Neutral).</p>
+          <div class="msg-stage msg-stage--col"><div class="msg msg--neutral msg--lg" role="status"><svg class="msg__ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M8 7.2v3.6M8 5.2v.01"/></svg><div class="msg__txt"><span>Large · 32</span></div></div><div class="msg msg--neutral msg--md" role="status"><svg class="msg__ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M8 7.2v3.6M8 5.2v.01"/></svg><div class="msg__txt"><span>Medium · 28</span></div></div><div class="msg msg--neutral msg--sm" role="status"><svg class="msg__ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M8 7.2v3.6M8 5.2v.01"/></svg><div class="msg__txt"><span>Small · 24</span></div></div><div class="msg msg--neutral msg--tiny" role="status"><svg class="msg__ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M8 7.2v3.6M8 5.2v.01"/></svg><div class="msg__txt"><span>Tiny · 20</span></div></div><div class="msg msg--neutral msg--md msg--hdr" role="status"><svg class="msg__ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M8 7.2v3.6M8 5.2v.01"/></svg><div class="msg__txt"><b class="msg__h">Data delayed</b><span>Zepto data is 2 hours behind. · 50</span></div></div></div>
+        </section>
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <p>Pattern: fill is the colour’s 100 step (Warning uses 50), border is its 200 step, and text is Primary-text/950 &mdash; or 800 for White, Neutral and Naked.</p>
+          <h3>Per sentiment</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Color x Sentiment</th><th>Fill</th><th>Border</th><th>Text</th><th>Icon</th></tr></thead><tbody><tr><td>Red | Error Urgency</td><td>Error/100 <span class="msg-sw" style="background:#ffecec"></span>#ffecec</td><td>Error/200 <span class="msg-sw" style="background:#ffdada"></span>#ffdada</td><td>Primary-text/950</td><td>Error-icon / Error</td></tr><tr><td>White | Information</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee</td><td>Primary-text/800</td><td>Info / Regular</td></tr><tr><td>Neutral | Information</td><td>Accent/Steel Blue/100 <span class="msg-sw" style="background:#f1f6fd"></span>#f1f6fd</td><td>Accent/Steel Blue/200 <span class="msg-sw" style="background:#e7eef9"></span>#e7eef9</td><td>Primary-text/800</td><td>Info / Regular</td></tr><tr><td>Green | Success</td><td>Success/100 <span class="msg-sw" style="background:#e9f7ed"></span>#e9f7ed</td><td>Success/200 <span class="msg-sw" style="background:#d3efdb"></span>#d3efdb</td><td>Primary-text/950</td><td>Success-icon / CheckCircle</td></tr><tr><td>Yellow | Warning Important</td><td>Warning/50 <span class="msg-sw" style="background:#fff9e7"></span>#fff9e7</td><td>Warning/200 <span class="msg-sw" style="background:#ffefb6"></span>#ffefb6</td><td>Primary-text/950</td><td>Warning-icon / Warning</td></tr><tr><td>Naked | Information</td><td>None</td><td>None</td><td>Primary-text/800</td><td>Info / Regular</td></tr></tbody></table></div>
+          <h3>Text styles</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Token</th><th>Style</th></tr></thead><tbody><tr><td>Header (With Header)</td><td>Primary-text/950</td><td>SemiBold 12/16</td></tr><tr><td>Message</td><td>Primary-text/950 (800 for White, Neutral, Naked)</td><td>Medium 12/16 (Tiny 10/12)</td></tr><tr><td>Buttons</td><td>Neutral Naked button, Primary-text/900 <span class="msg-sw" style="background:#373d42"></span>#373d42</td><td>SemiBold 12/16 (Tiny 10/12)</td></tr></tbody></table></div>
+          <h3>Visual reference</h3>
+          <div class="msg-stage msg-stage--col"><div class="msg msg--red msg--md msg--fill" role="alert"><svg class="msg__ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M8 4.8v3.6M8 10.9v.01"/></svg><div class="msg__txt"><span>Red · Error Urgency</span></div></div><div class="msg msg--white msg--md msg--fill" role="status"><svg class="msg__ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M8 7.2v3.6M8 5.2v.01"/></svg><div class="msg__txt"><span>White · Information</span></div></div><div class="msg msg--neutral msg--md msg--fill" role="status"><svg class="msg__ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M8 7.2v3.6M8 5.2v.01"/></svg><div class="msg__txt"><span>Neutral · Information</span></div></div><div class="msg msg--green msg--md msg--fill" role="status"><svg class="msg__ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="m5.3 8.2 1.9 1.9 3.5-3.9"/></svg><div class="msg__txt"><span>Green · Success</span></div></div><div class="msg msg--yellow msg--md msg--fill" role="status"><svg class="msg__ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2 14.3 13H1.7z"/><path d="M8 6.6v3M8 11.3v.01"/></svg><div class="msg__txt"><span>Yellow · Warning Important</span></div></div><div class="msg msg--naked msg--md msg--fill" role="status"><svg class="msg__ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M8 7.2v3.6M8 5.2v.01"/></svg><div class="msg__txt"><span>Naked · Information</span></div></div></div>
+        </section>
+        <section id="properties">
+          <h2>Properties</h2>
+          <p>Every property of <code>Communication/Message</code>.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Notes</th></tr></thead><tbody><tr><td>Color x Sentiment</td><td>White, Neutral, Red, Green, Yellow, Naked</td><td>Meaning first.</td></tr><tr><td>Type</td><td>Single Statement, With Header</td><td>With Header is Medium only.</td></tr><tr><td>Size</td><td>Large, Medium, Small, Tiny</td><td>Single Statement heights 32, 28, 24, 20.</td></tr><tr><td>Width</td><td>Fit Content, Fixed or fill</td><td>Fill truncates after two lines.</td></tr><tr><td>Show Prefix Icon</td><td>On (default), Off</td><td>Swap the icon through the nested icon set.</td></tr><tr><td>Actions · Actions-bottom</td><td>On, Off (default)</td><td>Buttons inline, or on their own row.</td></tr><tr><td>Show Button 1 · Show Button 2</td><td>On (default), Off</td><td>Only visible when Actions or Actions-bottom is on.</td></tr><tr><td>Removable</td><td>On, Off (default)</td><td>Adds the close ×.</td></tr></tbody></table></div>
+          <h3>Sentiment icon sets</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Error-icon · Icon</td><td>Remove, Stop, Delete, Error, Cancel, Info, Countdown</td><td>Error</td><td></td></tr><tr><td>Suggestion-icon · Icon</td><td>LightbulbFilament, Lightning</td><td>—</td><td></td></tr><tr><td>Warning-icon · Icon</td><td>Info, Warning</td><td>Warning</td><td></td></tr><tr><td>Success-icon · Property 1</td><td>Check, CheckCircle, SealCheck</td><td>CheckCircle</td><td>The property is named “Property 1”; the others use “Icon”.</td></tr></tbody></table></div>
+        </section>
+        <section id="api">
+          <h2>API</h2>
+          <p><strong>Designers:</strong> pick Color x Sentiment by meaning, then Type, Size and Width; edit the text; turn on icon, buttons and close as needed.
+            <strong>Developers:</strong> one inline-message component taking
+            <code>sentiment</code>, <code>type</code>, <code>size</code>, <code>width</code>, <code>icon</code>, <code>title?</code>, <code>message</code>, <code>actions[]</code> and <code>dismissible</code>.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Color x Sentiment</td><td>White | Neutral | Red | Green | Yellow | Naked</td><td>required</td><td>White</td><td>Meaning first.</td></tr><tr><td>Type</td><td>Single Statement | With Header</td><td>required</td><td>Single Statement</td><td>With Header = Medium only.</td></tr><tr><td>Size</td><td>Large | Medium | Small | Tiny</td><td>required</td><td>Medium</td><td></td></tr><tr><td>Width</td><td>Fit Content | Fixed or fill</td><td>required</td><td>Fit Content</td><td>Fill truncates after 2 lines.</td></tr><tr><td>Show Prefix Icon</td><td>true | false</td><td>optional</td><td>true</td><td>Swap via the nested icon set.</td></tr><tr><td>Actions · Actions-bottom</td><td>true | false</td><td>optional</td><td>false</td><td>Inline vs own row.</td></tr><tr><td>Show Button 1 · Show Button 2</td><td>true | false</td><td>optional</td><td>true</td><td>Only visible when Actions or Actions-bottom is on.</td></tr><tr><td>Removable</td><td>true | false</td><td>optional</td><td>false</td><td>Close ×.</td></tr></tbody></table></div>
+          <h3>Behavior rules for developers</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Rule</th><th>Notes</th></tr></thead><tbody><tr><td>Placement</td><td>Next to the content it describes</td><td>Above a table, inside a card, under a field.</td></tr><tr><td>Truncation</td><td>Two lines when the width is fixed</td><td>Tooltip or “Read more” for the rest.</td></tr><tr><td>Dismiss</td><td>Removable hides the message</td><td>Remember the dismissal if it would reappear.</td></tr><tr><td>Actions</td><td>Maximum two, Naked buttons</td><td>The main action is Button 1.</td></tr><tr><td>Semantics</td><td><code>role="status"</code> (info, success) · <code>role="alert"</code> (error)</td><td>Don’t rely on colour — keep the icon and the text.</td></tr></tbody></table></div>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+          <h3>Sync error with retry</h3>
+          <div class="msg-stage"><div class="msg msg--red msg--md" role="alert"><svg class="msg__ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M8 4.8v3.6M8 10.9v.01"/></svg><div class="msg__txt"><span>Sync failed for Blinkit</span></div><span class="msg__acts"><span class="msg__btn">Retry</span></span></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Color x Sentiment</td><td>Red | Error Urgency</td><td></td></tr><tr><td>Actions</td><td>true</td><td>Button 1 = “Retry”</td></tr></tbody></table></div>
+          <h3>Data delay notice</h3>
+          <div class="msg-stage"><div class="msg msg--yellow msg--md msg--hdr" role="status"><svg class="msg__ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2 14.3 13H1.7z"/><path d="M8 6.6v3M8 11.3v.01"/></svg><div class="msg__txt"><b class="msg__h">Data delayed</b><span>Zepto data is 2 hours behind.</span></div><span class="msg__x" aria-hidden="true"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M2 2l6 6M8 2 2 8"/></svg></span></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Color x Sentiment</td><td>Yellow | Warning Important</td><td></td></tr><tr><td>Type</td><td>With Header</td><td></td></tr><tr><td>Removable</td><td>true</td><td></td></tr></tbody></table></div>
+          <h3>Data freshness</h3>
+          <div class="msg-stage"><div class="msg msg--white msg--md" role="status"><svg class="msg__ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M8 7.2v3.6M8 5.2v.01"/></svg><div class="msg__txt"><span>Data till 12 May’24</span></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Color x Sentiment</td><td>White | Information</td><td>For example “Data till 12 May’24”.</td></tr><tr><td>Size</td><td>Medium</td><td></td></tr></tbody></table></div>
+        </section>
+        <section id="source">
+          <h2>Source</h2>
+          <p>Spec values come from the <strong>Communication / Message</strong> frames in the Cube Core Figma file (Anatomy, Property, Color Annotation, Dimensions, API, Usage Guidelines, How to use).</p>
+        </section>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=876-11865" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#api">API</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#source">Source</a></li>
+        </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+})();
+</script>

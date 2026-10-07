@@ -51,12 +51,14 @@
         <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-tooltips.html">Tooltips</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
-        <li><a href="#" aria-disabled="true">Banner &amp; Toasts <small>Soon</small></a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
         <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Right Overlays <small>Soon</small></a></li>
-        <li><a href="#" aria-disabled="true">Dropdown <small>Soon</small></a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
         <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Date Selector <small>Soon</small></a></li>
         <li><a href="#" aria-disabled="true">Popup <small>Soon</small></a></li>
@@ -95,261 +97,438 @@
 
   <!-- ============ Content ============ -->
   <div class="docs-body">
-      <div class="docs-top">
+      <div class="docs-split">
+    <main class="docs-main">
       <div class="docs-title">
         <p class="docs-title__crumb"><a href="#">Foundations</a></p>
         <div class="docs-title__head">
           <h1>Typography</h1>
           <span class="docs-badge">Stable</span>
-          <span class="docs-meta">Last updated Sep 2026</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
         </div>
-        <p class="docs-title__desc">Three groups — <strong>Heading</strong>, <strong>Body</strong> and <strong>Small</strong> — cover every piece of text in the
+        <p class="docs-title__desc">One typeface, DM Sans, set through three groups — <strong>Heading</strong>, <strong>Body</strong> and <strong>Small</strong> — that cover every piece of text in the
           product. Each size carries one recommended line-height, so choosing a style is a single decision, not three. The
           <a href="docs-typography-specifications.html">Specifications tab</a> lists every value.</p>
-      </div>
-      <aside class="docs-res" aria-label="Resources">
-        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
-        <p class="docs-res__title">Cube Core</p>
-        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=179-6115" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5.5 1.5h2.5v4H5.5a2 2 0 0 1 0-4zM8 1.5h2.5a2 2 0 0 1 0 4H8zM5.5 5.5H8v4H5.5a2 2 0 0 1 0-4zM8 7.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM5.5 9.5H8v2a2 2 0 1 1-2.5-1.94z"/></svg>Figma</a>
-      </aside>
       </div>
       <div class="docs-tabs" role="tablist" aria-label="Page sections">
         <a href="docs-typography.html" role="tab" aria-selected="true">Guidelines</a>
         <a href="docs-typography-specifications.html" role="tab">Specifications</a>
       </div>
-      <div class="docs-split">
-    <main class="docs-main">
-      <article class="docs-content">
+      <article class="docs-content docs-content--inp">
 
         <!-- ============ Live demo ============ -->
         <section id="live-demo">
           <h2>Live demo</h2>
           <div class="docs-demo" style="flex-direction:column; align-items:stretch; gap:4px">
-            <p style="margin:0; font-family:'DM Sans',sans-serif; font-weight:700; font-size:28px; line-height:36px; letter-spacing:-0.1px; color:var(--ink)">Wt. Discount % is trending down</p>
-            <p style="margin:0; font-family:'DM Sans',sans-serif; font-weight:400; font-size:14px; line-height:18px; color:var(--ink-2)">B2 Regular — the workhorse size for everything a person reads in the product: table cells, form fields, card copy.</p>
+            <p style="margin:0; font-family:'Cube Rupee','DM Sans',sans-serif; font-weight:600; font-size:28px; line-height:36px; letter-spacing:-0.1px; color:var(--ink)">Wt. Discount % is trending down</p>
+            <p style="margin:0; font-family:'Cube Rupee','DM Sans',sans-serif; font-weight:500; font-size:14px; line-height:18px; color:var(--ink-2)">B2 / Medium &mdash; the size for large controls: a Large button, tab or input.</p>
           </div>
-          <p class="docs-demo__caption">H3 (28/36, Bold) paired with B2 (14/18, Regular) — the most common heading + body pairing in the product, e.g. a card title over its supporting line.</p>
+          <p class="docs-demo__caption">H3 (28/36, Semibold) over B2 / Medium (14/18) &mdash; a metric headline over its supporting line. Every sample on this page uses the real text styles.</p>
         </section>
 
         <!-- ============ Overview ============ -->
         <section id="overview">
           <h2>Overview</h2>
-          <p>Every type style in Cube belongs to one of three groups, each named by role rather than by raw size —
-            53 styles in total, all set in <strong>DM Sans</strong>:</p>
-          <table class="docs-table">
-            <thead><tr><th>Group</th><th>Sizes</th><th>Purpose</th></tr></thead>
+          <p>All product text uses one typeface &mdash; <strong>DM Sans</strong> &mdash; through a set of text styles.
+            Each text style is built from typography variables, so sizes, line-heights and spacing stay consistent
+            everywhere.</p>
+
+          <h3>Typeface: DM Sans</h3>
+          <p>A geometric sans-serif with clear numbers &mdash; good for dense dashboards. Used for both titles
+            (<code>Family/title</code>) and body (<code>Family/body</code>).</p>
+          <div class="ty-specimen">
+            <div class="ty-specimen__aa"><span>Aa</span><b>DM Sans</b></div>
+            <div class="ty-specimen__r">
+              <p style="font-weight:500">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+              <p style="font-weight:400">abcdefghijklmnopqrstuvwxyz</p>
+              <p style="font-weight:600">0123456789 &nbsp;&#8377; % + &minus; . , : /</p>
+              <div class="ty-specimen__w">
+                <div><span style="font-weight:400">Revenue &#8377;3.2 Cr</span><small>Regular &middot; 400</small></div>
+                <div><span style="font-weight:500">Revenue &#8377;3.2 Cr</span><small>Medium &middot; 500</small></div>
+                <div><span style="font-weight:600">Revenue &#8377;3.2 Cr</span><small>Semibold &middot; 600</small></div>
+                <div><span style="font-weight:700">Revenue &#8377;3.2 Cr</span><small>Bold &middot; 700</small></div>
+              </div>
+              <p class="ty-specimen__note"><em>Italics exist for every weight</em> (used for helper / meta text).</p>
+            </div>
+          </div>
+
+          <h3>How it&rsquo;s built &mdash; three layers</h3>
+          <div class="ty-layers">
+            <div class="ty-layer ty-layer--1"><b>Layer 1 &middot; Variables</b><h4>Typography variables</h4><p>Collection &ldquo;Typography&rdquo; &mdash; 43 variables: Size, Line-height, Letter-spacing, Weight, Family.</p><code>Size/12 = 12<br>Line-height/16 = 16<br>Weight/Medium = &quot;Medium&quot;</code></div>
+            <span class="ty-arrow" aria-hidden="true">&rarr;</span>
+            <div class="ty-layer ty-layer--2"><b>Layer 2 &middot; Text styles</b><h4>47 text styles</h4><p>Heading &middot; Body &middot; Small. Every property of every style is bound to a variable.</p><code>Body/B3/Medium<br>= Size/12 + Line-height/16<br>+ Weight/Medium + Letter-spacing/1</code></div>
+            <span class="ty-arrow" aria-hidden="true">&rarr;</span>
+            <div class="ty-layer ty-layer--3"><b>Layer 3 &middot; Components</b><h4>Used in components</h4><p>Buttons, inputs, tabs, tables&hellip; apply text styles (or the same values).</p><code>Button &middot; Medium &rarr; B3 / Semibold<br>Tab &middot; Large &rarr; B2 / Medium</code></div>
+          </div>
+
+          <h3>How to read a style name</h3>
+          <p>Every text style name has up to three parts.</p>
+          <div class="ty-parts">
+<div class="ty-part"><b class="ty-part__t ty-c1">Body</b><p><strong>Group</strong> &mdash; Heading (titles), Body (content), Small (labels, captions)</p></div><span class="ty-sl" aria-hidden="true">/</span><div class="ty-part"><b class="ty-part__t ty-c2">B3</b><p><strong>Size step</strong> &mdash; H1&hellip;H6, B1&hellip;B3, S0&hellip;S2. &ldquo;-Compact&rdquo; = line-height equal to font size</p></div><span class="ty-sl" aria-hidden="true">/</span><div class="ty-part"><b class="ty-part__t ty-c3">Medium</b><p><strong>Weight</strong> &mdash; Regular &middot; Medium &middot; Semibold &middot; Bold, plus -Italic versions</p></div>
+          </div>
+        </section>
+
+        <!-- ============ Which style ============ -->
+        <!-- ============ Download font ============ -->
+        <section id="download-font">
+          <h2>Download the font</h2>
+          <p>Cube uses a lightly modified build of DM Sans. The only change is the rupee sign <strong>₹</strong>, redrawn.
+            Install it on your machine for design work, or load it
+            in code so prices and metrics render the same everywhere.</p>
+          <div class="ty-dl">
+            <div class="ty-dl__preview" aria-label="Rupee sign comparison">
+              <div><span class="ty-dl__glyph ty-dl__glyph--std">₹3.2 Cr</span><small>Standard DM Sans</small></div>
+              <div><span class="ty-dl__glyph ty-dl__glyph--fix">₹3.2 Cr</span><small>Cube DM Sans (RupeeFix)</small></div>
+            </div>
+            <div class="ty-dl__files">
+              <a class="ty-dl__file" href="assets/font/DMSans-RupeeFix.ttf" download>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v8M4.5 7 8 10.5 11.5 7M3 13.5h10"/></svg>
+                <span><b>DMSans-RupeeFix.ttf</b><small>Regular &middot; TTF, 233 KB</small></span>
+              </a>
+              <a class="ty-dl__file" href="assets/font/DMSans-Italic-RupeeFix.ttf" download>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v8M4.5 7 8 10.5 11.5 7M3 13.5h10"/></svg>
+                <span><b>DMSans-Italic-RupeeFix.ttf</b><small>Italic &middot; TTF, 277 KB</small></span>
+              </a>
+            </div>
+          </div>
+          <h3>How to install</h3>
+          <ul>
+            <li><strong>Figma / design tools:</strong> download both files, double-click each and choose Install Font, then restart Figma.</li>
+            <li><strong>Web:</strong> host the files and load them with <code>@font-face</code> (below). Keep the Google Fonts link as a fallback.</li>
+          </ul>
+          <div class="docs-code"><pre><code>@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DMSans-RupeeFix.ttf") format("truetype");
+    font-style: normal;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DMSans-Italic-RupeeFix.ttf") format("truetype");
+    font-style: italic;
+}</code></pre></div>
+        </section>
+
+        <section id="which-style">
+          <h2>Which style do I use?</h2>
+          <p>Find the job, use the style. Based on how the existing components are built &mdash; following it keeps new
+            screens consistent.</p>
+          <table class="docs-table type-table">
+            <thead><tr><th>Role</th><th>Text style</th><th>Sample</th><th>Where</th></tr></thead>
             <tbody>
-              <tr><td>Heading</td><td>H1 – H6, H6-Medium</td><td>Titles — page, section, card and panel headings, largest to smallest. Bold by default.</td></tr>
-              <tr><td>Body</td><td>B1, B2, B3 (+ B3-Compact)</td><td>Anything a person reads at length: paragraphs, table cells, form values.</td></tr>
-              <tr><td>Small &amp; Labels</td><td>S1 (+ S1-Compact), LT1, LT2</td><td>Supporting text below body size: timestamps, dense-table cells, uppercase tags and badges.</td></tr>
+              <tr><td>Page title</td><td><code>Heading/H4</code></td><td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:24px; line-height:32px">Revenue overview</p></td><td>Top of a page</td></tr>
+              <tr><td>Section title</td><td><code>Heading/H6</code></td><td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:18px; line-height:24px">Top platforms</p></td><td>Section / card group headings</td></tr>
+              <tr><td>Big KPI number</td><td><code>Heading/H3</code></td><td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:28px; line-height:36px; letter-spacing:-0.1px">₹3.2 Cr</p></td><td>Metric cards</td></tr>
+              <tr><td>Card / modal title</td><td><code>Body/B1/Semibold</code></td><td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:16px; line-height:20px">Setup auto forwarding</p></td><td>Card headers, modal titles</td></tr>
+              <tr><td>Sub-title / dropdown header</td><td><code>Body/B2/Semibold</code></td><td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:14px; line-height:18px">Select platform</p></td><td>Menu headers, panel titles</td></tr>
+              <tr><td>Large controls</td><td><code>Body/B2/Medium</code></td><td><p class="type-sample" style="white-space:normal; font-weight:500; font-size:14px; line-height:18px">Save changes</p></td><td>Large button, Large tab, Large input</td></tr>
+              <tr><td>Default UI label</td><td><code>Body/B3/Medium</code></td><td><p class="type-sample" style="white-space:normal; font-weight:500; font-size:12px; line-height:16px; letter-spacing:0.1px">Weekly summary</p></td><td>Menu items, chips, tabs, checkbox / radio labels, field labels</td></tr>
+              <tr><td>Selected / emphasised label</td><td><code>Body/B3/Semibold</code></td><td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:12px; line-height:16px; letter-spacing:0.1px">Blinkit</p></td><td>Selected option, button label, table header</td></tr>
+              <tr><td>Body text / description</td><td><code>Body/B3/Regular</code></td><td><p class="type-sample" style="white-space:normal; font-weight:400; font-size:12px; line-height:16px; letter-spacing:0.1px">Your changes will be saved automatically.</p></td><td>Paragraphs, descriptions, tooltip body</td></tr>
+              <tr><td>Table value / cell</td><td><code>Body/B3-Compact/Semibold</code></td><td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:12px; line-height:12px; letter-spacing:0.1px">80.5 L</p></td><td>Fixed-height table cells</td></tr>
+              <tr><td>Helper / caption</td><td><code>Small/S1/Medium</code></td><td><p class="type-sample" style="white-space:normal; font-weight:500; font-size:10px; line-height:12px; letter-spacing:0.1px">Helper message</p></td><td>Field helper, chart legends, date cells</td></tr>
+              <tr><td>Small button / chip</td><td><code>Small/S1/Semibold</code></td><td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:10px; line-height:12px; letter-spacing:0.1px">View all</p></td><td>Small buttons, small chips, badges</td></tr>
+              <tr><td>Footnote / expand hint</td><td><code>Small/S1/Regular-Italic</code></td><td><p class="type-sample" style="white-space:normal; font-weight:400; font-size:10px; line-height:12px; letter-spacing:0.1px; font-style:italic">Click to expand</p></td><td>Tooltip footer, meta</td></tr>
+              <tr><td>Tiny badge / axis label</td><td><code>Small/S2/Medium</code></td><td><p class="type-sample" style="white-space:normal; font-weight:500; font-size:9px; line-height:12px; letter-spacing:0.2px">12</p></td><td>Count badges, chart axis (sparingly)</td></tr>
             </tbody>
           </table>
-          <p>The Heading family and the Body family both resolve to <strong>DM Sans</strong> today, but are kept as two
-            separate tokens (<code>Family/title</code>, <code>Family/body</code>) so either can change independently later
-            without touching the other.</p>
 
-          <h3>Why the scale looks like this</h3>
-          <p>The scale was deliberately simplified down to three named groups with a predictable size order (H1&rarr;H6,
-            B1&rarr;B3) and one recommended line-height per size, to cut down on decision fatigue, keep the product
-            visually consistent across modules, and make the system easier to extend. The one exception is the smallest
-            sizes, which also carry a <strong>Compact</strong> line-height for the rows of a dense table — reach for it
-            only when a real density problem shows up, not by default.</p>
+          <h3>In context</h3>
+          <p>A metric card built only with the styles above.</p>
+          <div class="docs-demo" style="justify-content:center">
+            <div style="width:100%; max-width:480px; display:flex; flex-direction:column; gap:12px; padding:24px; background:#fff; border:1px solid #e8eaee; border-radius:12px; font-family:'Cube Rupee','DM Sans',sans-serif; color:#101214">
+              <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px"><span style="font-weight:600; font-size:18px; line-height:24px; color:#101214">Top platforms</span><span class="ty-ann">&larr; H6</span></div>
+              <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px"><span style="font-weight:500; font-size:12px; line-height:16px; letter-spacing:0.1px; color:#586473">Total revenue</span><span class="ty-ann">&larr; B3 / Medium</span></div>
+              <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px"><span style="font-weight:600; font-size:28px; line-height:36px; letter-spacing:-0.1px; color:#101214">₹3.2 Cr</span><span class="ty-ann">&larr; H3</span></div>
+              <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px"><span style="font-weight:600; font-size:10px; line-height:12px; letter-spacing:0.1px; color:#46A758">+12.4% vs last week</span><span class="ty-ann">&larr; S1 / Semibold</span></div>
+              <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px"><span style="font-weight:600; font-size:12px; line-height:16px; letter-spacing:0.1px; color:#363E45; display:flex; gap:48px"><span>Blinkit</span><span>80.5 L</span></span><span class="ty-ann">&larr; B3 / Semibold</span></div>
+              <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px"><span style="font-weight:400; font-size:10px; line-height:12px; letter-spacing:0.1px; font-style:italic; color:#7F8A9E">Updated 2h ago</span><span class="ty-ann">&larr; S1 / Regular-Italic</span></div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ Type scale ============ -->
+        <section id="type-scale">
+          <h2>Type scale</h2>
+          <p>The full scale, largest to smallest. Each row is rendered with the real text style; the values are read
+            from the style. The <a href="docs-typography-specifications.html">Specifications tab</a> lists the variable
+            bound to each value.</p>
+          <h3>Heading</h3>
+          <p>Page and section titles. All Semibold (H6 also has a Medium version).</p>
+          <table class="docs-table type-table">
+            <thead><tr><th>Style</th><th>Sample</th><th>Size / line-height</th><th>Letter-spacing</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><code>H1</code></td>
+                <td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:36px; line-height:44px; letter-spacing:-0.3px">Revenue grew 12% this week</p></td>
+                <td>36 / 44</td>
+                <td>&minus;0.3px</td>
+              </tr>
+              <tr>
+                <td><code>H2</code></td>
+                <td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:32px; line-height:40px; letter-spacing:-0.2px">Revenue grew 12% this week</p></td>
+                <td>32 / 40</td>
+                <td>&minus;0.2px</td>
+              </tr>
+              <tr>
+                <td><code>H3</code></td>
+                <td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:28px; line-height:36px; letter-spacing:-0.1px">Revenue grew 12% this week</p></td>
+                <td>28 / 36</td>
+                <td>&minus;0.1px</td>
+              </tr>
+              <tr>
+                <td><code>H4</code></td>
+                <td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:24px; line-height:32px">Revenue grew 12% this week</p></td>
+                <td>24 / 32</td>
+                <td>0px</td>
+              </tr>
+              <tr>
+                <td><code>H5</code></td>
+                <td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:20px; line-height:28px">Revenue grew 12% this week</p></td>
+                <td>20 / 28</td>
+                <td>0px</td>
+              </tr>
+              <tr>
+                <td><code>H6</code></td>
+                <td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:18px; line-height:24px">Revenue grew 12% this week</p></td>
+                <td>18 / 24</td>
+                <td>0px</td>
+              </tr>
+              <tr>
+                <td><code>H6-Medium</code></td>
+                <td><p class="type-sample" style="white-space:normal; font-weight:500; font-size:18px; line-height:24px">Revenue grew 12% this week</p></td>
+                <td>18 / 24</td>
+                <td>0px</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Body</h3>
+          <p>Content, labels, values, buttons. B3 (12px) is the workhorse of the product.</p>
+          <table class="docs-table type-table">
+            <thead><tr><th>Style</th><th>Sample</th><th>Size / line-height</th><th>Letter-spacing</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><code>B1 / Semibold</code></td>
+                <td><p class="type-sample" style="white-space:normal; font-weight:600; font-size:16px; line-height:20px">Revenue grew 12% this week</p></td>
+                <td>16 / 20</td>
+                <td>0px</td>
+              </tr>
+              <tr>
+                <td><code>B2 / Medium</code></td>
+                <td><p class="type-sample" style="white-space:normal; font-weight:500; font-size:14px; line-height:18px">Revenue grew 12% this week</p></td>
+                <td>14 / 18</td>
+                <td>0px</td>
+              </tr>
+              <tr>
+                <td><code>B3 / Medium</code></td>
+                <td><p class="type-sample" style="white-space:normal; font-weight:500; font-size:12px; line-height:16px; letter-spacing:0.1px">Revenue grew 12% this week</p></td>
+                <td>12 / 16</td>
+                <td>+0.1px</td>
+              </tr>
+              <tr>
+                <td><code>B3-Compact / Medium</code></td>
+                <td><p class="type-sample" style="white-space:normal; font-weight:500; font-size:12px; line-height:12px; letter-spacing:0.1px">Revenue grew 12% this week</p></td>
+                <td>12 / 12</td>
+                <td>+0.1px</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Small</h3>
+          <p>Captions, chips, badges, helper text, chart labels.</p>
+          <table class="docs-table type-table">
+            <thead><tr><th>Style</th><th>Sample</th><th>Size / line-height</th><th>Letter-spacing</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><code>S0 / Medium</code></td>
+                <td><p class="type-sample" style="white-space:normal; font-weight:500; font-size:11px; line-height:14px; letter-spacing:0.2px">Revenue grew 12% this week</p></td>
+                <td>11 / 14</td>
+                <td>+0.2px</td>
+              </tr>
+              <tr>
+                <td><code>S1 / Medium</code></td>
+                <td><p class="type-sample" style="white-space:normal; font-weight:500; font-size:10px; line-height:12px; letter-spacing:0.1px">Revenue grew 12% this week</p></td>
+                <td>10 / 12</td>
+                <td>+0.1px</td>
+              </tr>
+              <tr>
+                <td><code>S1-Compact / Medium</code></td>
+                <td><p class="type-sample" style="white-space:normal; font-weight:500; font-size:10px; line-height:10px; letter-spacing:0.1px">Revenue grew 12% this week</p></td>
+                <td>10 / 10</td>
+                <td>+0.1px</td>
+              </tr>
+              <tr>
+                <td><code>S2 / Medium</code></td>
+                <td><p class="type-sample" style="white-space:normal; font-weight:500; font-size:9px; line-height:12px; letter-spacing:0.2px">Revenue grew 12% this week</p></td>
+                <td>9 / 12</td>
+                <td>+0.2px</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Compact styles</h3>
+          <p>&ldquo;-Compact&rdquo; styles set line-height = font size (12/12, 10/10). Use them only inside fixed-height
+            elements (table cells, badges, chips) where extra line-height would push content off-centre. Never for
+            multi-line text.</p>
+          <div class="docs-demo" style="gap:48px; justify-content:center; align-items:flex-start">
+            <div class="ty-cmp"><div style="line-height:32px">Two lines of text<br>show the difference</div><code>line-height 32px &rarr; B3 &middot; 12/16</code></div>
+            <div class="ty-cmp"><div style="line-height:24px">Two lines of text<br>show the difference</div><code>line-height 24px &rarr; B3-Compact &middot; 12/12</code></div>
+          </div>
+          <p class="docs-demo__caption">Shown at a scaled-up font size to illustrate the 12/16 vs 12/12 ratio.</p>
+        </section>
+
+        <!-- ============ Weights & italics ============ -->
+        <section id="weights">
+          <h2>Weights &amp; italics</h2>
+          <p>Which weights exist for each size. A style only exists where there is a sample &mdash; if you need a
+            missing combination, check with the design-system team before creating one.</p>
+          <h3>Weight matrix</h3>
+          <p>Upright weights. &ldquo;italic too&rdquo; means an italic version also exists.</p>
+          <div class="bx-scroll"><table class="docs-table ty-matrix">
+            <thead><tr><th>Size</th><th>Regular</th><th>Medium</th><th>Semibold</th><th>Bold</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">H1 &middot; 36</th><td class="ty-none">&mdash;</td><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:600; font-size:36px; line-height:44px; letter-spacing:-0.3px">Aa Revenue</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H1</span></td><td class="ty-none">&mdash;</td></tr>
+              <tr><th scope="row">H2 &middot; 32</th><td class="ty-none">&mdash;</td><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:600; font-size:32px; line-height:40px; letter-spacing:-0.2px">Aa Revenue</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H2</span></td><td class="ty-none">&mdash;</td></tr>
+              <tr><th scope="row">H3 &middot; 28</th><td class="ty-none">&mdash;</td><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:600; font-size:28px; line-height:36px; letter-spacing:-0.1px">Aa Revenue</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H3</span></td><td class="ty-none">&mdash;</td></tr>
+              <tr><th scope="row">H4 &middot; 24</th><td class="ty-none">&mdash;</td><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:600; font-size:24px; line-height:32px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H4</span></td><td class="ty-none">&mdash;</td></tr>
+              <tr><th scope="row">H5 &middot; 20</th><td class="ty-none">&mdash;</td><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:600; font-size:20px; line-height:28px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H5</span></td><td class="ty-none">&mdash;</td></tr>
+              <tr><th scope="row">H6 &middot; 18</th><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:500; font-size:18px; line-height:24px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H6-Medium</span></td><td><span style="display:block; font-weight:600; font-size:18px; line-height:24px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Heading/H6</span></td><td class="ty-none">&mdash;</td></tr>
+              <tr><th scope="row">B1 &middot; 16</th><td class="ty-none">&mdash;</td><td><span style="display:block; font-weight:500; font-size:16px; line-height:20px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Body/B1/Medium &middot; italic too</span></td><td><span style="display:block; font-weight:600; font-size:16px; line-height:20px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Body/B1/Semibold &middot; italic too</span></td><td><span style="display:block; font-weight:700; font-size:16px; line-height:20px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Body/B1/Bold &middot; italic too</span></td></tr>
+              <tr><th scope="row">B2 &middot; 14</th><td><span style="display:block; font-weight:400; font-size:14px; line-height:18px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Body/B2/Regular &middot; italic too</span></td><td><span style="display:block; font-weight:500; font-size:14px; line-height:18px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Body/B2/Medium &middot; italic too</span></td><td><span style="display:block; font-weight:600; font-size:14px; line-height:18px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Body/B2/Semibold &middot; italic too</span></td><td class="ty-none">&mdash;</td></tr>
+              <tr><th scope="row">B3 &middot; 12</th><td><span style="display:block; font-weight:400; font-size:12px; line-height:16px; letter-spacing:0.1px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Body/B3/Regular &middot; italic too</span></td><td><span style="display:block; font-weight:500; font-size:12px; line-height:16px; letter-spacing:0.1px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Body/B3/Medium &middot; italic too</span></td><td><span style="display:block; font-weight:600; font-size:12px; line-height:16px; letter-spacing:0.1px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Body/B3/Semibold &middot; italic too</span></td><td class="ty-none">&mdash;</td></tr>
+              <tr><th scope="row">B3-Compact &middot; 12</th><td><span style="display:block; font-weight:400; font-size:12px; line-height:12px; letter-spacing:0.1px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Body/B3-Compact/Regular &middot; italic too</span></td><td><span style="display:block; font-weight:500; font-size:12px; line-height:12px; letter-spacing:0.1px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Body/B3-Compact/Medium &middot; italic too</span></td><td><span style="display:block; font-weight:600; font-size:12px; line-height:12px; letter-spacing:0.1px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Body/B3-Compact/Semibold &middot; italic too</span></td><td class="ty-none">&mdash;</td></tr>
+              <tr><th scope="row">S0 &middot; 11</th><td><span style="display:block; font-weight:400; font-size:11px; line-height:14px; letter-spacing:0.2px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Small/S0/Regular</span></td><td><span style="display:block; font-weight:500; font-size:11px; line-height:14px; letter-spacing:0.2px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Small/S0/Medium</span></td><td><span style="display:block; font-weight:600; font-size:11px; line-height:14px; letter-spacing:0.2px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Small/S0/Semibold</span></td><td class="ty-none">&mdash;</td></tr>
+              <tr><th scope="row">S1 &middot; 10</th><td><span style="display:block; font-weight:400; font-size:10px; line-height:12px; letter-spacing:0.1px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Small/S1/Regular &middot; italic too</span></td><td><span style="display:block; font-weight:500; font-size:10px; line-height:12px; letter-spacing:0.1px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Small/S1/Medium &middot; italic too</span></td><td><span style="display:block; font-weight:600; font-size:10px; line-height:12px; letter-spacing:0.1px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Small/S1/Semibold &middot; italic too</span></td><td class="ty-none">&mdash;</td></tr>
+              <tr><th scope="row">S1-Compact &middot; 10</th><td><span style="display:block; font-weight:400; font-size:10px; line-height:10px; letter-spacing:0.1px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Small/S1-Compact/Regular &middot; italic too</span></td><td><span style="display:block; font-weight:500; font-size:10px; line-height:10px; letter-spacing:0.1px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Small/S1-Compact/Medium &middot; italic too</span></td><td class="ty-none">&mdash;</td><td class="ty-none">&mdash;</td></tr>
+              <tr><th scope="row">S2 &middot; 9</th><td><span style="display:block; font-weight:400; font-size:9px; line-height:12px; letter-spacing:0.2px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Small/S2/Regular</span></td><td><span style="display:block; font-weight:500; font-size:9px; line-height:12px; letter-spacing:0.2px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Small/S2/Medium</span></td><td><span style="display:block; font-weight:600; font-size:9px; line-height:12px; letter-spacing:0.2px">Revenue ₹3.2 Cr</span><span class="ty-ann" style="color:var(--ink-2)">Small/S2/Semibold</span></td><td class="ty-none">&mdash;</td></tr>
+            </tbody>
+          </table></div>
+
+          <h3>Weight = meaning</h3>
+          <p>How weight is used in components.</p>
+          <table class="docs-table">
+            <thead><tr><th>Weight</th><th>CSS</th><th>Use for</th></tr></thead>
+            <tbody>
+              <tr><td>Regular</td><td><code>400</code></td><td>Long-form text, descriptions, table body text, input values in forms</td></tr>
+              <tr><td>Medium</td><td><code>500</code></td><td>Default for UI labels &mdash; buttons (unselected), menu items, chips, tab labels, field labels</td></tr>
+              <tr><td>Semibold</td><td><code>600</code></td><td>Emphasis &mdash; selected states, key numbers, headings, button labels, table headers</td></tr>
+              <tr><td>Bold</td><td><code>700</code></td><td>Rare &mdash; B1 highlights, tab label when selected (Tabs), strong emphasis only</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Italics</h3>
+          <p>Italics are available for Body and Small styles. Use them sparingly &mdash; for helper text, &ldquo;Click to
+            expand&rdquo;, footnotes and placeholder-like hints. Never for headings or numbers.</p>
+          <div class="docs-demo" style="flex-direction:column; align-items:flex-start; gap:20px; font-family:'Cube Rupee','DM Sans',sans-serif; color:#465058">
+            <div><span style="font-weight:400; font-size:14px; line-height:18px; font-style:italic">Click to expand details</span><br><code class="ty-ann">Body/B2/Regular-Italic</code></div>
+            <div><span style="font-weight:500; font-size:12px; line-height:16px; letter-spacing:0.1px; font-style:italic">Click to expand details</span><br><code class="ty-ann">Body/B3/Medium-Italic</code></div>
+            <div><span style="font-weight:400; font-size:10px; line-height:12px; letter-spacing:0.1px; font-style:italic">Click to expand details</span><br><code class="ty-ann">Small/S1/Regular-Italic</code></div>
+          </div>
+        </section>
+
+        <!-- ============ Do’s and don’ts ============ -->
+        <section id="dos-donts">
+          <h2>Do’s and don’ts</h2>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage" style="font-family:'Cube Rupee','DM Sans',sans-serif; color:#101214"><span style="font-weight:500; font-size:12px; line-height:16px; letter-spacing:0.1px">Weekly summary</span></div>
+              <p class="docs-dodont__cap">Apply a text style to every text layer.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don't</p>
+              <div class="docs-dodont__stage" style="font-family:'Cube Rupee','DM Sans',sans-serif; color:#101214"><span style="font-weight:500; font-size:12.5px">Weekly summary</span></div>
+              <p class="docs-dodont__cap">Don't type raw sizes / weights — the text won't update and won't match code.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage" style="font-family:'Cube Rupee','DM Sans',sans-serif; color:#101214"><span style="font-weight:500; font-size:10px; line-height:12px; letter-spacing:0.1px">Revenue excludes returns</span></div>
+              <p class="docs-dodont__cap">Keep readable content at 10px or larger (S1+).</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don't</p>
+              <div class="docs-dodont__stage" style="font-family:'Cube Rupee','DM Sans',sans-serif; color:#101214"><span style="font-weight:400; font-size:9px; line-height:12px; letter-spacing:0.2px">Revenue excludes returns and cancellations</span></div>
+              <p class="docs-dodont__cap">Don't use S2 (9px) for sentences — only for tiny badges / axis ticks.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage" style="font-family:'Cube Rupee','DM Sans',sans-serif; color:#101214"><span style="display:inline-block; padding:6px 10px; border-radius:6px; background:#eaf1ff; font-weight:600; font-size:12px; line-height:12px; letter-spacing:0.1px">80.5 L</span></div>
+              <p class="docs-dodont__cap">Use Compact styles only for single-line text in fixed-height cells.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don't</p>
+              <div class="docs-dodont__stage" style="font-family:'Cube Rupee','DM Sans',sans-serif; color:#101214"><span style="display:block; max-width:200px; font-weight:400; font-size:12px; line-height:12px; letter-spacing:0.1px">A long description that wraps onto two lines</span></div>
+              <p class="docs-dodont__cap">Don't use Compact for wrapping text — lines collide.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage" style="font-family:'Cube Rupee','DM Sans',sans-serif; color:#101214"><div><span style="display:block; font-weight:600; font-size:18px; line-height:24px">Top platforms</span><span style="display:block; color:#586473; font-weight:400; font-size:12px; line-height:16px; letter-spacing:0.1px">Blinkit leads this week</span></div></div>
+              <p class="docs-dodont__cap">Create hierarchy with 2–3 styles per card.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don't</p>
+              <div class="docs-dodont__stage" style="font-family:'Cube Rupee','DM Sans',sans-serif; color:#101214"><div><span style="display:block; font-weight:600; font-size:18px; line-height:24px">Top platforms</span><span style="display:block; font-weight:700; font-size:16px; line-height:20px">Blinkit leads this week</span></div></div>
+              <p class="docs-dodont__cap">Don't use Bold / Semibold everywhere — nothing stands out.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage" style="font-family:'Cube Rupee','DM Sans',sans-serif; color:#101214"><span style="font-weight:600; font-size:24px; line-height:32px">₹3.2 Cr</span></div>
+              <p class="docs-dodont__cap">Keep numbers upright.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don't</p>
+              <div class="docs-dodont__stage" style="font-family:'Cube Rupee','DM Sans',sans-serif; color:#101214"><span style="font-weight:700; font-size:16px; line-height:20px; font-style:italic">₹3.2 Cr</span></div>
+              <p class="docs-dodont__cap">Don't italicise numbers or headings.</p>
+            </div>
+          </div>
         </section>
 
         <!-- ============ Usage ============ -->
         <section id="usage">
           <h2>Usage</h2>
-          <p>Reach for the shared tokens rather than a hardcoded family, weight or size — the same styles used to
+          <p>Reach for the shared tokens rather than a hardcoded family, weight or size &mdash; the same styles used to
             generate every sample on this page:</p>
           <pre class="docs-code"><code>import { HEADING_STYLES, FONT_FAMILY, FONT_WEIGHT } from './atoms/typography';
 
 // Use tokens directly
 const style = {
   fontFamily: FONT_FAMILY.title,
-  fontWeight: FONT_WEIGHT.bold,
+  fontWeight: FONT_WEIGHT.semibold,
   fontSize: 24,
   lineHeight: '32px',
 };</code></pre>
           <p class="docs-demo__caption">See the <a href="https://storybook.gobblecube.ai/?path=/docs/atoms-typography-overview--docs" target="_blank" rel="noopener noreferrer">Typography atom in Storybook</a> for the full token set and every style rendered live.</p>
         </section>
 
-        <!-- ============ Heading ============ -->
-        <section id="heading">
-          <h2>Heading</h2>
-          <p>Bold-weight titles by default — <code>H6-Medium</code> is the one exception, a lighter alternative to
-            <code>H6</code> for a title that should not compete with a primary one on the same screen.</p>
-          <table class="docs-table type-table">
-            <thead><tr><th>Style</th><th>Sample</th><th>Weight · Size/Line-height · Tracking</th><th>Use for</th></tr></thead>
-            <tbody>
-              <tr>
-                <td><code>H1</code></td>
-                <td><p class="type-sample" style="font-weight:700; font-size:36px; line-height:44px; letter-spacing:-0.3px">Aa</p></td>
-                <td>Bold · 36/44 · &minus;0.3px</td>
-                <td>A page's own title. At most one per page.</td>
-              </tr>
-              <tr>
-                <td><code>H2</code></td>
-                <td><p class="type-sample" style="font-weight:700; font-size:32px; line-height:40px; letter-spacing:-0.2px">Aa</p></td>
-                <td>Bold · 32/40 · &minus;0.2px</td>
-                <td>A major section heading within a page.</td>
-              </tr>
-              <tr>
-                <td><code>H3</code></td>
-                <td><p class="type-sample" style="font-weight:700; font-size:28px; line-height:36px; letter-spacing:-0.1px">Aa</p></td>
-                <td>Bold · 28/36 · &minus;0.1px</td>
-                <td>A subsection heading, or a prominent card title.</td>
-              </tr>
-              <tr>
-                <td><code>H4</code></td>
-                <td><p class="type-sample" style="font-weight:700; font-size:24px; line-height:32px">Aa</p></td>
-                <td>Bold · 24/32 · 0px</td>
-                <td>A standard card, panel or modal title.</td>
-              </tr>
-              <tr>
-                <td><code>H5</code></td>
-                <td><p class="type-sample" style="font-weight:700; font-size:20px; line-height:28px">Aa</p></td>
-                <td>Bold · 20/28 · 0px</td>
-                <td>A compact panel title, or a title inside dense UI.</td>
-              </tr>
-              <tr>
-                <td><code>H6</code></td>
-                <td><p class="type-sample" style="font-weight:700; font-size:18px; line-height:24px">Aa</p></td>
-                <td>Bold · 18/24 · 0px</td>
-                <td>The smallest heading — a list group label, a widget title.</td>
-              </tr>
-              <tr>
-                <td><code>H6-Medium</code></td>
-                <td><p class="type-sample" style="font-weight:500; font-size:18px; line-height:24px">Aa</p></td>
-                <td>Medium · 18/24 · 0px</td>
-                <td>An H6 that must not out-compete a primary title beside it.</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <!-- ============ Body ============ -->
-        <section id="body">
-          <h2>Body</h2>
-          <p>B1 carries Bold, Semibold and Medium; B2 and B3 add Regular too. Every weight has an italic — pick the
-            weight for emphasis, not a different size.</p>
-          <table class="docs-table type-table">
-            <thead><tr><th>Style</th><th>Sample</th><th>Weight · Size/Line-height · Tracking</th><th>Use for</th></tr></thead>
-            <tbody>
-              <tr>
-                <td><code>B1</code></td>
-                <td><p class="type-sample" style="font-weight:700; font-size:16px; line-height:20px">Aa</p></td>
-                <td>Bold, Semibold, Medium (+ italics) · 16/20 · 0px</td>
-                <td>Emphasized reading text — a lead paragraph, a highlighted value.</td>
-              </tr>
-              <tr>
-                <td><code>B2</code></td>
-                <td><p class="type-sample" style="font-weight:400; font-size:14px; line-height:18px">Aa</p></td>
-                <td>Bold, Semibold, Medium, Regular (+ italics) · 14/18 · 0px</td>
-                <td>The default body size — table cells, form values, card copy.</td>
-              </tr>
-              <tr>
-                <td><code>B3</code></td>
-                <td><p class="type-sample" style="font-weight:400; font-size:12px; line-height:16px; letter-spacing:0.1px">Aa</p></td>
-                <td>Bold, Semibold, Medium, Regular (+ italics) · 12/16 · +0.1px</td>
-                <td>Secondary or dense body text — a caption, a metric's sub-line.</td>
-              </tr>
-              <tr>
-                <td><code>B3-Compact</code></td>
-                <td><p class="type-sample" style="font-weight:400; font-size:12px; line-height:12px; letter-spacing:0.1px">Aa</p></td>
-                <td>Same weights as B3 · 12/12 · +0.1px</td>
-                <td>B3 in a table dense enough that the default line-height crowds rows.</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <!-- ============ Small & Labels ============ -->
-        <section id="small">
-          <h2>Small &amp; Labels</h2>
-          <p><code>S1</code> is dense UI's default body-adjacent size. <code>LT1</code> and <code>LT2</code> are a
-            different job entirely — set in uppercase with wider tracking, for a tag or a status badge, never for a
-            sentence.</p>
-          <table class="docs-table type-table">
-            <thead><tr><th>Style</th><th>Sample</th><th>Weight · Size/Line-height · Tracking</th><th>Use for</th></tr></thead>
-            <tbody>
-              <tr>
-                <td><code>S1</code></td>
-                <td><p class="type-sample" style="font-weight:500; font-size:10px; line-height:12px; letter-spacing:0.1px">Aa</p></td>
-                <td>Bold, Medium, Regular (+ italics) · 10/12 · +0.1px</td>
-                <td>Dense-table cells, timestamps, helper text below a field.</td>
-              </tr>
-              <tr>
-                <td><code>S1-Compact</code></td>
-                <td><p class="type-sample" style="font-weight:500; font-size:10px; line-height:10px; letter-spacing:0.1px">Aa</p></td>
-                <td>Bold, Medium, Regular (+ italics) · 10/10 · +0.1px</td>
-                <td>S1 inside a dense table's own rows, where 12px line-height crowds them.</td>
-              </tr>
-              <tr>
-                <td><code>LT1</code></td>
-                <td><p class="type-sample" style="font-weight:700; font-size:11px; line-height:16px; letter-spacing:0.2px; text-transform:uppercase">Aa</p></td>
-                <td>Bold, Medium · 11/16 · +0.2px, uppercase</td>
-                <td>A chip, tag or status badge's label.</td>
-              </tr>
-              <tr>
-                <td><code>LT2</code></td>
-                <td><p class="type-sample" style="font-weight:700; font-size:9px; line-height:12px; letter-spacing:0.2px; text-transform:uppercase">Aa</p></td>
-                <td>Bold, Medium · 9/12 · +0.2px, uppercase</td>
-                <td>The smallest label — a compact badge inside a dense table cell.</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <!-- ============ Weight & italics ============ -->
-        <section id="weight">
-          <h2>Weight and italics</h2>
-          <h3>Weight</h3>
-          <ul>
-            <li><strong>Bold</strong> — every heading by default, and a Body/Small value that needs to stand out (a total, a name).</li>
-            <li><strong>Semibold</strong> — a Body/Small emphasis one step below Bold — the workhorse weight for a label or a highlighted cell.</li>
-            <li><strong>Medium</strong> — a lighter emphasis, and <code>H6-Medium</code> for a title that should read lighter than a Bold one beside it.</li>
-            <li><strong>Regular</strong> — the default for body and small text. Never used for a heading.</li>
-          </ul>
-          <h3>Italic</h3>
-          <p>Italic exists on every Body and Small style, but is reserved for a secondary note beside the main
-            content — a footer caveat, a data-freshness note — the same job italic already does in the
-            <a href="docs-tooltips.html#content">Tooltip footer</a>. It is not a substitute for a smaller size or a
-            lighter weight. <code>LT1</code>/<code>LT2</code> labels carry no italic — a tag or badge is never emphasized that way.</p>
-        </section>
-
-        <!-- ============ When to use ============ -->
-        <section id="when-to-use">
-          <h2>When to use</h2>
-          <h3>Do</h3>
-          <ul>
-            <li>Step down one heading level at a time (H2 inside an H1 page, not H2 straight to H4).</li>
-            <li>Reach for a heavier weight before a bigger size when something just needs to stand out.</li>
-            <li>Use a Compact style only where rows are genuinely tight — it reads noticeably denser.</li>
-          </ul>
-          <h3>Don't</h3>
-          <ul>
-            <li>Skip a heading level to get a size that "looks right" — fix the hierarchy, not the symptom.</li>
-            <li>Use Bold on body or small text for emphasis — that is what Semibold is for; Bold is a heading weight.</li>
-            <li>Set a whole sentence in italic — it is for a short secondary note, not a paragraph.</li>
-          </ul>
-        </section>
-
       </article>
     </main>
-
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=179-6115" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5.5 1.5h2.5v4H5.5a2 2 0 0 1 0-4zM8 1.5h2.5a2 2 0 0 1 0 4H8zM5.5 5.5H8v4H5.5a2 2 0 0 1 0-4zM8 7.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM5.5 9.5H8v2a2 2 0 1 1-2.5-1.94z"/></svg>Figma</a>
+      </aside>
     <aside class="docs-toc" aria-label="On this page">
       <p class="docs-toc__title">On this page</p>
       <ul>
         <li><a href="#live-demo">Live demo</a></li>
         <li><a href="#overview">Overview</a></li>
+        <li><a href="#download-font">Download the font</a></li>
+        <li><a href="#which-style">Which style do I use?</a></li>
+        <li><a href="#type-scale">Type scale</a></li>
+        <li><a href="#weights">Weights &amp; italics</a></li>
+        <li><a href="#dos-donts">Do’s and don’ts</a></li>
         <li><a href="#usage">Usage</a></li>
-        <li><a href="#heading">Heading</a></li>
-        <li><a href="#body">Body</a></li>
-        <li><a href="#small">Small &amp; Labels</a></li>
-        <li><a href="#weight">Weight and italics</a></li>
-        <li><a href="#when-to-use">When to use</a></li>
       </ul>
     </aside>
+    </div>
       </div>
   </div>
 
