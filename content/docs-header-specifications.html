@@ -1,0 +1,256 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a aria-current="true" href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-header.html" aria-current="page">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="#" aria-disabled="true">Popup <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Right Overlays <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="#" aria-disabled="true">Stepper <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tab <small>Soon</small></a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Header</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">The bar at the top of every product page, right of the navbar. Three stacked rows &mdash; what page and which period, sub-view tabs and page actions, and filters &mdash; switched on per page. The <a href="docs-header-specifications.html">Specifications tab</a> lists every value.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-header.html" role="tab">Guidelines</a>
+        <a href="docs-header-specifications.html" role="tab" aria-selected="true">Specifications</a>
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
+          Code
+          <span class="sr-only">(not in Storybook yet)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec">
+
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>All values in px.</p>
+          <h3>Rows</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Row</th><th>Height</th><th>Width</th><th>Notes</th></tr></thead><tbody><tr><td>Page header v2 (all rows)</td><td>160</td><td>1184 (screen 1440 − navbar 256)</td><td>Stretches to the content width</td></tr><tr><td>① Main header</td><td>56</td><td>Fill</td><td>Sticky at the top</td></tr><tr><td>② Page navigation and actions</td><td>56</td><td>Fill</td><td>Scrolls with the page</td></tr><tr><td>③ Page filters</td><td>48</td><td>Fill</td><td></td></tr><tr><td>Without filters / without navigation / main only</td><td>112 / 104 / 56</td><td></td><td></td></tr></tbody></table></div>
+          <h3>Main header contents</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Size</th><th>Notes</th></tr></thead><tbody><tr><td>Padding</td><td>16 horizontal, 12 vertical</td><td>Left group gap 12, right group gap 8</td></tr><tr><td>Left group (identity, period, compare)</td><td>≈ 391 × 32</td><td>Separated by 1px dividers</td></tr><tr><td>Right group (strips, GobbsIQ, bell, profile)</td><td>≈ 570 × 28</td><td></td></tr><tr><td>Labels and values</td><td>11 Medium / 12 SemiBold</td><td>Label row gap 4, label to dates gap 2, between blocks 16</td></tr><tr><td>Period chip</td><td>16 tall, 9 SemiBold</td><td>Padding 1 / 5, radius 16</td></tr><tr><td>Info strip</td><td>28 tall</td><td>Message, single statement; padding 6 / 8, radius 6</td></tr><tr><td>Ask GobbsIQ</td><td>28 tall</td><td>Padding 6 / 8, radius 8, gap 4</td></tr><tr><td>Bell and profile</td><td>28 × 28</td><td>Bell padding 6, pill; profile radius 40</td></tr></tbody></table></div>
+          <h3>Navigation and filter rows</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Size</th><th>Notes</th></tr></thead><tbody><tr><td>Navigation row padding</td><td>16 horizontal, 12 vertical</td><td>Buttons gap 8</td></tr><tr><td>Segmented control</td><td>Padding 2, radius 8</td><td>Elements padding 6 / 12, radius 6</td></tr><tr><td>Page buttons</td><td>32 tall, padding 0 / 12, radius 6</td><td>Icon 14, gap 6; download 32 × 32</td></tr><tr><td>Filter row padding</td><td>16 horizontal, 10 vertical</td><td>Label to chips 8, chips gap 4</td></tr><tr><td>Filter chip</td><td>28 tall, padding 0 / 10, pill</td><td>Plus-circle icon 14, gap 4</td></tr><tr><td>MRP / SP toggle</td><td>28 tall, padding 2, pill</td><td>Elements padding 4 / 10</td></tr></tbody></table></div>
+        </section>
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <p>Tokens read from the components. Nested components &mdash; chips, message strips, buttons, segmented control &mdash; keep their own tokens.</p>
+          <h3>Surfaces and text</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Token</th><th>Notes</th></tr></thead><tbody><tr><td>Main header background</td><td>Flat White <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td></td></tr><tr><td>Main header border</td><td>Default Card Stroke <span class="msg-sw" style="background:#e6e7e8"></span>#e6e7e8</td><td>Bottom divider (also under row ②)</td></tr><tr><td>Navigation and filter rows</td><td>None</td><td>Sit on the page background, Screen BG 1 <span class="msg-sw" style="background:#f3f6fa"></span>#f3f6fa</td></tr><tr><td>Platform scope and field labels</td><td>Secondary-text/800 <span class="msg-sw" style="background:#404a54"></span>#404a54</td><td>Medium 11</td></tr><tr><td>Page name and dates</td><td>Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214</td><td>SemiBold 12</td></tr><tr><td>Date dash</td><td>Secondary-text/700 <span class="msg-sw" style="background:#586473"></span>#586473</td><td>Medium 12</td></tr><tr><td>Left separator</td><td>Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td>1px, radius 2</td></tr><tr><td>Right separator</td><td>Accent/Steel Blue/200 <span class="msg-sw" style="background:#e7eef9"></span>#e7eef9</td><td>1px, radius 2</td></tr><tr><td>“Filters” label</td><td>Secondary-text/900 <span class="msg-sw" style="background:#363e45"></span>#363e45</td><td>Medium 12</td></tr></tbody></table></div>
+          <h3>Parts</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Part</th><th>Fill</th><th>Border</th><th>Text</th></tr></thead><tbody><tr><td>Period chip</td><td>Primary/100 <span class="msg-sw" style="background:#eaf1ff"></span>#eaf1ff</td><td>&mdash;</td><td>Primary/800 <span class="msg-sw" style="background:#0140a5"></span>#0140a5 SemiBold 9</td></tr><tr><td>Info strip</td><td>White</td><td>Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee</td><td>Primary-text/800 <span class="msg-sw" style="background:#3e464c"></span>#3e464c, value Primary-text/950</td></tr><tr><td>Ask GobbsIQ</td><td>Brand/600 <span class="msg-sw" style="background:#034ced"></span>#034ced</td><td>&mdash;</td><td>White SemiBold 12; shadow 0 1 5 rgba(0,36,116,.16)</td></tr><tr><td>Notification bell</td><td>Brand/50 <span class="msg-sw" style="background:#f4f7ff"></span>#f4f7ff</td><td>Brand/200 <span class="msg-sw" style="background:#d3dfff"></span>#d3dfff</td><td>&mdash;</td></tr><tr><td>Profile</td><td>Main BG <span class="msg-sw" style="background:#151718"></span>#151718</td><td>&mdash;</td><td>&mdash;</td></tr><tr><td>Segmented, selected</td><td>Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5</td><td>&mdash;</td><td>White SemiBold 12</td></tr><tr><td>Segmented, default</td><td>White</td><td>Control border Secondary-text/100</td><td>Secondary-text/700 Medium 12</td></tr><tr><td>Download button</td><td>White</td><td>Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td>&mdash;</td></tr><tr><td>Button 1 (Outlined)</td><td>White</td><td>Primary/400 <span class="msg-sw" style="background:#74a1f8"></span>#74a1f8</td><td>Primary/600 SemiBold 12</td></tr><tr><td>Button 2 (Filled)</td><td>Primary/600</td><td>&mdash;</td><td>White SemiBold 12</td></tr><tr><td>Filter chip</td><td>White</td><td>Secondary-text/200</td><td>Primary-text/900 <span class="msg-sw" style="background:#373d42"></span>#373d42 SemiBold 12</td></tr><tr><td>MRP / SP, selected</td><td>Accent/Bronze/600 <span class="msg-sw" style="background:#0e9888"></span>#0e9888</td><td>Control border Secondary-text/100</td><td>White SemiBold 12</td></tr></tbody></table></div>
+        </section>
+        <section id="properties">
+          <h2>Properties</h2>
+          <p>Page header v2 is a single component, not a variant set: everything is controlled by booleans and one text property.</p>
+          <h3>Page header v2</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Page-Navigation &amp; Action</td><td>true | false</td><td>optional</td><td>true</td><td>Row ②.</td></tr><tr><td>Filters</td><td>true | false</td><td>optional</td><td>true</td><td>Row ③.</td></tr></tbody></table></div>
+          <h3>① Main header</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Module Name</td><td>string</td><td>required</td><td>“Watch Tower”</td><td>Page name.</td></tr><tr><td>Platform-details · Platform</td><td>Cross Platform | Blinkit | Zepto | Instamart | FK Minutes | BB Now | Setup &amp; Integrations</td><td>required</td><td>Cross Platform</td><td>Nested.</td></tr><tr><td>Time Period</td><td>Range | Single date</td><td>required</td><td>Range</td><td>Chip MTD / L7D / L30D / LM / L3M / YTD / L12M.</td></tr><tr><td>Period comparison</td><td>true | false</td><td>optional</td><td>true</td><td>Compare with: Range | Single date | Timeslot.</td></tr><tr><td>Data till · Darkstore count · GobbsIQ · Right Separator</td><td>true | false</td><td>optional</td><td>true</td><td></td></tr><tr><td>Notification CTA</td><td>Default | New</td><td>&mdash;</td><td>Default</td><td>New shows a dot.</td></tr></tbody></table></div>
+          <h3>② Navigation and ③ filters</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Button 1 · Button 2</td><td>true | false</td><td>optional</td><td>true</td><td>Outlined / Filled Core.</td></tr><tr><td>Segmented-control</td><td>nested</td><td>required</td><td>Primary · Medium</td><td>Edit the tab labels and count.</td></tr><tr><td>MRP/SP Toggle</td><td>true | false</td><td>optional</td><td>true</td><td>On the filter row.</td></tr><tr><td>Filter-trigger</td><td>filterLabel, filterApplied (false), variant Quick filter</td><td>&mdash;</td><td>&mdash;</td><td>One per upfront filter.</td></tr></tbody></table></div>
+          <p class="docs-note">In the Figma file’s code export, the download and Outlined buttons are bound to <code>button2</code> and the Filled button to <code>button1</code> &mdash; the opposite of the docs, which say Button 1 is Outlined and Button 2 is Filled. Check with the design team before relying on the property names.</p>
+        </section>
+        <section id="api">
+          <h2>API and behavior</h2>
+          <p><strong>Designers:</strong> place Page header v2, set Module Name and platform, then toggle rows and info pieces per page.
+            <strong>Developers:</strong> one header shell with three rows; time period, compare-with and filters are global page state (URL parameters) shared by every widget on the page.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Rule</th><th>Notes</th></tr></thead><tbody><tr><td>Sticky</td><td>Row ① stays at the top</td><td>Rows ② and ③ scroll with the page.</td></tr><tr><td>Global state</td><td>Period, compare and filters</td><td>Changing them refreshes every widget; keep them in the URL.</td></tr><tr><td>Compare with</td><td>Hidden on real-time pages</td><td>For example Supply Chain Action.</td></tr><tr><td>Navigation</td><td>Segmented tabs or Primary tabs</td><td>Never radios.</td></tr><tr><td>Darkstore strip</td><td>Clickable</td><td>The arrow opens the store list.</td></tr></tbody></table></div>
+          <h3>Page setups</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Page</th><th>Setup</th><th>Notes</th></tr></thead><tbody><tr><td>Digital Shelf</td><td>All rows, MRP/SP on</td><td></td></tr><tr><td>Performance Marketing</td><td>Darkstore count off, MRP/SP off</td><td></td></tr><tr><td>Supply Chain Action</td><td>Period comparison off</td><td>Real-time data.</td></tr><tr><td>Setup &amp; Integrations</td><td>Filters and strips usually off</td><td>Platform = Setup &amp; Integrations.</td></tr></tbody></table></div>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+          <h3>Digital Shelf page</h3>
+          <div class="msg-stage"><div class="ph-fit"><div class="ph ph--bg"><div class="ph-main"><div class="ph-l"><div class="ph-id"><span class="ph-id__p">Cross Platform</span><span class="ph-id__n">Watch Tower</span></div><span class="ph-sep"></span><div class="ph-pers"><div class="ph-per"><span class="ph-per__l">Time Period<em class="ph-chip">MTD</em></span><span class="ph-per__d"><b>1 Mar‘26</b><i>-</i><b>30 Mar‘26</b><svg class="ph-i" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span></div><div class="ph-per"><span class="ph-per__l">Compare with<em class="ph-chip">LM</em></span><span class="ph-per__d"><b>1 Mar‘26</b><i>-</i><b>30 Mar‘26</b><svg class="ph-i" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span></div></div></div><div class="ph-r"><span class="ph-strip"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 7.2v3.4M8 5.2v.01"/></svg><span>Data till <b>12 May’24</b></span></span><span class="ph-strip"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 7.2v3.4M8 5.2v.01"/></svg><span>Data across <b>1362 Darkstores</b></span><svg class="ph-i" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span><span class="ph-gobbs"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6 1.5 7.2 5 10.5 6.2 7.2 7.4 6 11 4.8 7.4 1.5 6.2 4.8 5z"/><path d="M11.5 8.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg>Ask GobbsIQ</span><span class="ph-sep ph-sep--r"></span><span class="ph-bell"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11V7a4 4 0 0 1 8 0v4l1 1.5H3z"/><path d="M6.6 14a1.5 1.5 0 0 0 2.8 0"/></svg></span><span class="ph-prof"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#fff" stroke-width="1.3" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2 13 5v6L8 13.8 3 11V5z"/><path d="M3 5l5 2.8L13 5M8 7.8v6"/></svg></span></div></div><div class="ph-nav"><div class="ph-seg"><span class="ph-seg__e is-on">Tab 1</span><span class="ph-seg__e">Tab 2</span><span class="ph-seg__e">Tab 3</span><span class="ph-seg__e">Tab 4</span></div><div class="ph-acts"><span class="ph-btn ph-btn--icon"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v7.5M4.8 7 8 10.2 11.2 7M3 13.5h10"/></svg></span><span class="ph-btn ph-btn--out"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5v9M3.5 8h9"/></svg>Button</span><span class="ph-btn ph-btn--fill"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5v9M3.5 8h9"/></svg>Button</span></div></div><div class="ph-filt"><div class="ph-filt__l"><span class="ph-filt__t">Filters</span><span class="ph-ft"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.5v5M5.5 8h5"/></svg>Platform</span><span class="ph-ft"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.5v5M5.5 8h5"/></svg>Brand</span><span class="ph-ft"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.5v5M5.5 8h5"/></svg>City</span><span class="ph-ft"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.5v5M5.5 8h5"/></svg>Category</span><span class="ph-ft"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.5v5M5.5 8h5"/></svg>Tags</span></div><span class="ph-mrp"><span class="is-on">MRP</span><span>SP</span></span></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Rows</td><td>① ② ③</td><td></td></tr><tr><td>MRP/SP Toggle</td><td>On</td><td></td></tr></tbody></table></div>
+          <h3>Performance Marketing page</h3>
+          <div class="msg-stage"><div class="ph-fit"><div class="ph ph--bg"><div class="ph-main"><div class="ph-l"><div class="ph-id"><span class="ph-id__p">Cross Platform</span><span class="ph-id__n">Watch Tower</span></div><span class="ph-sep"></span><div class="ph-pers"><div class="ph-per"><span class="ph-per__l">Time Period<em class="ph-chip">MTD</em></span><span class="ph-per__d"><b>1 Mar‘26</b><i>-</i><b>30 Mar‘26</b><svg class="ph-i" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span></div><div class="ph-per"><span class="ph-per__l">Compare with<em class="ph-chip">LM</em></span><span class="ph-per__d"><b>1 Mar‘26</b><i>-</i><b>30 Mar‘26</b><svg class="ph-i" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span></div></div></div><div class="ph-r"><span class="ph-strip"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 7.2v3.4M8 5.2v.01"/></svg><span>Data till <b>12 May’24</b></span></span><span class="ph-gobbs"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6 1.5 7.2 5 10.5 6.2 7.2 7.4 6 11 4.8 7.4 1.5 6.2 4.8 5z"/><path d="M11.5 8.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg>Ask GobbsIQ</span><span class="ph-sep ph-sep--r"></span><span class="ph-bell"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11V7a4 4 0 0 1 8 0v4l1 1.5H3z"/><path d="M6.6 14a1.5 1.5 0 0 0 2.8 0"/></svg></span><span class="ph-prof"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#fff" stroke-width="1.3" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2 13 5v6L8 13.8 3 11V5z"/><path d="M3 5l5 2.8L13 5M8 7.8v6"/></svg></span></div></div><div class="ph-nav"><div class="ph-seg"><span class="ph-seg__e is-on">Tab 1</span><span class="ph-seg__e">Tab 2</span><span class="ph-seg__e">Tab 3</span><span class="ph-seg__e">Tab 4</span></div><div class="ph-acts"><span class="ph-btn ph-btn--icon"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v7.5M4.8 7 8 10.2 11.2 7M3 13.5h10"/></svg></span><span class="ph-btn ph-btn--out"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5v9M3.5 8h9"/></svg>Button</span><span class="ph-btn ph-btn--fill"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5v9M3.5 8h9"/></svg>Button</span></div></div><div class="ph-filt"><div class="ph-filt__l"><span class="ph-filt__t">Filters</span><span class="ph-ft"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.5v5M5.5 8h5"/></svg>Platform</span><span class="ph-ft"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.5v5M5.5 8h5"/></svg>Brand</span><span class="ph-ft"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.5v5M5.5 8h5"/></svg>City</span><span class="ph-ft"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.5v5M5.5 8h5"/></svg>Category</span><span class="ph-ft"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.5v5M5.5 8h5"/></svg>Tags</span></div></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Darkstore count</td><td>false</td><td></td></tr><tr><td>MRP/SP Toggle</td><td>false</td><td></td></tr></tbody></table></div>
+          <h3>Supply Chain Action</h3>
+          <div class="msg-stage"><div class="ph-fit"><div class="ph ph--bg"><div class="ph-main"><div class="ph-l"><div class="ph-id"><span class="ph-id__p">Cross Platform</span><span class="ph-id__n">Watch Tower</span></div></div><div class="ph-r"><span class="ph-strip"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 7.2v3.4M8 5.2v.01"/></svg><span>Data till <b>12 May’24</b></span></span><span class="ph-strip"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 7.2v3.4M8 5.2v.01"/></svg><span>Data across <b>1362 Darkstores</b></span><svg class="ph-i" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span><span class="ph-gobbs"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6 1.5 7.2 5 10.5 6.2 7.2 7.4 6 11 4.8 7.4 1.5 6.2 4.8 5z"/><path d="M11.5 8.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg>Ask GobbsIQ</span><span class="ph-sep ph-sep--r"></span><span class="ph-bell"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11V7a4 4 0 0 1 8 0v4l1 1.5H3z"/><path d="M6.6 14a1.5 1.5 0 0 0 2.8 0"/></svg></span><span class="ph-prof"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#fff" stroke-width="1.3" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2 13 5v6L8 13.8 3 11V5z"/><path d="M3 5l5 2.8L13 5M8 7.8v6"/></svg></span></div></div><div class="ph-filt"><div class="ph-filt__l"><span class="ph-filt__t">Filters</span><span class="ph-ft"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.5v5M5.5 8h5"/></svg>Platform</span><span class="ph-ft"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.5v5M5.5 8h5"/></svg>Brand</span><span class="ph-ft"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.5v5M5.5 8h5"/></svg>City</span><span class="ph-ft"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.5v5M5.5 8h5"/></svg>Category</span><span class="ph-ft"><svg class="ph-i" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.5v5M5.5 8h5"/></svg>Tags</span></div><span class="ph-mrp"><span class="is-on">MRP</span><span>SP</span></span></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Period comparison</td><td>false</td><td>Real-time data.</td></tr><tr><td>Page-Navigation &amp; Action</td><td>false</td><td></td></tr></tbody></table></div>
+        </section>
+        <section id="related">
+          <h2>Related components</h2>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>How the header uses it</th></tr></thead><tbody><tr><td><a href="docs.html">Buttons</a></td><td>Ask GobbsIQ, the download button and the two page buttons.</td></tr><tr><td><a href="docs-messages.html">Message</a></td><td>The “Data till” and darkstore info strips.</td></tr><tr><td><a href="docs-chips.html">Chips</a></td><td>Filter chips and the period chips.</td></tr><tr><td><a href="docs-dropdown.html">Dropdown</a></td><td>The menus that open from filter chips and the time-period selector.</td></tr></tbody></table></div>
+        </section>
+        <section id="source">
+          <h2>Source</h2>
+          <p>Values come from the <strong>Page header v2 — Documentation</strong> frames in the Cube Core Figma file (Anatomy, Property, Color Annotation, Dimensions, API, Usage Guidelines, How to use), the live <strong>Header v2 — use this</strong> section and the design team’s Header guidelines. The API frame is dimmed to 50% in Figma; its content is included here.</p>
+        </section>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7330-35588" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#api">API and behavior</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#related">Related components</a></li>
+        <li><a href="#source">Source</a></li>
+        </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+
+  /* Page header previews are built at the real 1184px width and scaled to fit. */
+  function phFit(){document.querySelectorAll('.ph-fit').forEach(function(w){var p=w.firstElementChild;p.style.zoom=1;var z=Math.min(1,w.clientWidth/1184);p.style.zoom=z;w.style.height='';});}
+  phFit(); window.addEventListener('resize',function(){phFit(); if(typeof drawAnatomy==='function') drawAnatomy();});
+})();
+</script>

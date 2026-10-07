@@ -1,0 +1,256 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a aria-current="true" href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="#" aria-disabled="true">Popup <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Right Overlays <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
+        <li><a href="docs-sidenav.html" aria-current="page">Side Nav</a></li>
+        <li><a href="#" aria-disabled="true">Stepper <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tab <small>Soon</small></a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Side Nav</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">The left panel people use to move around the product: a workspace switcher, the top-level pages, a platform filter, expandable module groups and a footer, in Light and Dark mode. The <a href="docs-sidenav-specifications.html">Specifications tab</a> lists every value.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-sidenav.html" role="tab">Guidelines</a>
+        <a href="docs-sidenav-specifications.html" role="tab" aria-selected="true">Specifications</a>
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
+          Code
+          <span class="sr-only">(not in Storybook yet)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec">
+
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>All values in px.</p>
+          <h3>Panel</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Width</td><td>256</td><td>Fixed</td></tr><tr><td>Height</td><td>Full viewport (891 in the mock)</td><td>The middle area scrolls; header and footer stay pinned</td></tr><tr><td>Right border</td><td>1</td><td>Default Card Stroke (Light), Secondary-text/900 (Dark)</td></tr><tr><td>Header</td><td>256 &times; 56–60, padding 12 / 8, gap 8</td><td>Logo 36 &times; 36, radius 6</td></tr><tr><td>Body padding</td><td>8</td><td></td></tr><tr><td>Gap between page items</td><td>4</td><td></td></tr><tr><td>Gap between sections</td><td>16 / 12</td><td>Page list → platform → modules</td></tr><tr><td>Footer</td><td>256 &times; 52, padding 10</td><td>Knowledge base 44 &times; 32</td></tr></tbody></table></div>
+          <h3>Rows</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Nav item (L1)</th><th>Nav sub-item (L2)</th><th>Nav sub-child (L3)</th></tr></thead><tbody><tr><td>Size</td><td>236 &times; 32</td><td>212 &times; 32</td><td>212 &times; 32</td></tr><tr><td>Padding (V / H)</td><td>6 / 8</td><td>7 / 8</td><td>0 / 8</td></tr><tr><td>Left indent</td><td>0</td><td>28 (group padding)</td><td>28 + nested</td></tr><tr><td>Radius</td><td>6</td><td>6</td><td>0 (inner pill 6)</td></tr><tr><td>Icon</td><td>20 &times; 20</td><td>16 (optional Left Icon)</td><td>&mdash;</td></tr><tr><td>Gap icon to label</td><td>8</td><td>8</td><td>&mdash;</td></tr><tr><td>Label</td><td>12 / 16 Medium, Bold selected</td><td>12 / 16 Medium, Bold selected</td><td>12 / 16 Medium, Bold selected</td></tr><tr><td>Gap between rows</td><td>4</td><td>4–8</td><td>4</td></tr></tbody></table></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th></tr></thead><tbody><tr><td>Platform logo</td><td>38 &times; 38, radius 8, gap 8</td></tr><tr><td>Grid selector</td><td>240 &times; 38 (&lt;3x3), 240 &times; 131 (&gt; 3x3)</td></tr><tr><td>Platform type tabs</td><td>224 &times; 34</td></tr><tr><td>NEW tag</td><td>Bold 10/10, padding 4 / 2 / 6, radius 32</td></tr></tbody></table></div>
+        </section>
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <p>Tokens read from the variants. Values marked “raw” are hex values not bound to a variable in Figma &mdash; they should be tokenised.</p>
+          <h3>Panel surfaces</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Light</th><th>Dark</th></tr></thead><tbody><tr><td>Panel, header and footer background</td><td>Flat White <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td><span class="msg-sw" style="background:#0f111b"></span>#0f111b raw</td></tr><tr><td>Panel border</td><td>Default Card Stroke <span class="msg-sw" style="background:#e6e7e8"></span>#e6e7e8</td><td>Secondary-text/900 <span class="msg-sw" style="background:#363e45"></span>#363e45</td></tr><tr><td>Header border and logo border</td><td>Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee, logo Secondary-text/50</td><td>#363E45, logo <span class="msg-sw" style="background:#404b59"></span>#404b59 raw</td></tr><tr><td>“Workspace” label</td><td>Secondary-text/700 <span class="msg-sw" style="background:#586473"></span>#586473</td><td>Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td></tr><tr><td>Workspace name</td><td>Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214 Bold 14</td><td>White Bold 14</td></tr><tr><td>Module divider</td><td>Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td>Secondary-text/900 <span class="msg-sw" style="background:#363e45"></span>#363e45</td></tr><tr><td>Tab selection bar (2px)</td><td>Primary/700 <span class="msg-sw" style="background:#024dc6"></span>#024dc6</td><td><span class="msg-sw" style="background:#0055b0"></span>#0055b0 raw</td></tr></tbody></table></div>
+          <h3>Nav item (level 1)</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Default</th><th>Hovered</th><th>Selected</th><th>Locked</th></tr></thead><tbody><tr><td>Light &middot; background</td><td>Flat White</td><td>Secondary Text/50 <span class="msg-sw" style="background:#f4f7f9"></span>#f4f7f9</td><td>Primary/100 <span class="msg-sw" style="background:#eaf1ff"></span>#eaf1ff</td><td>Flat White</td></tr><tr><td>Light &middot; label</td><td>Primary Text/800 <span class="msg-sw" style="background:#3e464c"></span>#3e464c Medium</td><td>Primary Text/800 Medium</td><td>Primary/700 <span class="msg-sw" style="background:#024dc6"></span>#024dc6 Bold</td><td>Disabled/600 <span class="msg-sw" style="background:#878787"></span>#878787 Medium</td></tr><tr><td>Dark &middot; background</td><td><span class="msg-sw" style="background:#0f111b"></span>#0f111b raw</td><td>White 5% raw</td><td>Primary/900 <span class="msg-sw" style="background:#01307f"></span>#01307f</td><td>#0F111B raw</td></tr><tr><td>Dark &middot; label</td><td>Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4 Medium</td><td>Secondary-text/200 Medium</td><td>White Bold</td><td>Disabled/500 <span class="msg-sw" style="background:#9e9e9e"></span>#9e9e9e Medium</td></tr></tbody></table></div>
+          <h3>Nav sub-item (level 2)</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Default</th><th>Hovered</th><th>Selected</th><th>Expanded</th></tr></thead><tbody><tr><td>Light &middot; background</td><td>Flat White</td><td>Secondary Text/50</td><td><span class="msg-sw" style="background:#e9efff"></span>#e9efff raw</td><td>Flat White</td></tr><tr><td>Light &middot; label</td><td>Primary-text/700 <span class="msg-sw" style="background:#465058"></span>#465058 Medium</td><td>Primary-text/700 Medium</td><td>Primary/700 Bold</td><td>Primary-text/700 Medium</td></tr><tr><td>Dark &middot; background</td><td>#0F111B raw</td><td>White 5% raw</td><td>Primary/900</td><td>#0F111B raw</td></tr><tr><td>Dark &middot; label</td><td>Secondary-text/400 <span class="msg-sw" style="background:#9ca6b5"></span>#9ca6b5 Medium</td><td>Secondary-text/400 Medium</td><td>White Bold</td><td>Secondary-text/400 Medium</td></tr></tbody></table></div>
+          <h3>Nav sub-child (level 3)</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Default</th><th>Hovered</th><th>Selected</th><th>Locked</th></tr></thead><tbody><tr><td>Light &middot; rail (2px)</td><td>Default Card Stroke</td><td>Secondary-text/300 <span class="msg-sw" style="background:#c6d4db"></span>#c6d4db</td><td>Primary/700</td><td>Secondary-text/300</td></tr><tr><td>Light &middot; inner pill</td><td>None</td><td>Secondary Text/50</td><td>#E9EFFF raw</td><td>None</td></tr><tr><td>Light &middot; label</td><td>Primary-text/700 Medium</td><td>Primary-text/700 Medium</td><td>Primary/700 Bold</td><td>Disabled/600 Medium</td></tr><tr><td>Dark &middot; rail (2px)</td><td>Secondary-text/700</td><td>Secondary-text/200</td><td>Secondary-text/100</td><td>Secondary-text/700</td></tr><tr><td>Dark &middot; inner pill</td><td>None</td><td>White 5%</td><td>Primary/900</td><td>#0F111B</td></tr><tr><td>Dark &middot; label</td><td>Secondary-text/400 Medium</td><td>Secondary-text/400 Medium</td><td>White Bold</td><td>Secondary-text/400 Medium</td></tr></tbody></table></div>
+          <h3>Tags and platforms</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Token / value</th></tr></thead><tbody><tr><td>NEW tag (Light)</td><td>Accent/Purple/50 <span class="msg-sw" style="background:#faf5ff"></span>#faf5ff, border Accent/Purple/100, text Accent/Purple/600 <span class="msg-sw" style="background:#8b37be"></span>#8b37be</td></tr><tr><td>NEW tag (Dark)</td><td>Accent/Pink/50 <span class="msg-sw" style="background:#fff5f9"></span>#fff5f9, border Accent/Pink/100, text Accent/Pink/800 <span class="msg-sw" style="background:#87255f"></span>#87255f</td></tr><tr><td>Platform &middot; Default</td><td>White, 60% opacity</td></tr><tr><td>Platform &middot; Hovered</td><td>Secondary Text/50 and a dark tooltip</td></tr><tr><td>Platform &middot; Selected</td><td>#E9EFFF raw, Primary/700 ring and a check badge</td></tr><tr><td>Knowledge base</td><td>White, 1px Primary/100, soft inset glow (Light); 20% grey (Dark)</td></tr></tbody></table></div>
+        </section>
+        <section id="properties">
+          <h2>Properties</h2>
+          <h3>Navbar-V3</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Mode</td><td>Light | Dark</td><td>required</td><td>Light</td><td>Applies to the whole panel.</td></tr></tbody></table></div>
+          <h3>Nav item (level 1)</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Interactive State</td><td>Default | Hovered | Selected | Locked</td><td>required</td><td>Default</td><td></td></tr><tr><td>Has Children</td><td>No | Yes</td><td>required</td><td>No</td><td>Yes = opens a module group.</td></tr><tr><td>New feature</td><td>No | Yes</td><td>required</td><td>No</td><td>“NEW” tag.</td></tr><tr><td>Mode</td><td>Light | Dark</td><td>required</td><td>Light</td><td>Match the navbar.</td></tr><tr><td>Hover Tooltip</td><td>true | false</td><td>optional</td><td>true</td><td>Tooltip on hover (explain Locked).</td></tr><tr><td>Label · icon</td><td>overrides</td><td>required</td><td>&mdash;</td><td>Edit the text; swap the nav icon.</td></tr></tbody></table></div>
+          <h3>Nav sub-item (level 2) and sub-child (level 3)</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Sub-item · State</td><td>Default | Hovered | Selected | Expanded</td><td>required</td><td>Default</td><td>Expanded = has open children.</td></tr><tr><td>Sub-item · Arrow</td><td>true | false</td><td>optional</td><td>true</td><td>Show when it has children.</td></tr><tr><td>Sub-item · Left Icon · New Tag</td><td>true | false</td><td>optional</td><td>false</td><td></td></tr><tr><td>Sub-child · State</td><td>Default | Selected | Hovered | Locked</td><td>required</td><td>Default</td><td></td></tr><tr><td>Sub-child · Show New Tag</td><td>true | false</td><td>optional</td><td>false</td><td></td></tr><tr><td>Mode</td><td>Light | Dark</td><td>required</td><td>Dark</td><td></td></tr></tbody></table></div>
+          <h3>Header, platform, modules and footer</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Nav header · Case</td><td>Default | Overview</td><td>required</td><td>Default</td><td></td></tr><tr><td>Nav header · Arrows</td><td>true | false</td><td>optional</td><td>true</td><td>Hide when there is only one workspace.</td></tr><tr><td>Platform type · Mode</td><td>Light | Dark</td><td>required</td><td>Dark</td><td>Contains Primary tabs (QComm / EComm).</td></tr><tr><td>Grid size</td><td>&lt;3x3 | &gt; 3x3</td><td>required</td><td>&lt;3x3</td><td></td></tr><tr><td>Nav platform · State</td><td>Default | Hovered | Selected</td><td>required</td><td>Default</td><td>Swap the nested logo per platform.</td></tr><tr><td>Module group · Expanded</td><td>Yes | No</td><td>required</td><td>varies</td><td>Digital Shelf, Performance Marketing, Setup &amp; Integration.</td></tr><tr><td>Nav footer · Mode</td><td>Light | Dark</td><td>required</td><td>Dark</td><td></td></tr><tr><td>Knowledge base · Mode</td><td>Light | Dark</td><td>required</td><td>Light</td><td></td></tr></tbody></table></div>
+          <p class="docs-note">Mode defaults differ by part in Figma (Light for the navbar, nav item and Knowledge base; Dark for the rest). Set Mode on Navbar-V3 and every part follows.</p>
+        </section>
+        <section id="api">
+          <h2>API and behavior</h2>
+          <p><strong>Designers:</strong> place Navbar-V3, pick the Mode, then set which item is Selected and which module is expanded inside the instance.
+            <strong>Developers:</strong> render from a navigation config (pages → modules → sub-pages); the Selected state comes from the current route.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Rule</th><th>Notes</th></tr></thead><tbody><tr><td>Selected</td><td>From the current route</td><td>Exactly one row Selected across all levels; its ancestors are Expanded.</td></tr><tr><td>Expand / collapse</td><td>Click the parent row</td><td>Remember open groups per user; auto-expand the group of the current page.</td></tr><tr><td>Locked</td><td>Not navigable</td><td>Show a tooltip with the reason or upgrade path.</td></tr><tr><td>Platform filter</td><td>Global context</td><td>Changes data on all module pages; persist the selection.</td></tr><tr><td>Overflow</td><td>Middle area scrolls</td><td>Header and footer stay fixed.</td></tr><tr><td>Keyboard</td><td>Tab / ↑ ↓ / Enter / → ←</td><td>← → collapse and expand groups; <code>aria-current="page"</code> on Selected.</td></tr><tr><td>Long labels</td><td>Ellipsis + tooltip</td><td>Never wrap to two lines.</td></tr></tbody></table></div>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+          <h3>Top-level page selected</h3>
+          <div class="msg-stage" style="justify-content:center"><div class="sn sn--light"><div class="sn-h"><span class="sn-h__logo">IT</span><span class="sn-h__t"><small>Workspace</small><b>ITC Classmate</b></span><svg class="sn-ic" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 8 3-3 3 3M7 12l3 3 3-3"/></svg></div><div class="sn-body"><div class="sn-list"><div class="sn-i is-selected"><svg class="sn-ic" viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="12.5" r="3"/><circle cx="14.5" cy="12.5" r="3"/><path d="M8.5 12.5h3M4 9.5 6 4h2.5l.5 5M16 9.5 14 4h-2.5l-.5 5"/></svg><span class="sn-t">Watchtower</span><span class="sn-tr"></span></div><div class="sn-i"><svg class="sn-ic" viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="4.5" r="1.8"/><circle cx="14" cy="4.5" r="1.8"/><circle cx="10" cy="15.5" r="1.8"/><path d="M6 6.3v1.7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V6.3M10 10v3.7"/></svg><span class="sn-t">Account Overview</span><span class="sn-tr"></span></div><div class="sn-i"><svg class="sn-ic" viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="5.5" height="5.5" rx="1"/><rect x="11.5" y="11.5" width="5.5" height="5.5" rx="1"/><circle cx="14.25" cy="5.75" r="2.75"/><circle cx="5.75" cy="14.25" r="2.75"/></svg><span class="sn-t">Custom Views</span><span class="sn-tr"></span></div><div class="sn-i"><svg class="sn-ic" viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5 9.4 7 14 8.5 9.4 10 8 14.5 6.6 10 2 8.5 6.6 7z"/><path d="M14.5 12.5l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6z"/></svg><span class="sn-t">Insights</span><span class="sn-tr"></span></div></div></div><div class="sn-f"><span class="sn-f__logo"><b>Gobble</b>Cube</span><span class="sn-kb"><svg class="sn-ic" viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5.5C8.5 4.3 6.5 4 4 4v11c2.5 0 4.5.3 6 1.5 1.5-1.2 3.5-1.5 6-1.5V4c-2.5 0-4.5.3-6 1.5zM10 5.5v11"/></svg></span></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Nav item</td><td>Watchtower · Selected</td><td></td></tr><tr><td>Others</td><td>Default</td><td></td></tr></tbody></table></div>
+          <h3>Module page selected</h3>
+          <div class="msg-stage" style="justify-content:center"><div class="sn sn--light sn--frag" style="width:256px"><div class="sn-mod"><div class="sn-i"><svg class="sn-ic" viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2.5 17 6l-7 3.5L3 6z"/><path d="m3 10 7 3.5 7-3.5M3 14l7 3.5 7-3.5"/></svg><span class="sn-t">Digital Shelf</span><span class="sn-tr"><svg class="sn-ic" viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10"/></svg></span></div><div class="sn-grp"><div class="sn-s"><span class="sn-t">Category RCA</span><span class="sn-tr"></span></div><div class="sn-s is-expanded"><span class="sn-t">Visibility</span><span class="sn-tr"><svg class="sn-ic" viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 12 4-4 4 4"/></svg></span></div><div class="sn-c"><span class="sn-c__rail"></span><span class="sn-c__p"><span class="sn-t">Search Visibility</span></span></div><div class="sn-c"><span class="sn-c__rail"></span><span class="sn-c__p"><span class="sn-t">Cat Nav SOV</span></span></div><div class="sn-s is-selected"><span class="sn-t">Availability</span><span class="sn-tr"></span></div><div class="sn-s is-expanded"><span class="sn-t">Supply Chain</span><span class="sn-tr"><svg class="sn-ic" viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 12 4-4 4 4"/></svg></span></div><div class="sn-c"><span class="sn-c__rail"></span><span class="sn-c__p"><span class="sn-t">Actions</span></span></div><div class="sn-c"><span class="sn-c__rail"></span><span class="sn-c__p"><span class="sn-t">Sales Loss Attribution</span></span></div><div class="sn-s"><span class="sn-t">Content Score</span><span class="sn-tr"></span></div><div class="sn-s"><span class="sn-t">Discounting</span><span class="sn-tr"></span></div></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Module group</td><td>Digital Shelf · Expanded = Yes</td><td></td></tr><tr><td>Nav sub-item</td><td>Selected</td><td></td></tr><tr><td>Parent nav item</td><td>Default (not Selected)</td><td>Only the leaf is Selected</td></tr></tbody></table></div>
+          <h3>Locked item</h3>
+          <div class="msg-stage" style="justify-content:center"><div class="sn sn--light sn--frag" style="width:256px"><div class="sn-i is-selected"><svg class="sn-ic" viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="12.5" r="3"/><circle cx="14.5" cy="12.5" r="3"/><path d="M8.5 12.5h3M4 9.5 6 4h2.5l.5 5M16 9.5 14 4h-2.5l-.5 5"/></svg><span class="sn-t">Watchtower</span><span class="sn-tr"></span></div><div class="sn-i"><svg class="sn-ic" viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="4.5" r="1.8"/><circle cx="14" cy="4.5" r="1.8"/><circle cx="10" cy="15.5" r="1.8"/><path d="M6 6.3v1.7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V6.3M10 10v3.7"/></svg><span class="sn-t">Account Overview</span><span class="sn-tr"></span></div><div class="sn-i is-locked"><svg class="sn-ic" viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M3.5 8.5 6.5 9l1.5 2-1 2 1 3M12 3.5l-1 2.5 2 1.5 3-.5M13 17l.5-3 2.5-1"/></svg><span class="sn-t">Geo Intelligence</span><span class="sn-tr"><svg class="sn-ic" viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="9" width="11" height="8" rx="1.5"/><path d="M7 9V6.5a3 3 0 0 1 6 0V9"/></svg></span></div></div><span class="sn-tipdemo">Upgrade to access Geo Intelligence</span></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Nav item</td><td>Interactive State = Locked</td><td></td></tr><tr><td>Hover Tooltip</td><td>true</td><td>“Upgrade to access Geo Intelligence”</td></tr></tbody></table></div>
+        </section>
+        <section id="related">
+          <h2>Related components</h2>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>How it relates</th></tr></thead><tbody><tr><td><a href="docs-header.html">Header</a></td><td>Sits to the right of the navbar, starting at X 256.</td></tr><tr><td><a href="docs-tooltips.html">Tooltips</a></td><td>Explain Locked items and name platforms on hover.</td></tr><tr><td><a href="docs-chips.html">Chips</a></td><td>The NEW tag follows the chip styling.</td></tr></tbody></table></div>
+        </section>
+        <section id="source">
+          <h2>Source</h2>
+          <p>Values come from the <strong>Navbar — Documentation</strong> frames in the Cube Core Figma file (Anatomy, Property, Color Annotation, Dimensions, API, Usage Guidelines, How to use) and the live <strong>Navbar - V3</strong> components. Where the docs and the live component differ (level 2 padding and icon size, level 3 radius, the workspace name weight), the live component was used for the previews.</p>
+        </section>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7264-38627" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#api">API and behavior</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#related">Related components</a></li>
+        <li><a href="#source">Source</a></li>
+        </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+})();
+</script>

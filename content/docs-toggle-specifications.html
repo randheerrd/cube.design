@@ -1,0 +1,301 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="#" aria-disabled="true">Popup <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Right Overlays <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="#" aria-disabled="true">Stepper <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tab <small>Soon</small></a></li>
+        <li><a href="docs-toggle.html" aria-current="page">Toggle</a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Toggle</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">A switch that turns a single setting on or off with immediate effect. One component
+          (Toggle-switch) with three sizes, an on / off state, a disabled state and optional prefix / suffix labels.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-toggle.html" role="tab">Guidelines</a>
+        <a href="docs-toggle-specifications.html" role="tab" aria-selected="true">Specifications</a>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/controls-toggle--docs" role="tab" target="_blank" rel="noopener noreferrer">
+          Code
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7 9"/></svg>
+          <span class="sr-only">(opens Storybook in a new tab)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec docs-content--bt docs-content--dt docs-content--tg">
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>All values in px. Medium is the default size.</p>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Large</th><th>Medium</th><th>Small</th></tr></thead><tbody>
+              <tr><td>Component height</td><td>24</td><td>20</td><td>16</td></tr>
+              <tr><td>Track (W × H)</td><td>50 × 24</td><td>42 × 20</td><td>32 × 16</td></tr>
+              <tr><td>Track padding</td><td>4</td><td>3</td><td>3</td></tr>
+              <tr><td>Track radius</td><td>100 (pill)</td><td>100 (pill)</td><td>100 (pill)</td></tr>
+              <tr><td>Knob (W × H)</td><td>24 × 16</td><td>20 × 14</td><td>14 × 10</td></tr>
+              <tr><td>Knob radius</td><td>100 (pill)</td><td>100 (pill)</td><td>100 (pill)</td></tr>
+              <tr><td>Knob travel</td><td>18</td><td>16</td><td>12</td></tr>
+              <tr><td>Gap label ↔ track</td><td>8</td><td>6</td><td>6</td></tr>
+              <tr><td>Prefix label</td><td>14 / 18 Medium</td><td>12 / 16 Medium · 0.1 tracking</td><td>12 / 16 Medium · 0.1 tracking</td></tr>
+              <tr><td>Suffix label</td><td>14 / 18 Medium ⚠</td><td>12 / 16 Medium · 0.1 tracking</td><td>12 / 16 Medium · 0.1 tracking</td></tr>
+            </tbody></table></div>
+          <p>⚠ In Figma the Large suffix is 12 / 16; it should match the prefix at 14 / 18. This site and the
+            implementation use 14 / 18.</p>
+          <h3>Layout guidance</h3>
+          <p>Recommended spacing when placing toggles &mdash; not part of the component.</p>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Large</th><th>Medium</th><th>Small</th></tr></thead><tbody>
+              <tr><td>Settings row height</td><td>48</td><td>40</td><td>32</td></tr>
+              <tr><td>Gap between stacked toggles</td><td>16</td><td>12</td><td>8</td></tr>
+              <tr><td>Label ↔ toggle in a settings row</td><td>Space-between (full width)</td><td>Space-between</td><td>Inline (8)</td></tr>
+              <tr><td>Helper text below label</td><td>12 / 16, 4px gap</td><td>12 / 16, 4px gap</td><td>&mdash;</td></tr>
+            </tbody></table></div>
+          <div class="docs-demo bt-ref dt-ref">
+            <div class="chp-row tg-ref"><span class="tgl" data-size="l"><span class="tgl__track"><span class="tgl__knob"></span></span></span><span class="tgl" data-size="l" data-on><span class="tgl__track"><span class="tgl__knob"></span></span></span><span class="tgl" data-size="m"><span class="tgl__track"><span class="tgl__knob"></span></span></span><span class="tgl" data-size="m" data-on><span class="tgl__track"><span class="tgl__knob"></span></span></span><span class="tgl" data-size="s"><span class="tgl__track"><span class="tgl__knob"></span></span></span><span class="tgl" data-size="s" data-on><span class="tgl__track"><span class="tgl__knob"></span></span></span></div>
+            <p class="docs-demo__caption">Real size, off and on: Large · Medium · Small.</p>
+          </div>
+        </section>
+
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <p>Tokens are the same for Large, Medium and Small. Use the token names in code, not the hex values.</p>
+          <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Element</th><th>Off</th><th>On</th><th>Off · Disabled</th><th>On · Disabled</th></tr></thead><tbody>
+              <tr><td>Track fill</td><td><span class="bt-swatch" style="background:#e8eaee"></span><code>Secondary-text/100</code></td><td><span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td><td><span class="bt-swatch" style="background:#efefef"></span><code>Disabled/100</code></td><td><span class="bt-swatch" style="background:#cfcfcf"></span><code>Disabled/300</code></td></tr>
+              <tr><td>Knob fill</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>White/100</code></td><td><span class="bt-swatch" style="background:#ffffff"></span><code>White/100</code></td><td><span class="bt-swatch" style="background:rgba(255,255,255,.7)"></span><code>White/70</code></td><td><span class="bt-swatch" style="background:#ffffff"></span><code>White/100</code></td></tr>
+              <tr><td>Label (prefix / suffix)</td><td><span class="bt-swatch" style="background:#586473"></span><code>Secondary-text/700</code></td><td><span class="bt-swatch" style="background:#101214"></span><code>Primary-text/950</code></td><td><span class="bt-swatch" style="background:#9e9e9e"></span><code>Disabled/500</code></td><td><span class="bt-swatch" style="background:#9e9e9e"></span><code>Disabled/500</code></td></tr>
+              <tr><td>Label weight</td><td>Medium</td><td>Medium</td><td>Medium</td><td>Medium</td></tr>
+            </tbody></table></div>
+          <h3>Interaction states</h3>
+          <p>The component has no Hover or Focus variants. Handle them in code:</p>
+          <div class="bx-scroll"><table class="docs-table tg-states"><thead><tr><th>State</th><th>In Figma</th><th>In code</th><th>Preview</th></tr></thead><tbody>
+              <tr><td>Hover</td><td>⚠ Not in component</td><td>Track one step darker: <span class="bt-swatch" style="background:#dbdfe4"></span><code>Secondary-text/200</code> off, <span class="bt-swatch" style="background:#024dc6"></span><code>Primary/700</code> on.</td><td><span class="tg-pair"><span class="tgl" data-size="m" data-hover><span class="tgl__track"><span class="tgl__knob"></span></span></span><span class="tgl" data-size="m" data-on data-hover><span class="tgl__track"><span class="tgl__knob"></span></span></span></span></td></tr>
+              <tr><td>Focus (keyboard)</td><td>⚠ Not in component</td><td>2px <span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code> ring, 2px offset, on <code>:focus-visible</code>.</td><td><span class="tgl" data-size="m" data-on data-focus><span class="tgl__track"><span class="tgl__knob"></span></span></span></td></tr>
+              <tr><td>Pressed</td><td>&mdash;</td><td>Not needed &mdash; the switch flips on press.</td><td>&mdash;</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="properties">
+          <h2>Properties</h2>
+          <p><code>Selected</code> maps to the switch’s checked value, and the change applies immediately. In code use
+            <code>role="switch"</code> with <code>aria-checked</code>, and connect the label so clicking it toggles the switch.</p>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>Size</code></td><td>Large | Medium | Small</td><td>required</td><td>Medium</td><td>Track 50 / 42 / 32 px wide.</td></tr>
+              <tr><td><code>Selected</code></td><td>No | Yes</td><td>required</td><td>No</td><td>On / off value.</td></tr>
+              <tr><td><code>Disabled</code></td><td>No | Yes</td><td>required</td><td>No</td><td>Locks the current value; explain why nearby.</td></tr>
+              <tr><td><code>Prefix</code></td><td>true | false</td><td>optional</td><td>true</td><td>Shows the label before the switch.</td></tr>
+              <tr><td><code>Prefix text</code></td><td>string</td><td>optional</td><td>“Prefix”</td><td>The setting name &mdash; a noun phrase (“Email alerts”), not a verb.</td></tr>
+              <tr><td><code>Suffix</code></td><td>true | false</td><td>optional</td><td>false</td><td>Shows a label after the switch.</td></tr>
+              <tr><td><code>Suffix text</code></td><td>string</td><td>optional</td><td>“Suffix”</td><td>Use instead of Prefix for left-aligned lists, or with Prefix for binary pairs.</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="examples">
+          <h2>Configuration examples</h2>
+          <h3>Settings list</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><div class="tg-card"><p class="tg-card__title">Notifications</p><div class="tg-row"><span>Email alerts</span><span class="tgl" data-size="l" data-on><span class="tgl__track"><span class="tgl__knob"></span></span></span></div><div class="tg-row"><span>Weekly summary</span><span class="tgl" data-size="l"><span class="tgl__track"><span class="tgl__knob"></span></span></span></div><div class="tg-row"><span>Push notifications</span><span class="tgl" data-size="l" data-on><span class="tgl__track"><span class="tgl__knob"></span></span></span></div></div><p>Label on the left, switch aligned right in a full-width row. Each toggle saves instantly.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Component</td><td>Toggle-switch · Large</td><td></td></tr>              <tr><td>Prefix</td><td>false</td><td>The label is a separate text layer so rows can be full width.</td></tr>              <tr><td>Selected</td><td>Per setting</td><td>Reflects the saved value.</td></tr>
+            </tbody></table>
+          </div>
+          <h3>Chart control</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><span class="tgl" data-size="s" data-on><span class="tgl__lbl">Compare to last period</span><span class="tgl__track"><span class="tgl__knob"></span></span></span><p>A Small toggle in a chart header shows or hides a comparison series.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Component</td><td>Toggle-switch · Small</td><td></td></tr>              <tr><td>Prefix text</td><td>“Compare to last period”</td><td>Describes what appears when on.</td></tr>              <tr><td>Selected</td><td>Yes</td><td>The chart updates immediately.</td></tr>
+            </tbody></table>
+          </div>
+          <h3>Disabled with reason</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><div class="tg-help"><span class="tgl" data-size="l" data-disabled><span class="tgl__lbl">Auto-refresh every 5 min</span><span class="tgl__track"><span class="tgl__knob"></span></span></span><p class="tg-help__text">Available on the Pro plan.</p></div><p>Pair a disabled toggle with helper text that explains why.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Component</td><td>Toggle-switch · Large</td><td></td></tr>              <tr><td>Disabled</td><td>Yes</td><td></td></tr>              <tr><td>Helper text</td><td>12 / 16, Secondary-text</td><td>Placed 4px below the label.</td></tr>
+            </tbody></table>
+          </div>
+        </section>
+
+        <section id="source">
+          <h2>Source</h2>
+          <p>Taken from the Toggle documentation in the
+            <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7177-33195" target="_blank" rel="noopener noreferrer">Copy-of-GC-Design Figma file</a> and the
+            <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=1452-4934" target="_blank" rel="noopener noreferrer">Toggle-Switch component</a>. Differences from Figma:</p>
+          <ul>
+            <li>The Large suffix label is 14 / 18 here (12 / 16 in Figma, flagged there as a mistake).</li>
+            <li>Some track paddings in Figma don’t add up (Medium off: 3 + 20 + 22 = 45 in a 42 track; Small on: 17 + 14 + 3 = 34 in a 32 track).
+              Here the knob is positioned from the track padding and slides by the documented travel (18 / 16 / 12).</li>
+            <li>Hover and focus states are added in code; the component has neither.</li>
+            <li>The API frame is drafted at 50% opacity in Figma; its values match the component’s properties.</li>
+          </ul>
+          <p>The code equivalent in Storybook is <a href="https://storybook.gobblecube.ai/?path=/docs/controls-toggle--docs" target="_blank" rel="noopener noreferrer">Controls / Toggle</a>.</p>
+        </section>
+<script src="assets/js/toggle.js"></script>
+
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/controls-toggle--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Storybook</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7177-33195" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma docs</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=1452-4934" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma library</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#examples">Configuration examples</a></li>
+        <li><a href="#source">Source</a></li>
+      </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+})();
+</script>

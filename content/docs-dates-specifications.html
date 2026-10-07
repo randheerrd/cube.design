@@ -1,0 +1,359 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html" aria-current="page">Date Selector</a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="#" aria-disabled="true">Popup <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Right Overlays <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Selections <small>Soon</small></a></li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="#" aria-disabled="true">Stepper <small>Soon</small></a></li>
+        <li><a href="#" aria-disabled="true">Tab <small>Soon</small></a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Date Selector &amp; Calendar</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">A popover for picking a single date or a date range. Quick presets (MTD, 1M, 3M…) cover
+          the common cases; a <strong>Custom</strong> option opens a calendar for anything else. Built from five parts:
+          the Date-Selection-modal, its preset bar and Custom trigger, the Calendar and the Date-cell.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-dates.html" role="tab">Guidelines</a>
+        <a href="docs-dates-specifications.html" role="tab" aria-selected="true">Specifications</a>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/controls-dateinput--docs" role="tab" target="_blank" rel="noopener noreferrer">
+          Code
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7 9"/></svg>
+          <span class="sr-only">(opens Storybook in a new tab)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec docs-content--bt docs-content--dt">
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>All values in px.</p>
+          <h3>Calendar</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Single Date</th><th>Date Range</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Total size</td><td>249 × 252</td><td>497 × 252</td><td>Two 248px panels + 1px separator</td></tr>
+              <tr><td>Month panel</td><td>248 wide</td><td>248 wide</td><td>Padding 8 top / bottom · 12 left / right</td></tr>
+              <tr><td>Month selector row</td><td>224 × 36</td><td>224 × 36</td><td>Padding 8 / 6 · gap 16</td></tr>
+              <tr><td>Nav buttons</td><td>20 × 20</td><td>20 × 20</td><td>Icon-only, rounded; two per side, gap 8; icon 10</td></tr>
+              <tr><td>Weekday row</td><td>224 × 32</td><td>224 × 32</td><td>7 × 32</td></tr>
+              <tr><td>Date grid</td><td>224 wide</td><td>224 wide</td><td>7 columns × 32; rows of 32, 2px row gap</td></tr>
+              <tr><td>Separator</td><td>&mdash;</td><td>1 × 228</td><td>12px top / bottom inset</td></tr>
+              <tr><td>Corner radius</td><td>8</td><td>8</td><td></td></tr>
+            </tbody></table></div>
+          <h3>Date-cell</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Cell size</td><td>32 × 32</td><td>Fixed</td></tr>
+              <tr><td>Date text</td><td>10 / 12 SemiBold</td><td>Centred</td></tr>
+              <tr><td>Default / hover radius</td><td>6 / 8</td><td></td></tr>
+              <tr><td>Selected square</td><td>28 × 28 · radius 6</td><td>Inset 2px</td></tr>
+              <tr><td>Range strip radius</td><td>8 on outer corners only</td><td>Start = left corners, End = right corners</td></tr>
+              <tr><td>Within-range radius</td><td>0</td><td>Continuous band</td></tr>
+            </tbody></table></div>
+          <h3>Modal, presets &amp; trigger</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Date Range</th><th>Single Date</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Modal width (presets only)</td><td>319</td><td>223</td><td>Default state</td></tr>
+              <tr><td>Modal width (calendar open)</td><td>497</td><td>249</td><td>Matches the calendar</td></tr>
+              <tr><td>Modal padding / gap (top area)</td><td>8 / 8</td><td>8 / 8</td><td></td></tr>
+              <tr><td>Modal radius · shadow</td><td>8 · 0 4 20 12%</td><td>8 · 0 4 20 12%</td><td></td></tr>
+              <tr><td>Type switch</td><td>172 × 24</td><td>172 × 24</td><td>Segmented-control · Secondary · Small; segment padding 4 / 10</td></tr>
+              <tr><td>Preset bar</td><td>Height 32 · padding 2 · gap 2 · radius 8</td><td>same</td><td>1px border</td></tr>
+              <tr><td>Preset chip</td><td>Height 28 · padding 6 / 12</td><td>same</td><td>Radius 8</td></tr>
+              <tr><td>Custom trigger</td><td>Height 28 · padding 6 / 10 · gap 6 · radius 6</td><td>same</td><td>Width hugs the label (83 → 162)</td></tr>
+              <tr><td>Caret icon</td><td>12 × 12</td><td>12 × 12</td><td>CaretDown / CaretUp (Bold)</td></tr>
+            </tbody></table></div>
+          <div class="docs-demo bt-ref dt-ref">
+            <div class="chp-row"><span class="dc dc--sel dc--start dc--end"><span>1</span></span><div class="dsm" data-dsm='{"mode": "single", "preset": "SDLW"}'></div><div data-dsm='{"mode": "single", "start": "2026-04-03", "kind": "calendar"}'></div></div>
+            <p class="docs-demo__caption">Real size: Date-cell 32 × 32 · Single Date modal 223 wide · Calendar 249 × 252.</p>
+          </div>
+        </section>
+
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <p>Use these token names in code, not the hex values. All date text is SemiBold 10/12.</p>
+          <h3>Date-cell &mdash; interactive</h3>
+          <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Element</th><th>Default</th><th>Hovered</th><th>Selected</th><th>Within the range</th></tr></thead><tbody>
+              <tr><td>Cell background</td><td>&mdash;</td><td><span class="bt-swatch" style="background:#f7faff"></span><code>Steel Blue/50</code></td><td><span class="bt-swatch" style="background:#eaf1ff"></span><code>Primary/100</code> strip</td><td><span class="bt-swatch" style="background:#eaf1ff"></span><code>Primary/100</code></td></tr>
+              <tr><td>Selected square</td><td>&mdash;</td><td>&mdash;</td><td><span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td><td>&mdash;</td></tr>
+              <tr><td>Date text</td><td><span class="bt-swatch" style="background:#23292e"></span><code>Secondary-text/950</code></td><td><span class="bt-swatch" style="background:#23292e"></span><code>Secondary-text/950</code></td><td><span class="bt-swatch" style="background:#ffffff"></span><code>White/100</code></td><td><span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td></tr>
+            </tbody></table></div>
+          <h3>Date-cell &mdash; non-interactive</h3>
+          <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Element</th><th>Other Month</th><th>Disabled</th><th>Empty</th></tr></thead><tbody>
+              <tr><td>Cell background</td><td>&mdash;</td><td><span class="bt-swatch" style="background:#fafafa"></span><code>Disabled/50</code></td><td>&mdash;</td></tr>
+              <tr><td>Date text</td><td><span class="bt-swatch" style="background:#bfc5cf"></span><code>Secondary-text/300</code></td><td><span class="bt-swatch" style="background:#cfcfcf"></span><code>Disabled/300</code></td><td>&mdash; (no text)</td></tr>
+            </tbody></table></div>
+          <h3>Calendar &amp; modal chrome</h3>
+          <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Element</th><th>Token / value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Modal container</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>White/100</code> · shadow 0 4 20 12%</td><td>Radius 8</td></tr>
+              <tr><td>Calendar container</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>White/100</code></td><td>Radius 8</td></tr>
+              <tr><td>Month label</td><td><span class="bt-swatch" style="background:#101214"></span><code>Primary-text/950</code> · SemiBold 12/16</td><td>e.g. “Apr 2026”</td></tr>
+              <tr><td>Weekday labels</td><td><span class="bt-swatch" style="background:#69778b"></span><code>Secondary-text/600</code> · 10/12</td><td>⚠ Medium in the start month, Regular in the end month in Figma &mdash; use Medium.</td></tr>
+              <tr><td>Month separator</td><td><span class="bt-swatch" style="background:#e8eaee"></span><code>Secondary-text/100</code> · 1px</td><td></td></tr>
+              <tr><td>Back nav (« ‹)</td><td>Neutral-Button · Naked · Small</td><td>Disabled at the earliest month (<span class="bt-swatch" style="background:#b5b5b5"></span><code>#B5B5B5</code>)</td></tr>
+              <tr><td>Forward nav (› »)</td><td>Action-Button · Naked · Core · Small</td><td><span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td></tr>
+            </tbody></table></div>
+          <h3>Presets &amp; Custom trigger</h3>
+          <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Element</th><th>Default</th><th>Focused / open</th><th>Value selected / applied</th></tr></thead><tbody>
+              <tr><td>Bar container</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>White/100</code> · border <span class="bt-swatch" style="background:#e8eaee"></span><code>Secondary-text/100</code></td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td>Preset (unselected)</td><td><span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code></td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td>Preset (selected)</td><td><span class="bt-swatch" style="background:#eaf1ff"></span><code>Primary/100</code> · border <span class="bt-swatch" style="background:#74a1f8"></span><code>Primary/400</code></td><td>&mdash;</td><td>text <span class="bt-swatch" style="background:#024dc6"></span><code>Primary/700</code></td></tr>
+              <tr><td>Divider</td><td><span class="bt-swatch" style="background:#dbdfe4"></span><code>Secondary-text/200</code></td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td>Trigger fill / border</td><td>&mdash;</td><td><span class="bt-swatch" style="background:#eaf1ff"></span><code>Primary/100</code> · <span class="bt-swatch" style="background:#74a1f8"></span><code>Primary/400</code></td><td><span class="bt-swatch" style="background:#eaf1ff"></span><code>Primary/100</code> · <span class="bt-swatch" style="background:#74a1f8"></span><code>Primary/400</code></td></tr>
+              <tr><td>Trigger text</td><td><span class="bt-swatch" style="background:#373d42"></span><code>Primary-text/900</code> Medium</td><td><span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code> placeholder</td><td><span class="bt-swatch" style="background:#024dc6"></span><code>Primary/700</code> SemiBold</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="properties">
+          <h2>Properties</h2>
+          <p>Designers: place Date-Selection-modal and switch Type / State to show each step. Developers: the State variants
+            are snapshots of one stateful component &mdash; drive them from data (selected preset, start date, end date,
+            open / closed).</p>
+          <h3>Date-Selection-modal</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>Type</code></td><td>Date Range | Single Date</td><td>Date Range</td><td>Controlled by the switch at the top. Changes the presets and the calendar (2 months vs 1).</td></tr>
+              <tr><td><code>State</code></td><td>Default | Custom-focused | Start-selected | Range-applied</td><td>Default</td><td>Range-applied exists only for Date Range. For Single Date, Start-selected = date chosen.</td></tr>
+            </tbody></table></div>
+          <h3>Calendar</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>Selection type</code></td><td>Date Range | Date</td><td>Date Range</td><td>2 months (start + next) or 1 month.</td></tr>
+              <tr><td><code>Selected</code></td><td>Yes | No</td><td>Yes</td><td>Mock-up only &mdash; in code, cell states come from the selected dates.</td></tr>
+              <tr><td><code>Month label</code></td><td>text override</td><td>“Apr 2026”</td><td>Format MMM YYYY.</td></tr>
+            </tbody></table></div>
+          <h3>Date-cell</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>State</code></td><td>Default | Hovered | Selected | within the range | Other Month | Disabled | Empty</td><td>Default</td><td></td></tr>
+              <tr><td><code>Date</code></td><td>string</td><td>“1”</td><td>⚠ The TEXT property isn’t connected to the text layer &mdash; override the number directly.</td></tr>
+            </tbody></table></div>
+          <h3>Date-cell/Selected · Date-cell/hovered</h3>
+          <p>Inner shapes the Selected and Hovered cells use to draw a continuous range.</p>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>Start</code></td><td>Yes | No</td><td>Yes</td><td>Rounds the left corners (first day of the range or week row).</td></tr>
+              <tr><td><code>End</code></td><td>Yes | No</td><td>Yes / No</td><td>Rounds the right corners (last day). Start + End = a single day.</td></tr>
+            </tbody></table></div>
+          <h3>Custom-range-option</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>Type</code></td><td>Date Range | Date</td><td>Date Range</td><td></td></tr>
+              <tr><td><code>State</code> (Date Range)</td><td>Default | Focused | Start date selected | Date range selected | Date range applied</td><td>Default</td><td>Focused / selected = calendar open (CaretUp). Applied = closed (CaretDown).</td></tr>
+              <tr><td><code>State</code> (Date)</td><td>Default | Focused | Date selected | Date applied</td><td>Default</td><td></td></tr>
+              <tr><td><code>Label</code></td><td>text override</td><td>“Custom”</td><td>Placeholder “Start Date - End Date” / “Select Date”; value format “21 May’26”.</td></tr>
+            </tbody></table></div>
+          <h3>Date-selection</h3>
+          <p>The preset bar has no properties &mdash; edit it through overrides.</p>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Part</th><th>Value(s)</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Preset chips</td><td>Segmented-element · Secondary · Medium</td><td>MTD selected</td><td>Set Selected = Yes on the active preset.</td></tr>
+              <tr><td>Custom trigger</td><td>Custom-range-option instance</td><td>Default</td><td>Swap its State as the person progresses.</td></tr>
+            </tbody></table></div>
+          <h3>Behaviour rules (for developers)</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Week start</td><td>Monday</td><td>Weekday row is M T W T F S S.</td></tr>
+              <tr><td>Date format</td><td>D MMM’YY</td><td>“21 May’26”; range “21 May’26 - 21 Jun’26”.</td></tr>
+              <tr><td>Range picking</td><td>click 1 = start, click 2 = end</td><td>Hover between clicks previews the range. Clicking before the start swaps start / end.</td></tr>
+              <tr><td>Presets</td><td>MTD · 1M · 3M · 6M · 1Y · SDLW · SDLM</td><td>Default MTD. Apply immediately and close. Confirm exact date maths with product.</td></tr>
+              <tr><td>Limits</td><td>min / max date</td><td>Days outside use State = Disabled; nav buttons disable at the limit.</td></tr>
+              <tr><td>Close</td><td>Esc / click outside</td><td>Discards an unfinished range (start only).</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="examples">
+          <h2>Configuration examples</h2>
+          <h3>Custom date range</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><div class="dsm" data-dsm='{"mode": "range", "open": true, "start": "2026-04-03", "end": "2026-04-16"}'></div><p>The person picks 3 Apr → 16 Apr in the calendar.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Component</td><td>Date-Selection-modal</td><td></td></tr>              <tr><td>Type</td><td>Date Range</td><td></td></tr>              <tr><td>State</td><td>Range-applied</td><td>Trigger shows the range; 3 and 16 Selected, the days between Within the range.</td></tr>
+            </tbody></table>
+          </div>
+          <h3>Single date with presets</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><div class="dsm" data-dsm='{"mode": "single", "preset": "SDLW"}'></div><p>Compare a day to the same day last week or month.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Component</td><td>Date-Selection-modal</td><td></td></tr>              <tr><td>Type</td><td>Single Date</td><td></td></tr>              <tr><td>State</td><td>Default</td><td>SDLW selected.</td></tr>
+            </tbody></table>
+          </div>
+          <h3>Trigger only (collapsed)</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><span class="crt" data-value><span>3 Apr’26 - 16 Apr’26</span><svg viewBox="0 0 256 256" aria-hidden="true"><path d="m216.49 104.49-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z"/></svg></span><p>What sits in the page header after a range is applied.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Component</td><td>Custom-range-option</td><td></td></tr>              <tr><td>State</td><td>Date range applied</td><td>CaretDown = closed; clicking reopens the modal.</td></tr>
+            </tbody></table>
+          </div>
+        </section>
+
+        <section id="source">
+          <h2>Source</h2>
+          <p>Taken from the Date Selection &amp; Calendar documentation in the
+            <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7183-33179" target="_blank" rel="noopener noreferrer">Copy-of-GC-Design Figma file</a> and the components
+            on the <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=2087-3566" target="_blank" rel="noopener noreferrer">Date Selection | Calendar library page</a>.
+            The examples here use real 2026 weekdays and matching labels; the Figma mock-ups show “21 May’26 - 21 Jun’26”
+            over an April selection and start April on a Tuesday. The code equivalent in Storybook is
+            <a href="https://storybook.gobblecube.ai/?path=/docs/controls-dateinput--docs" target="_blank" rel="noopener noreferrer">DateInput</a>.</p>
+        </section>
+<script src="assets/js/date-picker.js"></script>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/controls-dateinput--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Storybook</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7183-33179" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma docs</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=2087-3566" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma library</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#examples">Configuration examples</a></li>
+        <li><a href="#source">Source</a></li>
+      </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+})();
+</script>

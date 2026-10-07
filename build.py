@@ -82,6 +82,14 @@ PAGES = [
      "Input field guidelines — sizes, states, chips and content — and when to reach for each one."),
     ("docs-inputs-specifications", "Input specs", "Input specifications — Cube Design System",
      "Every dimension, color token and prop for the Input and its label sub-component."),
+    ("docs-sidenav", "Side Nav", "Side Nav — Cube Design System",
+     "Side navigation guidelines — panel parts, states, modules, platform filter and behaviour."),
+    ("docs-sidenav-specifications", "Side Nav specs", "Side Nav specifications — Cube Design System",
+     "Every dimension, colour token and property for Navbar-V3 and its parts."),
+    ("docs-header", "Header", "Header — Cube Design System",
+     "Page header guidelines — rows, info pieces, page setups and behaviour — and when to switch each on."),
+    ("docs-header-specifications", "Header specs", "Header specifications — Cube Design System",
+     "Every dimension, colour token and property for Page header v2."),
     ("docs-dropdown", "Dropdown", "Dropdown — Cube Design System",
      "Dropdown guidelines — field, menu types, selection modes and behaviour — and when to reach for each one."),
     ("docs-dropdown-specifications", "Dropdown specs", "Dropdown specifications — Cube Design System",
@@ -98,6 +106,14 @@ PAGES = [
      "Chip, Tag and Legend guidelines — Standard vs Sementic, colour, size and content — and when to reach for each one."),
     ("docs-chips-specifications", "Chips specs", "Chips, Tags & Legends specifications — Cube Design System",
      "Every dimension, colour token and property for Chips, Tags and Legends."),
+    ("docs-dates", "Date Selector", "Date Selector & Calendar — Cube Design System",
+     "Date Selection modal, Calendar and Date-cell guidelines — range vs single date, presets and states."),
+    ("docs-dates-specifications", "Date specs", "Date Selector & Calendar specifications — Cube Design System",
+     "Every dimension, colour token and property for the Date Selection modal, Calendar and Date-cell."),
+    ("docs-toggle", "Toggle", "Toggle — Cube Design System",
+     "Toggle-switch guidelines — when to use it, sizes, states, labels and accessibility."),
+    ("docs-toggle-specifications", "Toggle specs", "Toggle specifications — Cube Design System",
+     "Every dimension, colour token and property for the Toggle-switch."),
     ("docs-tooltips", "Tooltips", "Tooltips — Cube Design System",
      "Tooltip guidelines, anatomy, placement and accessibility for the Cube design system."),
     ("docs-tooltips-specifications", "Tooltip specs", "Tooltip specifications — Cube Design System",
@@ -116,8 +132,10 @@ HIDDEN = {"internal", "craft", "team", "docs", "docs-tooltips", "docs-tooltips-s
           "docs-colors", "docs-colors-specifications", "docs-spacing", "docs-spacing-specifications",
           "docs-inputs", "docs-inputs-specifications",
           "docs-banners", "docs-banners-specifications",
-          "docs-messages", "docs-messages-specifications", "docs-dropdown", "docs-dropdown-specifications",
-          "docs-chips", "docs-chips-specifications"}
+          "docs-messages", "docs-messages-specifications", "docs-dropdown", "docs-dropdown-specifications", "docs-header", "docs-header-specifications", "docs-sidenav", "docs-sidenav-specifications",
+          "docs-chips", "docs-chips-specifications",
+          "docs-dates", "docs-dates-specifications",
+          "docs-toggle", "docs-toggle-specifications"}
 
 # Guarded by INTERNAL_PASSWORD rather than SITE_PASSWORD.
 INTERNAL_PAGES = {"internal"}
@@ -145,8 +163,10 @@ DOCS = {"docs", "docs-tooltips", "docs-tooltips-specifications", "docs-buttons-s
         "docs-spacing", "docs-spacing-specifications",
         "docs-inputs", "docs-inputs-specifications",
           "docs-banners", "docs-banners-specifications",
-        "docs-messages", "docs-messages-specifications", "docs-dropdown", "docs-dropdown-specifications",
-        "docs-chips", "docs-chips-specifications"}
+        "docs-messages", "docs-messages-specifications", "docs-dropdown", "docs-dropdown-specifications", "docs-header", "docs-header-specifications", "docs-sidenav", "docs-sidenav-specifications",
+        "docs-chips", "docs-chips-specifications",
+        "docs-dates", "docs-dates-specifications",
+          "docs-toggle", "docs-toggle-specifications"}
 
 
 EDITION_HEAD = (
