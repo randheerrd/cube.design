@@ -1,0 +1,251 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a aria-current="true" href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html">Popup</a></li>
+        <li><a href="docs-overlays.html">Right Overlays</a></li>
+        <li><a href="docs-selection.html">Selections</a></li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-tabs.html" aria-current="page">Tabs</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Tabs</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">Tabs split related content into sections on the same page, and only one shows at a time. <strong>Primary tabs</strong> pick the section; <strong>secondary tabs</strong> (the Segmented Control) pick how it is shown. The <a href="docs-tabs-specifications.html">Specifications tab</a> lists every value.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-tabs.html" role="tab">Guidelines</a>
+        <a href="docs-tabs-specifications.html" role="tab" aria-selected="true">Specifications</a>
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
+          Code
+          <span class="sr-only">(not in Storybook yet)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec">
+
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>All values in px.</p>
+          <h3>Tab Item and bar</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Large</th><th>Medium</th><th>Notes</th></tr></thead><tbody><tr><td>Tab height</td><td>36</td><td>32</td><td>Content and underline</td></tr><tr><td>Tab padding (top / bottom)</td><td>8 / 10</td><td>7 / 9</td><td>Includes the 2px underline</td></tr><tr><td>Label</td><td>14 / 18</td><td>12 / 16, letter-spacing 0.1</td><td>Medium; Bold when selected</td></tr><tr><td>Prefix and lock icon</td><td>16</td><td>14</td><td></td></tr><tr><td>Gap between icon, label and tag</td><td>4</td><td>4</td><td></td></tr><tr><td>Pro tag</td><td>16</td><td>16</td><td>Circle</td></tr><tr><td>Underline</td><td>2, full tab width</td><td>2, full tab width</td><td>Sits on the bar border</td></tr><tr><td>Bar height</td><td>38</td><td>34</td><td>2px top padding plus the tab</td></tr><tr><td>Gap between tabs</td><td>20</td><td>20</td><td></td></tr><tr><td>Indent (Indent Yes)</td><td>16 left and right</td><td>12 left and right</td><td>0 with Indent No</td></tr><tr><td>Bar border</td><td>1 bottom</td><td>1 bottom</td><td></td></tr></tbody></table></div>
+          <h3>Width and count</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Fit (default)</th><th>Fixed or Fill</th><th>Notes</th></tr></thead><tbody><tr><td>Tab width</td><td>Hugs the label</td><td>Bar width &divide; tab count</td><td></td></tr><tr><td>Bar width</td><td>Hugs the tabs</td><td>450 by default; resize freely</td><td></td></tr><tr><td>Tab count</td><td>2 to 8 (default 4)</td><td>2 to 8 (default 4)</td><td>Keep it to 2 to 6</td></tr><tr><td>Overflow</td><td>Scroll sideways</td><td>Not recommended</td><td>Never wrap to a second row</td></tr></tbody></table></div>
+          <h3>Secondary tabs (Segmented Control)</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Secondary type</th><th>Primary type</th></tr></thead><tbody><tr><td>Height: Small / Medium / Large</td><td>24 / 28 / 32</td><td>28 / 32 / 36</td></tr><tr><td>Track</td><td>Radius 6, no padding, 1px border</td><td>Radius 8, padding 2, 1px border</td></tr><tr><td>Segment</td><td>Padding 6 / 12, gap 4; radius 6 selected, 8 unselected</td><td>Padding 6 / 12, gap 4, radius 6</td></tr><tr><td>Label</td><td>12 / 16, letter-spacing 0.1</td><td>12 / 16, letter-spacing 0.1</td></tr></tbody></table></div>
+        </section>
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <h3>Tab Item</h3>
+          <p>The same tokens for Large and Medium.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Default</th><th>Hovered</th><th>Selected</th><th>Disabled</th></tr></thead><tbody><tr><td>Label</td><td>Primary-text/500 <span class="msg-sw" style="background:#5f717b"></span>#5f717b Medium</td><td>Primary-text/900 <span class="msg-sw" style="background:#373d42"></span>#373d42 Medium</td><td>Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214 Bold</td><td>Disabled/400 <span class="msg-sw" style="background:#b5b5b5"></span>#b5b5b5 Medium</td></tr><tr><td>Underline (2px)</td><td>Hidden</td><td>Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td>Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5</td><td>Hidden</td></tr><tr><td>Prefix icon</td><td><span class="msg-sw" style="background:#5f717b"></span>#5f717b</td><td><span class="msg-sw" style="background:#5f717b"></span>#5f717b</td><td><span class="msg-sw" style="background:#23292e"></span>#23292e</td><td><span class="msg-sw" style="background:#b5b5b5"></span>#b5b5b5</td></tr><tr><td>Lock icon</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Disabled/400 <span class="msg-sw" style="background:#b5b5b5"></span>#b5b5b5</td></tr></tbody></table></div>
+          <h3>Tab bar</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Token / value</th><th>Notes</th></tr></thead><tbody><tr><td>Bar fill</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td></td></tr><tr><td>Bottom border</td><td>Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee, 1px</td><td>The selected underline sits on top of it</td></tr><tr><td>Pro tag</td><td>Gradient <span class="msg-sw" style="background:#9500ff"></span>#9500ff &rarr; <span class="msg-sw" style="background:#54b0e1"></span>#54b0e1 &rarr; <span class="msg-sw" style="background:#49ffb6"></span>#49ffb6</td><td>150&deg;, white glyph</td></tr><tr><td>Focus (keyboard)</td><td>Not in the component</td><td>Add a visible focus ring in code</td></tr></tbody></table></div>
+          <h3>Secondary tabs (Segmented Control)</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Unselected</th><th>Selected</th><th>Disabled</th></tr></thead><tbody><tr><td>Secondary: fill / border</td><td>None</td><td>Primary/100 <span class="msg-sw" style="background:#eaf1ff"></span>#eaf1ff / Primary/400 <span class="msg-sw" style="background:#74a1f8"></span>#74a1f8</td><td>&mdash;</td></tr><tr><td>Secondary: label</td><td>Secondary-text/700 <span class="msg-sw" style="background:#586473"></span>#586473</td><td>Primary/700 <span class="msg-sw" style="background:#024dc6"></span>#024dc6 SemiBold</td><td>Disabled/400</td></tr><tr><td>Primary: fill</td><td>Neutrals/White/100</td><td>Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5, white label</td><td>Disabled/50</td></tr><tr><td>Track</td><td>White, border Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee</td><td></td><td></td></tr></tbody></table></div>
+        </section>
+        <section id="properties">
+          <h2>Properties</h2>
+          <h3>Navigation/Primary-tabs</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Size</td><td>Large | Medium</td><td>required</td><td>Large</td><td>Bar 38 or 34 tall. Use Medium in cards.</td></tr><tr><td>Width</td><td>Fit (Default) | Fixed or Fill</td><td>required</td><td>Fit (Default)</td><td>Fill shares the width equally.</td></tr><tr><td>Indent</td><td>Yes | No</td><td>required</td><td>No</td><td>Side padding: 16 on Large, 12 on Medium.</td></tr><tr><td>Tab 3 &middot; Tab 4</td><td>true | false</td><td>optional</td><td>true</td><td>The third and fourth tabs.</td></tr><tr><td>Tab 5 to Tab 8</td><td>true | false</td><td>optional</td><td>false</td><td>Extra tabs, up to eight.</td></tr></tbody></table></div>
+          <h3>Tabs/Tab Item</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>State</td><td>Default | Hovered | Selected | Disabled</td><td>required</td><td>Default</td><td>Exactly one Selected per bar.</td></tr><tr><td>Size</td><td>Large | Medium</td><td>required</td><td>Large</td><td>Match the bar Size.</td></tr><tr><td>Text</td><td>string</td><td>required</td><td>“Tab Item”</td><td>One or two words.</td></tr><tr><td>Show Prefix &middot; Prefix Value</td><td>true | false &middot; icon</td><td>optional</td><td>false &middot; Cube</td><td></td></tr><tr><td>Pro</td><td>true | false</td><td>optional</td><td>false</td><td></td></tr><tr><td>Locked</td><td>true | false</td><td>optional</td><td>true</td><td>The lock shows on Disabled only.</td></tr></tbody></table></div>
+          <h3>Selection/Segmented-control (secondary tabs)</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Type</td><td>Primary | Secondary | Accent</td><td>required</td><td>Primary</td><td>Use Secondary under primary tabs.</td></tr><tr><td>Size</td><td>Small | Medium | Large</td><td>required</td><td>Small</td><td>Accent has no Large.</td></tr><tr><td>Width</td><td>Fit | Fill or Fixed</td><td>required</td><td>Fit</td><td></td></tr><tr><td>Is Rounded</td><td>Yes | No</td><td>required</td><td>Yes</td><td>Accent is always rounded.</td></tr><tr><td>Tab 3 to Tab 8</td><td>true | false</td><td>optional</td><td>Tab 3 and Tab 4 on</td><td>Two to five options.</td></tr></tbody></table></div>
+        </section>
+        <section id="api">
+          <h2>API and behavior</h2>
+          <p><strong>Designers:</strong> place Navigation/Primary-tabs, rename each Tab Item and set one to Selected.
+            <strong>Developers:</strong> build it as an ARIA tablist, where each Tab Item is a tab that controls a tabpanel.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Rule</th><th>Notes</th></tr></thead><tbody><tr><td>Semantics</td><td><code>tablist</code> / <code>tab</code> / <code>tabpanel</code></td><td><code>aria-selected</code> on the active tab; <code>aria-controls</code> to its panel.</td></tr><tr><td>Keyboard</td><td>&larr; &rarr;, Home / End, Enter / Space</td><td>Arrows move focus; activate on Enter or automatically.</td></tr><tr><td>Selection</td><td>Exactly one tab; the first by default</td><td>Keep it in the URL (<code>?tab=platforms</code>).</td></tr><tr><td>Disabled tab</td><td>Not focusable</td><td>A tooltip explains why (Locked).</td></tr><tr><td>Overflow</td><td>Horizontal scroll</td><td>Never wrap to a second line.</td></tr><tr><td>Secondary tabs</td><td>Separate state</td><td>Reset or keep per primary tab; decide per product.</td></tr></tbody></table></div>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+          <h3>Page sections</h3>
+          <div class="msg-stage" style="justify-content:center"><div class="tb-bar tb-bar--lg tb-bar--indent"><span class="tb-i tb-i--lg is-selected"><span class="tb-i__row"><span class="tb-i__t">Overview</span></span><span class="tb-i__u"></span></span><span class="tb-i tb-i--lg is-default"><span class="tb-i__row"><span class="tb-i__t">Platforms</span></span><span class="tb-i__u"></span></span><span class="tb-i tb-i--lg is-default"><span class="tb-i__row"><span class="tb-i__t">Categories</span></span><span class="tb-i__u"></span></span><span class="tb-i tb-i--lg is-default"><span class="tb-i__row"><span class="tb-i__t">SKUs</span></span><span class="tb-i__u"></span></span></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Component</td><td>Primary-tabs, Large</td><td></td></tr><tr><td>Width</td><td>Fit</td><td></td></tr><tr><td>Indent</td><td>Yes</td><td>Lines up with the page padding</td></tr><tr><td>Tabs</td><td>4</td><td>Overview selected</td></tr></tbody></table></div>
+          <h3>Tabs in a card</h3>
+          <div class="msg-stage" style="justify-content:center"><div class="tb-card" style="width:360px"><div class="tb-bar tb-bar--md tb-bar--fill"><span class="tb-i tb-i--md is-selected"><span class="tb-i__row"><span class="tb-i__t">Units</span></span><span class="tb-i__u"></span></span><span class="tb-i tb-i--md is-default"><span class="tb-i__row"><span class="tb-i__t">Value</span></span><span class="tb-i__u"></span></span><span class="tb-i tb-i--md is-default"><span class="tb-i__row"><span class="tb-i__t">Share</span></span><span class="tb-i__u"></span></span></div><div class="tb-card__in"><div class="tb-chart"><i style="height:55%"></i><i style="height:72%"></i><i style="height:48%"></i><i style="height:66%"></i></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Component</td><td>Primary-tabs, Medium</td><td></td></tr><tr><td>Width</td><td>Fixed or Fill</td><td>Resize the bar to the card</td></tr><tr><td>Tab 4</td><td>false</td><td>Three tabs</td></tr></tbody></table></div>
+          <h3>Primary and secondary</h3>
+          <div class="msg-stage" style="justify-content:center"><div class="tb-card" style="width:480px"><div class="tb-bar tb-bar--md tb-bar--indent"><span class="tb-i tb-i--md is-selected"><span class="tb-i__row"><span class="tb-i__t">Overview</span></span><span class="tb-i__u"></span></span><span class="tb-i tb-i--md is-default"><span class="tb-i__row"><span class="tb-i__t">Platforms</span></span><span class="tb-i__u"></span></span><span class="tb-i tb-i--md is-default"><span class="tb-i__row"><span class="tb-i__t">Categories</span></span><span class="tb-i__u"></span></span><span class="tb-i tb-i--md is-default"><span class="tb-i__row"><span class="tb-i__t">SKUs</span></span><span class="tb-i__u"></span></span></div><div class="tb-card__in"><span class="tb-seg tb-seg--secondary tb-seg--sm"><span class="tb-seg__s is-on">Chart</span><span class="tb-seg__s">Table</span></span><div class="tb-chart"><i style="height:40%"></i><i style="height:64%"></i><i style="height:52%"></i><i style="height:80%"></i><i style="height:58%"></i><i style="height:70%"></i></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Primary</td><td>Primary-tabs, Medium</td><td>Picks the section</td></tr><tr><td>Secondary</td><td>Segmented-control, Secondary, Small</td><td>Picks the view inside it</td></tr></tbody></table></div>
+        </section>
+        <section id="related">
+          <h2>Related components</h2>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>Use it instead when</th></tr></thead><tbody><tr><td><a href="docs-dropdown.html">Dropdown</a></td><td>The options filter the data rather than switch sections.</td></tr><tr><td><a href="docs-sidenav.html">Side Nav</a></td><td>The user moves to a different page of the product.</td></tr><tr><td><a href="docs-header.html">Header</a></td><td>The tabs sit right under a page header; keep the header’s side padding and use Indent Yes.</td></tr></tbody></table></div>
+        </section>
+        <section id="source">
+          <h2>Source</h2>
+          <p>Values come from the <strong>Tabs — Documentation</strong> frames in the Cube Core Figma file (Anatomy, Property, Color Annotation, Dimensions, API, Usage Guidelines) and the live <strong>Tabs/Tab Item</strong>, <strong>Navigation/Primary-tabs</strong> and <strong>Selection/Segmented-control</strong> components. Figma has no “How to use” frame for Tabs, so the build steps here are written from the API notes.</p>
+          <p class="docs-note">Where Figma disagrees with itself (this site follows the component): the docs give the Indent padding as 12 for both sizes, but Large uses 16. The API lists Indent’s default as Yes; the component defaults to No. One Properties tile calls Medium the default Size; the API and component say Large. The Color doc says the prefix icon follows the label colour, but on Hovered and Selected it uses its own values (#5f717b and #23292e), and they are raw hex, not tokens. For the Segmented Control, the anatomy gives radius 8 and padding 2 (true only for the Primary type), the dimensions caption calls the Secondary Medium 32 tall (it is 28), and the API gives Size’s default as Medium (the component’s is Small) and leaves out Is Rounded. The live section calls the Tab Item add-ons “Secondary (Toggle) Properties” and the prefix “Left Icon”. There is no focus state.</p>
+        </section>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=760-13384" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#api">API and behavior</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#related">Related components</a></li>
+        <li><a href="#source">Source</a></li>
+        </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+})();
+</script>

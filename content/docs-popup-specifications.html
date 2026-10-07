@@ -1,0 +1,258 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a aria-current="true" href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html" aria-current="page">Popup</a></li>
+        <li><a href="docs-overlays.html">Right Overlays</a></li>
+        <li><a href="docs-selection.html">Selections</a></li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Popup</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">A dialog that appears over a dimmed page and needs the user’s attention before they continue. A <strong>Task modal</strong> asks the user to do or decide something; a <strong>Message modal</strong> reports a state or result. The <a href="docs-popup-specifications.html">Specifications tab</a> lists every value.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-popup.html" role="tab">Guidelines</a>
+        <a href="docs-popup-specifications.html" role="tab" aria-selected="true">Specifications</a>
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
+          Code
+          <span class="sr-only">(not in Storybook yet)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec">
+
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>All values in px.</p>
+          <h3>Task modal</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Width</td><td>480 (templates), 600 (task popup)</td><td>The header and footer components are 615 in Figma &mdash; align them</td></tr><tr><td>Height</td><td>Hugs content, at most ~80% of the viewport</td><td>The content scrolls if taller</td></tr><tr><td>Radius</td><td>12</td><td></td></tr><tr><td>Header</td><td>52 tall (56 with an icon), padding 12 / 16, gap 8</td><td>Icon 32, close 28</td></tr><tr><td>Content slot</td><td>Padding 16, gap 12</td><td></td></tr><tr><td>Footer</td><td>60 tall, padding 12 / 16, buttons gap 10</td><td>Buttons Large, 36 tall, radius 8</td></tr><tr><td>Position</td><td>Centred on screen, over a scrim</td><td></td></tr></tbody></table></div>
+          <h3>Message modal</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Medium</th><th>Large</th></tr></thead><tbody><tr><td>Width &times; height</td><td>360 &times; 344</td><td>400 &times; 412</td></tr><tr><td>Padding</td><td>32 top, 4 sides and bottom</td><td>32 top, 4 sides and bottom</td></tr><tr><td>Illustration</td><td>120 tall (192 &times; 120; square ones 120 &times; 120)</td><td>160 tall (256 &times; 160; square ones 160 &times; 160)</td></tr><tr><td>Content card padding</td><td>12</td><td>20</td></tr><tr><td>Title</td><td>20 / 28 SemiBold</td><td>24 / 32 SemiBold</td></tr><tr><td>Message</td><td>14 / 18</td><td>14 / 18</td></tr><tr><td>Button</td><td>36 tall, full width</td><td>40 tall, full width</td></tr></tbody></table></div>
+          <h3>Illustration library</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Size</th><th>Dimensions</th><th>Use</th></tr></thead><tbody><tr><td>Large</td><td>256 &times; 160</td><td>Large message modals</td></tr><tr><td>Medium</td><td>192 &times; 120</td><td>Medium message modals</td></tr><tr><td>Small</td><td>128 &times; 80</td><td>Inline and empty states</td></tr></tbody></table></div>
+          <p>The Custom popup graphics library has 15 illustrations: Notification, Location, Payment, Under Maintenance, Card Verified, Card Declined, Rocket Launch, Locked, Target, Data, No Guardrail, No Tags, No Portfolio, Empty Box and No SKUs.</p>
+        </section>
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <h3>Task modal</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Token / value</th><th>Notes</th></tr></thead><tbody><tr><td>Container</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff, shadow 0 0 16 at 12%</td><td>Radius 12</td></tr><tr><td>Header fill and divider</td><td>Neutrals/White/100, Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee</td><td></td></tr><tr><td>Title</td><td>Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214</td><td></td></tr><tr><td>Body</td><td>Secondary-text/900 <span class="msg-sw" style="background:#363e45"></span>#363e45 Medium 14/18; lead line Primary-text/950 SemiBold</td><td></td></tr><tr><td>Context chip</td><td>Primary/100 <span class="msg-sw" style="background:#eaf1ff"></span>#eaf1ff; “for” Secondary-text/700 <span class="msg-sw" style="background:#586473"></span>#586473</td><td></td></tr><tr><td>Close button</td><td>White, 1px Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td></td></tr><tr><td>Footer</td><td>Neutrals/White/100, top border Secondary-text/100</td><td></td></tr><tr><td>Primary button</td><td>Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5; Destructive <span class="msg-sw" style="background:#e42828"></span>#e42828 for delete</td><td></td></tr><tr><td>Secondary button</td><td>White, 1px Primary/400 <span class="msg-sw" style="background:#74a1f8"></span>#74a1f8, text Primary/600</td><td></td></tr><tr><td>Scrim</td><td>Neutrals/Black/40 (recommended)</td><td>Not a component</td></tr></tbody></table></div>
+          <h3>Header icon types</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Type</th><th>Background</th><th>Icon</th></tr></thead><tbody><tr><td>Primary</td><td>Primary/100 <span class="msg-sw" style="background:#eaf1ff"></span>#eaf1ff</td><td>RocketLaunch, Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5</td></tr><tr><td>Destructive</td><td>Error/50 <span class="msg-sw" style="background:#fff6f6"></span>#fff6f6</td><td>Trash, Error/600 <span class="msg-sw" style="background:#e42828"></span>#e42828</td></tr><tr><td>Alert</td><td>Warning/50 <span class="msg-sw" style="background:#fff9e7"></span>#fff9e7</td><td>Warning, Warning/600 <span class="msg-sw" style="background:#e9be00"></span>#e9be00</td></tr><tr><td>Supportive</td><td>Success/100 <span class="msg-sw" style="background:#e9f7ed"></span>#e9f7ed</td><td>CheckCircle, Success/600 <span class="msg-sw" style="background:#46a758"></span>#46a758</td></tr><tr><td>Neutral</td><td>Accent/Steel Blue/100 <span class="msg-sw" style="background:#f1f6fd"></span>#f1f6fd</td><td>Lock, Accent/Steel Blue/900 <span class="msg-sw" style="background:#304a77"></span>#304a77</td></tr></tbody></table></div>
+          <h3>Message modal</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Token / value</th><th>Notes</th></tr></thead><tbody><tr><td>Container &mdash; Medium</td><td>Neutrals/White/100</td><td></td></tr><tr><td>Container &mdash; Large</td><td>Accent/Steel Blue/50 <span class="msg-sw" style="background:#f7faff"></span>#f7faff + White 50%</td><td>Differs from Medium in Figma &mdash; align</td></tr><tr><td>Content card</td><td>Neutrals/White/100, shadow 0 0 8 at 4%</td><td>Radius 8</td></tr><tr><td>Title</td><td>Primary-text/950 SemiBold</td><td></td></tr><tr><td>Message</td><td>Primary-text/700 <span class="msg-sw" style="background:#465058"></span>#465058 Regular 14/18</td><td></td></tr><tr><td>Gradient &mdash; Primary</td><td>White + <span class="msg-sw" style="background:#eaf1ff"></span>#eaf1ff fading to white at 85%</td><td></td></tr><tr><td>Gradient &mdash; Disabled</td><td>White + <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4 fading to white at 85%</td><td></td></tr><tr><td>Gradient &mdash; Error</td><td>White + <span class="msg-sw" style="background:#ffecec"></span>#ffecec fading to white at 85%</td><td></td></tr></tbody></table></div>
+        </section>
+        <section id="properties">
+          <h2>Properties</h2>
+          <h3>Task modal</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Task-popup · Modal-Content</td><td>Slot</td><td>required</td><td>empty</td><td>Any content.</td></tr><tr><td>Modal-header · Header Icon</td><td>true | false</td><td>optional</td><td>false</td><td></td></tr><tr><td>Modal-header · for - chip</td><td>true | false</td><td>optional</td><td>false</td><td>Context chip.</td></tr><tr><td>Modal-Footer · Primary / Secondary / Cancel</td><td>true | false</td><td>optional</td><td>true / false / false</td><td></td></tr><tr><td>Modal-Footer · Free Slot - Bottom left</td><td>true | false (+ slot)</td><td>optional</td><td>false</td><td></td></tr></tbody></table></div>
+          <h3>Message modal</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Size</td><td>Medium | Large</td><td>required</td><td>Medium</td><td></td></tr><tr><td>Linear-gradient-layer</td><td>true | false</td><td>optional</td><td>true</td><td></td></tr><tr><td>Illustration · Illustration (Small)</td><td>Instance swap</td><td>required</td><td>Rocket Launch</td><td>Large uses “Illustration”, Medium uses “Illustration (Small)”.</td></tr><tr><td>Primary Btn · Secondary Btn</td><td>true | false</td><td>optional</td><td>true / false</td><td></td></tr><tr><td>Show Slot · Slot</td><td>true | false · slot</td><td>optional</td><td>false</td><td>Extra content under the illustration. The slot is 374 wide &mdash; wider than Medium (360).</td></tr></tbody></table></div>
+          <h3>Header icon, templates and gradient</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Header-icon-type · Type</td><td>Primary | Destructive | Alert | Supportive | Neutral</td><td>required</td><td>Destructive</td><td></td></tr><tr><td>Task-popup-common-templates · Type</td><td>Confirmation on Deletion | Warning</td><td>required</td><td>Confirmation on Deletion</td><td></td></tr><tr><td>Linear-gradient-layer · Property 1</td><td>Primary | Disabled | Error</td><td>required</td><td>Primary</td><td></td></tr></tbody></table></div>
+        </section>
+        <section id="api">
+          <h2>API and behavior</h2>
+          <p><strong>Designers:</strong> for a Task modal, start from a template or the task popup and fill the content slot; for a Message modal, pick the size, swap the illustration and edit the text.
+            <strong>Developers:</strong> both are <code>role="dialog"</code> and <code>aria-modal="true"</code> over a scrim, centred and focus-trapped.</p>
+          <h3>Task modal</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Rule</th><th>Notes</th></tr></thead><tbody><tr><td>Open</td><td>After a user action</td><td>Fade and scale in (150–200ms).</td></tr><tr><td>Close</td><td>Cancel, &times;, Esc</td><td>Click outside only if nothing would be lost.</td></tr><tr><td>Primary</td><td>One; Destructive for delete</td><td>Enter triggers the primary (not for destructive).</td></tr><tr><td>Focus</td><td>Trap focus; first field or the primary</td><td>Return focus to the trigger on close.</td></tr><tr><td>Size</td><td>Max 80vh; content scrolls</td><td>Header and footer fixed.</td></tr></tbody></table></div>
+          <h3>Message modal</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Rule</th><th>Notes</th></tr></thead><tbody><tr><td>Open</td><td>System event</td><td>Success, error, status, welcome.</td></tr><tr><td>Close</td><td>Primary button, Esc</td><td>No hidden close &mdash; the button is the way out.</td></tr><tr><td>Frequency</td><td>Once per event</td><td>Don’t show repeatedly for the same message.</td></tr><tr><td>Semantics</td><td><code>role="alertdialog"</code> for errors</td><td></td></tr></tbody></table></div>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+          <h3>Delete confirmation</h3>
+          <div class="msg-stage" style="justify-content:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--destructive"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 2.5h4a1 1 0 0 1 1 1V5h3.5a.75.75 0 0 1 0 1.5h-.7l-.8 10.2a1.5 1.5 0 0 1-1.5 1.3H6.5A1.5 1.5 0 0 1 5 16.7L4.2 6.5h-.7a.75.75 0 0 1 0-1.5H7V3.5a1 1 0 0 1 1-1zM8.5 4v1h3V4z"/><path d="M8.5 9v5M11.5 9v5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="pm-h__t">Delete selected items?</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c"><p>You are about to permanently delete the selected items. This action cannot be undone and any associated data will no longer be available.</p></div><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Cancel</span><span class="pm-b pm-b--danger">Yes, Delete</span></span></div></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Component</td><td>Task-popup-common-templates</td><td></td></tr><tr><td>Type</td><td>Confirmation on Deletion</td><td></td></tr><tr><td>Primary</td><td>Destructive “Yes, Delete”</td><td></td></tr></tbody></table></div>
+          <h3>Warning before an action</h3>
+          <div class="msg-stage" style="justify-content:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--alert"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8.7 3.2a1.5 1.5 0 0 1 2.6 0l6.9 12.3a1.5 1.5 0 0 1-1.3 2.2H3.1a1.5 1.5 0 0 1-1.3-2.2z"/><path d="M10 8v3.8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><circle cx="10" cy="14.4" r="1" fill="#fff"/></svg></span><span class="pm-h__t">Continue with partial data upload?</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c"><p><b>You’ve uploaded data for 3 of 5 metrics.</b></p><p>The remaining metrics will continue to show their existing values until data is uploaded for them.</p></div><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Review Metrics</span><span class="pm-b pm-b--fill">Yes, Upload</span></span></div></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Type</td><td>Warning</td><td></td></tr><tr><td>Header icon</td><td>Alert</td><td></td></tr></tbody></table></div>
+          <h3>Success message</h3>
+          <div class="msg-stage" style="justify-content:center"><div class="pmm pmm--md"><span class="pmm__grad pmm__grad--primary"></span><img class="pmm__il" src="assets/img/illustrations/medium-card-verified.png" height="120" alt=""><div class="pmm__card"><div class="pmm__tx"><b>Card verified</b><p>Your card has been added. You’re all set.</p></div><div class="pmm__bt"><span class="pm-b pm-b--fill">Okay, Got it!</span></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Size</td><td>Medium</td><td></td></tr><tr><td>Illustration</td><td>Card Verified</td><td></td></tr><tr><td>Primary Btn</td><td>“Okay, Got it!”</td><td></td></tr></tbody></table></div>
+        </section>
+        <section id="related">
+          <h2>Related components</h2>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>Use it instead when</th></tr></thead><tbody><tr><td><a href="docs-banners.html">Banner &amp; Toast</a></td><td>The feedback is quick (“Saved”) or page-wide, and nothing needs a decision.</td></tr><tr><td><a href="docs-messages.html">Message</a></td><td>The note belongs next to the content it is about.</td></tr><tr><td><a href="docs.html">Buttons</a></td><td>The footer actions follow the Button rules: one Filled primary, Destructive for delete.</td></tr></tbody></table></div>
+        </section>
+        <section id="source">
+          <h2>Source</h2>
+          <p>Values come from the <strong>Popups — Documentation</strong> frames in the Cube Core Figma file (Anatomy, Property, Color Annotation, Dimensions, API, Usage Guidelines, How to use) and the live <strong>Popups</strong> components.</p>
+          <p class="docs-note">Where Figma disagrees with itself: the docs give the task title as SemiBold 16/18, but the component uses Bold 18/24 (used here). The “Yes, Delete” button in the template is blue in Figma, but the docs require a Destructive (red) button for delete (shown red here). The footer shadow is documented but switched off on the component. The docs recommend a 40% black scrim, while the in-context mocks use 20%. Component defaults are Destructive and Medium, while the API table lists Alert and Large. Illustrations are exported from the Custom popup graphics library.</p>
+        </section>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7321-40432" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#api">API and behavior</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#related">Related components</a></li>
+        <li><a href="#source">Source</a></li>
+        </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+
+  /* Wide popup previews are built at real width and scaled to fit their card. */
+  function pmFit(){document.querySelectorAll('.pm-fit').forEach(function(w){var p=w.firstElementChild,W=+w.getAttribute('data-w');p.style.zoom=1;p.style.zoom=Math.min(1,w.clientWidth/W);});}
+  pmFit(); window.addEventListener('resize',pmFit);
+})();
+</script>

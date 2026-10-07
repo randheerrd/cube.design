@@ -12,6 +12,9 @@ To add a page: drop a fragment in content/, add a row to PAGES.
 """
 
 import datetime
+import html as html_mod
+import json
+import re
 import hashlib
 import http.server
 import functools
@@ -82,6 +85,14 @@ PAGES = [
      "Input field guidelines — sizes, states, chips and content — and when to reach for each one."),
     ("docs-inputs-specifications", "Input specs", "Input specifications — Cube Design System",
      "Every dimension, color token and prop for the Input and its label sub-component."),
+    ("docs-tabs", "Tabs", "Tabs — Cube Design System",
+     "Tabs guidelines — primary and secondary tabs, anatomy, options, writing and behaviour."),
+    ("docs-tabs-specifications", "Tabs specs", "Tabs specifications — Cube Design System",
+     "Every dimension, colour token and property for Primary-tabs, Tab Item and secondary tabs."),
+    ("docs-popup", "Popup", "Popup — Cube Design System",
+     "Popup guidelines — Task and Message modals, anatomy, options, writing and behaviour."),
+    ("docs-popup-specifications", "Popup specs", "Popup specifications — Cube Design System",
+     "Every dimension, colour token and property for the Task and Message modals."),
     ("docs-sidenav", "Side Nav", "Side Nav — Cube Design System",
      "Side navigation guidelines — panel parts, states, modules, platform filter and behaviour."),
     ("docs-sidenav-specifications", "Side Nav specs", "Side Nav specifications — Cube Design System",
@@ -110,6 +121,18 @@ PAGES = [
      "Date Selection modal, Calendar and Date-cell guidelines — range vs single date, presets and states."),
     ("docs-dates-specifications", "Date specs", "Date Selector & Calendar specifications — Cube Design System",
      "Every dimension, colour token and property for the Date Selection modal, Calendar and Date-cell."),
+    ("docs-overlays", "Right Overlays", "Right Overlay — Cube Design System",
+     "Right overlay guidelines — when to use it, header, body and footer options, and how to add one to a screen."),
+    ("docs-overlays-specifications", "Right Overlay specs", "Right Overlay specifications — Cube Design System",
+     "Every dimension, colour token and property for the Right overlay, its header, breadcrumb and footer."),
+    ("docs-selection", "Selections", "Selection Group — Cube Design System",
+     "Selection group guidelines — single vs multi select, chip vs inline, layout and wrap."),
+    ("docs-selection-specifications", "Selection specs", "Selection Group specifications — Cube Design System",
+     "Every dimension, colour token and property for the Selection group."),
+    ("docs-stepper", "Stepper", "Stepper — Cube Design System",
+     "Stepper guidelines — horizontal vs vertical, stages, step count and how progress moves."),
+    ("docs-stepper-specifications", "Stepper specs", "Stepper specifications — Cube Design System",
+     "Every dimension, colour token and property for the Stepper, its steps and indicator."),
     ("docs-toggle", "Toggle", "Toggle — Cube Design System",
      "Toggle-switch guidelines — when to use it, sizes, states, labels and accessibility."),
     ("docs-toggle-specifications", "Toggle specs", "Toggle specifications — Cube Design System",
@@ -132,10 +155,13 @@ HIDDEN = {"internal", "craft", "team", "docs", "docs-tooltips", "docs-tooltips-s
           "docs-colors", "docs-colors-specifications", "docs-spacing", "docs-spacing-specifications",
           "docs-inputs", "docs-inputs-specifications",
           "docs-banners", "docs-banners-specifications",
-          "docs-messages", "docs-messages-specifications", "docs-dropdown", "docs-dropdown-specifications", "docs-header", "docs-header-specifications", "docs-sidenav", "docs-sidenav-specifications",
+          "docs-messages", "docs-messages-specifications", "docs-dropdown", "docs-dropdown-specifications", "docs-header", "docs-header-specifications", "docs-sidenav", "docs-sidenav-specifications", "docs-popup", "docs-popup-specifications", "docs-tabs", "docs-tabs-specifications",
           "docs-chips", "docs-chips-specifications",
           "docs-dates", "docs-dates-specifications",
-          "docs-toggle", "docs-toggle-specifications"}
+          "docs-toggle", "docs-toggle-specifications",
+          "docs-overlays", "docs-overlays-specifications",
+          "docs-stepper", "docs-stepper-specifications",
+          "docs-selection", "docs-selection-specifications"}
 
 # Guarded by INTERNAL_PASSWORD rather than SITE_PASSWORD.
 INTERNAL_PAGES = {"internal"}
@@ -163,10 +189,13 @@ DOCS = {"docs", "docs-tooltips", "docs-tooltips-specifications", "docs-buttons-s
         "docs-spacing", "docs-spacing-specifications",
         "docs-inputs", "docs-inputs-specifications",
           "docs-banners", "docs-banners-specifications",
-        "docs-messages", "docs-messages-specifications", "docs-dropdown", "docs-dropdown-specifications", "docs-header", "docs-header-specifications", "docs-sidenav", "docs-sidenav-specifications",
+        "docs-messages", "docs-messages-specifications", "docs-dropdown", "docs-dropdown-specifications", "docs-header", "docs-header-specifications", "docs-sidenav", "docs-sidenav-specifications", "docs-popup", "docs-popup-specifications", "docs-tabs", "docs-tabs-specifications",
         "docs-chips", "docs-chips-specifications",
         "docs-dates", "docs-dates-specifications",
-          "docs-toggle", "docs-toggle-specifications"}
+          "docs-toggle", "docs-toggle-specifications",
+          "docs-overlays", "docs-overlays-specifications",
+          "docs-stepper", "docs-stepper-specifications",
+          "docs-selection", "docs-selection-specifications"}
 
 
 EDITION_HEAD = (
@@ -182,7 +211,9 @@ DOCS_HEAD = (
     '<link href="https://fonts.googleapis.com/css2'
     '?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500;1,9..40,600&display=swap"'
     ' rel="stylesheet">\n'
-    '<link rel="stylesheet" href="assets/css/docs.css?v={v}">'
+    '<link rel="stylesheet" href="assets/css/docs.css?v={v}">\n'
+    '<script src="assets/js/docs-search-index.js?v={v}" defer></script>\n'
+    '<script src="assets/js/docs-search.js?v={v}" defer></script>'
 )
 EDITION_JS = '<script src="assets/js/edition.js?v={v}"></script>'
 
@@ -223,7 +254,7 @@ def asset_version():
     h = hashlib.sha256()
     for rel in ("css/site.css", "js/site.js",
                 "css/edition.css", "js/edition.js",
-                "css/studio.css", "css/docs.css"):
+                "css/studio.css", "css/docs.css", "js/docs-search.js"):
         h.update((ROOT / "assets" / rel).read_bytes())
     return h.hexdigest()[:8]
 
@@ -245,6 +276,34 @@ def page_theme(slug):
     """Default theme. Only a default — the head script still lets a stored
     preference override it, so the toggle keeps working everywhere."""
     return "dark" if slug in DARK else "light"
+
+
+def search_index():
+    """Every docs page and section, for the header search. Written as a
+    script (not JSON) so it also works when a page is opened from disk."""
+    def text(h):
+        h = re.sub(r"(?is)<(script|style|svg)\b.*?</\1>", " ", h)
+        h = re.sub(r"(?s)<[^>]+>", " ", h)
+        return re.sub(r"\s+", " ", html_mod.unescape(h)).strip()
+    entries = []
+    for slug, _label, _title, desc in PAGES:
+        f = ROOT / "content" / f"{slug}.html"
+        if slug not in DOCS or not f.exists():
+            continue
+        body = f.read_text(encoding="utf-8")
+        m = re.search(r"(?s)<h1[^>]*>(.*?)</h1>", body)
+        page = text(m.group(1)) if m else _label
+        kind = "Specifications" if slug.endswith("-specifications") else "Guidelines"
+        entries.append({"u": f"{slug}.html", "p": page, "k": kind, "s": "", "h": "", "t": desc})
+        for sm in re.finditer(r'(?s)<section id="([^"]+)"[^>]*>(.*?)</section>', body):
+            sid, inner = sm.groups()
+            h2 = re.search(r"(?s)<h2[^>]*>(.*?)</h2>", inner)
+            if not h2:
+                continue
+            subs = [text(x) for x in re.findall(r"(?s)<h3[^>]*>(.*?)</h3>", inner)]
+            entries.append({"u": f"{slug}.html#{sid}", "p": page, "k": kind, "s": text(h2.group(1)),
+                            "h": " · ".join(x for x in subs if x)[:300], "t": text(inner)[:700]})
+    return "window.CUBE_SEARCH=" + json.dumps(entries, ensure_ascii=False, separators=(",", ":")) + ";\n"
 
 
 def build():
@@ -287,6 +346,7 @@ def build():
         (DIST / f"{slug}.html").write_text(html, encoding="utf-8")
         print(f"  +  dist/{slug}.html")
 
+    (DIST / "assets" / "js" / "docs-search-index.js").write_text(search_index(), encoding="utf-8")
     print(f"\nBuilt {len(PAGES)} pages into {DIST}  (assets v{version})")
 
 

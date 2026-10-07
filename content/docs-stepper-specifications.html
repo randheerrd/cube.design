@@ -1,0 +1,335 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html">Popup</a></li>
+        <li><a href="docs-overlays.html">Right Overlays</a></li>
+        <li><a href="docs-selection.html">Selections</a></li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-stepper.html" aria-current="page">Stepper</a></li>
+        <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Stepper</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">Shows where the user is in a multi-step process — which steps are done, which is current
+          and what’s next. Two layouts: Stepper-Horizontal (a compact progress bar for short flows) and Stepper-Vertical (a
+          side list with descriptions for longer setup flows). Both are built from Stepper-elements, each with a
+          Stepper-indicator (the circle).</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-stepper.html" role="tab">Guidelines</a>
+        <a href="docs-stepper-specifications.html" role="tab" aria-selected="true">Specifications</a>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/components-stepper--docs" role="tab" target="_blank" rel="noopener noreferrer">
+          Code
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7 9"/></svg>
+          <span class="sr-only">(opens Storybook in a new tab)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec docs-content--bt docs-content--dt docs-content--stp">
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>All values in px.</p>
+          <h3>Steps</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Horizontal</th><th>Vertical</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Indicator</td><td>24 × 24 circle</td><td>24 × 24 circle</td><td>Number 12/16 SemiBold · icons 12 (check, lock) / 14 (clock)</td></tr>
+              <tr><td>Completed ring</td><td>1.5</td><td>1.5</td><td></td></tr>
+              <tr><td>Gap indicator ↔ text</td><td>8</td><td>8</td><td></td></tr>
+              <tr><td>Step name</td><td>12 / 16 · padding 4 top / bottom</td><td>12 / 16 · padding 4 top / bottom</td><td>Medium; SemiBold when Selected</td></tr>
+              <tr><td>Description</td><td>&mdash;</td><td>11 / 16 Regular</td><td>Optional</td></tr>
+              <tr><td>Connector</td><td>36 × 2</td><td>2 × 36+ (stretches)</td><td>6px below the indicator (vertical)</td></tr>
+              <tr><td>Step height</td><td>24</td><td>48 (66 with description)</td><td>Text column has 10px bottom padding</td></tr>
+              <tr><td>Step width</td><td>Hugs content</td><td>Fills the container (176 / 216)</td><td></td></tr>
+            </tbody></table></div>
+          <h3>Containers</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Horizontal</th><th>Vertical</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Width</td><td>Hugs steps</td><td>200 (Standard) · 240 (Large)</td><td></td></tr>
+              <tr><td>Padding</td><td>12</td><td>12</td><td>Container = Yes only</td></tr>
+              <tr><td>Gap between steps</td><td>8</td><td>8</td><td></td></tr>
+              <tr><td>Radius · border</td><td>10 · 1</td><td>10 · 1</td><td></td></tr>
+              <tr><td>Steps</td><td>2 – 6 (default 4)</td><td>2 – 8 (default 4)</td><td></td></tr>
+            </tbody></table></div>
+          <div class="docs-demo bt-ref">
+            <div class="chp-row"><ol class="stp stp--box" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol><ol class="stp stp--v stp--box" aria-label="Progress"><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Connect store</span><span class="stp-el__d">Link your platform account.</span></span></li><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Map SKUs</span><span class="stp-el__d">Match SKUs to our catalogue.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Set targets</span><span class="stp-el__d">Set weekly revenue goals.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Invite team</span><span class="stp-el__d">Add teammates.</span></span></li></ol><ol class="stp stp--v stp--box stp--lg" aria-label="Progress"><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Connect store</span><span class="stp-el__d">Link your platform account.</span></span></li><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Map SKUs</span><span class="stp-el__d">Match SKUs to our catalogue.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Set targets</span><span class="stp-el__d">Set weekly revenue goals.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Invite team</span><span class="stp-el__d">Add teammates.</span></span></li></ol></div>
+            <p class="docs-demo__caption">Real size: Horizontal (hugs, 48 tall) · Vertical Standard (200) · Vertical Large (240).</p>
+          </div>
+        </section>
+
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <p>Use these token names in code, not the hex values. Horizontal steps use the Upcoming / Selected / Completed columns only.</p>
+          <h3>Per stage</h3>
+          <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Element</th><th>Upcoming</th><th>Selected</th><th>Completed</th><th>Awaiting</th><th>Locked</th></tr></thead><tbody>
+              <tr><td>Indicator fill</td><td><span class="bt-swatch" style="background:#e7eef9"></span><code>Steel Blue/200</code></td><td><span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td><td><span class="bt-swatch" style="background:#ffffff"></span><code>White/100</code></td><td><span class="bt-swatch" style="background:#e7eef9"></span><code>Steel Blue/200</code></td><td><span class="bt-swatch" style="background:#efefef"></span><code>Disabled/100</code></td></tr>
+              <tr><td>Indicator ring</td><td>&mdash;</td><td>&mdash;</td><td><span class="bt-swatch" style="background:#a8c5ff"></span><code>Primary/300</code> · 1.5px</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td>Indicator content</td><td>Number · <span class="bt-swatch" style="background:#586473"></span><code>Secondary-text/700</code></td><td>Number · <span class="bt-swatch" style="background:#ffffff"></span><code>White/100</code></td><td>Check · <span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td><td>Clock · <span class="bt-swatch" style="background:#728cb6"></span><code>Steel Blue/600</code></td><td>Lock · <span class="bt-swatch" style="background:#6e6e6e"></span><code>Disabled/700</code></td></tr>
+              <tr><td>Step name</td><td><span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code> · Medium</td><td><span class="bt-swatch" style="background:#101214"></span><code>Primary-text/950</code> · SemiBold</td><td><span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code> · Medium</td><td><span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code> · SemiBold</td><td><span class="bt-swatch" style="background:#878787"></span><code>Disabled/600</code> · Medium</td></tr>
+              <tr><td>Description</td><td><span class="bt-swatch" style="background:#586473"></span><code>Secondary-text/700</code></td><td><span class="bt-swatch" style="background:#586473"></span><code>Secondary-text/700</code></td><td><span class="bt-swatch" style="background:#586473"></span><code>Secondary-text/700</code></td><td><span class="bt-swatch" style="background:#586473"></span><code>Secondary-text/700</code></td><td><span class="bt-swatch" style="background:#9e9e9e"></span><code>Disabled/500</code></td></tr>
+              <tr><td>Connector (after step)</td><td><span class="bt-swatch" style="background:#d6e1f2"></span><code>Steel Blue/300</code></td><td><span class="bt-swatch" style="background:#d6e1f2"></span><code>Steel Blue/300</code></td><td><span class="bt-swatch" style="background:#a8c5ff"></span><code>Primary/300</code></td><td><span class="bt-swatch" style="background:#d6e1f2"></span><code>Steel Blue/300</code></td><td><span class="bt-swatch" style="background:#e1e1e1"></span><code>Disabled/200</code></td></tr>
+            </tbody></table></div>
+          <h3>Container</h3>
+          <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Element</th><th>Token / value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Fill</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>Neutrals/White/100</code></td><td>Container = Yes</td></tr>
+              <tr><td>Border</td><td><span class="bt-swatch" style="background:#e8eaee"></span><code>Secondary-text/100</code> · 1px</td><td></td></tr>
+              <tr><td>Radius</td><td>10</td><td></td></tr>
+            </tbody></table></div>
+          <div class="docs-demo bt-ref">
+            <div class="chp-row" style="zoom:2;gap:20px"><span class="stp-ind" data-stage="upcoming">1</span><span class="stp-ind" data-stage="selected">1</span><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-ind" data-stage="awaiting"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232 136.66A104.12 104.12 0 1 1 119.34 24a8 8 0 0 1 1.32 16A88.12 88.12 0 1 0 216 135.34a8 8 0 0 1 16 1.32ZM120 72v56a8 8 0 0 0 8 8h56a8 8 0 0 0 0-16h-48V72a8 8 0 0 0-16 0Zm40-24a12 12 0 1 0-12-12 12 12 0 0 0 12 12Zm36 24a12 12 0 1 0-12-12 12 12 0 0 0 12 12Zm24 36a12 12 0 1 0-12-12 12 12 0 0 0 12 12Z"/></svg></span><span class="stp-ind" data-stage="locked"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M208 80h-32V56a48 48 0 0 0-96 0v24H48a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16ZM96 56a32 32 0 0 1 64 0v24H96Z"/></svg></span></div>
+            <p class="docs-demo__caption">Indicator at 2×: Upcoming · Selected · Completed · Awaiting · Locked.</p>
+          </div>
+        </section>
+
+        <section id="properties">
+          <h2>Properties</h2>
+          <p>Designers: place Stepper-Horizontal or Stepper-Vertical, turn steps on or off, then set each nested step’s
+            Stage and edit its name. Developers: render from a steps array + current-step index &mdash; stages are derived
+            (before = Completed, current = Selected, after = Upcoming), with Awaiting / Locked coming from data.</p>
+          <h3>Stepper-Horizontal</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>Container</code></td><td>Yes | No</td><td>required</td><td>Yes</td><td>Bordered box or bare steps.</td></tr>
+              <tr><td><code>Step 3</code> · <code>Step 4</code></td><td>true | false</td><td>optional</td><td>true</td><td>3rd / 4th step.</td></tr>
+              <tr><td><code>Step 5</code> · <code>Step 6</code></td><td>true | false</td><td>optional</td><td>false</td><td>Max 6 horizontal steps.</td></tr>
+            </tbody></table></div>
+          <h3>Stepper-Vertical</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>Container</code></td><td>Yes | No</td><td>required</td><td>Yes</td><td></td></tr>
+              <tr><td><code>Width</code></td><td>Standard (200) | Large (240)</td><td>required</td><td>Standard (200)</td><td></td></tr>
+              <tr><td><code>Step 3</code> · <code>Step 4</code></td><td>true | false</td><td>optional</td><td>true</td><td></td></tr>
+              <tr><td><code>Step 5</code> … <code>Step 8</code></td><td>true | false</td><td>optional</td><td>false</td><td>Max 8.</td></tr>
+            </tbody></table></div>
+          <h3>Stepper-element/Vertical</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>Stage</code></td><td>Upcoming | Selected | Completed | Awaiting | Locked</td><td>required</td><td>Upcoming</td><td></td></tr>
+              <tr><td><code>Description</code></td><td>true | false</td><td>optional</td><td>true</td><td>Secondary line.</td></tr>
+              <tr><td><code>Show connecter</code></td><td>true | false</td><td>optional</td><td>true</td><td>⚠ On by default for every step, including the last &mdash; turn it off on the last step.</td></tr>
+              <tr><td>Step name / description</td><td>text override</td><td>required</td><td>“Step name”</td><td>⚠ Not TEXT properties &mdash; edit the layers directly.</td></tr>
+            </tbody></table></div>
+          <h3>Stepper-element/Horizontal</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>Stage</code></td><td>Upcoming | Selected | Completed</td><td>required</td><td>Upcoming</td><td>No Awaiting / Locked.</td></tr>
+              <tr><td><code>Show connecter</code></td><td>true | false</td><td>optional</td><td>true</td><td>Turn off on the last step.</td></tr>
+              <tr><td>Step name</td><td>text override</td><td>required</td><td>“Step name”</td><td>⚠ Not a TEXT property.</td></tr>
+            </tbody></table></div>
+          <h3>Stepper-indicator</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>Property 1</code></td><td>Awaiting | Completed | Locked | Selected | Upcoming</td><td>required</td><td>Awaiting</td><td>Set automatically by the element’s Stage. The number is a text override.</td></tr>
+            </tbody></table></div>
+          <h3>Behaviour rules (for developers)</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Current step</td><td>Exactly one Selected</td><td>Steps before it → Completed, after → Upcoming. Default: step 1.</td></tr>
+              <tr><td>Navigation</td><td>Click Completed steps to go back</td><td>Upcoming / Locked steps aren’t clickable; Awaiting is read-only.</td></tr>
+              <tr><td>Next / Back</td><td>Buttons outside the stepper</td><td>The stepper shows progress; the page footer moves between steps.</td></tr>
+              <tr><td>Locked</td><td>Condition not met</td><td>Explain in the description (vertical).</td></tr>
+              <tr><td>Semantics</td><td>Ordered list (<code>ol</code>)</td><td><code>aria-current=&quot;step&quot;</code> on the Selected step.</td></tr>
+              <tr><td>Responsive</td><td>Horizontal → compact on small screens</td><td>Show “Step 2 of 4” + the current name if the steps don’t fit.</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="examples">
+          <h2>Configuration examples</h2>
+          <h3>Modal wizard</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><div class="stp-wiz"><div class="stp-wiz__head"><p class="stp-wiz__title">Setup auto forwarding</p></div><div class="stp-wiz__steps"><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div><div class="stp-wiz__body" style="min-height:60px"><p class="stp-wiz__p">Step content…</p></div><div class="stp-wiz__foot"><button type="button" class="stp-btn stp-btn--sec" tabindex="-1">Back</button><button type="button" class="stp-btn" tabindex="-1">Next</button></div></div><p>A 4-step flow at the top of a modal.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Component</td><td>Stepper-Horizontal</td><td></td></tr>              <tr><td>Container</td><td>No</td><td>The modal provides the background</td></tr>              <tr><td>Current</td><td>Step 2</td><td>Step 1 Completed, 3–4 Upcoming</td></tr>
+            </tbody></table>
+          </div>
+          <h3>Setup side panel</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><ol class="stp stp--v stp--box stp--lg" aria-label="Progress"><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Connect store</span><span class="stp-el__d">Linked Blinkit &amp; Zepto.</span></span></li><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Map SKUs</span><span class="stp-el__d">Match SKUs to catalogue.</span></span></li><li class="stp-el stp-el--v" data-stage="awaiting"><span class="stp-el__rail"><span class="stp-ind" data-stage="awaiting"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232 136.66A104.12 104.12 0 1 1 119.34 24a8 8 0 0 1 1.32 16A88.12 88.12 0 1 0 216 135.34a8 8 0 0 1 16 1.32ZM120 72v56a8 8 0 0 0 8 8h56a8 8 0 0 0 0-16h-48V72a8 8 0 0 0-16 0Zm40-24a12 12 0 1 0-12-12 12 12 0 0 0 12 12Zm36 24a12 12 0 1 0-12-12 12 12 0 0 0 12 12Zm24 36a12 12 0 1 0-12-12 12 12 0 0 0 12 12Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Approval</span><span class="stp-el__d">Waiting for admin approval.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Invite team</span><span class="stp-el__d">Add teammates.</span></span></li><li class="stp-el stp-el--v" data-stage="locked"><span class="stp-el__rail"><span class="stp-ind" data-stage="locked"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M208 80h-32V56a48 48 0 0 0-96 0v24H48a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16ZM96 56a32 32 0 0 1 64 0v24H96Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Go live</span><span class="stp-el__d">Finish all steps first.</span></span></li></ol><p>A configuration flow with descriptions and a locked step.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Component</td><td>Stepper-Vertical · Large</td><td></td></tr>              <tr><td>Step 5</td><td>true</td><td>5 steps</td></tr>              <tr><td>Stages</td><td>Completed · Selected · Awaiting · Upcoming · Locked</td><td></td></tr>
+            </tbody></table>
+          </div>
+          <h3>Progress only</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><ol class="stp stp--box" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol><p>A horizontal stepper as a read-only progress indicator.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Component</td><td>Stepper-Horizontal</td><td></td></tr>              <tr><td>Container</td><td>Yes</td><td></td></tr>              <tr><td>Current</td><td>Step 4</td><td>The last step</td></tr>
+            </tbody></table>
+          </div>
+        </section>
+
+        <section id="source">
+          <h2>Source</h2>
+          <p>Taken from the Stepper documentation in the
+            <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7213-42115" target="_blank" rel="noopener noreferrer">Copy-of-GC-Design Figma file</a> and the
+            <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=2648-118050" target="_blank" rel="noopener noreferrer">Stepper library page</a>. Differences from Figma:</p>
+          <ul>
+            <li>“Show connecter” is on for every step by default, so the anatomy mock-up of Stepper-Vertical still draws a line under the last step. Here the last step never has a connector.</li>
+            <li>Disabled/200 (the Locked connector) has no rendered example in Figma; it’s #E1E1E1 from the component.</li>
+            <li>The property is spelled “connecter” in Figma; it’s kept as-is in the property tables.</li>
+            <li>The real screens in the library (CPPT Setup, Portal Integrations) use “Previous” and “Back” for the same action &mdash; pick one.</li>
+          </ul>
+          <p>The code equivalent in Storybook is <a href="https://storybook.gobblecube.ai/?path=/docs/components-stepper--docs" target="_blank" rel="noopener noreferrer">Components / Stepper</a>.</p>
+        </section>
+<script src="assets/js/stepper.js"></script>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/components-stepper--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Storybook</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7213-42115" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma docs</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=2648-118050" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma library</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#examples">Configuration examples</a></li>
+        <li><a href="#source">Source</a></li>
+      </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+})();
+</script>

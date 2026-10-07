@@ -1,0 +1,329 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html">Popup</a></li>
+        <li><a href="docs-overlays.html">Right Overlays</a></li>
+        <li><a href="docs-selection.html" aria-current="page">Selections</a></li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Selection Group</h1>
+          <span class="docs-badge">New</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">A ready-made group of options with a title. Think of it as a small bordered box: a
+          group header (the question) and a list of radio or checkbox options (the answers). It saves building radio /
+          checkbox groups by hand and keeps spacing consistent.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-selection.html" role="tab">Guidelines</a>
+        <a href="docs-selection-specifications.html" role="tab" aria-selected="true">Specifications</a>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/controls-groups-radiogroup--docs" role="tab" target="_blank" rel="noopener noreferrer">
+          Code
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7 9"/></svg>
+          <span class="sr-only">(opens Storybook in a new tab)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec docs-content--bt docs-content--dt docs-content--sg">
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>Container, header and list spacing for every layout. All values in px. Option sizes come from the Radio /
+            Checkbox components (Medium).</p>
+          <h3>Container &amp; header</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>→ Horizontal</th><th>↓ Vertical</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Container width · Wrap = No</td><td>Hug content</td><td>180 fixed</td><td>Resize vertical groups to fit</td></tr>
+              <tr><td>Container width · Wrap = Yes</td><td>530 fixed</td><td>280 fixed</td><td>Options re-flow when resized</td></tr>
+              <tr><td>Container padding</td><td>4</td><td>4</td><td></td></tr>
+              <tr><td>Gap header ↔ options</td><td>4</td><td>4</td><td></td></tr>
+              <tr><td>Corner radius · border</td><td>8 · 1</td><td>8 · 1</td><td></td></tr>
+              <tr><td>Header area</td><td>Hug · height 28 · padding 0 / 4</td><td>Full width · height 28 · padding 0 / 4</td><td>Title is vertically centred</td></tr>
+              <tr><td>Header text</td><td>12 / 16 Medium</td><td>12 / 16 Medium</td><td>14 / 18 Bold with Small Bold Heading</td></tr>
+            </tbody></table></div>
+          <h3>Options list</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Chip</th><th>Inline</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Gap between options</td><td>4</td><td>12</td><td></td></tr>
+              <tr><td>Row gap when wrapping</td><td>4</td><td>12</td><td>Same as the column gap</td></tr>
+              <tr><td>List padding</td><td>0</td><td>6 / 4 (V / H)</td><td>Aligns inline labels with chip text</td></tr>
+              <tr><td>Option height</td><td>28 (Medium chip)</td><td>16 (Medium inline)</td><td>Chip: padding 0 / 8, radius 6, gap 4</td></tr>
+              <tr><td>Control</td><td>14 × 14</td><td>14 × 14</td><td>Radio / checkbox, gap 4 to the label</td></tr>
+              <tr><td>Default option count</td><td>6</td><td>6</td><td>Hide the ones you don’t need</td></tr>
+              <tr><td>Recommended count</td><td>2 – 8</td><td>2 – 10</td><td>More → Dropdown</td></tr>
+            </tbody></table></div>
+          <div class="docs-demo bt-ref">
+            <div class="chp-row sg-ref"><div class="sg sg--v sg--inline" role="radiogroup" aria-labelledby="sg49h"><div class="sg__head"><span id="sg49h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg49" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg49" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg49" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg49" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>BB Now</span></label></div></div><div class="sg sg--v sg--wrap" role="group" aria-labelledby="sg50h"><div class="sg__head"><span id="sg50h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg50" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg50" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg50" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg50" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>BB Now</span></label></div></div><div class="sg" role="radiogroup" aria-labelledby="sg51h"><div class="sg__head"><span id="sg51h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--radio" data-on><input type="radio" name="sg51" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg51" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg51" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg51" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>BB Now</span></label></div></div></div>
+            <p class="docs-demo__caption">Real size: Vertical · no wrap (180) · Vertical · wrap (280) · Horizontal · no wrap (hugs content).</p>
+          </div>
+        </section>
+
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <p>The group only adds a container and a header &mdash; options keep their own Radio / Checkbox tokens.</p>
+          <h3>Group container &amp; header</h3>
+          <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Element</th><th>Token / value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Container fill</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>Neutrals/White/100</code></td><td></td></tr>
+              <tr><td>Container border</td><td><span class="bt-swatch" style="background:#e8eaee"></span><code>Secondary-text/100</code> · 1px</td><td>Radius 8</td></tr>
+              <tr><td>Header &mdash; Label size</td><td><span class="bt-swatch" style="background:#586473"></span><code>Secondary-text/700</code> · Medium 12/16</td><td>Default</td></tr>
+              <tr><td>Header &mdash; Small Bold Heading</td><td><span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code> · Bold 14/18</td><td></td></tr>
+            </tbody></table></div>
+          <h3>Options (from nested components)</h3>
+          <div class="bx-scroll"><table class="docs-table sg-tok"><thead><tr><th>Option type</th><th>Unselected</th><th>Selected</th><th>Disabled</th></tr></thead><tbody>
+              <tr><td>Radio-inline / Checkbox-inline</td><td>Label <span class="bt-swatch" style="background:#586473"></span><code>Secondary-text/700</code></td><td>Control <span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code> · label <span class="bt-swatch" style="background:#101214"></span><code>Primary-text/950</code> SemiBold</td><td><span class="bt-swatch" style="background:#b5b5b5"></span><code>Disabled/400</code></td></tr>
+              <tr><td>Radio-chip / Checkbox-chip</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>White/100</code> fill · <span class="bt-swatch" style="background:#dbdfe4"></span><code>Secondary-text/200</code> border</td><td><span class="bt-swatch" style="background:#eaf1ff"></span><code>Primary/100</code> fill · <span class="bt-swatch" style="background:#74a1f8"></span><code>Primary/400</code> border · <span class="bt-swatch" style="background:#024dc6"></span><code>Primary/700</code> label</td><td><span class="bt-swatch" style="background:#efefef"></span><code>Disabled/100</code> border · <span class="bt-swatch" style="background:#b5b5b5"></span><code>Disabled/400</code></td></tr>
+              <tr><td>Unselected chip label</td><td>Checkbox-chip <span class="bt-swatch" style="background:#586473"></span><code>Secondary-text/700</code> · Radio-chip <span class="bt-swatch" style="background:#404a54"></span><code>Secondary-text/800</code> ⚠</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td>Hover</td><td>Label / border darkens (<span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code> · <span class="bt-swatch" style="background:#bfc5cf"></span><code>Secondary-text/300</code>)</td><td>&mdash;</td><td>&mdash;</td></tr>
+            </tbody></table></div>
+          <p>⚠ The two chip types use different unselected label colours in Figma. Align them on one token.</p>
+          <div class="docs-demo bt-ref">
+            <div class="chp-row sg-ref"><div class="sg sg--v sg--inline" role="radiogroup" aria-labelledby="sg52h"><div class="sg__head"><span id="sg52h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg52" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg52" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg52" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label></div></div><div class="sg sg--v sg--inline" role="group" aria-labelledby="sg53h"><div class="sg__head"><span id="sg53h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg53" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg53" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg53" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label></div></div><div class="sg sg--v" role="radiogroup" aria-labelledby="sg54h"><div class="sg__head"><span id="sg54h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--radio" data-on><input type="radio" name="sg54" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg54" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg54" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label></div></div><div class="sg sg--v" role="group" aria-labelledby="sg55h"><div class="sg__head"><span id="sg55h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg55" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg55" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg55" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label></div></div></div>
+            <p class="docs-demo__caption">Radio-inline · Checkbox-inline · Radio-chip · Checkbox-chip.</p>
+          </div>
+        </section>
+
+        <section id="properties">
+          <h2>Properties</h2>
+          <p>Designers: pick the variant with the four properties, then edit the header and options inside the instance.
+            Developers: this is a labelled group (<code>fieldset</code> + <code>legend</code>) of radios (Single select) or
+            checkboxes (Multi select) &mdash; the variant only changes layout and option style, not behaviour.</p>
+          <h3>Selection/Selection-group</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>Type</code></td><td>Multi select | Single select</td><td>required</td><td>Multi select</td><td>Single → Radio options (one value). Multi → Checkbox options (many values).</td></tr>
+              <tr><td><code>Element</code></td><td>Chip | Inline</td><td>required</td><td>Chip</td><td>Chip = bordered options. Inline = control + label.</td></tr>
+              <tr><td><code>Layout Direction</code></td><td>→ Horizontal | ↓ Vertical</td><td>required</td><td>→ Horizontal</td><td>Header left of the options vs above them.</td></tr>
+              <tr><td><code>Wrap ↩</code></td><td>No | Yes</td><td>required</td><td>No</td><td>Yes = fixed width, options wrap into rows.</td></tr>
+              <tr><td><code>Group header</code></td><td>string</td><td>&mdash;</td><td>“Group header:”</td><td>⚠ Not connected to the title &mdash; edit the nested Card Header’s “Header text” instead.</td></tr>
+            </tbody></table></div>
+          <h3>Card Header (nested title)</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>Size</code></td><td>Label size | Small Bold Heading</td><td>required</td><td>Label size</td><td></td></tr>
+              <tr><td><code>Header text</code></td><td>string</td><td>required</td><td>“Group Header”</td><td>The real title text of the group.</td></tr>
+            </tbody></table></div>
+          <h3>Nested options</h3>
+          <p>Which component each variant uses. Edit each option’s own properties.</p>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Variant</th><th>Component</th><th>Size</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Single · Inline</td><td>Selection-inline/Radio-inline</td><td>Medium</td><td>Label, State, Disabled, Prefix Icon, Info, Pro, Locked…</td></tr>
+              <tr><td>Single · Chip</td><td>Selection-chip/Radio-chip</td><td>Medium</td><td>+ Description, Count, Recommended.</td></tr>
+              <tr><td>Multi · Inline</td><td>Selection-inline/Checkbox-inline</td><td>Medium</td><td></td></tr>
+              <tr><td>Multi · Chip</td><td>Selection-chip/Checkbox-chip</td><td>Medium</td><td>+ Color legend.</td></tr>
+              <tr><td>Option count</td><td>6 (fixed)</td><td>&mdash;</td><td>Hide unused options; duplicate one for more than 6.</td></tr>
+            </tbody></table></div>
+          <h3>Behaviour rules (for developers)</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Single select</td><td>One value · default: the first option</td><td>Clicking an option deselects the previous one.</td></tr>
+              <tr><td>Multi select</td><td>Array of values · default []</td><td>Each option toggles independently.</td></tr>
+              <tr><td>Semantics</td><td>fieldset + legend</td><td>Header = legend. Options are native radio / checkbox inputs.</td></tr>
+              <tr><td>Keyboard</td><td>Tab into the group · ← → / ↑ ↓ (radio) · Space (checkbox)</td><td></td></tr>
+              <tr><td>Wrap</td><td>CSS flex-wrap</td><td>Row gap = column gap (4 chip / 12 inline).</td></tr>
+              <tr><td>Validation</td><td>Required groups</td><td>Show an error message below the group (not in the component yet).</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="examples">
+          <h2>Configuration examples</h2>
+          <h3>Platform filter (toolbar)</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><div class="sg" role="radiogroup" aria-labelledby="sg56h"><div class="sg__head"><span id="sg56h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--radio" data-on><input type="radio" name="sg56" checked><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg56"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg56"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg56"><span class="sg-ctl" aria-hidden="true"></span><span>BB Now</span></label></div></div><p>Pick one platform from a compact toolbar row.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Type</td><td>Single select</td><td></td></tr>              <tr><td>Element</td><td>Chip</td><td></td></tr>              <tr><td>Layout Direction</td><td>→ Horizontal</td><td></td></tr>              <tr><td>Wrap</td><td>No</td><td>4 options fit in one row</td></tr>
+            </tbody></table>
+          </div>
+          <h3>Category filter (panel)</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><div class="sg sg--v sg--inline" role="group" aria-labelledby="sg57h"><div class="sg__head"><span id="sg57h">Category</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg57" checked><span class="sg-ctl" aria-hidden="true"></span><span>Snacks</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg57"><span class="sg-ctl" aria-hidden="true"></span><span>Beverages</span></label><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg57" checked><span class="sg-ctl" aria-hidden="true"></span><span>Dairy</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg57"><span class="sg-ctl" aria-hidden="true"></span><span>Personal care</span></label></div></div><p>Pick several categories in a side panel.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Type</td><td>Multi select</td><td></td></tr>              <tr><td>Element</td><td>Inline</td><td></td></tr>              <tr><td>Layout Direction</td><td>↓ Vertical</td><td></td></tr>              <tr><td>Wrap</td><td>No</td><td>One column</td></tr>
+            </tbody></table>
+          </div>
+          <h3>Tags (wrapping)</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><div class="sg sg--v sg--wrap sg--flow" role="group" aria-labelledby="sg58h" style="width:300px"><div class="sg__head"><span id="sg58h">Tags</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg58"><span class="sg-ctl" aria-hidden="true"></span><span>New</span></label><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg58" checked><span class="sg-ctl" aria-hidden="true"></span><span>Top 10</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg58"><span class="sg-ctl" aria-hidden="true"></span><span>Discounted</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg58"><span class="sg-ctl" aria-hidden="true"></span><span>Low stock</span></label><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg58" checked><span class="sg-ctl" aria-hidden="true"></span><span>Trending</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg58"><span class="sg-ctl" aria-hidden="true"></span><span>Seasonal</span></label></div></div><p>Many short options in a fixed-width card.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Type</td><td>Multi select</td><td></td></tr>              <tr><td>Element</td><td>Chip</td><td></td></tr>              <tr><td>Layout Direction</td><td>↓ Vertical</td><td></td></tr>              <tr><td>Wrap</td><td>Yes</td><td>Fixed width → wraps</td></tr>
+            </tbody></table>
+          </div>
+        </section>
+
+        <section id="source">
+          <h2>Source</h2>
+          <p>Taken from the Selection Group documentation in the
+            <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7204-36512" target="_blank" rel="noopener noreferrer">Copy-of-GC-Design Figma file</a> and the
+            <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7167-67836" target="_blank" rel="noopener noreferrer">Selection/Selection-group component</a>. Notes:</p>
+          <ul>
+            <li>The <code>Group header</code> text property isn’t connected to the title layer &mdash; edit the nested Card Header instead.</li>
+            <li>Unselected chip labels differ: Checkbox-chip Secondary-text/700, Radio-chip Secondary-text/800.</li>
+            <li>The radio / checkbox controls are SVG assets in Figma, so their colours here are matched to Primary/600 (selected) and Secondary-text/400 (unselected outline).</li>
+            <li>Primary/600, Secondary-text/300 · /900 and Disabled/100 · /400 aren’t drawn in these frames; their hex values come from the other Cube docs.</li>
+            <li>In code the group maps to Storybook’s <a href="https://storybook.gobblecube.ai/?path=/docs/controls-groups-radiogroup--docs" target="_blank" rel="noopener noreferrer">RadioGroup</a> (Single select) and <a href="https://storybook.gobblecube.ai/?path=/docs/controls-groups-checkboxgroup--docs" target="_blank" rel="noopener noreferrer">CheckboxGroup</a> (Multi select).</li>
+          </ul>
+        </section>
+
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/controls-groups-radiogroup--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Storybook · RadioGroup</a>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/controls-groups-checkboxgroup--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Storybook · CheckboxGroup</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7204-36512" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma docs</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7167-67836" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma library</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#examples">Configuration examples</a></li>
+        <li><a href="#source">Source</a></li>
+      </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+})();
+</script>

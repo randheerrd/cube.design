@@ -1,0 +1,518 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html">Popup</a></li>
+        <li><a href="docs-overlays.html" aria-current="page">Right Overlays</a></li>
+        <li><a href="docs-selection.html">Selections</a></li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Right Overlay</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">A panel that slides in from the right edge over the page, used for quick, contextual
+          information — drill-downs, details and trends — without navigating away. Built from a Header (breadcrumb, heading,
+          tabs, close), a flexible Body slot, and an optional Footer with actions.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-overlays.html" role="tab" aria-selected="true">Guidelines</a>
+        <a href="docs-overlays-specifications.html" role="tab">Specifications</a>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/overlays-drawerpanel--docs" role="tab" target="_blank" rel="noopener noreferrer">
+          Code
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7 9"/></svg>
+          <span class="sr-only">(opens Storybook in a new tab)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--bt docs-content--dt docs-content--ro">
+        <section id="at-a-glance">
+          <h2>At a glance</h2>
+          <p>Try it: click a city to drill in. Switch tabs, then close with <strong>×</strong>, <kbd>Esc</kbd>, Cancel or a
+            click on the dimmed page. The page stays where it was.</p>
+          <div class="docs-demo rov-live">
+            <div class="rov-stage" data-rov-stage><div class="rov-stage__page"><p class="rov-stage__title">Whole Wheat Atta · Offtake by city</p><table class="rov-table"><thead><tr><th>City</th><th class="num">Offtake</th><th class="num">Wt. OSA%</th><th class="num">Δ OSA</th></tr></thead><tbody><tr data-rov-open data-city="Delhi NCR" tabindex="0"><td>Delhi NCR</td><td class="num">₹4.8L</td><td class="num">76.2%</td><td class="num neg">-5.6%</td></tr><tr data-rov-open data-city="Mumbai" tabindex="0"><td>Mumbai</td><td class="num">₹4.1L</td><td class="num">81.4%</td><td class="num neg">-2.1%</td></tr><tr data-rov-open data-city="Bengaluru" tabindex="0"><td>Bengaluru</td><td class="num">₹3.6L</td><td class="num">73.9%</td><td class="num neg">-4.8%</td></tr><tr data-rov-open data-city="Hyderabad" tabindex="0"><td>Hyderabad</td><td class="num">₹2.2L</td><td class="num">69.0%</td><td class="num neg">-7.3%</td></tr><tr data-rov-open data-city="Pune" tabindex="0"><td>Pune</td><td class="num">₹1.7L</td><td class="num">84.6%</td><td class="num pos">+1.2%</td></tr><tr data-rov-open data-city="Chennai" tabindex="0"><td>Chennai</td><td class="num">₹1.5L</td><td class="num">71.3%</td><td class="num neg">-3.9%</td></tr></tbody></table></div><div class="rov-stage__scrim"></div><div class="rov" role="dialog" aria-modal="true" aria-label="City drill-down"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li><a href="#">Whole Wheat Atta</a></li><li aria-current="page" data-rov-bind="city">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" aria-controls="rp-drill">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" aria-controls="rp-trend" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" aria-controls="rp-insight" tabindex="-1">Key Insights</button></div></div><div class="rov__body"><div id="rp-drill" data-rov-panel><div class="rov-seg"><span aria-pressed="true">Overview</span><span>By pack size</span><span>By pincode</span><span>By platform</span></div><div class="rov-bar"><span class="rov-search">Search</span><span class="rov-filter">Filters <b>4</b></span><span class="rov-ibtn"></span><span class="rov-ibtn"></span></div><table class="rov-table"><thead><tr><th>SKUs</th><th class="num">Wt. OSA%</th><th class="num">Est. Share</th><th class="num">Wt. Discount</th></tr></thead><tbody><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Whole Wheat Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">76.2%<small>-5.6%</small></td><td class="num">80.5%<small>-6.1%</small></td><td class="num">65.4%<small>-4.3%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Whole Wheat Atta 10 kg <span class="rov-tag">10 kg</span></span></td><td class="num">71.8%<small>-3.2%</small></td><td class="num">77.0%<small>-2.4%</small></td><td class="num">61.9%<small>-5.0%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Multigrain Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">68.4%<small>-1.8%</small></td><td class="num">74.2%<small>-4.7%</small></td><td class="num">58.3%<small>-2.9%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Chakki Atta 1 kg <span class="rov-tag">1 kg</span></span></td><td class="num">82.0%<small>-0.9%</small></td><td class="num">85.6%<small>-1.2%</small></td><td class="num">70.1%<small>-3.6%</small></td></tr></tbody></table><div class="rov-pager"><span>Showing <b>1-10</b> of <b>125</b> records</span><span>« ‹ <i aria-current="page">1</i> › »</span></div></div><div id="rp-trend" data-rov-panel hidden><div class="rov-chips"><span class="rov-chip" aria-pressed="true">MTD</span><span class="rov-chip">1M</span><span class="rov-chip">3M</span><span class="rov-chip">6M</span><span class="rov-chip">1Y</span><span class="rov-chip__div"></span><span class="rov-chip">Custom ⌄</span><span class="rov-chip">Time Step: <b>Weekly</b> ⌄</span></div><div class="rov-card"><div class="rov-chips" data-rov-series="live"><span class="rov-chip" data-c="pink" data-i="0" aria-pressed="true" role="button" tabindex="0">Offtake</span><span class="rov-chip" data-c="purple" data-i="1" aria-pressed="true" role="button" tabindex="0">Est. Category Share</span><span class="rov-chip" data-c="teal" data-i="2" aria-pressed="true" role="button" tabindex="0">Wt. OSA%</span><span class="rov-chip">DOI</span><span class="rov-chip">Wt. Discount %</span><span class="rov-chip">ASP</span></div><div class="rov-plot"><canvas data-rov-chart="live" data-multi="1" role="img" aria-label="Metric trend, Jan to Aug 2026"></canvas></div></div></div><div id="rp-insight" data-rov-panel hidden><div class="rov-kpis"><div class="rov-kpi"><p>Offtake</p><p class="rov-kpi__v">₹4.8L</p><p class="rov-kpi__d">+6.2% vs last month</p></div><div class="rov-kpi"><p>Wt. OSA%</p><p class="rov-kpi__v">76.2%</p><p class="rov-kpi__d rov-kpi__d--neg">-5.6%</p></div><div class="rov-kpi"><p>Est. Category Share</p><p class="rov-kpi__v">18.4%</p><p class="rov-kpi__d">+0.8 pts</p></div></div><p class="rov-sec">Details</p><ul class="rov-list"><li>Brand <b>Aashirvaad</b></li><li>Pack size <b>5 kg</b></li><li>Platforms <b>Blinkit · Zepto · Instamart</b></li><li>Last refreshed <b>7 Oct’26, 09:30</b></li></ul></div></div><div class="rov__foot"><span class="rov__foot-slot"></span><button type="button" class="rov__btn rov__btn--naked" data-rov-close>Cancel</button><button type="button" class="rov__btn rov__btn--sec">Secondary</button><button type="button" class="rov__btn">Export</button></div></div></div>
+            <p class="docs-demo__caption">A working Right overlay, narrowed to fit this column (the real panel is 760 wide).</p>
+          </div>
+          <div class="bx-quick">
+            <div><h3>1 · Contextual</h3><p>Details of something on the <strong>current page</strong>: a row, a chart point, an item.</p></div>
+            <div><h3>2 · Keeps context</h3><p>The page stays visible behind it; closing returns the person <strong>exactly</strong> where they were.</p></div>
+            <div><h3>3 · Fixed frame</h3><p>Header and footer stay put; only the <strong>body</strong> scrolls.</p></div>
+          </div>
+        </section>
+
+        <section id="which">
+          <h2>Right overlay, Modal or new page?</h2>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Use</th><th>When</th><th>Example</th></tr></thead><tbody>
+              <tr><td><strong>Right overlay</strong></td><td>Show more detail about something the person clicked while keeping the page visible.</td><td>Drill-downs, trends, item details</td></tr>
+              <tr><td><strong>Modal</strong></td><td>Short, blocking decisions.</td><td>Confirm a delete, a small form</td></tr>
+              <tr><td><strong>New page</strong></td><td>Long, multi-step tasks, or content people want to bookmark.</td><td>Setup wizards, full reports</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="anatomy">
+          <h2>Anatomy</h2>
+          <h3>Right overlay</h3>
+          <p>The full panel. Shown: the Tables use case with Show Modal-Footer = true, at 0.8×.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,right,top,left,right,bottom"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:0.8"><div class="rov rov--fixed" data-anatomy="1" data-stem="40"><div class="rov__head" data-anatomy="2" data-stem="40"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Whole Wheat Atta</li><li aria-current="page">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close" data-anatomy="3" data-center data-stem="32" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist" data-anatomy="4" data-stem="40"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div><div class="rov__body" data-anatomy="5" data-stem="40"><div class="rov-seg"><span aria-pressed="true">Overview</span><span>By pack size</span><span>By pincode</span><span>By platform</span></div><div class="rov-bar"><span class="rov-search">Search</span><span class="rov-filter">Filters <b>4</b></span><span class="rov-ibtn"></span><span class="rov-ibtn"></span></div><table class="rov-table"><thead><tr><th>SKUs</th><th class="num">Wt. OSA%</th><th class="num">Est. Share</th><th class="num">Wt. Discount</th></tr></thead><tbody><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Whole Wheat Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">76.2%<small>-5.6%</small></td><td class="num">80.5%<small>-6.1%</small></td><td class="num">65.4%<small>-4.3%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Whole Wheat Atta 10 kg <span class="rov-tag">10 kg</span></span></td><td class="num">71.8%<small>-3.2%</small></td><td class="num">77.0%<small>-2.4%</small></td><td class="num">61.9%<small>-5.0%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Multigrain Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">68.4%<small>-1.8%</small></td><td class="num">74.2%<small>-4.7%</small></td><td class="num">58.3%<small>-2.9%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Chakki Atta 1 kg <span class="rov-tag">1 kg</span></span></td><td class="num">82.0%<small>-0.9%</small></td><td class="num">85.6%<small>-1.2%</small></td><td class="num">70.1%<small>-3.6%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Sharbati Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">64.7%<small>-6.4%</small></td><td class="num">69.9%<small>-5.5%</small></td><td class="num">55.2%<small>-7.1%</small></td></tr></tbody></table><div class="rov-pager"><span>Showing <b>1-10</b> of <b>125</b> records</span><span>« ‹ <i aria-current="page">1</i> › »</span></div></div><div class="rov__foot" data-anatomy="6" data-center data-stem="32"><button type="button" class="rov__btn" tabindex="-1">Export</button></div></div></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Overlay container</td><td>frame</td><td>760 wide, full viewport height, docked to the right edge. White fill, left border (Default Card Stroke), shadow −4 / 0 / 16 at 6%.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Header</td><td>Right-Overlay-Header</td><td>Breadcrumb, heading, description and tabs. Always visible &mdash; it doesn’t scroll.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Close button</td><td>Neutral-Button</td><td>Outlined · Medium · Rounded · icon-only (X). Closes the overlay.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Tabs</td><td>Navigation/Primary-tabs</td><td>Large, indented. Switches between views of the same item (Drilldown, Competition, Trends…).</td></tr>
+              <tr><td><span class="bx-n">5</span></td><td>Body (slot)</td><td>Right-overlay-body</td><td>SLOT &mdash; padding 20, gap 16. Drop in any content; suggested: Segmented-control, Message, Table-template, Trends-composition. Scrolls.</td></tr>
+              <tr><td><span class="bx-n">6</span></td><td>Footer</td><td>Modal-Footer</td><td>“Show Modal-Footer”. Primary / Secondary / Cancel actions and a free slot on the left. Pinned to the bottom.</td></tr>
+            </tbody></table></div>
+
+          <h3>Right-Overlay-Header</h3>
+          <p>The top of the overlay, with every option on.</p>
+          <div class="bx-anatomy" data-bx-anatomy="top,left,right,top,bottom"><div class="bx-anatomy__zoom"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb" data-anatomy="1" data-center data-stem="32"><li>Level 1</li><li>Level 2</li><li aria-current="page">Level 3</li></ol><div class="rov__heading"><p class="rov__h" data-anatomy="2" data-stem="40">Heading</p><p class="rov__desc" data-anatomy="3" data-stem="40">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p></div></div><button type="button" class="rov__close" aria-label="Close" data-anatomy="4" data-center data-stem="32" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist" data-anatomy="5" data-center data-stem="32"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Breadcrumb</td><td><code>Show Breadcrumb</code></td><td>Where the item sits (e.g. Whole Wheat Atta › Delhi NCR). 1–3 levels.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Heading</td><td><code>Show Heading</code></td><td>SemiBold 18/24, Primary-text/950. The item name.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Description</td><td><code>Show Description</code></td><td>Regular 12/16, Primary-text/600. Max 2 lines of context.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Close button</td><td>Neutral-Button</td><td>Always visible, top-right.</td></tr>
+              <tr><td><span class="bx-n">5</span></td><td>Tabs</td><td><code>Show Tabs</code></td><td>Primary tabs, Large. A Secondary-text/100 bottom border separates header from body.</td></tr>
+            </tbody></table></div>
+
+          <h3>Breadcrumb</h3>
+          <p>Shown: L2 = Yes, L3 = Yes, at 3×.</p>
+          <div class="bx-anatomy" data-bx-anatomy="top,bottom,top,right"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:3"><ol class="rov__crumb rov__crumb--x"><li data-anatomy="1" data-center data-stem="28">Level 1</li><li class="rov__sep" data-anatomy="2" data-center data-stem="28"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M181.66 133.66l-80 80a8 8 0 0 1-11.32-11.32L164.69 128 90.34 53.66a8 8 0 0 1 11.32-11.32l80 80a8 8 0 0 1 0 11.32Z"/></svg></li><li data-anatomy="3" data-center data-stem="28">Level 2</li><li class="rov__sep"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M181.66 133.66l-80 80a8 8 0 0 1-11.32-11.32L164.69 128 90.34 53.66a8 8 0 0 1 11.32-11.32l80 80a8 8 0 0 1 0 11.32Z"/></svg></li><li aria-current="page" data-anatomy="4" data-stem="28">Level 3</li></ol></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Level 1</td><td>text</td><td>Parent context &mdash; Medium 14/18, Primary-text/600. Clickable.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Separator</td><td>CaretRight</td><td>Bold, 12px, between every two levels (the line under marker 1’s right edge).</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Level 2</td><td><code>L2</code></td><td>Optional middle level.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Current level</td><td>text</td><td>Last item &mdash; SemiBold, Primary-text/950. Not clickable.</td></tr>
+            </tbody></table></div>
+
+          <h3>Footer (Modal-Footer)</h3>
+          <p>The shared Popups / Modal-Footer, shown with a checkbox in the free slot.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,bottom,top,top,top"><div class="bx-anatomy__zoom"><div class="rov" style="height:auto"><div class="rov__foot" data-anatomy="1" data-stem="40"><span class="rov__foot-slot" data-anatomy="2" data-center data-stem="28"><span class="rov-cb"></span>Checkbox Label</span><button type="button" class="rov__btn rov__btn--naked" tabindex="-1" data-anatomy="3" data-center data-stem="28">Cancel</button><button type="button" class="rov__btn rov__btn--sec" tabindex="-1" data-anatomy="4" data-center data-stem="28">Secondary</button><button type="button" class="rov__btn" tabindex="-1" data-anatomy="5" data-center data-stem="28">Primary</button></div></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Footer bar</td><td>Modal-Footer</td><td>White, top border Secondary-text/100, shadow 0 / −2 / 6 at 9%. Padding 12 / 16. Pinned to the bottom.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Free slot (bottom-left)</td><td><code>Free Slot - Bottom left</code></td><td>Optional: checkbox, message strip, record count.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Cancel</td><td>Action-Button · Naked</td><td>Closes without saving.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Secondary action</td><td>Action-Button · Outlined</td><td>Alternative action.</td></tr>
+              <tr><td><span class="bx-n">5</span></td><td>Primary action</td><td>Action-Button · Filled</td><td>The main action. Only one.</td></tr>
+            </tbody></table></div>
+
+          <h3>Body (slot)</h3>
+          <p>Right-overlay-body is a Figma <strong>slot</strong> &mdash; select it and insert any content. Shown: the Trends use case, at 0.8×.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,right"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:0.8"><div class="rov rov--fixed"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Whole Wheat Atta</li><li aria-current="page">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div><div class="rov__body" data-anatomy="1" data-stem="40"><div class="rov-chips"><span class="rov-chip" aria-pressed="true">MTD</span><span class="rov-chip">1M</span><span class="rov-chip">3M</span><span class="rov-chip">6M</span><span class="rov-chip">1Y</span><span class="rov-chip__div"></span><span class="rov-chip">Custom ⌄</span><span class="rov-chip">Time Step: <b>Weekly</b> ⌄</span></div><div class="rov-card" data-anatomy="2" data-stem="40"><div class="rov-chips" data-rov-series="ana"><span class="rov-chip" data-c="pink" data-i="0" aria-pressed="true" role="button" tabindex="0">Offtake</span><span class="rov-chip" data-c="purple" data-i="1" aria-pressed="true" role="button" tabindex="0">Est. Category Share</span><span class="rov-chip" data-c="teal" data-i="2" aria-pressed="true" role="button" tabindex="0">Wt. OSA%</span><span class="rov-chip">DOI</span><span class="rov-chip">Wt. Discount %</span><span class="rov-chip">ASP</span></div><div class="rov-plot"><canvas data-rov-chart="ana" data-multi="1" role="img" aria-label="Metric trend, Jan to Aug 2026"></canvas></div></div></div></div></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Body slot</td><td>Right-overlay-body</td><td>Padding 20 on all sides, 16 vertical gap; scrolls under the fixed header and footer.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Content</td><td>Trends-composition</td><td>Placed in the slot; stacks vertically with a 16 gap.</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="footer">
+          <h2>Footer</h2>
+          <p><code>Show Modal-Footer</code> on the main component. Show it only when the overlay has actions.</p>
+          <div class="bx-options bx-options--two"><div class="bx-opt"><div class="bx-opt__stage"><div class="rov-mini"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Whole Wheat Atta</li><li aria-current="page">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div><div class="rov__body"><div class="rov-seg"><span aria-pressed="true">Overview</span><span>By pack size</span><span>By pincode</span><span>By platform</span></div><div class="rov-bar"><span class="rov-search">Search</span><span class="rov-filter">Filters <b>4</b></span><span class="rov-ibtn"></span><span class="rov-ibtn"></span></div><table class="rov-table"><thead><tr><th>SKUs</th><th class="num">Wt. OSA%</th><th class="num">Est. Share</th><th class="num">Wt. Discount</th></tr></thead><tbody><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Whole Wheat Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">76.2%<small>-5.6%</small></td><td class="num">80.5%<small>-6.1%</small></td><td class="num">65.4%<small>-4.3%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Whole Wheat Atta 10 kg <span class="rov-tag">10 kg</span></span></td><td class="num">71.8%<small>-3.2%</small></td><td class="num">77.0%<small>-2.4%</small></td><td class="num">61.9%<small>-5.0%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Multigrain Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">68.4%<small>-1.8%</small></td><td class="num">74.2%<small>-4.7%</small></td><td class="num">58.3%<small>-2.9%</small></td></tr></tbody></table><div class="rov-pager"><span>Showing <b>1-10</b> of <b>125</b> records</span><span>« ‹ <i aria-current="page">1</i> › »</span></div></div><div class="rov__foot"><button type="button" class="rov__btn" tabindex="-1">Export</button></div></div></div></div><div class="bx-opt__body"><h3>Show Modal-Footer = true <small>Default</small></h3><p>When the overlay has actions (Apply, Save, Export).</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="rov-mini"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Whole Wheat Atta</li><li aria-current="page">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div><div class="rov__body"><div class="rov-chips"><span class="rov-chip" aria-pressed="true">MTD</span><span class="rov-chip">1M</span><span class="rov-chip">3M</span><span class="rov-chip">6M</span><span class="rov-chip">1Y</span><span class="rov-chip__div"></span><span class="rov-chip">Custom ⌄</span><span class="rov-chip">Time Step: <b>Weekly</b> ⌄</span></div><div class="rov-card"><div class="rov-chips"><span class="rov-chip" aria-pressed="true">Offtake</span><span class="rov-chip">Est. Category Share</span><span class="rov-chip">Wt. OSA%</span><span class="rov-chip">DOI</span><span class="rov-chip">ASP</span></div><div class="rov-plot"><canvas data-rov-chart="f2" data-multi="0" role="img" aria-label="Metric trend, Jan to Aug 2026"></canvas></div></div></div></div></div></div><div class="bx-opt__body"><h3>Show Modal-Footer = false</h3><p>Read-only overlays (details, trends) &mdash; the body gets the full height.</p></div></div></div>
+        </section>
+
+        <section id="header">
+          <h2>Header options</h2>
+          <p>Right-Overlay-Header booleans. At least one of Breadcrumb or Heading must be on.</p>
+          <div class="bx-options bx-options--two rov-hdrs"><div class="bx-opt"><div class="bx-opt__stage"><div class="rov rov-hdr"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Level 1</li><li>Level 2</li><li aria-current="page">Level 3</li></ol><div class="rov__heading"><p class="rov__h">Heading</p><p class="rov__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p></div></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div></div></div><div class="bx-opt__body"><h3>All on <small>Default</small></h3><p>Breadcrumb, heading, description, tabs.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="rov rov-hdr"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><div class="rov__heading"><p class="rov__h">Heading</p><p class="rov__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p></div></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div></div></div><div class="bx-opt__body"><h3>No breadcrumb</h3><p>The item has no parent context.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="rov rov-hdr"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Whole Wheat Atta</li><li aria-current="page">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div></div></div><div class="bx-opt__body"><h3>Breadcrumb only</h3><p>Heading off &mdash; the breadcrumb carries the title (as in the use cases).</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="rov rov-hdr"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Level 1</li><li>Level 2</li><li aria-current="page">Level 3</li></ol><div class="rov__heading"><p class="rov__h">Heading</p></div></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div></div></div><div class="bx-opt__body"><h3>Show Description = false</h3><p>When the heading is self-explanatory.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="rov rov-hdr"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Level 1</li><li>Level 2</li><li aria-current="page">Level 3</li></ol><div class="rov__heading"><p class="rov__h">Heading</p><p class="rov__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p></div></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div></div></div></div><div class="bx-opt__body"><h3>Show Tabs = false</h3><p>A single view &mdash; no tabs.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="rov rov-hdr"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><div class="rov__heading"><p class="rov__h">Heading</p></div></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div></div></div></div><div class="bx-opt__body"><h3>Minimal</h3><p>Heading only.</p></div></div></div>
+          <h3>Breadcrumb depth</h3>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage rov-crumb-stage"><ol class="rov__crumb"><li aria-current="page">Level 1</li></ol></div><div class="bx-opt__body"><h3>1 level</h3><p>L2 = No, L3 = No.</p></div></div><div class="bx-opt"><div class="bx-opt__stage rov-crumb-stage"><ol class="rov__crumb"><li>Level 1</li><li aria-current="page">Level 2</li></ol></div><div class="bx-opt__body"><h3>2 levels</h3><p>L2 = Yes, L3 = No.</p></div></div><div class="bx-opt"><div class="bx-opt__stage rov-crumb-stage"><ol class="rov__crumb"><li>Level 1</li><li>Level 2</li><li aria-current="page">Level 3</li></ol></div><div class="bx-opt__body"><h3>3 levels <small>Default</small></h3><p>L2 = Yes, L3 = Yes.</p></div></div></div>
+        </section>
+
+        <section id="footer-options">
+          <h2>Footer options</h2>
+          <p>Modal-Footer booleans: Primary Action, Secondary Action, Cancel and Free Slot &ndash; Bottom left.</p>
+          <div class="bx-options bx-options--two"><div class="bx-opt"><div class="bx-opt__stage"><div class="rov rov-ftr"><div class="rov__foot"><span class="rov__foot-slot"><span class="rov-cb"></span>Checkbox Label</span><button type="button" class="rov__btn rov__btn--naked" tabindex="-1">Cancel</button><button type="button" class="rov__btn rov__btn--sec" tabindex="-1">Secondary</button><button type="button" class="rov__btn" tabindex="-1">Primary</button></div></div></div><div class="bx-opt__body"><h3>With free slot</h3><p>Checkbox or message on the left, actions on the right.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="rov rov-ftr"><div class="rov__foot"><span class="rov__foot-slot"></span><button type="button" class="rov__btn rov__btn--naked" tabindex="-1">Cancel</button><button type="button" class="rov__btn rov__btn--sec" tabindex="-1">Secondary</button><button type="button" class="rov__btn" tabindex="-1">Primary</button></div></div></div><div class="bx-opt__body"><h3>Actions only</h3><p>Cancel · Secondary · Primary.</p></div></div></div>
+        </section>
+
+        <section id="body">
+          <h2>Body use cases</h2>
+          <p>The body is a slot &mdash; fill it with a template.</p>
+          <div class="bx-options rov-cases"><div class="bx-opt"><div class="bx-opt__stage"><div class="rov-mini" style="zoom:0.6"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Whole Wheat Atta</li><li aria-current="page">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div><div class="rov__body"><div class="rov-seg"><span aria-pressed="true">Overview</span><span>By pack size</span><span>By pincode</span><span>By platform</span></div><div class="rov-bar"><span class="rov-search">Search</span><span class="rov-filter">Filters <b>4</b></span><span class="rov-ibtn"></span><span class="rov-ibtn"></span></div><table class="rov-table"><thead><tr><th>SKUs</th><th class="num">Wt. OSA%</th><th class="num">Est. Share</th><th class="num">Wt. Discount</th></tr></thead><tbody><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Whole Wheat Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">76.2%<small>-5.6%</small></td><td class="num">80.5%<small>-6.1%</small></td><td class="num">65.4%<small>-4.3%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Whole Wheat Atta 10 kg <span class="rov-tag">10 kg</span></span></td><td class="num">71.8%<small>-3.2%</small></td><td class="num">77.0%<small>-2.4%</small></td><td class="num">61.9%<small>-5.0%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Multigrain Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">68.4%<small>-1.8%</small></td><td class="num">74.2%<small>-4.7%</small></td><td class="num">58.3%<small>-2.9%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Chakki Atta 1 kg <span class="rov-tag">1 kg</span></span></td><td class="num">82.0%<small>-0.9%</small></td><td class="num">85.6%<small>-1.2%</small></td><td class="num">70.1%<small>-3.6%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Sharbati Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">64.7%<small>-6.4%</small></td><td class="num">69.9%<small>-5.5%</small></td><td class="num">55.2%<small>-7.1%</small></td></tr></tbody></table><div class="rov-pager"><span>Showing <b>1-10</b> of <b>125</b> records</span><span>« ‹ <i aria-current="page">1</i> › »</span></div></div><div class="rov__foot"><button type="button" class="rov__btn" tabindex="-1">Export</button></div></div></div></div><div class="bx-opt__body"><h3>Tables</h3><p>Segmented control + Table-template + footer.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="rov-mini" style="zoom:0.6"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Whole Wheat Atta</li><li aria-current="page">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div><div class="rov__body"><div class="rov-chips"><span class="rov-chip" aria-pressed="true">MTD</span><span class="rov-chip">1M</span><span class="rov-chip">3M</span><span class="rov-chip">6M</span><span class="rov-chip">1Y</span><span class="rov-chip__div"></span><span class="rov-chip">Custom ⌄</span><span class="rov-chip">Time Step: <b>Weekly</b> ⌄</span></div><div class="rov-card"><div class="rov-chips" data-rov-series="u2"><span class="rov-chip" data-c="pink" data-i="0" aria-pressed="true" role="button" tabindex="0">Offtake</span><span class="rov-chip" data-c="purple" data-i="1" aria-pressed="true" role="button" tabindex="0">Est. Category Share</span><span class="rov-chip" data-c="teal" data-i="2" aria-pressed="true" role="button" tabindex="0">Wt. OSA%</span><span class="rov-chip">DOI</span><span class="rov-chip">Wt. Discount %</span><span class="rov-chip">ASP</span></div><div class="rov-plot"><canvas data-rov-chart="u2" data-multi="1" role="img" aria-label="Metric trend, Jan to Aug 2026"></canvas></div></div></div></div></div></div><div class="bx-opt__body"><h3>Trends (multi-line)</h3><p>Trends-composition, no footer.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="rov-mini" style="zoom:0.6"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Whole Wheat Atta</li><li aria-current="page">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div><div class="rov__body"><div class="rov-chips"><span class="rov-chip" aria-pressed="true">MTD</span><span class="rov-chip">1M</span><span class="rov-chip">3M</span><span class="rov-chip">6M</span><span class="rov-chip">1Y</span><span class="rov-chip__div"></span><span class="rov-chip">Custom ⌄</span><span class="rov-chip">Time Step: <b>Weekly</b> ⌄</span></div><div class="rov-card"><div class="rov-chips"><span class="rov-chip" aria-pressed="true">Offtake</span><span class="rov-chip">Est. Category Share</span><span class="rov-chip">Wt. OSA%</span><span class="rov-chip">DOI</span><span class="rov-chip">ASP</span></div><div class="rov-plot"><canvas data-rov-chart="u3" data-multi="0" role="img" aria-label="Metric trend, Jan to Aug 2026"></canvas></div></div></div></div></div></div><div class="bx-opt__body"><h3>Trends (single)</h3><p>Trends-composition, no footer.</p></div></div></div>
+        </section>
+
+        <section id="usage">
+          <h2>Common layouts</h2>
+          <p>Use a right overlay to show more detail about something the person clicked while keeping the page visible.</p>
+          <div class="bx-usage rov-usage">
+            <figure>
+              <div class="bx-mock"><div class="rov-mini" style="zoom:0.7"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Whole Wheat Atta</li><li aria-current="page">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div><div class="rov__body"><div class="rov-seg"><span aria-pressed="true">Overview</span><span>By pack size</span><span>By pincode</span><span>By platform</span></div><div class="rov-bar"><span class="rov-search">Search</span><span class="rov-filter">Filters <b>4</b></span><span class="rov-ibtn"></span><span class="rov-ibtn"></span></div><table class="rov-table"><thead><tr><th>SKUs</th><th class="num">Wt. OSA%</th><th class="num">Est. Share</th><th class="num">Wt. Discount</th></tr></thead><tbody><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Whole Wheat Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">76.2%<small>-5.6%</small></td><td class="num">80.5%<small>-6.1%</small></td><td class="num">65.4%<small>-4.3%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Whole Wheat Atta 10 kg <span class="rov-tag">10 kg</span></span></td><td class="num">71.8%<small>-3.2%</small></td><td class="num">77.0%<small>-2.4%</small></td><td class="num">61.9%<small>-5.0%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Multigrain Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">68.4%<small>-1.8%</small></td><td class="num">74.2%<small>-4.7%</small></td><td class="num">58.3%<small>-2.9%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Chakki Atta 1 kg <span class="rov-tag">1 kg</span></span></td><td class="num">82.0%<small>-0.9%</small></td><td class="num">85.6%<small>-1.2%</small></td><td class="num">70.1%<small>-3.6%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Sharbati Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">64.7%<small>-6.4%</small></td><td class="num">69.9%<small>-5.5%</small></td><td class="num">55.2%<small>-7.1%</small></td></tr></tbody></table><div class="rov-pager"><span>Showing <b>1-10</b> of <b>125</b> records</span><span>« ‹ <i aria-current="page">1</i> › »</span></div></div><div class="rov__foot"><button type="button" class="rov__btn" tabindex="-1">Export</button></div></div></div></div>
+              <figcaption><b>Drill into a table row</b>The breadcrumb shows where the data comes from; tabs switch views.</figcaption>
+            </figure>
+            <figure>
+              <div class="bx-mock"><div class="rov-mini" style="zoom:0.7"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Whole Wheat Atta</li><li aria-current="page">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button></div></div><div class="rov__body"><div class="rov-chips"><span class="rov-chip" aria-pressed="true">MTD</span><span class="rov-chip">1M</span><span class="rov-chip">3M</span><span class="rov-chip">6M</span><span class="rov-chip">1Y</span><span class="rov-chip__div"></span><span class="rov-chip">Custom ⌄</span><span class="rov-chip">Time Step: <b>Weekly</b> ⌄</span></div><div class="rov-card"><div class="rov-chips" data-rov-series="c2"><span class="rov-chip" data-c="pink" data-i="0" aria-pressed="true" role="button" tabindex="0">Offtake</span><span class="rov-chip" data-c="purple" data-i="1" aria-pressed="true" role="button" tabindex="0">Est. Category Share</span><span class="rov-chip" data-c="teal" data-i="2" aria-pressed="true" role="button" tabindex="0">Wt. OSA%</span><span class="rov-chip">DOI</span><span class="rov-chip">Wt. Discount %</span><span class="rov-chip">ASP</span></div><div class="rov-plot"><canvas data-rov-chart="c2" data-multi="1" role="img" aria-label="Metric trend, Jan to Aug 2026"></canvas></div></div></div></div></div></div>
+              <figcaption><b>See a trend</b>Read-only, so there’s no footer.</figcaption>
+            </figure>
+            <figure>
+              <div class="bx-mock"><div class="rov-mini" style="zoom:0.7"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><div class="rov__heading"><p class="rov__h">Whole Wheat Atta 5 kg</p><p class="rov__desc">Aashirvaad · Delhi NCR · last 30 days</p></div></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div></div><div class="rov__body"><div class="rov-kpis"><div class="rov-kpi"><p>Offtake</p><p class="rov-kpi__v">₹4.8L</p><p class="rov-kpi__d">+6.2% vs last month</p></div><div class="rov-kpi"><p>Wt. OSA%</p><p class="rov-kpi__v">76.2%</p><p class="rov-kpi__d rov-kpi__d--neg">-5.6%</p></div><div class="rov-kpi"><p>Est. Category Share</p><p class="rov-kpi__v">18.4%</p><p class="rov-kpi__d">+0.8 pts</p></div></div><p class="rov-sec">Details</p><ul class="rov-list"><li>Brand <b>Aashirvaad</b></li><li>Pack size <b>5 kg</b></li><li>Platforms <b>Blinkit · Zepto · Instamart</b></li><li>Last refreshed <b>7 Oct’26, 09:30</b></li></ul></div></div></div></div>
+              <figcaption><b>Quick details</b>Heading + description, no tabs, no footer &mdash; minimal.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="dos-donts">
+          <h2>Do’s and don’ts</h2>
+          <h3>When to use</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="rov-mini"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Whole Wheat Atta</li><li aria-current="page">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div><div class="rov__body"><div class="rov-seg"><span aria-pressed="true">Overview</span><span>By pack size</span><span>By pincode</span><span>By platform</span></div><div class="rov-bar"><span class="rov-search">Search</span><span class="rov-filter">Filters <b>4</b></span><span class="rov-ibtn"></span><span class="rov-ibtn"></span></div><table class="rov-table"><thead><tr><th>SKUs</th><th class="num">Wt. OSA%</th><th class="num">Est. Share</th><th class="num">Wt. Discount</th></tr></thead><tbody><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Whole Wheat Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">76.2%<small>-5.6%</small></td><td class="num">80.5%<small>-6.1%</small></td><td class="num">65.4%<small>-4.3%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Whole Wheat Atta 10 kg <span class="rov-tag">10 kg</span></span></td><td class="num">71.8%<small>-3.2%</small></td><td class="num">77.0%<small>-2.4%</small></td><td class="num">61.9%<small>-5.0%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Multigrain Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">68.4%<small>-1.8%</small></td><td class="num">74.2%<small>-4.7%</small></td><td class="num">58.3%<small>-2.9%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Chakki Atta 1 kg <span class="rov-tag">1 kg</span></span></td><td class="num">82.0%<small>-0.9%</small></td><td class="num">85.6%<small>-1.2%</small></td><td class="num">70.1%<small>-3.6%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Sharbati Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">64.7%<small>-6.4%</small></td><td class="num">69.9%<small>-5.5%</small></td><td class="num">55.2%<small>-7.1%</small></td></tr></tbody></table><div class="rov-pager"><span>Showing <b>1-10</b> of <b>125</b> records</span><span>« ‹ <i aria-current="page">1</i> › »</span></div></div><div class="rov__foot"><button type="button" class="rov__btn" tabindex="-1">Export</button></div></div></div></div>
+              <p class="docs-dodont__cap">Use the overlay for details of something on the current page. <span class="rov-why">Why: people keep their context and can close it to return instantly.</span></p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="rov-mini"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><div class="rov__heading"><p class="rov__h">Set up a new report</p></div></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div></div><div class="rov__body"><div class="rov-stepper"><b aria-current="step">1</b>Source<i></i><b>2</b>Metrics<i></i><b>3</b>Filters<i></i><b>4</b>Schedule<i></i><b>5</b>Share</div><label class="rov-field">Report name<span></span></label><label class="rov-field">Data source<span></span></label><label class="rov-field">Owner<span></span></label></div><div class="rov__foot"><span class="rov__foot-slot"></span><button type="button" class="rov__btn rov__btn--naked" tabindex="-1">Cancel</button><button type="button" class="rov__btn rov__btn--sec" tabindex="-1">Secondary</button><button type="button" class="rov__btn" tabindex="-1">Next</button></div></div></div></div>
+              <p class="docs-dodont__cap">Don’t use it for long multi-step flows like setup wizards. <span class="rov-why">Why: long flows need a page with a stepper; overlays feel cramped and are easy to close by mistake.</span></p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="rov-modal"><p class="rov-modal__t">Delete this view?</p><p>This can’t be undone.</p><div class="rov-modal__f"><button type="button" class="rov__btn rov__btn--naked" tabindex="-1">Cancel</button><button type="button" class="rov__btn" tabindex="-1">Delete</button></div></div></div>
+              <p class="docs-dodont__cap">Use a Modal for short, blocking decisions. <span class="rov-why">Why: confirmations need full attention.</span></p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="rov-mini"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><div class="rov__heading"><p class="rov__h">Delete view</p></div></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div></div><div class="rov__body"><div class="rov-q">Are you sure?</div></div><div class="rov__foot"><span class="rov__foot-slot"></span><button type="button" class="rov__btn rov__btn--naked" tabindex="-1">Cancel</button><button type="button" class="rov__btn rov__btn--sec" tabindex="-1">Secondary</button><button type="button" class="rov__btn" tabindex="-1">Delete</button></div></div></div></div>
+              <p class="docs-dodont__cap">Don’t put a single “Are you sure?” question in a right overlay. <span class="rov-why">Why: a 760px panel for one question wastes space and hides the page for no reason.</span></p>
+            </div>
+          </div>
+          <h3>Header</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="rov rov-hdr"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Level 1</li><li>Level 2</li><li aria-current="page">Level 3</li></ol><div class="rov__heading"><p class="rov__h">Heading</p><p class="rov__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p></div></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div></div></div>
+              <p class="docs-dodont__cap">Show where the content comes from with a breadcrumb or heading. <span class="rov-why">Why: people know which item they drilled into.</span></p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="rov rov-hdr"><div class="rov__head"><div class="rov__top"><div class="rov__titles"></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div></div></div>
+              <p class="docs-dodont__cap">Don’t turn off both the breadcrumb and the heading. <span class="rov-why">Why: the overlay has no title, so people lose context.</span></p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="rov rov-hdr"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Level 1</li><li>Level 2</li><li aria-current="page">Level 3</li></ol><div class="rov__heading"><p class="rov__h">Heading</p><p class="rov__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p></div></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div></div></div></div>
+              <p class="docs-dodont__cap">Keep the description to 1–2 lines. <span class="rov-why">Why: the header stays compact and the body gets the space.</span></p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="rov rov-hdr"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Level 1</li><li>Level 2</li><li aria-current="page">Level 3</li></ol><div class="rov__heading"><p class="rov__h">Heading</p><p class="rov__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p></div></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div></div></div></div>
+              <p class="docs-dodont__cap">Don’t write long paragraphs in the description. <span class="rov-why">Why: it pushes content down; put long text in the body.</span></p>
+            </div>
+          </div>
+          <h3>Footer</h3>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="rov-mini"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Whole Wheat Atta</li><li aria-current="page">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div><div class="rov__body"><div class="rov-chips"><span class="rov-chip" aria-pressed="true">MTD</span><span class="rov-chip">1M</span><span class="rov-chip">3M</span><span class="rov-chip">6M</span><span class="rov-chip">1Y</span><span class="rov-chip__div"></span><span class="rov-chip">Custom ⌄</span><span class="rov-chip">Time Step: <b>Weekly</b> ⌄</span></div><div class="rov-card"><div class="rov-chips" data-rov-series="d5"><span class="rov-chip" data-c="pink" data-i="0" aria-pressed="true" role="button" tabindex="0">Offtake</span><span class="rov-chip" data-c="purple" data-i="1" aria-pressed="true" role="button" tabindex="0">Est. Category Share</span><span class="rov-chip" data-c="teal" data-i="2" aria-pressed="true" role="button" tabindex="0">Wt. OSA%</span><span class="rov-chip">DOI</span><span class="rov-chip">Wt. Discount %</span><span class="rov-chip">ASP</span></div><div class="rov-plot"><canvas data-rov-chart="d5" data-multi="1" role="img" aria-label="Metric trend, Jan to Aug 2026"></canvas></div></div></div></div></div></div>
+              <p class="docs-dodont__cap">Show the footer only when there are actions. <span class="rov-why">Why: read-only overlays get more room for content.</span></p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="rov-mini"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Whole Wheat Atta</li><li aria-current="page">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div><div class="rov__body"><div class="rov-chips"><span class="rov-chip" aria-pressed="true">MTD</span><span class="rov-chip">1M</span><span class="rov-chip">3M</span><span class="rov-chip">6M</span><span class="rov-chip">1Y</span><span class="rov-chip__div"></span><span class="rov-chip">Custom ⌄</span><span class="rov-chip">Time Step: <b>Weekly</b> ⌄</span></div><div class="rov-card"><div class="rov-chips"><span class="rov-chip" aria-pressed="true">Offtake</span><span class="rov-chip">Est. Category Share</span><span class="rov-chip">Wt. OSA%</span><span class="rov-chip">DOI</span><span class="rov-chip">ASP</span></div><div class="rov-plot"><canvas data-rov-chart="d5b" data-multi="0" role="img" aria-label="Metric trend, Jan to Aug 2026"></canvas></div></div></div><div class="rov__foot"><button type="button" class="rov__btn" tabindex="-1">Close</button></div></div></div></div>
+              <p class="docs-dodont__cap">Don’t show an empty footer or a lone “Close” button. <span class="rov-why">Why: the close button in the header already does that.</span></p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="rov rov-ftr"><div class="rov__foot"><span class="rov__foot-slot"></span><button type="button" class="rov__btn rov__btn--naked" tabindex="-1">Cancel</button><button type="button" class="rov__btn rov__btn--sec" tabindex="-1">Secondary</button><button type="button" class="rov__btn" tabindex="-1">Primary</button></div></div></div>
+              <p class="docs-dodont__cap">Have one Primary action. <span class="rov-why">Why: it makes the main next step obvious.</span></p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="rov rov-ftr"><div class="rov__foot"><span class="rov__foot-slot"></span><button type="button" class="rov__btn" tabindex="-1">Cancel</button><button type="button" class="rov__btn" tabindex="-1">Secondary</button><button type="button" class="rov__btn" tabindex="-1">Primary</button></div></div></div>
+              <p class="docs-dodont__cap">Don’t add several Primary buttons. <span class="rov-why">Why: people can’t tell which action matters.</span></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="content">
+          <h2>Writing content</h2>
+          <ul>
+            <li><strong>Breadcrumb</strong> &mdash; parent items first, the current item last: “Whole Wheat Atta › Delhi NCR”. Use the names people saw on the page they clicked.</li>
+            <li><strong>Heading</strong> &mdash; the item name, not an action (“Whole Wheat Atta 5 kg”, not “View details”).</li>
+            <li><strong>Description</strong> &mdash; one or two lines of context: scope, period, source. Long text belongs in the body.</li>
+            <li><strong>Tabs</strong> &mdash; short nouns for views of the same item: Drilldown, Competition, My Trends.</li>
+            <li><strong>Primary action</strong> &mdash; a verb for what happens: Export, Apply, Save. Not “OK” or “Close”.</li>
+          </ul>
+        </section>
+
+        <section id="how-to-use">
+          <h2>Adding one to a screen</h2>
+          <p>A step-by-step guide for designers: add a right overlay to a screen and fill it with content &mdash; without
+            detaching it. Highlighted property values are the ones you change.</p>
+          <ol class="rov-steps"><li><div><h3>Place it on the screen</h3><ul><li>Open Assets and search “Right overlay”.</li><li>Drop it into your screen frame, aligned to the right edge: X = frame width − 760, Y = 0.</li><li>Stretch the height to the full frame (e.g. 900). Keep the width 760.</li><li>Optional: add a scrim (Neutrals/Black/20) behind it if the page should dim.</li></ul><p class="rov-props"><span>Width: <b>760</b></span> <span data-c>Height: <b>Fill frame</b></span> <span data-c>Position: <b>Right edge</b></span></p></div></li><li><div><h3>Set the header</h3><ul><li>Select the nested Right-Overlay-Header.</li><li>Turn on what you need: Breadcrumb, Heading, Description, Tabs (keep at least Breadcrumb or Heading).</li><li>Edit the heading / description text directly.</li></ul><p class="rov-props"><span data-c>Show Breadcrumb: <b>On</b></span> <span data-c>Show Heading: <b>On</b></span> <span>Show Description: <b>On</b></span> <span>Show Tabs: <b>On</b></span></p></div></li><li><div><h3>Set the breadcrumb depth</h3><ul><li>Select the Breadcrumb → choose L2 / L3 for 1, 2 or 3 levels.</li><li>Type the levels: parent items first, current item last (bold).</li></ul><p class="rov-props"><span data-c>L2: <b>Yes</b></span> <span data-c>L3: <b>Yes</b></span></p></div></li><li><div><h3>Rename the tabs</h3><ul><li>Select each Tab Item inside the header tabs and change its Text.</li><li>Set the active one to Selected; hide unused tabs with the Tab 3…8 toggles on the tabs.</li></ul><p class="rov-props"><span data-c>Tab Item · Text: <b>Drilldown</b></span> <span data-c>Tab Item · State: <b>Selected</b></span></p></div></li><li><div><h3>Fill the body</h3><ul><li>Click the Right-overlay-body slot → the “+” lets you insert content.</li><li>Preferred blocks: Segmented-control, Message, Table-template, Trends-composition.</li><li>Stack them vertically — the slot already has 20px padding and 16px gap.</li></ul><p class="rov-props"><span data-c>Right-overlay-body: <b>Insert content</b></span></p></div></li><li><div><h3>Set the footer</h3><ul><li>Read-only content → Show Modal-Footer = false.</li><li>With actions → keep it on; in the Modal-Footer pick Primary (one), Secondary, Cancel and the bottom-left free slot.</li></ul><p class="rov-props"><span data-c>Show Modal-Footer: <b>On / Off</b></span> <span>Primary Action: <b>On</b></span> <span>Free Slot - Bottom left: <b>On</b></span></p></div></li><li><div><h3>Prototype open / close</h3><ul><li>Trigger: On click of the row / chart point → Open overlay → Move in from right (250ms, ease-out).</li><li>Close button: Back / Close overlay. Esc should close too (note it for devs).</li></ul><p class="rov-props"><span data-c>Interaction: <b>On click</b></span> <span data-c>Animation: <b>Move in · right</b></span> <span>Duration: <b>250ms</b></span></p></div></li></ol>
+          <h3>Before you hand off &mdash; checklist</h3>
+          <ul class="rov-check">
+            <li>It’s an instance of “Right overlay” (not detached).</li>
+            <li>760 wide, full height, docked to the right edge.</li>
+            <li>Header has a breadcrumb or heading that names the item.</li>
+            <li>Active tab is Selected; unused tabs hidden.</li>
+            <li>Body content inserted in the slot (no content placed on top of the slot).</li>
+            <li>Footer only if there are actions &mdash; one Primary.</li>
+            <li>Annotate how it opens (trigger) and that Esc / the close button closes it.</li>
+          </ul>
+          <h3>Common questions</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Question</th><th>Answer</th></tr></thead><tbody>
+              <tr><td>My content isn’t in the preferred list.</td><td>You can insert any component or frame into the slot. Keep the 20px padding (already in the slot) and use existing components.</td></tr>
+              <tr><td>Can the overlay be wider?</td><td>Keep 760 for consistency. If content really needs more room (wide tables), consider a full page instead.</td></tr>
+              <tr><td>How do I show a loading or empty state?</td><td>Put a loader or empty-state message in the body slot; keep the header and footer visible.</td></tr>
+              <tr><td>Can I open an overlay from inside an overlay?</td><td>No &mdash; replace the content and update the breadcrumb instead of stacking panels.</td></tr>
+              <tr><td>Mobile / small screens?</td><td>There is no mobile variant yet; note “full width on small screens” for developers.</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="behavior">
+          <h2>Behavior &amp; accessibility</h2>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>What to do</th></tr></thead><tbody>
+              <tr><td>Open</td><td>Slides in from the right in 200–250ms (ease-out), triggered by a row or chart click.</td></tr>
+              <tr><td>Close</td><td>The close button, <kbd>Esc</kbd>, Cancel, or a click on the page outside (optional). Return focus to the row or point that opened it.</td></tr>
+              <tr><td>Scroll</td><td>Only the body scrolls; the header and footer stay fixed.</td></tr>
+              <tr><td>Width</td><td>760, fixed. Below 1024px viewports, use full width.</td></tr>
+              <tr><td>Focus</td><td><code>role=&quot;dialog&quot;</code> + <code>aria-modal=&quot;true&quot;</code>, labelled by the heading (or the current breadcrumb level). Move focus into the panel on open and trap it there.</td></tr>
+              <tr><td>Tabs</td><td><code>role=&quot;tablist&quot;</code>; <kbd>←</kbd> / <kbd>→</kbd> move between tabs.</td></tr>
+              <tr><td>Stacking</td><td>One overlay at a time. Opening another replaces the content and updates the breadcrumb.</td></tr>
+            </tbody></table></div>
+          <p>Every exact value &mdash; dimensions, colour tokens and the full property list &mdash; is on the
+            <a href="docs-overlays-specifications.html">Specifications tab</a>.</p>
+        </section>
+<script src="assets/js/right-overlay.js"></script>
+<script src="assets/js/vendor/chart.umd.min.js" defer></script>
+<script defer>
+window.addEventListener('DOMContentLoaded',function(){
+  if(!window.Chart) return;
+  var F="'Cube Rupee', 'DM Sans', system-ui, sans-serif", D={"labels": ["Jan’26", "Feb’26", "Mar’26", "Apr’26", "May’26", "Jun’26", "Jul’26", "Aug’26"], "series": [{"label": "Offtake", "color": "#d6409f", "data": [18, 34, 55, 72, 82, 81, 72, 66]}, {"label": "Est. Category Share", "color": "#8e4ec6", "data": [4, 18, 30, 33, 35, 34, 22, 13]}, {"label": "Wt. OSA%", "color": "#12a594", "data": [8, 24, 44, 59, 66, 64, 60, 58]}]};
+  Chart.defaults.font.family=F; Chart.defaults.font.size=11; Chart.defaults.color='#5f717b';
+  function make(cv){
+    if(cv._c) return; var multi=cv.getAttribute('data-multi')==='1';
+    var ser=multi?D.series:[{label:'Offtake',color:'#025be5',data:D.series[0].data}];
+    cv._c=new Chart(cv,{type:'line',data:{labels:D.labels,datasets:ser.map(function(s){return {label:s.label,data:s.data,borderColor:s.color,
+        backgroundColor:s.color,borderWidth:2,tension:.4,pointRadius:function(c){return c.dataIndex===3?4:0;},pointBackgroundColor:'#fff',pointBorderWidth:2,pointHoverRadius:4};})},
+      options:{responsive:true,maintainAspectRatio:false,animation:false,interaction:{mode:'index',intersect:false},
+        plugins:{legend:{display:false},tooltip:{backgroundColor:'#0f111b',titleColor:'#fff',bodyColor:'#bfc5cf',padding:8,cornerRadius:6,boxWidth:8,boxHeight:8,
+          boxPadding:4,usePointStyle:true,titleFont:{family:F,size:11,weight:'600'},bodyFont:{family:F,size:11},
+          callbacks:{label:function(c){return ' '+c.dataset.label+': '+c.parsed.y+'%';}}}},
+        scales:{x:{grid:{display:false},border:{color:'#e8eaee'}},
+          y:{min:0,max:100,grid:{color:'#eef0f3',borderDash:[3,3]},border:{display:false},ticks:{stepSize:20,callback:function(v){return v+'%';}}}}}});
+    var bar=document.querySelector('[data-rov-series="'+cv.getAttribute('data-rov-chart')+'"]');
+    if(bar) bar.querySelectorAll('[data-i]').forEach(function(ch){
+      function t(){var i=+ch.getAttribute('data-i'),v=cv._c.isDatasetVisible(i);cv._c.setDatasetVisibility(i,!v);cv._c.update();ch.setAttribute('aria-pressed',String(!v));}
+      ch.addEventListener('click',t); ch.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();t();}});
+    });
+  }
+  function all(){document.querySelectorAll('canvas[data-rov-chart]').forEach(function(cv){if(cv.offsetParent!==null) make(cv);});}
+  all(); document.addEventListener('cube:tab',function(){setTimeout(all,0);}); document.addEventListener('cube:overlay',function(){setTimeout(all,0);});
+});
+</script>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/overlays-drawerpanel--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Storybook</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7288-154513" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma docs</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=4581-101264" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma library</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#at-a-glance" aria-current="true">At a glance</a></li>
+        <li><a href="#which">Overlay, Modal or page?</a></li>
+        <li><a href="#anatomy">Anatomy</a></li>
+        <li><a href="#footer">Footer</a></li>
+        <li><a href="#header">Header options</a></li>
+        <li><a href="#footer-options">Footer options</a></li>
+        <li><a href="#body">Body use cases</a></li>
+        <li><a href="#usage">Common layouts</a></li>
+        <li><a href="#dos-donts">Do’s and don’ts</a></li>
+        <li><a href="#content">Writing content</a></li>
+        <li><a href="#how-to-use">Adding one to a screen</a></li>
+        <li><a href="#behavior">Behavior &amp; accessibility</a></li>
+      </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
+})();
+</script>

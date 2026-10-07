@@ -1,0 +1,333 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a aria-current="true" href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html" aria-current="page">Popup</a></li>
+        <li><a href="docs-overlays.html">Right Overlays</a></li>
+        <li><a href="docs-selection.html">Selections</a></li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Popup</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">A dialog that appears over a dimmed page and needs the user’s attention before they continue. A <strong>Task modal</strong> asks the user to do or decide something; a <strong>Message modal</strong> reports a state or result. The <a href="docs-popup-specifications.html">Specifications tab</a> lists every value.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-popup.html" role="tab" aria-selected="true">Guidelines</a>
+        <a href="docs-popup-specifications.html" role="tab">Specifications</a>
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
+          Code
+          <span class="sr-only">(not in Storybook yet)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec">
+
+        <section id="at-a-glance">
+          <h2>At a glance</h2>
+          <p>A popup is a dialog that appears over a dimmed page and needs the user’s attention before they continue. There are two kinds,
+            chosen by <strong>who acts next</strong>.</p>
+          <div class="bx-quick">
+            <div><h3>Task modal</h3><p>The <strong>user</strong> does or decides something &mdash; confirm a delete, fill a short form, configure one thing. Header, content slot and footer actions.</p></div>
+            <div><h3>Message modal</h3><p>The <strong>system</strong> reports a state or result &mdash; success, failure, maintenance, welcome. Illustration, title and one action.</p></div>
+            <div><h3>Not a modal</h3><p>Browsing details? Use a Right overlay. Quick feedback? A <a href="docs-banners.html">Toast</a>. A long flow? A page.</p></div>
+          </div>
+          <div class="docs-demo"><div class="pm-pair"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--destructive"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 2.5h4a1 1 0 0 1 1 1V5h3.5a.75.75 0 0 1 0 1.5h-.7l-.8 10.2a1.5 1.5 0 0 1-1.5 1.3H6.5A1.5 1.5 0 0 1 5 16.7L4.2 6.5h-.7a.75.75 0 0 1 0-1.5H7V3.5a1 1 0 0 1 1-1zM8.5 4v1h3V4z"/><path d="M8.5 9v5M11.5 9v5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="pm-h__t">Delete selected items?</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c"><p>You are about to permanently delete the selected items. This action cannot be undone and any associated data will no longer be available.</p></div><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Cancel</span><span class="pm-b pm-b--danger">Yes, Delete</span></span></div></div><div class="pmm pmm--md"><span class="pmm__grad pmm__grad--primary"></span><img class="pmm__il" src="assets/img/illustrations/medium-rocket-launch.png" height="120" alt=""><div class="pmm__card"><div class="pmm__tx"><b>Header text here</b><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p></div><div class="pmm__bt"><span class="pm-b pm-b--fill">Okay, Got it!</span></div></div></div></div></div>
+        </section>
+        <section id="which-one">
+          <h2>Which one do I use?</h2>
+          <p>Use a modal only when the user must stop and respond before continuing.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Situation</th><th>Use</th></tr></thead><tbody><tr><td>Confirm a delete or a risky action</td><td><strong>Task modal</strong> &mdash; start from a template</td></tr><tr><td>A short form (five fields or fewer) or one setting</td><td><strong>Task modal</strong> &mdash; fields in the content slot</td></tr><tr><td>Report a result or state: payment success, maintenance, welcome</td><td><strong>Message modal</strong> with an illustration</td></tr><tr><td>Details the user wants to browse while keeping context</td><td>Right overlay</td></tr><tr><td>Quick feedback after an action (“Saved”)</td><td><a href="docs-banners.html">Toast</a></td></tr><tr><td>A long or multi-step flow</td><td>A full page</td></tr></tbody></table></div>
+        </section>
+        <section id="anatomy">
+          <h2>Anatomy</h2>
+          <h3>1 &middot; Task modal</h3>
+          <p>The “Confirmation on Deletion” template: a task popup with a header icon and footer actions.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,left,top,top,top,right,left,bottom,bottom"><div class="bx-anatomy__zoom"><div class="pm" data-anatomy="1" style="width:480px"><div class="pm-h" data-anatomy="2"><span class="pm-hi pm-hi--destructive" data-anatomy="3"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 2.5h4a1 1 0 0 1 1 1V5h3.5a.75.75 0 0 1 0 1.5h-.7l-.8 10.2a1.5 1.5 0 0 1-1.5 1.3H6.5A1.5 1.5 0 0 1 5 16.7L4.2 6.5h-.7a.75.75 0 0 1 0-1.5H7V3.5a1 1 0 0 1 1-1zM8.5 4v1h3V4z"/><path d="M8.5 9v5M11.5 9v5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="pm-h__t" data-anatomy="4" data-center>Delete selected items?</span><span class="pm-x" data-anatomy="5"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c" data-anatomy="6"><p>You are about to permanently delete the selected items. This action cannot be undone and any associated data will no longer be available.</p></div><div class="pm-f" data-anatomy="7"><span class="pm-f__b"><span class="pm-b pm-b--naked" data-anatomy="8">Cancel</span><span class="pm-b pm-b--danger" data-anatomy="9">Yes, Delete</span></span></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>#</th><th>Element</th><th>Notes</th></tr></thead><tbody><tr><td><span class="bx-n">1</span></td><td>Modal container</td><td>White, radius 12, shadow 0 0 16 at 12%. 480 wide for templates, 600 for the task popup. Height hugs the content.</td></tr><tr><td><span class="bx-n">2</span></td><td>Modal header</td><td>Title row with an optional icon, context chip and close button; a 1px divider below.</td></tr><tr><td><span class="bx-n">3</span></td><td>Header icon</td><td>A 32px tinted square showing the intent: Primary, Destructive, Alert, Supportive or Neutral.</td></tr><tr><td><span class="bx-n">4</span></td><td>Title</td><td>What the user is deciding: “Delete this view?”</td></tr><tr><td><span class="bx-n">5</span></td><td>Close</td><td>An outlined round icon button (28px). Same as Cancel.</td></tr><tr><td><span class="bx-n">6</span></td><td>Content (slot)</td><td>Put the body here: text, form fields, message strips, lists. Padding 16, gap 12.</td></tr><tr><td><span class="bx-n">7</span></td><td>Modal footer</td><td>The actions bar, pinned to the bottom.</td></tr><tr><td><span class="bx-n">8</span></td><td>Secondary action</td><td>Cancel or an alternative action.</td></tr><tr><td><span class="bx-n">9</span></td><td>Primary action</td><td>Filled &mdash; the main action, Destructive for delete. Only one.</td></tr></tbody></table></div>
+          <h3>2 &middot; Modal header</h3>
+          <p>With the header icon and context chip on.</p>
+          <div class="bx-anatomy" data-bx-anatomy="top,top,top,top,bottom"><div class="bx-anatomy__zoom"><div class="pm" style="width:480px"><div class="pm-h" data-anatomy="5" data-center><span class="pm-hi pm-hi--primary" data-anatomy="1"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M11.8 3.2c2.3-.6 4.4-.4 5 .2.6.6.8 2.7.2 5-.5 2-2 4.2-4.6 6l-1.4 3-2.2-2.8-3.4-3.4L2.6 9l3-1.4c1.8-2.6 4-4.1 6.2-4.4z"/><circle cx="12.6" cy="7.4" r="1.5" fill="#fff"/><path d="M5.2 14.6c-1.2.3-2 1.4-2.2 3.2 1.8-.2 2.9-1 3.2-2.2z"/></svg></span><span class="pm-h__t" data-anatomy="2">Modal Header</span><span class="pm-for">for</span><span class="pm-chip" data-anatomy="3">Blinkit</span><span class="pm-x" data-anatomy="4"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-div"></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>#</th><th>Element</th><th>Notes</th></tr></thead><tbody><tr><td><span class="bx-n">1</span></td><td>Header icon</td><td><code>Header Icon</code> &mdash; shows the intent of the dialog.</td></tr><tr><td><span class="bx-n">2</span></td><td>Title</td><td>A short question or action name.</td></tr><tr><td><span class="bx-n">3</span></td><td>Context chip</td><td><code>for - chip</code> &mdash; a “for Blinkit” chip showing what the dialog applies to.</td></tr><tr><td><span class="bx-n">4</span></td><td>Close</td><td>Always visible.</td></tr><tr><td><span class="bx-n">5</span></td><td>Divider</td><td>A 1px Secondary-text/100 line between the header and the content.</td></tr></tbody></table></div>
+          <h3>3 &middot; Modal footer</h3>
+          <p>Shared with the Right overlay. Shown with the free slot, Cancel, Secondary and Primary.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,top,top,bottom,bottom"><div class="bx-anatomy__zoom"><div class="pm" style="width:520px"><div class="pm-f" data-anatomy="1"><span class="pm-f__slot" data-anatomy="2"><span class="pm-cb"></span>Don’t show again</span><span class="pm-f__b"><span class="pm-b pm-b--naked" data-anatomy="3">Cancel</span><span class="pm-b pm-b--out" data-anatomy="4">Secondary</span><span class="pm-b pm-b--fill" data-anatomy="5">Primary</span></span></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>#</th><th>Element</th><th>Notes</th></tr></thead><tbody><tr><td><span class="bx-n">1</span></td><td>Footer bar</td><td>White, top border Secondary-text/100, padding 12 / 16.</td></tr><tr><td><span class="bx-n">2</span></td><td>Free slot (bottom left)</td><td><code>Free Slot - Bottom left</code> &mdash; a “Don’t show again” checkbox, a message strip or a record count.</td></tr><tr><td><span class="bx-n">3</span></td><td>Cancel</td><td>Naked Core (Large).</td></tr><tr><td><span class="bx-n">4</span></td><td>Secondary action</td><td>Outlined Core (Large).</td></tr><tr><td><span class="bx-n">5</span></td><td>Primary action</td><td>Filled Core (Large) &mdash; Destructive for delete.</td></tr></tbody></table></div>
+          <h3>4 &middot; Message modal</h3>
+          <p>Message popup, Large.</p>
+          <div class="bx-anatomy" data-bx-anatomy="top,right,left,left,right,right,bottom"><div class="bx-anatomy__zoom"><div class="pmm pmm--lg" data-anatomy="1" data-center><span class="pmm__grad pmm__grad--primary" data-anatomy="2"></span><img class="pmm__il" data-anatomy="3"  src="assets/img/illustrations/large-rocket-launch.png" height="160" alt=""><div class="pmm__card" data-anatomy="4"><div class="pmm__tx"><b data-anatomy="5">Header text here</b><p data-anatomy="6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p></div><div class="pmm__bt"><span class="pm-b pm-b--fill" data-anatomy="7" data-center>Okay, Got it!</span></div></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>#</th><th>Element</th><th>Notes</th></tr></thead><tbody><tr><td><span class="bx-n">1</span></td><td>Modal container</td><td>400 &times; 412 (Large) or 360 &times; 344 (Medium), radius 12, padding 32 top and 4 on the sides.</td></tr><tr><td><span class="bx-n">2</span></td><td>Gradient layer</td><td><code>Linear-gradient-layer</code> &mdash; a soft colour wash: Primary (positive or info), Error (failure), Disabled (neutral).</td></tr><tr><td><span class="bx-n">3</span></td><td>Illustration</td><td>160px tall (Large) or 120px (Medium), from the Custom popup graphics library. Most are 256 &times; 160 / 192 &times; 120; Payment and Rocket Launch are square.</td></tr><tr><td><span class="bx-n">4</span></td><td>Content card</td><td>White inner card, radius 8, padding 20 (Large) or 12 (Medium).</td></tr><tr><td><span class="bx-n">5</span></td><td>Title</td><td>24/32 (Large) or 20/28 (Medium), SemiBold, Primary-text/950.</td></tr><tr><td><span class="bx-n">6</span></td><td>Message</td><td>Regular 14/18, Primary-text/700. One or two sentences.</td></tr><tr><td><span class="bx-n">7</span></td><td>Primary button</td><td><code>Primary Btn</code> &mdash; a full-width Filled button. An optional Naked <code>Secondary Btn</code> sits below.</td></tr></tbody></table></div>
+          <h3>5 &middot; Header icon types</h3>
+<div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><span class="pm-hi pm-hi--primary"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M11.8 3.2c2.3-.6 4.4-.4 5 .2.6.6.8 2.7.2 5-.5 2-2 4.2-4.6 6l-1.4 3-2.2-2.8-3.4-3.4L2.6 9l3-1.4c1.8-2.6 4-4.1 6.2-4.4z"/><circle cx="12.6" cy="7.4" r="1.5" fill="#fff"/><path d="M5.2 14.6c-1.2.3-2 1.4-2.2 3.2 1.8-.2 2.9-1 3.2-2.2z"/></svg></span></div></div><div class="bx-opt__body"><h3>Primary</h3><p>Rocket &mdash; start, create or launch something.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><span class="pm-hi pm-hi--destructive"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 2.5h4a1 1 0 0 1 1 1V5h3.5a.75.75 0 0 1 0 1.5h-.7l-.8 10.2a1.5 1.5 0 0 1-1.5 1.3H6.5A1.5 1.5 0 0 1 5 16.7L4.2 6.5h-.7a.75.75 0 0 1 0-1.5H7V3.5a1 1 0 0 1 1-1zM8.5 4v1h3V4z"/><path d="M8.5 9v5M11.5 9v5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg></span></div></div><div class="bx-opt__body"><h3>Destructive</h3><p>Trash &mdash; delete or remove. Pair with a Destructive primary button.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><span class="pm-hi pm-hi--alert"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8.7 3.2a1.5 1.5 0 0 1 2.6 0l6.9 12.3a1.5 1.5 0 0 1-1.3 2.2H3.1a1.5 1.5 0 0 1-1.3-2.2z"/><path d="M10 8v3.8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><circle cx="10" cy="14.4" r="1" fill="#fff"/></svg></span></div></div><div class="bx-opt__body"><h3>Alert</h3><p>Warning &mdash; the action has consequences the user should know.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><span class="pm-hi pm-hi--supportive"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="m6.8 10.2 2.2 2.2 4.2-4.6" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></div><div class="bx-opt__body"><h3>Supportive</h3><p>Check &mdash; approve or confirm a positive action.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><span class="pm-hi pm-hi--neutral"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M7 9V6.5a3 3 0 0 1 6 0V9" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="4" y="8.5" width="12" height="9" rx="1.6"/><circle cx="10" cy="13" r="1.3" fill="#fff"/></svg></span></div></div><div class="bx-opt__body"><h3>Neutral</h3><p>Lock &mdash; permissions, settings, neutral tasks.</p></div></div></div>
+        </section>
+        <section id="task-modal">
+          <h2>Task modal options</h2>
+          <h3>Templates</h3>
+          <p>Start from these for the most common cases.</p>
+<div class="bx-options bx-options--2"><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--destructive"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 2.5h4a1 1 0 0 1 1 1V5h3.5a.75.75 0 0 1 0 1.5h-.7l-.8 10.2a1.5 1.5 0 0 1-1.5 1.3H6.5A1.5 1.5 0 0 1 5 16.7L4.2 6.5h-.7a.75.75 0 0 1 0-1.5H7V3.5a1 1 0 0 1 1-1zM8.5 4v1h3V4z"/><path d="M8.5 9v5M11.5 9v5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="pm-h__t">Delete selected items?</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c"><p>You are about to permanently delete the selected items. This action cannot be undone and any associated data will no longer be available.</p></div><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Cancel</span><span class="pm-b pm-b--danger">Yes, Delete</span></span></div></div></div></div></div></div><div class="bx-opt__body"><h3>Confirmation on Deletion</h3><p>Destructive icon and a Destructive primary button.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--alert"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8.7 3.2a1.5 1.5 0 0 1 2.6 0l6.9 12.3a1.5 1.5 0 0 1-1.3 2.2H3.1a1.5 1.5 0 0 1-1.3-2.2z"/><path d="M10 8v3.8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><circle cx="10" cy="14.4" r="1" fill="#fff"/></svg></span><span class="pm-h__t">Continue with partial data upload?</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c"><p><b>You’ve uploaded data for 3 of 5 metrics.</b></p><p>The remaining metrics will continue to show their existing values until data is uploaded for them.</p></div><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Review Metrics</span><span class="pm-b pm-b--fill">Yes, Upload</span></span></div></div></div></div></div></div><div class="bx-opt__body"><h3>Warning</h3><p>Alert icon &mdash; the action has consequences.</p></div></div></div>
+          <h3>Header</h3>
+<div class="bx-options bx-options--1"><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-h__t">Modal Header</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div></div></div></div></div></div><div class="bx-opt__body"><h3>Default</h3><p>Title and close.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--primary"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M11.8 3.2c2.3-.6 4.4-.4 5 .2.6.6.8 2.7.2 5-.5 2-2 4.2-4.6 6l-1.4 3-2.2-2.8-3.4-3.4L2.6 9l3-1.4c1.8-2.6 4-4.1 6.2-4.4z"/><circle cx="12.6" cy="7.4" r="1.5" fill="#fff"/><path d="M5.2 14.6c-1.2.3-2 1.4-2.2 3.2 1.8-.2 2.9-1 3.2-2.2z"/></svg></span><span class="pm-h__t">Modal Header</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div></div></div></div></div></div><div class="bx-opt__body"><h3>Header Icon</h3><p>Adds the intent icon.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--primary"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M11.8 3.2c2.3-.6 4.4-.4 5 .2.6.6.8 2.7.2 5-.5 2-2 4.2-4.6 6l-1.4 3-2.2-2.8-3.4-3.4L2.6 9l3-1.4c1.8-2.6 4-4.1 6.2-4.4z"/><circle cx="12.6" cy="7.4" r="1.5" fill="#fff"/><path d="M5.2 14.6c-1.2.3-2 1.4-2.2 3.2 1.8-.2 2.9-1 3.2-2.2z"/></svg></span><span class="pm-h__t">Modal Header</span><span class="pm-for">for</span><span class="pm-chip">Blinkit</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div></div></div></div></div></div><div class="bx-opt__body"><h3>Icon and chip</h3><p>“for - chip” shows the context, for example “for Blinkit”.</p></div></div></div>
+          <h3>Footer</h3>
+<div class="bx-options bx-options--2"><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--fill">Primary</span></span></div></div></div></div></div></div><div class="bx-opt__body"><h3>Primary only (default)</h3><p>A single action.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Cancel</span><span class="pm-b pm-b--fill">Primary</span></span></div></div></div></div></div></div><div class="bx-opt__body"><h3>Cancel</h3><p>Primary and Cancel.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Cancel</span><span class="pm-b pm-b--out">Secondary</span><span class="pm-b pm-b--fill">Primary</span></span></div></div></div></div></div></div><div class="bx-opt__body"><h3>Secondary</h3><p>Three actions.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-f"><span class="pm-f__slot"><span class="pm-cb"></span>Don’t show again</span><span class="pm-f__b"><span class="pm-b pm-b--naked">Cancel</span><span class="pm-b pm-b--fill">Primary</span></span></div></div></div></div></div></div><div class="bx-opt__body"><h3>Free slot</h3><p>A checkbox or message at the bottom left.</p></div></div></div>
+        </section>
+        <section id="message-modal">
+          <h2>Message modal options</h2>
+          <h3>Size</h3>
+<div class="bx-options bx-options--2"><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pmm pmm--md"><span class="pmm__grad pmm__grad--primary"></span><img class="pmm__il" src="assets/img/illustrations/medium-rocket-launch.png" height="120" alt=""><div class="pmm__card"><div class="pmm__tx"><b>Header text here</b><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p></div><div class="pmm__bt"><span class="pm-b pm-b--fill">Okay, Got it!</span></div></div></div></div></div><div class="bx-opt__body"><h3>Medium <small>360</small></h3><p>360 wide, 120px illustration, 20px title. The default for most messages.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="400"><div class="pm-fit__in" style="width:400px"><div class="pmm pmm--lg"><span class="pmm__grad pmm__grad--primary"></span><img class="pmm__il" src="assets/img/illustrations/large-rocket-launch.png" height="160" alt=""><div class="pmm__card"><div class="pmm__tx"><b>Header text here</b><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p></div><div class="pmm__bt"><span class="pm-b pm-b--fill">Okay, Got it!</span></div></div></div></div></div></div></div><div class="bx-opt__body"><h3>Large <small>400</small></h3><p>400 wide, 160px illustration, 24px title. Big moments &mdash; welcome, launch.</p></div></div></div>
+          <h3>Gradient layer</h3>
+          <p>A soft colour wash behind the illustration. Pick the colour by meaning.</p>
+<div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="360"><div class="pm-fit__in" style="width:360px"><div class="pmm pmm--md"><span class="pmm__grad pmm__grad--primary"></span><img class="pmm__il" src="assets/img/illustrations/medium-rocket-launch.png" height="120" alt=""><div class="pmm__card"><div class="pmm__tx"><b>Report ready</b><p>Your weekly report has been generated.</p></div><div class="pmm__bt"><span class="pm-b pm-b--fill">Okay, Got it!</span></div></div></div></div></div></div></div><div class="bx-opt__body"><h3>Primary</h3><p>Success, info, positive.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="360"><div class="pm-fit__in" style="width:360px"><div class="pmm pmm--md"><span class="pmm__grad pmm__grad--disabled"></span><img class="pmm__il" src="assets/img/illustrations/medium-locked.png" height="120" alt=""><div class="pmm__card"><div class="pmm__tx"><b>Access restricted</b><p>Ask your admin to give you access to this page.</p></div><div class="pmm__bt"><span class="pm-b pm-b--fill">Okay</span></div></div></div></div></div></div></div><div class="bx-opt__body"><h3>Disabled</h3><p>Neutral or unavailable.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="360"><div class="pm-fit__in" style="width:360px"><div class="pmm pmm--md"><span class="pmm__grad pmm__grad--error"></span><img class="pmm__il" src="assets/img/illustrations/medium-card-declined.png" height="120" alt=""><div class="pmm__card"><div class="pmm__tx"><b>Payment declined</b><p>We couldn’t charge your card. Update your payment details.</p></div><div class="pmm__bt"><span class="pm-b pm-b--fill">Go to billing</span></div></div></div></div></div></div></div><div class="bx-opt__body"><h3>Error</h3><p>Failure or declined.</p></div></div></div>
+<div class="bx-options bx-options--2"><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pmm pmm--md"><img class="pmm__il" src="assets/img/illustrations/medium-rocket-launch.png" height="120" alt=""><div class="pmm__card"><div class="pmm__tx"><b>Header text here</b><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p></div><div class="pmm__bt"><span class="pm-b pm-b--fill">Okay, Got it!</span></div></div></div></div></div><div class="bx-opt__body"><h3>Gradient off</h3><p>A plain white background.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="mm-col" style="align-items:center"><div class="pmm pmm--md"><span class="pmm__grad pmm__grad--primary"></span><img class="pmm__il" src="assets/img/illustrations/medium-rocket-launch.png" height="120" alt=""><div class="pmm__card"><div class="pmm__tx"><b>Header text here</b><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p></div><div class="pmm__bt"><span class="pm-b pm-b--fill">Okay, Got it!</span><span class="pm-b pm-b--naked">Secondary</span></div></div></div></div></div><div class="bx-opt__body"><h3>Secondary button</h3><p>Adds a Naked secondary action below the primary.</p></div></div></div>
+        </section>
+        <section id="usage">
+          <h2>Common layouts</h2>
+          <p>Centre the modal on the screen over a dimmed page. The scrim is not a component &mdash; add it yourself.</p>
+          <div class="bx-usage bx-usage--stack">
+            <figure><div class="bx-mock" style="padding:0;overflow:hidden"><div class="pm-scene"><div class="pm-scene__app"><span class="pm-scene__nav"></span><span class="pm-scene__hd"></span><span class="pm-scene__ct"></span></div><div class="pm-scene__scrim"></div><div class="pm-scene__m"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--destructive"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 2.5h4a1 1 0 0 1 1 1V5h3.5a.75.75 0 0 1 0 1.5h-.7l-.8 10.2a1.5 1.5 0 0 1-1.5 1.3H6.5A1.5 1.5 0 0 1 5 16.7L4.2 6.5h-.7a.75.75 0 0 1 0-1.5H7V3.5a1 1 0 0 1 1-1zM8.5 4v1h3V4z"/><path d="M8.5 9v5M11.5 9v5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="pm-h__t">Delete selected items?</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c"><p>You are about to permanently delete the selected items. This action cannot be undone and any associated data will no longer be available.</p></div><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Cancel</span><span class="pm-b pm-b--danger">Yes, Delete</span></span></div></div></div></div></div><figcaption><b>Confirm a delete</b>A Task modal template, centred over the dimmed page.</figcaption></figure>
+            <figure><div class="bx-mock" style="padding:0;overflow:hidden"><div class="pm-scene"><div class="pm-scene__app"><span class="pm-scene__nav"></span><span class="pm-scene__hd"></span><span class="pm-scene__ct"></span></div><div class="pm-scene__scrim"></div><div class="pm-scene__m"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--primary"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M11.8 3.2c2.3-.6 4.4-.4 5 .2.6.6.8 2.7.2 5-.5 2-2 4.2-4.6 6l-1.4 3-2.2-2.8-3.4-3.4L2.6 9l3-1.4c1.8-2.6 4-4.1 6.2-4.4z"/><circle cx="12.6" cy="7.4" r="1.5" fill="#fff"/><path d="M5.2 14.6c-1.2.3-2 1.4-2.2 3.2 1.8-.2 2.9-1 3.2-2.2z"/></svg></span><span class="pm-h__t">Save as a custom view</span><span class="pm-for">for</span><span class="pm-chip">Blinkit</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c"><div class="pm-form"><label>View name<span class="pm-in">Top SKUs &mdash; Blinkit</span></label><label>Visibility<span class="pm-in">Only me</span></label></div></div><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Cancel</span><span class="pm-b pm-b--fill">Save view</span></span></div></div></div></div></div><figcaption><b>Short form</b>A task popup with fields in the content slot.</figcaption></figure>
+            <figure><div class="bx-mock" style="padding:0;overflow:hidden"><div class="pm-scene"><div class="pm-scene__app"><span class="pm-scene__nav"></span><span class="pm-scene__hd"></span><span class="pm-scene__ct"></span></div><div class="pm-scene__scrim"></div><div class="pm-scene__m"><div class="pmm pmm--md"><span class="pmm__grad pmm__grad--primary"></span><img class="pmm__il" src="assets/img/illustrations/medium-payment.png" height="120" alt=""><div class="pmm__card"><div class="pmm__tx"><b>Payment successful</b><p>Your plan is now active. You can start using every feature.</p></div><div class="pmm__bt"><span class="pm-b pm-b--fill">Okay, Got it!</span></div></div></div></div></div></div><figcaption><b>Report a result</b>A Message modal with an illustration.</figcaption></figure>
+          </div>
+        </section>
+        <section id="dos-donts">
+          <h2>Do’s and don’ts</h2>
+          <p>Six rules in three groups.</p>
+<h3>Choosing</h3><div class="docs-dodont"><div class="docs-dodont__card docs-dodont__card--do"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--destructive"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 2.5h4a1 1 0 0 1 1 1V5h3.5a.75.75 0 0 1 0 1.5h-.7l-.8 10.2a1.5 1.5 0 0 1-1.5 1.3H6.5A1.5 1.5 0 0 1 5 16.7L4.2 6.5h-.7a.75.75 0 0 1 0-1.5H7V3.5a1 1 0 0 1 1-1zM8.5 4v1h3V4z"/><path d="M8.5 9v5M11.5 9v5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="pm-h__t">Delete selected items?</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c"><p>You are about to permanently delete the selected items. This action cannot be undone and any associated data will no longer be available.</p></div><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Cancel</span><span class="pm-b pm-b--danger">Yes, Delete</span></span></div></div></div></div></div></div><p class="docs-dodont__cap">Use a Task modal when the user must decide before continuing. The dimmed page signals “answer this first”.</p></div><div class="docs-dodont__card docs-dodont__card--dont"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-h__t">Top SKUs details</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c"><div class="pm-list"><span>Atta 5kg &middot; ₹12.4L</span><span>Rice 1kg &middot; ₹8.1L</span><span>Oil 1L &middot; ₹6.2L</span><span>Sugar 1kg &middot; ₹4.9L</span></div></div><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--fill">Close</span></span></div></div></div></div></div></div><p class="docs-dodont__cap">Don’t use a modal for information people want to browse. It blocks the page; use a Right overlay to keep context.</p></div></div>
+<div class="docs-dodont"><div class="docs-dodont__card docs-dodont__card--do"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="pmm pmm--md"><span class="pmm__grad pmm__grad--primary"></span><img class="pmm__il" src="assets/img/illustrations/medium-payment.png" height="120" alt=""><div class="pmm__card"><div class="pmm__tx"><b>Payment successful</b><p>Your plan is now active.</p></div><div class="pmm__bt"><span class="pm-b pm-b--fill">Okay, Got it!</span></div></div></div></div></div><p class="docs-dodont__cap">Use a Message modal for important results or states. The illustration and one action make the moment clear.</p></div><div class="docs-dodont__card docs-dodont__card--dont"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="pmm pmm--md"><span class="pmm__grad pmm__grad--primary"></span><img class="pmm__il" src="assets/img/illustrations/medium-rocket-launch.png" height="120" alt=""><div class="pmm__card"><div class="pmm__tx"><b>Saved</b><p>Your changes were saved.</p></div><div class="pmm__bt"><span class="pm-b pm-b--fill">Okay, Got it!</span></div></div></div></div></div><p class="docs-dodont__cap">Don’t use a Message modal for routine confirmations like “Saved”. A toast is enough.</p></div></div>
+<h3>Actions</h3><div class="docs-dodont"><div class="docs-dodont__card docs-dodont__card--do"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--destructive"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 2.5h4a1 1 0 0 1 1 1V5h3.5a.75.75 0 0 1 0 1.5h-.7l-.8 10.2a1.5 1.5 0 0 1-1.5 1.3H6.5A1.5 1.5 0 0 1 5 16.7L4.2 6.5h-.7a.75.75 0 0 1 0-1.5H7V3.5a1 1 0 0 1 1-1zM8.5 4v1h3V4z"/><path d="M8.5 9v5M11.5 9v5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="pm-h__t">Delete selected items?</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c"><p>You are about to permanently delete the selected items. This action cannot be undone and any associated data will no longer be available.</p></div><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Cancel</span><span class="pm-b pm-b--danger">Yes, Delete</span></span></div></div></div></div></div></div><p class="docs-dodont__cap">Use one primary action that names the result: “Yes, Delete”. Clear verbs reduce mistakes.</p></div><div class="docs-dodont__card docs-dodont__card--dont"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--destructive"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 2.5h4a1 1 0 0 1 1 1V5h3.5a.75.75 0 0 1 0 1.5h-.7l-.8 10.2a1.5 1.5 0 0 1-1.5 1.3H6.5A1.5 1.5 0 0 1 5 16.7L4.2 6.5h-.7a.75.75 0 0 1 0-1.5H7V3.5a1 1 0 0 1 1-1zM8.5 4v1h3V4z"/><path d="M8.5 9v5M11.5 9v5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="pm-h__t">Delete selected items?</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c"><p>You are about to permanently delete the selected items. This action cannot be undone and any associated data will no longer be available.</p></div><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Cancel</span><span class="pm-b pm-b--danger">OK</span></span></div></div></div></div></div></div><p class="docs-dodont__cap">Don’t use vague buttons like “OK / Cancel” for destructive actions. People can’t tell what “OK” will do.</p></div></div>
+<div class="docs-dodont"><div class="docs-dodont__card docs-dodont__card--do"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--destructive"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 2.5h4a1 1 0 0 1 1 1V5h3.5a.75.75 0 0 1 0 1.5h-.7l-.8 10.2a1.5 1.5 0 0 1-1.5 1.3H6.5A1.5 1.5 0 0 1 5 16.7L4.2 6.5h-.7a.75.75 0 0 1 0-1.5H7V3.5a1 1 0 0 1 1-1zM8.5 4v1h3V4z"/><path d="M8.5 9v5M11.5 9v5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="pm-h__t">Delete selected items?</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c"><p>You are about to permanently delete the selected items. This action cannot be undone and any associated data will no longer be available.</p></div><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Cancel</span><span class="pm-b pm-b--danger">Yes, Delete</span></span></div></div></div></div></div></div><p class="docs-dodont__cap">Make delete actions Destructive (red), with the Destructive header icon. Colour and icon reinforce the risk.</p></div><div class="docs-dodont__card docs-dodont__card--dont"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--destructive"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 2.5h4a1 1 0 0 1 1 1V5h3.5a.75.75 0 0 1 0 1.5h-.7l-.8 10.2a1.5 1.5 0 0 1-1.5 1.3H6.5A1.5 1.5 0 0 1 5 16.7L4.2 6.5h-.7a.75.75 0 0 1 0-1.5H7V3.5a1 1 0 0 1 1-1zM8.5 4v1h3V4z"/><path d="M8.5 9v5M11.5 9v5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="pm-h__t">Delete selected items?</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c"><p>You are about to permanently delete the selected items. This action cannot be undone and any associated data will no longer be available.</p></div><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Cancel</span><span class="pm-b pm-b--fill">Yes, Delete</span></span></div></div></div></div></div></div><p class="docs-dodont__cap">Don’t use a blue primary button for delete. Blue reads as safe, so people click without thinking.</p></div></div>
+<h3>Content</h3><div class="docs-dodont"><div class="docs-dodont__card docs-dodont__card--do"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--destructive"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 2.5h4a1 1 0 0 1 1 1V5h3.5a.75.75 0 0 1 0 1.5h-.7l-.8 10.2a1.5 1.5 0 0 1-1.5 1.3H6.5A1.5 1.5 0 0 1 5 16.7L4.2 6.5h-.7a.75.75 0 0 1 0-1.5H7V3.5a1 1 0 0 1 1-1zM8.5 4v1h3V4z"/><path d="M8.5 9v5M11.5 9v5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="pm-h__t">Delete selected items?</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c"><p>You are about to permanently delete the selected items. This action cannot be undone and any associated data will no longer be available.</p></div><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Cancel</span><span class="pm-b pm-b--danger">Yes, Delete</span></span></div></div></div></div></div></div><p class="docs-dodont__cap">Keep the title a short question or statement, and explain the impact in the body.</p></div><div class="docs-dodont__card docs-dodont__card--dont"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="pm-fit" data-w="480"><div class="pm-fit__in" style="width:480px"><div class="pm" style="width:480px"><div class="pm-h"><span class="pm-hi pm-hi--destructive"><svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 2.5h4a1 1 0 0 1 1 1V5h3.5a.75.75 0 0 1 0 1.5h-.7l-.8 10.2a1.5 1.5 0 0 1-1.5 1.3H6.5A1.5 1.5 0 0 1 5 16.7L4.2 6.5h-.7a.75.75 0 0 1 0-1.5H7V3.5a1 1 0 0 1 1-1zM8.5 4v1h3V4z"/><path d="M8.5 9v5M11.5 9v5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="pm-h__t">Delete selected items?</span><span class="pm-x"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg></span></div><div class="pm-c"><p>This action will permanently remove every selected item, including all of the historical data, custom views, alerts, rules and saved filters that refer to them across every platform and workspace you have access to. This action will permanently remove every selected item, including all of the historical data, custom views, alerts, rules and saved filters that refer to them across every platform and workspace you have access to. This action will permanently remove every selected item, including all of the historical data, custom views, alerts, rules and saved filters that refer to them across every platform and workspace you have access to.</p></div><div class="pm-f"><span class="pm-f__b"><span class="pm-b pm-b--naked">Cancel</span><span class="pm-b pm-b--danger">Yes, Delete</span></span></div></div></div></div></div></div><p class="docs-dodont__cap">Don’t put long paragraphs or whole pages inside a modal. If it needs scrolling, it’s a page or an overlay.</p></div></div>
+<div class="docs-dodont"><div class="docs-dodont__card docs-dodont__card--do"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="pmm pmm--md"><span class="pmm__grad pmm__grad--error"></span><img class="pmm__il" src="assets/img/illustrations/medium-card-declined.png" height="120" alt=""><div class="pmm__card"><div class="pmm__tx"><b>Payment failed</b><p>We couldn’t charge your card.</p></div><div class="pmm__bt"><span class="pm-b pm-b--fill">Go to billing</span></div></div></div></div></div><p class="docs-dodont__cap">Pick an illustration that matches the message &mdash; Card Declined for a failed payment, Locked for access.</p></div><div class="docs-dodont__card docs-dodont__card--dont"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="mm-col" style="align-items:center"><div class="pmm pmm--md"><span class="pmm__grad pmm__grad--error"></span><img class="pmm__il" src="assets/img/illustrations/medium-rocket-launch.png" height="120" alt=""><div class="pmm__card"><div class="pmm__tx"><b>Payment failed</b><p>We couldn’t charge your card.</p></div><div class="pmm__bt"><span class="pm-b pm-b--fill">Go to billing</span></div></div></div></div></div><p class="docs-dodont__cap">Don’t reuse the same illustration for unrelated messages. It weakens meaning; use the library.</p></div></div>
+        </section>
+        <section id="how-to">
+          <h2>How to build one in Figma</h2>
+          <h3>Task modal</h3>
+<ol class="bx-steps"><li><strong>Start from a template if one fits</strong><br>In Assets, use “Task-popup-common-templates” for a delete confirmation or a warning. Otherwise use “Task-popup” and build the content yourself.</li><li><strong>Set up the header</strong><br>Write the title as a short question (“Delete 3 views?”). Turn <code>Header Icon</code> on and choose the intent. Turn <code>for - chip</code> on when the action applies to a specific item.</li><li><strong>Fill the content slot</strong><br>Click the Modal-Content slot and insert text, fields, a message strip or a list. Keep it short &mdash; five fields at most, no scrolling if possible.</li><li><strong>Set the footer</strong><br>One primary, named with the action’s verb &mdash; Destructive for delete. Cancel on; Secondary only for a real alternative. Use the free slot for a “Don’t show again” checkbox.</li><li><strong>Place it on the screen</strong><br>Centre the modal on the screen frame and add a full-screen scrim behind it (Neutrals/Black/40).</li></ol>
+          <h3>Message modal</h3>
+<ol class="bx-steps"><li><strong>Insert and pick a size</strong><br>In Assets, use “Message-popup”. Medium for most messages, Large for big moments such as a welcome or a launch.</li><li><strong>Choose the illustration</strong><br>Swap “Illustration” (Large) or “Illustration (Small)” (Medium) for a graphic from Custom popup graphics that matches the message.</li><li><strong>Write the title, message and button</strong><br>Title: the result in a few words. Message: one or two sentences. Button: what happens next (“Okay, got it”, “Go to billing”). Add a Secondary button only for a real second option.</li><li><strong>Set the gradient</strong><br>Turn <code>Linear-gradient-layer</code> on for a softer look and set its colour: Primary (positive or info), Error (failure), Disabled (neutral).</li></ol>
+          <h3>Before you hand off</h3>
+          <ul><li>A modal is really needed (not a toast, overlay or page).</li><li>Task or Message is chosen correctly.</li><li>The title is short and specific; no placeholder text left.</li><li>One primary action named with a verb; Destructive for delete.</li><li>The content fits without scrolling.</li><li>Centred over a 40% black scrim.</li><li>The illustration matches the message (Message modal).</li><li>Close behaviour is annotated: Esc, &times;, click outside.</li></ul>
+        </section>
+        <section id="content">
+          <h2>Writing content</h2>
+          <ul>
+            <li><strong>Title</strong> &mdash; a short question or statement about the decision or result: “Delete 3 views?”, “Payment successful”.</li>
+            <li><strong>Body</strong> &mdash; the impact in one or two sentences. Lead with what matters in bold, then the detail.</li>
+            <li><strong>Primary button</strong> &mdash; the verb of the result: “Yes, Delete”, “Save view”, “Go to billing”. Never “OK” for a destructive action.</li>
+            <li><strong>Cancel</strong> &mdash; “Cancel”, or a clear alternative such as “Review Metrics”.</li>
+            <li><strong>Illustration</strong> &mdash; matches the message: Payment, Locked, Card Declined, Under Maintenance and so on.</li>
+          </ul>
+        </section>
+        <section id="behavior">
+          <h2>Behavior &amp; accessibility</h2>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>What to do</th></tr></thead><tbody><tr><td>Semantics</td><td><code>role="dialog"</code> and <code>aria-modal="true"</code>; <code>role="alertdialog"</code> for errors. Label it with the title.</td></tr><tr><td>Open</td><td>Task modal: after a user action. Message modal: on a system event. Fade and scale in over 150–200ms.</td></tr><tr><td>Close</td><td>Task modal: Cancel, &times; or Esc; click outside only if nothing would be lost. Message modal: the primary button or Esc &mdash; no hidden close.</td></tr><tr><td>Focus</td><td>Trap focus inside. Start on the first field or the primary button, and return focus to the trigger on close.</td></tr><tr><td>Enter key</td><td>Triggers the primary action &mdash; but not for destructive actions.</td></tr><tr><td>Size</td><td>At most 80% of the viewport height; the content scrolls while the header and footer stay fixed.</td></tr><tr><td>Frequency</td><td>Show a message once per event &mdash; never repeatedly for the same message.</td></tr></tbody></table></div>
+          <p>Every dimension, colour token and prop is on the <a href="docs-popup-specifications.html">Specifications tab</a>.</p>
+        </section>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7321-40432" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#at-a-glance" aria-current="true">At a glance</a></li>
+        <li><a href="#which-one">Which one do I use?</a></li>
+        <li><a href="#anatomy">Anatomy</a></li>
+        <li><a href="#task-modal">Task modal options</a></li>
+        <li><a href="#message-modal">Message modal options</a></li>
+        <li><a href="#usage">Common layouts</a></li>
+        <li><a href="#dos-donts">Do’s and don’ts</a></li>
+        <li><a href="#how-to">How to build one in Figma</a></li>
+        <li><a href="#content">Writing content</a></li>
+        <li><a href="#behavior">Behavior &amp; accessibility</a></li>
+        </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+
+  /* Wide popup previews are built at real width and scaled to fit their card. */
+  function pmFit(){document.querySelectorAll('.pm-fit').forEach(function(w){var p=w.firstElementChild,W=+w.getAttribute('data-w');p.style.zoom=1;p.style.zoom=Math.min(1,w.clientWidth/W);});}
+  pmFit(); window.addEventListener('resize',pmFit);
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
+})();
+</script>

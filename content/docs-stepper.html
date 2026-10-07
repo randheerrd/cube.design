@@ -1,0 +1,459 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html">Popup</a></li>
+        <li><a href="docs-overlays.html">Right Overlays</a></li>
+        <li><a href="docs-selection.html">Selections</a></li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-stepper.html" aria-current="page">Stepper</a></li>
+        <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Stepper</h1>
+          <span class="docs-badge">Stable</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">Shows where the user is in a multi-step process — which steps are done, which is current
+          and what’s next. Two layouts: Stepper-Horizontal (a compact progress bar for short flows) and Stepper-Vertical (a
+          side list with descriptions for longer setup flows). Both are built from Stepper-elements, each with a
+          Stepper-indicator (the circle).</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-stepper.html" role="tab" aria-selected="true">Guidelines</a>
+        <a href="docs-stepper-specifications.html" role="tab">Specifications</a>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/components-stepper--docs" role="tab" target="_blank" rel="noopener noreferrer">
+          Code
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7 9"/></svg>
+          <span class="sr-only">(opens Storybook in a new tab)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--bt docs-content--dt docs-content--stp">
+        <section id="at-a-glance">
+          <h2>At a glance</h2>
+          <p>Try it: click <strong>Next</strong> to complete a step, <strong>Back</strong> to return, or click a completed
+            step to jump back to it. Upcoming steps can’t be clicked.</p>
+          <div class="docs-demo stp-live">
+            <div class="stp-wiz" data-stp-live data-cur="0" data-done=""><div class="stp-wiz__head"><p class="stp-wiz__title">Set up your workspace</p></div><div class="stp-wiz__steps"><ol class="stp" data-stp aria-label="Setup progress"><li class="stp-el stp-el--h" data-stage="upcoming"><button type="button" class="stp-el__hit"><span class="stp-ind" data-stage="upcoming">1</span><span class="stp-el__t">Connect store<span class="sr-only"></span></span></button><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><button type="button" class="stp-el__hit"><span class="stp-ind" data-stage="upcoming">2</span><span class="stp-el__t">Map SKUs<span class="sr-only"></span></span></button><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><button type="button" class="stp-el__hit"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets<span class="sr-only"></span></span></button><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><button type="button" class="stp-el__hit"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team<span class="sr-only"></span></span></button><span class="stp-el__line"></span></li></ol></div><div class="stp-wiz__body" data-stp-panel><p class="stp-wiz__h">Connect store</p><p class="stp-wiz__p">Link the platform account you sell on.</p><div class="stp-wiz__grid"><label class="stp-field">Platform<span>Blinkit</span></label><label class="stp-field">Seller ID<span>BLK-20481</span></label></div></div><div class="stp-wiz__body" data-stp-panel><p class="stp-wiz__h">Map SKUs</p><p class="stp-wiz__p">Match each SKU to our catalogue so we can track it.</p><div class="stp-wiz__grid"><label class="stp-field">SKUs found<span>128</span></label><label class="stp-field">Auto-matched<span>119 of 128</span></label></div></div><div class="stp-wiz__body" data-stp-panel><p class="stp-wiz__h">Set targets</p><p class="stp-wiz__p">Weekly revenue goals per city.</p><div class="stp-wiz__grid"><label class="stp-field">Delhi NCR<span>₹4,80,000</span></label><label class="stp-field">Mumbai<span>₹4,10,000</span></label></div></div><div class="stp-wiz__body" data-stp-panel><p class="stp-wiz__h">Invite team</p><p class="stp-wiz__p">Add the people who should see this workspace.</p><div class="stp-wiz__grid"><label class="stp-field">Email<span>priya@brand.com</span></label><label class="stp-field">Role<span>Viewer</span></label></div></div><div class="stp-wiz__body" data-stp-done-msg hidden><p class="stp-wiz__h">All set</p><p class="stp-wiz__p">Every step is complete. Click a step to review it, or start again.</p></div><div class="stp-wiz__foot"><span class="stp-wiz__count" data-stp-count aria-live="polite">Step 1 of 4</span><button type="button" class="stp-btn stp-btn--naked" data-stp-reset>Start again</button><button type="button" class="stp-btn stp-btn--sec" data-stp-back>Back</button><button type="button" class="stp-btn" data-stp-next data-finish="Finish">Next</button></div></div>
+            <p class="docs-demo__caption">A working modal wizard: Stepper-Horizontal, no container, with Back / Next in the footer.</p>
+          </div>
+          <div class="bx-quick">
+            <div><h3>1 · Done</h3><p>Steps before the current one are <strong>Completed</strong> (check). People can go back to them.</p></div>
+            <div><h3>2 · Current</h3><p>Exactly <strong>one</strong> step is Selected &mdash; the one the person is on.</p></div>
+            <div><h3>3 · Next</h3><p>Steps after it are <strong>Upcoming</strong>. Back / Next live outside the stepper.</p></div>
+          </div>
+        </section>
+
+        <section id="which">
+          <h2>Horizontal or Vertical?</h2>
+          <p>Pick by the length and complexity of the flow.</p>
+          <div class="bx-options stp-stack"><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp stp--box" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div><div class="bx-opt__body"><h3>Stepper-Horizontal</h3><p>Short flows: up to 4 steps (max 6), short self-explanatory labels, no descriptions. Acts as a progress indicator &mdash; usually at the top of a modal or page.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp stp--v stp--box" aria-label="Progress"><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Connect store</span><span class="stp-el__d">Link your platform account.</span></span></li><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Map SKUs</span><span class="stp-el__d">Match SKUs to our catalogue.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Set targets</span><span class="stp-el__d">Set weekly revenue goals.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Invite team</span><span class="stp-el__d">Add teammates.</span></span></li></ol></div><div class="bx-opt__body"><h3>Stepper-Vertical</h3><p>Longer flows: 4–8 steps, longer labels, descriptions, configuration-heavy setup. Acts as navigation between setup sections &mdash; usually a left side panel.</p></div></div></div>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th></th><th>Horizontal</th><th>Vertical</th></tr></thead><tbody>
+              <tr><td>Steps</td><td>Generally up to 4 · max 6</td><td>Generally 4–8</td></tr>
+              <tr><td>Labels</td><td>Short, self-explanatory</td><td>Can be long</td></tr>
+              <tr><td>Descriptions</td><td>&mdash;</td><td>Yes, one line under the name</td></tr>
+              <tr><td>Stages</td><td>Upcoming · Selected · Completed</td><td>+ Awaiting · Locked</td></tr>
+              <tr><td>Role</td><td>Progress indicator</td><td>Navigation between setup sections</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="anatomy">
+          <h2>Anatomy</h2>
+          <h3>Stepper-Horizontal</h3>
+          <p>The full horizontal stepper &mdash; steps in a row with connector lines. Shown: Container = Yes, 4 steps, at 1.1×.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,top,bottom,top,bottom,right"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:1.1"><ol class="stp stp--box" aria-label="Progress" data-anatomy="1" data-stem="32"><li class="stp-el stp-el--h" data-stage="completed" data-anatomy="2" data-center data-stem="28"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line" data-anatomy="3" data-center data-stem="28"></span></li><li class="stp-el stp-el--h" data-stage="selected" data-anatomy="4" data-center data-stem="28"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming" data-anatomy="5" data-center data-stem="28"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming" data-anatomy="6" data-stem="28"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Container</td><td><code>Container</code></td><td>Yes → white box, 1px Secondary-text/100 border, 10px radius, 12px padding. No → just the steps (when it sits inside a header or card).</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Completed step</td><td>Stepper-element/Horizontal</td><td>Stage = Completed &mdash; check mark in the circle.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Connector</td><td><code>Show connecter</code></td><td>36px line after each step. Primary/300 after a completed step, Steel Blue/300 otherwise. Off on the last step.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Selected step</td><td>Stepper-element/Horizontal</td><td>The step the person is on now &mdash; filled Primary/600 circle and SemiBold label. Only one.</td></tr>
+              <tr><td><span class="bx-n">5</span></td><td>Upcoming step</td><td>Stepper-element/Horizontal</td><td>Steps not reached yet &mdash; grey circle with the step number.</td></tr>
+              <tr><td><span class="bx-n">6</span></td><td>Last step</td><td><code>Step 3 … Step 6</code></td><td>Steps 3 / 4 are on by default; 5 / 6 can be enabled (max 6). The last visible step has no connector.</td></tr>
+            </tbody></table></div>
+
+          <h3>Stepper-element/Horizontal</h3>
+          <p>One step of the horizontal stepper. Shown: Stage = Selected, at 4×.</p>
+          <div class="bx-anatomy" data-bx-anatomy="top,bottom,right"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:4"><ol class="stp stp--dangle"><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected" data-anatomy="1" data-center data-stem="24">2</span><span class="stp-el__t" data-anatomy="2" data-center data-stem="24">Map SKUs</span><span class="stp-el__line" data-anatomy="3" data-stem="24"></span></li></ol></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Indicator</td><td>Stepper-indicator</td><td>24px circle &mdash; a number, check, clock or lock depending on the Stage.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Step name</td><td>text</td><td>Short label (1–2 words). Medium 12/16; SemiBold when Selected. Edit the text directly (it isn’t a property).</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Connector</td><td><code>Show connecter</code></td><td>36 × 2 line to the next step. Turn it off on the last step.</td></tr>
+            </tbody></table></div>
+
+          <h3>Stepper-Vertical</h3>
+          <p>Steps stacked with a vertical connector, usually in a left side panel. Shown: Container = Yes, Width = Standard (200), descriptions on, at 1.5×.</p>
+          <div class="bx-anatomy" data-bx-anatomy="top,right,left,left,right,right"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:1.5"><ol class="stp stp--v stp--box" aria-label="Progress" data-anatomy="1" data-stem="32"><li class="stp-el stp-el--v" data-stage="completed" data-anatomy="2" data-stem="32"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line" data-anatomy="3" data-stem="32"></span></span><span class="stp-el__txt"><span class="stp-el__t">Connect store</span><span class="stp-el__d">Link your platform account.</span></span></li><li class="stp-el stp-el--v" data-stage="selected" data-anatomy="4" data-stem="32"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Map SKUs</span><span class="stp-el__d" data-anatomy="5" data-stem="32">Match your SKUs to our catalogue.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Set targets</span><span class="stp-el__d">Set weekly revenue goals.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming" data-anatomy="6" data-stem="32"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Invite team</span><span class="stp-el__d">Add teammates.</span></span></li></ol></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Container</td><td><code>Container</code></td><td>Yes → white panel, 1px Secondary-text/100 border, 10px radius, 12px padding, 8px gap. Width = Standard (200) or Large (240).</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Completed step</td><td>Stepper-element/Vertical</td><td>Stage = Completed.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Connector (vertical)</td><td><code>Show connecter</code></td><td>2px line under each indicator; stretches with the step height (grows when a description is shown).</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Selected step</td><td>Stepper-element/Vertical</td><td>Current step. SemiBold label.</td></tr>
+              <tr><td><span class="bx-n">5</span></td><td>Description</td><td><code>Description</code></td><td>One line under the step name explaining the step (Regular 11/16).</td></tr>
+              <tr><td><span class="bx-n">6</span></td><td>Upcoming step</td><td><code>Step 3 … Step 8</code></td><td>Steps 3 / 4 on by default; 5–8 can be enabled (max 8).</td></tr>
+            </tbody></table></div>
+
+          <h3>Stepper-element/Vertical</h3>
+          <p>One step of the vertical stepper. Shown: Stage = Selected, Description on, at 2.5×.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,left,right,right"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:2.5"><ol class="stp stp--v" style="width:200px"><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected" data-anatomy="1" data-stem="24">2</span><span class="stp-el__line" data-anatomy="2" data-stem="32"></span></span><span class="stp-el__txt"><span class="stp-el__t" data-anatomy="3" data-stem="24">Map SKUs</span><span class="stp-el__d" data-anatomy="4" data-stem="24">Match your SKUs to our catalogue.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Set targets</span></span></li></ol></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Indicator</td><td>Stepper-indicator</td><td>24px.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Connector</td><td><code>Show connecter</code></td><td>2px line, 6px below the indicator. Off on the last step.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Step name</td><td>text</td><td>12/16 &mdash; can be longer than in horizontal steps. Wraps within the column.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Description</td><td><code>Description</code></td><td>Secondary-text/700. Explains what happens in the step, or why it’s locked / awaiting.</td></tr>
+            </tbody></table></div>
+
+          <h3>Stepper-indicator</h3>
+          <p>The circle at the start of every step. Five states, at 2.5×.</p>
+          <div class="bx-anatomy" data-bx-anatomy="top,bottom,top,bottom,top"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:2.5"><div class="chp-row" style="gap:28px;flex-wrap:nowrap"><span class="stp-ind" data-stage="upcoming" data-anatomy="1" data-center data-stem="24">1</span><span class="stp-ind" data-stage="selected" data-anatomy="2" data-center data-stem="24">1</span><span class="stp-ind" data-stage="completed" data-anatomy="3" data-center data-stem="24"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-ind" data-stage="awaiting" data-anatomy="4" data-center data-stem="24"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232 136.66A104.12 104.12 0 1 1 119.34 24a8 8 0 0 1 1.32 16A88.12 88.12 0 1 0 216 135.34a8 8 0 0 1 16 1.32ZM120 72v56a8 8 0 0 0 8 8h56a8 8 0 0 0 0-16h-48V72a8 8 0 0 0-16 0Zm40-24a12 12 0 1 0-12-12 12 12 0 0 0 12 12Zm36 24a12 12 0 1 0-12-12 12 12 0 0 0 12 12Zm24 36a12 12 0 1 0-12-12 12 12 0 0 0 12 12Z"/></svg></span><span class="stp-ind" data-stage="locked" data-anatomy="5" data-center data-stem="24"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M208 80h-32V56a48 48 0 0 0-96 0v24H48a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16ZM96 56a32 32 0 0 1 64 0v24H96Z"/></svg></span></div></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Upcoming</td><td><code>Property 1</code></td><td>Not started. Steel Blue/200 circle with the step number.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Selected</td><td><code>Property 1</code></td><td>Current step. Primary/600 circle, white number.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Completed</td><td><code>Property 1</code></td><td>Done. White circle, 1.5px Primary/300 ring, blue check.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Awaiting</td><td><code>Property 1</code></td><td>Waiting on someone or something else (e.g. approval). Clock icon. Vertical only.</td></tr>
+              <tr><td><span class="bx-n">5</span></td><td>Locked</td><td><code>Property 1</code></td><td>Can’t be opened yet (depends on another step or plan). Lock icon, Disabled/100. Vertical only.</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="stages">
+          <h2>Stages</h2>
+          <p>Each step has a Stage. Vertical steps have five; horizontal steps have three (no Awaiting or Locked).</p>
+          <h3>Vertical</h3>
+          <div class="bx-options stp-five"><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp stp--v" style="width:176px"><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">1</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Upcoming</span><span class="stp-el__d">Not started yet.</span></span></li></ol></div><div class="bx-opt__body"><h3>Upcoming</h3><p>Not reached yet.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp stp--v" style="width:176px"><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">1</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Selected</span><span class="stp-el__d">You are here.</span></span></li></ol></div><div class="bx-opt__body"><h3>Selected</h3><p>Current step &mdash; one only.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp stp--v" style="width:176px"><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Completed</span><span class="stp-el__d">Done.</span></span></li></ol></div><div class="bx-opt__body"><h3>Completed</h3><p>Done &mdash; the person can go back to it.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp stp--v" style="width:176px"><li class="stp-el stp-el--v" data-stage="awaiting"><span class="stp-el__rail"><span class="stp-ind" data-stage="awaiting"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232 136.66A104.12 104.12 0 1 1 119.34 24a8 8 0 0 1 1.32 16A88.12 88.12 0 1 0 216 135.34a8 8 0 0 1 16 1.32ZM120 72v56a8 8 0 0 0 8 8h56a8 8 0 0 0 0-16h-48V72a8 8 0 0 0-16 0Zm40-24a12 12 0 1 0-12-12 12 12 0 0 0 12 12Zm36 24a12 12 0 1 0-12-12 12 12 0 0 0 12 12Zm24 36a12 12 0 1 0-12-12 12 12 0 0 0 12 12Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Awaiting</span><span class="stp-el__d">Waiting for approval.</span></span></li></ol></div><div class="bx-opt__body"><h3>Awaiting</h3><p>Waiting on someone else (e.g. approval).</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp stp--v" style="width:176px"><li class="stp-el stp-el--v" data-stage="locked"><span class="stp-el__rail"><span class="stp-ind" data-stage="locked"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M208 80h-32V56a48 48 0 0 0-96 0v24H48a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16ZM96 56a32 32 0 0 1 64 0v24H96Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Locked</span><span class="stp-el__d">Finish step 2 first.</span></span></li></ol></div><div class="bx-opt__body"><h3>Locked</h3><p>Not available until a condition is met.</p></div></div></div>
+          <h3>Horizontal</h3>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp"><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">1</span><span class="stp-el__t">Upcoming</span><span class="stp-el__line"></span></li></ol></div><div class="bx-opt__body"><h3>Upcoming</h3><p>Not reached yet.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp"><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">1</span><span class="stp-el__t">Selected</span><span class="stp-el__line"></span></li></ol></div><div class="bx-opt__body"><h3>Selected</h3><p>Current step &mdash; one only.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Completed</span><span class="stp-el__line"></span></li></ol></div><div class="bx-opt__body"><h3>Completed</h3><p>Done &mdash; the person can go back to it.</p></div></div></div>
+          <h3>How progress moves</h3>
+          <p>As the person completes a step, it becomes Completed and the next one becomes Selected.</p>
+          <div class="stp-flow"><div class="stp-flow__row"><span>On step 1</span><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">1</span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div><div class="stp-flow__row"><span>On step 2</span><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div><div class="stp-flow__row"><span>On step 3</span><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div><div class="stp-flow__row"><span>On step 4</span><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div></div>
+        </section>
+
+        <section id="container">
+          <h2>Container &amp; width</h2>
+          <p>Both steppers have a <code>Container</code> property; the vertical one also has <code>Width</code>.</p>
+          <div class="bx-options stp-stack"><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp stp--box" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div><div class="bx-opt__body"><h3>Container = Yes <small>Default</small></h3><p>White bordered box (radius 10, padding 12). Use when the stepper sits on a grey page background.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div><div class="bx-opt__body"><h3>Container = No</h3><p>Steps only. Use inside a modal header, card or panel.</p></div></div></div>
+          <div class="bx-options bx-options--two"><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp stp--v stp--box" aria-label="Progress"><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Connect store</span><span class="stp-el__d">Link your platform account.</span></span></li><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Map SKUs</span><span class="stp-el__d">Match SKUs to our catalogue.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Set targets</span><span class="stp-el__d">Set weekly revenue goals.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Invite team</span><span class="stp-el__d">Add teammates.</span></span></li></ol></div><div class="bx-opt__body"><h3>Standard (200) <small>Default</small></h3><p>Most side panels.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp stp--v stp--box stp--lg" aria-label="Progress"><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Connect store</span><span class="stp-el__d">Link your platform account.</span></span></li><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Map SKUs</span><span class="stp-el__d">Match SKUs to our catalogue.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Set targets</span><span class="stp-el__d">Set weekly revenue goals.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Invite team</span><span class="stp-el__d">Add teammates.</span></span></li></ol></div><div class="bx-opt__body"><h3>Large (240)</h3><p>Longer step names or descriptions.</p></div></div></div>
+        </section>
+
+        <section id="count">
+          <h2>Step count &amp; descriptions</h2>
+          <p>Boolean properties turn steps on. Horizontal: Step 3 – 6 (default 4). Vertical: Step 3 – 8 (default 4).</p>
+          <h3>Horizontal &middot; keep to 4 where possible</h3>
+          <div class="stp-flow"><div class="stp-flow__row"><span>3 steps</span><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li></ol></div><div class="stp-flow__row"><span>4 steps</span><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div><div class="stp-flow__row stp-flow__row--fit"><span>6 steps</span><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">5</span><span class="stp-el__t">Review</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">6</span><span class="stp-el__t">Go live</span><span class="stp-el__line"></span></li></ol></div></div>
+          <h3>Vertical &middot; longer setup flows</h3>
+          <div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp stp--v" aria-label="Progress"><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Connect store</span><span class="stp-el__d">Link your platform account.</span></span></li><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Map SKUs</span><span class="stp-el__d">Match SKUs to our catalogue.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Set targets</span><span class="stp-el__d">Set weekly revenue goals.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Invite team</span><span class="stp-el__d">Add teammates.</span></span></li></ol></div><div class="bx-opt__body"><h3>4 steps</h3><p>Default.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp stp--v" aria-label="Progress"><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Connect store</span><span class="stp-el__d">Link your platform account.</span></span></li><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Map SKUs</span><span class="stp-el__d">Match SKUs to our catalogue.</span></span></li><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">3</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Set targets</span><span class="stp-el__d">Set weekly revenue goals.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Invite team</span><span class="stp-el__d">Add teammates.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">5</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Review</span><span class="stp-el__d">Check your setup.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">6</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Go live</span><span class="stp-el__d">Start tracking.</span></span></li></ol></div><div class="bx-opt__body"><h3>6 steps</h3><p>With descriptions.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp stp--v" aria-label="Progress"><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Connect store</span></span></li><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Map SKUs</span></span></li><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">3</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Set targets</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Invite team</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">5</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Review</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">6</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Go live</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">7</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Reports</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">8</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Alerts</span></span></li></ol></div><div class="bx-opt__body"><h3>8 steps · no descriptions</h3><p>The maximum. Each step keeps a 48 minimum height.</p></div></div></div>
+          <h3>Descriptions</h3>
+          <div class="bx-options bx-options--two"><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp stp--v" aria-label="Progress"><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Connect store</span><span class="stp-el__d">Link your platform account.</span></span></li><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Map SKUs</span><span class="stp-el__d">Match SKUs to our catalogue.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Set targets</span><span class="stp-el__d">Set weekly revenue goals.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Invite team</span><span class="stp-el__d">Add teammates.</span></span></li></ol></div><div class="bx-opt__body"><h3>Description = true <small>Default</small></h3><p>One line under the step name explaining what the step does.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><ol class="stp stp--v" aria-label="Progress"><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Connect store</span></span></li><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Map SKUs</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Set targets</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Invite team</span></span></li></ol></div><div class="bx-opt__body"><h3>Description = false</h3><p>Step names only &mdash; when names are self-explanatory.</p></div></div></div>
+        </section>
+
+        <section id="usage">
+          <h2>Common layouts</h2>
+          <p>Use a stepper when a task is split into ordered steps that people complete one after another.</p>
+          <div class="bx-usage stp-usage">
+            <figure>
+              <div class="bx-mock"><div class="stp-wiz"><div class="stp-wiz__head"><p class="stp-wiz__title">Setup auto forwarding</p></div><div class="stp-wiz__steps"><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div><div class="stp-wiz__body" style="min-height:60px"><p class="stp-wiz__p">Step content…</p></div><div class="stp-wiz__foot"><button type="button" class="stp-btn stp-btn--sec" tabindex="-1">Back</button><button type="button" class="stp-btn" tabindex="-1">Next</button></div></div></div>
+              <figcaption><b>Modal wizard</b>Horizontal, no container &mdash; progress at the top of a modal; Back / Next in the footer.</figcaption>
+            </figure>
+            <figure>
+              <div class="bx-mock"><div class="stp-page"><ol class="stp stp--v stp--box" aria-label="Progress"><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Connect store</span><span class="stp-el__d">Linked Blinkit.</span></span></li><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Map SKUs</span><span class="stp-el__d">Match SKUs.</span></span></li><li class="stp-el stp-el--v" data-stage="upcoming"><span class="stp-el__rail"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Set targets</span><span class="stp-el__d">Weekly goals.</span></span></li><li class="stp-el stp-el--v" data-stage="locked"><span class="stp-el__rail"><span class="stp-ind" data-stage="locked"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M208 80h-32V56a48 48 0 0 0-96 0v24H48a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16ZM96 56a32 32 0 0 1 64 0v24H96Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Invite team</span><span class="stp-el__d">Finish step 2 first.</span></span></li></ol><div class="stp-page__main"><p class="stp-page__h">Map SKUs</p><p>Section content…</p></div></div></div>
+              <figcaption><b>Setup side panel</b>Vertical with descriptions &mdash; navigation between setup sections.</figcaption>
+            </figure>
+            <figure>
+              <div class="bx-mock"><div class="stp-page" style="grid-template-columns:1fr"><ol class="stp stp--box" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol><p><b style="color:#333842;font-weight:500">3 steps are pending from your end</b></p></div></div>
+              <figcaption><b>Page progress</b>Horizontal in a container &mdash; read-only progress of a long task.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="dos-donts">
+          <h2>Do’s and don’ts</h2>
+          <div class="docs-dodont stp-dd-wide">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div>
+              <p class="docs-dodont__cap">Use Horizontal for short flows with 1–2 word labels.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="stp-squeeze"><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect your store account</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map all your SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set revenue targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite your team</span><span class="stp-el__line"></span></li></ol></div></div>
+              <p class="docs-dodont__cap">Don’t use Horizontal for long labels &mdash; switch to Vertical.</p>
+            </div>
+          </div>
+          <div class="docs-dodont stp-dd-wide">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div>
+              <p class="docs-dodont__cap">Always have exactly one Selected step, in order: Completed → Selected → Upcoming.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">1</span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div>
+              <p class="docs-dodont__cap">Don’t mix stages out of order or select two steps.</p>
+            </div>
+          </div>
+          <div class="docs-dodont stp-dd-wide">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div>
+              <p class="docs-dodont__cap">Turn off the connector on the last step.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><ol class="stp stp--dangle" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div>
+              <p class="docs-dodont__cap">Don’t leave a dangling connector after the final step.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><ol class="stp stp--v" aria-label="Progress"><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Connect store</span><span class="stp-el__d">Linked Blinkit.</span></span></li><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Map SKUs</span><span class="stp-el__d">Match SKUs.</span></span></li><li class="stp-el stp-el--v" data-stage="awaiting"><span class="stp-el__rail"><span class="stp-ind" data-stage="awaiting"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232 136.66A104.12 104.12 0 1 1 119.34 24a8 8 0 0 1 1.32 16A88.12 88.12 0 1 0 216 135.34a8 8 0 0 1 16 1.32ZM120 72v56a8 8 0 0 0 8 8h56a8 8 0 0 0 0-16h-48V72a8 8 0 0 0-16 0Zm40-24a12 12 0 1 0-12-12 12 12 0 0 0 12 12Zm36 24a12 12 0 1 0-12-12 12 12 0 0 0 12 12Zm24 36a12 12 0 1 0-12-12 12 12 0 0 0 12 12Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Set targets</span><span class="stp-el__d">Waiting for admin approval.</span></span></li><li class="stp-el stp-el--v" data-stage="locked"><span class="stp-el__rail"><span class="stp-ind" data-stage="locked"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M208 80h-32V56a48 48 0 0 0-96 0v24H48a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16ZM96 56a32 32 0 0 1 64 0v24H96Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Invite team</span><span class="stp-el__d">Finish step 2 first.</span></span></li></ol></div>
+              <p class="docs-dodont__cap">Explain Locked / Awaiting steps with a description.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><ol class="stp stp--v" aria-label="Progress"><li class="stp-el stp-el--v" data-stage="completed"><span class="stp-el__rail"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Connect store</span></span></li><li class="stp-el stp-el--v" data-stage="selected"><span class="stp-el__rail"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Map SKUs</span></span></li><li class="stp-el stp-el--v" data-stage="awaiting"><span class="stp-el__rail"><span class="stp-ind" data-stage="awaiting"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232 136.66A104.12 104.12 0 1 1 119.34 24a8 8 0 0 1 1.32 16A88.12 88.12 0 1 0 216 135.34a8 8 0 0 1 16 1.32ZM120 72v56a8 8 0 0 0 8 8h56a8 8 0 0 0 0-16h-48V72a8 8 0 0 0-16 0Zm40-24a12 12 0 1 0-12-12 12 12 0 0 0 12 12Zm36 24a12 12 0 1 0-12-12 12 12 0 0 0 12 12Zm24 36a12 12 0 1 0-12-12 12 12 0 0 0 12 12Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Set targets</span></span></li><li class="stp-el stp-el--v" data-stage="locked"><span class="stp-el__rail"><span class="stp-ind" data-stage="locked"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M208 80h-32V56a48 48 0 0 0-96 0v24H48a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16ZM96 56a32 32 0 0 1 64 0v24H96Z"/></svg></span><span class="stp-el__line"></span></span><span class="stp-el__txt"><span class="stp-el__t">Invite team</span></span></li></ol></div>
+              <p class="docs-dodont__cap">Don’t show Locked or Awaiting without saying why.</p>
+            </div>
+          </div>
+          <div class="docs-dodont stp-dd-wide">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol><div style="display:flex;gap:12px;margin-top:16px"><button type="button" class="stp-btn stp-btn--sec" tabindex="-1">Back</button><button type="button" class="stp-btn" tabindex="-1">Next</button></div></div></div>
+              <p class="docs-dodont__cap">Keep Back / Next outside the stepper, in the page or modal footer.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><ol class="stp" aria-label="Progress"><li class="stp-el stp-el--h" data-stage="completed"><span class="stp-ind" data-stage="completed"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232.49 80.49l-128 128a12 12 0 0 1-17 0l-56-56a12 12 0 1 1 17-17L96 183 215.51 63.51a12 12 0 0 1 17 17Z"/></svg></span><span class="stp-el__t">Connect store</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="selected"><span class="stp-ind" data-stage="selected">2</span><span class="stp-el__t">Map SKUs</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">3</span><span class="stp-el__t">Set targets</span><span class="stp-el__line"></span></li><li class="stp-el stp-el--h" data-stage="upcoming"><span class="stp-ind" data-stage="upcoming">4</span><span class="stp-el__t">Invite team</span><span class="stp-el__line"></span></li></ol></div>
+              <p class="docs-dodont__cap">Don’t use the stepper as the only way to move forward.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="content">
+          <h2>Writing content</h2>
+          <ul>
+            <li><strong>Step names</strong> &mdash; a verb + noun in 1–2 words for horizontal steps (“Map SKUs”, “Invite team”). Vertical steps can be longer.</li>
+            <li><strong>Sentence case</strong>, no full stop in names.</li>
+            <li><strong>Descriptions</strong> (vertical) &mdash; one short sentence about what happens in the step: “Match SKUs to our catalogue.”</li>
+            <li><strong>Awaiting / Locked</strong> &mdash; the description says why: “Waiting for admin approval.”, “Finish step 2 first.”</li>
+            <li><strong>Compact view</strong> &mdash; when the steps don’t fit, show “Step 2 of 4 · Map SKUs”.</li>
+          </ul>
+        </section>
+
+        <section id="behavior">
+          <h2>Behavior &amp; accessibility</h2>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>What to do</th></tr></thead><tbody>
+              <tr><td>Current step</td><td>Exactly one Selected. Steps before it are Completed; steps after it are Upcoming.</td></tr>
+              <tr><td>Navigation</td><td>Click a Completed step to go back. Upcoming and Locked steps aren’t clickable; Awaiting is read-only.</td></tr>
+              <tr><td>Next / Back</td><td>Buttons outside the stepper, in the page or modal footer. The stepper shows progress.</td></tr>
+              <tr><td>Locked</td><td>Set when a condition isn’t met. Explain it in the description (vertical).</td></tr>
+              <tr><td>Semantics</td><td>An ordered list (<code>&lt;ol&gt;</code>) with <code>aria-current=&quot;step&quot;</code> on the Selected step. Completed steps that can be revisited are buttons; announce the stage (“completed”) in text, not only with the icon.</td></tr>
+              <tr><td>Responsive</td><td>On small screens the horizontal stepper becomes compact: “Step 2 of 4” + the current name.</td></tr>
+            </tbody></table></div>
+          <p>Every exact value &mdash; dimensions, colour tokens and the full property list &mdash; is on the
+            <a href="docs-stepper-specifications.html">Specifications tab</a>.</p>
+        </section>
+<script src="assets/js/stepper.js"></script>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/components-stepper--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Storybook</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7213-42115" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma docs</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=2648-118050" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma library</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#at-a-glance" aria-current="true">At a glance</a></li>
+        <li><a href="#which">Horizontal or Vertical?</a></li>
+        <li><a href="#anatomy">Anatomy</a></li>
+        <li><a href="#stages">Stages</a></li>
+        <li><a href="#container">Container &amp; width</a></li>
+        <li><a href="#count">Step count</a></li>
+        <li><a href="#usage">Common layouts</a></li>
+        <li><a href="#dos-donts">Do’s and don’ts</a></li>
+        <li><a href="#content">Writing content</a></li>
+        <li><a href="#behavior">Behavior &amp; accessibility</a></li>
+      </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
+})();
+</script>

@@ -1,0 +1,435 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details open>
+      <summary>Getting started</summary>
+      <ul>
+        <li><a href="#">About Cube</a></li>
+        <li><a href="#">Designing</a></li>
+        <li><a href="#">Developing</a></li>
+        <li><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li><a href="#">Motion</a></li>
+        <li><a href="#">Icons</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html">Popup</a></li>
+        <li><a href="docs-overlays.html">Right Overlays</a></li>
+        <li><a href="docs-selection.html" aria-current="page">Selections</a></li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Empty states</a></li>
+        <li><a href="#">Forms</a></li>
+        <li><a href="#">Loading</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Chart types</a></li>
+        <li><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Support</summary>
+      <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Selection Group</h1>
+          <span class="docs-badge">New</span>
+          <span class="docs-meta">Last updated Oct 2026</span>
+        </div>
+        <p class="docs-title__desc">A ready-made group of options with a title. Think of it as a small bordered box: a
+          group header (the question) and a list of radio or checkbox options (the answers). It saves building radio /
+          checkbox groups by hand and keeps spacing consistent.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-selection.html" role="tab" aria-selected="true">Guidelines</a>
+        <a href="docs-selection-specifications.html" role="tab">Specifications</a>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/controls-groups-radiogroup--docs" role="tab" target="_blank" rel="noopener noreferrer">
+          Code
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7 9"/></svg>
+          <span class="sr-only">(opens Storybook in a new tab)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--bt docs-content--dt docs-content--sg">
+        <section id="at-a-glance">
+          <h2>At a glance</h2>
+          <p>Try it: pick a platform and a period (one each), then tick any categories. These are real radio and checkbox
+            groups &mdash; <kbd>Tab</kbd> into a group, then use the arrow keys or <kbd>Space</kbd>.</p>
+          <div class="docs-demo">
+            <div class="sg-live"><div class="sg" role="radiogroup" aria-labelledby="sg1h"><div class="sg__head"><span id="sg1h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--radio" data-on><input type="radio" name="sg1" checked><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg1"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg1"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg1"><span class="sg-ctl" aria-hidden="true"></span><span>BB Now</span></label></div></div><div class="sg" role="radiogroup" aria-labelledby="sg2h"><div class="sg__head"><span id="sg2h">Period</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg2"><span class="sg-ctl" aria-hidden="true"></span><span>Daily</span></label><label class="sg-opt sg-opt--chip sg-opt--radio" data-on><input type="radio" name="sg2" checked><span class="sg-ctl" aria-hidden="true"></span><span>Weekly</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg2"><span class="sg-ctl" aria-hidden="true"></span><span>Monthly</span></label></div></div><div class="sg sg--v sg--inline" role="group" aria-labelledby="sg3h"><div class="sg__head"><span id="sg3h">Category</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg3" checked><span class="sg-ctl" aria-hidden="true"></span><span>Snacks</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg3"><span class="sg-ctl" aria-hidden="true"></span><span>Beverages</span></label><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg3" checked><span class="sg-ctl" aria-hidden="true"></span><span>Dairy</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg3"><span class="sg-ctl" aria-hidden="true"></span><span>Personal care</span></label></div></div></div>
+            <p class="docs-demo__caption">Single select · Chip in a toolbar, and Multi select · Inline · Vertical in a panel.</p>
+          </div>
+          <div class="bx-quick">
+            <div><h3>1 · Header</h3><p>The <strong>question</strong> or category name: “Platform”, “Category”.</p></div>
+            <div><h3>2 · Options</h3><p>The <strong>answers</strong> &mdash; radios (Single select) or checkboxes (Multi select).</p></div>
+            <div><h3>3 · Box</h3><p>A bordered <strong>container</strong> that keeps spacing and alignment consistent.</p></div>
+          </div>
+        </section>
+
+        <section id="choose">
+          <h2>How to choose a variant</h2>
+          <p>Selection-group has only four properties. Answer these four questions in order and you have the right variant.</p>
+          <h3>① Type &mdash; can people pick more than one?</h3>
+          <p>No → <strong>Single select</strong> (radios). Yes → <strong>Multi select</strong> (checkboxes).</p>
+          <div class="bx-options sg-stack"><div class="bx-opt"><div class="bx-opt__stage"><div class="sg" role="radiogroup" aria-labelledby="sg4h"><div class="sg__head"><span id="sg4h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--radio" data-on><input type="radio" name="sg4" checked><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg4"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg4"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg4"><span class="sg-ctl" aria-hidden="true"></span><span>BB Now</span></label></div></div></div><div class="bx-opt__body"><h3>Single select</h3><p>One answer. Uses Radio-chip / Radio-inline.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="sg" role="group" aria-labelledby="sg5h"><div class="sg__head"><span id="sg5h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg5" checked><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg5" checked><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg5"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg5"><span class="sg-ctl" aria-hidden="true"></span><span>BB Now</span></label></div></div></div><div class="bx-opt__body"><h3>Multi select <small>Default</small></h3><p>Any number of answers. Uses Checkbox-chip / Checkbox-inline.</p></div></div></div>
+          <h3>② Element &mdash; how prominent should the options be?</h3>
+          <p>Chip → bordered, button-like options (filter bars, few options). Inline → a plain control + label (forms, long lists).</p>
+          <div class="bx-options sg-stack"><div class="bx-opt"><div class="bx-opt__stage"><div class="sg" role="radiogroup" aria-labelledby="sg6h"><div class="sg__head"><span id="sg6h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--radio" data-on><input type="radio" name="sg6" checked><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg6"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg6"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg6"><span class="sg-ctl" aria-hidden="true"></span><span>BB Now</span></label></div></div></div><div class="bx-opt__body"><h3>Chip <small>Default</small></h3><p>Bordered, button-like. Good in toolbars.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="sg sg--inline" role="radiogroup" aria-labelledby="sg7h"><div class="sg__head"><span id="sg7h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg7" checked><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg7"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg7"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg7"><span class="sg-ctl" aria-hidden="true"></span><span>BB Now</span></label></div></div></div><div class="bx-opt__body"><h3>Inline</h3><p>Control + label. Good in forms and panels.</p></div></div></div>
+          <h3>③ Layout Direction &mdash; where does the header go?</h3>
+          <p>→ Horizontal: header on the left, options in a row (toolbars, compact rows). ↓ Vertical: header on top, options below (panels, forms).</p>
+          <div class="bx-options sg-stack"><div class="bx-opt"><div class="bx-opt__stage"><div class="sg sg--inline" role="radiogroup" aria-labelledby="sg8h"><div class="sg__head"><span id="sg8h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg8" checked><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg8"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg8"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg8"><span class="sg-ctl" aria-hidden="true"></span><span>BB Now</span></label></div></div></div><div class="bx-opt__body"><h3>→ Horizontal <small>Default</small></h3><p>Header on the left, options in a row.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="sg sg--v sg--inline" role="radiogroup" aria-labelledby="sg9h"><div class="sg__head"><span id="sg9h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg9" checked><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg9"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg9"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg9"><span class="sg-ctl" aria-hidden="true"></span><span>BB Now</span></label></div></div></div><div class="bx-opt__body"><h3>↓ Vertical</h3><p>Header on top, options stacked below.</p></div></div></div>
+          <h3>④ Wrap ↩ &mdash; do the options fit on one line?</h3>
+          <p>No → one row or column; the width hugs the content. Yes → a fixed width; options flow onto more rows.</p>
+          <div class="bx-options sg-stack"><div class="bx-opt"><div class="bx-opt__stage"><div class="sg" role="group" aria-labelledby="sg10h"><div class="sg__head"><span id="sg10h">Category</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg10" checked><span class="sg-ctl" aria-hidden="true"></span><span>Snacks</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg10"><span class="sg-ctl" aria-hidden="true"></span><span>Beverages</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg10"><span class="sg-ctl" aria-hidden="true"></span><span>Dairy</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg10"><span class="sg-ctl" aria-hidden="true"></span><span>Personal care</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg10"><span class="sg-ctl" aria-hidden="true"></span><span>Home care</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg10"><span class="sg-ctl" aria-hidden="true"></span><span>Baby</span></label></div></div></div><div class="bx-opt__body"><h3>Wrap = No <small>Default</small></h3><p>One row &mdash; the width hugs the options.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="sg sg--wrap" role="group" aria-labelledby="sg11h" style="width:530px"><div class="sg__head"><span id="sg11h">Category</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg11" checked><span class="sg-ctl" aria-hidden="true"></span><span>Snacks</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg11"><span class="sg-ctl" aria-hidden="true"></span><span>Beverages</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg11"><span class="sg-ctl" aria-hidden="true"></span><span>Dairy</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg11"><span class="sg-ctl" aria-hidden="true"></span><span>Personal care</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg11"><span class="sg-ctl" aria-hidden="true"></span><span>Home care</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg11"><span class="sg-ctl" aria-hidden="true"></span><span>Baby</span></label></div></div></div><div class="bx-opt__body"><h3>Wrap = Yes</h3><p>A fixed width (530 here); options flow onto a second row, aligned under the options &mdash; not under the header.</p></div></div></div>
+        </section>
+
+        <section id="anatomy">
+          <h2>Anatomy</h2>
+          <h3>Horizontal group</h3>
+          <p>Layout Direction = → Horizontal: the header sits on the left, options follow in one row. Shown: Multi select, Chip, Wrap = No.</p>
+          <div class="bx-anatomy" data-bx-anatomy="left,top,bottom,right,top,bottom"><div class="bx-anatomy__zoom"><div class="sg" role="group" aria-labelledby="sg12h" data-anatomy="1" data-stem="36"><div class="sg__head" data-anatomy="2" data-center data-stem="28"><span id="sg12h" data-anatomy="3" data-center data-stem="28">Group Header</span></div><div class="sg__opts" data-anatomy="4" data-stem="36"><label class="sg-opt sg-opt--chip sg-opt--check" data-on data-anatomy="5" data-center data-stem="28"><input type="checkbox" name="sg12" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg12" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check" data-anatomy="6" data-center data-stem="28"><input type="checkbox" name="sg12" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg12" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label></div></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Group container</td><td>frame</td><td>White box, 1px Secondary-text/100 border, 8px radius, 4px padding, 4px gap. Its width hugs the content when Wrap = No.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Header area</td><td>frame</td><td>Holds the group title. In horizontal groups it hugs the title width (4px side padding).</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Group header</td><td>Card Header</td><td>The question / category name, e.g. “Platform”. Change it with the Card Header’s “Header text”.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Options list</td><td>frame</td><td>Auto-layout row of options. Gap 4 between chips, 12 between inline options.</td></tr>
+              <tr><td><span class="bx-n">5</span></td><td>Option (selected)</td><td>Checkbox-chip</td><td>One Checkbox-chip / Radio-chip / Checkbox-inline / Radio-inline &mdash; which one depends on Type + Element. State = Selected.</td></tr>
+              <tr><td><span class="bx-n">6</span></td><td>Option</td><td>Checkbox-chip</td><td>The group ships with 6 options. Rename them with “Label”; hide the ones you don’t need.</td></tr>
+            </tbody></table></div>
+
+          <h3>Vertical group</h3>
+          <p>Layout Direction = ↓ Vertical: the header sits on top, options stack below. Shown: Single select, Inline, Wrap = No, at 1.6×.</p>
+          <div class="bx-anatomy" data-bx-anatomy="top,right,left,right,right"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:1.6"><div class="sg sg--v sg--inline" role="radiogroup" aria-labelledby="sg13h" data-anatomy="1" data-stem="36"><div class="sg__head" data-anatomy="2" data-stem="36"><span id="sg13h">Group Header</span></div><div class="sg__opts" data-anatomy="3" data-stem="36"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on data-anatomy="4" data-stem="28"><input type="radio" name="sg13" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg13" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg13" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio" data-anatomy="5" data-stem="28"><input type="radio" name="sg13" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg13" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg13" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label></div></div></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Group container</td><td>frame</td><td>Fixed width (180 when Wrap = No, 280 when Wrap = Yes). Resize the width to fit your layout.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Header area</td><td>frame</td><td>Stretches to the full width of the group.</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>Options list</td><td>frame</td><td>Stacks options vertically. Inline options have a 12px gap and 6 / 4 padding.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Selected option</td><td>Radio-inline</td><td>Single select → Radio-inline. Exactly one should be Selected.</td></tr>
+              <tr><td><span class="bx-n">5</span></td><td>Option</td><td>Radio-inline</td><td>Default state.</td></tr>
+            </tbody></table></div>
+
+          <h3>Wrap</h3>
+          <p>Wrap ↩ = Yes: options flow onto new rows when they run out of width &mdash; like text wrapping. Shown: Multi select, Chip, Vertical, Wrap = Yes, at 1.6×.</p>
+          <div class="bx-anatomy" data-bx-anatomy="top,right,left,left"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:1.6"><div class="sg sg--v sg--wrap" role="group" aria-labelledby="sg14h" data-anatomy="1" data-stem="36"><div class="sg__head"><span id="sg14h">Group Header</span></div><div class="sg__opts" data-anatomy="2" data-stem="36"><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg14" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg14" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check" data-anatomy="3" data-stem="28"><input type="checkbox" name="sg14" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg14" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check" data-anatomy="4" data-stem="28"><input type="checkbox" name="sg14" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg14" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label></div></div></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Fixed-width container</td><td>frame</td><td>With Wrap = Yes the group has a fixed width (530 horizontal / 280 vertical). Change the width and the options re-flow.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Wrapping list</td><td>frame</td><td>Row gap = column gap (4 for chips, 12 for inline).</td></tr>
+              <tr><td><span class="bx-n">3</span></td><td>First wrapped row</td><td>option</td><td>Options that didn’t fit move to the next row.</td></tr>
+              <tr><td><span class="bx-n">4</span></td><td>Second wrapped row</td><td>option</td><td>Rows keep the same (left) alignment.</td></tr>
+            </tbody></table></div>
+
+          <h3>Card Header (nested)</h3>
+          <p>The title component inside every Selection-group. Two sizes, at 2.5×.</p>
+          <div class="bx-anatomy" data-bx-anatomy="top,top"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:2.5"><div class="chp-row" style="gap:40px"><div class="sg__head" data-anatomy="1" data-center data-stem="24">Card Header</div><div class="sg__head sg__head--bold" data-anatomy="2" data-center data-stem="24">Card Header</div></div></div></div></div>
+          <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><span class="bx-n">1</span></td><td>Size = Label size</td><td><code>Size</code></td><td>Default. Medium 12/16, Secondary-text/700 &mdash; reads like a form label.</td></tr>
+              <tr><td><span class="bx-n">2</span></td><td>Size = Small Bold Heading</td><td><code>Size</code></td><td>Bold 14/18, Secondary-text/900 &mdash; a stronger section title (e.g. in filter panels).</td></tr>
+            </tbody></table></div>
+        </section>
+
+        <section id="variants">
+          <h2>All 16 variants</h2>
+          <p>Type × Element × Layout Direction × Wrap, with the default content (“Group Header” and six options).</p>
+          <div class="sg-var"><p class="sg-var__t">Single select · Chip</p><div class="sg-var__grid"><div class="sg-var__cell"><p>Horizontal · Wrap No</p><div class="sg" role="radiogroup" aria-labelledby="sg15h"><div class="sg__head"><span id="sg15h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--radio" data-on><input type="radio" name="sg15" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg15" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg15" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg15" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg15" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg15" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label></div></div></div><div class="sg-var__cell"><p>Horizontal · Wrap Yes</p><div class="sg sg--wrap" role="radiogroup" aria-labelledby="sg16h" style="width:530px"><div class="sg__head"><span id="sg16h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--radio" data-on><input type="radio" name="sg16" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg16" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg16" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg16" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg16" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg16" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label></div></div></div><div class="sg-var__cell"><p>Vertical · Wrap No</p><div class="sg sg--v" role="radiogroup" aria-labelledby="sg17h"><div class="sg__head"><span id="sg17h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--radio" data-on><input type="radio" name="sg17" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg17" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg17" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg17" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg17" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg17" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label></div></div></div><div class="sg-var__cell"><p>Vertical · Wrap Yes</p><div class="sg sg--v sg--wrap" role="radiogroup" aria-labelledby="sg18h"><div class="sg__head"><span id="sg18h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--radio" data-on><input type="radio" name="sg18" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg18" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg18" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg18" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg18" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg18" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label></div></div></div></div></div><div class="sg-var"><p class="sg-var__t">Single select · Inline</p><div class="sg-var__grid"><div class="sg-var__cell"><p>Horizontal · Wrap No</p><div class="sg sg--inline" role="radiogroup" aria-labelledby="sg19h"><div class="sg__head"><span id="sg19h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg19" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg19" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg19" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg19" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg19" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg19" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label></div></div></div><div class="sg-var__cell"><p>Horizontal · Wrap Yes</p><div class="sg sg--wrap sg--inline" role="radiogroup" aria-labelledby="sg20h" style="width:530px"><div class="sg__head"><span id="sg20h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg20" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg20" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg20" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg20" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg20" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg20" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label></div></div></div><div class="sg-var__cell"><p>Vertical · Wrap No</p><div class="sg sg--v sg--inline" role="radiogroup" aria-labelledby="sg21h"><div class="sg__head"><span id="sg21h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg21" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg21" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg21" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg21" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg21" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg21" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label></div></div></div><div class="sg-var__cell"><p>Vertical · Wrap Yes</p><div class="sg sg--v sg--wrap sg--inline" role="radiogroup" aria-labelledby="sg22h"><div class="sg__head"><span id="sg22h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg22" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg22" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg22" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg22" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg22" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg22" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label></div></div></div></div></div><div class="sg-var"><p class="sg-var__t">Multi select · Chip</p><div class="sg-var__grid"><div class="sg-var__cell"><p>Horizontal · Wrap No</p><div class="sg" role="group" aria-labelledby="sg23h"><div class="sg__head"><span id="sg23h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg23" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg23" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg23" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg23" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg23" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg23" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label></div></div></div><div class="sg-var__cell"><p>Horizontal · Wrap Yes</p><div class="sg sg--wrap" role="group" aria-labelledby="sg24h" style="width:530px"><div class="sg__head"><span id="sg24h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg24" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg24" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg24" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg24" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg24" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg24" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label></div></div></div><div class="sg-var__cell"><p>Vertical · Wrap No</p><div class="sg sg--v" role="group" aria-labelledby="sg25h"><div class="sg__head"><span id="sg25h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg25" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg25" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg25" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg25" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg25" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg25" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label></div></div></div><div class="sg-var__cell"><p>Vertical · Wrap Yes</p><div class="sg sg--v sg--wrap" role="group" aria-labelledby="sg26h"><div class="sg__head"><span id="sg26h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg26" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg26" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg26" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg26" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg26" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg26" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label></div></div></div></div></div><div class="sg-var"><p class="sg-var__t">Multi select · Inline</p><div class="sg-var__grid"><div class="sg-var__cell"><p>Horizontal · Wrap No</p><div class="sg sg--inline" role="group" aria-labelledby="sg27h"><div class="sg__head"><span id="sg27h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg27" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg27" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg27" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg27" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg27" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg27" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label></div></div></div><div class="sg-var__cell"><p>Horizontal · Wrap Yes</p><div class="sg sg--wrap sg--inline" role="group" aria-labelledby="sg28h" style="width:530px"><div class="sg__head"><span id="sg28h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg28" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg28" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg28" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg28" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg28" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg28" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label></div></div></div><div class="sg-var__cell"><p>Vertical · Wrap No</p><div class="sg sg--v sg--inline" role="group" aria-labelledby="sg29h"><div class="sg__head"><span id="sg29h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg29" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg29" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg29" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg29" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg29" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg29" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label></div></div></div><div class="sg-var__cell"><p>Vertical · Wrap Yes</p><div class="sg sg--v sg--wrap sg--inline" role="group" aria-labelledby="sg30h"><div class="sg__head"><span id="sg30h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg30" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg30" checked tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg30" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg30" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg30" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg30" tabindex="-1"><span class="sg-ctl" aria-hidden="true"></span><span>Checkbox Label</span></label></div></div></div></div></div>
+        </section>
+
+        <section id="editing">
+          <h2>Editing the options</h2>
+          <p>The group always contains six options. Customise them in the instance &mdash; no detaching needed.</p>
+          <div class="bx-options sg-tiles"><div class="bx-opt"><div class="bx-opt__stage"><div class="sg sg--v sg--inline" role="radiogroup" aria-labelledby="sg31h"><div class="sg__head"><span id="sg31h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg31" checked><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg31"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg31"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg31"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg31"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg31"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label></div></div></div><div class="bx-opt__body"><h3>1. Rename the header</h3><p>Select the nested Card Header → change “Header text”.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="sg sg--v sg--inline" role="radiogroup" aria-labelledby="sg32h"><div class="sg__head"><span id="sg32h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg32" checked><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg32"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg32"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg32"><span class="sg-ctl" aria-hidden="true"></span><span>BB Now</span></label></div></div></div><div class="bx-opt__body"><h3>2. Rename &amp; hide options</h3><p>Select an option → change “Label”. Hide the options you don’t need.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="sg sg--v sg--inline" role="group" aria-labelledby="sg33h"><div class="sg__head"><span id="sg33h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg33"><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg33" checked><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg33" checked><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg33"><span class="sg-ctl" aria-hidden="true"></span><span>BB Now</span></label></div></div></div><div class="bx-opt__body"><h3>3. Set the selection</h3><p>Set State = Selected on the chosen option(s).</p></div></div></div>
+          <h3>Card Header size</h3>
+          <p>Swap the nested Card Header’s Size for a stronger title.</p>
+          <div class="bx-options bx-options--two sg-tiles"><div class="bx-opt"><div class="bx-opt__stage"><div class="sg sg--v sg--inline" role="radiogroup" aria-labelledby="sg34h"><div class="sg__head"><span id="sg34h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg34" checked><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg34"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg34"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg34"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg34"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg34"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label></div></div></div><div class="bx-opt__body"><h3>Label size <small>Default</small></h3><p>Medium 12/16 &mdash; matches form labels.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="sg sg--v sg--inline" role="radiogroup" aria-labelledby="sg35h"><div class="sg__head sg__head--bold"><span id="sg35h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg35" checked><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg35"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg35"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg35"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg35"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg35"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label></div></div></div><div class="bx-opt__body"><h3>Small Bold Heading</h3><p>Bold 14/18 &mdash; a section-style title in panels.</p></div></div></div>
+        </section>
+
+        <section id="usage">
+          <h2>Common layouts</h2>
+          <p>Use a Selection-group whenever you show a set of radios or checkboxes with a title &mdash; filters, settings,
+            forms. Toolbars → Horizontal + Chip. Side panels / forms → Vertical + Inline. Many short options in a fixed
+            space → Wrap = Yes. For 10+ options use a Dropdown instead.</p>
+          <div class="bx-usage sg-usage">
+            <figure>
+              <div class="bx-mock"><div class="sg" role="radiogroup" aria-labelledby="sg36h"><div class="sg__head"><span id="sg36h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--radio" data-on><input type="radio" name="sg36" checked><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg36"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg36"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg36"><span class="sg-ctl" aria-hidden="true"></span><span>BB Now</span></label></div></div></div>
+              <figcaption><b>Toolbar filter</b>Horizontal · Chip · Single select &mdash; one platform at a time.</figcaption>
+            </figure>
+            <figure>
+              <div class="bx-mock"><div class="sg sg--v sg--inline" role="group" aria-labelledby="sg37h" style="width:225px"><div class="sg__head"><span id="sg37h">Category</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg37" checked><span class="sg-ctl" aria-hidden="true"></span><span>Snacks</span></label><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg37" checked><span class="sg-ctl" aria-hidden="true"></span><span>Dairy</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg37"><span class="sg-ctl" aria-hidden="true"></span><span>Beverages</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg37"><span class="sg-ctl" aria-hidden="true"></span><span>Personal care</span></label></div></div></div>
+              <figcaption><b>Filter panel</b>Vertical · Inline · Multi select &mdash; several categories.</figcaption>
+            </figure>
+            <figure>
+              <div class="bx-mock"><div class="sg sg--v sg--wrap sg--flow" role="group" aria-labelledby="sg38h" style="width:300px"><div class="sg__head"><span id="sg38h">Tags</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg38"><span class="sg-ctl" aria-hidden="true"></span><span>New</span></label><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg38" checked><span class="sg-ctl" aria-hidden="true"></span><span>Top 10</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg38"><span class="sg-ctl" aria-hidden="true"></span><span>Discounted</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg38"><span class="sg-ctl" aria-hidden="true"></span><span>Low stock</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg38"><span class="sg-ctl" aria-hidden="true"></span><span>Trending</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg38"><span class="sg-ctl" aria-hidden="true"></span><span>Seasonal</span></label></div></div></div>
+              <figcaption><b>Tag picker</b>Vertical · Chip · Multi · Wrap &mdash; many short tags in a fixed width.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="dos-donts">
+          <h2>Do’s and don’ts</h2>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="sg sg--v sg--inline" role="radiogroup" aria-labelledby="sg39h"><div class="sg__head"><span id="sg39h">Platform</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg39" checked><span class="sg-ctl" aria-hidden="true"></span><span>Blinkit</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg39"><span class="sg-ctl" aria-hidden="true"></span><span>Zepto</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg39"><span class="sg-ctl" aria-hidden="true"></span><span>Instamart</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg39"><span class="sg-ctl" aria-hidden="true"></span><span>BB Now</span></label></div></div></div>
+              <p class="docs-dodont__cap">Rename the header and options, and hide the options you don’t need.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="sg sg--v sg--inline" role="radiogroup" aria-labelledby="sg40h"><div class="sg__head"><span id="sg40h">Group Header</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg40" checked><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg40"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg40"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg40"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg40"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg40"><span class="sg-ctl" aria-hidden="true"></span><span>Radio Label</span></label></div></div></div>
+              <p class="docs-dodont__cap">Don’t ship placeholder text (“Group Header”, “Radio Label”) or unused options.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="sg" role="radiogroup" aria-labelledby="sg41h"><div class="sg__head"><span id="sg41h">Period</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--radio" data-on><input type="radio" name="sg41" checked><span class="sg-ctl" aria-hidden="true"></span><span>Daily</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg41"><span class="sg-ctl" aria-hidden="true"></span><span>Weekly</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg41"><span class="sg-ctl" aria-hidden="true"></span><span>Monthly</span></label></div></div></div>
+              <p class="docs-dodont__cap">In Single select, pre-select one option.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="sg" role="radiogroup" aria-labelledby="sg42h"><div class="sg__head"><span id="sg42h">Period</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg42"><span class="sg-ctl" aria-hidden="true"></span><span>Daily</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg42"><span class="sg-ctl" aria-hidden="true"></span><span>Weekly</span></label><label class="sg-opt sg-opt--chip sg-opt--radio"><input type="radio" name="sg42"><span class="sg-ctl" aria-hidden="true"></span><span>Monthly</span></label></div></div></div>
+              <p class="docs-dodont__cap">Don’t leave a single-select group with nothing selected.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="sg sg--wrap" role="group" aria-labelledby="sg43h" style="width:330px"><div class="sg__head"><span id="sg43h">Category</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg43" checked><span class="sg-ctl" aria-hidden="true"></span><span>Snacks</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg43"><span class="sg-ctl" aria-hidden="true"></span><span>Beverages</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg43"><span class="sg-ctl" aria-hidden="true"></span><span>Dairy</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg43"><span class="sg-ctl" aria-hidden="true"></span><span>Personal care</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg43"><span class="sg-ctl" aria-hidden="true"></span><span>Home care</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg43"><span class="sg-ctl" aria-hidden="true"></span><span>Baby</span></label></div></div></div>
+              <p class="docs-dodont__cap">Use Wrap = Yes when options don’t fit on one line.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="sg-clip"><div class="sg" role="group" aria-labelledby="sg44h"><div class="sg__head"><span id="sg44h">Category</span></div><div class="sg__opts"><label class="sg-opt sg-opt--chip sg-opt--check" data-on><input type="checkbox" name="sg44" checked><span class="sg-ctl" aria-hidden="true"></span><span>Snacks</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg44"><span class="sg-ctl" aria-hidden="true"></span><span>Beverages</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg44"><span class="sg-ctl" aria-hidden="true"></span><span>Dairy</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg44"><span class="sg-ctl" aria-hidden="true"></span><span>Personal care</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg44"><span class="sg-ctl" aria-hidden="true"></span><span>Home care</span></label><label class="sg-opt sg-opt--chip sg-opt--check"><input type="checkbox" name="sg44"><span class="sg-ctl" aria-hidden="true"></span><span>Baby</span></label></div></div></div></div>
+              <p class="docs-dodont__cap">Don’t let a no-wrap row run off the screen or card.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="sg sg--v sg--inline" role="group" aria-labelledby="sg45h"><div class="sg__head"><span id="sg45h">Category</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg45" checked><span class="sg-ctl" aria-hidden="true"></span><span>Snacks</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg45"><span class="sg-ctl" aria-hidden="true"></span><span>Beverages</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg45"><span class="sg-ctl" aria-hidden="true"></span><span>Dairy</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg45"><span class="sg-ctl" aria-hidden="true"></span><span>Personal care</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg45"><span class="sg-ctl" aria-hidden="true"></span><span>Home care</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg45"><span class="sg-ctl" aria-hidden="true"></span><span>Baby</span></label></div></div></div>
+              <p class="docs-dodont__cap">Use Vertical for long lists (5+ options) in panels.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="sg-clip"><div class="sg sg--inline" role="group" aria-labelledby="sg46h"><div class="sg__head"><span id="sg46h">Category</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg46" checked><span class="sg-ctl" aria-hidden="true"></span><span>Snacks</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg46"><span class="sg-ctl" aria-hidden="true"></span><span>Beverages</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg46"><span class="sg-ctl" aria-hidden="true"></span><span>Dairy</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg46"><span class="sg-ctl" aria-hidden="true"></span><span>Personal care</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg46"><span class="sg-ctl" aria-hidden="true"></span><span>Home care</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg46"><span class="sg-ctl" aria-hidden="true"></span><span>Baby</span></label></div></div></div></div>
+              <p class="docs-dodont__cap">Don’t line up many inline options horizontally &mdash; hard to scan.</p>
+            </div>
+          </div>
+          <div class="docs-dodont">
+            <div class="docs-dodont__card docs-dodont__card--do">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
+              <div class="docs-dodont__stage"><div class="sg sg--v sg--inline" role="radiogroup" aria-labelledby="sg47h"><div class="sg__head"><span id="sg47h">Sort by</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--radio" data-on><input type="radio" name="sg47" checked><span class="sg-ctl" aria-hidden="true"></span><span>Revenue</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg47"><span class="sg-ctl" aria-hidden="true"></span><span>Units</span></label><label class="sg-opt sg-opt--inline sg-opt--radio"><input type="radio" name="sg47"><span class="sg-ctl" aria-hidden="true"></span><span>Growth</span></label></div></div></div>
+              <p class="docs-dodont__cap">Use Single select for mutually exclusive options.</p>
+            </div>
+            <div class="docs-dodont__card docs-dodont__card--dont">
+              <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
+              <div class="docs-dodont__stage"><div class="sg sg--v sg--inline" role="group" aria-labelledby="sg48h"><div class="sg__head"><span id="sg48h">Sort by</span></div><div class="sg__opts"><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg48" checked><span class="sg-ctl" aria-hidden="true"></span><span>Revenue</span></label><label class="sg-opt sg-opt--inline sg-opt--check" data-on><input type="checkbox" name="sg48" checked><span class="sg-ctl" aria-hidden="true"></span><span>Units</span></label><label class="sg-opt sg-opt--inline sg-opt--check"><input type="checkbox" name="sg48"><span class="sg-ctl" aria-hidden="true"></span><span>Growth</span></label></div></div></div>
+              <p class="docs-dodont__cap">Don’t use checkboxes for mutually exclusive options &mdash; you can’t sort by two things at once.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="content">
+          <h2>Writing content</h2>
+          <ul>
+            <li><strong>Header</strong> &mdash; the question or category as a short noun: “Platform”, “Category”, “Sort by”. Never leave “Group Header”.</li>
+            <li><strong>Options</strong> &mdash; 1–3 words, parallel in form (all nouns or all periods), sentence case.</li>
+            <li><strong>Order</strong> &mdash; most common first, or a natural order (Daily → Weekly → Monthly).</li>
+            <li><strong>How many</strong> &mdash; 2–6 options. For 10+ use a Dropdown.</li>
+          </ul>
+        </section>
+
+        <section id="behavior">
+          <h2>Behavior &amp; accessibility</h2>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>What to do</th></tr></thead><tbody>
+              <tr><td>Single select</td><td>Exactly one option is selected &mdash; pre-select a sensible default. Clicking another option moves the selection.</td></tr>
+              <tr><td>Multi select</td><td>Zero or more options. Each click toggles one option.</td></tr>
+              <tr><td>Semantics</td><td>Radio groups use <code>role=&quot;radiogroup&quot;</code> (or a <code>&lt;fieldset&gt;</code> + <code>&lt;legend&gt;</code>), labelled by the header. Checkbox groups use <code>role=&quot;group&quot;</code>.</td></tr>
+              <tr><td>Keyboard</td><td><kbd>Tab</kbd> moves into the group; arrow keys move between radios; <kbd>Space</kbd> toggles a checkbox.</td></tr>
+              <tr><td>Hit area</td><td>The whole chip or label is clickable, not just the 14px control.</td></tr>
+              <tr><td>Apply</td><td>In filters, apply on change; in forms, submit with the form’s button.</td></tr>
+            </tbody></table></div>
+          <p>Every exact value &mdash; dimensions, colour tokens and the full property list &mdash; is on the
+            <a href="docs-selection-specifications.html">Specifications tab</a>.</p>
+        </section>
+
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/controls-groups-radiogroup--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Storybook · RadioGroup</a>
+        <a href="https://storybook.gobblecube.ai/?path=/docs/controls-groups-checkboxgroup--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Storybook · CheckboxGroup</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7204-36512" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma docs</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7167-67836" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma library</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#at-a-glance" aria-current="true">At a glance</a></li>
+        <li><a href="#choose">How to choose</a></li>
+        <li><a href="#anatomy">Anatomy</a></li>
+        <li><a href="#variants">All 16 variants</a></li>
+        <li><a href="#editing">Editing the options</a></li>
+        <li><a href="#usage">Common layouts</a></li>
+        <li><a href="#dos-donts">Do’s and don’ts</a></li>
+        <li><a href="#content">Writing content</a></li>
+        <li><a href="#behavior">Behavior &amp; accessibility</a></li>
+      </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
+})();
+</script>
