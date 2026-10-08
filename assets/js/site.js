@@ -241,15 +241,24 @@
   }
 
   function initTheme() {
-    var btn = document.getElementById('theme');
-    if (!btn) return;
-    btn.addEventListener('click', function () {
-      var root = document.documentElement;
-      var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-      root.dataset.theme = next;
-      try { localStorage.setItem('gcd-theme', next); } catch (e) {}
-      refreshDots();                       // canvas dots follow the theme
-      btn.setAttribute('aria-label', next === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    // The handbook pill (#theme) and the docs header button
+    // ([data-theme-toggle]) share one setting.
+    var btns = [].slice.call(document.querySelectorAll('#theme, [data-theme-toggle]'));
+    if (!btns.length) return;
+    var root = document.documentElement;
+    function label() {
+      var dark = root.dataset.theme === 'dark';
+      btns.forEach(function (b) { b.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme'); });
+    }
+    label();
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        root.dataset.theme = next;
+        try { localStorage.setItem('gcd-theme', next); } catch (e) {}
+        refreshDots();                     // canvas dots follow the theme
+        label();
+      });
     });
   }
 

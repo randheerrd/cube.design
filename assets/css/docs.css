@@ -3166,3 +3166,38 @@ span.tgl{cursor:default}
 .docs-content .cl-mx .cl-chip{width:100%}
 .docs-content .cl-th th:nth-child(4){width:14%}
 .docs-content .cl-th td:nth-child(4) code{white-space:nowrap; overflow-wrap:normal}
+
+/* ---- header theme switch (shares gcd-theme with the handbook pill) ---- */
+.docs-header__theme{display:inline-grid; place-items:center; flex:none; width:36px; height:36px; margin-left:4px; padding:0; border:1px solid var(--hairline); border-radius:var(--radius-card); background:var(--bg); color:var(--ink-2); cursor:pointer}
+.docs-header__theme:hover{color:var(--ink); background:var(--docs-nav-bg)}
+.docs-header__theme:focus-visible{outline:2px solid var(--docs-link); outline-offset:2px}
+.docs-header__theme svg{width:18px; height:18px}
+.docs-header__theme .moon{display:none}
+:root[data-theme="dark"] .docs-header__theme .sun{display:none}
+:root[data-theme="dark"] .docs-header__theme .moon{display:block}
+
+/* ============================================================
+   DARK MODE — docs site chrome only.
+   The page, nav, text and tables follow the theme. Component
+   previews keep their real (light) design, so every preview
+   stage stays a light "island" with the light tokens restored
+   inside it. Stages that are dark on purpose (.docs-stage--dark)
+   are left alone.
+   ============================================================ */
+:root[data-theme="dark"] body[class^="page-docs"]{
+  --ink-2:#a3a9b1; --ink-3:#4a4f55;
+  --docs-nav-bg:#141619;
+  --f-panel:#16181b; --f-line:#2a2e33;
+  --f-ink:#f5f5f8; --f-text:#a8b0b9; --f-mid:#b8bfc7; --f-strong:#dde1e6; --f-muted:#959da7; --f-link:#6ea6ff;
+  background:var(--bg);
+}
+:root[data-theme="dark"] :is(.bx-opt__stage:not(.docs-stage--dark),.docs-dodont__stage,.bx-example__stage,.bx-anatomy,.docs-demo,.bx-mock,.msg-stage,.docs-anatomy,.rov-stage,.dt-step__stage,.bt-stage,.fb-card__stage,.sn-stage){
+  color-scheme:light;
+  --bg:#ffffff; --ink:#000000; --ink-2:#5f6b76; --ink-3:#c9c9c9; --hairline:rgba(0,0,0,.10); --tile-bg:#f2f2f2;
+  --docs-nav-bg:#f5f5f8; --docs-link:#0f62fe;
+  --f-panel:#f5f5f8; --f-line:#e8eaee; --f-ink:#101214; --f-text:#515f69; --f-mid:#465058; --f-strong:#373d42; --f-muted:#5f717b; --f-link:#025be5;
+  background-color:#f5f6f8; color:#101214;
+}
+/* the stage sits inside a card whose own body stays dark — round the island's top to match */
+:root[data-theme="dark"] .bx-opt__stage:not(.docs-stage--dark){border-bottom-color:#2a2e33}
+:root[data-theme="dark"] .docs-demo .docs-demo__caption{color:#5f6b76}
