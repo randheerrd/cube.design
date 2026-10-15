@@ -27,10 +27,10 @@
 
   <!-- ============ Left navigation ============ -->
   <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
-    <details open>
+    <details hidden open>
       <summary>Getting started</summary>
       <ul>
-        <li><a href="#">About Cube</a></li>
+        <li hidden><a href="#">About Cube</a></li>
         <li hidden><a href="#">Designing</a></li>
         <li hidden><a href="#">Developing</a></li>
         <li hidden><a href="#">Contributing</a></li>
@@ -39,7 +39,7 @@
     <details open>
       <summary>Foundations</summary>
       <ul>
-        <li><a href="#">Grid</a></li>
+        <li hidden><a href="#">Grid</a></li>
         <li><a href="docs-colors.html">Color</a></li>
         <li><a href="docs-typography.html">Typography</a></li>
         <li><a href="docs-spacing.html" aria-current="page">Spacing</a></li>
@@ -79,7 +79,6 @@
         <li><a href="docs-table.html">Tables</a></li>
         <li><a href="docs-toggle.html">Toggle</a></li>
         <li><a href="docs-tooltips.html">Tooltips</a></li>
-        <li><a href="docs-trends.html">Trends</a></li>
       </ul>
     </details>
     <details>
@@ -89,19 +88,20 @@
         <li><a href="docs-empty-states.html">Empty states</a></li>
       </ul>
     </details>
-    <details>
+    <details open>
       <summary>Data visualization</summary>
       <ul>
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Chart types</a></li>
-        <li><a href="#">Chart design</a></li>
+        <li><a href="docs-trends.html">Trends</a></li>
+        <li hidden><a href="#">Overview</a></li>
+        <li hidden><a href="#">Chart types</a></li>
+        <li hidden><a href="#">Chart design</a></li>
       </ul>
     </details>
     <details hidden>
       <summary>Support</summary>
       <ul>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">FAQs</a></li>
+        <li hidden><a href="#">Contact us</a></li>
+        <li hidden><a href="#">FAQs</a></li>
       </ul>
     </details>
   </nav>
@@ -139,7 +139,7 @@
         <section id="live-demo">
           <h2>Live demo</h2>
           <div class="docs-demo" style="flex-direction:column; align-items:stretch; gap:0">
-            <div style="display:flex; flex-direction:column; gap:16px; padding:24px; border:1px solid var(--hairline); border-radius:var(--radius-card); background:var(--bg); max-width:320px">
+            <div style="display:flex; flex-direction:column; gap:var(--spacing-16); padding:var(--spacing-24); border:1px solid var(--hairline); border-radius:var(--radius-card); background:var(--bg); max-width:320px">
               <div style="height:14px; border-radius:3px; background:color-mix(in srgb, var(--ink) 10%, transparent)"></div>
               <div style="height:14px; border-radius:3px; background:color-mix(in srgb, var(--ink) 10%, transparent); width:70%"></div>
             </div>
@@ -194,51 +194,36 @@ gap: SPACING[24]         // 24px
 
 // Margin — space between two stacked, unrelated blocks
 marginTop: SPACING[32]   // 32px</code></pre>
+          <p>In CSS, use the matching custom property. In Figma, bind the <code>Spacing/N</code> variable with the
+            same number:</p>
+          <pre class="docs-code"><code>/* CSS — same scale, as custom properties */
+.card { padding: var(--spacing-16); gap: var(--spacing-24); }
+.stack + .stack { margin-top: var(--spacing-32); }
+
+/* Figma — auto layout → padding / gap → Spacing/16, Spacing/24 */</code></pre>
           <p class="docs-demo__caption">Prefer a container's <code>gap</code> over margin on individual children
             when the children are a row or a list &mdash; one token then controls every space between them, and
             adding or removing an item never leaves a stray margin behind.</p>
 
           <h3>Annotated example</h3>
-          <p>A redline the way a hand-off would mark it up: every gap between fields in this form is the same
-            token, <code>SPACING[32]</code> &mdash; one decision, applied consistently, rather than a fresh
-            judgment call at each field.</p>
-          <div class="space-anno">
-            <p class="space-anno__label">Workspace name</p>
-            <div class="space-anno__field">Myworkspace</div>
-            <div class="space-anno__gap" style="height:32px">
-              <span class="space-anno__gap-track"><span class="space-anno__gap-n">32</span></span>
-              <span class="space-anno__bracket"><i></i></span>
-              <span class="space-anno__token">SPACING[32]</span>
-            </div>
-
-            <p class="space-anno__label">Label</p>
-            <div class="space-anno__field space-anno__field--select">
-              <span>Choose an option</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-            </div>
-            <div class="space-anno__gap" style="height:32px">
-              <span class="space-anno__gap-track"><span class="space-anno__gap-n">32</span></span>
-              <span class="space-anno__bracket"><i></i></span>
-              <span class="space-anno__token">SPACING[32]</span>
-            </div>
-
-            <p class="space-anno__label"><span>Description (optional)</span><span>0/100</span></p>
-            <div class="space-anno__field space-anno__field--area">What is the purpose of this workspace?</div>
-            <div class="space-anno__gap" style="height:32px">
-              <span class="space-anno__gap-track"><span class="space-anno__gap-n">32</span></span>
-              <span class="space-anno__bracket"><i></i></span>
-              <span class="space-anno__token">SPACING[32]</span>
-            </div>
-
-            <p class="space-anno__label">Github or Gitlab repo URL</p>
-            <div class="space-anno__field">e.g. https://github.com/&lt;repository&gt;</div>
-            <p class="space-anno__caption">Enter the url of the repo that hosts your Terraform configuration files</p>
-            <div class="space-anno__gap" style="height:32px">
-              <span class="space-anno__gap-track"><span class="space-anno__gap-n">32</span></span>
-              <span class="space-anno__bracket"><i></i></span>
-              <span class="space-anno__token">SPACING[32]</span>
-            </div>
+          <p>The <a href="docs-bottomsheet.html">Bottom-sheet</a> header, redlined the way a hand-off marks it up.
+            Every space is a step on the scale, and each one is bound to its <code>Spacing</code> variable in Figma.</p>
+          <div class="dw-stage dw-stage--white sp-red-stage">
+            <div class="sp-red"><div class="bs-h bs-h--solo"><div class="bs-h__row"><div class="bs-h__l"><div class="bs-h__crumb"><p class="bs-t">SKU details</p><span class="bs-sw"><span class="bs-sw__for">for</span><span class="bs-ib" aria-hidden="true"><img src="assets/img/bottomsheet/caret-left.svg" alt="" width="14" height="14"></span><span class="bs-dd"><span class="bs-dd__l">SKU:</span><b>Amul Taaza Toned Milk 1 L</b><img src="assets/img/bottomsheet/caret-down.svg" alt="" width="14" height="14"></span><span class="bs-ib" aria-hidden="true"><img src="assets/img/bottomsheet/caret-right.svg" alt="" width="14" height="14"></span></span></div></div><span class="bs-x" aria-hidden="true"><img src="assets/img/bottomsheet/x.svg" alt="" width="14" height="14"></span></div><div class="bs-tabs bs-tabs--h"><span aria-selected="true">Overview</span><span aria-selected="false">Trends</span><span aria-selected="false">Platforms</span></div></div></div>
           </div>
+          <div class="bx-scroll"><table class="docs-table">
+            <thead><tr><th>#</th><th>Space</th><th>Figma</th><th>CSS</th></tr></thead>
+            <tbody>
+              <tr><td><span class="sp-red-n">1</span></td><td>Header padding, top and bottom &mdash; 12</td><td><code>Spacing/12</code></td><td><code>var(--spacing-12)</code></td></tr>
+              <tr><td><span class="sp-red-n">2</span></td><td>Header and tabs padding, left &mdash; 24</td><td><code>Spacing/24</code></td><td><code>var(--spacing-24)</code></td></tr>
+              <tr><td><span class="sp-red-n">3</span></td><td>Heading to switcher &mdash; 8</td><td><code>Spacing/8</code></td><td><code>var(--spacing-8)</code></td></tr>
+              <tr><td><span class="sp-red-n">4</span></td><td>Between the switcher’s buttons &mdash; 6</td><td><code>Spacing/6</code></td><td><code>var(--spacing-6)</code></td></tr>
+              <tr><td><span class="sp-red-n">5</span></td><td>Between tabs &mdash; 20</td><td><code>Spacing/20</code></td><td><code>var(--spacing-20)</code></td></tr>
+            </tbody>
+          </table></div>
+          <p class="docs-demo__caption">Small steps hold one control together (6 between the switcher’s parts),
+            a slightly larger one separates two controls (8 from heading to switcher), and the largest sets the
+            edge of the surface (24). Full values are on the <a href="docs-bottomsheet-specifications.html#dimensions">Bottom sheet specifications</a>.</p>
         </section>
 
         <!-- ============ Designing with space ============ -->
@@ -265,6 +250,9 @@ marginTop: SPACING[32]   // 32px</code></pre>
           <p>The scale doesn't change; a dense or narrow layout just reaches for a smaller existing step
             (<code>4</code>&ndash;<code>8</code> instead of <code>12</code>&ndash;<code>16</code>). There's no
             separate compact or mobile scale.</p>
+          <h3>What if the element has a 1px border?</h3>
+          <p>Take the border out of the token: <code>padding: calc(var(--spacing-8) - 1px)</code>. Border plus padding
+            then lands on <code>8</code>, the same as the Figma component.</p>
           <h3>How does this relate to the layout grid?</h3>
           <p>Grid columns and gutters are a separate foundation. This scale is for space inside and between
             components, not the column structure a page is laid out on.</p>

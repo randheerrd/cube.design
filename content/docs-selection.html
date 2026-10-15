@@ -27,10 +27,10 @@
 
   <!-- ============ Left navigation ============ -->
   <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
-    <details open>
+    <details hidden open>
       <summary>Getting started</summary>
       <ul>
-        <li><a href="#">About Cube</a></li>
+        <li hidden><a href="#">About Cube</a></li>
         <li hidden><a href="#">Designing</a></li>
         <li hidden><a href="#">Developing</a></li>
         <li hidden><a href="#">Contributing</a></li>
@@ -39,7 +39,7 @@
     <details open>
       <summary>Foundations</summary>
       <ul>
-        <li><a href="#">Grid</a></li>
+        <li hidden><a href="#">Grid</a></li>
         <li><a href="docs-colors.html">Color</a></li>
         <li><a href="docs-typography.html">Typography</a></li>
         <li><a href="docs-spacing.html">Spacing</a></li>
@@ -79,7 +79,6 @@
         <li><a href="docs-table.html">Tables</a></li>
         <li><a href="docs-toggle.html">Toggle</a></li>
         <li><a href="docs-tooltips.html">Tooltips</a></li>
-        <li><a href="docs-trends.html">Trends</a></li>
       </ul>
     </details>
     <details>
@@ -89,19 +88,20 @@
         <li><a href="docs-empty-states.html">Empty states</a></li>
       </ul>
     </details>
-    <details>
+    <details open>
       <summary>Data visualization</summary>
       <ul>
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Chart types</a></li>
-        <li><a href="#">Chart design</a></li>
+        <li><a href="docs-trends.html">Trends</a></li>
+        <li hidden><a href="#">Overview</a></li>
+        <li hidden><a href="#">Chart types</a></li>
+        <li hidden><a href="#">Chart design</a></li>
       </ul>
     </details>
     <details hidden>
       <summary>Support</summary>
       <ul>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">FAQs</a></li>
+        <li hidden><a href="#">Contact us</a></li>
+        <li hidden><a href="#">FAQs</a></li>
       </ul>
     </details>
   </nav>
@@ -206,7 +206,7 @@
 
           <h3>Card Header (nested)</h3>
           <p>The title component inside every Selection-group. Two sizes, at 2.5×.</p>
-          <div class="bx-anatomy" data-bx-anatomy="top,top"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:2.5"><div class="chp-row" style="gap:40px"><div class="sg__head" data-anatomy="1" data-center data-stem="24">Card Header</div><div class="sg__head sg__head--bold" data-anatomy="2" data-center data-stem="24">Card Header</div></div></div></div></div>
+          <div class="bx-anatomy" data-bx-anatomy="top,top"><div class="bx-anatomy__zoom"><div class="chp-row" style="zoom:2.5"><div class="chp-row" style="gap:var(--spacing-40)"><div class="sg__head" data-anatomy="1" data-center data-stem="24">Card Header</div><div class="sg__head sg__head--bold" data-anatomy="2" data-center data-stem="24">Card Header</div></div></div></div></div>
           <div class="bx-scroll bx-scroll--attached"><table class="docs-table bt-anat"><thead><tr><th>#</th><th>Element</th><th>Figma</th><th>Notes</th></tr></thead><tbody>
               <tr><td><span class="bx-n">1</span></td><td>Size = Label size</td><td><code>Size</code></td><td>Default. Medium 12/16, Secondary-text/700 &mdash; reads like a form label.</td></tr>
               <tr><td><span class="bx-n">2</span></td><td>Size = Small Bold Heading</td><td><code>Size</code></td><td>Bold 14/18, Secondary-text/900 &mdash; a stronger section title (e.g. in filter panels).</td></tr>
