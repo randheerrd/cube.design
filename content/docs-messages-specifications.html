@@ -31,9 +31,9 @@
       <summary>Getting started</summary>
       <ul>
         <li><a aria-current="true" href="#">About Cube</a></li>
-        <li><a href="#">Designing</a></li>
-        <li><a href="#">Developing</a></li>
-        <li><a href="#">Contributing</a></li>
+        <li hidden><a href="#">Designing</a></li>
+        <li hidden><a href="#">Developing</a></li>
+        <li hidden><a href="#">Contributing</a></li>
       </ul>
     </details>
     <details open>
@@ -43,22 +43,22 @@
         <li><a href="docs-colors.html">Color</a></li>
         <li><a href="docs-typography.html">Typography</a></li>
         <li><a href="docs-spacing.html">Spacing</a></li>
-        <li><a href="#">Motion</a></li>
+        <li hidden><a href="#">Motion</a></li>
         <li><a href="docs-icons.html">Icons</a></li>
-        <li><a href="#">Themes</a></li>
-        <li><a href="#">Accessibility</a></li>
+        <li hidden><a href="#">Themes</a></li>
+        <li hidden><a href="#">Accessibility</a></li>
       </ul>
     </details>
     <details open>
       <summary>Components</summary>
       <ul>
         <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
-        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs-bottomsheet.html">Bottom sheet</a></li>
         <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
         <li><a href="docs-dropdown.html">Dropdown</a></li>
-        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-empty-states.html">Empty States</a></li>
         <li><a href="docs-header.html">Header</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
         <li><a href="docs-messages.html" aria-current="page">Message</a></li>
@@ -74,20 +74,19 @@
         </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-swimlanes.html">Swimlanes</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-table.html">Tables</a></li>
         <li><a href="docs-toggle.html">Toggle</a></li>
-        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
         <li><a href="docs-tooltips.html">Tooltips</a></li>
+        <li><a href="docs-trends.html">Trends</a></li>
       </ul>
     </details>
     <details>
       <summary>Patterns</summary>
       <ul>
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Empty states</a></li>
-        <li><a href="#">Forms</a></li>
-        <li><a href="#">Loading</a></li>
-        <li><a href="#">Notifications</a></li>
+        <li><a href="docs-widget.html">Dashboard widget</a></li>
+        <li><a href="docs-empty-states.html">Empty states</a></li>
       </ul>
     </details>
     <details>
@@ -98,7 +97,7 @@
         <li><a href="#">Chart design</a></li>
       </ul>
     </details>
-    <details>
+    <details hidden>
       <summary>Support</summary>
       <ul>
         <li><a href="#">Contact us</a></li>
@@ -152,7 +151,7 @@
           <h2>Color tokens</h2>
           <p>Pattern: fill is the colour’s 100 step (Warning uses 50), border is its 200 step, and text is Primary-text/950 &mdash; or 800 for White, Neutral and Naked.</p>
           <h3>Per sentiment</h3>
-<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Color x Sentiment</th><th>Fill</th><th>Border</th><th>Text</th><th>Icon</th></tr></thead><tbody><tr><td>Red | Error Urgency</td><td>Error/100 <span class="msg-sw" style="background:#ffecec"></span>#ffecec</td><td>Error/200 <span class="msg-sw" style="background:#ffdada"></span>#ffdada</td><td>Primary-text/950</td><td>Error-icon / Error</td></tr><tr><td>White | Information</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee</td><td>Primary-text/800</td><td>Info / Regular</td></tr><tr><td>Neutral | Information</td><td>Accent/Steel Blue/100 <span class="msg-sw" style="background:#f1f6fd"></span>#f1f6fd</td><td>Accent/Steel Blue/200 <span class="msg-sw" style="background:#e7eef9"></span>#e7eef9</td><td>Primary-text/800</td><td>Info / Regular</td></tr><tr><td>Green | Success</td><td>Success/100 <span class="msg-sw" style="background:#e9f7ed"></span>#e9f7ed</td><td>Success/200 <span class="msg-sw" style="background:#d3efdb"></span>#d3efdb</td><td>Primary-text/950</td><td>Success-icon / CheckCircle</td></tr><tr><td>Yellow | Warning Important</td><td>Warning/50 <span class="msg-sw" style="background:#fff9e7"></span>#fff9e7</td><td>Warning/200 <span class="msg-sw" style="background:#ffefb6"></span>#ffefb6</td><td>Primary-text/950</td><td>Warning-icon / Warning</td></tr><tr><td>Naked | Information</td><td>None</td><td>None</td><td>Primary-text/800</td><td>Info / Regular</td></tr></tbody></table></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Color x Sentiment</th><th>Fill</th><th>Border</th><th>Text</th><th>Icon</th></tr></thead><tbody><tr><td>Red | Error Urgency</td><td>Error/100 <span class="msg-sw" style="background:#ffe2e2"></span>#ffe2e2</td><td>Error/200 <span class="msg-sw" style="background:#ffc9c9"></span>#ffc9c9</td><td>Primary-text/950</td><td>Error-icon / Error</td></tr><tr><td>White | Information</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee</td><td>Primary-text/800</td><td>Info / Regular</td></tr><tr><td>Neutral | Information</td><td>Accent/Steel Blue/100 <span class="msg-sw" style="background:#f1f6fd"></span>#f1f6fd</td><td>Accent/Steel Blue/200 <span class="msg-sw" style="background:#e7eef9"></span>#e7eef9</td><td>Primary-text/800</td><td>Info / Regular</td></tr><tr><td>Green | Success</td><td>Success/100 <span class="msg-sw" style="background:#d0fae5"></span>#d0fae5</td><td>Success/200 <span class="msg-sw" style="background:#a4f4cf"></span>#a4f4cf</td><td>Primary-text/950</td><td>Success-icon / CheckCircle</td></tr><tr><td>Yellow | Warning Important</td><td>Warning/50 <span class="msg-sw" style="background:#fff9e7"></span>#fff9e7</td><td>Warning/200 <span class="msg-sw" style="background:#fff085"></span>#fff085</td><td>Primary-text/950</td><td>Warning-icon / Warning</td></tr><tr><td>Naked | Information</td><td>None</td><td>None</td><td>Primary-text/800</td><td>Info / Regular</td></tr></tbody></table></div>
           <h3>Text styles</h3>
 <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Token</th><th>Style</th></tr></thead><tbody><tr><td>Header (With Header)</td><td>Primary-text/950</td><td>SemiBold 12/16</td></tr><tr><td>Message</td><td>Primary-text/950 (800 for White, Neutral, Naked)</td><td>Medium 12/16 (Tiny 10/12)</td></tr><tr><td>Buttons</td><td>Neutral Naked button, Primary-text/900 <span class="msg-sw" style="background:#373d42"></span>#373d42</td><td>SemiBold 12/16 (Tiny 10/12)</td></tr></tbody></table></div>
           <h3>Visual reference</h3>

@@ -31,9 +31,9 @@
       <summary>Getting started</summary>
       <ul>
         <li><a href="#">About Cube</a></li>
-        <li><a href="#">Designing</a></li>
-        <li><a href="#">Developing</a></li>
-        <li><a href="#">Contributing</a></li>
+        <li hidden><a href="#">Designing</a></li>
+        <li hidden><a href="#">Developing</a></li>
+        <li hidden><a href="#">Contributing</a></li>
       </ul>
     </details>
     <details open>
@@ -43,22 +43,22 @@
         <li><a href="docs-colors.html">Color</a></li>
         <li><a href="docs-typography.html">Typography</a></li>
         <li><a href="docs-spacing.html">Spacing</a></li>
-        <li><a href="#">Motion</a></li>
+        <li hidden><a href="#">Motion</a></li>
         <li><a href="docs-icons.html">Icons</a></li>
-        <li><a href="#">Themes</a></li>
-        <li><a href="#">Accessibility</a></li>
+        <li hidden><a href="#">Themes</a></li>
+        <li hidden><a href="#">Accessibility</a></li>
       </ul>
     </details>
     <details open>
       <summary>Components</summary>
       <ul>
         <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
-        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs-bottomsheet.html">Bottom sheet</a></li>
         <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
         <li><a href="docs-dropdown.html">Dropdown</a></li>
-        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-empty-states.html">Empty States</a></li>
         <li><a href="docs-header.html">Header</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
         <li><a href="docs-messages.html">Message</a></li>
@@ -74,20 +74,19 @@
         </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-swimlanes.html">Swimlanes</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-table.html">Tables</a></li>
         <li><a href="docs-toggle.html">Toggle</a></li>
-        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
         <li><a href="docs-tooltips.html">Tooltips</a></li>
+        <li><a href="docs-trends.html">Trends</a></li>
       </ul>
     </details>
     <details>
       <summary>Patterns</summary>
       <ul>
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Empty states</a></li>
-        <li><a href="#">Forms</a></li>
-        <li><a href="#">Loading</a></li>
-        <li><a href="#">Notifications</a></li>
+        <li><a href="docs-widget.html">Dashboard widget</a></li>
+        <li><a href="docs-empty-states.html">Empty states</a></li>
       </ul>
     </details>
     <details>
@@ -98,7 +97,7 @@
         <li><a href="#">Chart design</a></li>
       </ul>
     </details>
-    <details>
+    <details hidden>
       <summary>Support</summary>
       <ul>
         <li><a href="#">Contact us</a></li>
@@ -277,7 +276,7 @@
           <h2>Accent colours</h2>
           <p>Accent-background &mdash; the colour of a selected Accent segment. Swap the Color variant on the nested layer.
             Pick the colour of the chart series the control drives, so the switch and the data read as one.</p>
-          <div class="docs-demo"><div class="sc-swatches"><figure><div class="segc segc--acc segc--m segc--round" role="radiogroup" aria-label="Pink accent" style="--acc:#cb378e"><button type="button" class="segc__o" role="radio" aria-checked="true"><span>MRP</span></button><button type="button" class="segc__o" role="radio" aria-checked="false"><span>SP</span></button></div><figcaption>Pink<br><code>Accent/Pink/600</code></figcaption></figure><figure><div class="segc segc--acc segc--m segc--round" role="radiogroup" aria-label="Purple accent" style="--acc:#8b37be"><button type="button" class="segc__o" role="radio" aria-checked="true"><span>MRP</span></button><button type="button" class="segc__o" role="radio" aria-checked="false"><span>SP</span></button></div><figcaption>Purple<br><code>Accent/Purple/600</code></figcaption></figure><figure><div class="segc segc--acc segc--m segc--round" role="radiogroup" aria-label="Green accent" style="--acc:#4ba75f"><button type="button" class="segc__o" role="radio" aria-checked="true"><span>MRP</span></button><button type="button" class="segc__o" role="radio" aria-checked="false"><span>SP</span></button></div><figcaption>Green<br><code>Accent/Green/600</code></figcaption></figure><figure><div class="segc segc--acc segc--m segc--round" role="radiogroup" aria-label="Bronze Green accent" style="--acc:#0e9888"><button type="button" class="segc__o" role="radio" aria-checked="true"><span>MRP</span></button><button type="button" class="segc__o" role="radio" aria-checked="false"><span>SP</span></button></div><figcaption>Bronze Green<br><code>Accent/Bronze/600</code></figcaption></figure><figure><div class="segc segc--acc segc--m segc--round" role="radiogroup" aria-label="Orange accent" style="--acc:#ed5f00"><button type="button" class="segc__o" role="radio" aria-checked="true"><span>MRP</span></button><button type="button" class="segc__o" role="radio" aria-checked="false"><span>SP</span></button></div><figcaption>Orange<br><code>Accent/Orange/600</code></figcaption></figure><figure><div class="segc segc--acc segc--m segc--round" role="radiogroup" aria-label="Teal accent" style="--acc:#00bdea"><button type="button" class="segc__o" role="radio" aria-checked="true"><span>MRP</span></button><button type="button" class="segc__o" role="radio" aria-checked="false"><span>SP</span></button></div><figcaption>Teal<br><code>Accent/Light Blue/600</code></figcaption></figure></div>
+          <div class="docs-demo"><div class="sc-swatches"><figure><div class="segc segc--acc segc--m segc--round" role="radiogroup" aria-label="Pink accent" style="--acc:#e60076"><button type="button" class="segc__o" role="radio" aria-checked="true"><span>MRP</span></button><button type="button" class="segc__o" role="radio" aria-checked="false"><span>SP</span></button></div><figcaption>Pink<br><code>Accent/Pink/600</code></figcaption></figure><figure><div class="segc segc--acc segc--m segc--round" role="radiogroup" aria-label="Purple accent" style="--acc:#9810fa"><button type="button" class="segc__o" role="radio" aria-checked="true"><span>MRP</span></button><button type="button" class="segc__o" role="radio" aria-checked="false"><span>SP</span></button></div><figcaption>Purple<br><code>Accent/Purple/600</code></figcaption></figure><figure><div class="segc segc--acc segc--m segc--round" role="radiogroup" aria-label="Green accent" style="--acc:#009966"><button type="button" class="segc__o" role="radio" aria-checked="true"><span>MRP</span></button><button type="button" class="segc__o" role="radio" aria-checked="false"><span>SP</span></button></div><figcaption>Green<br><code>Accent/Green/600</code></figcaption></figure><figure><div class="segc segc--acc segc--m segc--round" role="radiogroup" aria-label="Bronze Green accent" style="--acc:#009689"><button type="button" class="segc__o" role="radio" aria-checked="true"><span>MRP</span></button><button type="button" class="segc__o" role="radio" aria-checked="false"><span>SP</span></button></div><figcaption>Bronze Green<br><code>Accent/Bronze/600</code></figcaption></figure><figure><div class="segc segc--acc segc--m segc--round" role="radiogroup" aria-label="Orange accent" style="--acc:#f54900"><button type="button" class="segc__o" role="radio" aria-checked="true"><span>MRP</span></button><button type="button" class="segc__o" role="radio" aria-checked="false"><span>SP</span></button></div><figcaption>Orange<br><code>Accent/Orange/600</code></figcaption></figure><figure><div class="segc segc--acc segc--m segc--round" role="radiogroup" aria-label="Teal accent" style="--acc:#0084d1"><button type="button" class="segc__o" role="radio" aria-checked="true"><span>MRP</span></button><button type="button" class="segc__o" role="radio" aria-checked="false"><span>SP</span></button></div><figcaption>Teal<br><code>Accent/Light Blue/600</code></figcaption></figure></div>
             <p class="docs-demo__caption">Pink (default) · Purple · Green · Bronze Green · Orange · Teal. ⚠ “Teal” is bound to Accent/Light Blue/600.</p></div>
         </section>
 
@@ -295,7 +294,7 @@
               <figcaption><b>Card filter</b>Secondary, Small &mdash; low-emphasis switch inside a card.</figcaption>
             </figure>
             <figure>
-              <div class="bx-mock"><div class="sc-card" data-sc-demo="price"><div class="sc-card__head"><p class="sc-card__t">Price trend</p><div class="segc segc--acc segc--m segc--round" role="radiogroup" aria-label="Price type"><button type="button" class="segc__o" role="radio" aria-checked="true" style="--acc:#cb378e"><span>MRP</span></button><button type="button" class="segc__o" role="radio" aria-checked="false" style="--acc:#8b37be"><span>SP</span></button></div></div><div class="sc-bars sc-bars--pink" data-sc-bars><i style="height:70px"></i><i style="height:72px"></i><i style="height:68px"></i><i style="height:75px"></i><i style="height:74px"></i><i style="height:78px"></i></div></div></div>
+              <div class="bx-mock"><div class="sc-card" data-sc-demo="price"><div class="sc-card__head"><p class="sc-card__t">Price trend</p><div class="segc segc--acc segc--m segc--round" role="radiogroup" aria-label="Price type"><button type="button" class="segc__o" role="radio" aria-checked="true" style="--acc:#e60076"><span>MRP</span></button><button type="button" class="segc__o" role="radio" aria-checked="false" style="--acc:#9810fa"><span>SP</span></button></div></div><div class="sc-bars sc-bars--pink" data-sc-bars><i style="height:70px"></i><i style="height:72px"></i><i style="height:68px"></i><i style="height:75px"></i><i style="height:74px"></i><i style="height:78px"></i></div></div></div>
               <figcaption><b>Price type</b>Accent &mdash; the selected colour matches the chart series it controls.</figcaption>
             </figure>
           </div>

@@ -31,9 +31,9 @@
       <summary>Getting started</summary>
       <ul>
         <li><a aria-current="true" href="#">About Cube</a></li>
-        <li><a href="#">Designing</a></li>
-        <li><a href="#">Developing</a></li>
-        <li><a href="#">Contributing</a></li>
+        <li hidden><a href="#">Designing</a></li>
+        <li hidden><a href="#">Developing</a></li>
+        <li hidden><a href="#">Contributing</a></li>
       </ul>
     </details>
     <details open>
@@ -43,22 +43,22 @@
         <li><a href="docs-colors.html">Color</a></li>
         <li><a href="docs-typography.html">Typography</a></li>
         <li><a href="docs-spacing.html">Spacing</a></li>
-        <li><a href="#">Motion</a></li>
+        <li hidden><a href="#">Motion</a></li>
         <li><a href="docs-icons.html">Icons</a></li>
-        <li><a href="#">Themes</a></li>
-        <li><a href="#">Accessibility</a></li>
+        <li hidden><a href="#">Themes</a></li>
+        <li hidden><a href="#">Accessibility</a></li>
       </ul>
     </details>
     <details open>
       <summary>Components</summary>
       <ul>
         <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
-        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs-bottomsheet.html">Bottom sheet</a></li>
         <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
         <li><a href="docs-dropdown.html">Dropdown</a></li>
-        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-empty-states.html">Empty States</a></li>
         <li><a href="docs-header.html" aria-current="page">Header</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
         <li><a href="docs-messages.html">Message</a></li>
@@ -74,20 +74,19 @@
         </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-swimlanes.html">Swimlanes</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-table.html">Tables</a></li>
         <li><a href="docs-toggle.html">Toggle</a></li>
-        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
         <li><a href="docs-tooltips.html">Tooltips</a></li>
+        <li><a href="docs-trends.html">Trends</a></li>
       </ul>
     </details>
     <details>
       <summary>Patterns</summary>
       <ul>
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Empty states</a></li>
-        <li><a href="#">Forms</a></li>
-        <li><a href="#">Loading</a></li>
-        <li><a href="#">Notifications</a></li>
+        <li><a href="docs-widget.html">Dashboard widget</a></li>
+        <li><a href="docs-empty-states.html">Empty states</a></li>
       </ul>
     </details>
     <details>
@@ -98,7 +97,7 @@
         <li><a href="#">Chart design</a></li>
       </ul>
     </details>
-    <details>
+    <details hidden>
       <summary>Support</summary>
       <ul>
         <li><a href="#">Contact us</a></li>
@@ -152,7 +151,7 @@
           <h3>Surfaces and text</h3>
 <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Token</th><th>Notes</th></tr></thead><tbody><tr><td>Main header background</td><td>Flat White <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td></td></tr><tr><td>Main header border</td><td>Default Card Stroke <span class="msg-sw" style="background:#e6e7e8"></span>#e6e7e8</td><td>Bottom divider (also under row ②)</td></tr><tr><td>Navigation and filter rows</td><td>None</td><td>Sit on the page background, Screen BG 1 <span class="msg-sw" style="background:#f3f6fa"></span>#f3f6fa</td></tr><tr><td>Platform scope and field labels</td><td>Secondary-text/800 <span class="msg-sw" style="background:#404a54"></span>#404a54</td><td>Medium 11</td></tr><tr><td>Page name and dates</td><td>Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214</td><td>SemiBold 12</td></tr><tr><td>Date dash</td><td>Secondary-text/700 <span class="msg-sw" style="background:#586473"></span>#586473</td><td>Medium 12</td></tr><tr><td>Left separator</td><td>Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td>1px, radius 2</td></tr><tr><td>Right separator</td><td>Accent/Steel Blue/200 <span class="msg-sw" style="background:#e7eef9"></span>#e7eef9</td><td>1px, radius 2</td></tr><tr><td>“Filters” label</td><td>Secondary-text/900 <span class="msg-sw" style="background:#363e45"></span>#363e45</td><td>Medium 12</td></tr></tbody></table></div>
           <h3>Parts</h3>
-<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Part</th><th>Fill</th><th>Border</th><th>Text</th></tr></thead><tbody><tr><td>Period chip</td><td>Primary/100 <span class="msg-sw" style="background:#eaf1ff"></span>#eaf1ff</td><td>&mdash;</td><td>Primary/800 <span class="msg-sw" style="background:#0140a5"></span>#0140a5 SemiBold 9</td></tr><tr><td>Info strip</td><td>White</td><td>Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee</td><td>Primary-text/800 <span class="msg-sw" style="background:#3e464c"></span>#3e464c, value Primary-text/950</td></tr><tr><td>Ask GobbsIQ</td><td>Brand/600 <span class="msg-sw" style="background:#034ced"></span>#034ced</td><td>&mdash;</td><td>White SemiBold 12; shadow 0 1 5 rgba(0,36,116,.16)</td></tr><tr><td>Notification bell</td><td>Brand/50 <span class="msg-sw" style="background:#f4f7ff"></span>#f4f7ff</td><td>Brand/200 <span class="msg-sw" style="background:#d3dfff"></span>#d3dfff</td><td>&mdash;</td></tr><tr><td>Profile</td><td>Main BG <span class="msg-sw" style="background:#151718"></span>#151718</td><td>&mdash;</td><td>&mdash;</td></tr><tr><td>Segmented, selected</td><td>Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5</td><td>&mdash;</td><td>White SemiBold 12</td></tr><tr><td>Segmented, default</td><td>White</td><td>Control border Secondary-text/100</td><td>Secondary-text/700 Medium 12</td></tr><tr><td>Download button</td><td>White</td><td>Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td>&mdash;</td></tr><tr><td>Button 1 (Outlined)</td><td>White</td><td>Primary/400 <span class="msg-sw" style="background:#74a1f8"></span>#74a1f8</td><td>Primary/600 SemiBold 12</td></tr><tr><td>Button 2 (Filled)</td><td>Primary/600</td><td>&mdash;</td><td>White SemiBold 12</td></tr><tr><td>Filter chip</td><td>White</td><td>Secondary-text/200</td><td>Primary-text/900 <span class="msg-sw" style="background:#373d42"></span>#373d42 SemiBold 12</td></tr><tr><td>MRP / SP, selected</td><td>Accent/Bronze/600 <span class="msg-sw" style="background:#0e9888"></span>#0e9888</td><td>Control border Secondary-text/100</td><td>White SemiBold 12</td></tr></tbody></table></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Part</th><th>Fill</th><th>Border</th><th>Text</th></tr></thead><tbody><tr><td>Period chip</td><td>Primary/100 <span class="msg-sw" style="background:#eaf1ff"></span>#eaf1ff</td><td>&mdash;</td><td>Primary/800 <span class="msg-sw" style="background:#0140a5"></span>#0140a5 SemiBold 9</td></tr><tr><td>Info strip</td><td>White</td><td>Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee</td><td>Primary-text/800 <span class="msg-sw" style="background:#3e464c"></span>#3e464c, value Primary-text/950</td></tr><tr><td>Ask GobbsIQ</td><td>Brand/600 <span class="msg-sw" style="background:#034ced"></span>#034ced</td><td>&mdash;</td><td>White SemiBold 12; shadow 0 1 5 rgba(0,36,116,.16)</td></tr><tr><td>Notification bell</td><td>Brand/50 <span class="msg-sw" style="background:#f4f7ff"></span>#f4f7ff</td><td>Brand/200 <span class="msg-sw" style="background:#d3dfff"></span>#d3dfff</td><td>&mdash;</td></tr><tr><td>Profile</td><td>Main BG <span class="msg-sw" style="background:#151718"></span>#151718</td><td>&mdash;</td><td>&mdash;</td></tr><tr><td>Segmented, selected</td><td>Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5</td><td>&mdash;</td><td>White SemiBold 12</td></tr><tr><td>Segmented, default</td><td>White</td><td>Control border Secondary-text/100</td><td>Secondary-text/700 Medium 12</td></tr><tr><td>Download button</td><td>White</td><td>Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td>&mdash;</td></tr><tr><td>Button 1 (Outlined)</td><td>White</td><td>Primary/400 <span class="msg-sw" style="background:#74a1f8"></span>#74a1f8</td><td>Primary/600 SemiBold 12</td></tr><tr><td>Button 2 (Filled)</td><td>Primary/600</td><td>&mdash;</td><td>White SemiBold 12</td></tr><tr><td>Filter chip</td><td>White</td><td>Secondary-text/200</td><td>Primary-text/900 <span class="msg-sw" style="background:#373d42"></span>#373d42 SemiBold 12</td></tr><tr><td>MRP / SP, selected</td><td>Accent/Bronze/600 <span class="msg-sw" style="background:#009689"></span>#009689</td><td>Control border Secondary-text/100</td><td>White SemiBold 12</td></tr></tbody></table></div>
         </section>
         <section id="properties">
           <h2>Properties</h2>

@@ -31,9 +31,9 @@
       <summary>Getting started</summary>
       <ul>
         <li><a href="#">About Cube</a></li>
-        <li><a href="#">Designing</a></li>
-        <li><a href="#">Developing</a></li>
-        <li><a href="#">Contributing</a></li>
+        <li hidden><a href="#">Designing</a></li>
+        <li hidden><a href="#">Developing</a></li>
+        <li hidden><a href="#">Contributing</a></li>
       </ul>
     </details>
     <details open>
@@ -43,22 +43,22 @@
         <li><a href="docs-colors.html">Color</a></li>
         <li><a href="docs-typography.html">Typography</a></li>
         <li><a href="docs-spacing.html">Spacing</a></li>
-        <li><a href="#">Motion</a></li>
+        <li hidden><a href="#">Motion</a></li>
         <li><a href="docs-icons.html">Icons</a></li>
-        <li><a href="#">Themes</a></li>
-        <li><a href="#">Accessibility</a></li>
+        <li hidden><a href="#">Themes</a></li>
+        <li hidden><a href="#">Accessibility</a></li>
       </ul>
     </details>
     <details open>
       <summary>Components</summary>
       <ul>
         <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
-        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs-bottomsheet.html">Bottom sheet</a></li>
         <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-chips.html" aria-current="page">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
         <li><a href="docs-dropdown.html">Dropdown</a></li>
-        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-empty-states.html">Empty States</a></li>
         <li><a href="docs-header.html">Header</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
         <li><a href="docs-messages.html">Message</a></li>
@@ -74,20 +74,19 @@
         </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-swimlanes.html">Swimlanes</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-table.html">Tables</a></li>
         <li><a href="docs-toggle.html">Toggle</a></li>
-        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
         <li><a href="docs-tooltips.html">Tooltips</a></li>
+        <li><a href="docs-trends.html">Trends</a></li>
       </ul>
     </details>
     <details>
       <summary>Patterns</summary>
       <ul>
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Empty states</a></li>
-        <li><a href="#">Forms</a></li>
-        <li><a href="#">Loading</a></li>
-        <li><a href="#">Notifications</a></li>
+        <li><a href="docs-widget.html">Dashboard widget</a></li>
+        <li><a href="docs-empty-states.html">Empty states</a></li>
       </ul>
     </details>
     <details>
@@ -98,7 +97,7 @@
         <li><a href="#">Chart design</a></li>
       </ul>
     </details>
-    <details>
+    <details hidden>
       <summary>Support</summary>
       <ul>
         <li><a href="#">Contact us</a></li>
@@ -181,28 +180,28 @@
           <p>Tags use the Filled tokens.</p>
           <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Color</th><th>Filled · background</th><th>Filled · text</th><th>Outlined · border</th><th>Outlined · text</th></tr></thead><tbody>
               <tr><td>Primary Blue</td><td><span class="bt-swatch" style="background:#eaf1ff"></span><code>Primary/100</code></td><td><span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td><td><span class="bt-swatch" style="background:#d4e2ff"></span><code>Primary/200</code></td><td><span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td></tr>
-              <tr><td>Pink</td><td><span class="bt-swatch" style="background:#ffeaf3"></span><code>Pink/100</code></td><td><span class="bt-swatch" style="background:#a92e76"></span><code>Pink/700</code></td><td><span class="bt-swatch" style="background:#ffd6e7"></span><code>Pink/200</code></td><td><span class="bt-swatch" style="background:#cb378e"></span><code>Pink/600</code></td></tr>
-              <tr><td>Orange</td><td><span class="bt-swatch" style="background:#ffefe6"></span><code>Orange/100</code></td><td><span class="bt-swatch" style="background:#ed5f00"></span><code>Orange/600</code></td><td><span class="bt-swatch" style="background:#ffdfcc"></span><code>Orange/200</code></td><td><span class="bt-swatch" style="background:#ed5f00"></span><code>Orange/600</code></td></tr>
-              <tr><td>Light Blue</td><td><span class="bt-swatch" style="background:#e6f7ff"></span><code>Light Blue/100</code></td><td><span class="bt-swatch" style="background:#0081a0"></span><code>Light Blue/800</code></td><td><span class="bt-swatch" style="background:#ccf0ff"></span><code>Light Blue/200</code></td><td><span class="bt-swatch" style="background:#009fc5"></span><code>Light Blue/700</code></td></tr>
-              <tr><td>Bronze</td><td><span class="bt-swatch" style="background:#e6f7f5"></span><code>Bronze/100</code></td><td><span class="bt-swatch" style="background:#0c7f72"></span><code>Bronze/700</code></td><td><span class="bt-swatch" style="background:#ccefeb"></span><code>Bronze/200</code></td><td><span class="bt-swatch" style="background:#0c7f72"></span><code>Bronze/700</code></td></tr>
-              <tr><td>Purple</td><td><span class="bt-swatch" style="background:#f3ebff"></span><code>Purple/100</code></td><td><span class="bt-swatch" style="background:#742e9f"></span><code>Purple/700</code></td><td><span class="bt-swatch" style="background:#e7d6ff"></span><code>Purple/200</code></td><td><span class="bt-swatch" style="background:#8b37be"></span><code>Purple/600</code></td></tr>
-              <tr><td>Yellow</td><td><span class="bt-swatch" style="background:#fff5d7"></span><code>Warning/100</code></td><td><span class="bt-swatch" style="background:#7d6600"></span><code>Warning/900</code></td><td><span class="bt-swatch" style="background:#ffefb6"></span><code>Warning/200</code></td><td><span class="bt-swatch" style="background:#7d6600"></span><code>Warning/900</code></td></tr>
+              <tr><td>Pink</td><td><span class="bt-swatch" style="background:#fce7f3"></span><code>Pink/100</code></td><td><span class="bt-swatch" style="background:#c6005c"></span><code>Pink/700</code></td><td><span class="bt-swatch" style="background:#fccee8"></span><code>Pink/200</code></td><td><span class="bt-swatch" style="background:#e60076"></span><code>Pink/600</code></td></tr>
+              <tr><td>Orange</td><td><span class="bt-swatch" style="background:#ffedd4"></span><code>Orange/100</code></td><td><span class="bt-swatch" style="background:#f54900"></span><code>Orange/600</code></td><td><span class="bt-swatch" style="background:#ffd6a7"></span><code>Orange/200</code></td><td><span class="bt-swatch" style="background:#f54900"></span><code>Orange/600</code></td></tr>
+              <tr><td>Light Blue</td><td><span class="bt-swatch" style="background:#dff2fe"></span><code>Light Blue/100</code></td><td><span class="bt-swatch" style="background:#00598a"></span><code>Light Blue/800</code></td><td><span class="bt-swatch" style="background:#b8e6fe"></span><code>Light Blue/200</code></td><td><span class="bt-swatch" style="background:#0069a8"></span><code>Light Blue/700</code></td></tr>
+              <tr><td>Bronze</td><td><span class="bt-swatch" style="background:#cbfbf1"></span><code>Bronze/100</code></td><td><span class="bt-swatch" style="background:#00786f"></span><code>Bronze/700</code></td><td><span class="bt-swatch" style="background:#96f7e4"></span><code>Bronze/200</code></td><td><span class="bt-swatch" style="background:#00786f"></span><code>Bronze/700</code></td></tr>
+              <tr><td>Purple</td><td><span class="bt-swatch" style="background:#f3e8ff"></span><code>Purple/100</code></td><td><span class="bt-swatch" style="background:#8200db"></span><code>Purple/700</code></td><td><span class="bt-swatch" style="background:#e9d4ff"></span><code>Purple/200</code></td><td><span class="bt-swatch" style="background:#9810fa"></span><code>Purple/600</code></td></tr>
+              <tr><td>Yellow</td><td><span class="bt-swatch" style="background:#fef3c6"></span><code>Warning/100</code></td><td><span class="bt-swatch" style="background:#733e0a"></span><code>Warning/900</code></td><td><span class="bt-swatch" style="background:#fff085"></span><code>Warning/200</code></td><td><span class="bt-swatch" style="background:#733e0a"></span><code>Warning/900</code></td></tr>
               <tr><td>Sec. Text</td><td><span class="bt-swatch" style="background:#f5f5f8"></span><code>Secondary-text/50</code></td><td><span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code></td><td><span class="bt-swatch" style="background:#dbdfe4"></span><code>Secondary-text/200</code></td><td><span class="bt-swatch" style="background:#404a54"></span><code>Secondary-text/800</code></td></tr>
-              <tr><td>Red</td><td><span class="bt-swatch" style="background:#ffedea"></span><code>Red/100</code></td><td><span class="bt-swatch" style="background:#e42828"></span><code>Error/600</code></td><td><span class="bt-swatch" style="background:#ffdada"></span><code>Error/200</code></td><td><span class="bt-swatch" style="background:#e42828"></span><code>Error/600</code></td></tr>
-              <tr><td>Green</td><td><span class="bt-swatch" style="background:#e9f7ed"></span><code>Success/100</code></td><td><span class="bt-swatch" style="background:#3b8e4a"></span><code>Success/700</code></td><td><span class="bt-swatch" style="background:#d3efdb"></span><code>Green/200</code></td><td><span class="bt-swatch" style="background:#3b8e4a"></span><code>Success/700</code></td></tr>
+              <tr><td>Red</td><td><span class="bt-swatch" style="background:#ffedea"></span><code>Red/100</code></td><td><span class="bt-swatch" style="background:#e7000b"></span><code>Error/600</code></td><td><span class="bt-swatch" style="background:#ffc9c9"></span><code>Error/200</code></td><td><span class="bt-swatch" style="background:#e7000b"></span><code>Error/600</code></td></tr>
+              <tr><td>Green</td><td><span class="bt-swatch" style="background:#d0fae5"></span><code>Success/100</code></td><td><span class="bt-swatch" style="background:#008236"></span><code>Success/700</code></td><td><span class="bt-swatch" style="background:#a4f4cf"></span><code>Green/200</code></td><td><span class="bt-swatch" style="background:#008236"></span><code>Success/700</code></td></tr>
               <tr><td>Disabled</td><td><span class="bt-swatch" style="background:#efefef"></span><code>Disabled/100</code></td><td><span class="bt-swatch" style="background:#9e9e9e"></span><code>Disabled/500</code></td><td><span class="bt-swatch" style="background:#e1e1e1"></span><code>Disabled/200</code></td><td><span class="bt-swatch" style="background:#9e9e9e"></span><code>Disabled/500</code></td></tr>
               <tr><td>Steel Blue</td><td><span class="bt-swatch" style="background:#f1f6fd"></span><code>Steel Blue/100</code></td><td><span class="bt-swatch" style="background:#304a77"></span><code>Steel Blue/900</code></td><td><span class="bt-swatch" style="background:#e7eef9"></span><code>Steel Blue/200</code></td><td><span class="bt-swatch" style="background:#445f8d"></span><code>Steel Blue/800</code></td></tr>
             </tbody></table></div>
           <h3>Standard-legend</h3>
           <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Color</th><th>Background</th><th>Border</th><th>Text / icon</th></tr></thead><tbody>
               <tr><td>Neutral</td><td><span class="bt-swatch" style="background:#e8eaee"></span><code>Secondary-text/100</code></td><td><span class="bt-swatch" style="background:#dbdfe4"></span><code>Secondary-text/200</code></td><td><span class="bt-swatch" style="background:#69778b"></span><code>Secondary-text/600</code></td></tr>
-              <tr><td>Light blue</td><td><span class="bt-swatch" style="background:#e6f7ff"></span><code>Light Blue/100</code></td><td><span class="bt-swatch" style="background:#ccf0ff"></span><code>Light Blue/200</code></td><td><span class="bt-swatch" style="background:#0081a0"></span><code>Light Blue/800</code></td></tr>
-              <tr><td>Bronze green</td><td><span class="bt-swatch" style="background:#e6f7f5"></span><code>Bronze/100</code></td><td><span class="bt-swatch" style="background:#ccefeb"></span><code>Bronze/200</code></td><td><span class="bt-swatch" style="background:#0c7f72"></span><code>Bronze/700</code></td></tr>
-              <tr><td>Green</td><td><span class="bt-swatch" style="background:#e9f7ed"></span><code>Green/100</code></td><td><span class="bt-swatch" style="background:#d3efdb"></span><code>Green/200</code></td><td><span class="bt-swatch" style="background:#3f8e50"></span><code>Green/700</code></td></tr>
-              <tr><td>Purple</td><td><span class="bt-swatch" style="background:#f3ebff"></span><code>Purple/100</code></td><td><span class="bt-swatch" style="background:#e7d6ff"></span><code>Purple/200</code></td><td><span class="bt-swatch" style="background:#742e9f"></span><code>Purple/700</code></td></tr>
-              <tr><td>Pink</td><td><span class="bt-swatch" style="background:#ffeaf3"></span><code>Pink/100</code></td><td><span class="bt-swatch" style="background:#ffd6e7"></span><code>Pink/200</code></td><td><span class="bt-swatch" style="background:#a92e76"></span><code>Pink/700</code></td></tr>
-              <tr><td>Orange</td><td><span class="bt-swatch" style="background:#ffefe6"></span><code>Orange/100</code></td><td><span class="bt-swatch" style="background:#ffdfcc"></span><code>Orange/200</code></td><td><span class="bt-swatch" style="background:#ed5f00"></span><code>Orange/600</code></td></tr>
-              <tr><td>Yellow</td><td><span class="bt-swatch" style="background:#fff5d7"></span><code>Warning/100</code></td><td><span class="bt-swatch" style="background:#ffefb6"></span><code>Warning/200</code></td><td><span class="bt-swatch" style="background:#7d6600"></span><code>Warning/900</code></td></tr>
+              <tr><td>Light blue</td><td><span class="bt-swatch" style="background:#dff2fe"></span><code>Light Blue/100</code></td><td><span class="bt-swatch" style="background:#b8e6fe"></span><code>Light Blue/200</code></td><td><span class="bt-swatch" style="background:#00598a"></span><code>Light Blue/800</code></td></tr>
+              <tr><td>Bronze green</td><td><span class="bt-swatch" style="background:#cbfbf1"></span><code>Bronze/100</code></td><td><span class="bt-swatch" style="background:#96f7e4"></span><code>Bronze/200</code></td><td><span class="bt-swatch" style="background:#00786f"></span><code>Bronze/700</code></td></tr>
+              <tr><td>Green</td><td><span class="bt-swatch" style="background:#d0fae5"></span><code>Green/100</code></td><td><span class="bt-swatch" style="background:#a4f4cf"></span><code>Green/200</code></td><td><span class="bt-swatch" style="background:#007a55"></span><code>Green/700</code></td></tr>
+              <tr><td>Purple</td><td><span class="bt-swatch" style="background:#f3e8ff"></span><code>Purple/100</code></td><td><span class="bt-swatch" style="background:#e9d4ff"></span><code>Purple/200</code></td><td><span class="bt-swatch" style="background:#8200db"></span><code>Purple/700</code></td></tr>
+              <tr><td>Pink</td><td><span class="bt-swatch" style="background:#fce7f3"></span><code>Pink/100</code></td><td><span class="bt-swatch" style="background:#fccee8"></span><code>Pink/200</code></td><td><span class="bt-swatch" style="background:#c6005c"></span><code>Pink/700</code></td></tr>
+              <tr><td>Orange</td><td><span class="bt-swatch" style="background:#ffedd4"></span><code>Orange/100</code></td><td><span class="bt-swatch" style="background:#ffd6a7"></span><code>Orange/200</code></td><td><span class="bt-swatch" style="background:#f54900"></span><code>Orange/600</code></td></tr>
+              <tr><td>Yellow</td><td><span class="bt-swatch" style="background:#fef3c6"></span><code>Warning/100</code></td><td><span class="bt-swatch" style="background:#fff085"></span><code>Warning/200</code></td><td><span class="bt-swatch" style="background:#733e0a"></span><code>Warning/900</code></td></tr>
               <tr><td>Steel Blue</td><td><span class="bt-swatch" style="background:#f1f6fd"></span><code>Steel Blue/100</code></td><td><span class="bt-swatch" style="background:#e7eef9"></span><code>Steel Blue/200</code></td><td><span class="bt-swatch" style="background:#304a77"></span><code>Steel Blue/900</code></td></tr>
             </tbody></table></div>
           <h3>Sementic-chip presets</h3>
@@ -223,11 +222,11 @@
             </tbody></table></div>
           <h3>Sementic-chip &mdash; Dark Mode</h3>
           <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Use case</th><th>Background</th><th>Text / icon</th></tr></thead><tbody>
-              <tr><td>Grammage</td><td><span class="bt-swatch" style="background:#7a2f00"></span><code>Accent/Orange/900</code></td><td><span class="bt-swatch" style="background:#ffc099"></span><code>Accent/Orange/300</code></td></tr>
-              <tr><td>Category Offtake</td><td><span class="bt-swatch" style="background:#00627a"></span><code>Accent/Light Blue/900</code></td><td><span class="bt-swatch" style="background:#66d1f5"></span><code>Accent/Light Blue/400</code></td></tr>
-              <tr><td>Category Name</td><td><span class="bt-swatch" style="background:#651c47"></span><code>Accent/Pink/900</code></td><td><span class="bt-swatch" style="background:#f5a9ce"></span><code>Accent/Pink/300</code></td></tr>
+              <tr><td>Grammage</td><td><span class="bt-swatch" style="background:#7e2a0c"></span><code>Accent/Orange/900</code></td><td><span class="bt-swatch" style="background:#ffb86a"></span><code>Accent/Orange/300</code></td></tr>
+              <tr><td>Category Offtake</td><td><span class="bt-swatch" style="background:#024a70"></span><code>Accent/Light Blue/900</code></td><td><span class="bt-swatch" style="background:#00bcff"></span><code>Accent/Light Blue/400</code></td></tr>
+              <tr><td>Category Name</td><td><span class="bt-swatch" style="background:#861043"></span><code>Accent/Pink/900</code></td><td><span class="bt-swatch" style="background:#fda5d5"></span><code>Accent/Pink/300</code></td></tr>
               <tr><td>ASIN ID · Brand Offtake</td><td><span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code></td><td><span class="bt-swatch" style="background:#bfc5cf"></span><code>Secondary-text/300</code></td></tr>
-              <tr><td>Consumption Share</td><td><span class="bt-swatch" style="background:#40165b"></span><code>#40165B</code></td><td><span class="bt-swatch" style="background:#cfadff"></span><code>#CFADFF</code></td></tr>
+              <tr><td>Consumption Share</td><td><span class="bt-swatch" style="background:#59168b"></span><code>#59168B</code></td><td><span class="bt-swatch" style="background:#dab2ff"></span><code>#DAB2FF</code></td></tr>
             </tbody></table></div>
           <div class="docs-demo bt-ref chp-dark">
             <div class="chp-row"><span class="chp" data-color="orange" data-size="small" data-dark><svg aria-hidden="true"><use href="#i-scales"/></svg><span class="chp__lbl">100 gms</span></span><span class="chp" data-color="light-blue" data-size="small" data-dark><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="chp__lbl">00.0%</span></span><span class="chp" data-color="pink" data-size="small" data-dark><span class="chp__lbl"><span class="chp__pre">Cat:</span> Category 01</span></span><span class="chp" data-color="sec" data-size="small" data-dark><span class="chp__lbl"><span class="chp__pre">ASIN ID:</span> 221S245</span><svg aria-hidden="true"><use href="#i-copy"/></svg></span><span class="chp" data-color="sec" data-size="small" data-dark><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="chp__lbl">00.0%</span></span><span class="chp" data-color="purple" data-size="small" data-dark><svg aria-hidden="true"><use href="#i-pie"/></svg><span class="chp__lbl">00.0%</span></span></div>
@@ -307,7 +306,7 @@
           </div>
           <h3>Chart legend</h3>
           <div class="bx-example">
-            <div class="bx-example__stage"><div class="chp-chartcard"><p class="chp-chartcard__title">Weekly sales</p><div class="chp-row chp-row--start chp-chartcard__legend"><span class="lgd" data-color="pink" data-size="small" data-series="0"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">This week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="purple" data-size="small" data-series="1"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Last week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="neutral" data-size="small" data-series="2"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Target</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span></div><div class="chp-chartcard__plot" style="height:150px"><canvas role="img" aria-label="Line chart: This week, Last week, Target" data-chp-chart='{"labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "series": [{"label": "This week", "color": "#a92e76", "data": [42, 48, 45, 56, 53, 61, 66], "dashed": false}, {"label": "Last week", "color": "#742e9f", "data": [35, 39, 37, 44, 41, 47, 50], "dashed": false}, {"label": "Target", "color": "#69778b", "data": [50, 50, 50, 50, 50, 50, 50], "dashed": true}]}'></canvas></div></div><p>One legend per series, in the series colour.</p></div>
+            <div class="bx-example__stage"><div class="chp-chartcard"><p class="chp-chartcard__title">Weekly sales</p><div class="chp-row chp-row--start chp-chartcard__legend"><span class="lgd" data-color="pink" data-size="small" data-series="0"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">This week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="purple" data-size="small" data-series="1"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Last week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="neutral" data-size="small" data-series="2"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Target</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span></div><div class="chp-chartcard__plot" style="height:150px"><canvas role="img" aria-label="Line chart: This week, Last week, Target" data-chp-chart='{"labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "series": [{"label": "This week", "color": "#c6005c", "data": [42, 48, 45, 56, 53, 61, 66], "dashed": false}, {"label": "Last week", "color": "#8200db", "data": [35, 39, 37, 44, 41, 47, 50], "dashed": false}, {"label": "Target", "color": "#69778b", "data": [50, 50, 50, 50, 50, 50, 50], "dashed": true}]}'></canvas></div></div><p>One legend per series, in the series colour.</p></div>
             <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
               <tr><td>Component</td><td>Standard-legend · Small</td><td></td></tr>              <tr><td>Color</td><td>= line colour</td><td></td></tr>
             </tbody></table>

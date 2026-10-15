@@ -31,9 +31,9 @@
       <summary>Getting started</summary>
       <ul>
         <li><a aria-current="true" href="#">About Cube</a></li>
-        <li><a href="#">Designing</a></li>
-        <li><a href="#">Developing</a></li>
-        <li><a href="#">Contributing</a></li>
+        <li hidden><a href="#">Designing</a></li>
+        <li hidden><a href="#">Developing</a></li>
+        <li hidden><a href="#">Contributing</a></li>
       </ul>
     </details>
     <details open>
@@ -43,22 +43,22 @@
         <li><a href="docs-colors.html">Color</a></li>
         <li><a href="docs-typography.html">Typography</a></li>
         <li><a href="docs-spacing.html">Spacing</a></li>
-        <li><a href="#">Motion</a></li>
+        <li hidden><a href="#">Motion</a></li>
         <li><a href="docs-icons.html">Icons</a></li>
-        <li><a href="#">Themes</a></li>
-        <li><a href="#">Accessibility</a></li>
+        <li hidden><a href="#">Themes</a></li>
+        <li hidden><a href="#">Accessibility</a></li>
       </ul>
     </details>
     <details open>
       <summary>Components</summary>
       <ul>
         <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
-        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs-bottomsheet.html">Bottom sheet</a></li>
         <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
         <li><a href="docs-dropdown.html">Dropdown</a></li>
-        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-empty-states.html">Empty States</a></li>
         <li><a href="docs-header.html">Header</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
         <li><a href="docs-messages.html">Message</a></li>
@@ -74,20 +74,19 @@
         </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-swimlanes.html">Swimlanes</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-table.html">Tables</a></li>
         <li><a href="docs-toggle.html">Toggle</a></li>
-        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
         <li><a href="docs-tooltips.html" aria-current="page">Tooltips</a></li>
+        <li><a href="docs-trends.html">Trends</a></li>
       </ul>
     </details>
     <details>
       <summary>Patterns</summary>
       <ul>
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Empty states</a></li>
-        <li><a href="#">Forms</a></li>
-        <li><a href="#">Loading</a></li>
-        <li><a href="#">Notifications</a></li>
+        <li><a href="docs-widget.html">Dashboard widget</a></li>
+        <li><a href="docs-empty-states.html">Empty states</a></li>
       </ul>
     </details>
     <details>
@@ -98,7 +97,7 @@
         <li><a href="#">Chart design</a></li>
       </ul>
     </details>
-    <details>
+    <details hidden>
       <summary>Support</summary>
       <ul>
         <li><a href="#">Contact us</a></li>
@@ -149,7 +148,7 @@
         <section id="color-tokens">
           <h2>Color tokens</h2>
           <p>Both tooltips are a fixed dark surface in light and dark themes.</p>
-<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Value</th><th>Used for</th></tr></thead><tbody><tr><td>Surface: standard</td><td><span class="msg-sw" style="background:#101214"></span>#101214</td><td>Standard Tooltip background</td></tr><tr><td>Surface: card</td><td><span class="msg-sw" style="background:#1c1e1f"></span>#1c1e1f</td><td>Trendline Tooltip background</td></tr><tr><td>Border</td><td><span class="msg-sw" style="background:#363e45"></span>#363e45</td><td>Card border, header and footer rule, cell dividers</td></tr><tr><td>Text: primary</td><td><span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Standard header, card title</td></tr><tr><td>Text: value</td><td><span class="msg-sw" style="background:#f5f5f8"></span>#f5f5f8</td><td>Cell values</td></tr><tr><td>Icon (standard)</td><td><span class="msg-sw" style="background:#bfc5cf"></span>#bfc5cf</td><td>Standard Tooltip icon</td></tr><tr><td>Text: muted (standard)</td><td><span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td>Standard Tooltip body text</td></tr><tr><td>Text: muted (card)</td><td><span class="msg-sw" style="background:#bfc5cf"></span>#bfc5cf</td><td>Sub-text, column headers, footer info</td></tr><tr><td>Delta: positive</td><td><span class="msg-sw" style="background:#5ab57a"></span>#5ab57a</td><td>A gain, always with a leading +</td></tr><tr><td>Delta: negative</td><td><span class="msg-sw" style="background:#e34d4d"></span>#e34d4d</td><td>A loss, always with a leading &minus;</td></tr><tr><td>Action button</td><td><span class="msg-sw" style="background:#e3e7ea"></span>#e3e7ea &rarr; <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Default, then hover and focus</td></tr></tbody></table></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Value</th><th>Used for</th></tr></thead><tbody><tr><td>Surface: standard</td><td><span class="msg-sw" style="background:#101214"></span>#101214</td><td>Standard Tooltip background</td></tr><tr><td>Surface: card</td><td><span class="msg-sw" style="background:#1c1e1f"></span>#1c1e1f</td><td>Trendline Tooltip background</td></tr><tr><td>Border</td><td><span class="msg-sw" style="background:#363e45"></span>#363e45</td><td>Card border, header and footer rule, cell dividers</td></tr><tr><td>Text: primary</td><td><span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Standard header, card title</td></tr><tr><td>Text: value</td><td><span class="msg-sw" style="background:#f5f5f8"></span>#f5f5f8</td><td>Cell values</td></tr><tr><td>Icon (standard)</td><td><span class="msg-sw" style="background:#bfc5cf"></span>#bfc5cf</td><td>Standard Tooltip icon</td></tr><tr><td>Text: muted (standard)</td><td><span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td>Standard Tooltip body text</td></tr><tr><td>Text: muted (card)</td><td><span class="msg-sw" style="background:#bfc5cf"></span>#bfc5cf</td><td>Sub-text, column headers, footer info</td></tr><tr><td>Delta: positive</td><td><span class="msg-sw" style="background:#00c950"></span>#00c950</td><td>A gain, always with a leading +</td></tr><tr><td>Delta: negative</td><td><span class="msg-sw" style="background:#fb2c36"></span>#fb2c36</td><td>A loss, always with a leading &minus;</td></tr><tr><td>Action button</td><td><span class="msg-sw" style="background:#e3e7ea"></span>#e3e7ea &rarr; <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Default, then hover and focus</td></tr></tbody></table></div>
         </section>
         <section id="typography">
           <h2>Typography</h2>

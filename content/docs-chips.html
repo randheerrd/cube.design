@@ -31,9 +31,9 @@
       <summary>Getting started</summary>
       <ul>
         <li><a href="#">About Cube</a></li>
-        <li><a href="#">Designing</a></li>
-        <li><a href="#">Developing</a></li>
-        <li><a href="#">Contributing</a></li>
+        <li hidden><a href="#">Designing</a></li>
+        <li hidden><a href="#">Developing</a></li>
+        <li hidden><a href="#">Contributing</a></li>
       </ul>
     </details>
     <details open>
@@ -43,22 +43,22 @@
         <li><a href="docs-colors.html">Color</a></li>
         <li><a href="docs-typography.html">Typography</a></li>
         <li><a href="docs-spacing.html">Spacing</a></li>
-        <li><a href="#">Motion</a></li>
+        <li hidden><a href="#">Motion</a></li>
         <li><a href="docs-icons.html">Icons</a></li>
-        <li><a href="#">Themes</a></li>
-        <li><a href="#">Accessibility</a></li>
+        <li hidden><a href="#">Themes</a></li>
+        <li hidden><a href="#">Accessibility</a></li>
       </ul>
     </details>
     <details open>
       <summary>Components</summary>
       <ul>
         <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
-        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs-bottomsheet.html">Bottom sheet</a></li>
         <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-chips.html" aria-current="page">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
         <li><a href="docs-dropdown.html">Dropdown</a></li>
-        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-empty-states.html">Empty States</a></li>
         <li><a href="docs-header.html">Header</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
         <li><a href="docs-messages.html">Message</a></li>
@@ -74,20 +74,19 @@
         </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-swimlanes.html">Swimlanes</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-table.html">Tables</a></li>
         <li><a href="docs-toggle.html">Toggle</a></li>
-        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
         <li><a href="docs-tooltips.html">Tooltips</a></li>
+        <li><a href="docs-trends.html">Trends</a></li>
       </ul>
     </details>
     <details>
       <summary>Patterns</summary>
       <ul>
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Empty states</a></li>
-        <li><a href="#">Forms</a></li>
-        <li><a href="#">Loading</a></li>
-        <li><a href="#">Notifications</a></li>
+        <li><a href="docs-widget.html">Dashboard widget</a></li>
+        <li><a href="docs-empty-states.html">Empty states</a></li>
       </ul>
     </details>
     <details>
@@ -98,7 +97,7 @@
         <li><a href="#">Chart design</a></li>
       </ul>
     </details>
-    <details>
+    <details hidden>
       <summary>Support</summary>
       <ul>
         <li><a href="#">Contact us</a></li>
@@ -279,7 +278,7 @@
             </figure>
             <figure>
               <div class="bx-mock">
-                <div class="chp-chartcard"><p class="chp-chartcard__title">Weekly sales</p><div class="chp-row chp-row--start chp-chartcard__legend"><span class="lgd" data-color="pink" data-size="small" data-series="0"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">This week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="purple" data-size="small" data-series="1"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Last week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span></div><div class="chp-chartcard__plot" style="height:130px"><canvas role="img" aria-label="Line chart: This week, Last week" data-chp-chart='{"labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "series": [{"label": "This week", "color": "#a92e76", "data": [42, 48, 45, 56, 53, 61, 66], "dashed": false}, {"label": "Last week", "color": "#742e9f", "data": [35, 39, 37, 44, 41, 47, 50], "dashed": false}]}'></canvas></div></div>
+                <div class="chp-chartcard"><p class="chp-chartcard__title">Weekly sales</p><div class="chp-row chp-row--start chp-chartcard__legend"><span class="lgd" data-color="pink" data-size="small" data-series="0"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">This week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="purple" data-size="small" data-series="1"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Last week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span></div><div class="chp-chartcard__plot" style="height:130px"><canvas role="img" aria-label="Line chart: This week, Last week" data-chp-chart='{"labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "series": [{"label": "This week", "color": "#c6005c", "data": [42, 48, 45, 56, 53, 61, 66], "dashed": false}, {"label": "Last week", "color": "#8200db", "data": [35, 39, 37, 44, 41, 47, 50], "dashed": false}]}'></canvas></div></div>
               </div>
               <figcaption><b>Chart legend</b>Legend chips match the series colours and order. Click a legend to hide its series.</figcaption>
             </figure>
@@ -404,12 +403,12 @@
           <div class="docs-dodont">
             <div class="docs-dodont__card docs-dodont__card--do">
               <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p>
-              <div class="docs-dodont__stage"><div class="chp-chartcard"><div class="chp-row chp-row--start chp-chartcard__legend"><span class="lgd" data-color="pink" data-size="small" data-series="0"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">This week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="purple" data-size="small" data-series="1"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Last week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span></div><div class="chp-chartcard__plot" style="height:110px"><canvas role="img" aria-label="Line chart: This week, Last week" data-chp-chart='{"labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "series": [{"label": "This week", "color": "#a92e76", "data": [42, 48, 45, 56, 53, 61, 66], "dashed": false}, {"label": "Last week", "color": "#742e9f", "data": [35, 39, 37, 44, 41, 47, 50], "dashed": false}]}'></canvas></div></div></div>
+              <div class="docs-dodont__stage"><div class="chp-chartcard"><div class="chp-row chp-row--start chp-chartcard__legend"><span class="lgd" data-color="pink" data-size="small" data-series="0"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">This week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="purple" data-size="small" data-series="1"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Last week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span></div><div class="chp-chartcard__plot" style="height:110px"><canvas role="img" aria-label="Line chart: This week, Last week" data-chp-chart='{"labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "series": [{"label": "This week", "color": "#c6005c", "data": [42, 48, 45, 56, 53, 61, 66], "dashed": false}, {"label": "Last week", "color": "#8200db", "data": [35, 39, 37, 44, 41, 47, 50], "dashed": false}]}'></canvas></div></div></div>
               <p class="docs-dodont__cap">Match the legend to the series colour and order of the chart, so people map legend → line instantly.</p>
             </div>
             <div class="docs-dodont__card docs-dodont__card--dont">
               <p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p>
-              <div class="docs-dodont__stage"><div class="chp-chartcard"><div class="chp-row chp-row--start chp-chartcard__legend"><span class="lgd" data-color="green" data-size="small" data-series="0"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">This week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="orange" data-size="small" data-series="1"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Last week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span></div><div class="chp-chartcard__plot" style="height:110px"><canvas role="img" aria-label="Line chart: This week, Last week" data-chp-chart='{"labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "series": [{"label": "This week", "color": "#a92e76", "data": [42, 48, 45, 56, 53, 61, 66], "dashed": false}, {"label": "Last week", "color": "#742e9f", "data": [35, 39, 37, 44, 41, 47, 50], "dashed": false}]}'></canvas></div></div></div>
+              <div class="docs-dodont__stage"><div class="chp-chartcard"><div class="chp-row chp-row--start chp-chartcard__legend"><span class="lgd" data-color="green" data-size="small" data-series="0"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">This week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span><span class="lgd" data-color="orange" data-size="small" data-series="1"><svg aria-hidden="true"><use href="#i-pie-slice"/></svg><span class="lgd__lbl">Last week</span><svg class="lgd__info" aria-hidden="true"><use href="#i-info"/></svg></span></div><div class="chp-chartcard__plot" style="height:110px"><canvas role="img" aria-label="Line chart: This week, Last week" data-chp-chart='{"labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "series": [{"label": "This week", "color": "#c6005c", "data": [42, 48, 45, 56, 53, 61, 66], "dashed": false}, {"label": "Last week", "color": "#8200db", "data": [35, 39, 37, 44, 41, 47, 50], "dashed": false}]}'></canvas></div></div></div>
               <p class="docs-dodont__cap">Don’t use legend colours that differ from the chart. Nobody can tell which line is which.</p>
             </div>
           </div>

@@ -31,9 +31,9 @@
       <summary>Getting started</summary>
       <ul>
         <li><a href="#">About Cube</a></li>
-        <li><a href="#">Designing</a></li>
-        <li><a href="#">Developing</a></li>
-        <li><a href="#">Contributing</a></li>
+        <li hidden><a href="#">Designing</a></li>
+        <li hidden><a href="#">Developing</a></li>
+        <li hidden><a href="#">Contributing</a></li>
       </ul>
     </details>
     <details open>
@@ -43,22 +43,22 @@
         <li><a href="docs-colors.html">Color</a></li>
         <li><a href="docs-typography.html">Typography</a></li>
         <li><a href="docs-spacing.html">Spacing</a></li>
-        <li><a href="#">Motion</a></li>
+        <li hidden><a href="#">Motion</a></li>
         <li><a href="docs-icons.html">Icons</a></li>
-        <li><a href="#">Themes</a></li>
-        <li><a href="#">Accessibility</a></li>
+        <li hidden><a href="#">Themes</a></li>
+        <li hidden><a href="#">Accessibility</a></li>
       </ul>
     </details>
     <details open>
       <summary>Components</summary>
       <ul>
         <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
-        <li><a href="#" aria-disabled="true">Bottomsheet <small>Soon</small></a></li>
+        <li><a href="docs-bottomsheet.html">Bottom sheet</a></li>
         <li><a href="docs.html" aria-current="page">Buttons</a></li>
         <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
         <li><a href="docs-dropdown.html">Dropdown</a></li>
-        <li><a href="#" aria-disabled="true">Empty States <small>Soon</small></a></li>
+        <li><a href="docs-empty-states.html">Empty States</a></li>
         <li><a href="docs-header.html">Header</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
         <li><a href="docs-messages.html">Message</a></li>
@@ -74,20 +74,19 @@
         </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-swimlanes.html">Swimlanes</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-table.html">Tables</a></li>
         <li><a href="docs-toggle.html">Toggle</a></li>
-        <li><a href="#" aria-disabled="true">Tokens <small>Soon</small></a></li>
         <li><a href="docs-tooltips.html">Tooltips</a></li>
+        <li><a href="docs-trends.html">Trends</a></li>
       </ul>
     </details>
     <details>
       <summary>Patterns</summary>
       <ul>
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Empty states</a></li>
-        <li><a href="#">Forms</a></li>
-        <li><a href="#">Loading</a></li>
-        <li><a href="#">Notifications</a></li>
+        <li><a href="docs-widget.html">Dashboard widget</a></li>
+        <li><a href="docs-empty-states.html">Empty states</a></li>
       </ul>
     </details>
     <details>
@@ -98,7 +97,7 @@
         <li><a href="#">Chart design</a></li>
       </ul>
     </details>
-    <details>
+    <details hidden>
       <summary>Support</summary>
       <ul>
         <li><a href="#">Contact us</a></li>
@@ -235,8 +234,8 @@
             <thead><tr><th>Action Type</th><th>{Ramp}</th><th>Base (/600)</th><th>Outlined border</th></tr></thead>
             <tbody>
               <tr><td>Core</td><td><code>Semantics/Primary</code></td><td><span class="tok" title="#025be5"><i style="background:#025be5"></i><span>Primary/<wbr>600</span></span></td><td>Border hover / pressed: /500 · /600</td></tr>
-              <tr><td>Destructive</td><td><code>Semantics/Error</code></td><td><span class="tok" title="#e42828"><i style="background:#e42828"></i><span>Error/<wbr>600</span></span></td><td>Border hover / pressed: /700 · /800</td></tr>
-              <tr><td>Supportive</td><td><code>Semantics/Success</code></td><td><span class="tok" title="#46a758"><i style="background:#46a758"></i><span>Success/<wbr>600</span></span></td><td>Border hover / pressed: /700 · /800</td></tr>
+              <tr><td>Destructive</td><td><code>Semantics/Error</code></td><td><span class="tok" title="#e7000b"><i style="background:#e7000b"></i><span>Error/<wbr>600</span></span></td><td>Border hover / pressed: /700 · /800</td></tr>
+              <tr><td>Supportive</td><td><code>Semantics/Success</code></td><td><span class="tok" title="#009966"><i style="background:#009966"></i><span>Success/<wbr>600</span></span></td><td>Border hover / pressed: /700 · /800</td></tr>
             </tbody>
           </table></div>
           <div class="bx-scroll"><table class="docs-table bx-tokens">
@@ -288,13 +287,13 @@
           <div class="bx-scroll"><table class="docs-table bx-tokens">
             <thead><tr><th>Element</th><th>Default</th><th>Hovered</th><th>Pressed</th><th>Disabled</th></tr></thead>
             <tbody>
-              <tr><td>Filled · Container fill</td><td><span class="tok" title="#ffeaf3 (Pink)"><i style="background:#ffeaf3"></i><span>{Accent}/<wbr>100</span></span></td><td><span class="tok" title="#ffd6e7 (Pink)"><i style="background:#ffd6e7"></i><span>{Accent}/<wbr>200</span></span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#f6f6f6"><i style="background:#f6f6f6"></i><span>Disabled/<wbr>50</span></span></td></tr>
-              <tr><td>Filled · Label / icon</td><td><span class="tok" title="#a92e76 (Pink)"><i style="background:#a92e76"></i><span>{Accent}/<wbr>700</span></span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#9e9e9e"><i style="background:#9e9e9e"></i><span>Disabled/<wbr>500</span></span></td></tr>
-              <tr><td>Outlined · Container fill</td><td><span class="tok" title="#ffffff"><i style="background:#ffffff"></i><span>Neutrals/<wbr>White/<wbr>100</span></span></td><td><span class="tok" title="#fff5f9 (Pink)"><i style="background:#fff5f9"></i><span>{Accent}/<wbr>50</span></span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#ffffff"><i style="background:#ffffff"></i><span>Neutrals/<wbr>White/<wbr>100</span></span></td></tr>
-              <tr><td>Outlined · Border (1px)</td><td><span class="tok" title="#ffd6e7 (Pink)"><i style="background:#ffd6e7"></i><span>{Accent}/<wbr>200</span></span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#e0e0e0"><i style="background:#e0e0e0"></i><span>Disabled/<wbr>200</span></span></td></tr>
-              <tr><td>Outlined · Label / icon</td><td><span class="tok" title="#a92e76 (Pink)"><i style="background:#a92e76"></i><span>{Accent}/<wbr>700</span></span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#b5b5b5"><i style="background:#b5b5b5"></i><span>Disabled/<wbr>400</span></span></td></tr>
-              <tr><td>Naked · Container fill</td><td><span class="tok tok--none">none</span></td><td><span class="tok" title="#fff5f9 (Pink)"><i style="background:#fff5f9"></i><span>{Accent}/<wbr>50</span></span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok tok--none">none</span></td></tr>
-              <tr><td>Naked · Label / icon</td><td><span class="tok" title="#a92e76 (Pink)"><i style="background:#a92e76"></i><span>{Accent}/<wbr>700</span></span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#9e9e9e"><i style="background:#9e9e9e"></i><span>Disabled/<wbr>500</span></span></td></tr>
+              <tr><td>Filled · Container fill</td><td><span class="tok" title="#fce7f3 (Pink)"><i style="background:#fce7f3"></i><span>{Accent}/<wbr>100</span></span></td><td><span class="tok" title="#fccee8 (Pink)"><i style="background:#fccee8"></i><span>{Accent}/<wbr>200</span></span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#f6f6f6"><i style="background:#f6f6f6"></i><span>Disabled/<wbr>50</span></span></td></tr>
+              <tr><td>Filled · Label / icon</td><td><span class="tok" title="#c6005c (Pink)"><i style="background:#c6005c"></i><span>{Accent}/<wbr>700</span></span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#9e9e9e"><i style="background:#9e9e9e"></i><span>Disabled/<wbr>500</span></span></td></tr>
+              <tr><td>Outlined · Container fill</td><td><span class="tok" title="#ffffff"><i style="background:#ffffff"></i><span>Neutrals/<wbr>White/<wbr>100</span></span></td><td><span class="tok" title="#fdf2f8 (Pink)"><i style="background:#fdf2f8"></i><span>{Accent}/<wbr>50</span></span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#ffffff"><i style="background:#ffffff"></i><span>Neutrals/<wbr>White/<wbr>100</span></span></td></tr>
+              <tr><td>Outlined · Border (1px)</td><td><span class="tok" title="#fccee8 (Pink)"><i style="background:#fccee8"></i><span>{Accent}/<wbr>200</span></span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#e0e0e0"><i style="background:#e0e0e0"></i><span>Disabled/<wbr>200</span></span></td></tr>
+              <tr><td>Outlined · Label / icon</td><td><span class="tok" title="#c6005c (Pink)"><i style="background:#c6005c"></i><span>{Accent}/<wbr>700</span></span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#b5b5b5"><i style="background:#b5b5b5"></i><span>Disabled/<wbr>400</span></span></td></tr>
+              <tr><td>Naked · Container fill</td><td><span class="tok tok--none">none</span></td><td><span class="tok" title="#fdf2f8 (Pink)"><i style="background:#fdf2f8"></i><span>{Accent}/<wbr>50</span></span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok tok--none">none</span></td></tr>
+              <tr><td>Naked · Label / icon</td><td><span class="tok" title="#c6005c (Pink)"><i style="background:#c6005c"></i><span>{Accent}/<wbr>700</span></span></td><td><span class="tok tok--same" title="Same as Default">—</span></td><td><span class="tok tok--none">n/a</span></td><td><span class="tok" title="#9e9e9e"><i style="background:#9e9e9e"></i><span>Disabled/<wbr>500</span></span></td></tr>
             </tbody>
           </table></div>
         </section>
@@ -516,18 +515,18 @@
   var HEX={};
   function ramp(p,d){for(var k in d)HEX[p+'/'+k]=d[k];}
   ramp('Semantics/Primary',{50:'#f5f8ff',100:'#eaf1ff',200:'#d4e2ff',400:'#74a1f8',500:'#3b7eee',600:'#025be5',700:'#024dc6',800:'#0140a5'});
-  ramp('Semantics/Error',{50:'#fff6f6',100:'#ffecec',400:'#f07c7c',500:'#e34d4d',600:'#e42828',700:'#c02121',800:'#942c18'});
-  ramp('Semantics/Success',{50:'#f4fbf6',100:'#e9f7ed',400:'#74c796',500:'#5ab57a',600:'#46a758',700:'#3b8e4a',800:'#2f753d'});
+  ramp('Semantics/Error',{50:'#fef2f2',100:'#ffe2e2',400:'#ff6467',500:'#fb2c36',600:'#e7000b',700:'#c10007',800:'#942c18'});
+  ramp('Semantics/Success',{50:'#f0fdf4',100:'#dcfce7',400:'#05df72',500:'#00c950',600:'#009966',700:'#008236',800:'#016630'});
   ramp('Semantics/Primary-text',{50:'#f4f6f7',100:'#e3e7ea',900:'#373d42',950:'#101214'});
   ramp('Semantics/Secondary-text',{50:'#eff2f6',100:'#eef1f4',200:'#dbdfe4',300:'#bfc5cf',500:'#7f8a9e',600:'#69778b',700:'#586473',800:'#404a54'});
   ramp('Semantics/Disabled',{50:'#f6f6f6',100:'#efefef',200:'#e0e0e0',400:'#b5b5b5',500:'#9e9e9e',600:'#878787',700:'#6e6e6e',900:'#2e2e2e'});
   HEX['Neutrals/White/100']='#ffffff';
-  ramp('Accent/Pink',{50:'#fff5f9',100:'#ffeaf3',200:'#ffd6e7',700:'#a92e76'});
-  ramp('Accent/Purple',{50:'#faf5ff',100:'#f3ebff',200:'#e7d6ff',700:'#742e9f'});
-  ramp('Accent/Orange',{50:'#fff7f2',100:'#ffefe6',200:'#ffdfcc',700:'#c74f00'});
-  ramp('Accent/Light Blue',{50:'#f2fbff',100:'#e6f7ff',200:'#ccf0ff',700:'#009fc5'});
-  ramp('Accent/Bronze',{50:'#f2fbfa',100:'#e6f7f5',200:'#ccefeb',700:'#0c7f72'});
-  ramp('Accent/Green',{50:'#f4fbf6',100:'#e9f7ed',200:'#d3efdb',700:'#3f8e50'});
+  ramp('Accent/Pink',{50:'#fdf2f8',100:'#fce7f3',200:'#fccee8',700:'#c6005c'});
+  ramp('Accent/Purple',{50:'#faf5ff',100:'#f3e8ff',200:'#e9d4ff',700:'#8200db'});
+  ramp('Accent/Orange',{50:'#fff7ed',100:'#ffedd4',200:'#ffd6a7',700:'#ca3500'});
+  ramp('Accent/Light Blue',{50:'#f0f9ff',100:'#dff2fe',200:'#b8e6fe',700:'#0069a8'});
+  ramp('Accent/Bronze',{50:'#f0fdfa',100:'#cbfbf1',200:'#96f7e4',700:'#00786f'});
+  ramp('Accent/Green',{50:'#ecfdf5',100:'#d0fae5',200:'#a4f4cf',700:'#007a55'});
   ramp('Accent/Steel Blue',{50:'#f7faff',200:'#e7eef9',300:'#d5e0f2',900:'#304a77'});
   var ACC={pink:['Accent/Pink',100,200,700],purple:['Accent/Purple',100,200,700],orange:['Accent/Orange',100,200,700],
     'light-blue':['Accent/Light Blue',100,200,700],'bronze-green':['Accent/Bronze',100,200,700],green:['Accent/Green',100,200,700],
