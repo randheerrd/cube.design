@@ -334,6 +334,10 @@ def page_theme(slug):
     return "dark" if slug in DARK else "light"
 
 
+# Pages kept out of the nav and search for now (still built, reachable by URL).
+SEARCH_HIDDEN = {"docs-bottomsheet", "docs-bottomsheet-specifications"}
+
+
 def search_index():
     """Every docs page and section, for the header search. Written as a
     script (not JSON) so it also works when a page is opened from disk."""
@@ -344,7 +348,7 @@ def search_index():
     entries = []
     for slug, _label, _title, desc in PAGES:
         f = ROOT / "content" / f"{slug}.html"
-        if slug not in DOCS or not f.exists():
+        if slug not in DOCS or slug in SEARCH_HIDDEN or not f.exists():
             continue
         body = f.read_text(encoding="utf-8")
         m = re.search(r"(?s)<h1[^>]*>(.*?)</h1>", body)

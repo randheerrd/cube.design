@@ -1514,6 +1514,12 @@ body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="pag
 .bt-frame__bar{height:8px; border-radius:4px; background:#eef1f4}
 .bt-frame__bar--s{width:40%}
 .bt-frame__bar--m{width:70%}
+.bt-frame__sec{display:flex; flex-direction:column; align-items:flex-start; gap:var(--spacing-8); margin-top:var(--spacing-8); padding:var(--spacing-12); border:1px solid #eef1f4; border-radius:6px}
+.bt-frame__sec .bt-frame__bar{align-self:stretch}
+.bt-frame__sec .bt-frame__bar--m{align-self:auto; width:70%}
+.bt-frame__sec .bt-frame__bar--s{align-self:auto; width:40%}
+.bt-frame__h{font-family:"Cube Rupee",'DM Sans',var(--font),sans-serif; font-size:11px; line-height:14px; font-weight:600; color:#373d42}
+.bt-frame .msg{zoom:.85}
 .bt-frame--toast{position:relative; min-height:200px}
 .bt-frame--toast .tst,.bt-frame--toast .tst-stack{position:absolute; top:44px; right:12px}
 .docs-content--inp .bt-stage{display:flex; flex-direction:column; align-items:stretch; gap:var(--spacing-12); width:100%}
@@ -1560,6 +1566,7 @@ body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="pag
 .docs-content--inp .bt-anat th:nth-child(3){width:112px}
 .docs-content--bt .docs-dodont__stage{min-height:160px; align-items:center; overflow:hidden}
 .docs-content--bt .bx-usage figure{grid-template-columns:340px minmax(0,1fr); align-items:center}
+@media (max-width:760px){.docs-content--bt .bx-usage figure{grid-template-columns:minmax(0,1fr)}}
 .docs-content--bt .bt-tokens td{white-space:normal}
 .docs-content--bt .bt-tokens code{white-space:nowrap}
 /* component text beats the article's paragraph rules */
