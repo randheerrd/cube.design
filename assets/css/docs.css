@@ -1442,7 +1442,7 @@ body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="pag
 /* Do/Don't stage: dotted grey background */
 .docs-dodont__stage,.docs-content--inp .docs-dodont__stage{
   background-color:transparent;
-  background-image:radial-gradient(circle, #c9cad1 1px, transparent 1.3px);
+  background-image:radial-gradient(circle,rgba(201,202,209,.5) 1px, transparent 1.3px);
   background-size:12px 12px;
 }
 
@@ -1450,7 +1450,7 @@ body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="pag
 .bx-opt__stage:not(.docs-stage--dark),.docs-content--inp .bx-opt__stage:not(.docs-stage--dark),
 .bx-example__stage,.docs-content--inp .bx-example__stage{
   background-color:transparent;
-  background-image:radial-gradient(circle, #c9cad1 1px, transparent 1.3px);
+  background-image:radial-gradient(circle,rgba(201,202,209,.5) 1px, transparent 1.3px);
   background-size:12px 12px;
 }
 
@@ -1533,7 +1533,7 @@ body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="pag
 @font-face{font-family:'DM Sans RupeeFix'; src:url('../font/DMSans-RupeeFix.ttf') format('truetype'); font-weight:100 1000; font-style:normal}
 .ty-dl{display:grid; grid-template-columns:1fr 1fr; gap:var(--spacing-16); margin:var(--spacing-16) 0 var(--spacing-24)}
 .ty-dl__preview{display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--f-line,var(--hairline)); border-radius:8px; overflow:hidden}
-.ty-dl__preview > div{display:flex; flex-direction:column; justify-content:center; gap:var(--spacing-6); padding:var(--spacing-20); background-image:radial-gradient(circle,#c9cad1 1px,transparent 1.3px); background-size:12px 12px}
+.ty-dl__preview > div{display:flex; flex-direction:column; justify-content:center; gap:var(--spacing-6); padding:var(--spacing-20); background-image:radial-gradient(circle,rgba(201,202,209,.5) 1px,transparent 1.3px); background-size:12px 12px}
 .ty-dl__preview > div + div{border-left:1px solid var(--f-line,var(--hairline))}
 .ty-dl__glyph{font-size:28px; line-height:34px; font-weight:600; color:var(--f-strong,var(--ink))}
 .ty-dl__glyph--std{font-family:'DM Sans',sans-serif}
@@ -1732,7 +1732,7 @@ body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="pag
 .mm-col--wide{align-items:flex-start}
 .mm-note{font-size:11px; line-height:14px; color:#666b75}
 .msg-stage{display:flex; flex-wrap:wrap; align-items:center; gap:var(--spacing-8) var(--spacing-12); padding:var(--spacing-24); margin:var(--spacing-12) 0 var(--spacing-16); border:1px solid var(--f-line,var(--hairline)); border-radius:8px;
-  background-image:radial-gradient(circle,#c9cad1 1px,transparent 1.3px); background-size:12px 12px}
+  background-image:radial-gradient(circle,rgba(201,202,209,.5) 1px,transparent 1.3px); background-size:12px 12px}
 .msg-stage--col{flex-direction:column; align-items:flex-start}
 .mm{width:100%; padding:var(--spacing-12); background:#fff; border:1px solid #e8eaee; border-radius:8px; display:flex; flex-direction:column; gap:var(--spacing-6); font-family:"Cube Rupee",'DM Sans',var(--font),sans-serif; color:#1a1a1f}
 .mm__t{font-size:13px; line-height:18px; font-weight:600}
@@ -1970,7 +1970,7 @@ span.dc{cursor:default}
 .docs-content--dt .dt-step figcaption b{display:block; margin:0 0 var(--spacing-4); font-size:14px; line-height:18px; font-weight:600; color:var(--f-ink)}
 .docs-content--dt .dt-step__n{float:left; display:inline-flex; align-items:center; justify-content:center; width:18px; height:18px; margin:0 var(--spacing-8) 0 0; border-radius:50%; background:#025be5; color:#fff; font-size:10px; font-weight:600}
 .docs-content--dt .dt-step__stage{order:1; display:flex; align-items:flex-start; justify-content:center; min-height:120px; padding:var(--spacing-20) var(--spacing-12); overflow:hidden;
-  background-image:radial-gradient(circle,#c9cad1 1px,transparent 1.3px); background-size:12px 12px}
+  background-image:radial-gradient(circle,rgba(201,202,209,.5) 1px,transparent 1.3px); background-size:12px 12px}
 .docs-content--dt .dt-step__stage > .dsm--open{zoom:.66}
 .docs-content--dt .bx-opt__stage .dsm{zoom:.95}
 .docs-content--dt .bx-opt__stage > .dc,.docs-content--dt .bx-opt__stage > .dt-strip{zoom:2}
