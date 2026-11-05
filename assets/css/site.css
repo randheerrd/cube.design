@@ -679,7 +679,7 @@ body.is-grabbing .face img{transition:none}   /* no lag while being dragged */
 :root{
   --canvas-dot: 24px;
   --maxw: 1060px;
-  --dot: color-mix(in srgb, var(--ink) 15%, transparent);
+  --dot: color-mix(in srgb, var(--ink) 7.5%, transparent);
   --dot-rgb: 0,0,0;
 }
 

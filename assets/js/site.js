@@ -519,7 +519,7 @@
 
     function draw() {
       ctx.clearRect(0, 0, w, h);
-      var base = 'rgba(' + rgb + ',0.18)';
+      var base = 'rgba(' + rgb + ',0.09)';
       ctx.fillStyle = base;
 
       var live = strength > 0.002;
@@ -539,7 +539,7 @@
           f = f * f * strength;                    // quadratic falloff
           var pull = f * PULL;
           var size = 1 + f * 2.8;
-          ctx.fillStyle = 'rgba(' + rgb + ',' + (0.18 + f * 0.72) + ')';
+          ctx.fillStyle = 'rgba(' + rgb + ',' + (0.09 + f * 0.36) + ')';
           ctx.fillRect(x + (dx / d) * pull, y + (dy / d) * pull, size, size);
           ctx.fillStyle = base;
         }
