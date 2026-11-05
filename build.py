@@ -209,6 +209,10 @@ PAGES = [
      "Subscription card guidelines — plans, anatomy, states and do’s and don’ts."),
     ("docs-subscription-card-specifications", "Subscription card specs", "Subscription card specifications — Cube Design System",
      "Every dimension, colour token and property for the Subscription card."),
+    ("docs-card", "Card", "Card — Cube Design System",
+     "Card guidelines — anatomy, options, layouts and do’s and don’ts."),
+    ("docs-card-specifications", "Card specs", "Card specifications — Cube Design System",
+     "Every dimension, colour token and property for the Card."),
     ("team",       "Join the team", "Team & Open Roles — Cube.Design",
      "How the design team is shaped, what we screen for, and what is open."),
     ("internal",   "Internal",   "Internal — Cube.Design",
@@ -232,7 +236,7 @@ HIDDEN = {"internal", "craft", "team", "docs", "docs-tooltips", "docs-tooltips-s
           "docs-selection", "docs-selection-specifications",
           "docs-segmented", "docs-segmented-specifications",
           "docs-checkbox", "docs-checkbox-specifications",
-          "docs-accordion", "docs-accordion-specifications", "docs-avatar", "docs-avatar-specifications", "docs-divider", "docs-divider-specifications", "docs-file-upload", "docs-file-upload-specifications", "docs-skeleton", "docs-skeleton-specifications", "docs-subscription-card", "docs-subscription-card-specifications"}
+          "docs-accordion", "docs-accordion-specifications", "docs-avatar", "docs-avatar-specifications", "docs-divider", "docs-divider-specifications", "docs-file-upload", "docs-file-upload-specifications", "docs-skeleton", "docs-skeleton-specifications", "docs-subscription-card", "docs-subscription-card-specifications", "docs-card", "docs-card-specifications"}
 
 # Guarded by INTERNAL_PASSWORD rather than SITE_PASSWORD.
 INTERNAL_PAGES = {"internal"}
@@ -269,7 +273,7 @@ DOCS = {"docs", "docs-tooltips", "docs-tooltips-specifications", "docs-buttons-s
           "docs-selection", "docs-selection-specifications",
           "docs-segmented", "docs-segmented-specifications",
           "docs-checkbox", "docs-checkbox-specifications",
-          "docs-accordion", "docs-accordion-specifications", "docs-avatar", "docs-avatar-specifications", "docs-divider", "docs-divider-specifications", "docs-file-upload", "docs-file-upload-specifications", "docs-skeleton", "docs-skeleton-specifications", "docs-subscription-card", "docs-subscription-card-specifications"}
+          "docs-accordion", "docs-accordion-specifications", "docs-avatar", "docs-avatar-specifications", "docs-divider", "docs-divider-specifications", "docs-file-upload", "docs-file-upload-specifications", "docs-skeleton", "docs-skeleton-specifications", "docs-subscription-card", "docs-subscription-card-specifications", "docs-card", "docs-card-specifications"}
 
 
 EDITION_HEAD = (

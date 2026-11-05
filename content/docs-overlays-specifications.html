@@ -57,6 +57,7 @@
         <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
         <li><a href="docs-bottomsheet.html">Bottom sheet <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-card.html">Card <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
         <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
@@ -88,7 +89,7 @@
         <li><a href="docs-tooltips.html">Tooltips</a></li>
       </ul>
     </details>
-    <details>
+    <details open>
       <summary>Patterns</summary>
       <ul>
         <li><a href="docs-widget.html">Dashboard widget</a></li>
@@ -114,6 +115,7 @@
   </nav>
   <div class="docs-scrim" id="docs-scrim"></div>
 
+  <link rel="stylesheet" href="assets/vendor/phosphor/phosphor.css">
   <!-- ============ Content ============ -->
   <div class="docs-body">
       <div class="docs-split">
@@ -123,19 +125,16 @@
         <div class="docs-title__head">
           <h1>Right Overlay</h1>
           <span class="docs-badge">Stable</span>
-          <span class="docs-meta">Last updated Oct 2026</span>
+          <span class="docs-meta">Last updated Nov 2026</span>
         </div>
-        <p class="docs-title__desc">A panel that slides in from the right edge over the page, used for quick, contextual
-          information — drill-downs, details and trends — without navigating away. Built from a Header (breadcrumb, heading,
-          tabs, close), a flexible Body slot, and an optional Footer with actions.</p>
+        <p class="docs-title__desc">A panel that slides in from the right to show quick, contextual information &mdash; drill-downs, details, trends &mdash; without leaving the page. The header shows the path of what the user opened, the body is a slot, and an optional footer holds the actions.</p>
       </div>
       <div class="docs-tabs" role="tablist" aria-label="Page sections">
         <a href="docs-overlays.html" role="tab">Guidelines</a>
         <a href="docs-overlays-specifications.html" role="tab" aria-selected="true">Specifications</a>
-        <a href="https://storybook.gobblecube.ai/?path=/docs/overlays-drawerpanel--docs" role="tab" target="_blank" rel="noopener noreferrer">
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
           Code
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7 9"/></svg>
-          <span class="sr-only">(opens Storybook in a new tab)</span>
+          <span class="sr-only">(not in Storybook yet)</span>
         </a>
         <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
           <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
@@ -143,192 +142,120 @@
           <span class="sr-only">(coming soon)</span>
         </a>
       </div>
-      <article class="docs-content docs-content--inp docs-content--spec docs-content--bt docs-content--dt docs-content--ro">
+      <article class="docs-content docs-content--inp docs-content--spec">
         <section id="dimensions">
           <h2>Dimensions</h2>
-          <p>All values in px.</p>
-          <h3>Overlay</h3>
-          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody>
-              <tr><td>Width</td><td>760</td><td>Fixed. ⚠ The Right-Overlay-Header component is 763 in Figma &mdash; align it to 760.</td></tr>
-              <tr><td>Height</td><td>Full viewport (857 in the mock)</td><td>Docked top to bottom</td></tr>
-              <tr><td>Position</td><td>Right edge, above page content</td><td>No margin</td></tr>
-              <tr><td>Corner radius</td><td>16 top-left · 16 bottom-left</td><td>Right corners square against the viewport edge</td></tr>
-              <tr><td>Header</td><td>~94 (no description) · 148 (all on)</td><td>Padding 12 / 20, gap 8</td></tr>
-              <tr><td>Close button</td><td>32 × 32, pill</td><td>Icon 14</td></tr>
-              <tr><td>Tabs row</td><td>38 tall · indent 20</td><td>Primary tabs Large; gap 20; item padding 8 top / 10 bottom</td></tr>
-              <tr><td>Body padding / gap</td><td>20 / 16</td><td>Scrolls</td></tr>
-              <tr><td>Footer</td><td>60 tall · padding 12 / 16</td><td>Buttons Large (36); gap 8 between buttons</td></tr>
-            </tbody></table></div>
-          <h3>Header &amp; breadcrumb</h3>
-          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody>
-              <tr><td>Breadcrumb height</td><td>18</td><td>14/18 text, 4 gap, 12px caret</td></tr>
-              <tr><td>Heading</td><td>18 / 24</td><td>SemiBold</td></tr>
-              <tr><td>Description</td><td>12 / 16 · max 2 lines</td><td>Regular, 0.1 tracking</td></tr>
-              <tr><td>Gap breadcrumb ↔ heading</td><td>8</td><td></td></tr>
-              <tr><td>Gap heading ↔ description</td><td>4</td><td></td></tr>
-            </tbody></table></div>
+          <p>Read from the components. All values in px.</p>
+          <h3>Panel</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Part</th><th>Size</th><th>Spacing</th><th>Notes</th></tr></thead><tbody><tr><td>Right overlay</td><td>760 &times; full height (857 shown)</td><td>&mdash;</td><td>Docked right.</td></tr><tr><td>Header</td><td>86 (switchable) · 82 (read-only) · 86 (normal)</td><td>padding 12 / 20 / 8 · gap 8</td><td>Tabs add 38. Read-only paths have 4 bottom padding.</td></tr><tr><td>Body</td><td>760 &times; fill</td><td>padding 20 · gap 16</td><td>Scrolls.</td></tr><tr><td>Footer</td><td>60</td><td>padding 12 / 16</td><td></td></tr><tr><td>Corners</td><td>radius 16</td><td>&mdash;</td><td>Top-left and bottom-left (corner-radius/16), read from the component.</td></tr></tbody></table></div>
+          <h3>Header parts</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Part</th><th>Size</th><th>Notes</th></tr></thead><tbody><tr><td>Header components</td><td>968 wide ⚠</td><td>Overlay is 760 &mdash; instances are resized; make the masters 760 / Fill.</td></tr><tr><td>Path text</td><td>14 / 18 (levels) · 13 (current)</td><td></td></tr><tr><td>Separator</td><td>12</td><td>CaretDoubleRight</td></tr><tr><td>Prev / next · close</td><td>28 round</td><td></td></tr><tr><td>Context tag</td><td>46 &times; 28</td><td>SKU-details/MRP</td></tr><tr><td>Normal heading</td><td>18 / 24</td><td></td></tr></tbody></table></div>
+          <h3>Parts</h3>
+          <p>Read from the component layers.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Part</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Path</td><td>gap 8 · row min height 28</td><td>Between levels, separators, the switcher and the tag; “at” ↔ chip 8.</td></tr><tr><td>Switcher chip</td><td>padding 4 / 8 · gap 4 · radius 6</td><td>Text 13 / 18 + CaretDown 12. Chip ↔ ‹ › gap 4.</td></tr><tr><td>Prev / next</td><td>28 &times; 28 · radius 6</td><td>CaretLeft / CaretRight 14.</td></tr><tr><td>Close</td><td>28 &times; 28 · radius pill</td><td>X 14.</td></tr><tr><td>Context tag chip</td><td>padding 6 / 10 · radius 6</td><td></td></tr><tr><td>Tabs bar</td><td>38 = 2 top + 36 tab · tab padding 8 / 10 · gap 20 · sides 20</td><td>2px selection bar, 1px bottom line.</td></tr><tr><td>Footer</td><td>buttons 36 tall · padding 0 / 12 · radius 8 · gap 8</td><td>Free slot ↔ buttons gap 12.</td></tr></tbody></table></div>
+          <h3>Visual reference</h3>
+          <p>Real proportions.</p>
+<div class="docs-demo"><div class="rox-refs"><figure><div class="rox-fit" data-w="760"><div class="rox-fit__in" style="width:760px"><div class="rox" style="height:857px"><div class="rox-h"><div class="rox-h__top"><div class="rox-h__row"><div class="rox-h__l"><div class="rox-crumb"><span class="rox-swg"><span class="rox-sw"><span class="rox-sw__t">Whole Wheat</span><img src="assets/img/overlays/caret-down.svg" alt="" width="12" height="12"></span><span class="rox-swg"><span class="rox-nb"><img src="assets/img/overlays/caret-left.svg" alt="" width="14" height="14"></span><span class="rox-nb"><img src="assets/img/overlays/caret-right.svg" alt="" width="14" height="14"></span></span></span><span class="rox-tag"><span class="rox-tag__at">at</span><span class="rox-mrp">MRP</span></span></div></div><span class="rox-x"><img src="assets/img/overlays/x.svg" alt="" width="14" height="14"></span></div></div><div class="rox-tabs"><span class="rox-tab is-sel">Trends</span><span class="rox-tab">Competition</span><span class="rox-tab">Cross Platform</span></div></div><div class="rox-b"></div><div class="rox-f"><div class="rox-f__row"><div class="rox-f__btns"><span class="rox-btn rox-btn--pri">Primary</span></div></div></div></div></div></div><figcaption>Panel</figcaption><span class="rox-dim">760 wide</span></figure><figure><div class="rox-fit" data-w="760"><div class="rox-fit__in" style="width:760px"><div class="rox-h"><div class="rox-h__top"><div class="rox-h__row"><div class="rox-h__l"><div class="rox-crumb"><span class="rox-swg"><span class="rox-sw"><span class="rox-sw__t">Whole Wheat</span><img src="assets/img/overlays/caret-down.svg" alt="" width="12" height="12"></span><span class="rox-swg"><span class="rox-nb"><img src="assets/img/overlays/caret-left.svg" alt="" width="14" height="14"></span><span class="rox-nb"><img src="assets/img/overlays/caret-right.svg" alt="" width="14" height="14"></span></span></span><span class="rox-tag"><span class="rox-tag__at">at</span><span class="rox-mrp">MRP</span></span></div></div><span class="rox-x"><img src="assets/img/overlays/x.svg" alt="" width="14" height="14"></span></div></div><div class="rox-tabs"><span class="rox-tab is-sel">Trends</span><span class="rox-tab">Competition</span><span class="rox-tab">Cross Platform</span></div></div></div></div><figcaption>Header</figcaption><span class="rox-dim">86 tall</span></figure><figure><div class="rox-fit" data-w="760"><div class="rox-fit__in" style="width:760px"><div class="rox-h rox-h--normal"><div class="rox-h__top"><div class="rox-h__row"><div class="rox-h__l"><span class="rox-t">Heading</span></div><span class="rox-x"><img src="assets/img/overlays/x.svg" alt="" width="14" height="14"></span></div></div><div class="rox-tabs"><span class="rox-tab is-sel">Trends</span><span class="rox-tab">Competition</span><span class="rox-tab">Cross Platform</span></div></div></div></div><figcaption>Normal header</figcaption><span class="rox-dim">86 tall</span></figure></div></div>
         </section>
-
         <section id="color-tokens">
           <h2>Color tokens</h2>
-          <p>Tokens used by the overlay and its parts. ⚠ marks a value that isn’t bound to a variable in Figma.</p>
-          <h3>Container &amp; surfaces</h3>
-          <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Element</th><th>Token / value</th><th>Notes</th></tr></thead><tbody>
-              <tr><td>Overlay fill</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>Neutrals/White/100</code></td><td></td></tr>
-              <tr><td>Overlay border</td><td><span class="bt-swatch" style="background:#e6e7e8"></span><code>Default Card Stroke</code> ⚠</td><td>A style, not a variable</td></tr>
-              <tr><td>Overlay shadow</td><td>x −4 · y 0 · blur 16 · black 6%</td><td>Separates the panel from the page</td></tr>
-              <tr><td>Header fill</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>#FFFFFF</code> ⚠ raw</td><td>Use Neutrals/White/100</td></tr>
-              <tr><td>Header & tabs divider</td><td><span class="bt-swatch" style="background:#e8eaee"></span><code>Secondary-text/100</code> · 1px bottom</td><td></td></tr>
-              <tr><td>Body fill</td><td>Inherits the overlay (White/100)</td><td></td></tr>
-              <tr><td>Footer fill / divider</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>White/100</code> · <span class="bt-swatch" style="background:#e8eaee"></span><code>Secondary-text/100</code> top</td><td></td></tr>
-              <tr><td>Footer shadow</td><td>x 0 · y −2 · blur 6 · black 9%</td><td>The footer floats above scrolling content</td></tr>
-              <tr><td>Close button border</td><td><span class="bt-swatch" style="background:#dbdfe4"></span><code>Secondary-text/200</code></td><td></td></tr>
-              <tr><td>Page scrim</td><td>⚠ Not in component</td><td>Recommend Neutrals/Black/20–40 if the page should dim</td></tr>
-            </tbody></table></div>
-          <h3>Text</h3>
-          <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Element</th><th>Token</th><th>Style</th></tr></thead><tbody>
-              <tr><td>Breadcrumb &mdash; parent levels</td><td><span class="bt-swatch" style="background:#515f69"></span><code>Primary-text/600</code></td><td>Medium 14/18</td></tr>
-              <tr><td>Breadcrumb &mdash; current level</td><td><span class="bt-swatch" style="background:#101214"></span><code>Primary-text/950</code></td><td>SemiBold 14/18</td></tr>
-              <tr><td>Heading</td><td><span class="bt-swatch" style="background:#101214"></span><code>Primary-text/950</code></td><td>SemiBold 18/24 (≈ Heading/H6)</td></tr>
-              <tr><td>Description</td><td><span class="bt-swatch" style="background:#515f69"></span><code>Primary-text/600</code></td><td>Regular 12/16 (Body/B3/Regular)</td></tr>
-              <tr><td>Tab &mdash; selected</td><td><span class="bt-swatch" style="background:#101214"></span><code>Primary-text/950</code> · underline <span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td><td>Bold 14/18, 2px underline</td></tr>
-              <tr><td>Tab &mdash; unselected</td><td><span class="bt-swatch" style="background:#5f717b"></span><code>Primary-text/500</code></td><td>Medium 14/18</td></tr>
-            </tbody></table></div>
-          <h3>Footer buttons</h3>
-          <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Button</th><th>Fill</th><th>Border</th><th>Text</th></tr></thead><tbody>
-              <tr><td>Primary (Filled)</td><td><span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td><td>&mdash;</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>White/100</code></td></tr>
-              <tr><td>Secondary (Outlined)</td><td><span class="bt-swatch" style="background:#ffffff"></span><code>White/100</code></td><td><span class="bt-swatch" style="background:#74a1f8"></span><code>Primary/400</code></td><td><span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td></tr>
-              <tr><td>Cancel (Naked)</td><td>&mdash;</td><td>&mdash;</td><td><span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td></tr>
-            </tbody></table></div>
+          <p>All colours are local variables of the file (mapped from the external library). ⚠ = flagged in Figma.</p>
+          <h3>Panel &amp; header</h3>
+<div class="bx-scroll"><table class="docs-table bx-tokens"><thead><tr><th>Element</th><th>Token</th><th>Notes</th></tr></thead><tbody><tr><td>Panel background</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td></td></tr><tr><td>Panel border</td><td>Semantics/Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee</td><td>Was “Default Card Stroke” (external).</td></tr><tr><td>Panel shadow</td><td>Elevation/Right-overlay: &minus;4 0 16 · black 6% <span class="msg-sw" style="background:rgba(0,0,0,.06)"></span>#0000000f</td><td>Effect style.</td></tr><tr><td>Header background</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Was raw #FFFFFF.</td></tr><tr><td>Header divider / tabs line</td><td>Semantics/Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee</td><td></td></tr><tr><td>Path levels</td><td>Semantics/Primary-text/600 <span class="msg-sw" style="background:#515f69"></span>#515f69</td><td>Medium 14.</td></tr><tr><td>Current level</td><td>Semantics/Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214</td><td>SemiBold 13.</td></tr><tr><td>Heading (Normal-header)</td><td>Semantics/Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214</td><td>SemiBold 18.</td></tr><tr><td>Switcher background</td><td>Accent/Steel Blue/100 <span class="msg-sw" style="background:#f1f6fd"></span>#f1f6fd</td><td></td></tr><tr><td>Scrim (page behind)</td><td>Not in component ⚠</td><td>Recommend Black @ 40%.</td></tr></tbody></table></div>
+          <h3>Other parts</h3>
+          <p>Read from the component layers.</p>
+<div class="bx-scroll"><table class="docs-table bx-tokens"><thead><tr><th>Element</th><th>Token</th><th>Notes</th></tr></thead><tbody><tr><td>Switcher border</td><td>Accent/Steel Blue/200 <span class="msg-sw" style="background:#e7eef9"></span>#e7eef9</td><td></td></tr><tr><td>Prev / next · close border</td><td>Semantics/Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td>White fill.</td></tr><tr><td>Context tag</td><td>Accent/Bronze/200 <span class="msg-sw" style="background:#ccefeb"></span>#ccefeb · text Accent/Bronze/700 <span class="msg-sw" style="background:#0c7f72"></span>#0c7f72</td><td>SKU-details/MRP. ⚠ See Source.</td></tr><tr><td>Tab</td><td>Semantics/Primary-text/500 <span class="msg-sw" style="background:#5f717b"></span>#5f717b</td><td>Selected: Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214 + Semantics/Primary/600 bar <span class="msg-sw" style="background:#025be5"></span>#025be5</td></tr><tr><td>Footer line</td><td>Semantics/Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee</td><td>Top 1px.</td></tr><tr><td>Primary button</td><td>Semantics/Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5</td><td>Text Neutrals/White/100.</td></tr><tr><td>Secondary button</td><td>border Semantics/Primary/400 <span class="msg-sw" style="background:#74a1f8"></span>#74a1f8</td><td>Text Semantics/Primary/600; Cancel is text only.</td></tr><tr><td>Checkbox label</td><td>Semantics/Secondary-text/700 <span class="msg-sw" style="background:#586473"></span>#586473</td><td>Free slot.</td></tr></tbody></table></div>
+          <h3>Visual reference &mdash; headers</h3>
+<div class="docs-demo"><div class="rox-stack"><div><span class="rox-stack__lbl">Switchable &mdash; Switchable = Yes · Level 2</span><div class="rox-fit rox-fit--hdr" data-w="760"><div class="rox-fit__in" style="width:760px"><div class="rox-h"><div class="rox-h__top"><div class="rox-h__row"><div class="rox-h__l"><div class="rox-crumb"><span class="rox-lvl">Whole Wheat</span><img class="rox-sep" src="assets/img/overlays/caret-double-right.svg" alt="" width="12" height="12"><span class="rox-swg"><span class="rox-sw"><span class="rox-sw__t">Organic</span><img src="assets/img/overlays/caret-down.svg" alt="" width="12" height="12"></span><span class="rox-swg"><span class="rox-nb"><img src="assets/img/overlays/caret-left.svg" alt="" width="14" height="14"></span><span class="rox-nb"><img src="assets/img/overlays/caret-right.svg" alt="" width="14" height="14"></span></span></span><span class="rox-tag"><span class="rox-tag__at">at</span><span class="rox-mrp">MRP</span></span></div></div><span class="rox-x"><img src="assets/img/overlays/x.svg" alt="" width="14" height="14"></span></div></div><div class="rox-tabs"><span class="rox-tab is-sel">Trends</span><span class="rox-tab">Competition</span><span class="rox-tab">Cross Platform</span></div></div></div></div></div><div><span class="rox-stack__lbl">Read-only path &mdash; Switchable = No · Level 2</span><div class="rox-fit rox-fit--hdr" data-w="760"><div class="rox-fit__in" style="width:760px"><div class="rox-h rox-h--ro"><div class="rox-h__top"><div class="rox-h__row"><div class="rox-h__l"><div class="rox-crumb"><span class="rox-lvl">Whole Wheat</span><img class="rox-sep" src="assets/img/overlays/caret-double-right.svg" alt="" width="12" height="12"><span class="rox-cur">Organic</span></div></div><span class="rox-x"><img src="assets/img/overlays/x.svg" alt="" width="14" height="14"></span></div></div><div class="rox-tabs"><span class="rox-tab is-sel">Trends</span><span class="rox-tab">Competition</span><span class="rox-tab">Cross Platform</span></div></div></div></div></div><div><span class="rox-stack__lbl">Normal &mdash; Normal-header</span><div class="rox-fit rox-fit--hdr" data-w="760"><div class="rox-fit__in" style="width:760px"><div class="rox-h rox-h--normal"><div class="rox-h__top"><div class="rox-h__row"><div class="rox-h__l"><span class="rox-t">Heading</span></div><span class="rox-x"><img src="assets/img/overlays/x.svg" alt="" width="14" height="14"></span></div></div><div class="rox-tabs"><span class="rox-tab is-sel">Trends</span><span class="rox-tab">Competition</span><span class="rox-tab">Cross Platform</span></div></div></div></div></div></div></div>
+          <h3>Visual reference &mdash; panel</h3>
+<div class="docs-demo"><div class="rox-refs rox-refs--two"><figure><div class="rox-fit" data-w="760"><div class="rox-fit__in" style="width:760px"><div class="rox" style="height:857px"><div class="rox-h"><div class="rox-h__top"><div class="rox-h__row"><div class="rox-h__l"><div class="rox-crumb"><span class="rox-swg"><span class="rox-sw"><span class="rox-sw__t">Whole Wheat</span><img src="assets/img/overlays/caret-down.svg" alt="" width="12" height="12"></span><span class="rox-swg"><span class="rox-nb"><img src="assets/img/overlays/caret-left.svg" alt="" width="14" height="14"></span><span class="rox-nb"><img src="assets/img/overlays/caret-right.svg" alt="" width="14" height="14"></span></span></span><span class="rox-tag"><span class="rox-tag__at">at</span><span class="rox-mrp">MRP</span></span></div></div><span class="rox-x"><img src="assets/img/overlays/x.svg" alt="" width="14" height="14"></span></div></div><div class="rox-tabs"><span class="rox-tab is-sel">Trends</span><span class="rox-tab">Competition</span><span class="rox-tab">Cross Platform</span></div></div><div class="rox-b"></div><div class="rox-f"><div class="rox-f__row"><div class="rox-f__btns"><span class="rox-btn rox-btn--pri">Primary</span></div></div></div></div></div></div><figcaption>With footer</figcaption><span class="rox-dim">Show Modal-Footer = true</span></figure><figure><div class="rox-fit" data-w="760"><div class="rox-fit__in" style="width:760px"><div class="rox" style="height:857px"><div class="rox-h"><div class="rox-h__top"><div class="rox-h__row"><div class="rox-h__l"><div class="rox-crumb"><span class="rox-swg"><span class="rox-sw"><span class="rox-sw__t">Whole Wheat</span><img src="assets/img/overlays/caret-down.svg" alt="" width="12" height="12"></span><span class="rox-swg"><span class="rox-nb"><img src="assets/img/overlays/caret-left.svg" alt="" width="14" height="14"></span><span class="rox-nb"><img src="assets/img/overlays/caret-right.svg" alt="" width="14" height="14"></span></span></span><span class="rox-tag"><span class="rox-tag__at">at</span><span class="rox-mrp">MRP</span></span></div></div><span class="rox-x"><img src="assets/img/overlays/x.svg" alt="" width="14" height="14"></span></div></div><div class="rox-tabs"><span class="rox-tab is-sel">Trends</span><span class="rox-tab">Competition</span><span class="rox-tab">Cross Platform</span></div></div><div class="rox-b"></div></div></div></div><figcaption>No footer</figcaption><span class="rox-dim">Show Modal-Footer = false</span></figure></div></div>
         </section>
-
+        <section id="typography">
+          <h2>Typography</h2>
+          <p>DM Sans. Text styles read from the components.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Style</th><th>Size / line height</th><th>Weight</th><th>Letter spacing</th></tr></thead><tbody><tr><td>Path levels, “at”</td><td>Body/B2/Medium</td><td>14 / 18</td><td>500</td><td>0</td></tr><tr><td>Current level (read-only)</td><td>Body/B2/Semibold</td><td>14 / 18</td><td>600</td><td>0</td></tr><tr><td>Current level (switcher)</td><td>&mdash; raw size ⚠</td><td>13 / 18</td><td>600</td><td>0</td></tr><tr><td>Heading (Normal-header)</td><td>Heading/H6</td><td>18 / 24</td><td>600</td><td>0</td></tr><tr><td>Context tag</td><td>Body/B3/Semibold</td><td>12 / 16</td><td>600</td><td>0.1</td></tr><tr><td>Tab</td><td>Body/B2/Medium (Bold when selected)</td><td>14 / 18</td><td>500 · 700</td><td>0</td></tr><tr><td>Footer buttons</td><td>Body/B2/Semibold</td><td>14 / 18</td><td>600</td><td>0</td></tr><tr><td>Checkbox label</td><td>Body/B3/Medium</td><td>12 / 16</td><td>500</td><td>0.1</td></tr></tbody></table></div>
+        </section>
         <section id="properties">
           <h2>Properties</h2>
-          <p>Designers: place “Right overlay”, set the header options, fill the Body slot and toggle the footer. Developers:
-            build it as a right-side drawer with a fixed header and footer and a scrolling body.</p>
           <h3>Right overlay</h3>
-          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
-              <tr><td><code>Right-overlay-body</code></td><td>SLOT</td><td>required</td><td>empty</td><td>Insert content. Preferred: Segmented-control, Message, Table-template, Trends-composition.</td></tr>
-              <tr><td><code>Show Modal-Footer</code></td><td>true | false</td><td>optional</td><td>true</td><td>Hide for read-only overlays.</td></tr>
-            </tbody></table></div>
-          <h3>Right-Overlay-Header</h3>
-          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
-              <tr><td><code>Show Breadcrumb</code></td><td>true | false</td><td>optional</td><td>true</td><td>At least one of Breadcrumb / Heading on.</td></tr>
-              <tr><td><code>Show Heading</code></td><td>true | false</td><td>optional</td><td>true</td><td></td></tr>
-              <tr><td><code>Show Description</code></td><td>true | false</td><td>optional</td><td>true</td><td>Max 2 lines.</td></tr>
-              <tr><td><code>Show Tabs</code></td><td>true | false</td><td>optional</td><td>true</td><td>Edit tab labels on the nested Primary-tabs.</td></tr>
-              <tr><td>Heading / description text</td><td>overrides</td><td>&mdash;</td><td>&mdash;</td><td>⚠ Not TEXT properties &mdash; edit the layers directly.</td></tr>
-            </tbody></table></div>
-          <h3>Breadcrumb</h3>
-          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
-              <tr><td><code>L2</code></td><td>Yes | No</td><td>required</td><td>Yes</td><td></td></tr>
-              <tr><td><code>L3</code></td><td>Yes | No</td><td>required</td><td>Yes</td><td>Requires L2 = Yes.</td></tr>
-              <tr><td>Level text</td><td>overrides</td><td>&mdash;</td><td>&mdash;</td><td>⚠ Not TEXT properties.</td></tr>
-            </tbody></table></div>
-          <h3>Modal-Footer (shared)</h3>
-          <p>The same footer as the Popup.</p>
-          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody>
-              <tr><td><code>Primary Action</code></td><td>true | false</td><td>optional</td><td>true</td><td>One Filled Core button.</td></tr>
-              <tr><td><code>Secondary Action</code></td><td>true | false</td><td>optional</td><td>true</td><td>Outlined Core.</td></tr>
-              <tr><td><code>Cancel</code></td><td>true | false</td><td>optional</td><td>true</td><td>Naked Core.</td></tr>
-              <tr><td><code>Free Slot - Bottom left</code></td><td>true | false</td><td>optional</td><td>true</td><td>Slot for a checkbox or message.</td></tr>
-            </tbody></table></div>
-          <h3>Behaviour rules (for developers)</h3>
-          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Value</th><th>Notes</th></tr></thead><tbody>
-              <tr><td>Open</td><td>Slide in from the right · 200–250ms</td><td>Triggered by a row or chart click.</td></tr>
-              <tr><td>Close</td><td>Close button · Esc · click outside (optional)</td><td>Return focus to the trigger.</td></tr>
-              <tr><td>Scroll</td><td>Body only</td><td>Header and footer stay fixed.</td></tr>
-              <tr><td>Width</td><td>760 fixed</td><td>On viewports under 1024px, use full width.</td></tr>
-              <tr><td>Focus</td><td>Trap focus inside</td><td><code>role=&quot;dialog&quot;</code> <code>aria-modal=&quot;true&quot;</code>, labelled by the heading.</td></tr>
-              <tr><td>Stacking</td><td>One overlay at a time</td><td>Opening another replaces the content (update the breadcrumb).</td></tr>
-            </tbody></table></div>
+<div class="bx-scroll"><table class="docs-table bx-api"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Right-overlay-body</td><td>SLOT</td><td>required</td><td>&mdash;</td><td>Preferred: Segmented-control, Message, Table-template, Trends-composition.</td></tr><tr><td>Show Modal-Footer</td><td>true | false</td><td>optional</td><td>true</td><td>Footer with actions.</td></tr></tbody></table></div>
+          <h3>Right-overlay-header/Header-with-path</h3>
+<div class="bx-scroll"><table class="docs-table bx-api"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Switchable</td><td>Yes | No</td><td>required</td><td>Yes</td><td>Yes: last level is a dropdown + ‹ ›.</td></tr><tr><td>Level</td><td>1 | 2 | 3</td><td>required</td><td>1</td><td>How deep the path is.</td></tr><tr><td>Level 1 · Level 2 · Level 3</td><td>string</td><td>required</td><td>Whole Wheat · Organic · Ahmedabad</td><td></td></tr><tr><td>Show Tabs</td><td>true | false</td><td>optional</td><td>true</td><td></td></tr><tr><td>Show Tag</td><td>true | false</td><td>optional</td><td>true</td><td>“at MRP” context chip.</td></tr></tbody></table></div>
+          <h3>Right-overlay-header/Normal-header</h3>
+<div class="bx-scroll"><table class="docs-table bx-api"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Show tabs</td><td>true | false</td><td>optional</td><td>true</td><td>⚠ Lower-case “tabs” &mdash; rename to “Show Tabs” to match.</td></tr><tr><td>Heading</td><td>text layer</td><td>&mdash;</td><td>“Heading”</td><td>⚠ Not a text property yet.</td></tr></tbody></table></div>
         </section>
+        <section id="api">
+          <h2>API and behavior</h2>
+          <p><strong>Designers:</strong> place Right overlay at the right edge over a scrim, set the header (path levels, switchable, tag, tabs), fill the body slot and turn the footer on only if there is an action. <strong>Developers:</strong> <code>&lt;RightOverlay path={[l1,l2,l3]} switchable onPrev onNext onSelect tag tabs onClose footer={…}&gt;{body}&lt;/RightOverlay&gt;</code>.</p>
+          <pre class="ic-code"><code>&lt;RightOverlay
+  path={["Whole Wheat", "Organic", "Ahmedabad"]}  // Level 1 › 2 › 3; last = current
+  switchable                          // Yes: the last level is a dropdown + ‹ ›
+  onPrev={prev} onNext={next}         // step to the previous / next item without closing
+  onSelect={select}                   // pick another item at the same level (dropdown)
+  tag="MRP"                           // “at MRP” context chip (Show Tag)
+  tabs={["Trends", "Competition", "Cross Platform"]}  // views of the same item
+  onClose={close}                     // ×, Esc or a click on the scrim
+  footer={…}                          // Modal-Footer — only when there is an action
+&gt;
+  {body}                              // Table-template, Trends-composition, Message…
+&lt;/RightOverlay&gt;
 
+&lt;!-- rendered --&gt;
+&lt;div class="scrim"&gt;&lt;/div&gt;                           &lt;!-- black 35–40% --&gt;
+&lt;aside role="dialog" aria-labelledby="ro-current"&gt;   &lt;!-- focus trapped inside; Esc closes --&gt;
+  &lt;header&gt;                                          &lt;!-- fixed --&gt;
+    Whole Wheat » Organic » &lt;span id="ro-current"&gt;Ahmedabad&lt;/span&gt; ▾
+    &lt;button aria-label="Previous city"&gt;‹&lt;/button&gt;
+    &lt;button aria-label="Next city"&gt;›&lt;/button&gt; at MRP
+    &lt;button aria-label="Close"&gt;×&lt;/button&gt;
+    &lt;div role="tablist"&gt;Trends · Competition · Cross Platform&lt;/div&gt;
+  &lt;/header&gt;
+  &lt;div class="body"&gt;…&lt;/div&gt;                         &lt;!-- scrolls --&gt;
+  &lt;footer&gt;…&lt;/footer&gt;                                &lt;!-- fixed --&gt;
+&lt;/aside&gt;</code></pre>
+          <h3>Behaviour rules</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Rule</th><th>Notes</th></tr></thead><tbody><tr><td>Open</td><td>slide in from the right · 200–250ms</td><td>Over a 35–40% scrim; page stays visible on the left.</td></tr><tr><td>Close</td><td>&times; · Esc · click scrim</td><td>Return focus to the row / chart that opened it.</td></tr><tr><td>Switch item</td><td>dropdown or ‹ ›</td><td>Update content in place; keep the selected tab.</td></tr><tr><td>Path</td><td>click a parent level</td><td>Go up a level (optional).</td></tr><tr><td>Tabs</td><td>keep tab when switching items</td><td></td></tr><tr><td>Body</td><td>scrolls; header and footer fixed</td><td></td></tr></tbody></table></div>
+          <h3>Accessibility</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Rule</th></tr></thead><tbody><tr><td>Panel</td><td><code>role="dialog"</code> · <code>aria-labelledby</code> = current level</td></tr><tr><td>Focus</td><td>trap inside; <kbd>Esc</kbd> closes</td></tr><tr><td>Prev / next</td><td><code>aria-label</code> “Previous / Next &lt;item&gt;”</td></tr></tbody></table></div>
+        </section>
         <section id="examples">
-          <h2>Configuration examples</h2>
-          <h3>Table drill-down</h3>
-          <div class="bx-example">
-            <div class="bx-example__stage"><div class="rov-mini" style="zoom:0.6"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Whole Wheat Atta</li><li aria-current="page">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div><div class="rov__body"><div class="rov-seg"><span aria-pressed="true">Overview</span><span>By pack size</span><span>By pincode</span><span>By platform</span></div><div class="rov-bar"><span class="rov-search">Search</span><span class="rov-filter">Filters <b>4</b></span><span class="rov-ibtn"></span><span class="rov-ibtn"></span></div><table class="rov-table"><thead><tr><th>SKUs</th><th class="num">Wt. OSA%</th><th class="num">Est. Share</th><th class="num">Wt. Discount</th></tr></thead><tbody><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Whole Wheat Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">76.2%<small>-5.6%</small></td><td class="num">80.5%<small>-6.1%</small></td><td class="num">65.4%<small>-4.3%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Whole Wheat Atta 10 kg <span class="rov-tag">10 kg</span></span></td><td class="num">71.8%<small>-3.2%</small></td><td class="num">77.0%<small>-2.4%</small></td><td class="num">61.9%<small>-5.0%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Multigrain Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">68.4%<small>-1.8%</small></td><td class="num">74.2%<small>-4.7%</small></td><td class="num">58.3%<small>-2.9%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Chakki Atta 1 kg <span class="rov-tag">1 kg</span></span></td><td class="num">82.0%<small>-0.9%</small></td><td class="num">85.6%<small>-1.2%</small></td><td class="num">70.1%<small>-3.6%</small></td></tr><tr><td><span class="rov-sku"><span class="rov-cb"></span><span class="rov-thumb"></span>Sharbati Atta 5 kg <span class="rov-tag">5 kg</span></span></td><td class="num">64.7%<small>-6.4%</small></td><td class="num">69.9%<small>-5.5%</small></td><td class="num">55.2%<small>-7.1%</small></td></tr></tbody></table><div class="rov-pager"><span>Showing <b>1-10</b> of <b>125</b> records</span><span>« ‹ <i aria-current="page">1</i> › »</span></div></div><div class="rov__foot"><button type="button" class="rov__btn" tabindex="-1">Export</button></div></div></div><p>Click a row → see its SKUs.</p></div>
-            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
-              <tr><td>Header</td><td>Breadcrumb + Tabs (heading off)</td><td>“Whole Wheat Atta › Delhi NCR”</td></tr>              <tr><td>Body</td><td>Segmented-control + Table-template</td><td></td></tr>              <tr><td>Footer</td><td>Primary only</td><td>e.g. “Export”</td></tr>
-            </tbody></table>
-          </div>
-          <h3>Trend detail</h3>
-          <div class="bx-example">
-            <div class="bx-example__stage"><div class="rov-mini" style="zoom:0.6"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><ol class="rov__crumb"><li>Whole Wheat Atta</li><li aria-current="page">Delhi NCR</li></ol></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div><div class="rov__tabs" role="tablist"><button type="button" class="rov__tab" role="tab" aria-selected="true" tabindex="-1">Drilldown</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Key Insights</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">My Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Competition Trends</button><button type="button" class="rov__tab" role="tab" aria-selected="false" tabindex="-1">Cross Platform</button></div></div><div class="rov__body"><div class="rov-chips"><span class="rov-chip" aria-pressed="true">MTD</span><span class="rov-chip">1M</span><span class="rov-chip">3M</span><span class="rov-chip">6M</span><span class="rov-chip">1Y</span><span class="rov-chip__div"></span><span class="rov-chip">Custom ⌄</span><span class="rov-chip">Time Step: <b>Weekly</b> ⌄</span></div><div class="rov-card"><div class="rov-chips" data-rov-series="e2"><span class="rov-chip" data-c="pink" data-i="0" aria-pressed="true" role="button" tabindex="0">Offtake</span><span class="rov-chip" data-c="purple" data-i="1" aria-pressed="true" role="button" tabindex="0">Est. Category Share</span><span class="rov-chip" data-c="teal" data-i="2" aria-pressed="true" role="button" tabindex="0">Wt. OSA%</span><span class="rov-chip">DOI</span><span class="rov-chip">Wt. Discount %</span><span class="rov-chip">ASP</span></div><div class="rov-plot"><canvas data-rov-chart="e2" data-multi="1" role="img" aria-label="Metric trend, Jan to Aug 2026"></canvas></div></div></div></div></div><p>A read-only trend chart.</p></div>
-            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
-              <tr><td>Header</td><td>Breadcrumb + Tabs</td><td></td></tr>              <tr><td>Body</td><td>Trends-composition</td><td></td></tr>              <tr><td>Show Modal-Footer</td><td>false</td><td>Nothing to submit</td></tr>
-            </tbody></table>
-          </div>
-          <h3>Simple detail</h3>
-          <div class="bx-example">
-            <div class="bx-example__stage"><div class="rov-mini" style="zoom:0.6"><div class="rov"><div class="rov__head"><div class="rov__top"><div class="rov__titles"><div class="rov__heading"><p class="rov__h">Whole Wheat Atta 5 kg</p><p class="rov__desc">Aashirvaad · Delhi NCR · last 30 days</p></div></div><button type="button" class="rov__close" aria-label="Close" tabindex=-1><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg></button></div></div><div class="rov__body"><div class="rov-kpis"><div class="rov-kpi"><p>Offtake</p><p class="rov-kpi__v">₹4.8L</p><p class="rov-kpi__d">+6.2% vs last month</p></div><div class="rov-kpi"><p>Wt. OSA%</p><p class="rov-kpi__v">76.2%</p><p class="rov-kpi__d rov-kpi__d--neg">-5.6%</p></div><div class="rov-kpi"><p>Est. Category Share</p><p class="rov-kpi__v">18.4%</p><p class="rov-kpi__d">+0.8 pts</p></div></div><p class="rov-sec">Details</p><ul class="rov-list"><li>Brand <b>Aashirvaad</b></li><li>Pack size <b>5 kg</b></li><li>Platforms <b>Blinkit · Zepto · Instamart</b></li><li>Last refreshed <b>7 Oct’26, 09:30</b></li></ul></div></div></div><p>Heading + description, no tabs.</p></div>
-            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
-              <tr><td>Header</td><td>Heading + Description</td><td>Tabs off</td></tr>              <tr><td>Body</td><td>Any content</td><td></td></tr>              <tr><td>Show Modal-Footer</td><td>false</td><td></td></tr>
-            </tbody></table>
-          </div>
+          <h2>Examples</h2>
+          <h3>Drill-down from a table row</h3>
+<div class="docs-demo"><div class="rox-ex"><div class="rox-fit" data-w="620"><div class="rox-fit__in" style="width:620px"><div class="rox-h"><div class="rox-h__top"><div class="rox-h__row"><div class="rox-h__l"><div class="rox-crumb"><span class="rox-lvl">Whole Wheat</span><img class="rox-sep" src="assets/img/overlays/caret-double-right.svg" alt="" width="12" height="12"><span class="rox-lvl">Organic</span><img class="rox-sep" src="assets/img/overlays/caret-double-right.svg" alt="" width="12" height="12"><span class="rox-swg"><span class="rox-sw"><span class="rox-sw__t">Ahmedabad</span><img src="assets/img/overlays/caret-down.svg" alt="" width="12" height="12"></span><span class="rox-swg"><span class="rox-nb"><img src="assets/img/overlays/caret-left.svg" alt="" width="14" height="14"></span><span class="rox-nb"><img src="assets/img/overlays/caret-right.svg" alt="" width="14" height="14"></span></span></span><span class="rox-tag"><span class="rox-tag__at">at</span><span class="rox-mrp">MRP</span></span></div></div><span class="rox-x"><img src="assets/img/overlays/x.svg" alt="" width="14" height="14"></span></div></div><div class="rox-tabs"><span class="rox-tab is-sel">Trends</span><span class="rox-tab">Competition</span><span class="rox-tab">Cross Platform</span></div></div></div></div><p class="docs-demo__caption" style="margin:0;text-align:center">Category → brand → city.</p></div></div><div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Switchable</td><td>Yes</td><td></td></tr><tr><td>Level</td><td>3</td><td></td></tr></tbody></table></div>
+          <h3>Read-only detail</h3>
+<div class="docs-demo"><div class="rox-ex"><div class="rox-fit" data-w="620"><div class="rox-fit__in" style="width:620px"><div class="rox-h rox-h--ro"><div class="rox-h__top"><div class="rox-h__row"><div class="rox-h__l"><div class="rox-crumb"><span class="rox-lvl">Whole Wheat</span><img class="rox-sep" src="assets/img/overlays/caret-double-right.svg" alt="" width="12" height="12"><span class="rox-cur">Organic</span></div></div><span class="rox-x"><img src="assets/img/overlays/x.svg" alt="" width="14" height="14"></span></div></div><div class="rox-tabs"><span class="rox-tab is-sel">Trends</span><span class="rox-tab">Competition</span><span class="rox-tab">Cross Platform</span></div></div></div></div><p class="docs-demo__caption" style="margin:0;text-align:center">Context can’t change.</p></div></div><div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Switchable</td><td>No</td><td></td></tr><tr><td>Show Tag</td><td>false</td><td></td></tr></tbody></table></div>
+          <h3>Generic panel</h3>
+<div class="docs-demo"><div class="rox-ex"><div class="rox-fit" data-w="620"><div class="rox-fit__in" style="width:620px"><div class="rox-h rox-h--normal"><div class="rox-h__top"><div class="rox-h__row"><div class="rox-h__l"><span class="rox-t">Heading</span></div><span class="rox-x"><img src="assets/img/overlays/x.svg" alt="" width="14" height="14"></span></div></div><div class="rox-tabs"><span class="rox-tab is-sel">Trends</span><span class="rox-tab">Competition</span><span class="rox-tab">Cross Platform</span></div></div></div></div><p class="docs-demo__caption" style="margin:0;text-align:center">No path.</p></div></div><div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Header</td><td>Normal-header</td><td></td></tr></tbody></table></div>
         </section>
-
+        <section id="related">
+          <h2>Related components</h2>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>How it’s used</th></tr></thead><tbody><tr><td><a href="docs-bottomsheet.html">Bottom sheet</a></td><td>For wide content, instead of a Right overlay.</td></tr><tr><td><a href="docs-popup.html">Popup</a></td><td>A Modal: a short decision.</td></tr><tr><td><a href="docs-tabs.html">Tabs</a></td><td>Navigation/Primary-tabs (Large) under the header &mdash; Show Tabs.</td></tr><tr><td><a href="docs.html">Buttons</a></td><td>Neutral outlined 28px buttons for ‹ › and close; Action buttons (Cancel · Secondary · Primary) in the Modal-Footer.</td></tr><tr><td><a href="docs-chips.html">Chips, Tags &amp; Legends</a></td><td>SKU-details/MRP standard chip for the “at MRP” tag.</td></tr><tr><td><a href="docs-table.html">Tables</a> &middot; <a href="docs-trends.html">Trends</a> &middot; <a href="docs-messages.html">Message</a> &middot; <a href="docs-segmented.html">Segmented-controls</a></td><td>Preferred body content: Table-template, Trends-composition, Message, Segmented-control.</td></tr><tr><td><a href="docs-checkbox.html">Checkbox</a></td><td>Checkbox-inline in the footer’s free slot.</td></tr></tbody></table></div>
+        </section>
         <section id="source">
           <h2>Source</h2>
-          <p>Taken from the Right Overlay documentation in the
-            <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7288-154513" target="_blank" rel="noopener noreferrer">Copy-of-GC-Design Figma file</a> and the
-            <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=4581-101264" target="_blank" rel="noopener noreferrer">Right overlay library page</a>. Differences from Figma:</p>
-          <ul>
-            <li>The Right-Overlay-Header component is 763 wide; here it’s 760, matching the overlay.</li>
-            <li>The Header fill is a raw #FFFFFF and the border is a style (Default Card Stroke) rather than variables &mdash; flagged ⚠ in the token tables.</li>
-            <li>The “Quick details” and “Simple detail” mock-ups show a breadcrumb, tabs and an empty body although their captions say “Heading + description, no tabs”. Here they follow the captions.</li>
-            <li>Three Don’t mock-ups (wizard, “Are you sure?”, lone Close button) reuse a generic overlay in Figma; here they show the actual problem.</li>
-            <li>The page scrim isn’t part of the component; the live demo uses Neutrals/Black at 24%.</li>
-          </ul>
-          <p>The code equivalent in Storybook is <a href="https://storybook.gobblecube.ai/?path=/docs/overlays-drawerpanel--docs" target="_blank" rel="noopener noreferrer">Overlays / DrawerPanel</a>.</p>
+          <p>Values come from the <strong>Right Overlay &mdash; Documentation</strong> frames on the “Right Overlays” page of the Cube Core Figma file (Anatomy, Property, Color Annotation, Dimensions, API, Usage Guidelines, How to use) and the live <strong>Right overlay</strong>, <strong>Right-overlay-header/Header-with-path</strong>, <strong>Right-overlay-header/Normal-header</strong> and <strong>Modal-Footer</strong> components.</p>
+<p class="docs-note">Where Figma disagrees with itself or leaves gaps: the header masters are 968 wide while the overlay is 760, so every instance is resized (flagged in Figma). Normal-header’s property is “Show tabs” (lower case) where Header-with-path has “Show Tabs”, and its Heading is a text layer rather than a text property (both flagged). The scrim is not part of the component: the Color Annotation recommends Black @ 40%, How to use and the behaviour rules say 35–40%; this site uses 40%. The Dimensions table gives “Prev / next · close: 28 round”, but only the close button is round (pill) &mdash; ‹ › have a 6px radius. The Color Annotation gives the current level as SemiBold 13: that is the switcher chip (Switchable = Yes) and its 13px is a raw size, not a text style; on a read-only path the current level is SemiBold 14 (Body/B2/Semibold). The panel’s 16px radius on the left corners is in the component but not in the Dimensions table. Show Tag is documented for the whole header, but the read-only variants (Switchable = No) have no tag, and in the component set the property is only wired on Switchable = Yes · Level 1 &mdash; Levels 2 and 3 always show the tag. The SKU-details/MRP chip is bound to Accent/Bronze/200 and /700 but renders #CCEFEB / #0C7F72, not the Bronze values on the Color page (#96F7E4 / #00786F). The footer placed in Right overlay shows Primary only (Cancel, Secondary and the free slot are hidden), while the Anatomy lists the full set; Modal-Footer has no API table. In the Usage frame, Do 03 and Don’t 03 use the same picture &mdash; the difference (keeping vs resetting the tab) is behaviour.</p>
         </section>
-<script src="assets/js/right-overlay.js"></script>
-<script src="assets/js/vendor/chart.umd.min.js" defer></script>
-<script defer>
-window.addEventListener('DOMContentLoaded',function(){
-  if(!window.Chart) return;
-  var F="'Cube Rupee', 'DM Sans', system-ui, sans-serif", D={"labels": ["Jan’26", "Feb’26", "Mar’26", "Apr’26", "May’26", "Jun’26", "Jul’26", "Aug’26"], "series": [{"label": "Offtake", "color": "#d6409f", "data": [18, 34, 55, 72, 82, 81, 72, 66]}, {"label": "Est. Category Share", "color": "#8e4ec6", "data": [4, 18, 30, 33, 35, 34, 22, 13]}, {"label": "Wt. OSA%", "color": "#12a594", "data": [8, 24, 44, 59, 66, 64, 60, 58]}]};
-  Chart.defaults.font.family=F; Chart.defaults.font.size=11; Chart.defaults.color='#5f717b';
-  function make(cv){
-    if(cv._c) return; var multi=cv.getAttribute('data-multi')==='1';
-    var ser=multi?D.series:[{label:'Offtake',color:'#025be5',data:D.series[0].data}];
-    cv._c=new Chart(cv,{type:'line',data:{labels:D.labels,datasets:ser.map(function(s){return {label:s.label,data:s.data,borderColor:s.color,
-        backgroundColor:s.color,borderWidth:2,tension:.4,pointRadius:function(c){return c.dataIndex===3?4:0;},pointBackgroundColor:'#fff',pointBorderWidth:2,pointHoverRadius:4};})},
-      options:{responsive:true,maintainAspectRatio:false,animation:false,interaction:{mode:'index',intersect:false},
-        plugins:{legend:{display:false},tooltip:{backgroundColor:'#0f111b',titleColor:'#fff',bodyColor:'#bfc5cf',padding:8,cornerRadius:6,boxWidth:8,boxHeight:8,
-          boxPadding:4,usePointStyle:true,titleFont:{family:F,size:11,weight:'600'},bodyFont:{family:F,size:11},
-          callbacks:{label:function(c){return ' '+c.dataset.label+': '+c.parsed.y+'%';}}}},
-        scales:{x:{grid:{display:false},border:{color:'#e8eaee'}},
-          y:{min:0,max:100,grid:{color:'#eef0f3',borderDash:[3,3]},border:{display:false},ticks:{stepSize:20,callback:function(v){return v+'%';}}}}}});
-    var bar=document.querySelector('[data-rov-series="'+cv.getAttribute('data-rov-chart')+'"]');
-    if(bar) bar.querySelectorAll('[data-i]').forEach(function(ch){
-      function t(){var i=+ch.getAttribute('data-i'),v=cv._c.isDatasetVisible(i);cv._c.setDatasetVisibility(i,!v);cv._c.update();ch.setAttribute('aria-pressed',String(!v));}
-      ch.addEventListener('click',t); ch.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();t();}});
-    });
-  }
-  function all(){document.querySelectorAll('canvas[data-rov-chart]').forEach(function(cv){if(cv.offsetParent!==null) make(cv);});}
-  all(); document.addEventListener('cube:tab',function(){setTimeout(all,0);}); document.addEventListener('cube:overlay',function(){setTimeout(all,0);});
-});
-</script>
       </article>
     </main>
     <div class="docs-rail">
       <aside class="docs-res" aria-label="Resources">
         <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
         <p class="docs-res__title">Cube Core</p>
-        <a href="https://storybook.gobblecube.ai/?path=/docs/overlays-drawerpanel--docs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 1.5 12.6 1a.5.5 0 0 1 .53.5v13a.5.5 0 0 1-.53.5L3 14.5a.5.5 0 0 1-.5-.5V2a.5.5 0 0 1 .5-.5zm6.3 3.2c0-.2.2-.4.4-.4.3 0 .5.1.7.3l.3-.4c-.3-.3-.6-.4-1-.4-.6 0-1 .4-1 .9 0 1 1.5.8 1.5 1.2 0 .2-.2.3-.4.3-.4 0-.6-.2-.8-.4l-.4.4c.3.3.7.5 1.2.5.6 0 1-.4 1-.9 0-1-1.5-.8-1.5-1.2z"/></svg>Storybook</a>
-        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=4581-101264" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5.5 1.5h2.5v4H5.5a2 2 0 0 1 0-4zM8 1.5h2.5a2 2 0 0 1 0 4H8zM5.5 5.5H8v4H5.5a2 2 0 0 1 0-4zM8 7.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM5.5 9.5H8v2a2 2 0 1 1-2.5-1.94z"/></svg>Figma</a>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=4581-101264" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
       </aside>
     <aside class="docs-toc" aria-label="On this page">
       <p class="docs-toc__title">On this page</p>
       <ul>
         <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
         <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#typography">Typography</a></li>
         <li><a href="#properties">Properties</a></li>
-        <li><a href="#examples">Configuration examples</a></li>
+        <li><a href="#api">API and behavior</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#related">Related components</a></li>
         <li><a href="#source">Source</a></li>
-      </ul>
+        </ul>
     </aside>
     </div>
       </div>
@@ -376,5 +303,52 @@ window.addEventListener('DOMContentLoaded',function(){
     });},{rootMargin:'-20% 0px -70% 0px'});
     document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
   }
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
+})();
+</script>
+<script>
+(function(){
+  /* Right-overlay mocks are laid out at a fixed design width (data-w) with the
+     component's true px values, then zoomed to fit their column (data-max caps it). */
+  var fits=[].slice.call(document.querySelectorAll('.rox-fit'));
+  function fitOne(f){var i=f.firstElementChild,w=+f.getAttribute('data-w')||760,mx=+f.getAttribute('data-max')||1,c=f.clientWidth;
+    if(!i||!c)return; i.style.width=w+'px'; i.style.zoom=Math.min(mx,c/w);}
+  function fitAll(){fits.forEach(fitOne);}
+  fitAll();
+  if('ResizeObserver' in window){var ro=new ResizeObserver(function(es){es.forEach(function(e){fitOne(e.target);});});fits.forEach(function(f){ro.observe(f);});}
+  else window.addEventListener('resize',fitAll);
+  /* redraw the anatomy redlines now that the mocks have their final size */
+  window.dispatchEvent(new Event('resize'));
 })();
 </script>
