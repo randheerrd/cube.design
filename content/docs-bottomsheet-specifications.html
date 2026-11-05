@@ -52,13 +52,17 @@
     <details open>
       <summary>Components</summary>
       <ul>
+        <li><a href="docs-accordion.html">Accordion <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-avatar.html">Avatar <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
-        <li hidden><a href="docs-bottomsheet.html" aria-current="page">Bottom sheet</a></li>
+        <li><a href="docs-bottomsheet.html" aria-current="page">Bottom sheet <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-dropdown.html">Dropdown</a></li>
         <li><a href="docs-empty-states.html">Empty States</a></li>
+        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-filters.html">Filters</a></li>
         <li><a href="docs-header.html">Header</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
@@ -74,7 +78,9 @@
           </ul>
         </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-swimlanes.html">Swimlanes</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
         <li><a href="docs-table.html">Tables</a></li>
@@ -82,7 +88,7 @@
         <li><a href="docs-tooltips.html">Tooltips</a></li>
       </ul>
     </details>
-    <details>
+    <details open>
       <summary>Patterns</summary>
       <ul>
         <li><a href="docs-widget.html">Dashboard widget</a></li>
@@ -108,6 +114,7 @@
   </nav>
   <div class="docs-scrim" id="docs-scrim"></div>
 
+  <link rel="stylesheet" href="assets/vendor/phosphor/phosphor.css">
   <!-- ============ Content ============ -->
   <div class="docs-body">
       <div class="docs-split">
@@ -116,10 +123,10 @@
         <p class="docs-title__crumb"><a href="#">Components</a></p>
         <div class="docs-title__head">
           <h1>Bottom sheet</h1>
-          <span class="docs-badge">Stable</span>
-          <span class="docs-meta">Last updated Oct 2026</span>
+          <span class="docs-badge">New</span>
+          <span class="docs-meta">Last updated Nov 2026</span>
         </div>
-        <p class="docs-title__desc">A large panel that slides up from the bottom over a dimmed page, for a deep, wide view of something on the page without leaving it. The <a href="docs-bottomsheet-specifications.html">Specifications tab</a> lists every value.</p>
+        <p class="docs-title__desc">A full-width panel that rises from the bottom over a dimmed page. Use it for a deep, wide view of something the user clicked &mdash; a full table or a side-by-side analysis &mdash; while keeping the page behind it.</p>
       </div>
       <div class="docs-tabs" role="tablist" aria-label="Page sections">
         <a href="docs-bottomsheet.html" role="tab">Guidelines</a>
@@ -135,77 +142,91 @@
         </a>
       </div>
       <article class="docs-content docs-content--inp docs-content--spec">
-
         <section id="dimensions">
           <h2>Dimensions</h2>
-          <p>Read from the components. All values in px, on a 1440 &times; 1024 screen.</p>
+          <p>Read from the components. All values in px.</p>
           <h3>Sheet</h3>
-<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Width</td><td>1440 (full viewport)</td><td></td></tr><tr><td>Height</td><td>800 (&asymp; 78% of a 1024 screen)</td><td>Leave the top of the page visible.</td></tr><tr><td>Corner radius</td><td>0</td><td>Figma recommends 16 on the top corners &mdash; see Source.</td></tr><tr><td>Header</td><td>56 (+38 with tabs)</td><td>Padding Spacing/12 / Spacing/24</td></tr><tr><td>Content</td><td>744</td><td>Scrolls inside.</td></tr><tr><td>Shadow</td><td>0 0 16, black 12%</td><td></td></tr></tbody></table></div>
-          <h3>Panels and parts</h3>
-<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Left panel</td><td>720 &times; 744 &middot; padding 16 / 24 / 24 &middot; gap 20</td><td>Spacing/16, Spacing/24, gap Spacing/20 &middot; right border 1px</td></tr><tr><td>Right panel</td><td>720 &times; 744 &middot; padding 8 / 24 / 24 &middot; gap 20</td><td>Top Spacing/8, bottom Spacing/24; sides 24 and gap 20 are raw in Figma &mdash; use Spacing/24 and Spacing/20</td></tr><tr><td>Undivided</td><td>1440 &times; 744</td><td></td></tr><tr><td>Close button</td><td>32 &times; 32, pill</td><td>14px icon</td></tr><tr><td>Switcher</td><td>32 buttons, 192 dropdown, gap 6</td><td>Corner radius/6 &middot; 8 after the heading and after “for” &middot; dropdown padding Spacing/8, label gap Spacing/4, caret gap Spacing/8</td></tr><tr><td>Heading and description</td><td>18 / 24 SemiBold &middot; 14 / 18 Regular</td><td>Gap 2</td></tr><tr><td>Content heading</td><td>16 / 20 SemiBold &middot; 12 / 16 Regular</td><td>Gap 4</td></tr><tr><td>Tabs</td><td>14 / 18, padding 8 / 10, gap 20</td><td>Spacing/8 / Spacing/10, gap Spacing/20, top Spacing/2 &middot; 2px selection bar</td></tr></tbody></table></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Width</td><td>1440 (full viewport)</td><td></td></tr><tr><td>Height</td><td>800 (&asymp; 78% of a 1024 screen)</td><td>Leave the top of the page visible.</td></tr><tr><td>Corner radius</td><td>0 ⚠</td><td>Figma recommends 16 on the top corners.</td></tr><tr><td>Header</td><td>56 (+38 with tabs)</td><td>Padding 12 / 24.</td></tr><tr><td>Content</td><td>744</td><td>Scrolls inside.</td></tr></tbody></table></div>
+          <h3>Panels</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Left panel</td><td>720 &times; 744 &middot; padding 16 / 24 / 24 &middot; gap 20</td><td>Right border 1px.</td></tr><tr><td>Right panel</td><td>720 &times; 744 &middot; padding 8 / 24 / 24 &middot; gap 20</td><td>Screen-bg-2.</td></tr><tr><td>Undivided</td><td>1440 &times; 744</td><td></td></tr><tr><td>Close button</td><td>32 &times; 32</td><td></td></tr></tbody></table></div>
+          <h3>Parts</h3>
+          <p>Read from the component layers.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Header row</td><td>min height 32 &middot; gap 8</td><td>Heading block &harr; switcher. Close button top-right.</td></tr><tr><td>Heading + description</td><td>gap 2</td><td>Description doesn’t wrap.</td></tr><tr><td>Switcher</td><td>“for”, gap 8 &middot; 32 &times; 32 buttons &middot; 192 &times; 32 dropdown &middot; gap 6</td><td>Radius 6. Dropdown padding 0 / 8, label &harr; value 4, text &harr; caret 8.</td></tr><tr><td>Close button</td><td>32 &times; 32 &middot; radius pill</td><td></td></tr><tr><td>Icons</td><td>14 &times; 14</td><td>CaretLeft, CaretRight, CaretDown, X.</td></tr><tr><td>Content heading</td><td>gap 4</td><td>Heading &harr; description.</td></tr><tr><td>Tabs bar</td><td>38 = 2 top + 36 tab &middot; tab padding 8 / 10 &middot; gap 20</td><td>2px selection bar, 1px bottom line.</td></tr></tbody></table></div>
+          <h3>Visual reference</h3>
+          <p>Sheet over a 1440 &times; 1024 screen.</p>
+<div class="docs-demo"><div class="bsh-fit" data-w="1440"><div class="bsh-fit__in" style="width:1440px"><div class="bsh-screen"><div class="bsh-screen__nav"></div><div class="bsh-screen__page" data-bsh-page><span class="bsh-screen__t">Page content</span></div><div class="bsh-scrim"></div><div class="bsh-dock"><div class="bsh"><div class="bsh-h"><div class="bsh-h__row"><div class="bsh-h__l"><div class="bsh-h__crumb"><div class="bsh-h__txt"><span class="bsh-t">Heading</span></div><div class="bsh-sw"><span class="bsh-sw__for">for</span><span class="bsh-sw__ctl"><span class="bsh-ib"><img src="assets/img/bottomsheet/caret-left.svg" alt="" width="14" height="14"></span><span class="bsh-dd"><span class="bsh-dd__txt"><span class="bsh-dd__l">Label:</span><span class="bsh-dd__v">Value</span></span><img src="assets/img/bottomsheet/caret-down.svg" alt="" width="14" height="14"></span><span class="bsh-ib"><img src="assets/img/bottomsheet/caret-right.svg" alt="" width="14" height="14"></span></span></div></div></div><span class="bsh-x"><img src="assets/img/bottomsheet/x.svg" alt="" width="14" height="14"></span></div></div><div class="bsh-b"><div class="bsh-l"><div class="bsh-ch"><span class="bsh-ch__t">Content Heading</span><span class="bsh-ch__d">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span></div><div class="bsh-slot"></div></div><div class="bsh-r"><div class="bsh-tabs"><span class="bsh-tab is-sel">Tab 1</span><span class="bsh-tab">Tab 2</span></div><div class="bsh-slot"></div></div></div></div></div></div></div></div><p class="docs-demo__caption">1440 &times; 800 on 1440 &times; 1024.</p></div>
         </section>
         <section id="color-tokens">
           <h2>Color tokens</h2>
-          <p>The sheet is the same in every state; the scrim belongs to the screen, not the component.</p>
-<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Token</th><th>Notes</th></tr></thead><tbody><tr><td>Sheet background</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Figma uses the old “Flat White” &mdash; see Source</td></tr><tr><td>Sheet shadow</td><td>0 0 16 &middot; black 12%</td><td></td></tr><tr><td>Header background</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Figma has a raw #FFFFFF</td></tr><tr><td>Header border</td><td>Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee, bottom 1px</td><td></td></tr><tr><td>Left panel border</td><td>Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee, right 1px</td><td>Divides left / right</td></tr><tr><td>Right panel</td><td>Neutrals/Bg/Screen-bg-2 <span class="msg-sw" style="background:#fafbfd"></span>#fafbfd</td><td></td></tr><tr><td>Heading</td><td>Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214</td><td>SemiBold 18</td></tr><tr><td>“for”</td><td>Primary-text/600 <span class="msg-sw" style="background:#515f69"></span>#515f69</td><td>Medium 18</td></tr><tr><td>Description</td><td>Primary-text/700 <span class="msg-sw" style="background:#465058"></span>#465058</td><td>Regular 14 in the header &middot; Regular 12 under the content heading</td></tr><tr><td>Switcher and dropdown border</td><td>Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee</td><td>Carets Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5</td></tr><tr><td>Close button border</td><td>Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td></td></tr><tr><td>Tab, selected</td><td>Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214 + Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5 bar</td><td>Unselected Primary-text/500 <span class="msg-sw" style="background:#5f717b"></span>#5f717b</td></tr><tr><td>Scrim (page behind)</td><td>Neutrals/Black/40 <span class="msg-sw" style="background:rgba(0,0,0,.4)"></span>rgba(0,0,0,.4)</td><td>Not in the component &mdash; see Source</td></tr></tbody></table></div>
+          <p>Tokens read from the components. ⚠ = raw value or old style name in Figma.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Token</th><th>Notes</th></tr></thead><tbody><tr><td>Sheet background</td><td>Flat White ⚠ old name <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Use Neutrals/White/100.</td></tr><tr><td>Sheet shadow</td><td>Elevation/Overlay: 0 0 16 &middot; black 12% <span class="msg-sw" style="background:rgba(0,0,0,.12)"></span>#0000001f</td><td></td></tr><tr><td>Header background</td><td>#FFFFFF ⚠ raw <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Should be Neutrals/White/100.</td></tr><tr><td>Header border</td><td>Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee</td><td>Bottom 1px.</td></tr><tr><td>Left panel border</td><td>Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee</td><td>Right 1px &mdash; divides left / right.</td></tr><tr><td>Right panel</td><td>Neutrals/Bg/Screen-bg-2 <span class="msg-sw" style="background:#fafbfd"></span>#fafbfd</td><td></td></tr><tr><td>Heading</td><td>Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214</td><td>SemiBold 18.</td></tr><tr><td>“for”</td><td>Primary-text/600 <span class="msg-sw" style="background:#515f69"></span>#515f69</td><td>Medium 18.</td></tr><tr><td>Description</td><td>Primary-text/700 <span class="msg-sw" style="background:#465058"></span>#465058</td><td>Regular 14 in the header &middot; Regular 12 under the content heading.</td></tr><tr><td>Content heading</td><td>Black ⚠ raw <span class="msg-sw" style="background:#000000"></span>#000000</td><td>SemiBold 16.</td></tr><tr><td>Switcher buttons, dropdown border</td><td>Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#e8eaee</td><td>Dropdown fill Neutrals/White/100.</td></tr><tr><td>Dropdown label · value</td><td>Secondary-text/700 <span class="msg-sw" style="background:#586473"></span>#586473 &middot; Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214</td><td>“Label:” Medium &middot; “Value” SemiBold.</td></tr><tr><td>Close button</td><td>Neutrals/White/100 fill &middot; Secondary-text/200 border <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td>Pill.</td></tr><tr><td>Icons</td><td><span class="msg-sw" style="background:#025be5"></span>#025be5 carets &middot; <span class="msg-sw" style="background:#586473"></span>#586473 dropdown caret &middot; <span class="msg-sw" style="background:#3e464c"></span>#3e464c X</td><td>Raw SVG fills: Primary/600, Secondary-text/700, Primary-text/800.</td></tr><tr><td>Tab &mdash; selected</td><td>Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214 &middot; bar Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5</td><td>Bold.</td></tr><tr><td>Tab &mdash; unselected</td><td>Primary-text/500 <span class="msg-sw" style="background:#5f717b"></span>#5f717b</td><td>Medium. Bar line Secondary-text/100.</td></tr><tr><td>Scrim (page behind)</td><td>Not in component ⚠</td><td>Recommend Neutrals/Black/40 <span class="msg-sw" style="background:rgba(0,0,0,.4)"></span>#000000 &middot; 40%.</td></tr></tbody></table></div>
+          <h3>Visual reference</h3>
+<div class="bx-options bx-options--two"><div class="bx-opt"><div class="bx-opt__stage"><div class="bsh-fit" data-w="720"><div class="bsh-fit__in" style="width:720px"><div class="bsh" style="height:400px"><div class="bsh-h"><div class="bsh-h__row"><div class="bsh-h__l"><div class="bsh-h__crumb"><div class="bsh-h__txt"><span class="bsh-t">Heading</span></div><div class="bsh-sw"><span class="bsh-sw__for">for</span><span class="bsh-sw__ctl"><span class="bsh-ib"><img src="assets/img/bottomsheet/caret-left.svg" alt="" width="14" height="14"></span><span class="bsh-dd"><span class="bsh-dd__txt"><span class="bsh-dd__l">Label:</span><span class="bsh-dd__v">Value</span></span><img src="assets/img/bottomsheet/caret-down.svg" alt="" width="14" height="14"></span><span class="bsh-ib"><img src="assets/img/bottomsheet/caret-right.svg" alt="" width="14" height="14"></span></span></div></div></div><span class="bsh-x"><img src="assets/img/bottomsheet/x.svg" alt="" width="14" height="14"></span></div></div><div class="bsh-b"><div class="bsh-l"><div class="bsh-ch"><span class="bsh-ch__t">Content Heading</span><span class="bsh-ch__d">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span></div><div class="bsh-slot"></div></div><div class="bsh-r"><div class="bsh-tabs"><span class="bsh-tab is-sel">Tab 1</span><span class="bsh-tab">Tab 2</span></div><div class="bsh-slot"></div></div></div></div></div></div></div><div class="bx-opt__body"><h3>Divided</h3><p>White + grey.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bsh-fit" data-w="720"><div class="bsh-fit__in" style="width:720px"><div class="bsh bsh--full" style="height:400px"><div class="bsh-h"><div class="bsh-h__row"><div class="bsh-h__l"><div class="bsh-h__crumb"><div class="bsh-h__txt"><span class="bsh-t">Heading</span></div><div class="bsh-sw"><span class="bsh-sw__for">for</span><span class="bsh-sw__ctl"><span class="bsh-ib"><img src="assets/img/bottomsheet/caret-left.svg" alt="" width="14" height="14"></span><span class="bsh-dd"><span class="bsh-dd__txt"><span class="bsh-dd__l">Label:</span><span class="bsh-dd__v">Value</span></span><img src="assets/img/bottomsheet/caret-down.svg" alt="" width="14" height="14"></span><span class="bsh-ib"><img src="assets/img/bottomsheet/caret-right.svg" alt="" width="14" height="14"></span></span></div></div></div><span class="bsh-x"><img src="assets/img/bottomsheet/x.svg" alt="" width="14" height="14"></span></div></div><div class="bsh-b"><div class="bsh-l"><div class="bsh-ch"><span class="bsh-ch__t">Content Heading</span><span class="bsh-ch__d">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span></div><div class="bsh-slot"></div></div></div></div></div></div></div><div class="bx-opt__body"><h3>Full</h3><p>White.</p></div></div></div>
+        </section>
+        <section id="typography">
+          <h2>Typography</h2>
+          <p>DM Sans. Text styles read from the components.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Style</th><th>Size / line height</th><th>Weight</th><th>Letter spacing</th></tr></thead><tbody><tr><td>Heading</td><td>Heading/H6</td><td>18 / 24</td><td>600</td><td>0</td></tr><tr><td>“for”</td><td>Heading/H6-Medium</td><td>18 / 24</td><td>500</td><td>0</td></tr><tr><td>Header description</td><td>&mdash;</td><td>14 / 18</td><td>400</td><td>0</td></tr><tr><td>Content heading</td><td>Body/B1/Semibold</td><td>16 / 20</td><td>600</td><td>0</td></tr><tr><td>Content description</td><td>Body/B3/Regular</td><td>12 / 16</td><td>400</td><td>0.1</td></tr><tr><td>Dropdown label</td><td>Body/B3/Medium</td><td>12 / 16</td><td>500</td><td>0.1</td></tr><tr><td>Dropdown value</td><td>Body/B3/Semibold</td><td>12 / 16</td><td>600</td><td>0.1</td></tr><tr><td>Tab</td><td>Body/B2/Medium (Bold when selected)</td><td>14 / 18</td><td>500 &middot; 700</td><td>0</td></tr></tbody></table></div>
         </section>
         <section id="properties">
           <h2>Properties</h2>
           <h3>Bottom-sheet</h3>
-<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Divided</td><td>true | false</td><td>optional</td><td>true</td><td>Left + right panels.</td></tr><tr><td>Tabs</td><td>true | false</td><td>optional</td><td>false</td><td>Left panel tabs.</td></tr><tr><td>Show Heading</td><td>true | false</td><td>optional</td><td>true</td><td>Left panel heading.</td></tr><tr><td>Slot</td><td>Slot</td><td>required</td><td>&mdash;</td><td>Left content. Preferred: Communication/Message, Table-template.</td></tr></tbody></table></div>
+<div class="bx-scroll"><table class="docs-table bx-api"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Divided</td><td>true | false</td><td>optional</td><td>true</td><td>Left + right panels.</td></tr><tr><td>Tabs</td><td>true | false</td><td>optional</td><td>false</td><td>Left panel tabs.</td></tr><tr><td>Show Heading</td><td>true | false</td><td>optional</td><td>true</td><td>Left panel heading.</td></tr><tr><td>Slot</td><td>SLOT</td><td>required</td><td>&mdash;</td><td>Left content. Preferred: Communication/Message, Table-template.</td></tr></tbody></table></div>
           <h3>Bottom-sheet-Header</h3>
-<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Heading</td><td>Text</td><td>required</td><td>“Heading”</td><td></td></tr><tr><td>Switcher</td><td>true | false</td><td>optional</td><td>true</td><td>Context switcher with previous / next.</td></tr><tr><td>Description</td><td>true | false</td><td>optional</td><td>false</td><td></td></tr></tbody></table></div>
+<div class="bx-scroll"><table class="docs-table bx-api"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Heading</td><td>string</td><td>required</td><td>“Heading”</td><td></td></tr><tr><td>Switcher</td><td>true | false</td><td>optional</td><td>true</td><td>Context switcher with prev / next.</td></tr><tr><td>Description</td><td>true | false</td><td>optional</td><td>false</td><td></td></tr></tbody></table></div>
           <h3>Divided panel (“Right Overlay-Divided-Panel”)</h3>
-<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Tabs</td><td>true | false</td><td>optional</td><td>true</td><td></td></tr><tr><td>Slot</td><td>Slot</td><td>required</td><td>&mdash;</td><td>Preferred: Communication/Message, Trends-composition, Table-template.</td></tr></tbody></table></div>
+<div class="bx-scroll"><table class="docs-table bx-api"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Tabs</td><td>true | false</td><td>optional</td><td>true</td><td></td></tr><tr><td>Slot</td><td>SLOT</td><td>required</td><td>&mdash;</td><td>Preferred: Communication/Message, Trends-composition, Table-template.</td></tr></tbody></table></div>
         </section>
         <section id="api">
           <h2>API and behavior</h2>
-          <p>Designers place Bottom-sheet at the bottom of the screen frame over a scrim, set the header, choose Divided and fill the slots. Developers build it as a modal sheet with a focus trap.</p>
+          <p><strong>Designers:</strong> place Bottom-sheet at the bottom of the screen frame over a scrim, set the header, choose Divided, and fill the slots. <strong>Developers:</strong> <code>&lt;BottomSheet title switcher={{label,value,onPrev,onNext}} divided tabs left={…} right={…} onClose /&gt;</code> &mdash; a modal sheet with focus trap.</p>
           <pre class="ic-code"><code>&lt;BottomSheet
-  open={open}
-  onClose={close}            // ×, Esc, scrim click
-  heading="SKU details"
-  switcher={{
-    label: "SKU",
-    value: sku,
-    options: skus,
-    onChange: setSku,        // previous / next / pick
+  title="Category RCA"            // Heading — what the sheet shows
+  switcher={{                     // Switcher (on by default): for ‹ Label: Value ›
+    label, value,
+    onPrev, onNext,               // step through items without closing
   }}
-  divided
-&gt;
-  &lt;BottomSheet.Left heading={sku.name} description="Offtake ₹57.4 L · Wt. OSA% 76.2%"&gt;
-    &lt;Message&gt;Data till 12 May’26&lt;/Message&gt;
-    &lt;TableTemplate rows={rows} /&gt;
-  &lt;/BottomSheet.Left&gt;
-  &lt;BottomSheet.Right tabs={["Trends", "Details"]}&gt;
-    &lt;TrendsComposition metrics={metrics} data={series} /&gt;
-  &lt;/BottomSheet.Right&gt;
-&lt;/BottomSheet&gt;</code></pre>
-<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Rule</th><th>Notes</th></tr></thead><tbody><tr><td>Open</td><td>Slide up from the bottom &middot; 250ms</td><td>Over a 40% black scrim.</td></tr><tr><td>Close</td><td>&times; &middot; Esc &middot; click the scrim</td><td>Return focus to the trigger.</td></tr><tr><td>Switcher</td><td>Previous / next / pick</td><td>Updates content in place; keeps the tab selection.</td></tr><tr><td>Scroll</td><td>Content area only</td><td>Header fixed.</td></tr><tr><td>Focus</td><td>Trap focus; <code>role="dialog"</code></td><td>Labelled by the heading.</td></tr><tr><td>Height</td><td>&asymp; 78% of the viewport</td><td>Keep the page top visible.</td></tr></tbody></table></div>
+  divided                         // default true: left + grey right panel
+  tabs={false}                    // left-panel tabs
+  left={…}                        // Communication/Message, Table-template
+  right={…}                       // Trends-composition, Table-template, Message
+  onClose={close}                 // ×, Esc or a click on the scrim
+/&gt;
+
+&lt;!-- rendered --&gt;
+&lt;div class="scrim"&gt;&lt;/div&gt;                         &lt;!-- black 40% --&gt;
+&lt;div role="dialog" aria-labelledby="bs-title"&gt;    &lt;!-- focus trapped inside --&gt;
+  &lt;header&gt;                                       &lt;!-- fixed --&gt;
+    &lt;h2 id="bs-title"&gt;Category RCA&lt;/h2&gt; for ‹ Label: Value ›
+    &lt;button aria-label="Close"&gt;…&lt;/button&gt;
+  &lt;/header&gt;
+  &lt;div class="content"&gt;…&lt;/div&gt;                    &lt;!-- scrolls --&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Behaviour rules</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Rule</th><th>Notes</th></tr></thead><tbody><tr><td>Open</td><td>slide up from bottom &middot; 250ms</td><td>Over a 40% black scrim.</td></tr><tr><td>Close</td><td>&times; &middot; Esc &middot; click scrim</td><td>Return focus to the trigger.</td></tr><tr><td>Switcher</td><td>prev / next / pick</td><td>Updates content in place; keeps tabs selection.</td></tr><tr><td>Scroll</td><td>content area only</td><td>Header fixed.</td></tr><tr><td>Focus</td><td>trap focus; <code>role="dialog"</code></td><td>Labelled by the heading.</td></tr><tr><td>Height</td><td>~78% of viewport</td><td>Keep page top visible.</td></tr></tbody></table></div>
         </section>
         <section id="examples">
           <h2>Examples</h2>
-<h3>Analysis with supporting data</h3><div class="dw-stage dw-stage--white"><div class="bs-fitwrap"><div class="bs-fit" data-bs-min="760"><div class="bs" style="height:440px"><div class="bs-h"><div class="bs-h__row"><div class="bs-h__l"><div class="bs-h__crumb"><h3 class="bs-t">SKU details</h3><span class="bs-sw"><span class="bs-sw__for">for</span><span class="bs-ib" data-bs-prev aria-label="Previous"><img src="assets/img/bottomsheet/caret-left.svg" alt="" width="14" height="14"></span><span class="bs-dd"><span class="bs-dd__l">SKU:</span><b>Amul Taaza Toned Milk 1 L</b><img src="assets/img/bottomsheet/caret-down.svg" alt="" width="14" height="14"></span><span class="bs-ib" data-bs-next aria-label="Next"><img src="assets/img/bottomsheet/caret-right.svg" alt="" width="14" height="14"></span></span></div></div><span><span class="bs-x"><img src="assets/img/bottomsheet/x.svg" alt="" width="14" height="14"></span></span></div></div><div class="bs-b"><div class="bs-l"><div class="bs-ch"><p class="bs-ch__t">Amul Taaza Toned Milk 1 L</p><p class="bs-ch__d">Offtake ₹57.4 L &middot; Wt. OSA% 76.2%</p></div><div class="bs-slot"><div class="msg msg--white msg--md" role="status"><svg class="msg__ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M8 7.2v3.6M8 5.2v.01"/></svg><div class="msg__txt"><span>Data till 12 May’26</span></div></div><div class="tgr-mini"><div class="tgr-scroll"><table class="tgr-t "><thead><tr><th scope="col" class="tgr-l tgr-sep"><span><span>SKU</span></span></th><th scope="col" class=""><span><span>Offtake</span></span></th></tr></thead><tbody><tr><td class="tgr-l"><span class="tgr-sku"><img src="assets/img/skus/sku-1.png" alt="" width="40" height="40"><span><b>Amul Taaza Toned Milk 1 L</b><span class="tgr-chips"><span class="tgr-chip"><img src="assets/img/table/scales.svg" alt="" width="12" height="12">1 L</span></span></span></span></td><td class=""><span class="tgr-num"><span>₹57.4 L</span><i class="up">+12.3%</i></span></td></tr><tr><td class="tgr-l"><span class="tgr-sku"><img src="assets/img/skus/sku-2.png" alt="" width="40" height="40"><span><b>Amul Butter Pasteurised 500 g</b><span class="tgr-chips"><span class="tgr-chip"><img src="assets/img/table/scales.svg" alt="" width="12" height="12">500 g</span></span></span></span></td><td class=""><span class="tgr-num"><span>₹42.8 L</span><i class="">−3.1%</i></span></td></tr><tr><td class="tgr-l"><span class="tgr-sku"><img src="assets/img/skus/sku-3.png" alt="" width="40" height="40"><span><b>Mother Dairy Classic Curd 400 g</b><span class="tgr-chips"><span class="tgr-chip"><img src="assets/img/table/scales.svg" alt="" width="12" height="12">400 g</span></span></span></span></td><td class=""><span class="tgr-num"><span>₹18.9 L</span><i class="up">+5.6%</i></span></td></tr></tbody></table></div></div></div></div><div class="bs-r"><div class="bs-tabs bs-tabs--r"><span aria-selected="true">Trends</span><span aria-selected="false">Details</span></div><div class="bs-slot"><div class="trd"><div class="trd-card"><div class="trd-sel"><div class="trd-chips"><label class="trd-chip trd-chip--pink"><input type="checkbox" name="bsy" checked>Offtake</label><label class="trd-chip trd-chip--purple"><input type="checkbox" name="bsy" checked>Est. Category Share</label><label class="trd-chip trd-chip--teal"><input type="checkbox" name="bsy" checked>Wt. OSA%</label><label class="trd-chip trd-chip--blue"><input type="checkbox" name="bsy">DOI</label><label class="trd-chip trd-chip--pink"><input type="checkbox" name="bsy">Wt. Discount %</label><label class="trd-chip trd-chip--purple"><input type="checkbox" name="bsy">ASP</label></div></div><div class="trd-plot"><svg viewBox="0 0 680 330" role="img" aria-label="Line chart: Offtake, Est. Category Share, Wt. OSA% by month"><line x1="40" x2="668" y1="290.0" y2="290.0" stroke="#eff2f6" stroke-dasharray="4 4"/><text x="32" y="294.0" text-anchor="end">0%</text><line x1="40" x2="668" y1="234.0" y2="234.0" stroke="#eff2f6" stroke-dasharray="4 4"/><text x="32" y="238.0" text-anchor="end">20%</text><line x1="40" x2="668" y1="178.0" y2="178.0" stroke="#eff2f6" stroke-dasharray="4 4"/><text x="32" y="182.0" text-anchor="end">40%</text><line x1="40" x2="668" y1="122.0" y2="122.0" stroke="#eff2f6" stroke-dasharray="4 4"/><text x="32" y="126.0" text-anchor="end">60%</text><line x1="40" x2="668" y1="66.0" y2="66.0" stroke="#eff2f6" stroke-dasharray="4 4"/><text x="32" y="70.0" text-anchor="end">80%</text><line x1="40" x2="668" y1="10.0" y2="10.0" stroke="#eff2f6" stroke-dasharray="4 4"/><text x="32" y="14.0" text-anchor="end">100%</text><line x1="79.2" x2="79.2" y1="10" y2="290" stroke="#eff2f6" stroke-dasharray="4 4"/><text x="79.2" y="312" text-anchor="middle">Jan’26</text><line x1="157.8" x2="157.8" y1="10" y2="290" stroke="#eff2f6" stroke-dasharray="4 4"/><text x="157.8" y="312" text-anchor="middle">Feb’26</text><line x1="236.2" x2="236.2" y1="10" y2="290" stroke="#eff2f6" stroke-dasharray="4 4"/><text x="236.2" y="312" text-anchor="middle">Mar’26</text><line x1="314.8" x2="314.8" y1="10" y2="290" stroke="#eff2f6" stroke-dasharray="4 4"/><text x="314.8" y="312" text-anchor="middle">Apr’26</text><line x1="393.2" x2="393.2" y1="10" y2="290" stroke="#eff2f6" stroke-dasharray="4 4"/><text x="393.2" y="312" text-anchor="middle">May’26</text><line x1="471.8" x2="471.8" y1="10" y2="290" stroke="#eff2f6" stroke-dasharray="4 4"/><text x="471.8" y="312" text-anchor="middle">Jun’26</text><line x1="550.2" x2="550.2" y1="10" y2="290" stroke="#eff2f6" stroke-dasharray="4 4"/><text x="550.2" y="312" text-anchor="middle">Jul’26</text><line x1="628.8" x2="628.8" y1="10" y2="290" stroke="#eff2f6" stroke-dasharray="4 4"/><text x="628.8" y="312" text-anchor="middle">Aug’26</text><line x1="40" x2="668" y1="290" y2="290" stroke="#dbdfe4"/><path data-series="off" d="M79.2,242.4 C92.3,237.7 131.6,222.3 157.8,214.4 C183.9,206.5 210.1,206.5 236.2,194.8 C262.4,183.1 288.6,162.1 314.8,144.4 C340.9,126.7 367.1,101.9 393.2,88.4 C419.4,74.9 445.6,66.9 471.8,63.2 C497.9,59.5 524.1,59.0 550.2,66.0 C576.4,73.0 615.7,98.7 628.8,105.2" fill="none" stroke="#e60076" stroke-width="2" stroke-linecap="round"/><path data-series="share" d="M79.2,281.6 C92.3,277.9 131.6,265.7 157.8,259.2 C183.9,252.7 210.1,251.7 236.2,242.4 C262.4,233.1 288.6,210.7 314.8,203.2 C340.9,195.7 367.1,199.0 393.2,197.6 C419.4,196.2 445.6,193.4 471.8,194.8 C497.9,196.2 524.1,196.2 550.2,206.0 C576.4,215.8 615.7,245.7 628.8,253.6" fill="none" stroke="#9810fa" stroke-width="2" stroke-linecap="round"/><path data-series="osa" d="M79.2,267.6 C92.3,262.9 131.6,248.0 157.8,239.6 C183.9,231.2 210.1,228.4 236.2,217.2 C262.4,206.0 288.6,187.8 314.8,172.4 C340.9,157.0 367.1,136.0 393.2,124.8 C419.4,113.6 445.6,104.3 471.8,105.2 C497.9,106.1 524.1,126.7 550.2,130.4 C576.4,134.1 615.7,128.1 628.8,127.6" fill="none" stroke="#009966" stroke-width="2" stroke-linecap="round"/></svg></div></div></div></div></div></div></div></div></div></div><div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Divided</td><td>true</td><td>Insight left, trends right.</td></tr><tr><td>Right slot</td><td>Trends-composition</td><td></td></tr></tbody></table></div><h3>Full table</h3><div class="dw-stage dw-stage--white"><div class="bs-fitwrap"><div class="bs-fit" data-bs-min="760"><div class="bs bs--full" style="height:440px"><div class="bs-h"><div class="bs-h__row"><div class="bs-h__l"><div class="bs-h__crumb"><h3 class="bs-t">All SKUs</h3></div></div><span><span class="bs-x"><img src="assets/img/bottomsheet/x.svg" alt="" width="14" height="14"></span></span></div></div><div class="bs-b"><div class="bs-l"><div class="bs-slot"><div class="tgr"><div><div class="tgr-bar"><div class="tgr-bar__l"><label class="tgr-search"><img src="assets/img/table/search.svg" alt="" width="14" height="14">Search</label><span class="tgr-fbtn"><img src="assets/img/table/funnel.svg" alt="" width="14" height="14">Filters<b>4</b></span></div><div class="tgr-bar__r"><button type="button" class="tgr-ib tgr-ib--col" aria-label="Choose columns"><img src="assets/img/table/columns.svg" alt="" width="18" height="18"></button><button type="button" class="tgr-ib" aria-label="Download"><img src="assets/img/table/download.svg" alt="" width="16" height="16"><img src="assets/img/table/caret-down.svg" alt="" width="14" height="14"></button></div></div></div><div class="tgr-frame"><div class="tgr-scroll"><table class="tgr-t"><thead><tr><th scope="col" class="tgr-cb tgr-sep" rowspan="2"><input type="checkbox" aria-label="Select all rows"></th><th scope="col" class="tgr-l tgr-sep" rowspan="2"><span><span>SKUs</span></span></th><th scope="col" class="tgr-sep" rowspan="2"><span><span>Offtake</span><img src="assets/img/table/info.svg" alt="" width="12" height="12"></span></th><th scope="colgroup" colspan="2" class="tgr-c tgr-sep"><span><img class="tgr-logo" src="assets/img/table/blinkit.png" alt="">Blinkit</span></th></tr><tr class="tgr-sub"><th scope="col" class="tgr-sep"><span><span>Wt. OSA%</span><img src="assets/img/table/info.svg" alt="" width="12" height="12"></span></th><th scope="col" class=""><span><span>Est. Cat. Share</span><img src="assets/img/table/info.svg" alt="" width="12" height="12"></span></th></tr></thead><tbody><tr><td class="tgr-cb"><input type="checkbox" aria-label="Select Amul Taaza Toned Milk 1 L"></td><td class="tgr-l tgr-lead"><span class="tgr-sku"><img src="assets/img/skus/sku-1.png" alt="" width="40" height="40"><span><b>Amul Taaza Toned Milk 1 L</b><span class="tgr-chips"><span class="tgr-chip"><img src="assets/img/table/scales.svg" alt="" width="12" height="12">1 L</span></span></span></span></td><td><span class="tgr-num"><span>₹57.4 L</span><i class="up">+12.3%</i></span></td><td><span class="tgr-num"><span>76.2%</span><i class="">−5.6%</i></span></td><td><span class="tgr-num"><span>48.5%</span><i class="up">+2.1%</i></span></td></tr><tr><td class="tgr-cb"><input type="checkbox" aria-label="Select Amul Butter Pasteurised 500 g"></td><td class="tgr-l tgr-lead"><span class="tgr-sku"><img src="assets/img/skus/sku-2.png" alt="" width="40" height="40"><span><b>Amul Butter Pasteurised 500 g</b><span class="tgr-chips"><span class="tgr-chip"><img src="assets/img/table/scales.svg" alt="" width="12" height="12">500 g</span></span></span></span></td><td><span class="tgr-num"><span>₹42.8 L</span><i class="">−3.1%</i></span></td><td><span class="tgr-num"><span>80.5%</span><i class="">−6.1%</i></span></td><td><span class="tgr-num"><span>31.2%</span><i class="">−1.4%</i></span></td></tr><tr><td class="tgr-cb"><input type="checkbox" aria-label="Select Mother Dairy Classic Curd 400 g"></td><td class="tgr-l tgr-lead"><span class="tgr-sku"><img src="assets/img/skus/sku-3.png" alt="" width="40" height="40"><span><b>Mother Dairy Classic Curd 400 g</b><span class="tgr-chips"><span class="tgr-chip"><img src="assets/img/table/scales.svg" alt="" width="12" height="12">400 g</span></span></span></span></td><td><span class="tgr-num"><span>₹18.9 L</span><i class="up">+5.6%</i></span></td><td><span class="tgr-num"><span>65.4%</span><i class="">−4.3%</i></span></td><td><span class="tgr-num"><span>22.7%</span><i class="up">+0.8%</i></span></td></tr></tbody></table></div><div><div class="tgr-foot"><div class="tgr-foot__l">Showing <b>1–3</b> of <b>125</b> records</div><div class="tgr-pages"><span><button type="button" class="tgr-pg" disabled aria-label="First page"><img src="assets/img/table/first.svg" alt=""></button><button type="button" class="tgr-pg" disabled aria-label="Previous page"><img src="assets/img/table/prev.svg" alt=""></button></span><span class="tgr-cur" aria-current="page">1</span><span><button type="button" class="tgr-pg" aria-label="Next page"><img src="assets/img/table/next.svg" alt=""></button><button type="button" class="tgr-pg" aria-label="Last page"><img src="assets/img/table/last.svg" alt=""></button></span></div><div class="tgr-foot__r">Records per page <span class="tgr-rpp">10<img src="assets/img/table/select-caret.svg" alt="" width="14" height="14"></span></div></div></div></div></div></div></div></div></div></div></div></div><div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Divided</td><td>false</td><td>One wide table.</td></tr><tr><td>Slot</td><td>Table-template</td><td></td></tr></tbody></table></div><h3>Step through items</h3><div class="dw-stage dw-stage--white"><div class="bs-fitwrap"><div class="bs-fit" data-bs-min="640"><div class="bs-h bs-h--solo"><div class="bs-h__row"><div class="bs-h__l"><div class="bs-h__crumb"><h3 class="bs-t">SKU details</h3><span class="bs-sw"><span class="bs-sw__for">for</span><span class="bs-ib" data-bs-prev aria-label="Previous"><img src="assets/img/bottomsheet/caret-left.svg" alt="" width="14" height="14"></span><span class="bs-dd"><span class="bs-dd__l">SKU:</span><b>Mother Dairy Classic Curd 400 g</b><img src="assets/img/bottomsheet/caret-down.svg" alt="" width="14" height="14"></span><span class="bs-ib" data-bs-next aria-label="Next"><img src="assets/img/bottomsheet/caret-right.svg" alt="" width="14" height="14"></span></span></div></div><span><span class="bs-x"><img src="assets/img/bottomsheet/x.svg" alt="" width="14" height="14"></span></span></div></div></div></div></div><div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Switcher</td><td>true</td><td>“for ‹ SKU: … ›”</td></tr></tbody></table></div>
+          <h3>Analysis with supporting data</h3>
+<div class="docs-demo"><div class="bsh-fit" data-w="960"><div class="bsh-fit__in" style="width:960px"><div class="bsh"><div class="bsh-h"><div class="bsh-h__row"><div class="bsh-h__l"><div class="bsh-h__crumb"><div class="bsh-h__txt"><span class="bsh-t">Heading</span></div><div class="bsh-sw"><span class="bsh-sw__for">for</span><span class="bsh-sw__ctl"><span class="bsh-ib"><img src="assets/img/bottomsheet/caret-left.svg" alt="" width="14" height="14"></span><span class="bsh-dd"><span class="bsh-dd__txt"><span class="bsh-dd__l">Label:</span><span class="bsh-dd__v">Value</span></span><img src="assets/img/bottomsheet/caret-down.svg" alt="" width="14" height="14"></span><span class="bsh-ib"><img src="assets/img/bottomsheet/caret-right.svg" alt="" width="14" height="14"></span></span></div></div></div><span class="bsh-x"><img src="assets/img/bottomsheet/x.svg" alt="" width="14" height="14"></span></div></div><div class="bsh-b"><div class="bsh-l"><div class="bsh-ch"><span class="bsh-ch__t">Content Heading</span><span class="bsh-ch__d">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span></div><div class="bsh-slot"></div></div><div class="bsh-r"><div class="bsh-tabs"><span class="bsh-tab is-sel">Tab 1</span><span class="bsh-tab">Tab 2</span></div><div class="bsh-slot"><div class="bsh-ph">Trends-composition</div></div></div></div></div></div></div><p class="docs-demo__caption">Divided: insight left, trends right.</p></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Divided</td><td>true</td><td></td></tr><tr><td>Right slot</td><td>Trends-composition</td><td></td></tr></tbody></table></div>
+          <h3>Full table</h3>
+<div class="docs-demo"><div class="bsh-fit" data-w="960"><div class="bsh-fit__in" style="width:960px"><div class="bsh bsh--full"><div class="bsh-h"><div class="bsh-h__row"><div class="bsh-h__l"><div class="bsh-h__crumb"><div class="bsh-h__txt"><span class="bsh-t">Heading</span></div><div class="bsh-sw"><span class="bsh-sw__for">for</span><span class="bsh-sw__ctl"><span class="bsh-ib"><img src="assets/img/bottomsheet/caret-left.svg" alt="" width="14" height="14"></span><span class="bsh-dd"><span class="bsh-dd__txt"><span class="bsh-dd__l">Label:</span><span class="bsh-dd__v">Value</span></span><img src="assets/img/bottomsheet/caret-down.svg" alt="" width="14" height="14"></span><span class="bsh-ib"><img src="assets/img/bottomsheet/caret-right.svg" alt="" width="14" height="14"></span></span></div></div></div><span class="bsh-x"><img src="assets/img/bottomsheet/x.svg" alt="" width="14" height="14"></span></div></div><div class="bsh-b"><div class="bsh-l"><div class="bsh-ch"><span class="bsh-ch__t">Content Heading</span><span class="bsh-ch__d">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span></div><div class="bsh-slot"><div class="bsh-ph">Table-template</div></div></div></div></div></div></div><p class="docs-demo__caption">One wide table.</p></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Divided</td><td>false</td><td></td></tr><tr><td>Slot</td><td>Table-template</td><td></td></tr></tbody></table></div>
+          <h3>Step through items</h3>
+<div class="docs-demo"><div class="bsh-fit" data-w="960"><div class="bsh-fit__in" style="width:960px"><div class="bsh-h bsh-h--solo"><div class="bsh-h__row"><div class="bsh-h__l"><div class="bsh-h__crumb"><div class="bsh-h__txt"><span class="bsh-t">Heading</span></div><div class="bsh-sw"><span class="bsh-sw__for">for</span><span class="bsh-sw__ctl"><span class="bsh-ib"><img src="assets/img/bottomsheet/caret-left.svg" alt="" width="14" height="14"></span><span class="bsh-dd"><span class="bsh-dd__txt"><span class="bsh-dd__l">Label:</span><span class="bsh-dd__v">Value</span></span><img src="assets/img/bottomsheet/caret-down.svg" alt="" width="14" height="14"></span><span class="bsh-ib"><img src="assets/img/bottomsheet/caret-right.svg" alt="" width="14" height="14"></span></span></div></div></div><span class="bsh-x"><img src="assets/img/bottomsheet/x.svg" alt="" width="14" height="14"></span></div></div></div></div><p class="docs-demo__caption">Switcher to move between SKUs.</p></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Switcher</td><td>true</td><td>for ‹ SKU: … ›</td></tr></tbody></table></div>
         </section>
         <section id="related">
           <h2>Related components</h2>
-<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>Relationship</th></tr></thead><tbody><tr><td><a href="docs-overlays.html">Right overlay</a></td><td>For narrow details beside the page. Its divided panel is reused as the sheet’s right half.</td></tr><tr><td><a href="docs-popup.html">Popup</a></td><td>For a short decision in the centre of the screen.</td></tr><tr><td><a href="docs-tabs.html">Tabs</a></td><td>Primary tabs in the header and in each panel.</td></tr><tr><td><a href="docs-dropdown.html">Dropdown</a></td><td>The switcher’s item picker.</td></tr><tr><td><a href="docs-table.html">Tables</a> &middot; <a href="docs-trends.html">Trends</a> &middot; <a href="docs-messages.html">Messages</a></td><td>The preferred slot content.</td></tr></tbody></table></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>How it’s used</th></tr></thead><tbody><tr><td><a href="docs-overlays.html">Right overlay</a></td><td>Narrow details beside the page. The sheet’s right half is still named “Right Overlay-Divided-Panel”.</td></tr><tr><td><a href="docs-popup.html">Popup</a></td><td>A Modal: a short decision in the centre.</td></tr><tr><td><a href="docs-tabs.html">Tabs</a></td><td>Navigation/Primary-tabs in the left panel, the divided panel and under the heading.</td></tr><tr><td><a href="docs-dropdown.html">Dropdown</a> &middot; <a href="docs.html">Buttons</a></td><td>The switcher: Input-fields/Dropdown-field between two Neutral buttons; the close button is a Neutral round icon button.</td></tr><tr><td><a href="docs-table.html">Tables</a> &middot; <a href="docs-trends.html">Trends</a> &middot; <a href="docs-messages.html">Message</a></td><td>Preferred slot content: Table-template, Trends-composition, Communication/Message.</td></tr></tbody></table></div>
         </section>
         <section id="source">
           <h2>Source</h2>
-          <p>Values come from the Bottom sheet Documentation frames in the Cube Core Figma file (Anatomy, Property, Color Annotation, Dimensions, API, Usage Guidelines, How to use) and the live Bottom-sheet, Bottom-sheet-Header and Right Overlay-Divided-Panel components.</p>
-          <p class="docs-note">Where Figma disagrees with itself or has gaps: the sheet uses the old “Flat White” colour and the header a raw #FFFFFF; this site uses Neutrals/White/100 for both. The scrim is not part of the component; Figma recommends Neutrals/Black/40. The corner radius is 0, though Figma recommends 16 on the top corners; this site follows the component. The right half is still named “Right Overlay-Divided-Panel”. The content heading uses the size/18 variable but renders at 16. The API frame leaves the developer component name blank, and the switcher layer is called “City switcher” even though it switches any item. Most spacing is bound to Spacing tokens, but some gaps are raw numbers: the right panel’s side padding (24) and gap (20), the header gaps (8 between heading and switcher, 8 after “for”, 6 between the switcher buttons, 2 between heading and description) and the content heading gap (4). This site uses the same values; bind them to Spacing/24, /20, /8, /6, /2 and /4.</p>
+          <p>Values come from the <strong>Bottom sheet &mdash; Documentation</strong> frames on the “Bottom Sheet /overlays” page of the Cube Core Figma file (Anatomy, Property, Color Annotation, Dimensions, API, Usage Guidelines, How to use) and the live <strong>Bottom-sheet</strong>, <strong>Bottom-sheet-Header</strong> and <strong>Right Overlay-Divided-Panel</strong> components.</p>
+<p class="docs-note">Where Figma disagrees with itself or leaves gaps: the sheet uses the old “Flat White” style and the header a raw #FFFFFF &mdash; both should be Neutrals/White/100. The corner radius is 0, though Figma recommends 16 on the top corners; this site follows the component. The scrim is not part of the component; Figma recommends Neutrals/Black/40. The header anatomy lists Tabs (Primary, Large, indented) and the Dimensions give +38 with tabs, but Bottom-sheet-Header has no Tabs property &mdash; its API lists Heading, Switcher and Description only. The colour table gives Regular 12 for the description; the header description renders Regular 14 / 18, and 12 / 16 is the content-heading description. The content heading is bound to the Size/18 and Line-height/24 variables but renders 16 / 20, in raw black. The anatomy gives the left slot padding as 16 / 24; the Dimensions table and the component use 16 / 24 / 24. Some gaps are raw numbers rather than Spacing tokens: the right panel’s side padding (24) and gap (20), the header gaps (8, 6, 2) and the content heading gap (4). The right half is still named “Right Overlay-Divided-Panel”, and the switcher layer is called “City switcher” although it switches any item.</p>
         </section>
       </article>
-<script>
-(function(){
-  /* Bottom-sheet mocks keep true type sizes; below their minimum width they zoom to fit. */
-  function fit(){document.querySelectorAll('.bs-fit').forEach(function(el){
-    var w=el.parentNode.clientWidth, min=+el.getAttribute('data-bs-min')||760, z=Math.min(1,w/min);
-    el.style.zoom=z; el.style.width=(w/z)+'px';});}
-  fit(); window.addEventListener('resize',fit);
-})();
-</script>
     </main>
     <div class="docs-rail">
       <aside class="docs-res" aria-label="Resources">
@@ -218,6 +239,7 @@
       <ul>
         <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
         <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#typography">Typography</a></li>
         <li><a href="#properties">Properties</a></li>
         <li><a href="#api">API and behavior</a></li>
         <li><a href="#examples">Examples</a></li>
@@ -271,41 +293,53 @@
     });},{rootMargin:'-20% 0px -70% 0px'});
     document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
   }
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
 })();
 </script>
 
 <script>
 (function(){
-  /* At a glance: property toggles, open / close (×, Esc, scrim), switcher, tabs. */
-  var root=document.getElementById('bs-demo'); if(!root) return;
-  var scr=root.querySelector('.bs-screen'), bs=root.querySelector('.bs'), opener=root.querySelector('[data-bs-open]'),
-      pick=root.querySelector('[data-bs-pick]'), skus=[{"n":"Amul Taaza Toned Milk 1 L","o":"₹57.4 L","a":"76.2%"},{"n":"Amul Butter Pasteurised 500 g","o":"₹42.8 L","a":"80.5%"},{"n":"Mother Dairy Classic Curd 400 g","o":"₹18.9 L","a":"65.4%"},{"n":"Britannia Cheese Slices 200 g","o":"₹9.7 L","a":"90.0%"}], i=0;
-  var MAP={divided:['bs--full',true],ltabs:['bs--ltabs',false],heading:['bs--no-heading',true],switcher:['bs--no-switcher',true],desc:['bs--desc',false],htabs:['bs--htabs',false]};
-  function apply(cb){var m=MAP[cb.getAttribute('data-bs-opt')]; bs.classList.toggle(m[0], m[1]?!cb.checked:cb.checked);}
-  root.querySelectorAll('[data-bs-opt]').forEach(function(cb){apply(cb); cb.addEventListener('change',function(){apply(cb);});});
-  skus.forEach(function(s,n){var o=document.createElement('option'); o.value=n; o.textContent=s.n; pick.appendChild(o);});
-  function show(n){i=(n+skus.length)%skus.length; var s=skus[i]; pick.value=i;
-    bs.querySelector('.bs-ch__t').textContent=s.n; bs.querySelector('.bs-ch__d').textContent='Offtake '+s.o+' \u00b7 Wt. OSA% '+s.a;}
-  root.querySelector('[data-bs-prev]').addEventListener('click',function(){show(i-1);});
-  root.querySelector('[data-bs-next]').addEventListener('click',function(){show(i+1);});
-  pick.addEventListener('change',function(){show(+pick.value);});
-  show(0);
-  root.querySelectorAll('.bs [role=tablist]').forEach(function(tl){tl.addEventListener('click',function(e){
-    var b=e.target.closest('[role=tab]'); if(!b) return;
-    tl.querySelectorAll('[role=tab]').forEach(function(t){var on=t===b; t.setAttribute('aria-selected',String(on)); if(on) t.removeAttribute('tabindex'); else t.setAttribute('tabindex','-1');});});});
-  function open(){scr.classList.add('is-open'); bs.removeAttribute('inert'); bs.setAttribute('aria-hidden','false'); bs.focus();}
-  function close(){if(!scr.classList.contains('is-open')) return; scr.classList.remove('is-open'); bs.setAttribute('inert',''); bs.setAttribute('aria-hidden','true'); opener.focus();}
-  scr.classList.add('is-ready');
-  opener.addEventListener('click',open);
-  root.querySelector('[data-bs-close]').addEventListener('click',close);
-  root.querySelector('[data-bs-scrim]').addEventListener('click',close);
-  bs.addEventListener('keydown',function(e){
-    if(e.key==='Escape'){e.preventDefault(); close(); return;}
-    if(e.key!=='Tab') return;
-    var f=[].slice.call(bs.querySelectorAll('button,select,[tabindex="0"]')).filter(function(x){return x.offsetParent!==null&&x.getAttribute('tabindex')!=='-1';});
-    if(!f.length) return; var a=f[0], z=f[f.length-1];
-    if(e.shiftKey&&(document.activeElement===a||document.activeElement===bs)){e.preventDefault(); z.focus();}
-    else if(!e.shiftKey&&document.activeElement===z){e.preventDefault(); a.focus();}
-  });
+  /* Bottom-sheet mocks are laid out at a fixed design width (data-w) with the
+     component's true px values, then zoomed to fit their column. */
+  var fits=[].slice.call(document.querySelectorAll('.bsh-fit'));
+  function fitOne(f){var i=f.firstElementChild,w=+f.getAttribute('data-w')||960,c=f.clientWidth;
+    if(!i||!c)return; i.style.width=w+'px'; i.style.zoom=Math.min(1,c/w);}
+  function fitAll(){fits.forEach(fitOne);}
+  fitAll();
+  if('ResizeObserver' in window){var ro=new ResizeObserver(function(es){es.forEach(function(e){fitOne(e.target);});});fits.forEach(function(f){ro.observe(f);});}
+  else window.addEventListener('resize',fitAll);
+  /* redraw the anatomy redlines now that the mocks have their final size */
+  window.dispatchEvent(new Event('resize'));
 })();
 </script>

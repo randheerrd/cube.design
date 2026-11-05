@@ -1174,37 +1174,37 @@ body[class^="page-docs"],
    (DM Sans throughout; values are the file's own tokens). Dark mode
    falls back to the site's tokens.
    ============================================================ */
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications){
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications){
   --f-panel:var(--docs-nav-bg); --f-line:var(--hairline);
   --f-ink:var(--ink); --f-text:var(--ink-2); --f-mid:var(--ink-2); --f-strong:var(--ink); --f-muted:var(--ink-2); --f-link:var(--docs-link);
 }
-:root:not([data-theme="dark"]) body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications){
+:root:not([data-theme="dark"]) body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications){
   --f-panel:#f5f5f8; --f-line:#e8eaee;
   --f-ink:#101214; --f-text:#515f69; --f-mid:#465058; --f-strong:#373d42; --f-muted:#5f717b; --f-link:#025be5;
 }
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-body,
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-toc{font-family:"Cube Rupee",'DM Sans',var(--font),sans-serif}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-body,
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-toc{font-family:"Cube Rupee",'DM Sans',var(--font),sans-serif}
 
 /* page header */
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-title__crumb{margin:0 0 var(--spacing-16); font-size:12px; line-height:16px; font-weight:500; letter-spacing:.1px}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-title__crumb a{color:var(--f-link)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-title__head{gap:var(--spacing-16); margin:0 0 var(--spacing-16)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-title h1{font-size:36px; line-height:44px; font-weight:600; letter-spacing:-.3px; color:var(--f-ink)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-badge{height:20px; padding:var(--spacing-4) var(--spacing-6); border-radius:4px; font-size:10px; line-height:12px; font-weight:600; letter-spacing:.1px; background:color-mix(in srgb,var(--f-link) 14%,var(--bg)); color:var(--f-link)}
-:root:not([data-theme="dark"]) body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-badge{background:#eaf1ff}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-meta{font-size:12px; line-height:16px; font-weight:400; letter-spacing:.1px; color:var(--f-muted)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-title__desc{max-width:960px; font-size:16px; line-height:20px; font-weight:500; letter-spacing:0; color:var(--f-mid)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a{font-size:14px; line-height:18px; font-weight:500}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a[aria-selected="true"]{font-weight:600}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-title__crumb{margin:0 0 var(--spacing-16); font-size:12px; line-height:16px; font-weight:500; letter-spacing:.1px}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-title__crumb a{color:var(--f-link)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-title__head{gap:var(--spacing-16); margin:0 0 var(--spacing-16)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-title h1{font-size:36px; line-height:44px; font-weight:600; letter-spacing:-.3px; color:var(--f-ink)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-badge{height:20px; padding:var(--spacing-4) var(--spacing-6); border-radius:4px; font-size:10px; line-height:12px; font-weight:600; letter-spacing:.1px; background:color-mix(in srgb,var(--f-link) 14%,var(--bg)); color:var(--f-link)}
+:root:not([data-theme="dark"]) body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-badge{background:#eaf1ff}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-meta{font-size:12px; line-height:16px; font-weight:400; letter-spacing:.1px; color:var(--f-muted)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-title__desc{max-width:960px; font-size:16px; line-height:20px; font-weight:500; letter-spacing:0; color:var(--f-mid)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a{font-size:14px; line-height:18px; font-weight:500}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a[aria-selected="true"]{font-weight:600}
 
 /* right rail */
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-res__title{margin:var(--spacing-8) 0 var(--spacing-8); font-size:14px; line-height:18px; font-weight:600; color:var(--f-ink)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-res a{gap:var(--spacing-8); padding:var(--spacing-4) 0; font-size:12px; line-height:16px; font-weight:500; letter-spacing:.1px; color:var(--f-link)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-toc{border-left:0; padding-left:0}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-toc__title{margin:0 0 var(--spacing-8); font-size:11px; line-height:14px; font-weight:600; letter-spacing:.2px; color:var(--f-muted)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-toc li a{margin-left:0; padding:var(--spacing-4) var(--spacing-8) var(--spacing-4) var(--spacing-12); font-size:12px; line-height:16px; font-weight:500; letter-spacing:.1px; color:var(--f-muted); border-left:2px solid var(--f-line)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-toc li a:hover{color:var(--f-ink)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-toc li a[aria-current="true"]{font-weight:600; color:var(--f-link); border-left-color:var(--f-link)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-res__title{margin:var(--spacing-8) 0 var(--spacing-8); font-size:14px; line-height:18px; font-weight:600; color:var(--f-ink)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-res a{gap:var(--spacing-8); padding:var(--spacing-4) 0; font-size:12px; line-height:16px; font-weight:500; letter-spacing:.1px; color:var(--f-link)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-toc{border-left:0; padding-left:0}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-toc__title{margin:0 0 var(--spacing-8); font-size:11px; line-height:14px; font-weight:600; letter-spacing:.2px; color:var(--f-muted)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-toc li a{margin-left:0; padding:var(--spacing-4) var(--spacing-8) var(--spacing-4) var(--spacing-12); font-size:12px; line-height:16px; font-weight:500; letter-spacing:.1px; color:var(--f-muted); border-left:2px solid var(--f-line)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-toc li a:hover{color:var(--f-ink)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-toc li a[aria-current="true"]{font-weight:600; color:var(--f-link); border-left-color:var(--f-link)}
 
 /* article type */
 .docs-content--inp h2{color:var(--f-ink); letter-spacing:0}
@@ -1288,26 +1288,26 @@ body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="pag
    INPUTS — page frame as in the Figma page: one 720px column
    (title, tabs, article) and a 220px right rail 64px away.
    ============================================================ */
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-body{padding:0 var(--spacing-64)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-split{grid-template-columns:minmax(0,960px) 220px; gap:var(--spacing-64); padding-top:var(--spacing-40)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-main{max-width:960px; padding:0 0 96px}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail{position:sticky; top:calc(var(--docs-header) + 0px); align-self:start; padding-top:var(--spacing-40); display:flex; flex-direction:column; gap:var(--spacing-40)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail .docs-res{padding:0; gap:0}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail .docs-toc{position:static; margin:0; padding:0}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs{margin:var(--spacing-40) 0 var(--spacing-40)}
-@media (max-width:1200px){body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-split{grid-template-columns:minmax(0,1fr)}body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail .docs-toc{display:none}}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-body{padding:0 var(--spacing-64)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-split{grid-template-columns:minmax(0,960px) 220px; gap:var(--spacing-64); padding-top:var(--spacing-40)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-main{max-width:960px; padding:0 0 96px}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail{position:sticky; top:calc(var(--docs-header) + 0px); align-self:start; padding-top:var(--spacing-40); display:flex; flex-direction:column; gap:var(--spacing-40)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail .docs-res{padding:0; gap:0}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail .docs-toc{position:static; margin:0; padding:0}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs{margin:var(--spacing-40) 0 var(--spacing-40)}
+@media (max-width:1200px){body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-split{grid-template-columns:minmax(0,1fr)}body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail .docs-toc{display:none}}
 
 /* Inputs tabs — 34px row, 12px labels, 2px blue underline (Figma "Tabs") */
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs{height:34px; gap:var(--spacing-20); margin:var(--spacing-40) 0; padding:0; align-items:flex-start; border-bottom:1px solid var(--f-line); overflow:visible}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a{padding:var(--spacing-8) 0 var(--spacing-8); margin-bottom:-1px; height:34px; box-sizing:border-box; font-size:12px; line-height:16px; font-weight:500; letter-spacing:.1px; color:var(--f-muted); border-bottom:2px solid transparent}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a:hover{color:var(--f-ink)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a[aria-selected="true"]{font-weight:600; color:var(--f-ink); border-bottom-color:var(--f-link)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a[target="_blank"] svg{display:none}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a[aria-disabled="true"]{color:#b5b5b5; gap:var(--spacing-4)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a[aria-disabled="true"] svg{width:12px; height:12px; opacity:1; fill:#b5b5b5; stroke:none}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs{height:34px; gap:var(--spacing-20); margin:var(--spacing-40) 0; padding:0; align-items:flex-start; border-bottom:1px solid var(--f-line); overflow:visible}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a{padding:var(--spacing-8) 0 var(--spacing-8); margin-bottom:-1px; height:34px; box-sizing:border-box; font-size:12px; line-height:16px; font-weight:500; letter-spacing:.1px; color:var(--f-muted); border-bottom:2px solid transparent}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a:hover{color:var(--f-ink)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a[aria-selected="true"]{font-weight:600; color:var(--f-ink); border-bottom-color:var(--f-link)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a[target="_blank"] svg{display:none}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a[aria-disabled="true"]{color:#b5b5b5; gap:var(--spacing-4)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a[aria-disabled="true"] svg{width:12px; height:12px; opacity:1; fill:#b5b5b5; stroke:none}
 
 /* Measured against the Figma renders, automatic optical sizing matches best */
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-body,body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-toc{font-variation-settings:normal}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-body,body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-toc{font-variation-settings:normal}
 /* label: required asterisk sits 2px from the text */
 .docs-content--inp .field__label{gap:var(--spacing-2)}
 .docs-content--inp .docs-demo > .docs-demo__caption{margin:0}
@@ -1359,23 +1359,23 @@ body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="pag
 .docs-content--inp ul li{position:relative; padding-left:var(--spacing-16)}
 .docs-content--inp ul li::before{content:""; position:absolute; left:2px; top:7px; width:4px; height:4px; border-radius:50%; background:var(--f-mid)}
 .docs-content--inp .field--textarea.field--md .field__box{height:64px; min-height:64px}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a[aria-disabled="true"]{flex-direction:row-reverse; justify-content:flex-end}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a[aria-disabled="true"]{flex-direction:row-reverse; justify-content:flex-end}
 .docs-content--inp ul li{padding-left:var(--spacing-18)}
 .docs-content--inp ul li::before{left:2px}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a{padding:9px 0 7px}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a{padding:9px 0 7px}
 .docs-content--inp #validation .docs-table th:last-child,.docs-content--inp #validation .docs-table td:last-child,
 .docs-content--inp #behavior .docs-table th:last-child,.docs-content--inp #behavior .docs-table td:last-child{padding-left:0}
 /* label sub-component block uses 12px gaps (Figma) */
 .docs-content--inp #anatomy h3 + p{margin-bottom:var(--spacing-12)}
 .docs-content--inp #anatomy h3 ~ .bx-anatomy{margin:var(--spacing-12) 0 var(--spacing-12)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a:first-child{padding-left:var(--spacing-1)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-tabs a:first-child{padding-left:var(--spacing-1)}
 
 /* right rail — Cube Core block: 24px icon, 10px rhythm, book icon links */
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail .docs-res{display:flex; flex-direction:column; gap:var(--spacing-10); align-items:flex-start}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-res__icon svg{color:#5f717b}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail .docs-res__title{margin:0}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail .docs-res a{padding:0; height:16px}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-res__icon{display:block; width:24px; height:24px; line-height:0}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail .docs-res{display:flex; flex-direction:column; gap:var(--spacing-10); align-items:flex-start}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-res__icon svg{color:#5f717b}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail .docs-res__title{margin:0}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail .docs-res a{padding:0; height:16px}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-res__icon{display:block; width:24px; height:24px; line-height:0}
 .docs-content--inp .field--lg .field__req{font-size:14px; line-height:18px}
 .docs-content--inp .field--lg .field__toprow{min-height:18px}
 
@@ -1689,7 +1689,7 @@ body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="pag
    16px gutter, tables scroll inside their card, anatomy fits.
    ============================================================ */
 @media (max-width:760px){
-  body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-body{padding:0 var(--spacing-16)}
+  body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-body{padding:0 var(--spacing-16)}
   .docs-content--inp .bx-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
   .docs-content--inp .bx-scroll > .docs-table,.docs-content--inp .bx-scroll--attached > .docs-table{min-width:560px}
   .docs-content--inp .bx-anatomy{padding:56px var(--spacing-12); overflow:hidden}
@@ -2996,6 +2996,10 @@ span.tgl{cursor:default}
 .docs-nav .docs-nav__sub li a::before{content:""; position:absolute; left:44px; top:50%; width:9px; height:10px; margin-top:-8px;
   border-left:1.5px solid var(--ink-3); border-bottom:1.5px solid var(--ink-3); opacity:.7}
 .docs-nav__group:has(a[aria-current="page"]) > .docs-nav__parent{color:var(--ink); font-weight:500}
+/* "New" tag on recently added pages. */
+.docs-nav__new{display:inline-flex; align-items:center; margin-left:var(--spacing-6); padding:var(--spacing-2) var(--spacing-6); border-radius:4px;
+  font-size:10px; line-height:12px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; vertical-align:1px;
+  background:color-mix(in srgb, var(--docs-link) 14%, var(--bg)); color:var(--docs-link)}
 
 /* ---- page-to-page: a quick cross-fade instead of a hard cut; the header
    and side nav are named so they stay put while the content fades. ---- */
@@ -4087,3 +4091,1065 @@ button.flt-ne{cursor:pointer}
 .docs-dodont--stack .docs-dodont__stage:has(.flt-p){overflow:hidden; justify-content:flex-start}
 .docs-dodont--stack .docs-dodont__stage .flt-p,.docs-dodont--stack .docs-dodont__stage .flt-p__ts{flex-wrap:nowrap}
 .docs-dodont--stack .flt-card{min-width:420px}
+
+/* ===== Accordion docs ===== */
+/* ============================================================
+   ACCORDION — docs-accordion + docs-accordion-specifications
+   Values read from the Cube Core Figma component (Accordion, node 7628:52589).
+   Product colours are fixed; stages stay light in dark mode (docs.css).
+   ============================================================ */
+
+/* ---- the component ---------------------------------------------------- */
+.acd-item{
+  --acd-line:#cad2d7;      /* Primary-text/200 */
+  --acd-title:#101214;     /* Primary-text/950 */
+  --acd-desc:#3e464c;      /* Primary-text/800 */
+  --acd-icon:#101214;      /* text/text-primary (16px icons) */
+  --acd-gap:12px;
+  position:relative; box-sizing:border-box; display:flex; flex-direction:column;
+  width:520px; max-width:100%; padding:12px;
+  background:transparent; color:var(--acd-title);
+  font-family:"Cube Rupee",'DM Sans',sans-serif; text-align:left;
+  -webkit-font-smoothing:antialiased;
+}
+.acd-item *,.acd-item *::before,.acd-item *::after{box-sizing:border-box}
+.acd-item--fill{width:100%}
+.acd-item--bordered,.acd-item--prominent{border:1px solid var(--acd-line); border-radius:8px}
+.acd-item--underline{border-bottom:1px solid var(--acd-line); border-radius:0}
+.acd-item--prominent{--acd-gap:16px}
+
+/* header: the whole row is the toggle */
+.acd-item__head{
+  display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
+  width:100%; margin:0; padding:0; border:0; background:none; color:inherit;
+  font:inherit; text-align:left; cursor:pointer; -webkit-tap-highlight-color:transparent;
+}
+div.acd-item__head{cursor:default}
+.acd-item__head:focus{outline:none}
+.acd-item__head:focus-visible{outline:2px solid #025be5; outline-offset:4px; border-radius:4px}
+.acd-item--prominent > .acd-item__head{align-items:center}
+.acd-item__title{
+  min-width:0; margin:0; font-size:12px; line-height:16px; font-weight:600; letter-spacing:.1px;
+  color:var(--acd-title); overflow-wrap:anywhere;
+}
+.acd-item--prominent > .acd-item__head .acd-item__title{font-size:16px; line-height:20px; letter-spacing:0}
+
+/* toggle icon (Bordered + / −, Underline caret) */
+.acd-item__icon{
+  flex:none; display:grid; place-items:center; width:16px; height:16px;
+  font-size:16px; line-height:1; color:var(--acd-icon);
+}
+.acd-item__icon i{display:block; font-size:16px; line-height:1}
+/* Prominent: Neutral Outlined round icon button, 28px, 14px caret */
+.acd-item__btn{
+  flex:none; display:grid; place-items:center; width:28px; height:28px;
+  border:1px solid #dbdfe4; border-radius:100px; background:#fff; color:#3e464c;
+}
+.acd-item__btn i{display:block; font-size:14px; line-height:1}
+/* interactive accordions carry both glyphs; .acd-open picks one */
+.acd-item:not(.acd-open) .acd-item__on,
+.acd-item.acd-open .acd-item__off{display:none}
+
+/* panel: collapses to 0 height (height 150–200ms ease) */
+.acd-item__panel{display:grid; grid-template-rows:1fr; transition:grid-template-rows .18s ease, visibility 0s linear 0s}
+.acd-item__inner{min-height:0; overflow:hidden}
+.acd-item__body{display:flex; flex-direction:column; gap:var(--acd-gap); padding-top:var(--acd-gap)}
+.acd-item:not(.acd-open) > .acd-item__panel{grid-template-rows:0fr; visibility:hidden; transition:grid-template-rows .18s ease, visibility 0s linear .18s}
+@media (prefers-reduced-motion:reduce){.acd-item__panel,.acd-item:not(.acd-open) > .acd-item__panel{transition:none}}
+
+.acd-item__rule{display:block; height:0; margin:0; border:0; border-top:1px solid var(--acd-line)}
+.acd-item .acd-item__desc,.acd-item .acd-item__slot-text{
+  margin:0; font-size:12px; line-height:16px; font-weight:500; letter-spacing:.1px; color:var(--acd-desc);
+  font-variation-settings:"opsz" 14;
+}
+.docs-content .acd-item p{max-width:none}
+.acd-item__slot{display:flex; flex-wrap:wrap; gap:12px; align-items:stretch; min-width:0}
+.acd-item__slot > .acd-item__slot-text{flex:1 1 0; min-width:0}
+
+/* ---- slot content used in the Prominent examples (subscription cards) --- */
+.acd-card{
+  position:relative; flex:1 1 0; min-width:200px; overflow:hidden;
+  display:flex; flex-direction:column; gap:4px; padding:4px 4.5px 2px 5px;
+  border:1px solid #eaf1ff; border-radius:12px; box-shadow:0 0 2px rgba(1,48,127,.2);
+  background:linear-gradient(180deg,#f4f7ff 0%,#fff 100%);
+}
+/* illustration: 447 × 155 at full size (card 460.5 × 318); scales down in narrower cards */
+.acd-card__art{display:block; align-self:center; width:100%; max-width:447px; height:auto}
+.acd-card__panel{
+  position:relative; display:flex; flex-direction:column; gap:16px; padding:10px;
+  border-radius:8px; background:#fff; filter:drop-shadow(0 0 3px rgba(0,49,158,.16));
+}
+.acd-card .acd-card__name{margin:0 0 8px; font-size:14px; line-height:18px; font-weight:600; color:#101214}
+.acd-card .acd-card__text{margin:0; font-size:12px; line-height:16px; font-weight:400; letter-spacing:.1px; color:#363e45; font-variation-settings:"opsz" 14}
+.acd-card__foot{display:flex; flex-direction:column; gap:10px}
+.acd-card__status{display:flex; align-items:center; gap:4px; font-size:11px; line-height:14px; letter-spacing:.2px; color:#515f69}
+.acd-card__status > i{font-size:14px; line-height:1; color:#46a758}
+.acd-plat{display:inline-flex; align-items:center; isolation:isolate}
+.acd-plat img{display:block; width:16px; height:16px; margin-right:-3px; border:.8px solid #e7eef9; border-radius:100px; object-fit:cover}
+.acd-plat img:last-child{margin-right:0}
+.acd-plat img:nth-child(1){z-index:3}
+.acd-plat img:nth-child(2){z-index:2}
+.acd-card__cta{
+  display:flex; align-items:center; justify-content:center; height:32px; padding:0 12px;
+  border:1px solid #74a1f8; border-radius:6px; background:#fff;
+  font:600 12px/16px "Cube Rupee",'DM Sans',sans-serif; letter-spacing:.1px; color:#025be5;
+}
+
+/* ---- docs layout helpers ---------------------------------------------- */
+.acd-stack{display:flex; flex-direction:column; gap:8px; width:520px; max-width:100%}
+.acd-stack--flush{gap:0}
+.acd-stack > .acd-item{width:100%}
+
+/* playground */
+.acd-play__sep{width:1px; align-self:stretch; background:var(--f-line,var(--hairline))}
+.acd-play__stage{display:flex; justify-content:center; width:100%; padding:var(--spacing-24,24px) 0 var(--spacing-8,8px)}
+
+/* anatomy: Bordered / Underline enlarged (Figma draws them at 2×), Prominent at 1× */
+.bx-anatomy:has(.acd-item){padding:var(--spacing-72,72px) 56px}
+.bx-anatomy:has(.acd-item) .bx-anatomy__zoom{transform:none; width:100%; display:flex; justify-content:center}
+.acd-z{width:min(520px,100%)}
+.acd-z--zoom{zoom:1.15}
+.acd-z--wide{width:100%}
+.acd-z .acd-item{width:100%}
+.acd-anat-line{position:absolute; left:0; right:0; bottom:-1px; height:1px; pointer-events:none}
+
+/* option tiles + do/don’t stages. The accordion has no fill: show it on a flat surface (as the Figma previews do), not the dotted grid */
+.docs-content .bx-opt__stage:has(.acd-item):not(.docs-stage--dark),.docs-content .docs-dodont__stage:has(.acd-item){padding:var(--spacing-24,24px) var(--spacing-16,16px); background-image:none}
+.docs-content .bx-opt__stage:has(.acd-item):not(.docs-stage--dark){background-color:var(--f-panel,#f5f5f8)}
+.docs-content .docs-dodont__card--do .docs-dodont__stage:has(.acd-item){background-color:#f4f9f5}
+.docs-content .docs-dodont__card--dont .docs-dodont__stage:has(.acd-item){background-color:#fdf6f6}
+.bx-options:has(.acd-item) .bx-opt__stage{flex:1 0 auto}
+.bx-opt__stage .acd-item,.bx-opt__stage .acd-stack,.docs-dodont__stage .acd-item,.docs-dodont__stage .acd-stack{width:100%}
+.bx-opt__stage .acd-stack,.docs-dodont__stage .acd-stack{max-width:520px}
+.bx-opt__stage > .acd-item{max-width:520px}
+.docs-dodont__stage:has(.acd-item){min-height:200px; flex-direction:column}
+
+/* Common layouts: accordions fill the white mock */
+.bx-mock .acd-item,.bx-mock .acd-stack{width:100%; max-width:none}
+
+/* spec: visual reference rows — label, then the accordion at 1x */
+.acd-ref{display:flex; flex-direction:column; gap:var(--spacing-20,20px); width:100%; max-width:660px; margin:0 auto}
+.acd-ref__row{display:grid; grid-template-columns:110px minmax(0,520px); gap:var(--spacing-16,16px); align-items:start}
+.acd-ref__lab{display:flex; flex-direction:column; gap:2px; padding-top:var(--spacing-12,12px)}
+.acd-ref__lab b{font-size:13px; font-weight:600; color:#101214}
+.acd-ref__lab small{font:500 11px/1.4 ui-monospace,"SF Mono",Menlo,monospace; color:#5f6b76}
+.acd-ref .acd-item{width:100%}
+@media (max-width:640px){.acd-ref__row{grid-template-columns:minmax(0,1fr); gap:var(--spacing-6,6px)}.acd-ref__lab{flex-direction:row; gap:8px; padding-top:0}}
+.docs-demo:has(> .acd-ref),.docs-demo:has(> .acd-wide),.docs-demo:has(> .acd-stack){justify-content:center}
+.acd-wide{width:100%; display:flex; justify-content:center}
+.acd-wide > .acd-item{width:100%}
+.acd-item__body:empty{display:none}
+
+/* narrow screens: give the slot cards a full row each */
+@media (max-width:640px){
+  .acd-card{flex-basis:100%}
+}
+
+/* ===== Avatar docs ===== */
+/* =====================================================================
+   Avatar — live replicas of the Figma components (Cube Core, Avatar page):
+   Avatar/single (Size 36–12 × Roundness), Avatar/group (stack of 6) and
+   the private _Avatar-base content (image · initials · Placeholder).
+   Product colours, fixed regardless of the site theme.
+   ===================================================================== */
+
+/* ---- Avatar/single ----
+   Clipped frame. Roundness = No is a rounded square whose radius steps
+   with size (6 at 36–32, 4 at 28–20, 2 at 16–12); Roundness = Yes is a
+   pill (radius 100). */
+.av{
+  position:relative; display:inline-flex; flex:none; align-items:center; justify-content:center;
+  box-sizing:border-box; width:36px; height:36px; overflow:hidden; border-radius:6px;
+  vertical-align:middle; font-family:'DM Sans',var(--font),sans-serif;
+}
+.av--32{width:32px; height:32px; border-radius:6px}
+.av--28{width:28px; height:28px; border-radius:4px}
+.av--24{width:24px; height:24px; border-radius:4px}
+.av--20{width:20px; height:20px; border-radius:4px}
+.av--16{width:16px; height:16px; border-radius:2px}
+.av--12{width:12px; height:12px; border-radius:2px}
+.av.av--round{border-radius:100px}
+
+/* ---- _Avatar-base content ---- */
+/* image: photo or logo, cropped to fill */
+.av__img{display:block; width:100%; height:100%; object-fit:cover}
+/* initials: Primary/600 letters on Primary/100. In Figma the letters are a
+   fixed-size outlined glyph (16.2 × 9.8, i.e. 14px caps) that does not
+   scale with the avatar — so it is clipped at 16 and 12, as here. */
+.av--initials{background:#eaf1ff; color:#025be5; font-size:14px; line-height:1; font-weight:600; letter-spacing:0; white-space:nowrap}
+/* Placeholder: Building icon (Regular, 20px, #515f69) on Steel Blue/100 */
+.av--ph{background:#f1f6fd}
+.av__ic{display:block; flex:none; width:20px; height:20px}
+/* Not a component — the "empty grey square" from the Don'ts. */
+.av--empty{background:#e6eaf0}
+
+/* ---- Avatar/group ----
+   Six singles, −6px overlap, 1px white ring, first avatar on top. */
+.av-group{display:inline-flex; flex:none; align-items:center; isolation:isolate; vertical-align:middle}
+.av-group > .av{border:1px solid #fff; margin-right:-6px}
+.av-group > .av:last-child{margin-right:0}
+.av-group > .av:nth-child(1){z-index:6}
+.av-group > .av:nth-child(2){z-index:5}
+.av-group > .av:nth-child(3){z-index:4}
+.av-group > .av:nth-child(4){z-index:3}
+.av-group > .av:nth-child(5){z-index:2}
+.av-group > .av:nth-child(6){z-index:1}
+
+/* ---- In-context card (Figma "In context" / usage frames) ----
+   White, 1px #e3e6ea, radius 10, padding 14/16, gap 12. */
+.av-card{
+  display:inline-flex; align-items:center; gap:12px; padding:14px 16px; box-sizing:border-box;
+  border:1px solid #e3e6ea; border-radius:10px; background:#fff; color:#1a1a1f;
+  font-family:'DM Sans',var(--font),sans-serif; line-height:normal; text-align:left; white-space:nowrap;
+}
+.av-card__who{display:flex; flex-direction:column; gap:2px; min-width:0}
+.av-card__name{font-size:14px; font-weight:600; color:#1a1a1f}
+.av-card__mail{font-size:12px; font-weight:400; color:#586473}
+.av-card__label{font-size:14px; font-weight:500; color:#1a1a1f}
+.av-card__label--sm{font-size:11px}
+.av-card--pair{gap:24px}
+.av-row{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:12px 24px}
+.av-row--tight{gap:12px}
+
+/* ---- Enlarged demos ----
+   Figma shows the parts at 2–4×. Zoom keeps text and images live; it
+   steps down when the box is narrow (container queries). */
+.av-cq{container-type:inline-size}
+.av-zoom{zoom:1}
+.av-zoom--3,.av-zoom--4{zoom:1.5}
+.av-zoom--x2{zoom:2}
+@container (min-width:200px){.av-zoom--2{zoom:1.5}}
+@container (min-width:340px){.av-zoom--x2{zoom:3}.av-zoom--3{zoom:2}.av-zoom--4{zoom:1.5}}
+@container (min-width:440px){.av-zoom--2{zoom:2}.av-zoom--x2{zoom:4}.av-zoom--3{zoom:3}.av-zoom--4{zoom:2}}
+@container (min-width:640px){.av-zoom--4{zoom:3}}
+@container (min-width:840px){.av-zoom--4{zoom:4}}
+
+/* Anatomy rows */
+.av-ana-row{display:flex; align-items:center; justify-content:center; gap:48px}
+@container (max-width:480px){.av-ana-row{gap:24px}}
+
+/* ---- Size ladder (all seven sizes in one row, with labels) ---- */
+.av-ladder{display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:center; gap:20px 24px}
+.av-ladder figure{margin:0; display:flex; flex-direction:column; align-items:center; gap:8px}
+.av-ladder figcaption{font-family:'DM Sans',var(--font),sans-serif; font-size:11px; line-height:14px; color:var(--f-muted,var(--ink-2))}
+.av-ladder--col{flex-direction:column; align-items:flex-start; gap:12px}
+.av-ladder--col figure{flex-direction:row; gap:12px}
+.av-ladder--col figcaption{min-width:28px; text-align:right}
+
+/* ---- Visual-reference tiles (Specifications) ---- */
+.av-tiles{display:flex; flex-wrap:wrap; gap:12px; width:100%}
+.av-tile{flex:1 1 160px; margin:0; display:flex; flex-direction:column; align-items:center; gap:8px; min-width:0}
+.av-tile--wide{flex:1.6 1 260px}
+.av-play__pair .av-tile{flex:0 0 auto}
+.docs-demo.av-demo{justify-content:center}
+.av-tile__stage{display:flex; align-items:center; justify-content:center; box-sizing:border-box; width:100%; min-height:96px; padding:16px; border-radius:8px; background:#fff}
+.av-tile figcaption{font-size:12px; line-height:16px; color:var(--f-text,var(--ink-2)); text-align:center}
+.av-tile figcaption b{display:block; font-size:13px; font-weight:600; color:var(--f-ink,var(--ink))}
+:root[data-theme="dark"] .av-tile__stage{background:#fff}
+
+/* ---- Every-variant matrix (Specifications) ---- */
+.av-scrollx{max-width:100%; overflow-x:auto}
+.av-matrix{display:inline-grid; grid-template-columns:auto repeat(7,auto); gap:12px 20px; align-items:center; justify-items:center; padding:4px}
+.av-matrix--group{grid-template-columns:auto auto auto; justify-items:start; column-gap:32px}
+.av-matrix__k{justify-self:end; font-size:12px; line-height:16px; color:var(--f-text,var(--ink-2)); white-space:nowrap}
+.av-matrix__h{font-size:12px; line-height:16px; font-weight:600; color:var(--f-ink,var(--ink)); white-space:nowrap}
+.docs-demo:has(> .av-scrollx){flex-direction:column; align-items:center; gap:32px}
+
+/* ---- At a glance playground ---- */
+.av-play__pair{display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:center; gap:24px 48px}
+.av-play__stage .av-tile figcaption{color:#5f717b}
+.av-play__opts{display:flex; flex-direction:column; gap:8px}
+.av-play__opts .dw-play__opts{align-items:center}
+.av-play__k{min-width:84px; font-weight:600; color:var(--f-ink,var(--ink))}
+.av-play__stage{
+  display:flex; align-items:center; justify-content:center; min-height:180px; padding:24px 16px; box-sizing:border-box;
+  border:1px solid var(--f-line,var(--hairline)); border-radius:8px; background:#fff; overflow:hidden;
+}
+.docs-content .av-play__props{margin:0; font-size:12px; line-height:16px; color:var(--f-text,var(--ink-2))}
+.av-play__props code{font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; font-weight:400; color:var(--f-ink,var(--ink)); white-space:normal; word-break:break-word}
+@media (max-width:560px){.av-play__k{min-width:0; flex:0 0 100%}}
+
+/* Usage figures: the in-context card sits straight on the figure panel */
+.av-usage .bx-mock{align-items:center; justify-content:center; min-height:96px; padding:16px; overflow:hidden; border:0; background:none}
+
+/* Seven sizes: four to a row on wide screens */
+.bx-options.av-opts--4{grid-template-columns:repeat(auto-fill,minmax(160px,1fr)) !important}
+
+/* Do / don't stages hold product mocks: keep them centred */
+.av-dd .docs-dodont__stage{align-items:center; min-height:140px; overflow:hidden}
+
+/* ===== Divider docs ===== */
+/* ============================================================
+   DIVIDER / SEPARATOR — Cube Core (Figma node 7628:52454)
+   Values read from the Divider component set and its
+   documentation frames. Product colours are fixed (they don't
+   follow the site theme); demos sit on white surfaces.
+   ============================================================ */
+
+/* ---- the component: container + 1px Line ----
+   Container: auto-layout, 0 padding. Horizontal fills the width
+   (default 320 x 1); vertical fills the height (default 1 x 120).
+   Line: 1px stroke on the top (horizontal) or left (vertical) edge,
+   coloured by Emphasis; Dashed = 4 on / 4 off. */
+.dvd{--dvd-c:#cad2d7; display:flex; flex:none; box-sizing:border-box; margin:0; padding:0}
+.dvd--subtle{--dvd-c:#e8eaee}   /* Semantics/Secondary-text/100 */
+.dvd--default{--dvd-c:#cad2d7}  /* Semantics/Primary-text/200   */
+.dvd--strong{--dvd-c:#bfc5cf}   /* Semantics/Secondary-text/300 */
+.dvd--h{flex-direction:column; width:var(--dvd-w,100%); max-width:100%}
+.dvd--v{flex-direction:row; align-self:stretch; height:var(--dvd-h,auto)}
+.dvd__line{display:block; flex:none; box-sizing:border-box}
+.dvd--h .dvd__line{width:100%; height:0; border-top:1px solid var(--dvd-c)}
+.dvd--v .dvd__line{width:0; height:100%; border-left:1px solid var(--dvd-c)}
+/* Dashed: an exact 4 / 4 pattern (CSS border dashes vary by browser) */
+.dvd--dashed.dvd--h .dvd__line{height:1px; border:0; background:linear-gradient(90deg,var(--dvd-c) 50%,transparent 50%) 0 0 / 8px 1px repeat-x}
+.dvd--dashed.dvd--v .dvd__line{width:1px; border:0; background:linear-gradient(180deg,var(--dvd-c) 50%,transparent 50%) 0 0 / 1px 8px repeat-y}
+
+/* ---- product type for every mock ---- */
+.dvd-surface,.dvd-tile,.dvd-list,.dvd-inline,.dvd-plan,.dvd-card,.dvd-matrix{
+  font-family:"Cube Rupee",'DM Sans',var(--font),sans-serif; color:#1a1a1f; line-height:normal; letter-spacing:0;
+  font-variation-settings:"opsz" 14; box-sizing:border-box;
+}
+
+/* White surface ("shown live on white") */
+.dvd-surface{display:flex; align-items:center; justify-content:center; gap:12px 48px; flex-wrap:wrap;
+  width:100%; padding:32px 20px; border-radius:8px; background:#fff}
+.dvd-surface--tall{min-height:144px}
+.dvd-surface .dvd--h{--dvd-w:300px}
+.dvd-surface .dvd--v{--dvd-h:80px}
+.bx-opt__stage:has(.dvd-surface){padding:12px}
+.bx-opt__stage .dvd-surface{min-height:120px; padding:20px 16px}
+.bx-opt__stage .dvd-surface .dvd--h{--dvd-w:100%}
+
+/* ---- list rows (Subtle · horizontal) ---- */
+.dvd-list{display:flex; flex-direction:column; width:340px; max-width:100%; overflow:hidden;
+  background:#fff; border:1px solid #e3e6ea; border-radius:10px; text-align:left}
+.dvd-list__row{display:flex; padding:14px 16px; font-size:14px; font-weight:500; color:#1a1a1f; white-space:nowrap}
+/* Don't: rows separated by a hand-drawn 2px stroke */
+.dvd-list--stroke .dvd-list__row + .dvd-list__row{border-top:2px solid #bbb}
+
+/* ---- inline items (Subtle · vertical) ---- */
+.dvd-inline{display:inline-flex; align-items:center; flex-wrap:wrap; gap:8px 16px; max-width:100%;
+  padding:12px 16px; background:#fff; border:1px solid #e3e6ea; border-radius:10px}
+.dvd-inline--soft{border-color:transparent}
+.dvd-inline > span{font-size:13px; font-weight:500; color:#1a1a1f; white-space:nowrap}
+.dvd-inline .dvd--v{--dvd-h:28px; align-self:center}
+.dvd-inline--24 .dvd--v{--dvd-h:24px}
+
+/* ---- summary vs details (Strong · Dashed) ---- */
+.dvd-plan{display:flex; flex-direction:column; width:300px; max-width:100%; overflow:hidden;
+  background:#fff; border:1px solid #e3e6ea; border-radius:10px; text-align:left}
+.dvd-plan__in{display:flex; flex-direction:column; gap:12px; padding:16px}
+.dvd-plan__name{font-size:16px; font-weight:600; white-space:nowrap}
+.dvd-plan__price{font-size:20px; font-weight:600; white-space:nowrap}
+.dvd-plan__note{font-size:12px; font-weight:500; color:#4a5058}
+.dvd-plan--bare{width:auto; border-color:transparent}
+.dvd-plan--bare .dvd-plan__in{padding:24px}
+.dvd-plan--bare .dvd-plan__price{font-size:18px}
+.dvd-plan--bare .dvd--h{--dvd-w:260px}
+
+/* ---- white cards used by the do / don't pairs ---- */
+.dvd-card{display:flex; flex-direction:column; align-items:flex-start; max-width:100%; padding:24px;
+  background:#fff; border-radius:10px; text-align:left}
+.dvd-card__col{display:flex; flex-direction:column; align-items:flex-start; max-width:100%}
+.dvd-card__col > span{font-size:14px; font-weight:500; white-space:nowrap}
+.dvd-card__col--spaced{gap:24px}
+.dvd-card__col--spaced > span{font-weight:600}
+.dvd-card__col--tight{gap:8px; width:240px}
+.dvd-card__col--wide{gap:12px; width:400px}
+.dvd-card__col--tight .dvd--h{--dvd-w:240px}
+.dvd-card__col--wide .dvd--h{--dvd-w:120px}
+
+/* ---- At a glance playground ---- */
+.dvd-play__grp{display:inline-flex; align-items:center; flex-wrap:wrap; gap:6px 14px}
+.dvd-play__grp > b{font-size:12px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:var(--f-muted,var(--ink-2))}
+.dvd-play .dw-play__opts{gap:10px 28px}
+.dvd-play__stage{display:flex; align-items:center; justify-content:center; min-height:260px; padding:32px 20px;
+  border-radius:8px; background:#fff; border:1px solid #e8eaee}
+.dvd-play__stage[data-type="horizontal"] .dvd-inline,.dvd-play__stage[data-type="vertical"] .dvd-list{display:none}
+.dvd-play__out{display:flex; flex-direction:column; gap:4px; margin:0; font-size:13px; line-height:18px; color:var(--f-text,var(--ink-2))}
+.docs-content .dvd-play__out code{font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; color:var(--f-ink,var(--ink)); word-break:break-word}
+.dvd-play__out .msg-sw{margin-left:0}
+
+/* ---- anatomy: real size, no zoom ---- */
+.bx-anatomy:has(.dvd-ana) .bx-anatomy__zoom{transform:none; width:100%; display:flex; justify-content:center}
+.dvd-ana{display:flex; align-items:center; justify-content:center}
+.dvd-ana--h{width:min(600px,calc(100% - 140px))}
+.dvd-ana--v{height:200px}
+
+/* ---- all 12 variants ---- */
+.dvd-matrix{width:100%; padding:28px 24px 32px; border-radius:8px; background:#fff}
+.dvd-matrix__grid{display:grid; grid-template-columns:auto repeat(3,minmax(0,1fr)); align-items:center; gap:28px 40px}
+.dvd-matrix__h{font-size:12px; font-weight:600; color:#1a1a1f}
+.dvd-matrix__h small{display:block; margin-top:2px; font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:11px; font-weight:400; color:#666b75}
+.dvd-matrix__r{font-size:12px; font-weight:600; color:#1a1a1f}
+.dvd-matrix__cap{margin-top:28px; font-size:12px; color:#666b75}
+.dvd-matrix__cap:first-child{margin-top:0}
+.dvd-matrix__cap + .dvd-matrix__grid{margin-top:20px}
+.dvd-matrix__v{display:flex; flex-wrap:wrap; gap:20px 28px; margin-top:12px}
+.dvd-matrix__v > div{display:flex; flex-direction:column; align-items:center; gap:10px; width:48px}
+.dvd-matrix__v > div > span{font-size:10px; color:#666b75; white-space:nowrap}
+.dvd-matrix__v .dvd--v{--dvd-h:120px; align-self:center}
+
+/* ---- Specifications: real-size reference tiles ---- */
+.dvd-tile{position:relative; display:flex; align-items:center; justify-content:center; width:100%; height:130px;
+  border-radius:8px; background:#fff}
+.dvd-tile--sm{height:90px; padding:0 15px}
+.dvd-tile .dvd--h{--dvd-w:200px}
+.dvd-tile--sm .dvd--h{--dvd-w:150px}
+.dvd-tile .dvd--v{--dvd-h:80px}
+
+/* ---- usage figures and do / don't stages ---- */
+.bx-usage .dvd-fig{display:flex; justify-content:center}
+.docs-dodont__stage:has(.dvd-list,.dvd-card){min-height:240px}
+@media (min-width:721px){.bx-usage figure:has(.dvd-fig){grid-template-columns:minmax(0,420px) minmax(0,1fr)}.bx-usage .dvd-inline{flex-wrap:nowrap}}
+
+@media (max-width:640px){
+  .dvd-matrix{padding:20px 16px}
+  .dvd-matrix__grid{gap:20px 16px}
+  .dvd-matrix__h small{display:none}
+  .dvd-ana--h{width:calc(100% - 120px)}
+}
+
+/* ===== File upload docs ===== */
+/* ============================================================
+   FILE UPLOAD — replicas of the Figma components
+   Upload (drop zone + optional _Progressbar + file list slot),
+   _Progressbar and File upload item. Values read from the
+   components in “File upload · components (use these)”.
+   ============================================================ */
+
+/* ---- Upload (root): 440 wide, hug height, 8 between parts ---- */
+.fup{
+  display:flex; flex-direction:column; gap:8px; width:440px; max-width:100%; flex:none;
+  font-family:'DM Sans',var(--font),sans-serif; text-align:left; color:#101214; box-sizing:border-box;
+}
+.fup *{box-sizing:border-box}
+.fup--fill{width:100%}
+
+/* ---- Drop zone: 160 tall, padding 16, radius 8, Screen-bg-1, 1px dashed Primary-text/400 ---- */
+.fup-zone{
+  display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:160px;
+  padding:16px; border:1px dashed #7a8d96; border-radius:8px; background:#f3f6fa;
+}
+.fup-zone[role="button"]{cursor:pointer}
+.fup-zone[role="button"]:focus-visible{outline:2px solid #025be5; outline-offset:2px}
+.fup-zone__in{display:flex; flex-direction:column; align-items:center; gap:12px; width:100%}
+.fup-zone__txt{display:flex; flex-direction:column; gap:6px; width:100%; text-align:center; overflow-wrap:anywhere}
+/* Body/B2/Semibold — Primary-text/950 */
+.fup-title{display:block; font-size:14px; line-height:18px; font-weight:600; letter-spacing:0; color:#101214}
+/* Body/B3/Medium — Primary-text/600 */
+.fup-help{display:block; font-size:12px; line-height:16px; font-weight:500; letter-spacing:.1px; color:#515f69}
+
+/* Neutral Outlined round icon button: 36 (upload) / 20 (remove) */
+.fup-ibtn{
+  display:inline-flex; align-items:center; justify-content:center; flex:none; width:36px; height:36px; padding:0;
+  border:1px solid #dbdfe4; border-radius:100px; background:#fff; color:#3e464c; font-size:16px; line-height:1;
+}
+.fup-x{
+  display:inline-flex; align-items:center; justify-content:center; flex:none; width:20px; height:20px; padding:0;
+  border:1px solid #dbdfe4; border-radius:100px; background:#fff; color:#3e464c; font-size:10px; line-height:1; font-family:inherit;
+}
+button.fup-x{cursor:pointer}
+button.fup-x:focus-visible{outline:2px solid #025be5; outline-offset:1px}
+
+/* ---- _Progressbar: py 4, gap 12, bar 8 / 12 / 16, pill, Count = B3-Compact/Semibold ---- */
+.fup-prog{display:flex; align-items:center; gap:12px; width:100%; padding:4px 0}
+.fup-prog__bar{position:relative; flex:1 1 0; min-width:1px; height:8px; border-radius:100px; background:#cad2d7; overflow:hidden}
+.fup-prog__fill{position:absolute; left:0; top:0; bottom:0; width:var(--fup-p,91%); border-radius:100px; background:#034ced; transition:width .2s ease}
+.fup-prog__n{flex:none; font-size:12px; line-height:12px; font-weight:600; letter-spacing:.1px; color:#515f69; text-align:center; white-space:nowrap; font-variant-numeric:tabular-nums}
+.fup-prog--md .fup-prog__bar{height:12px}
+.fup-prog--lg .fup-prog__bar{height:16px}
+
+/* ---- File list slot: one File upload item per file, 12 apart ---- */
+.fup-list{display:flex; flex-direction:column; gap:12px; width:100%; margin:0; padding:0; list-style:none}
+/* the live list is a <ul>: undo the article's list styling */
+.docs-content ul.fup-list{margin:0; padding:0; list-style:none}
+.docs-content ul.fup-list > li{position:static; margin:0; padding-left:0; list-style:none; font-size:inherit; line-height:inherit; color:inherit}
+.docs-content ul.fup-list > li::before{content:none}
+.fup [hidden],.fup-prog [hidden]{display:none !important}
+
+/* ---- File upload item: gap 9 · icon box 32 · name + status · remove 20 ---- */
+.fup-item{display:flex; align-items:center; gap:9px; width:100%; min-width:0}
+.fup-item__ic{display:flex; align-items:center; flex:none; padding:6px; border-radius:6px; background:#f1f6fd; color:#23292e; font-size:20px; line-height:1}
+.fup-item__body{display:flex; flex-direction:column; gap:4px; flex:1 1 0; min-width:0}
+/* Body/B3/Semibold — text/text-primary. Long names truncate in the middle: the stem
+   ellipsises, the end of the name and the extension stay visible. */
+.fup-item__name{display:flex; min-width:0; font-size:12px; line-height:16px; font-weight:600; letter-spacing:.1px; color:#101214}
+.fup-item__stem{min-width:0; overflow:hidden; white-space:nowrap; text-overflow:ellipsis}
+.fup-item__end{flex:none; white-space:nowrap}
+/* Status line: Small/S0 — Regular for Neutral, Medium + 14px icon for the other states */
+.fup-item__st{display:flex; align-items:flex-start; gap:4px; font-size:11px; line-height:14px; font-weight:400; letter-spacing:.2px; color:#515f69; white-space:nowrap}
+.fup-item__st i{flex:none; font-size:14px; line-height:14px}
+.fup-item__st span{min-width:0; overflow:hidden; text-overflow:ellipsis}
+.fup-item--success .fup-item__st{font-weight:500; color:#009966}
+.fup-item--warning .fup-item__st{font-weight:500; color:#d08700}
+.fup-item--error .fup-item__st{font-weight:500; color:#e7000b}
+.fup-item--error .fup-item__st span{white-space:normal}
+
+/* ---- Fit helpers for previews ---- */
+.fup-fit{display:flex; justify-content:center; width:100%}
+.fup-z{display:inline-block}
+.fup-w{width:100%; max-width:440px}
+.bx-opt__stage .fup-w,.docs-dodont__stage .fup-w{max-width:380px}
+.bx-opt__stage:has(.fup,.fup-item,.fup-prog){padding:var(--spacing-20) var(--spacing-16)}
+.docs-dodont__stage:has(.fup,.fup-item,.fup-list){align-items:center}
+
+/* ---- Anatomy ---- */
+.bx-anatomy:has(.fup-z){padding:var(--spacing-72) var(--spacing-64)}
+.bx-anatomy:has(.fup-z) .bx-anatomy__zoom{transform:none; display:flex; justify-content:center; width:100%}
+.fup-z--up{zoom:1.3}
+.fup-z--item{zoom:2.2}
+.fup-z--item .fup-item{width:300px}
+.fup-z--prog{zoom:2.4}
+.fup-z--prog .fup-prog{width:240px}
+@media (max-width:900px){.fup-z--up{zoom:1}.fup-z--item{zoom:1.6}.fup-z--prog{zoom:1.8}}
+@media (max-width:560px){
+  .bx-anatomy:has(.fup-z){padding:var(--spacing-64) var(--spacing-40)}
+  .fup-z--up{zoom:.6}.fup-z--item{zoom:.9}.fup-z--item .fup-item{width:220px}.fup-z--prog{zoom:1}.fup-z--prog .fup-prog{width:200px}
+}
+
+/* ---- Playground ---- */
+.fup-play__stage{display:flex; justify-content:center; width:100%; padding:var(--spacing-8) 0}
+.fup-play .fup-file{position:absolute; width:1px; height:1px; opacity:0; pointer-events:none}
+.fup-play .fup-zone.fup-zone--over{border-color:#025be5; background:#eaf1ff}
+.fup-play__hint{margin:0; font-size:12px; line-height:16px; color:var(--f-muted,var(--ink-2))}
+.dw-play__opts .fup-play__lbl{font-weight:600; color:var(--f-strong,var(--ink))}
+
+/* ---- Usage mocks: popup with Upload inside ---- */
+.fup-pm{width:520px}
+.fup-pm--wide{width:600px}
+.fup-pm .pm-c{gap:var(--spacing-12)}
+.fup-naked{display:inline-flex; align-items:center; gap:6px; align-self:flex-start; font-size:14px; line-height:18px; font-weight:600; color:#025be5}
+.fup-naked i{font-size:16px}
+/* data preview table in the slot (Table-template stand-in) */
+.fup-tbl{width:100%; overflow:hidden; border:1px solid #e8eaee; border-radius:8px; background:#fff}
+.fup-tbl table{width:100%; border-collapse:collapse; font-size:11px; line-height:14px; letter-spacing:.2px; color:#373d42; table-layout:fixed}
+.fup-tbl th,.fup-tbl td{padding:5px 6px; border-bottom:1px solid #f5f5f8; text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-weight:400; background:none}
+.fup-tbl th{font-weight:600; color:#515f69; background:#f5f5f8}
+.fup-tbl tr:last-child td{border-bottom:0}
+.fup-tbl .fup-num{text-align:right; font-variant-numeric:tabular-nums}
+/* upload history list */
+.fup-hist .fup-tbl td{white-space:normal; vertical-align:top; font-size:12px; line-height:16px}
+.fup-hist .fup-tbl th{font-size:12px; line-height:16px}
+.fup-hist__t{font-size:16px; line-height:20px; font-weight:600; color:#101214}
+.fup-hist__d b{font-weight:600; color:#101214}
+.fup-hist__d span{color:#5f717b}
+.fup-badge{display:inline-flex; align-items:center; gap:4px; font-size:11px; line-height:14px; font-weight:500; letter-spacing:.2px; white-space:nowrap}
+.fup-badge i{font-size:14px}
+.fup-badge--error{color:#e7000b}
+
+/* Don’t 03: one summary message for many files */
+.fup-sum{display:inline-flex; padding:12px; border-radius:6px; background:#fdecec; color:#c02121; font-family:'DM Sans',var(--font),sans-serif; font-size:13px; line-height:normal; font-weight:500}
+
+@media (max-width:720px){
+  .fup-pm{width:100%}
+  .bx-usage .fup-pm,.bx-usage .fup-hist{zoom:.8}
+}
+
+/* Anatomy family: three parts side by side */
+.trd-fam.fup-fam{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:720px){.trd-fam.fup-fam{grid-template-columns:1fr}}
+
+/* Spec visual references: part + caption */
+.fup-refs{gap:var(--spacing-32) var(--spacing-40); align-items:flex-start; justify-content:center}
+.fup-ref{display:flex; flex-direction:column; align-items:center; gap:0; max-width:100%}
+.fup-ref > .fup-item{width:300px; max-width:100%}
+.fup-refs .fup-ref .docs-demo__caption{flex:none; margin-top:var(--spacing-12); text-align:center}
+.fup-refs--zone .fup-ref > .fup{width:300px}
+/* icons keep their part's colour inside article tables */
+.docs-content table :is(.fup-badge,.fup-item__st,.fup-item__ic,.fup-ibtn,.fup-x) :is(.ph,.ph-fill){color:inherit}
+
+/* narrow screens: one preview per row so Upload keeps its proportions */
+@media (max-width:600px){
+  .docs-content .bx-options--2:has(.fup,.fup-item,.fup-prog){grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:420px){.fup-z--up{zoom:.52}.fup-z--item .fup-item{width:190px}.fup-z--prog .fup-prog{width:170px}}
+.fup-refs + .fup-refs{margin-top:var(--spacing-16)}
+
+/* ===== Skeleton docs ===== */
+/* ============================================================
+   SKELETON — loading placeholders (docs-skeleton*.html)
+   Values from the Figma "Skeleton 🆕" page: one grey token
+   (Semantics/Secondary-text/50 #f5f5f8) for every shape, Text r4,
+   Block r6, Circle pill. Pattern containers reuse card tokens.
+   Product colours are fixed regardless of the site theme.
+   ============================================================ */
+
+/* ---- base shapes ---- */
+.skl-s{
+  display:block; position:relative; flex:none; box-sizing:border-box; overflow:hidden;
+  background:#f5f5f8; /* Semantics/Secondary-text/50 */
+}
+.skl-s--text{width:300px; max-width:100%; height:12px; border-radius:4px}
+.skl-s--block{width:300px; max-width:100%; height:180px; border-radius:6px}
+.skl-s--circle{width:32px; height:32px; border-radius:100px}
+
+/* Shimmer — not drawn in Figma; the API frame specifies a lighter
+   sweep (White @60%) moving left → right, 1.2–1.5s. Static when the
+   user asks for reduced motion. */
+.skl-shimmer .skl-s::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.6) 50%, rgba(255,255,255,0) 100%);
+  transform:translateX(-100%);
+  animation:skl-sweep 1.4s linear infinite;
+}
+@keyframes skl-sweep{to{transform:translateX(100%)}}
+@media (prefers-reduced-motion:reduce){
+  .skl-shimmer .skl-s::after{animation:none; display:none}
+}
+
+/* ---- patterns ---- */
+/* Text lines: 1–3 lines, gap 8, last line half width */
+.skl-lines{display:flex; flex-direction:column; gap:8px; width:300px; max-width:100%}
+.skl-lines > .skl-s{width:100%; height:12px; border-radius:4px}
+.skl-lines > .skl-s:last-child:not(:first-child){width:50%}
+.skl-lines--even > .skl-s:last-child:not(:first-child){width:100%} /* Don’t 03: every line full width */
+
+/* List item: circle 32 + two lines (second half width), gap 12 */
+.skl-li{display:flex; align-items:center; gap:12px; width:300px; max-width:100%; box-sizing:border-box}
+.skl-li > .skl-s{width:32px; height:32px; border-radius:100px}
+.skl-li__lines{display:flex; flex-direction:column; gap:8px; flex:1; min-width:1px}
+.skl-li__lines > .skl-s{width:100%; height:12px; border-radius:4px}
+.skl-li__lines > .skl-s + .skl-s{width:50%}
+
+/* Table cell: 186 × 52, padding 8, gap 6 — value 14 + sub-value 10 (half) */
+.skl-cell{
+  display:flex; flex-direction:column; justify-content:center; gap:6px; flex:none;
+  width:186px; height:52px; padding:8px; box-sizing:border-box; background:#fff;
+}
+.skl-cell > .skl-s{width:100%; height:14px; border-radius:4px}
+.skl-cell > .skl-s + .skl-s{width:50%; height:10px}
+
+/* Card: 300 wide, padding 16, gap 16, radius 12, border/border-secondary */
+.skl-card{
+  display:flex; flex-direction:column; align-items:flex-start; gap:16px; flex:none;
+  width:300px; max-width:100%; padding:16px; box-sizing:border-box;
+  background:#fff; border:1px solid #e3e7ea; border-radius:12px;
+}
+.skl-card__title{width:50%; height:12px; border-radius:4px}
+.skl-card__value{width:150px; max-width:100%; height:32px; border-radius:6px}
+.skl-card__caption{width:50%; height:10px; border-radius:4px}
+.skl-card__chart{width:100%; height:120px; border-radius:6px}
+/* Do 04: the known label stays as real text, gap 12 like the loaded card */
+.skl-card--label{gap:12px; border-color:#e3e6ea}
+.skl-card--label .skl-card__caption{width:133px}
+
+/* Plan card: 262 wide, padding 12, gap 16, radius 8, Steel Blue/200 border */
+.skl-plan{
+  display:flex; flex-direction:column; gap:16px; flex:none;
+  width:262px; max-width:100%; padding:12px; box-sizing:border-box;
+  background:#fff; border:1px solid #e7eef9; border-radius:8px;
+}
+.skl-plan__group{display:flex; flex-direction:column; align-items:flex-start; gap:8px}
+.skl-plan__group--feats{align-items:stretch}
+.skl-plan__name{width:80px; height:16px; border-radius:4px}
+.skl-plan__price{width:140px; height:28px; border-radius:6px}
+.skl-plan__note{width:50%; height:12px; border-radius:4px}
+.skl-plan__btn{width:100%; height:32px; border-radius:6px}
+.skl-plan__feat{display:flex; align-items:center; gap:8px}
+.skl-plan__feat > .skl-s:first-child{width:14px; height:14px; border-radius:100px}
+.skl-plan__feat > .skl-s + .skl-s{flex:1; min-width:1px; height:10px; border-radius:4px}
+
+/* ---- loaded metric card (the "after" state in Figma) ---- */
+.skl-metric{
+  display:flex; flex-direction:column; align-items:flex-start; gap:12px; flex:none;
+  width:300px; max-width:100%; padding:16px; box-sizing:border-box;
+  background:#fff; border:1px solid #e3e6ea; border-radius:12px;
+  font-family:"Cube Rupee",'DM Sans',var(--font),sans-serif; font-optical-sizing:auto; line-height:normal; letter-spacing:0;
+}
+.skl-label{font-family:"Cube Rupee",'DM Sans',var(--font),sans-serif; font-size:13px; line-height:normal; font-weight:500; letter-spacing:0; color:#586473}
+.skl-metric__value{font-size:24px; font-weight:600; color:#1a1a1f; white-space:nowrap}
+.skl-metric__delta{font-size:12px; font-weight:600; color:#1a7f37; white-space:nowrap}
+.skl-metric__chart{width:100%; height:120px; border-radius:6px; background:#eaf2ff}
+
+/* ---- demo surfaces ---- */
+/* White surface: shapes sit on white in every Figma preview */
+.skl-tile{
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:12px 40px;
+  width:100%; padding:24px 20px; box-sizing:border-box; border-radius:8px; background:#fff;
+}
+.skl-tile--tight{gap:12px 24px}
+.skl-row{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:24px 48px; width:100%}
+.skl-arrow{display:flex; flex-direction:column; align-items:center; gap:2px; font-family:'DM Sans',var(--font),sans-serif; font-size:16px; line-height:normal; font-weight:600; letter-spacing:0; color:#9ca6b5; white-space:nowrap}
+.skl-arrow > span{font-size:20px; line-height:1}
+.skl-row--flow{gap:24px}
+
+/* List loading: card 340, padding 16, gap 16 */
+.skl-list{
+  display:flex; flex-direction:column; gap:16px; flex:none;
+  width:340px; max-width:100%; padding:16px; box-sizing:border-box;
+  background:#fff; border:1px solid #e3e6ea; border-radius:12px;
+}
+.skl-list--dense{gap:8px}
+/* Table loading: cells separated by 1px #e3e6ea lines */
+.skl-table{display:grid; grid-template-columns:repeat(3,186px); gap:1px; background:#e3e6ea; border:1px solid #e3e6ea; flex:none}
+.skl-scroll{max-width:100%; overflow-x:auto}
+
+/* Anatomy zoom (Figma draws the card at 1.6×) */
+.skl-z{display:inline-block}
+.skl-z--16{zoom:1.6}
+.bx-anatomy:has(.skl-z) .bx-anatomy__zoom{transform:none; display:flex; justify-content:center; width:100%}
+.skl-anat-shapes{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:24px 56px; padding:40px 48px; border-radius:8px; background:#fff}
+.skl-anat-shapes > .skl-s--text{width:220px}
+.skl-anat-shapes > .skl-s--block{width:160px; height:100px}
+
+/* Visual reference tiles: label, white preview, mono caption */
+.skl-refs{display:flex; flex-wrap:wrap; justify-content:center; gap:24px; width:100%}
+.skl-ref{display:flex; flex-direction:column; align-items:center; gap:12px; flex:0 1 316px; min-width:0}
+.skl-refs--3 > .skl-ref{flex:1 1 180px; max-width:220px}
+.skl-ref__name{font-family:'DM Sans',var(--font),sans-serif; font-size:14px; line-height:normal; font-weight:500; color:#1a1a1f}
+.skl-ref__box{display:flex; align-items:center; justify-content:center; width:100%; min-height:130px; padding:20px; box-sizing:border-box; border-radius:8px; background:#fff}
+.skl-ref__box--page{background:#f3f6fa} /* Neutrals/Bg/Screen-bg-1 */
+.skl-ref__cap{font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; line-height:normal; color:#666b75; text-align:center}
+
+/* Playground */
+/* data-state: waiting (first ~300ms, nothing shown) → loading → loaded.
+   The stage keeps the card's height so nothing jumps on the swap. */
+.skl-play__stage{display:flex; align-items:flex-start; justify-content:center; min-height:256px; width:100%}
+.skl-play__stage > .skl-card,.skl-play__stage > .skl-metric{display:none}
+.skl-play__stage[data-state="loading"]:not(.is-label) > .skl-card:not(.skl-card--label),
+.skl-play__stage[data-state="loading"].is-label > .skl-card--label,
+.skl-play__stage[data-state="loaded"] > .skl-metric{display:flex}
+.skl-tile--opt{min-height:148px; padding:20px 16px}
+.skl-play__btn{
+  display:inline-flex; align-items:center; gap:6px; margin-left:auto; padding:4px 10px; border:1px solid var(--f-line,var(--hairline));
+  border-radius:6px; background:var(--bg); color:var(--f-ink,var(--ink)); font:inherit; font-size:13px; cursor:pointer;
+}
+.skl-play__btn:hover{border-color:#025be5; color:#025be5}
+.skl-play__btn:focus-visible{outline:2px solid #025be5; outline-offset:2px}
+.skl-play__btn[disabled]{opacity:.6; cursor:default}
+
+@media (max-width:560px){
+  .skl-z--16{zoom:1}
+  .skl-anat-shapes{padding:24px 20px; gap:20px 32px}
+  .skl-anat-shapes > .skl-s--text{width:160px}
+  .skl-play__btn{margin-left:0}
+}
+
+/* ===== Subscription card docs ===== */
+/* =====================================================================
+   Subscription card — live replicas of the Figma components (Cube Core,
+   "subscription card" page): Subscription card (Trial = No / Yes),
+   _Plan Action (7 states), Plan Feature (Default / Highlight) and
+   Plan Token (Tokens / Questions). Product colours, fixed regardless of
+   the site theme. Buttons inside the card are the shared .fbtn.
+   Values are the Figma variables:
+     Steel Blue 50 #f7faff · 200 #e7eef9 · 800 #445f8d · 950 #1d355e
+     Brand 100 #e9efff · 500 #3a6ff5 · 600 #034ced
+     Primary 100 #eaf1ff · 400 #74a1f8 · 600 #025be5
+     Primary-text 600 #515f69 · 900 #373d42 · 950 #101214
+     Secondary-text 300 #bfc5cf · 950 #23292e
+     Success 100 #dcfce7 · 700 #008236
+     Error 100 #ffe2e2 · 200 #ffc9c9 · 400 #ff6467 · 600 #e7000b
+   ===================================================================== */
+
+/* ---- Card: 262 fixed, 1px border, radius 8, clips its content ---- */
+.sbc-card{
+  position:relative; display:flex; flex-direction:column; flex:none;
+  box-sizing:border-box; width:262px; overflow:hidden;
+  border:1px solid #e7eef9; border-radius:8px; background:#fff;
+  font-family:"Cube Rupee",'DM Sans',var(--font),sans-serif; color:#1d355e; text-align:left;
+}
+.sbc-card *,.sbc-card *::before,.sbc-card *::after{box-sizing:border-box}
+/* Trial = Yes: Brand/500 border and a 4px Brand/100 inner glow */
+.sbc-card--trial{border-color:#3a6ff5}
+.sbc-card--trial::after{
+  content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+  box-shadow:inset 0 0 4px 0 #e9efff;
+}
+.sbc-card [hidden]{display:none !important}
+
+/* ---- Trial banner: 22 tall, raw gradient, gift + "Free for N days" ---- */
+.sbc-banner{
+  display:flex; align-items:center; justify-content:center; gap:2px; padding:4px 6px;
+  background:linear-gradient(110.65deg,#4c4fe9 0%,#3a6ff5 100%);
+  color:#f7faff; font-size:10px; line-height:12px; font-weight:700; letter-spacing:0; white-space:nowrap;
+}
+.sbc-banner img{display:block; width:14px; height:14px; flex:none}
+
+/* ---- Body: padding 12, sections 16 apart ---- */
+.sbc-body{display:flex; flex-direction:column; gap:16px; padding:12px}
+
+/* Header: title row, then the price block; 8 apart */
+.sbc-head{display:flex; flex-direction:column; gap:8px; min-width:0}
+.sbc-title{display:flex; align-items:center; justify-content:space-between; gap:8px; min-width:0}
+.sbc-name{font-size:16px; line-height:20px; font-weight:600; letter-spacing:0; color:#515f69; white-space:nowrap}
+/* Current plan badge: Standard-chip, Primary Blue, Tiny, pill — 18 tall */
+.sbc-badge{
+  display:inline-flex; align-items:center; flex:none; padding:3px 6px; border-radius:100px;
+  background:#eaf1ff; color:#025be5; font-size:10px; line-height:12px; font-weight:600; letter-spacing:.1px; white-space:nowrap;
+}
+
+/* Price block: discount row, price row, description; 4 apart */
+.sbc-price{display:flex; flex-direction:column; gap:4px; min-width:0}
+.sbc-disc{display:flex; align-self:flex-start; align-items:center; gap:8px}
+.sbc-orig{
+  font-size:12px; line-height:16px; font-weight:400; letter-spacing:.1px; color:#1d355e;
+  text-decoration:line-through; white-space:nowrap;
+}
+/* Discount chip: Success/100 fill, Success/700 tag + label — 20 tall */
+.sbc-off{
+  display:inline-flex; align-items:center; gap:4px; padding:4px 6px; border-radius:4px;
+  background:#dcfce7; color:#008236; font-size:10px; line-height:12px; font-weight:600; letter-spacing:.1px; white-space:nowrap;
+}
+.sbc-off i{font-size:12px; line-height:1}
+.sbc-amt{display:flex; align-self:flex-start; align-items:baseline; gap:4px; white-space:nowrap}
+.sbc-val{font-size:24px; line-height:32px; font-weight:600; letter-spacing:0; color:#101214}
+.sbc-per{font-size:10px; line-height:12px; font-weight:400; letter-spacing:.1px; color:#1d355e}
+.sbc-desc{font-size:12px; line-height:16px; font-weight:500; letter-spacing:.1px; color:#1d355e}
+
+/* Divider: 1px dashed Secondary-text/300 (≈3.9 dash / 3.9 gap, half dash at
+   each end); zero layout height like the Figma line, drawn just above */
+.sbc-div{
+  flex:none; height:1px; margin:-1px 0 0; border:0;
+  background:linear-gradient(90deg,#bfc5cf 50%,transparent 0) -1.97px 0/7.87px 1px repeat-x;
+}
+
+/* Content slot: "Includes:" + Plan Features / Plan Tokens, 8 apart */
+.sbc-content{display:flex; flex-direction:column; gap:8px; min-width:0}
+.sbc-inc{font-size:11px; line-height:14px; font-weight:500; letter-spacing:.2px; color:#445f8d}
+/* ul.sbc-list out-ranks the article's ul / li / bullet rules */
+ul.sbc-list{display:flex; flex-direction:column; gap:8px; margin:0; padding:0; list-style:none}
+ul.sbc-list > li{margin:0; padding:0; font-family:"Cube Rupee",'DM Sans',var(--font),sans-serif}
+ul.sbc-list > li::before,ul.sbc-list > li::marker{content:none}
+
+/* ---- Plan Feature: 14px check + 4 gap + SemiBold 11 ---- */
+ul.sbc-list > li.sbc-feat{
+  display:flex; align-items:flex-start; gap:4px; min-width:0;
+  font-size:11px; line-height:14px; font-weight:600; letter-spacing:.2px; color:#1d355e;
+}
+ul.sbc-list > li.sbc-feat--hl{color:#034ced}
+.sbc-feat img{display:block; width:14px; height:14px; flex:none}
+.sbc-feat span{flex:1 1 0; min-width:0}
+
+/* ---- Plan Token: value row (16px icon, 6 gap) over the label, 4 apart ---- */
+ul.sbc-list > li.sbc-tok{display:flex; flex-direction:column; gap:4px; min-width:0; color:#1d355e}
+.sbc-tok__row{display:flex; align-items:center; gap:6px}
+.sbc-tok__row > i{font-size:16px; line-height:1; color:#23292e}
+.sbc-tok__q{
+  display:inline-flex; align-items:center; justify-content:center; flex:none;
+  width:16px; height:16px; border-radius:27px; background:#e7eef9; color:#23292e;
+}
+.sbc-tok__q i{font-size:8px; line-height:1}
+.sbc-tok__val{font-size:14px; line-height:18px; font-weight:600; letter-spacing:0; color:#1d355e; white-space:nowrap}
+.sbc-tok__lab{font-size:11px; line-height:14px; font-weight:400; letter-spacing:.2px; color:#445f8d}
+
+/* ---- _Plan Action: 236 × 32 area, content top-aligned ---- */
+.sbc-action{display:flex; align-items:flex-start; box-sizing:border-box; width:100%; height:32px; flex:none}
+.sbc-action *,.sbc-list,.sbc-list *{box-sizing:border-box}
+.sbc-action > *{flex:1 1 0; min-width:0}
+.sbc-action .fbtn i{font-size:14px; line-height:1}
+.sbc-action .fbtn[data-family="destructive"][data-variant="outlined"]{--p:10px}
+/* Added to cart / Active: Standard-chip, Filled — 28 tall, radius 8 */
+.sbc-chip{
+  display:inline-flex; align-items:center; justify-content:center; gap:4px;
+  height:28px; padding:6px 10px; border:0; border-radius:8px;
+  font:600 12px/16px "Cube Rupee",'DM Sans',var(--font),sans-serif; letter-spacing:.1px; white-space:nowrap;
+}
+.sbc-chip i{font-size:14px; line-height:1}
+.sbc-chip--blue{background:#eaf1ff; color:#025be5}
+.sbc-chip--green{background:#dcfce7; color:#008236}
+button.sbc-chip{cursor:pointer}
+button.sbc-chip:focus-visible{outline:2px solid #025be5; outline-offset:2px}
+/* Downgrade scheduled: Communication/Message, Red · Error urgency */
+.sbc-sched{
+  display:flex; align-items:flex-start; gap:8px; height:32px; padding:7px 8px;
+  border:1px solid #ffc9c9; border-radius:6px; background:#ffe2e2;
+}
+.sbc-sched__txt{
+  display:flex; align-items:flex-start; gap:4px; flex:1 1 0; min-width:0;
+  font-size:12px; line-height:16px; font-weight:500; letter-spacing:.1px; color:#101214;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.sbc-sched__txt > i{flex:none; margin-top:1px; font-size:14px; line-height:1; color:#e7000b}
+.sbc-sched__txt > span{min-width:0; overflow:hidden; text-overflow:ellipsis}
+.sbc-sched .fbtn{--g:6px; flex:none; border-width:0}
+.sbc-sched .fbtn i{font-size:14px; line-height:1}
+
+/* ---- Layout helpers for the docs ----
+   .sbc-fit scales a row of cards down (CSS zoom, set by the page script)
+   so 3–4 plans stay side by side, as in Figma, at any column width. */
+.sbc-fit{width:100%; overflow-x:auto}
+.sbc-row{display:flex; align-items:flex-start; gap:16px; width:max-content; margin:0 auto}
+.sbc-row--col{flex-direction:column}
+.sbc-row--act{flex-direction:column; gap:16px; width:236px}
+.sbc-row--pair{gap:16px}
+.sbc-row--pair > .sbc-action{width:236px}
+.sbc-stack{display:flex; flex-direction:column; gap:16px; width:236px}
+/* Dark site theme: loose Plan Features / Plan Tokens keep the card's white
+   surface behind them (product colours never invert) */
+:root[data-theme="dark"] .sbc-stack:has(> .sbc-list){box-sizing:content-box; padding:12px; border-radius:8px; background:#fff}
+
+/* Containers from docs.css: let the fit wrapper take the full width */
+.bx-opt__stage:has(.sbc-fit),.docs-dodont__stage:has(.sbc-fit),.docs-demo:has(> .sbc-fit){display:block}
+.bx-opt__stage:has(.sbc-fit){padding:var(--spacing-20) var(--spacing-16)}
+.bx-usage .bx-mock:has(.sbc-fit){padding:var(--spacing-16); background:#f3f6fa; border-color:#e7eef9}
+
+/* Playground */
+.sbc-play .dw-play__opts{align-items:center}
+.sbc-play__sel{
+  height:26px; padding:0 var(--spacing-6); border:1px solid var(--hairline); border-radius:6px;
+  background:var(--bg); color:var(--ink); font:inherit; font-size:13px;
+}
+.sbc-play__stage{display:flex; justify-content:center; padding:var(--spacing-8) 0}
+
+/* Anatomy: the card is too tall for the shared 2.4× transform — draw it at
+   1.5× with real layout (zoom) so the redline script measures true boxes */
+.bx-anatomy:has(.sbc-card),.bx-anatomy:has(.sbc-row--act){padding:var(--spacing-48) var(--spacing-24)}
+.bx-anatomy:has(.sbc-card) .bx-anatomy__zoom,
+.bx-anatomy:has(.sbc-row--act) .bx-anatomy__zoom{transform:none; display:flex; justify-content:center}
+.bx-anatomy .sbc-card,.bx-anatomy .sbc-row--act{zoom:1.5}
+@media (max-width:640px){
+  .bx-anatomy:has(.sbc-card),.bx-anatomy:has(.sbc-row--act){padding:var(--spacing-40) var(--spacing-8)}
+  .bx-anatomy .sbc-card,.bx-anatomy .sbc-row--act{zoom:.9}
+}
+
+/* Specifications: real-size references with a caption under each */
+.sbc-ref{display:flex; flex-direction:column; align-items:center; gap:var(--spacing-12)}
+.sbc-ref__cap{font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; color:var(--ink-2)}
+.docs-demo:has(.sbc-ref){align-items:flex-start; justify-content:center; gap:var(--spacing-32)}
+
+/* ===== Bottom sheet docs (rewrite) ===== */
+/* ==========================================================================
+   Bottom sheet — docs replicas (prefix bsh-)
+   Read from the Figma components Bottom-sheet (5091:35150),
+   Bottom-sheet-Header (5091:35185) and Right Overlay-Divided-Panel (5091:35341).
+   Every value is the component's own px value. Mocks are laid out at a fixed
+   design width (.bsh-fit[data-w]) and zoomed to fit the column by the page
+   script, so proportions and type stay true at any column width.
+   ========================================================================== */
+
+/* ---- fit wrapper ---- */
+.bsh-fit{width:100%; min-width:0; overflow:hidden}
+.bsh-fit__in{box-sizing:border-box}
+.bsh-fit--panel{max-width:480px; margin:0 auto}
+.bsh-fit--hdr{max-width:560px; margin:0 auto}
+
+/* ---- sheet (Bottom-sheet) ---- */
+.bsh,.bsh-h,.bsh-screen,.bsh-r--solo{
+  font-family:"Cube Rupee",'DM Sans',var(--font),sans-serif; font-optical-sizing:auto;
+  font-weight:400; line-height:normal; letter-spacing:0; text-align:left; color:#101214;
+}
+.bsh{
+  box-sizing:border-box; display:flex; flex-direction:column; width:100%; height:533px; overflow:hidden;
+  background:#fff;                                   /* Flat White → Neutrals/White/100 */
+  box-shadow:0 0 16px rgba(0,0,0,.12);               /* Elevation/Overlay */
+}
+.bsh:focus{outline:none}
+.bsh [hidden]{display:none !important}
+
+/* ---- header (Bottom-sheet-Header) — 56 tall, padding 12 / 24, 1px bottom line ---- */
+.bsh-h{box-sizing:border-box; flex:none; width:100%; background:#fff; box-shadow:inset 0 -1px 0 #e8eaee}
+.bsh-h__row{display:flex; align-items:flex-start; justify-content:space-between; gap:16px; padding:12px 24px}
+.bsh-h__l{flex:1 1 0; min-width:0; min-height:32px; display:flex; flex-direction:column; justify-content:center; gap:8px}
+.bsh-h__crumb{display:flex; align-items:center; gap:8px; min-width:0}
+.bsh-h__txt{display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:2px; flex:none; white-space:nowrap}
+.bsh-t{display:block; margin:0; font-size:18px; line-height:24px; font-weight:600; color:#101214}        /* Heading/H6 · Primary-text/950 */
+.bsh-desc{display:block; margin:0; font-size:14px; line-height:18px; font-weight:400; color:#465058}    /* Primary-text/700 */
+.bsh-sw{display:flex; align-items:center; gap:8px; flex:none}
+.bsh-sw__for{font-size:18px; line-height:24px; font-weight:500; color:#515f69; white-space:nowrap}    /* Heading/H6-Medium · Primary-text/600 */
+.bsh-sw__ctl{display:flex; align-items:center; gap:6px}
+.bsh-ib,.bsh-x{
+  box-sizing:border-box; display:inline-flex; align-items:center; justify-content:center; flex:none;
+  width:32px; height:32px; margin:0; padding:0; font:inherit; color:inherit;
+}
+.bsh-ib{border:1px solid #e8eaee; border-radius:6px; background:transparent}                           /* Secondary-text/100 */
+.bsh-x{border:1px solid #dbdfe4; border-radius:100px; background:#fff}                                  /* Secondary-text/200 · White/100 */
+.bsh-ib img,.bsh-x img,.bsh-dd img{display:block; width:14px; height:14px; max-width:none; flex:none}
+.bsh-dd{
+  position:relative; box-sizing:border-box; display:flex; align-items:center; gap:8px; flex:none;
+  width:192px; height:32px; padding:0 8px; border:1px solid #e8eaee; border-radius:6px; background:#fff;
+  font-size:12px; line-height:16px; letter-spacing:.1px; white-space:nowrap;
+}
+.bsh-dd__txt{flex:1 1 0; min-width:0; display:flex; gap:4px}
+.bsh-dd__l{flex:none; font-weight:500; color:#586473}                                                   /* Body/B3/Medium · Secondary-text/700 */
+.bsh-dd__v{flex:1 1 0; min-width:0; overflow:hidden; text-overflow:ellipsis; font-weight:600; color:#101214} /* Body/B3/Semibold */
+.bsh-dd select{
+  flex:1 1 0; min-width:0; height:30px; margin:0 0 0 4px; padding:0 22px 0 0; border:0; background:transparent;
+  -webkit-appearance:none; appearance:none; cursor:pointer;
+  font:600 12px/16px "Cube Rupee",'DM Sans',var(--font),sans-serif; letter-spacing:.1px; color:#101214;
+}
+.bsh-dd--live img{position:absolute; right:8px; top:8px; pointer-events:none}
+.bsh-dd select:focus{outline:none}
+.bsh-dd--live:focus-within{outline:2px solid #025be5; outline-offset:1px}
+button.bsh-ib,button.bsh-x,button.bsh-tab{cursor:pointer}
+.bsh :is(button,select):focus-visible,.bsh-open:focus-visible{outline:2px solid #025be5; outline-offset:2px}
+
+/* ---- Primary tabs (Large) — 38 = 2 top + 36 tab; tab 8 / 10; gap 20; 2px selection ---- */
+.bsh-tabs{display:flex; gap:20px; flex:none; padding-top:2px; box-shadow:inset 0 -1px 0 #e8eaee}
+.bsh-tab{
+  position:relative; display:block; margin:0; padding:8px 0 10px; border:0; background:none;
+  font:500 14px/18px "Cube Rupee",'DM Sans',var(--font),sans-serif; letter-spacing:0; color:#5f717b; white-space:nowrap;
+}
+.bsh-tab.is-sel{font-weight:700; color:#101214}
+.bsh-tab.is-sel::after{content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:#025be5}
+/* header tabs: Large, Indent Yes (16 left / right), under the heading row */
+.bsh-tabs--h{padding:2px 16px 0; box-shadow:none}
+
+/* ---- content (Modal-Content) ---- */
+.bsh-b{flex:1 1 0; min-height:0; display:flex}
+.bsh-l,.bsh-r{box-sizing:border-box; flex:1 1 0; min-width:0; min-height:0; display:flex; flex-direction:column; gap:20px; overflow:hidden}
+.bsh-l{padding:16px 24px 24px; box-shadow:inset -1px 0 0 #e8eaee}                                       /* right border Secondary-text/100 */
+.bsh-r{padding:8px 24px 24px; background:#fafbfd}                                                       /* Neutrals/Bg/Screen-bg-2 */
+.bsh--full .bsh-r{display:none}
+.bsh--full .bsh-l{box-shadow:none}
+.bsh-r--solo{width:100%; height:496px}
+.bsh-ch{display:flex; flex-direction:column; gap:4px; flex:none}
+.bsh-ch__t{display:block; font-size:16px; line-height:20px; font-weight:600; color:#000}                 /* Body/B1/Semibold */
+.bsh-ch__d{display:block; font-size:12px; line-height:16px; font-weight:400; letter-spacing:.1px; color:#465058} /* Body/B3/Regular */
+.bsh-slot{flex:1 1 0; min-height:0; display:flex; flex-direction:column; align-items:flex-start}
+/* slot placeholder — names the content the slot is meant for */
+.bsh-ph{
+  box-sizing:border-box; display:flex; align-items:center; justify-content:center; align-self:stretch; flex:1 1 0; min-height:48px;
+  border:1px dashed #cad2d7; border-radius:8px;
+  background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(2,91,229,.04) 8px 9px);
+  font-size:14px; line-height:18px; font-weight:500; color:#7a8d96; text-align:center;
+}
+.bsh-ph--short{flex:none; align-self:flex-start; width:280px; height:72px}
+
+/* ---- screen: the sheet in context (1440 × 1024 frame, Figma 7538:236066) ---- */
+.bsh-screen{position:relative; box-sizing:border-box; width:100%; aspect-ratio:1440/1024; overflow:hidden; background:#f3f6fa}
+.bsh-screen__nav{position:absolute; left:0; top:0; bottom:0; width:17.7778%; background:#0f111b}
+.bsh-screen__page{position:absolute; left:18.8889%; top:3.125%; width:79.8611%; height:93.75%; overflow:hidden; border-radius:8px; background:#fff}
+.bsh-screen__t{position:absolute; left:24px; top:24px; font-size:24px; line-height:normal; font-weight:500; color:#8a8f99; white-space:nowrap}
+.bsh-open{
+  position:absolute; left:24px; top:72px; box-sizing:border-box; display:inline-flex; align-items:center; height:32px; margin:0; padding:0 12px;
+  border:0; border-radius:6px; background:#025be5; color:#fff; cursor:pointer;
+  font:600 14px/18px "Cube Rupee",'DM Sans',var(--font),sans-serif; letter-spacing:0;
+}
+.bsh-scrim{position:absolute; inset:0; background:rgba(0,0,0,.4)}                                       /* Neutrals/Black/40 */
+.bsh-dock{position:absolute; left:0; right:0; bottom:0; height:78.125%; display:flex}                    /* 800 of 1024 */
+.bsh-dock > .bsh{height:100%}
+.bsh-screen--full .bsh-dock{height:100%}
+.bsh-screen--bare{background:#dde3ea}
+/* live playground: slide up 250ms over the scrim */
+.bsh-screen--live .bsh-scrim{transition:opacity .25s}
+.bsh-screen--live .bsh-dock{transition:transform .25s cubic-bezier(.2,.8,.2,1),visibility 0s}
+.bsh-screen--live:not(.is-open) .bsh-scrim{opacity:0; pointer-events:none}
+.bsh-screen--live:not(.is-open) .bsh-dock{transform:translateY(100%); visibility:hidden; transition:transform .25s cubic-bezier(.2,.8,.2,1),visibility 0s .25s}
+.bsh-screen--live .bsh-l,.bsh-screen--live .bsh-r{overflow:auto}
+@media (prefers-reduced-motion:reduce){.bsh-screen--live .bsh-scrim,.bsh-screen--live .bsh-dock{transition:none !important}}
+.bsh-play__sep{width:1px; align-self:stretch; background:var(--f-line,var(--hairline))}
+
+/* ---- which one: Bottom sheet · Right overlay · Modal (Usage frame 7538:237985) ---- */
+.bsh-which{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; align-items:start; width:100%}
+.bsh-which figure{margin:0; display:flex; flex-direction:column; gap:12px; min-width:0}
+.bsh-which__t{font-size:16px; line-height:normal; font-weight:500; color:#1a1a1f}
+.bsh-which figcaption{font-size:13px; line-height:normal; color:#666b75}
+.bsh-mini{position:relative; width:100%; aspect-ratio:400/284.44; overflow:hidden; background:#dde3ea}
+.bsh-mini__ro{position:absolute; top:0; right:0; bottom:0; width:52.78%; background:#fff}
+.bsh-mini__modal{position:absolute; left:33.33%; top:38.28%; width:33.33%; height:23.44%; border-radius:3.33px; background:#fff}
+
+/* ---- layout helpers for the shared docs blocks ---- */
+.trd-fam.bsh-fam{grid-template-columns:repeat(3,minmax(0,1fr))}
+.bx-opt__stage:has(.bsh-fit),.docs-dodont__stage:has(.bsh-fit){display:block}
+/* the house grey stage (an older rule in docs.css paints this page's stages white) */
+body[class^="page-docs-bottomsheet"] .docs-content :is(.bx-opt__stage,.docs-dodont__stage,.bx-anatomy):has(.bsh-fit){background:var(--f-panel,var(--docs-nav-bg))}
+.bx-anatomy:has(.bsh-fit){display:block; padding:64px 56px}
+.bx-anatomy:has(.bsh-fit) .bx-anatomy__zoom{transform:none; width:100%}
+.bx-usage figure.bsh-fig{display:flex; flex-direction:column; align-items:stretch; gap:16px}
+
+@media (max-width:760px){
+  .trd-fam.bsh-fam{grid-template-columns:minmax(0,1fr)}
+  .bsh-which{grid-template-columns:minmax(0,1fr); max-width:400px; margin:0 auto}
+}

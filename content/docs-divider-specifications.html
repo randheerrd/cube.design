@@ -1,0 +1,309 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+    <button class="docs-header__theme" type="button" data-theme-toggle aria-label="Switch to dark theme" title="Switch theme">
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
+    </button>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details hidden open>
+      <summary>Getting started</summary>
+      <ul>
+        <li hidden><a href="#">About Cube</a></li>
+        <li hidden><a href="#">Designing</a></li>
+        <li hidden><a href="#">Developing</a></li>
+        <li hidden><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li hidden><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li hidden><a href="#">Motion</a></li>
+        <li><a href="docs-icons.html">Icons</a></li>
+        <li hidden><a href="#">Themes</a></li>
+        <li hidden><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-accordion.html">Accordion <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-avatar.html">Avatar <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="docs-bottomsheet.html">Bottom sheet <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-divider.html" aria-current="page">Divider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="docs-empty-states.html">Empty States</a></li>
+        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-filters.html">Filters</a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html">Popup</a></li>
+        <li><a href="docs-overlays.html">Right Overlays</a></li>
+        <li class="docs-nav__group"><span class="docs-nav__parent">Selections</span>
+          <ul class="docs-nav__sub">
+            <li><a href="docs-selection.html">Selection-group</a></li>
+            <li><a href="docs-segmented.html">Segmented-controls</a></li>
+            <li><a href="docs-checkbox.html">Checkbox</a></li>
+            <li><a href="docs-radio.html">Radio</a></li>
+          </ul>
+        </li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-swimlanes.html">Swimlanes</a></li>
+        <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-table.html">Tables</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="docs-widget.html">Dashboard widget</a></li>
+        <li><a href="docs-empty-states.html">Empty states</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="docs-trends.html">Trends</a></li>
+        <li hidden><a href="#">Overview</a></li>
+        <li hidden><a href="#">Chart types</a></li>
+        <li hidden><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details hidden>
+      <summary>Support</summary>
+      <ul>
+        <li hidden><a href="#">Contact us</a></li>
+        <li hidden><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <link rel="stylesheet" href="assets/vendor/phosphor/phosphor.css">
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Divider</h1>
+          <span class="docs-badge">New</span>
+          <span class="docs-meta">Last updated Nov 2026</span>
+        </div>
+        <p class="docs-title__desc">A divider (<strong>Divider/Separator</strong> in Figma) is a thin line that separates groups of content: list rows, header and body, inline items, summary and details. It comes horizontal or vertical, Solid or Dashed, in three emphasis levels. Always use the component instead of drawing lines, so every divider in the product looks the same. The <a href="docs-divider-specifications.html">Specifications tab</a> lists every value.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-divider.html" role="tab">Guidelines</a>
+        <a href="docs-divider-specifications.html" role="tab" aria-selected="true">Specifications</a>
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
+          Code
+          <span class="sr-only">(not in Storybook yet)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec">
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>Read from the component. All values in px.</p>
+          <h3>Divider</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Horizontal</th><th>Vertical</th><th>Notes</th></tr></thead><tbody><tr><td>Thickness</td><td>1</td><td>1</td><td>Stroke inside the container</td></tr><tr><td>Length</td><td>Fill container (default 320)</td><td>Fill container (default 120)</td><td>Set the instance to Fill</td></tr><tr><td>Dash</td><td>4 on / 4 off</td><td>4 on / 4 off</td><td>Style = Dashed</td></tr><tr><td>Padding</td><td>0</td><td>0</td><td>Spacing comes from the parent</td></tr></tbody></table></div>
+          <h3>Spacing around dividers (recommended)</h3>
+          <p>The divider has no margin of its own; this is the gap to give it in the parent layout.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Context</th><th>Space above / below</th></tr></thead><tbody><tr><td>List rows</td><td>0 &mdash; rows have their own padding</td></tr><tr><td>Between sections in a card</td><td>12&ndash;16</td></tr><tr><td>Inline items (vertical)</td><td>12&ndash;16 left / right &middot; height 16&ndash;28</td></tr><tr><td>Page sections</td><td>24</td></tr></tbody></table></div>
+          <h3>Visual reference</h3>
+          <p>Real size.</p>
+<div class="bx-sizes"><div><b>Horizontal</b><div class="dvd-tile"><div class="dvd dvd--h dvd--default" aria-hidden="true"><span class="dvd__line"></span></div></div><span>fills width</span></div><div><b>Vertical</b><div class="dvd-tile"><div class="dvd dvd--v dvd--default" aria-hidden="true"><span class="dvd__line"></span></div></div><span>fills height</span></div><div><b>Dashed</b><div class="dvd-tile"><div class="dvd dvd--h dvd--default dvd--dashed" aria-hidden="true"><span class="dvd__line"></span></div></div><span>4 / 4</span></div></div>
+        </section>
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <p>Each Emphasis maps to one colour variable. No raw values. The same token colours Solid and Dashed.</p>
+          <h3>Emphasis tokens</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Emphasis</th><th>Token</th><th>Use for</th></tr></thead><tbody><tr><td>Subtle</td><td>Semantics/Secondary-text/100 <span class="msg-sw" style="background:#e8eaee"></span>#E8EAEE</td><td>List rows, header / footer edges, dense UI</td></tr><tr><td>Default</td><td>Semantics/Primary-text/200 <span class="msg-sw" style="background:#cad2d7"></span>#CAD2D7</td><td>Accordion, cards, general separation</td></tr><tr><td>Strong</td><td>Semantics/Secondary-text/300 <span class="msg-sw" style="background:#bfc5cf"></span>#BFC5CF</td><td>Section breaks, dashed summary / details split</td></tr></tbody></table></div>
+          <h3>Visual reference &mdash; solid</h3>
+<div class="bx-sizes"><div><b>Subtle</b><div class="dvd-tile dvd-tile--sm"><div class="dvd dvd--h dvd--subtle" aria-hidden="true"><span class="dvd__line"></span></div></div><span>#E8EAEE</span></div><div><b>Default</b><div class="dvd-tile dvd-tile--sm"><div class="dvd dvd--h dvd--default" aria-hidden="true"><span class="dvd__line"></span></div></div><span>#CAD2D7</span></div><div><b>Strong</b><div class="dvd-tile dvd-tile--sm"><div class="dvd dvd--h dvd--strong" aria-hidden="true"><span class="dvd__line"></span></div></div><span>#BFC5CF</span></div></div>
+          <h3>Visual reference &mdash; dashed</h3>
+<div class="bx-sizes"><div><b>Subtle</b><div class="dvd-tile dvd-tile--sm"><div class="dvd dvd--h dvd--subtle dvd--dashed" aria-hidden="true"><span class="dvd__line"></span></div></div><span>#E8EAEE</span></div><div><b>Default</b><div class="dvd-tile dvd-tile--sm"><div class="dvd dvd--h dvd--default dvd--dashed" aria-hidden="true"><span class="dvd__line"></span></div></div><span>#CAD2D7</span></div><div><b>Strong</b><div class="dvd-tile dvd-tile--sm"><div class="dvd dvd--h dvd--strong dvd--dashed" aria-hidden="true"><span class="dvd__line"></span></div></div><span>#BFC5CF</span></div></div>
+        </section>
+        <section id="properties">
+          <h2>Properties</h2>
+          <p>Three variant properties &mdash; 2 &times; 2 &times; 3 = 12 variants. No text, boolean or slot properties.</p>
+<div class="bx-scroll"><table class="docs-table bx-api"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>type</td><td>horizontal | vertical</td><td>required</td><td>horizontal</td><td>Orientation. In code: <code>orientation</code>.</td></tr><tr><td>Style</td><td>Solid | Dashed</td><td>required</td><td>Solid</td><td>Dashed = 4 on / 4 off. In code: <code>variant</code>.</td></tr><tr><td>Emphasis</td><td>Subtle | Default | Strong</td><td>required</td><td>Default</td><td>Colour token. In code: <code>emphasis</code>.</td></tr></tbody></table></div>
+        </section>
+        <section id="api">
+          <h2>API and behavior</h2>
+          <p><strong>Designers:</strong> insert Divider, set type / Style / Emphasis, and set the instance to Fill container. <strong>Developers:</strong> <code>&lt;Divider orientation="horizontal|vertical" variant="solid|dashed" emphasis="subtle|default|strong" /&gt;</code> &rarr; <code>&lt;hr&gt;</code> / <code>role="separator"</code> with <code>aria-orientation</code>.</p>
+          <pre class="ic-code"><code>// type → orientation · Style → variant · Emphasis → emphasis
+&lt;Divider orientation="horizontal" variant="solid"  emphasis="subtle" /&gt;   // list rows
+&lt;Divider orientation="vertical"   variant="solid"  emphasis="subtle" /&gt;   // inline items, 24 tall
+&lt;Divider orientation="horizontal" variant="dashed" emphasis="strong" /&gt;   // summary / details
+
+/* Renders as &lt;hr&gt; (or role="separator" + aria-orientation). No margin. */
+hr {
+  border: 0;
+  border-top: 1px solid #CAD2D7;   /* Emphasis token: Semantics/Primary-text/200 */
+  width: 100%;
+  margin: 0;
+}
+[role="separator"][aria-orientation="vertical"] {
+  border-left: 1px solid #E8EAEE;  /* Semantics/Secondary-text/100 */
+  align-self: stretch;
+}
+/* Dashed: border-style: dashed, or a 4 / 4 background pattern for exact dashes */</code></pre>
+          <h3>Implementation notes (for developers)</h3>
+<div class="bx-scroll"><table class="docs-table bx-api"><thead><tr><th>Property</th><th>Value(s)</th><th>Notes</th></tr></thead><tbody><tr><td>Horizontal</td><td><code>border-top: 1px solid</code> token; <code>width: 100%</code></td><td></td></tr><tr><td>Vertical</td><td><code>border-left: 1px solid</code> token; <code>align-self: stretch</code></td><td></td></tr><tr><td>Dashed</td><td><code>border-style: dashed</code></td><td>Or a 4 / 4 background pattern for exact dashes.</td></tr><tr><td>Spacing</td><td>margin from the parent layout</td><td>Divider itself has no margin.</td></tr></tbody></table></div>
+          <h3>Accessibility</h3>
+<div class="bx-scroll"><table class="docs-table bx-api"><thead><tr><th>Property</th><th>Value(s)</th><th>Notes</th></tr></thead><tbody><tr><td>Decorative</td><td><code>aria-hidden="true"</code> when purely visual</td><td></td></tr><tr><td>Meaningful break</td><td><code>role="separator"</code> + <code>aria-orientation</code></td><td>Between groups in menus / toolbars.</td></tr></tbody></table></div>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+<h3>List rows</h3><div class="docs-demo" style="justify-content:center"><div class="dvd-list"><div class="dvd-list__row">Platform settings</div><div class="dvd dvd--h dvd--subtle" aria-hidden="true"><span class="dvd__line"></span></div><div class="dvd-list__row">Notifications</div><div class="dvd dvd--h dvd--subtle" aria-hidden="true"><span class="dvd__line"></span></div><div class="dvd-list__row">Team members</div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>type</td><td>horizontal</td><td>Fill container (width)</td></tr><tr><td>Emphasis</td><td>Subtle</td><td>Rows keep their own padding; no extra space</td></tr></tbody></table></div>
+<h3>Inline items</h3><div class="docs-demo" style="justify-content:center"><div class="dvd-inline dvd-inline--24 dvd-inline--soft"><span>MTD</span><div class="dvd dvd--v dvd--subtle" aria-hidden="true"><span class="dvd__line"></span></div><span>LM</span><div class="dvd dvd--v dvd--subtle" aria-hidden="true"><span class="dvd__line"></span></div><span>12 May</span></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>type</td><td>vertical</td><td></td></tr><tr><td>Height</td><td>24</td><td>Within the 16&ndash;28 row range</td></tr></tbody></table></div>
+<h3>Summary / details</h3><div class="docs-demo" style="justify-content:center"><div class="dvd-plan dvd-plan--bare"><div class="dvd-plan__in"><span class="dvd-plan__price">₹11,250 / month</span><div class="dvd dvd--h dvd--strong dvd--dashed" aria-hidden="true"><span class="dvd__line"></span></div><span class="dvd-plan__note">Includes: dark store data, maps</span></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Style</td><td>Dashed</td><td></td></tr><tr><td>Emphasis</td><td>Strong</td><td>Splits the price from what’s included</td></tr></tbody></table></div>
+        </section>
+        <section id="source">
+          <h2>Source</h2>
+          <p>Values come from the <strong>Divider &mdash; Documentation</strong> frames on the Divider/Separator page of the Cube Core Figma file (Anatomy, Property, Color Annotation, Dimensions, API, Usage Guidelines, How to use) and the live <strong>Divider</strong> component set in <em>Divider &middot; component (use this)</em>.</p>
+          <div class="docs-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 11v5" stroke-linecap="round"/></svg><p><strong>Where Figma leaves gaps.</strong> The Don’t &middot; 04 example (“fixed-width divider in a wider container”) is clipped to 10px tall in Figma, so only part of “Section A” shows; this page draws the intended Section A / 120px divider / Section B. The inline-items example uses a 24-tall vertical divider while the in-context frame uses 28; both sit in the documented 16&ndash;28 range. Figma property names (<code>type</code>, <code>Style</code>, <code>Emphasis</code>) differ from the developer props (<code>orientation</code>, <code>variant</code>, <code>emphasis</code>); both are listed. Dashes are drawn here as an exact 4 / 4 pattern, as the API notes allow, because CSS dashed borders vary by browser.</p></div>
+        </section>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7628-52454" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#api">API and behavior</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#source">Source</a></li>
+        </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
+})();
+</script>

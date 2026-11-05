@@ -1,0 +1,348 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+    <button class="docs-header__theme" type="button" data-theme-toggle aria-label="Switch to dark theme" title="Switch theme">
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
+    </button>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details hidden open>
+      <summary>Getting started</summary>
+      <ul>
+        <li hidden><a href="#">About Cube</a></li>
+        <li hidden><a href="#">Designing</a></li>
+        <li hidden><a href="#">Developing</a></li>
+        <li hidden><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li hidden><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li hidden><a href="#">Motion</a></li>
+        <li><a href="docs-icons.html">Icons</a></li>
+        <li hidden><a href="#">Themes</a></li>
+        <li hidden><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-accordion.html">Accordion <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-avatar.html">Avatar <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="docs-bottomsheet.html">Bottom sheet <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="docs-empty-states.html">Empty States</a></li>
+        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-filters.html">Filters</a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html">Popup</a></li>
+        <li><a href="docs-overlays.html">Right Overlays</a></li>
+        <li class="docs-nav__group"><span class="docs-nav__parent">Selections</span>
+          <ul class="docs-nav__sub">
+            <li><a href="docs-selection.html">Selection-group</a></li>
+            <li><a href="docs-segmented.html">Segmented-controls</a></li>
+            <li><a href="docs-checkbox.html">Checkbox</a></li>
+            <li><a href="docs-radio.html">Radio</a></li>
+          </ul>
+        </li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-subscription-card.html" aria-current="page">Subscription card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-swimlanes.html">Swimlanes</a></li>
+        <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-table.html">Tables</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="docs-widget.html">Dashboard widget</a></li>
+        <li><a href="docs-empty-states.html">Empty states</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="docs-trends.html">Trends</a></li>
+        <li hidden><a href="#">Overview</a></li>
+        <li hidden><a href="#">Chart types</a></li>
+        <li hidden><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details hidden>
+      <summary>Support</summary>
+      <ul>
+        <li hidden><a href="#">Contact us</a></li>
+        <li hidden><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <link rel="stylesheet" href="assets/vendor/phosphor/phosphor.css">
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Subscription card</h1>
+          <span class="docs-badge">New</span>
+          <span class="docs-meta">Last updated Nov 2026</span>
+        </div>
+        <p class="docs-title__desc">The plan card on pricing and subscription pages. Each card shows one plan &mdash; name, price, discount, what’s included and allowances &mdash; and one action that reflects the user’s relationship with that plan: add, switch, upgrade, downgrade or active. Place 3–4 side by side to compare plans. The <a href="docs-subscription-card-specifications.html">Specifications tab</a> lists every value.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-subscription-card.html" role="tab">Guidelines</a>
+        <a href="docs-subscription-card-specifications.html" role="tab" aria-selected="true">Specifications</a>
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
+          Code
+          <span class="sr-only">(not in Storybook yet)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec">
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>Read from the components. All values in px.</p>
+          <h3>Card</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Width</td><td>262 (fixed)</td><td>⚠ Consider Fill so 3–4 cards share a row evenly</td></tr><tr><td>Height</td><td>hugs content (~362 / 384 with trial)</td><td>Align card heights in a row</td></tr><tr><td>Padding · gap</td><td>12 · 16 (sections) · 8 (header)</td><td></td></tr><tr><td>Radius · border</td><td>8 · 1</td><td></td></tr><tr><td>Trial banner</td><td>22 tall</td><td>Padding 4 / 6 · gap 2 · 14px gift</td></tr><tr><td>Content slot</td><td>236 wide · gap 8</td><td></td></tr></tbody></table></div>
+          <h3>Parts</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Part</th><th>Size</th><th>Notes</th></tr></thead><tbody><tr><td>_Plan Action</td><td>236 × 32</td><td>Full width of the card</td></tr><tr><td>Plan Feature</td><td>236 × 14 (28 for 2 lines)</td><td>14px check + 4 gap</td></tr><tr><td>Plan Token</td><td>~248 × 36</td><td>16px icon · value row gap 6 · label 4 below</td></tr><tr><td>Current plan badge</td><td>Tiny chip · 18 tall</td><td>Padding 3 / 6 · radius pill</td></tr><tr><td>Discount chip</td><td>20 tall</td><td>Padding 4 / 6 · gap 4 · radius 4 · 12px tag; 8 from the original price</td></tr><tr><td>Price row</td><td>32 tall</td><td>Price + billing period, gap 4, on one baseline</td></tr><tr><td>Divider</td><td>236 × 0</td><td>1px dashed stroke, 16 above and below</td></tr><tr><td>Action button (Add, Switch, Upgrade, Downgrade)</td><td>236 × 32</td><td>Padding 12 (Downgrade 10) · gap 6 · radius 6 · 14px icon</td></tr><tr><td>Action chip (Added to cart, Active)</td><td>236 × 28</td><td>Padding 6 / 10 · gap 4 · radius 8 · 14px icon; top of the 32 area</td></tr><tr><td>Downgrade scheduled</td><td>236 × 32</td><td>Message: padding 8 · gap 8 · radius 6 · 1px border · 14px icons</td></tr></tbody></table></div>
+          <h3>Visual reference</h3>
+          <p>Real size.</p>
+          <div class="docs-demo"><div class="sbc-ref"><div class="sbc-card" role="group" aria-label="Standard plan"><div class="sbc-body"><div class="sbc-head"><div class="sbc-title"><span class="sbc-name">Standard</span></div><div class="sbc-price"><div class="sbc-disc"><s class="sbc-orig"><span class="sr-only">Was </span>₹15,000</s><span class="sbc-off"><i class="ph ph-tag" aria-hidden="true"></i>25% Off</span></div><div class="sbc-amt"><span class="sbc-val">₹11,250</span><span class="sbc-per">Monthly / Platform</span></div><div class="sbc-desc">Go deeper, down to each dark store</div></div></div><hr class="sbc-div"><div class="sbc-content"><div class="sbc-inc">Includes:</div><ul class="sbc-list"><li class="sbc-feat sbc-feat--hl"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Everything in Lite, plus</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Data at a dark store level</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>View your dark store coverage on a map</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Insights down to platform, city and category</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Consolidated view across all platforms</span></li></ul></div><div class="sbc-action"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="medium" data-density="comfortable"><span class="fbtn__label">Add to cart</span></button></div></div></div><span class="sbc-ref__cap">262 wide</span></div><div class="sbc-ref"><div class="sbc-card sbc-card--trial" role="group" aria-label="Standard plan"><div class="sbc-banner"><img src="assets/img/subscription-card/gift.svg" alt="" width="14" height="14"><span>Free for 7 days</span></div><div class="sbc-body"><div class="sbc-head"><div class="sbc-title"><span class="sbc-name">Standard</span></div><div class="sbc-price"><div class="sbc-disc"><s class="sbc-orig"><span class="sr-only">Was </span>₹15,000</s><span class="sbc-off"><i class="ph ph-tag" aria-hidden="true"></i>25% Off</span></div><div class="sbc-amt"><span class="sbc-val">₹11,250</span><span class="sbc-per">Monthly / Platform</span></div><div class="sbc-desc">Go deeper, down to each dark store</div></div></div><hr class="sbc-div"><div class="sbc-content"><div class="sbc-inc">Includes:</div><ul class="sbc-list"><li class="sbc-feat sbc-feat--hl"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Everything in Lite, plus</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Data at a dark store level</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>View your dark store coverage on a map</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Insights down to platform, city and category</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Consolidated view across all platforms</span></li></ul></div><div class="sbc-action"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="medium" data-density="comfortable"><span class="fbtn__label">Add to cart</span></button></div></div></div><span class="sbc-ref__cap">+22 banner</span></div><div class="sbc-ref"><div class="sbc-stack"><div class="sbc-action"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="medium" data-density="comfortable"><span class="fbtn__label">Add to cart</span></button></div></div><span class="sbc-ref__cap">236 × 32</span></div></div>
+        </section>
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <p>Tokens read from the components. ⚠ = raw value.</p>
+          <h3>Card</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Trial = No</th><th>Trial = Yes</th></tr></thead><tbody><tr><td>Background</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td></tr><tr><td>Border</td><td>Accent/Steel Blue/200 <span class="msg-sw" style="background:#e7eef9"></span>#e7eef9</td><td>Brand/500 <span class="msg-sw" style="background:#3a6ff5"></span>#3a6ff5</td></tr><tr><td>Inner glow (4px, inset)</td><td>&mdash;</td><td>Brand/100 <span class="msg-sw" style="background:#e9efff"></span>#e9efff</td></tr><tr><td>Trial banner</td><td>&mdash;</td><td>Gradient (raw) ⚠ <span class="msg-sw" style="background:#4c4fe9"></span>#4c4fe9 &rarr; <span class="msg-sw" style="background:#3a6ff5"></span>#3a6ff5, 110.6°</td></tr><tr><td>Trial label</td><td>&mdash;</td><td>Accent/Steel Blue/50 <span class="msg-sw" style="background:#f7faff"></span>#f7faff</td></tr><tr><td>Plan name</td><td>Primary-text/600 <span class="msg-sw" style="background:#515f69"></span>#515f69</td><td>Primary-text/600 <span class="msg-sw" style="background:#515f69"></span>#515f69</td></tr><tr><td>Price</td><td>Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214 · SemiBold 24</td><td>Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214 · SemiBold 24</td></tr><tr><td>Original price · Billing period · Description</td><td>Accent/Steel Blue/950 <span class="msg-sw" style="background:#1d355e"></span>#1d355e</td><td>Accent/Steel Blue/950 <span class="msg-sw" style="background:#1d355e"></span>#1d355e</td></tr><tr><td>Divider</td><td>Secondary-text/300 <span class="msg-sw" style="background:#bfc5cf"></span>#bfc5cf · dashed</td><td>Secondary-text/300 <span class="msg-sw" style="background:#bfc5cf"></span>#bfc5cf · dashed</td></tr><tr><td>Includes label</td><td>Accent/Steel Blue/800 <span class="msg-sw" style="background:#445f8d"></span>#445f8d</td><td>Accent/Steel Blue/800 <span class="msg-sw" style="background:#445f8d"></span>#445f8d</td></tr></tbody></table></div>
+          <h3>Badge and discount</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Fill</th><th>Text / icon</th></tr></thead><tbody><tr><td>Current plan badge</td><td>Primary/100 <span class="msg-sw" style="background:#eaf1ff"></span>#eaf1ff</td><td>Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5</td></tr><tr><td>Discount chip (+ tag icon)</td><td>Success/100 <span class="msg-sw" style="background:#dcfce7"></span>#dcfce7</td><td>Success/700 <span class="msg-sw" style="background:#008236"></span>#008236</td></tr></tbody></table></div>
+          <h3>_Plan Action</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Action</th><th>Button / fill</th><th>Text</th></tr></thead><tbody><tr><td>Add to cart</td><td>Filled, Action Type = Core &mdash; Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td></tr><tr><td>Added to cart</td><td>Standard-chip, Type = Filled, Color = Primary Blue &mdash; Primary/100 <span class="msg-sw" style="background:#eaf1ff"></span>#eaf1ff</td><td>Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5</td></tr><tr><td>Switch plan</td><td>Outlined, Action Type = Core &mdash; border Primary/400 <span class="msg-sw" style="background:#74a1f8"></span>#74a1f8</td><td>Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5</td></tr><tr><td>Active</td><td>Standard-chip, Type = Filled, Color = Green &mdash; Success/100 <span class="msg-sw" style="background:#dcfce7"></span>#dcfce7</td><td>Success/700 <span class="msg-sw" style="background:#008236"></span>#008236</td></tr><tr><td>Upgrade</td><td>Filled, Action Type = Core &mdash; Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td></tr><tr><td>Downgrade</td><td>Outlined, Action Type = Destructive &mdash; border Error/400 <span class="msg-sw" style="background:#ff6467"></span>#ff6467</td><td>Error/600 <span class="msg-sw" style="background:#e7000b"></span>#e7000b</td></tr><tr><td>Downgrade scheduled</td><td>Message, Type = Single Statement, Color × Sentiment = Red | Error Urgency &mdash; Error/100 <span class="msg-sw" style="background:#ffe2e2"></span>#ffe2e2, border Error/200 <span class="msg-sw" style="background:#ffc9c9"></span>#ffc9c9</td><td>Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214; icon Error/600 <span class="msg-sw" style="background:#e7000b"></span>#e7000b; Cancel Primary-text/900 <span class="msg-sw" style="background:#373d42"></span>#373d42</td></tr></tbody></table></div>
+          <h3>Plan Feature &middot; Plan Token</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Token</th><th>Notes</th></tr></thead><tbody><tr><td>Feature · Default</td><td>Accent/Steel Blue/950 <span class="msg-sw" style="background:#1d355e"></span>#1d355e · SemiBold 11</td><td></td></tr><tr><td>Feature · Highlight</td><td>Brand/600 <span class="msg-sw" style="background:#034ced"></span>#034ced</td><td></td></tr><tr><td>Feature check icon</td><td>Brand/600 <span class="msg-sw" style="background:#034ced"></span>#034ced</td><td>Circle at 20% opacity</td></tr><tr><td>Token value</td><td>Accent/Steel Blue/950 <span class="msg-sw" style="background:#1d355e"></span>#1d355e · SemiBold 14</td><td></td></tr><tr><td>Token label</td><td>Accent/Steel Blue/800 <span class="msg-sw" style="background:#445f8d"></span>#445f8d · Regular 11</td><td></td></tr><tr><td>Token icons</td><td>Secondary-text/950 <span class="msg-sw" style="background:#23292e"></span>#23292e</td><td>Questions badge Accent/Steel Blue/200 <span class="msg-sw" style="background:#e7eef9"></span>#e7eef9</td></tr></tbody></table></div>
+          <h3>Visual reference &mdash; cards</h3>
+          <div class="docs-demo"><div class="sbc-ref"><div class="sbc-card" role="group" aria-label="Standard plan"><div class="sbc-body"><div class="sbc-head"><div class="sbc-title"><span class="sbc-name">Standard</span></div><div class="sbc-price"><div class="sbc-disc"><s class="sbc-orig"><span class="sr-only">Was </span>₹15,000</s><span class="sbc-off"><i class="ph ph-tag" aria-hidden="true"></i>25% Off</span></div><div class="sbc-amt"><span class="sbc-val">₹11,250</span><span class="sbc-per">Monthly / Platform</span></div><div class="sbc-desc">Go deeper, down to each dark store</div></div></div><hr class="sbc-div"><div class="sbc-content"><div class="sbc-inc">Includes:</div><ul class="sbc-list"><li class="sbc-feat sbc-feat--hl"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Everything in Lite, plus</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Data at a dark store level</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>View your dark store coverage on a map</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Insights down to platform, city and category</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Consolidated view across all platforms</span></li></ul></div><div class="sbc-action"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="medium" data-density="comfortable"><span class="fbtn__label">Add to cart</span></button></div></div></div><span class="sbc-ref__cap">Trial = No</span></div><div class="sbc-ref"><div class="sbc-card sbc-card--trial" role="group" aria-label="Standard plan"><div class="sbc-banner"><img src="assets/img/subscription-card/gift.svg" alt="" width="14" height="14"><span>Free for 7 days</span></div><div class="sbc-body"><div class="sbc-head"><div class="sbc-title"><span class="sbc-name">Standard</span></div><div class="sbc-price"><div class="sbc-disc"><s class="sbc-orig"><span class="sr-only">Was </span>₹15,000</s><span class="sbc-off"><i class="ph ph-tag" aria-hidden="true"></i>25% Off</span></div><div class="sbc-amt"><span class="sbc-val">₹11,250</span><span class="sbc-per">Monthly / Platform</span></div><div class="sbc-desc">Go deeper, down to each dark store</div></div></div><hr class="sbc-div"><div class="sbc-content"><div class="sbc-inc">Includes:</div><ul class="sbc-list"><li class="sbc-feat sbc-feat--hl"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Everything in Lite, plus</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Data at a dark store level</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>View your dark store coverage on a map</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Insights down to platform, city and category</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Consolidated view across all platforms</span></li></ul></div><div class="sbc-action"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="medium" data-density="comfortable"><span class="fbtn__label">Add to cart</span></button></div></div></div><span class="sbc-ref__cap">Trial = Yes</span></div></div>
+          <h3>Visual reference &mdash; actions</h3>
+          <div class="docs-demo"><div class="sbc-ref"><div class="sbc-stack"><div class="sbc-action"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="medium" data-density="comfortable"><span class="fbtn__label">Add to cart</span></button></div><div class="sbc-action"><span class="sbc-chip sbc-chip--green"><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Active since 5 Aug’26</span></div></div><span class="sbc-ref__cap">Positive</span></div><div class="sbc-ref"><div class="sbc-stack"><div class="sbc-action"><button class="fbtn" type="button" data-family="destructive" data-variant="outlined" data-size="medium" data-density="comfortable"><i class="ph-bold ph-trend-down" aria-hidden="true"></i><span class="fbtn__label">Downgrade to Standard</span></button></div><div class="sbc-action"><div class="sbc-sched" role="status"><span class="sbc-sched__txt"><i class="ph-fill ph-warning-circle" aria-hidden="true"></i><span>Downgrade Scheduled</span></span><button class="fbtn" type="button" data-family="neutral" data-variant="naked" data-size="medium" data-density="fit"><i class="ph-bold ph-x" aria-hidden="true"></i><span class="fbtn__label">Cancel</span></button></div></div></div><span class="sbc-ref__cap">Negative</span></div></div>
+        </section>
+        <section id="typography">
+          <h2>Typography</h2>
+          <p>DM Sans throughout. Text styles as bound in the components; ⚠ = raw value, no style.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Style</th><th>Size / line height</th><th>Weight</th><th>Letter spacing</th></tr></thead><tbody><tr><td>Plan name</td><td>Body/B1/Semibold</td><td>16 / 20</td><td>600</td><td>0</td></tr><tr><td>Price</td><td>Heading/H4</td><td>24 / 32</td><td>600</td><td>0</td></tr><tr><td>Original price</td><td>DM Sans Regular, strikethrough ⚠ raw</td><td>12 / 16</td><td>400</td><td>0.1</td></tr><tr><td>Billing period</td><td>Small/S1/Regular</td><td>10 / 12</td><td>400</td><td>0.1</td></tr><tr><td>Description</td><td>Body/B3/Medium</td><td>12 / 16</td><td>500</td><td>0.1</td></tr><tr><td>Current plan badge · Discount chip</td><td>Small/S1/Semibold</td><td>10 / 12</td><td>600</td><td>0.1</td></tr><tr><td>Trial label</td><td>DM Sans Bold ⚠ raw</td><td>10 / 12</td><td>700</td><td>0</td></tr><tr><td>Includes label</td><td>Small/S0/Medium</td><td>11 / 14</td><td>500</td><td>0.2</td></tr><tr><td>Plan Feature</td><td>Small/S0/Semibold</td><td>11 / 14</td><td>600</td><td>0.2</td></tr><tr><td>Token value</td><td>Body/B2/Semibold</td><td>14 / 18</td><td>600</td><td>0</td></tr><tr><td>Token label</td><td>Small/S0/Regular</td><td>11 / 14</td><td>400</td><td>0.2</td></tr><tr><td>Action labels</td><td>Body/B3/Semibold</td><td>12 / 16</td><td>600</td><td>0.1</td></tr><tr><td>“Downgrade Scheduled”</td><td>Body/B3/Medium</td><td>12 / 16</td><td>500</td><td>0.1</td></tr></tbody></table></div>
+        </section>
+        <section id="properties">
+          <h2>Properties</h2>
+          <h3>Subscription card</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Trial</td><td>No | Yes</td><td>required</td><td>No</td><td>Gradient banner.</td></tr><tr><td>Plan name · Description</td><td>string</td><td>required</td><td>“Standard” · “Go deeper, down to each dark store”</td><td></td></tr><tr><td>Price · Original price · Billing period</td><td>string</td><td>required</td><td>“₹11,250” · “₹15,000” · “Monthly / Platform”</td><td></td></tr><tr><td>Discount</td><td>true | false</td><td>optional</td><td>true</td><td>⚠ The “25% Off” value is not a property &mdash; edit the chip.</td></tr><tr><td>Current plan</td><td>true | false</td><td>optional</td><td>false</td><td>Badge next to the name.</td></tr><tr><td>Action</td><td>true | false</td><td>optional</td><td>true</td><td>Shows the nested _Plan Action.</td></tr><tr><td>Content</td><td>SLOT</td><td>required</td><td>&mdash;</td><td>Plan Features · Plan Tokens.</td></tr></tbody></table></div>
+          <h3>_Plan Action &middot; Plan Feature &middot; Plan Token</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>_Plan Action · Action</td><td>Add to cart | Added to cart | Switch plan | Active | Upgrade | Downgrade | Downgrade scheduled</td><td>required</td><td>Add to cart</td><td>⚠ Button labels (“…to Standard”, “Active since …”) are not text properties.</td></tr><tr><td>Plan Feature · Type · Feature</td><td>Default | Highlight · string</td><td>required</td><td>Default · “Data at a dark store level”</td><td></td></tr><tr><td>Plan Token · Type · Value · Label</td><td>Tokens | Questions · string · string</td><td>required</td><td>Tokens · “3000” · “GC Tokens per month”</td><td></td></tr></tbody></table></div>
+        </section>
+        <section id="api">
+          <h2>API and behavior</h2>
+          <p><strong>Designers:</strong> place one Subscription card per plan, edit the text properties, fill the Content slot with Plan Features / Plan Tokens and swap the nested _Plan Action to the user’s state. <strong>Developers:</strong> <code>&lt;PlanCard name price originalPrice discount period description trialDays current features={[{text, highlight}]} tokens={[…]} action={state} /&gt;</code>. Pick <code>action</code> from the user’s relationship to each plan, using the table below.</p>
+          <pre class="ic-code"><code>&lt;PlanCard
+  name="Standard"
+  price="₹11,250"
+  originalPrice="₹15,000"          // with discount: struck through, read as “was ₹15,000”
+  discount="25% Off"
+  period="Monthly / Platform"
+  description="Go deeper, down to each dark store"
+  trialDays={7}                    // “Free for 7 days” banner; omit when the plan has no trial
+  current={false}                  // Current plan badge + aria-current
+  features={[
+    { text: "Everything in Lite, plus", highlight: true },
+    { text: "Data at a dark store level" },
+    { text: "View your dark store coverage on a map" },
+  ]}
+  tokens={[{ type: "tokens", value: "3000", label: "GC Tokens per month" }]}
+  action="Upgrade"                 // Add to cart | Added to cart | Switch plan | Active |
+                                   // Upgrade | Downgrade | Downgrade scheduled
+/&gt;</code></pre>
+          <h3>Which action when</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>User’s relationship to the plan</th><th>Action</th><th>Notes</th></tr></thead><tbody><tr><td>Not subscribed, no cart</td><td>Add to cart</td><td></td></tr><tr><td>In cart</td><td>Added to cart</td><td>Click again to remove.</td></tr><tr><td>Current plan</td><td>Active</td><td>“Active since &lt;date&gt;”; badge “Current plan” on.</td></tr><tr><td>Higher than current</td><td>Upgrade</td><td>Immediate, prorated.</td></tr><tr><td>Lower than current</td><td>Downgrade</td><td>Confirm in a modal; applies at period end.</td></tr><tr><td>Downgrade pending</td><td>Downgrade scheduled</td><td>“Cancel” undoes it.</td></tr><tr><td>Same tier, different variant</td><td>Switch plan</td><td></td></tr></tbody></table></div>
+          <h3>Accessibility</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>What to do</th><th>Notes</th></tr></thead><tbody><tr><td>Price</td><td>Read with period: “11,250 rupees per month per platform”</td><td></td></tr><tr><td>Struck price</td><td>Announce “was 15,000”</td><td>Not colour / strike only.</td></tr><tr><td>Current plan</td><td><code>aria-current</code> on the card</td><td></td></tr></tbody></table></div>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+<h3>Plan comparison</h3><div class="docs-demo"><div class="sbc-fit" data-sbc-fit><div class="sbc-row"><div class="sbc-card" role="group" aria-label="Lite plan" aria-current="true"><div class="sbc-body"><div class="sbc-head"><div class="sbc-title"><span class="sbc-name">Lite</span><span class="sbc-badge">Current Plan</span></div><div class="sbc-price"><div class="sbc-amt"><span class="sbc-val">Free</span><span class="sbc-per">Monthly / Platform</span></div><div class="sbc-desc">Track the basics across platforms</div></div></div><hr class="sbc-div"><div class="sbc-content"><div class="sbc-inc">Includes:</div><ul class="sbc-list"><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Data at a dark store level</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>View your dark store coverage on a map</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Insights down to platform, city and category</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Consolidated view across all platforms</span></li></ul></div><div class="sbc-action"><span class="sbc-chip sbc-chip--green"><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Active since 5 Aug’26</span></div></div></div><div class="sbc-card sbc-card--trial" role="group" aria-label="Standard plan"><div class="sbc-banner"><img src="assets/img/subscription-card/gift.svg" alt="" width="14" height="14"><span>Free for 7 days</span></div><div class="sbc-body"><div class="sbc-head"><div class="sbc-title"><span class="sbc-name">Standard</span></div><div class="sbc-price"><div class="sbc-disc"><s class="sbc-orig"><span class="sr-only">Was </span>₹15,000</s><span class="sbc-off"><i class="ph ph-tag" aria-hidden="true"></i>25% Off</span></div><div class="sbc-amt"><span class="sbc-val">₹11,250</span><span class="sbc-per">Monthly / Platform</span></div><div class="sbc-desc">Go deeper, down to each dark store</div></div></div><hr class="sbc-div"><div class="sbc-content"><div class="sbc-inc">Includes:</div><ul class="sbc-list"><li class="sbc-feat sbc-feat--hl"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Everything in Lite, plus</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Data at a dark store level</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>View your dark store coverage on a map</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Insights down to platform, city and category</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Consolidated view across all platforms</span></li></ul></div><div class="sbc-action"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="medium" data-density="comfortable"><span class="fbtn__label">Add to cart</span></button></div></div></div><div class="sbc-card" role="group" aria-label="Pro plan"><div class="sbc-body"><div class="sbc-head"><div class="sbc-title"><span class="sbc-name">Pro</span></div><div class="sbc-price"><div class="sbc-disc"><s class="sbc-orig"><span class="sr-only">Was </span>₹30,000</s><span class="sbc-off"><i class="ph ph-tag" aria-hidden="true"></i>25% Off</span></div><div class="sbc-amt"><span class="sbc-val">₹22,500</span><span class="sbc-per">Monthly / Platform</span></div><div class="sbc-desc">Full automation with dedicated reviews</div></div></div><hr class="sbc-div"><div class="sbc-content"><div class="sbc-inc">Includes:</div><ul class="sbc-list"><li class="sbc-feat sbc-feat--hl"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Everything in Standard, plus</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Data at a dark store level</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>View your dark store coverage on a map</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Insights down to platform, city and category</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Consolidated view across all platforms</span></li></ul></div><div class="sbc-action"><button class="fbtn" type="button" data-family="core" data-variant="filled" data-size="medium" data-density="comfortable"><i class="ph-bold ph-trend-up" aria-hidden="true"></i><span class="fbtn__label">Upgrade to Pro</span></button></div></div></div></div></div><p class="docs-demo__caption">Current · trial · upgrade.</p></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Lite</td><td>Current plan · Active</td><td></td></tr><tr><td>Standard</td><td>Trial = Yes · Add to cart</td><td></td></tr><tr><td>Pro</td><td>Upgrade</td><td></td></tr></tbody></table></div>
+<h3>Current plan</h3><div class="docs-demo" style="justify-content:center"><div class="sbc-card" role="group" aria-label="Standard plan" aria-current="true"><div class="sbc-body"><div class="sbc-head"><div class="sbc-title"><span class="sbc-name">Standard</span><span class="sbc-badge">Current Plan</span></div><div class="sbc-price"><div class="sbc-disc"><s class="sbc-orig"><span class="sr-only">Was </span>₹15,000</s><span class="sbc-off"><i class="ph ph-tag" aria-hidden="true"></i>25% Off</span></div><div class="sbc-amt"><span class="sbc-val">₹11,250</span><span class="sbc-per">Monthly / Platform</span></div><div class="sbc-desc">Go deeper, down to each dark store</div></div></div><hr class="sbc-div"><div class="sbc-content"><div class="sbc-inc">Includes:</div><ul class="sbc-list"><li class="sbc-feat sbc-feat--hl"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Everything in Lite, plus</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Data at a dark store level</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>View your dark store coverage on a map</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Insights down to platform, city and category</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Consolidated view across all platforms</span></li></ul></div><div class="sbc-action"><span class="sbc-chip sbc-chip--green"><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Active since 5 Aug’26</span></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Current plan</td><td>true</td><td></td></tr><tr><td>Action</td><td>Active</td><td></td></tr></tbody></table></div>
+<h3>Pending downgrade</h3><div class="docs-demo" style="justify-content:center"><div class="sbc-card" role="group" aria-label="Standard plan"><div class="sbc-body"><div class="sbc-head"><div class="sbc-title"><span class="sbc-name">Standard</span></div><div class="sbc-price"><div class="sbc-disc"><s class="sbc-orig"><span class="sr-only">Was </span>₹15,000</s><span class="sbc-off"><i class="ph ph-tag" aria-hidden="true"></i>25% Off</span></div><div class="sbc-amt"><span class="sbc-val">₹11,250</span><span class="sbc-per">Monthly / Platform</span></div><div class="sbc-desc">Go deeper, down to each dark store</div></div></div><hr class="sbc-div"><div class="sbc-content"><div class="sbc-inc">Includes:</div><ul class="sbc-list"><li class="sbc-feat sbc-feat--hl"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Everything in Lite, plus</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Data at a dark store level</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>View your dark store coverage on a map</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Insights down to platform, city and category</span></li><li class="sbc-feat"><img src="assets/img/subscription-card/feature-check.svg" alt="" width="14" height="14"><span>Consolidated view across all platforms</span></li></ul></div><div class="sbc-action"><div class="sbc-sched" role="status"><span class="sbc-sched__txt"><i class="ph-fill ph-warning-circle" aria-hidden="true"></i><span>Downgrade Scheduled</span></span><button class="fbtn" type="button" data-family="neutral" data-variant="naked" data-size="medium" data-density="fit"><i class="ph-bold ph-x" aria-hidden="true"></i><span class="fbtn__label">Cancel</span></button></div></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Action</td><td>Downgrade scheduled</td><td>Cancel to undo</td></tr></tbody></table></div>
+        </section>
+        <section id="related">
+          <h2>Related components</h2>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>How it’s used here</th></tr></thead><tbody><tr><td><a href="docs.html">Buttons</a></td><td>The Action-Button behind Add to cart, Switch plan, Upgrade and Downgrade (Medium, comfortable).</td></tr><tr><td><a href="docs-chips.html">Chips, Tags &amp; Legends</a></td><td>The Standard-chip behind the Current plan badge, the discount chip, Added to cart and Active.</td></tr><tr><td><a href="docs-messages.html">Message</a></td><td>The red Single Statement message behind Downgrade scheduled.</td></tr><tr><td><a href="docs-popup.html">Popup</a></td><td>The confirmation modal before a downgrade. Cards inside a modal turn Action off.</td></tr><tr><td><a href="docs-icons.html">Icons</a></td><td>The card’s local icons are copies of library icons &mdash; prefer the main icon library.</td></tr></tbody></table></div>
+        </section>
+        <section id="source">
+          <h2>Source</h2>
+          <p>Values come from the <strong>Subscription card &mdash; Documentation</strong> frames on the subscription card page of the Cube Core Figma file (Anatomy, Property, Color Annotation, Dimensions, API, Usage Guidelines, How to use) and the live <strong>Subscription card</strong>, <strong>_Plan Action</strong>, <strong>Plan Feature</strong> and <strong>Plan Token</strong> components in <em>Subscription card &middot; components (use these)</em>.</p>
+          <p class="docs-note">Where Figma disagrees with itself or leaves gaps: the colour table gives the Trial = Yes background as “Gradient (raw)”, but the card fill stays White &mdash; the gradient is the banner, listed on its own row here. Inner glow, banner label, badge, discount chip, Includes label, icon and message colours aren’t in the colour table; they’re read from the components. The usage frame promises eight do/don’t rules but has seven pairs. The Figma plan comparison labels Pro’s action “Upgrade to Standard” and gives Lite an “Everything in Lite, plus” line; following Figma’s own checklist (“Action labels name the right plan”), this page uses “Upgrade to Pro”, starts Lite without the Highlight line and gives Pro “Everything in Standard, plus”. Don’t 02 in Figma keeps the same feature order and only changes the description; this page reorders the features. The Questions token’s default label is “GC Tokens per month”; “Questions per month” is used here. The local icons are Phosphor glyphs (shown with the Phosphor font); FeatureCheck (duotone) and Gift are exported from Figma.</p>
+        </section>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7652-53418" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#api">API and behavior</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#related">Related components</a></li>
+        <li><a href="#source">Source</a></li>
+        </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
+})();
+</script>
+<script>
+(function(){
+  /* Plan rows: scale a row of cards down (CSS zoom) so 3–4 plans stay side
+     by side, as in Figma, at any column width. Never scales up. */
+  function fit(){
+    document.querySelectorAll('[data-sbc-fit]').forEach(function(box){
+      var row=box.firstElementChild; if(!row) return;
+      row.style.zoom='';
+      var w=row.offsetWidth, h=row.offsetHeight, avail=box.clientWidth,
+          mh=+box.getAttribute('data-sbc-maxh')||0, z=1;
+      if(avail>0 && w>avail) z=avail/w;
+      if(mh && h*z>mh) z=mh/h;
+      if(z<1) row.style.zoom=(Math.floor(z*1000)/1000).toString();
+    });
+  }
+  fit(); window.addEventListener('load',fit);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
+  var ft; window.addEventListener('resize',function(){clearTimeout(ft);ft=setTimeout(fit,120);});
+})();
+</script>
