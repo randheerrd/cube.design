@@ -152,8 +152,8 @@ body[class^="page-docs"],
 .docs-body{
   margin-left:var(--docs-nav); padding:0 var(--spacing-48);
 }
-.docs-split{display:grid; grid-template-columns:minmax(0,1fr) var(--docs-toc); gap:var(--spacing-48)}
-.docs-main{min-width:0; padding:0 0 96px; max-width:760px}
+.docs-split{display:grid; grid-template-columns:minmax(0,1fr); gap:var(--spacing-48)}
+.docs-main{min-width:0; padding:0 0 96px; max-width:none}
 
 .docs-title__crumb{margin:0 0 var(--spacing-12); font-size:13px}
 .docs-title__crumb a{color:var(--docs-link)}
@@ -792,7 +792,10 @@ body[class^="page-docs"],
 .fb-play__controls [hidden]{display:none}
 
 /* ---- page heading: title + description left, resources right ---- */
-.docs-top{display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:var(--spacing-48); align-items:end; padding:var(--spacing-64) 0 0}
+.docs-top{display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:var(--spacing-48); align-items:start; padding:var(--spacing-64) 0 0}
+/* inside the content column the split already gives the top spacing */
+.docs-main > .docs-top{padding-top:0}
+.docs-top .docs-res{padding-top:var(--spacing-8)}
 .docs-title h1{font-size:clamp(40px,5vw,60px); font-weight:400; line-height:1.1}
 .docs-badge{background:color-mix(in srgb, var(--docs-link) 16%, var(--bg)); color:var(--docs-link)}
 .docs-title__desc{font-size:20px; line-height:1.5; color:var(--ink); max-width:760px}
@@ -1289,8 +1292,8 @@ body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="pag
    (title, tabs, article) and a 220px right rail 64px away.
    ============================================================ */
 body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-body{padding:0 var(--spacing-64)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-split{grid-template-columns:minmax(0,960px) 220px; gap:var(--spacing-64); padding-top:var(--spacing-40)}
-body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-main{max-width:960px; padding:0 0 96px}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-split{grid-template-columns:minmax(0,1fr); gap:var(--spacing-64); padding-top:var(--spacing-40)}
+body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-main{max-width:none; padding:0 0 96px}
 body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail{position:sticky; top:calc(var(--docs-header) + 0px); align-self:start; padding-top:var(--spacing-40); display:flex; flex-direction:column; gap:var(--spacing-40)}
 body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail .docs-res{padding:0; gap:0}
 body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="page-docs-messages"],[class^="page-docs-dropdown"],[class^="page-docs-header"],[class^="page-docs-sidenav"],[class^="page-docs-popup"],[class^="page-docs-tabs"],[class^="page-docs-tooltips"],[class^="page-docs-radio"],[class^="page-docs-icons"],[class^="page-docs-empty"],[class^="page-docs-filters"],[class^="page-docs-swimlanes"],[class^="page-docs-accordion"],[class^="page-docs-avatar"],[class^="page-docs-divider"],[class^="page-docs-file-upload"],[class^="page-docs-skeleton"],[class^="page-docs-subscription-card"],[class^="page-docs-card"],[class^="page-docs-widget"],[class^="page-docs-table"],[class^="page-docs-trends"],[class^="page-docs-bottomsheet"],[class^="page-docs-banners"],[class^="page-docs-chips"],[class^="page-docs-dates"],[class^="page-docs-toggle"],[class^="page-docs-overlays"],[class^="page-docs-stepper"],[class^="page-docs-selection"],[class^="page-docs-segmented"],[class^="page-docs-checkbox"],[class^="page-docs-colors"],.page-docs,.page-docs-buttons-specifications) .docs-rail .docs-toc{position:static; margin:0; padding:0}
@@ -3461,12 +3464,6 @@ button.es-chip{cursor:pointer}
 .dw-series span{display:inline-flex; align-items:center; gap:var(--spacing-6); height:24px; padding:0 var(--spacing-8); border-radius:6px; font-size:12px; font-weight:600}
 .dw-series i{width:10px; height:10px; border-radius:2px; background:currentColor}
 .dw-chart{display:block; width:100%; height:150px; border:1px solid #e8eaee; border-radius:8px}
-.dw-tbl{width:100%; border-collapse:collapse; font-size:12px; line-height:16px; border:1px solid #e8eaee; border-radius:8px; overflow:hidden}
-.dw-tbl th,.dw-tbl td{padding:var(--spacing-8) var(--spacing-10); text-align:right; border-bottom:1px solid #eff2f6; color:#101214; font-weight:600; white-space:nowrap}
-.dw-tbl th{background:#f1f6fd; font-weight:600; color:#363e45}
-.dw-tbl th:first-child,.dw-tbl td:first-child{text-align:left; font-weight:500}
-.dw-tbl td small{display:block; font-size:10px; color:#d92d20; font-weight:500}
-.dw-tbl tr:last-child td{border-bottom:0}
 .dw-msg{display:flex; gap:var(--spacing-8); align-items:flex-start; padding:var(--spacing-10) var(--spacing-12); border-radius:8px; background:#fff4e5; border:1px solid #ffd8a8; font-size:12px; line-height:16px; color:#5f370e}
 .dw-blank{height:120px}
 /* doc furniture */
@@ -3478,6 +3475,8 @@ button.es-chip{cursor:pointer}
 .bx-anatomy:has(.dw,.dw-h) .bx-anatomy__zoom{transform:none; width:100%}
 .dw-z{zoom:.86}
 .bx-opt__stage .dw-h,.docs-dodont__stage .dw{zoom:.8}
+/* Table-template inside a widget always fills the slot, even when the widget is wider than its card. */
+.dw .tgr-scroll > .tgr-t{width:auto; min-width:100%}
 .docs-content .bx-opt__stage:has(.dw),.docs-content .docs-dodont__stage:has(.dw,.dw-page){background:#eff2f6}
 .docs-dodont__stage:has(.dw,.dw-page){display:block}
 .dw-page{display:flex; flex-direction:column; gap:var(--spacing-8); padding:var(--spacing-8)}
@@ -5729,3 +5728,16 @@ button.rox-nb,button.rox-x,button.rox-tab,button.rox-btn{cursor:pointer}
 .rox-stack > div{width:100%; max-width:680px; margin:0 auto}
 /* Figma sets opsz 14 on the 13px switcher text */
 .rox-sw__t,.rox-sw select{font-variation-settings:"opsz" 14}
+
+/* ---- page frame: the docs layout fills the window up to 1440px and is
+   centred beyond that. The nav colour runs out to the left edge and the
+   header and footer bars stay full-bleed; only their contents follow the
+   frame. Below 1441px nothing here applies. ---- */
+@media (min-width:1441px){
+  :root{--docs-gutter:calc((100vw - 1440px) / 2)}
+  .docs-header{padding-left:var(--docs-gutter); padding-right:calc(var(--docs-gutter) + var(--spacing-16))}
+  .docs-nav{left:var(--docs-gutter)}
+  .docs-nav::before{content:""; position:fixed; top:var(--docs-header); bottom:0; left:0; width:var(--docs-gutter); background:var(--docs-nav-bg)}
+  .docs-body{margin-left:calc(var(--docs-gutter) + var(--docs-nav)); max-width:calc(1440px - var(--docs-nav))}
+  .docs-footer{margin-left:calc(var(--docs-gutter) + var(--docs-nav)); padding-right:calc(var(--docs-gutter) + var(--spacing-48))}
+}
