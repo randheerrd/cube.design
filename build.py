@@ -185,6 +185,30 @@ PAGES = [
      "Tooltip guidelines, anatomy, placement and accessibility for the Cube design system."),
     ("docs-tooltips-specifications", "Tooltip specs", "Tooltip specifications — Cube Design System",
      "Color, state, typography and dimension values for the Tooltip component."),
+    ("docs-accordion", "Accordion", "Accordion — Cube Design System",
+     "Accordion guidelines — anatomy, options, behaviour and do’s and don’ts."),
+    ("docs-accordion-specifications", "Accordion specs", "Accordion specifications — Cube Design System",
+     "Every dimension, colour token and property for the Accordion."),
+    ("docs-avatar", "Avatar", "Avatar — Cube Design System",
+     "Avatar guidelines — types, sizes, groups and do’s and don’ts."),
+    ("docs-avatar-specifications", "Avatar specs", "Avatar specifications — Cube Design System",
+     "Every dimension, colour token and property for the Avatar."),
+    ("docs-divider", "Divider", "Divider — Cube Design System",
+     "Divider / Separator guidelines — orientation, styles, spacing and do’s and don’ts."),
+    ("docs-divider-specifications", "Divider specs", "Divider specifications — Cube Design System",
+     "Every dimension, colour token and property for the Divider."),
+    ("docs-file-upload", "File upload", "File upload — Cube Design System",
+     "File upload guidelines — the drop zone, file rows, states, validation and do’s and don’ts."),
+    ("docs-file-upload-specifications", "File upload specs", "File upload specifications — Cube Design System",
+     "Every dimension, colour token and property for File upload and its parts."),
+    ("docs-skeleton", "Skeleton", "Skeleton — Cube Design System",
+     "Skeleton loader guidelines — shapes, composition, motion and do’s and don’ts."),
+    ("docs-skeleton-specifications", "Skeleton specs", "Skeleton specifications — Cube Design System",
+     "Every dimension, colour token and property for the Skeleton."),
+    ("docs-subscription-card", "Subscription card", "Subscription card — Cube Design System",
+     "Subscription card guidelines — plans, anatomy, states and do’s and don’ts."),
+    ("docs-subscription-card-specifications", "Subscription card specs", "Subscription card specifications — Cube Design System",
+     "Every dimension, colour token and property for the Subscription card."),
     ("team",       "Join the team", "Team & Open Roles — Cube.Design",
      "How the design team is shaped, what we screen for, and what is open."),
     ("internal",   "Internal",   "Internal — Cube.Design",
@@ -207,7 +231,8 @@ HIDDEN = {"internal", "craft", "team", "docs", "docs-tooltips", "docs-tooltips-s
           "docs-stepper", "docs-stepper-specifications",
           "docs-selection", "docs-selection-specifications",
           "docs-segmented", "docs-segmented-specifications",
-          "docs-checkbox", "docs-checkbox-specifications"}
+          "docs-checkbox", "docs-checkbox-specifications",
+          "docs-accordion", "docs-accordion-specifications", "docs-avatar", "docs-avatar-specifications", "docs-divider", "docs-divider-specifications", "docs-file-upload", "docs-file-upload-specifications", "docs-skeleton", "docs-skeleton-specifications", "docs-subscription-card", "docs-subscription-card-specifications"}
 
 # Guarded by INTERNAL_PASSWORD rather than SITE_PASSWORD.
 INTERNAL_PAGES = {"internal"}
@@ -243,7 +268,8 @@ DOCS = {"docs", "docs-tooltips", "docs-tooltips-specifications", "docs-buttons-s
           "docs-stepper", "docs-stepper-specifications",
           "docs-selection", "docs-selection-specifications",
           "docs-segmented", "docs-segmented-specifications",
-          "docs-checkbox", "docs-checkbox-specifications"}
+          "docs-checkbox", "docs-checkbox-specifications",
+          "docs-accordion", "docs-accordion-specifications", "docs-avatar", "docs-avatar-specifications", "docs-divider", "docs-divider-specifications", "docs-file-upload", "docs-file-upload-specifications", "docs-skeleton", "docs-skeleton-specifications", "docs-subscription-card", "docs-subscription-card-specifications"}
 
 
 EDITION_HEAD = (
@@ -339,7 +365,7 @@ def page_theme(slug):
 
 
 # Pages kept out of the nav and search for now (still built, reachable by URL).
-SEARCH_HIDDEN = {"docs-bottomsheet", "docs-bottomsheet-specifications"}
+SEARCH_HIDDEN = set()
 
 
 def search_index():

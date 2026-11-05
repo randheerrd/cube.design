@@ -1,0 +1,317 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+    <button class="docs-header__theme" type="button" data-theme-toggle aria-label="Switch to dark theme" title="Switch theme">
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
+    </button>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details hidden open>
+      <summary>Getting started</summary>
+      <ul>
+        <li hidden><a href="#">About Cube</a></li>
+        <li hidden><a href="#">Designing</a></li>
+        <li hidden><a href="#">Developing</a></li>
+        <li hidden><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li hidden><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li hidden><a href="#">Motion</a></li>
+        <li><a href="docs-icons.html">Icons</a></li>
+        <li hidden><a href="#">Themes</a></li>
+        <li hidden><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-accordion.html" aria-current="page">Accordion <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-avatar.html">Avatar <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="docs-bottomsheet.html">Bottom sheet <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="docs-empty-states.html">Empty States</a></li>
+        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-filters.html">Filters</a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html">Popup</a></li>
+        <li><a href="docs-overlays.html">Right Overlays</a></li>
+        <li class="docs-nav__group"><span class="docs-nav__parent">Selections</span>
+          <ul class="docs-nav__sub">
+            <li><a href="docs-selection.html">Selection-group</a></li>
+            <li><a href="docs-segmented.html">Segmented-controls</a></li>
+            <li><a href="docs-checkbox.html">Checkbox</a></li>
+            <li><a href="docs-radio.html">Radio</a></li>
+          </ul>
+        </li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-swimlanes.html">Swimlanes</a></li>
+        <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-table.html">Tables</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="docs-widget.html">Dashboard widget</a></li>
+        <li><a href="docs-empty-states.html">Empty states</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="docs-trends.html">Trends</a></li>
+        <li hidden><a href="#">Overview</a></li>
+        <li hidden><a href="#">Chart types</a></li>
+        <li hidden><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details hidden>
+      <summary>Support</summary>
+      <ul>
+        <li hidden><a href="#">Contact us</a></li>
+        <li hidden><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <link rel="stylesheet" href="assets/vendor/phosphor/phosphor.css">
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Accordion</h1>
+          <span class="docs-badge">New</span>
+          <span class="docs-meta">Last updated Nov 2026</span>
+        </div>
+        <p class="docs-title__desc">A header that expands to reveal more content and collapses to save space. Use it for FAQs, optional detail and long pages split into sections people open one by one (Recommended Add-Ons, Plans &amp; pricing, Competitor brands). Three styles for three weights of content. The <a href="docs-accordion-specifications.html">Specifications tab</a> lists every value.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-accordion.html" role="tab">Guidelines</a>
+        <a href="docs-accordion-specifications.html" role="tab" aria-selected="true">Specifications</a>
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
+          Code
+          <span class="sr-only">(not in Storybook yet)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec">
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>Read from the component. All values in px.</p>
+          <h3>Per style</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Bordered</th><th>Underline</th><th>Prominent</th></tr></thead><tbody><tr><td>Collapsed height</td><td>42</td><td>41</td><td>54</td></tr><tr><td>Expanded height (no slot)</td><td>83</td><td>69</td><td>86</td></tr><tr><td>Padding</td><td>12</td><td>12</td><td>12</td></tr><tr><td>Gap (expanded)</td><td>12</td><td>12</td><td>16</td></tr><tr><td>Radius</td><td>8</td><td>0</td><td>8</td></tr><tr><td>Border</td><td>1, all sides</td><td>1, bottom only</td><td>1, all sides</td></tr><tr><td>Title</td><td>12 / 16</td><td>12 / 16</td><td>16 / 20</td></tr><tr><td>Toggle</td><td>16 icon</td><td>16 caret</td><td>28 round button, 14 caret</td></tr><tr><td>Divider</td><td>1, header &harr; content</td><td>&mdash;</td><td>&mdash;</td></tr></tbody></table></div>
+          <h3>Layout</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Width</td><td>520 default &middot; fill container</td><td>Title left, toggle right (space-between), so the icon stays on the right at any width.</td></tr><tr><td>Stack gap</td><td>8 (Bordered) &middot; 0 (Underline)</td><td>Between items in a list.</td></tr><tr><td>Slot</td><td>hug</td><td>Prominent sections with cards are usually wider than 520 &mdash; let the accordion fill the section.</td></tr></tbody></table></div>
+          <h3>Visual reference</h3>
+          <p>Collapsed heights, at 1&times;.</p>
+          <div class="docs-demo"><div class="acd-ref"><div class="acd-ref__row"><span class="acd-ref__lab"><b>Bordered</b><small>42 tall</small></span><div class="acd-item acd-item--bordered"><div class="acd-item__head"><span class="acd-item__title">How is ROAS calculated ?</span><span class="acd-item__icon" aria-hidden="true"><i class="ph ph-plus"></i></span></div></div></div><div class="acd-ref__row"><span class="acd-ref__lab"><b>Underline</b><small>41 tall</small></span><div class="acd-item acd-item--underline"><div class="acd-item__head"><span class="acd-item__title">How is ROAS calculated ?</span><span class="acd-item__icon" aria-hidden="true"><i class="ph ph-caret-down"></i></span></div></div></div><div class="acd-ref__row"><span class="acd-ref__lab"><b>Prominent</b><small>54 tall</small></span><div class="acd-item acd-item--prominent"><div class="acd-item__head"><span class="acd-item__title">How is ROAS calculated ?</span><span class="acd-item__btn" aria-hidden="true"><i class="ph ph-caret-down"></i></span></div></div></div></div></div>
+        </section>
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <p>Tokens read from the component. The Prominent toggle keeps the Neutral Outlined button’s own tokens.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Token</th><th>Notes</th></tr></thead><tbody><tr><td>Border / bottom line</td><td>Primary-text/200 <span class="msg-sw" style="background:#cad2d7"></span>#cad2d7</td><td>All styles</td></tr><tr><td>Background</td><td>none (transparent)</td><td>Inherits the surface &mdash; no hover state</td></tr><tr><td>Title</td><td>Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214</td><td>SemiBold</td></tr><tr><td>Description, slot text</td><td>Primary-text/800 <span class="msg-sw" style="background:#3e464c"></span>#3e464c</td><td>Medium</td></tr><tr><td>Icons (16px)</td><td>text/text-primary <span class="msg-sw" style="background:#101214"></span>#101214</td><td>Plus &middot; Minus &middot; CaretDown &middot; CaretUp</td></tr><tr><td>Divider (Bordered)</td><td>Primary-text/200 <span class="msg-sw" style="background:#cad2d7"></span>#cad2d7</td><td>Divider &middot; Emphasis Default</td></tr><tr><td>Prominent button fill</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff</td><td>Neutral Outlined button &mdash; see <a href="docs.html">Buttons</a></td></tr><tr><td>Prominent button border</td><td>Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td>1px, pill radius</td></tr><tr><td>Prominent caret</td><td>Primary-text/800 <span class="msg-sw" style="background:#3e464c"></span>#3e464c</td><td>14px</td></tr></tbody></table></div>
+          <h3>Visual reference &mdash; collapsed</h3>
+          <div class="docs-demo"><div class="acd-ref"><div class="acd-ref__row"><span class="acd-ref__lab"><b>Bordered</b><small>42 tall</small></span><div class="acd-item acd-item--bordered"><div class="acd-item__head"><span class="acd-item__title">How is ROAS calculated ?</span><span class="acd-item__icon" aria-hidden="true"><i class="ph ph-plus"></i></span></div></div></div><div class="acd-ref__row"><span class="acd-ref__lab"><b>Underline</b><small>41 tall</small></span><div class="acd-item acd-item--underline"><div class="acd-item__head"><span class="acd-item__title">How is ROAS calculated ?</span><span class="acd-item__icon" aria-hidden="true"><i class="ph ph-caret-down"></i></span></div></div></div><div class="acd-ref__row"><span class="acd-ref__lab"><b>Prominent</b><small>54 tall</small></span><div class="acd-item acd-item--prominent"><div class="acd-item__head"><span class="acd-item__title">How is ROAS calculated ?</span><span class="acd-item__btn" aria-hidden="true"><i class="ph ph-caret-down"></i></span></div></div></div></div></div>
+          <h3>Visual reference &mdash; expanded</h3>
+          <div class="docs-demo"><div class="acd-ref"><div class="acd-ref__row"><span class="acd-ref__lab"><b>Bordered</b><small>83 tall</small></span><div class="acd-item acd-item--bordered acd-open"><div class="acd-item__head"><span class="acd-item__title">How is ROAS calculated ?</span><span class="acd-item__icon" aria-hidden="true"><i class="ph ph-minus"></i></span></div><div class="acd-item__panel"><div class="acd-item__inner"><div class="acd-item__body"><hr class="acd-item__rule"><p class="acd-item__desc">ROAS is attributed sales divided by ad spend for the selected date range.</p></div></div></div></div></div><div class="acd-ref__row"><span class="acd-ref__lab"><b>Underline</b><small>69 tall</small></span><div class="acd-item acd-item--underline acd-open"><div class="acd-item__head"><span class="acd-item__title">How is ROAS calculated ?</span><span class="acd-item__icon" aria-hidden="true"><i class="ph ph-caret-up"></i></span></div><div class="acd-item__panel"><div class="acd-item__inner"><div class="acd-item__body"><p class="acd-item__desc">ROAS is attributed sales divided by ad spend for the selected date range.</p></div></div></div></div></div><div class="acd-ref__row"><span class="acd-ref__lab"><b>Prominent</b><small>86 tall</small></span><div class="acd-item acd-item--prominent acd-open"><div class="acd-item__head"><span class="acd-item__title">How is ROAS calculated ?</span><span class="acd-item__btn" aria-hidden="true"><i class="ph ph-caret-up"></i></span></div><div class="acd-item__panel"><div class="acd-item__inner"><div class="acd-item__body"><p class="acd-item__desc">ROAS is attributed sales divided by ad spend for the selected date range.</p></div></div></div></div></div></div></div>
+        </section>
+        <section id="typography">
+          <h2>Typography</h2>
+          <p>DM Sans (Family/body) throughout.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Style</th><th>Size / line height</th><th>Weight</th><th>Letter spacing</th></tr></thead><tbody><tr><td>Title &mdash; Bordered, Underline</td><td>Body/B3/Semibold</td><td>12 / 16</td><td>600</td><td>0.1</td></tr><tr><td>Title &mdash; Prominent</td><td>Body/B1/Semibold</td><td>16 / 20</td><td>600</td><td>0</td></tr><tr><td>Description, slot text</td><td>Body/B3/Medium</td><td>12 / 16</td><td>500</td><td>0.1</td></tr></tbody></table></div>
+        </section>
+        <section id="properties">
+          <h2>Properties</h2>
+<div class="bx-scroll"><table class="docs-table bx-api"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Style</td><td>Bordered | Prominent | Underline</td><td>required</td><td>Bordered</td><td></td></tr><tr><td>State</td><td>Collapsed | Expanded</td><td>required</td><td>Collapsed</td><td></td></tr><tr><td>Title</td><td>string</td><td>required</td><td>“How is ROAS calculated ?”</td><td>TEXT property.</td></tr><tr><td>Description</td><td>string</td><td>optional</td><td>&mdash;</td><td>Shown when expanded.</td></tr><tr><td>Show Slot &middot; Slot / Slot 2</td><td>boolean &middot; SLOT</td><td>optional</td><td>false</td><td>⚠ Prominent uses “Slot”, others “Slot 2”.</td></tr></tbody></table></div>
+        </section>
+        <section id="api">
+          <h2>API and behavior</h2>
+          <p><strong>Designers:</strong> pick the Style by the weight of the content, set Title / Description, and turn on Show Slot to add content. <strong>Developers:</strong> <code>&lt;Accordion variant="bordered|underline|prominent" title description expanded onToggle&gt;{children}&lt;/Accordion&gt;</code> &mdash; the header is a button with <code>aria-expanded</code>.</p>
+          <pre class="ic-code"><code>&lt;Accordion
+  variant="bordered"            // "bordered" | "underline" | "prominent"
+  title="How is ROAS calculated ?"
+  description="ROAS is attributed sales divided by ad spend for the selected date range."
+  expanded={open}               // collapsed by default
+  onToggle={setOpen}            // click / Enter / Space on the header row
+&gt;
+  {children}                    // optional slot content (Show Slot)
+&lt;/Accordion&gt;
+
+&lt;!-- rendered --&gt;
+&lt;div class="accordion"&gt;
+  &lt;button id="roas-head" aria-expanded="false" aria-controls="roas-panel"&gt;
+    How is ROAS calculated ? &lt;svg aria-hidden="true"&gt;…&lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;div id="roas-panel" role="region" aria-labelledby="roas-head" hidden&gt;…&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Behaviour rules</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Rule</th><th>Notes</th></tr></thead><tbody><tr><td>Toggle</td><td>click / Enter / Space on the header</td><td>Whole header row, not just the icon.</td></tr><tr><td>Animation</td><td>height 150–200ms ease</td><td></td></tr><tr><td>Multiple open</td><td>allowed by default</td><td>Optional “one at a time” mode for FAQs.</td></tr><tr><td>Default state</td><td>collapsed (FAQ) &middot; first open (sections)</td><td></td></tr><tr><td>Persistence</td><td>remember open sections per user</td><td>For long pages.</td></tr></tbody></table></div>
+          <h3>Accessibility</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>Rule</th><th>Notes</th></tr></thead><tbody><tr><td>Header</td><td><code>&lt;button aria-expanded aria-controls&gt;</code></td><td></td></tr><tr><td>Content</td><td>region labelled by the title</td><td></td></tr><tr><td>Focus</td><td>visible focus ring on the header</td><td>⚠ No focus / hover variant in Figma yet.</td></tr></tbody></table></div>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+<h3>FAQ list</h3><div class="docs-demo"><div class="acd-stack"><div class="acd-item acd-item--bordered acd-open"><div class="acd-item__head"><span class="acd-item__title">How is ROAS calculated ?</span><span class="acd-item__icon" aria-hidden="true"><i class="ph ph-minus"></i></span></div><div class="acd-item__panel"><div class="acd-item__inner"><div class="acd-item__body"><hr class="acd-item__rule"><p class="acd-item__desc">ROAS is attributed sales divided by ad spend for the selected date range.</p></div></div></div></div><div class="acd-item acd-item--bordered"><div class="acd-item__head"><span class="acd-item__title">When does data refresh?</span><span class="acd-item__icon" aria-hidden="true"><i class="ph ph-plus"></i></span></div></div><div class="acd-item acd-item--bordered"><div class="acd-item__head"><span class="acd-item__title">Can I export this report?</span><span class="acd-item__icon" aria-hidden="true"><i class="ph ph-plus"></i></span></div></div></div><p class="docs-demo__caption">Bordered, one open.</p></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Style</td><td>Bordered</td><td></td></tr><tr><td>State</td><td>1 Expanded, rest Collapsed</td><td>Stack gap 8</td></tr></tbody></table></div>
+<h3>Page section</h3><div class="docs-demo"><div class="acd-wide"><div class="acd-item acd-item--prominent acd-open"><div class="acd-item__head"><span class="acd-item__title">How is ROAS calculated ?</span><span class="acd-item__btn" aria-hidden="true"><i class="ph ph-caret-up"></i></span></div><div class="acd-item__panel"><div class="acd-item__inner"><div class="acd-item__body"><p class="acd-item__desc">ROAS is attributed sales divided by ad spend for the selected date range.</p><div class="acd-item__slot"><div class="acd-card"><img class="acd-card__art" src="assets/img/accordion/card-art-geo.png" alt="" width="447" height="155"><div class="acd-card__panel"><div><p class="acd-card__name">Geo Intelligence</p><p class="acd-card__text">Attribute off-take and share movements to key input metrics. Daily market share included.</p></div><div class="acd-card__foot"><span class="acd-card__status"><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Active for 3 platforms<span class="acd-plat"><img src="assets/img/accordion/platform-blinkit.png" alt="Blinkit" width="16" height="16"><img src="assets/img/accordion/platform-instamart.png" alt="Instamart" width="16" height="16"><img src="assets/img/accordion/platform-zepto.png" alt="Zepto" width="16" height="16"></span></span><span class="acd-card__cta">Manage</span></div></div></div><div class="acd-card"><img class="acd-card__art" src="assets/img/accordion/card-art-perf.png" alt="" width="447" height="155"><div class="acd-card__panel"><div><p class="acd-card__name">Perf Marketing Advanced</p><p class="acd-card__text">Attribute off-take and share movements to key input metrics. Daily market share included.</p></div><div class="acd-card__foot"><span class="acd-card__status"><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Active for 3 platforms<span class="acd-plat"><img src="assets/img/accordion/platform-blinkit.png" alt="Blinkit" width="16" height="16"><img src="assets/img/accordion/platform-instamart.png" alt="Instamart" width="16" height="16"><img src="assets/img/accordion/platform-zepto.png" alt="Zepto" width="16" height="16"></span></span><span class="acd-card__cta">Manage</span></div></div></div></div></div></div></div></div></div><p class="docs-demo__caption">Prominent with cards in the slot.</p></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Style</td><td>Prominent</td><td></td></tr><tr><td>Show Slot</td><td>true</td><td>Cards</td></tr></tbody></table></div>
+<h3>Compact list in a panel</h3><div class="docs-demo"><div class="acd-stack acd-stack--flush"><div class="acd-item acd-item--underline"><div class="acd-item__head"><span class="acd-item__title">How is ROAS calculated ?</span><span class="acd-item__icon" aria-hidden="true"><i class="ph ph-caret-down"></i></span></div></div><div class="acd-item acd-item--underline"><div class="acd-item__head"><span class="acd-item__title">All SKUs</span><span class="acd-item__icon" aria-hidden="true"><i class="ph ph-caret-down"></i></span></div></div></div><p class="docs-demo__caption">Underline.</p></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Style</td><td>Underline</td><td>Stack gap 0</td></tr></tbody></table></div>
+        </section>
+        <section id="related">
+          <h2>Related components</h2>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>How it’s used</th></tr></thead><tbody><tr><td><a href="docs.html">Buttons</a></td><td>The Prominent toggle is a Neutral Outlined round icon button (28).</td></tr><tr><td><a href="docs-divider.html">Divider</a></td><td>Separates the header from the content in Bordered (Emphasis Default).</td></tr></tbody></table></div>
+        </section>
+        <section id="source">
+          <h2>Source</h2>
+          <p>Values come from the <strong>Accordion &mdash; Documentation</strong> frames on the Accordion page of the Cube Core Figma file (Anatomy, Property, Color Annotation, Dimensions, API, Usage Guidelines, How to use) and the live <strong>Accordion</strong> component set (3 styles &times; Collapsed / Expanded).</p>
+          <p class="docs-note">Where Figma disagrees with itself or leaves gaps: the colour table gives Primary-text/900 for the icons, but the component’s 16px icons use text/text-primary (#101214) and the Prominent caret Primary-text/800 (#3e464c) &mdash; this page shows the component. The slot is called “Slot” on Prominent and “Slot 2” on Bordered and Underline. In Figma the header uses fixed gaps (219 / 250 / 331); build it as space-between so the icon stays on the right at any width. The Prominent cards example is wider (673&ndash;933) than the 520 component, so it fills its section here. The nesting Don’t in Figma stacks a Bordered accordion under a Prominent one; this page draws it inside the Prominent slot. There are no hover or focus variants yet &mdash; the focus ring here follows the API’s “visible focus ring on header”.</p>
+        </section>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7628-52350" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#api">API and behavior</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#related">Related components</a></li>
+        <li><a href="#source">Source</a></li>
+        </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
+})();
+</script>

@@ -1,0 +1,366 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+    <button class="docs-header__theme" type="button" data-theme-toggle aria-label="Switch to dark theme" title="Switch theme">
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
+    </button>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details hidden open>
+      <summary>Getting started</summary>
+      <ul>
+        <li hidden><a href="#">About Cube</a></li>
+        <li hidden><a href="#">Designing</a></li>
+        <li hidden><a href="#">Developing</a></li>
+        <li hidden><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li hidden><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li hidden><a href="#">Motion</a></li>
+        <li><a href="docs-icons.html">Icons</a></li>
+        <li hidden><a href="#">Themes</a></li>
+        <li hidden><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-accordion.html">Accordion <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-avatar.html" aria-current="page">Avatar <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="docs-bottomsheet.html">Bottom sheet <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="docs-empty-states.html">Empty States</a></li>
+        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-filters.html">Filters</a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html">Popup</a></li>
+        <li><a href="docs-overlays.html">Right Overlays</a></li>
+        <li class="docs-nav__group"><span class="docs-nav__parent">Selections</span>
+          <ul class="docs-nav__sub">
+            <li><a href="docs-selection.html">Selection-group</a></li>
+            <li><a href="docs-segmented.html">Segmented-controls</a></li>
+            <li><a href="docs-checkbox.html">Checkbox</a></li>
+            <li><a href="docs-radio.html">Radio</a></li>
+          </ul>
+        </li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-swimlanes.html">Swimlanes</a></li>
+        <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-table.html">Tables</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="docs-widget.html">Dashboard widget</a></li>
+        <li><a href="docs-empty-states.html">Empty states</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="docs-trends.html">Trends</a></li>
+        <li hidden><a href="#">Overview</a></li>
+        <li hidden><a href="#">Chart types</a></li>
+        <li hidden><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details hidden>
+      <summary>Support</summary>
+      <ul>
+        <li hidden><a href="#">Contact us</a></li>
+        <li hidden><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <link rel="stylesheet" href="assets/vendor/phosphor/phosphor.css">
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>Avatar</h1>
+          <span class="docs-badge">New</span>
+          <span class="docs-meta">Last updated Nov 2026</span>
+        </div>
+        <p class="docs-title__desc">An avatar is a small picture that stands for a person, brand, platform or workspace: a photo or logo, initials, or a placeholder. Circles are for people and rounded squares for brands and platforms; Avatar/group stacks several to show who is involved. The <a href="docs-avatar-specifications.html">Specifications tab</a> lists every value.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-avatar.html" role="tab" aria-selected="true">Guidelines</a>
+        <a href="docs-avatar-specifications.html" role="tab">Specifications</a>
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
+          Code
+          <span class="sr-only">(not in Storybook yet)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec">
+        <section id="at-a-glance">
+          <h2>At a glance</h2>
+          <p>A small picture that represents a person, brand, platform or workspace &mdash; a photo or logo, initials, or a placeholder. There are two components: <strong>Avatar/single</strong> (one avatar, Size 12&ndash;36 &times; Roundness) and <strong>Avatar/group</strong> (a stack of 6 that shows who is involved). What an avatar shows comes from the nested <strong>_Avatar-base</strong>.</p>
+          <div class="bx-quick">
+            <div><h3>Use it for</h3><p>Showing <strong>who or what</strong> something belongs to &mdash; a person, brand, platform or workspace &mdash; with its name next to it.</p></div>
+            <div><h3>Shape</h3><p><strong>Circle</strong> (Roundness = Yes) for people. <strong>Rounded square</strong> (Roundness = No) for brands, platforms and workspaces.</p></div>
+            <div><h3>Content</h3><p>The <strong>image</strong> first; if there isn’t one, <strong>initials</strong> from the name, then the <strong>Placeholder</strong>.</p></div>
+          </div>
+          <div class="docs-demo"><div class="dw-play av-play" id="av-play"><div class="av-play__opts"><div class="dw-play__opts" role="radiogroup" aria-label="Component"><span class="av-play__k">Component</span><label><input type="radio" name="av-comp" value="single" checked>Avatar/single</label><label><input type="radio" name="av-comp" value="group">Avatar/group</label></div><div class="dw-play__opts" role="radiogroup" aria-label="Size"><span class="av-play__k">Size</span><label><input type="radio" name="av-size" value="36" checked>36px</label><label><input type="radio" name="av-size" value="32">32px</label><label><input type="radio" name="av-size" value="28">28px</label><label><input type="radio" name="av-size" value="24">24px</label><label><input type="radio" name="av-size" value="20">20px</label><label><input type="radio" name="av-size" value="16">16px</label><label><input type="radio" name="av-size" value="12">12px</label></div><div class="dw-play__opts" role="radiogroup" aria-label="Roundness"><span class="av-play__k">Roundness</span><label><input type="radio" name="av-round" value="No" checked>No (square)</label><label><input type="radio" name="av-round" value="Yes">Yes (circle)</label></div><div class="dw-play__opts" role="radiogroup" aria-label="Content"><span class="av-play__k">Content</span><label><input type="radio" name="av-content" value="image" checked>image</label><label><input type="radio" name="av-content" value="initials">initials</label><label><input type="radio" name="av-content" value="ph">Placeholder</label></div></div><div class="av-play__stage av-cq"><div class="av-play__pair"><figure class="av-tile"><div class="av-zoom av-zoom--2" data-av-out aria-hidden="true"><span class="av" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="36" height="36"></span></div><figcaption>Enlarged</figcaption></figure><figure class="av-tile"><div data-av-out aria-hidden="true"><span class="av" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="36" height="36"></span></div><figcaption>Real size</figcaption></figure></div></div><p class="av-play__props" aria-live="polite">In Figma: <code data-av-props>Avatar/single · Size=36px · Roundness=No · _Avatar-base: image</code></p></div></div>
+        </section>
+        <section id="anatomy">
+          <h2>Anatomy</h2>
+          <p>Avatar/single is a clipped frame &mdash; a rounded square or a circle &mdash; holding _Avatar-base, which shows an image, initials or a placeholder icon. Avatar/group is several singles overlapping, each with a white ring.</p>
+          <h3>1 &middot; Avatar/single &mdash; content types</h3>
+          <p>Image &middot; Initials &middot; Placeholder at 36px, enlarged.</p>
+          <div class="bx-anatomy av-cq" data-bx-anatomy="top,bottom,top"><div class="av-zoom av-zoom--4"><div class="av-ana-row"><span class="av" aria-hidden="true" data-anatomy="1" data-center><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="36" height="36"></span><span class="av av--round av--initials" aria-hidden="true" data-anatomy="2" data-center>RK</span><span class="av av--ph" aria-hidden="true" data-anatomy="3" data-center><img class="av__ic" src="assets/img/avatar/building.svg" alt="" width="20" height="20"></span></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>#</th><th>Element</th><th>Notes</th></tr></thead><tbody><tr><td><span class="bx-n">1</span></td><td>Image</td><td>Photo or logo, cropped to fill. Use for brands, platforms, workspaces, and people with photos.</td></tr><tr><td><span class="bx-n">2</span></td><td>Initials</td><td>Up to 2 letters, Primary/600 on Primary/100. ⚠ In Figma the letters are outlined vectors, not editable text.</td></tr><tr><td><span class="bx-n">3</span></td><td>Placeholder</td><td>Building icon on Steel Blue/100 &mdash; when no image is available.</td></tr></tbody></table></div>
+          <h3>2 &middot; Avatar/group</h3>
+          <p>24px circles, enlarged.</p>
+          <div class="bx-anatomy av-cq" data-bx-anatomy="top,bottom,top"><div class="av-zoom av-zoom--3"><span class="av-group" role="img" aria-label="6 people"><span class="av av--24 av--round" data-anatomy="1"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round" data-anatomy="2"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round" data-anatomy="3"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span></span></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>#</th><th>Element</th><th>Notes</th></tr></thead><tbody><tr><td><span class="bx-n">1</span></td><td>First avatar</td><td>Avatar/single &mdash; on top of the stack.</td></tr><tr><td><span class="bx-n">2</span></td><td>Overlap</td><td>−6px gap; a 1px white ring separates each avatar.</td></tr><tr><td><span class="bx-n">3</span></td><td>Last avatar</td><td>The group is fixed at 6. ⚠ There’s no “+N” overflow avatar yet.</td></tr></tbody></table></div>
+        </section>
+        <section id="size">
+          <h2>Size</h2>
+          <p>Seven sizes, 36 to 12, shared by Avatar/single and Avatar/group. Pick the size from the text next to it: 20 with 14px text, 24 in chips, 32 in list rows, 36 in headers. Square corners step down with size &mdash; radius 6 at 36&ndash;32, 4 at 28&ndash;20, 2 at 16&ndash;12.</p>
+<div class="bx-options av-opts--4"><div class="bx-opt"><div class="bx-opt__stage"><div class="av-row av-row--tight"><span class="av av--round av--initials" aria-hidden="true">RK</span><span class="av" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="36" height="36"></span></div></div><div class="bx-opt__body"><h3>36px</h3><p>Profile, account menu, page headers.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="av-row av-row--tight"><span class="av av--32 av--round av--initials" aria-hidden="true">RK</span><span class="av av--32" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="32" height="32"></span></div></div><div class="bx-opt__body"><h3>32px</h3><p>Workspace header, list rows. The most common size.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="av-row av-row--tight"><span class="av av--28 av--round av--initials" aria-hidden="true">RK</span><span class="av av--28" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="28" height="28"></span></div></div><div class="bx-opt__body"><h3>28px</h3><p>Dropdown items, table SKU / brand.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="av-row av-row--tight"><span class="av av--24 av--round av--initials" aria-hidden="true">RK</span><span class="av av--24" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span></div></div><div class="bx-opt__body"><h3>24px</h3><p>Chips, compact lists, filter options.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="av-row av-row--tight"><span class="av av--20 av--round av--initials" aria-hidden="true">RK</span><span class="av av--20" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="20" height="20"></span></div></div><div class="bx-opt__body"><h3>20px</h3><p>Inline with 14px text.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="av-row av-row--tight"><span class="av av--16 av--round av--initials" aria-hidden="true">RK</span><span class="av av--16" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="16" height="16"></span></div></div><div class="bx-opt__body"><h3>16px</h3><p>Inline with 12px text, platform logos in chips. ⚠ In a group the −6 overlap is large.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="av-row av-row--tight"><span class="av av--12 av--round av--initials" aria-hidden="true">RK</span><span class="av av--12" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="12" height="12"></span></div></div><div class="bx-opt__body"><h3>12px</h3><p>Tiny indicators only. ⚠ In a group the −6 overlap is half the avatar.</p></div></div></div>
+          <p>The initials and the Placeholder icon keep their size in every avatar, so they’re clipped at 16 and 12 &mdash; the same as in the Figma component.</p>
+        </section>
+        <section id="roundness">
+          <h2>Roundness</h2>
+          <p>Shape tells users what kind of thing an avatar is, so they can tell people from brands at a glance.</p>
+<div class="bx-options bx-options--two"><div class="bx-opt"><div class="bx-opt__stage av-cq"><div class="av-zoom av-zoom--2"><div class="av-row"><span class="av" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="36" height="36"></span><span class="av av--ph" aria-hidden="true"><img class="av__ic" src="assets/img/avatar/building.svg" alt="" width="20" height="20"></span></div></div></div><div class="bx-opt__body"><h3>Roundness = No</h3><p>Rounded square &mdash; for brands, platforms and workspaces. The default.</p></div></div><div class="bx-opt"><div class="bx-opt__stage av-cq"><div class="av-zoom av-zoom--2"><div class="av-row"><span class="av av--round av--initials" aria-hidden="true">RK</span><span class="av av--round" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="36" height="36"></span></div></div></div><div class="bx-opt__body"><h3>Roundness = Yes</h3><p>Circle &mdash; for people.</p></div></div></div>
+        </section>
+        <section id="content-type">
+          <h2>Content</h2>
+          <p>Set on the nested <strong>_Avatar-base</strong> (Property 1). It isn’t exposed on Avatar/single &mdash; select the inner layer to change it.</p>
+<div class="bx-options"><div class="bx-opt"><div class="bx-opt__stage av-cq"><div class="av-zoom av-zoom--2"><span class="av" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="36" height="36"></span></div></div><div class="bx-opt__body"><h3>image</h3><p>Photo or logo, cropped to fill. For brands, platforms, workspaces, and people with photos. The default.</p></div></div><div class="bx-opt"><div class="bx-opt__stage av-cq"><div class="av-zoom av-zoom--2"><span class="av av--round av--initials" aria-hidden="true">RK</span></div></div><div class="bx-opt__body"><h3>initials</h3><p>Up to 2 letters, Primary/600 on Primary/100. For people without a photo.</p></div></div><div class="bx-opt"><div class="bx-opt__stage av-cq"><div class="av-zoom av-zoom--2"><span class="av av--ph" aria-hidden="true"><img class="av__ic" src="assets/img/avatar/building.svg" alt="" width="20" height="20"></span></div></div><div class="bx-opt__body"><h3>Placeholder</h3><p>Building icon on Steel Blue/100 &mdash; when there’s no image.</p></div></div></div>
+        </section>
+        <section id="group">
+          <h2>Avatar/group</h2>
+          <p>Six Avatar/singles overlapping by 6px, each with a 1px white ring; the first sits on top. Same sizes and roundness as the single. The count is fixed at 6 &mdash; there’s no “+N” avatar yet, so hide extras manually.</p>
+<div class="bx-options bx-options--two"><div class="bx-opt"><div class="bx-opt__stage av-cq"><div class="av-zoom av-zoom--2"><span class="av-group" role="img" aria-label="6 people"><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span></span></div></div><div class="bx-opt__body"><h3>Roundness = Yes</h3><p>Circles &mdash; a group of people, such as who has access.</p></div></div><div class="bx-opt"><div class="bx-opt__stage av-cq"><div class="av-zoom av-zoom--2"><span class="av-group" role="img" aria-label="6 brands"><span class="av av--24"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span></span></div></div><div class="bx-opt__body"><h3>Roundness = No</h3><p>Squares &mdash; a group of brands or platforms.</p></div></div></div>
+        </section>
+        <section id="usage">
+          <h2>Common layouts</h2>
+          <p>Use circles for people and rounded squares for brands, platforms and workspaces &mdash; so users can tell them apart at a glance. Pair the avatar with a name whenever space allows: the avatar helps recognition, the name gives certainty.</p>
+<div class="bx-usage av-usage">
+<figure><div class="bx-mock"><div class="av-card"><span class="av av--32 av--round av--initials" aria-hidden="true">RS</span><div class="av-card__who"><span class="av-card__name">Riya Sharma</span><span class="av-card__mail">riya@gobblecube.ai</span></div></div></div><figcaption><b>Person &mdash; circle, initials</b>A user in a list with no photo: Avatar/single 32px, Roundness = Yes, initials, with the name and email next to it.</figcaption></figure>
+<figure><div class="bx-mock"><div class="av-card"><span class="av av--24" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av-card__label">Flipkart Minutes</span></div></div><figcaption><b>Brand or platform &mdash; square, image</b>A platform or workspace logo: Avatar/single 24px, Roundness = No, image, followed by its name.</figcaption></figure>
+<figure><div class="bx-mock"><div class="av-card"><span class="av-group" role="img" aria-label="6 people"><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span></span><span class="av-card__label">Shared with 6 people</span></div></div><figcaption><b>Group &mdash; who has access</b>Avatar/group 24px in circles, with the count written out next to it.</figcaption></figure>
+<figure><div class="bx-mock"><div class="av-card"><span class="av av--32 av--ph" aria-hidden="true"><img class="av__ic" src="assets/img/avatar/building.svg" alt="" width="20" height="20"></span><span class="av-card__label">New brand</span></div></div><figcaption><b>Missing image &mdash; placeholder</b>A brand with no logo yet: Avatar/single 32px, Roundness = No, Placeholder.</figcaption></figure>
+</div>
+        </section>
+        <section id="dos-donts">
+          <h2>Do’s and don’ts</h2>
+          <p>Five pairs from the Figma usage guidelines: which shape, size and content to use, and the common mistakes.</p>
+<h3>Shape</h3>
+<div class="docs-dodont av-dd"><div class="docs-dodont__card docs-dodont__card--do av-cq"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="av-zoom av-zoom--2"><div class="av-card av-card--pair"><span class="av av--32 av--round av--initials" aria-hidden="true">RK</span><span class="av av--32" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="32" height="32"></span></div></div></div><p class="docs-dodont__cap">Use circles for people and squares for brands / platforms. Shape tells users what kind of thing it is.</p></div><div class="docs-dodont__card docs-dodont__card--dont av-cq"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="av-zoom av-zoom--2"><div class="av-card av-card--pair"><span class="av av--32 av--initials" aria-hidden="true">RK</span><span class="av av--32 av--round av--initials" aria-hidden="true">RK</span></div></div></div><p class="docs-dodont__cap">Don’t mix shapes for the same kind of thing. Users can’t tell people from brands.</p></div></div>
+<h3>Names</h3>
+<div class="docs-dodont av-dd"><div class="docs-dodont__card docs-dodont__card--do av-cq"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="av-zoom av-zoom--2"><div class="av-card"><span class="av av--32 av--round av--initials" aria-hidden="true">RS</span><div class="av-card__who"><span class="av-card__name">Riya Sharma</span><span class="av-card__mail">riya@gobblecube.ai</span></div></div></div></div><p class="docs-dodont__cap">Show a name next to the avatar. The avatar helps recognition; the name confirms it.</p></div><div class="docs-dodont__card docs-dodont__card--dont av-cq"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="av-zoom av-zoom--2"><div class="av-card"><span class="av av--32 av--round av--initials" role="img" aria-label="RK">RK</span></div></div></div><p class="docs-dodont__cap">Don’t rely on initials alone to identify someone. Many people share initials.</p></div></div>
+<h3>Missing image</h3>
+<div class="docs-dodont av-dd"><div class="docs-dodont__card docs-dodont__card--do av-cq"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="av-zoom av-zoom--2"><div class="av-card"><span class="av av--32 av--ph" aria-hidden="true"><img class="av__ic" src="assets/img/avatar/building.svg" alt="" width="20" height="20"></span><span class="av-card__label">New brand</span></div></div></div><p class="docs-dodont__cap">Use the Placeholder when there’s no image. It’s a consistent fallback, with no broken images.</p></div><div class="docs-dodont__card docs-dodont__card--dont av-cq"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="av-zoom av-zoom--2"><div class="av-card"><span class="av av--32 av--empty" aria-hidden="true"></span><span class="av-card__label">New brand</span></div></div></div><p class="docs-dodont__cap">Don’t leave an empty grey square. It looks like a loading error.</p></div></div>
+<h3>Size</h3>
+<div class="docs-dodont av-dd"><div class="docs-dodont__card docs-dodont__card--do av-cq"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="av-zoom av-zoom--2"><div class="av-card"><span class="av av--32 av--round av--initials" aria-hidden="true">RS</span><div class="av-card__who"><span class="av-card__name">Riya Sharma</span><span class="av-card__mail">riya@gobblecube.ai</span></div></div></div></div><p class="docs-dodont__cap">Match the avatar size to the text next to it (20 with 14px text, 32 in list rows). The alignment stays balanced.</p></div><div class="docs-dodont__card docs-dodont__card--dont av-cq"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="av-zoom av-zoom--2"><div class="av-card"><span class="av av--round av--initials" aria-hidden="true">RS</span><span class="av-card__label av-card__label--sm">Riya</span></div></div></div><p class="docs-dodont__cap">Don’t pair a large avatar with small text. It looks unbalanced and wastes space.</p></div></div>
+<h3>Groups</h3>
+<div class="docs-dodont av-dd"><div class="docs-dodont__card docs-dodont__card--do av-cq"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg> Do</p><div class="docs-dodont__stage"><div class="av-zoom av-zoom--2"><span class="av-group" role="img" aria-label="6 people"><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span><span class="av av--24 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="24" height="24"></span></span></div></div><p class="docs-dodont__cap">Keep groups short (4–5) with a “+N”. Readable and compact.</p></div><div class="docs-dodont__card docs-dodont__card--dont av-cq"><p class="docs-dodont__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg> Don’t</p><div class="docs-dodont__stage"><div class="av-zoom av-zoom--x2"><span class="av-group" role="img" aria-label="6 people"><span class="av av--12 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="12" height="12"></span><span class="av av--12 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="12" height="12"></span><span class="av av--12 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="12" height="12"></span><span class="av av--12 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="12" height="12"></span><span class="av av--12 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="12" height="12"></span><span class="av av--12 av--round"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="12" height="12"></span></span></div></div><p class="docs-dodont__cap">Don’t use groups at 12–16px. The −6 overlap hides most of each avatar.</p></div></div>
+        </section>
+        <section id="writing">
+          <h2>Writing content</h2>
+          <ul>
+            <li><strong>Initials</strong> &mdash; the first letters of the first and last name, uppercase, at most 2: “Riya Sharma” &rarr; RS. ⚠ In Figma the initials are outlined vectors, not editable text &mdash; ask for an editable version.</li>
+            <li><strong>Names</strong> &mdash; put the person’s or brand’s name next to the avatar whenever space allows. Initials alone don’t identify anyone; many people share them.</li>
+            <li><strong>Alt text</strong> &mdash; an image avatar’s alt text is the person or brand name. When the name is already next to it, the avatar is decorative: <code>alt=""</code>.</li>
+            <li><strong>Groups</strong> &mdash; write the count in text (“Shared with 6 people”) and label the stack for screen readers: <code>aria-label="6 people: …"</code>.</li>
+            <li><strong>Hover</strong> &mdash; a tooltip with the full name, especially in groups.</li>
+          </ul>
+        </section>
+        <section id="how-to">
+          <h2>How to add one in Figma</h2>
+          <p>Add an avatar in 4 steps.</p>
+<ol class="bx-steps"><li><strong>Insert Avatar/single</strong><br>Assets &rarr; “Avatar/single” (or Avatar/group for several people).</li><li><strong>Pick Roundness</strong><br>Yes (circle) for people &middot; No (square) for brands, platforms, workspaces.</li><li><strong>Pick Size</strong><br>Match the text: 20 with 14px text, 24 in chips, 32 in list rows, 36 in headers.</li><li><strong>Set the content</strong><br>Select the inner _Avatar-base &rarr; Property 1: image (then replace the image fill), initials (⚠ the letters are vectors &mdash; ask for an editable version), or Placeholder.</li></ol>
+          <h3>Before you hand off</h3>
+          <ul><li>Circle for people, square for brands / platforms.</li><li>Size matches the text next to it.</li><li>Name shown next to the avatar where space allows.</li><li>Placeholder used when there’s no image.</li><li>Groups &le; 5 with “+N”; not at 12&ndash;16px.</li></ul>
+        </section>
+        <section id="behavior">
+          <h2>Behavior &amp; accessibility</h2>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>What to do</th></tr></thead><tbody><tr><td>Fallback order</td><td>Show the image. If it fails to load, fall back to initials from the name, then to the Placeholder.</td></tr><tr><td>Initials</td><td>First letters of the first and last name. At most 2, uppercase.</td></tr><tr><td>Group overflow</td><td>Show at most 4–5 avatars and a “+N”; a tooltip or popover lists everyone. The Figma group is fixed at 6 with no “+N” yet.</td></tr><tr><td>Hover</td><td>A tooltip with the full name &mdash; especially in groups.</td></tr><tr><td>Image</td><td><code>alt</code> is the person or brand name.</td></tr><tr><td>Decorative</td><td><code>alt=""</code> when the name is right next to the avatar.</td></tr><tr><td>Group</td><td><code>aria-label="6 people: …"</code> on the stack.</td></tr></tbody></table></div>
+          <p>Every dimension, colour token and property is on the <a href="docs-avatar-specifications.html">Specifications tab</a>.</p>
+        </section>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7679-104078" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#at-a-glance" aria-current="true">At a glance</a></li>
+        <li><a href="#anatomy">Anatomy</a></li>
+        <li><a href="#size">Size</a></li>
+        <li><a href="#roundness">Roundness</a></li>
+        <li><a href="#content-type">Content</a></li>
+        <li><a href="#group">Avatar/group</a></li>
+        <li><a href="#usage">Common layouts</a></li>
+        <li><a href="#dos-donts">Do’s and don’ts</a></li>
+        <li><a href="#writing">Writing content</a></li>
+        <li><a href="#how-to">How to add one in Figma</a></li>
+        <li><a href="#behavior">Behavior &amp; accessibility</a></li>
+        </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
+})();
+</script>
+<script>
+(function(){
+  /* At a glance playground: rebuild the avatar from the chosen properties. */
+  var root=document.getElementById('av-play'); if(!root) return;
+  var outs=root.querySelectorAll('[data-av-out]'), props=root.querySelector('[data-av-props]');
+  var IMG='assets/img/avatar/flipkart-minutes.png', IC='assets/img/avatar/building.svg';
+  function val(n){var r=root.querySelector('input[name="'+n+'"]:checked'); return r?r.value:'';}
+  function one(size,round,c){
+    var s=document.createElement('span');
+    s.className='av'+(size!=='36'?' av--'+size:'')+(round?' av--round':'')+(c==='initials'?' av--initials':c==='ph'?' av--ph':'');
+    if(c==='initials'){s.textContent='RK';}
+    else{var i=document.createElement('img'); i.className=c==='ph'?'av__ic':'av__img'; i.src=c==='ph'?IC:IMG; i.alt='';
+      if(c!=='ph'){i.width=+size;i.height=+size;} s.appendChild(i);}
+    return s;
+  }
+  function render(){
+    var comp=val('av-comp'), size=val('av-size'), round=val('av-round')==='Yes', c=val('av-content');
+    outs.forEach(function(o){
+      var node;
+      if(comp==='group'){node=document.createElement('span'); node.className='av-group';
+        for(var k=0;k<6;k++) node.appendChild(one(size,round,c));}
+      else node=one(size,round,c);
+      o.replaceChildren(node);
+    });
+    props.textContent=(comp==='group'?'Avatar/group':'Avatar/single')+' · Size='+size+'px · Roundness='+(round?'Yes':'No')+' · _Avatar-base: '+(c==='ph'?'Placeholder':c);
+  }
+  root.addEventListener('change',render); render();
+})();
+</script>

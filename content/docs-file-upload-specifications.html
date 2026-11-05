@@ -1,0 +1,325 @@
+<div class="docs" id="docs">
+
+  <!-- ============ Header ============ -->
+  <header class="docs-header">
+    <a class="docs-header__back" href="system.html" aria-label="Back to the design system overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      <span>Back</span>
+    </a>
+    <button class="docs-header__menu" id="docs-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="docs-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="docs-header__brand" href="system.html"><b>Cube</b> Design System</a>
+    <label class="docs-header__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the design system">
+    </label>
+    <nav class="docs-header__links" aria-label="External">
+      <a href="#">Figma</a>
+      <a href="#">GitHub</a>
+      <a href="index.html">Handbook</a>
+    </nav>
+    <button class="docs-header__theme" type="button" data-theme-toggle aria-label="Switch to dark theme" title="Switch theme">
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
+    </button>
+  </header>
+
+  <!-- ============ Left navigation ============ -->
+  <nav class="docs-nav" id="docs-nav" aria-label="Documentation">
+    <details hidden open>
+      <summary>Getting started</summary>
+      <ul>
+        <li hidden><a href="#">About Cube</a></li>
+        <li hidden><a href="#">Designing</a></li>
+        <li hidden><a href="#">Developing</a></li>
+        <li hidden><a href="#">Contributing</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Foundations</summary>
+      <ul>
+        <li hidden><a href="#">Grid</a></li>
+        <li><a href="docs-colors.html">Color</a></li>
+        <li><a href="docs-typography.html">Typography</a></li>
+        <li><a href="docs-spacing.html">Spacing</a></li>
+        <li hidden><a href="#">Motion</a></li>
+        <li><a href="docs-icons.html">Icons</a></li>
+        <li hidden><a href="#">Themes</a></li>
+        <li hidden><a href="#">Accessibility</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li><a href="docs-accordion.html">Accordion <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-avatar.html">Avatar <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="docs-bottomsheet.html">Bottom sheet <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs.html">Buttons</a></li>
+        <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
+        <li><a href="docs-dates.html">Date Selector</a></li>
+        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-dropdown.html">Dropdown</a></li>
+        <li><a href="docs-empty-states.html">Empty States</a></li>
+        <li><a href="docs-file-upload.html" aria-current="page">File upload <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-filters.html">Filters</a></li>
+        <li><a href="docs-header.html">Header</a></li>
+        <li><a href="docs-inputs.html">Inputs</a></li>
+        <li><a href="docs-messages.html">Message</a></li>
+        <li><a href="docs-popup.html">Popup</a></li>
+        <li><a href="docs-overlays.html">Right Overlays</a></li>
+        <li class="docs-nav__group"><span class="docs-nav__parent">Selections</span>
+          <ul class="docs-nav__sub">
+            <li><a href="docs-selection.html">Selection-group</a></li>
+            <li><a href="docs-segmented.html">Segmented-controls</a></li>
+            <li><a href="docs-checkbox.html">Checkbox</a></li>
+            <li><a href="docs-radio.html">Radio</a></li>
+          </ul>
+        </li>
+        <li><a href="docs-sidenav.html">Side Nav</a></li>
+        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-stepper.html">Stepper</a></li>
+        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-swimlanes.html">Swimlanes</a></li>
+        <li><a href="docs-tabs.html">Tabs</a></li>
+        <li><a href="docs-table.html">Tables</a></li>
+        <li><a href="docs-toggle.html">Toggle</a></li>
+        <li><a href="docs-tooltips.html">Tooltips</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Patterns</summary>
+      <ul>
+        <li><a href="docs-widget.html">Dashboard widget</a></li>
+        <li><a href="docs-empty-states.html">Empty states</a></li>
+      </ul>
+    </details>
+    <details open>
+      <summary>Data visualization</summary>
+      <ul>
+        <li><a href="docs-trends.html">Trends</a></li>
+        <li hidden><a href="#">Overview</a></li>
+        <li hidden><a href="#">Chart types</a></li>
+        <li hidden><a href="#">Chart design</a></li>
+      </ul>
+    </details>
+    <details hidden>
+      <summary>Support</summary>
+      <ul>
+        <li hidden><a href="#">Contact us</a></li>
+        <li hidden><a href="#">FAQs</a></li>
+      </ul>
+    </details>
+  </nav>
+  <div class="docs-scrim" id="docs-scrim"></div>
+
+  <link rel="stylesheet" href="assets/vendor/phosphor/phosphor.css">
+  <!-- ============ Content ============ -->
+  <div class="docs-body">
+      <div class="docs-split">
+    <main class="docs-main">
+      <div class="docs-title">
+        <p class="docs-title__crumb"><a href="#">Components</a></p>
+        <div class="docs-title__head">
+          <h1>File upload</h1>
+          <span class="docs-badge">New</span>
+          <span class="docs-meta">Last updated Nov 2026</span>
+        </div>
+        <p class="docs-title__desc">A drop zone where users drag a file or click to browse to import data (inventory, sales, keywords, guardrails, assortment). It shows upload progress and a list of files, each with a status: ready, uploading, uploaded or failed. The <a href="docs-file-upload-specifications.html">Specifications tab</a> lists every value.</p>
+      </div>
+      <div class="docs-tabs" role="tablist" aria-label="Page sections">
+        <a href="docs-file-upload.html" role="tab">Guidelines</a>
+        <a href="docs-file-upload-specifications.html" role="tab" aria-selected="true">Specifications</a>
+        <a href="#" role="tab" aria-disabled="true" title="Not in Storybook yet">
+          Code
+          <span class="sr-only">(not in Storybook yet)</span>
+        </a>
+        <a href="#" role="tab" aria-disabled="true" title="Accessibility guidance — coming soon">
+          <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM9 7a3 3 0 0 1 6 0v2H9z"/></svg>
+          Accessibility
+          <span class="sr-only">(coming soon)</span>
+        </a>
+      </div>
+      <article class="docs-content docs-content--inp docs-content--spec">
+        <section id="dimensions">
+          <h2>Dimensions</h2>
+          <p>Read from the components. All values in px.</p>
+          <h3>Upload</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Component</td><td>440 wide &middot; hug height (160 &rarr; 277 with progress + 2 files)</td><td>Fill container in modals</td></tr><tr><td>Drop zone</td><td>440 &times; 160 &middot; padding 16 &middot; gap 12 &middot; radius 8</td><td>1px dashed border</td></tr><tr><td>Upload icon button</td><td>36 round &middot; 16px icon</td><td>Neutral Outlined</td></tr><tr><td>Title &rarr; helper</td><td>gap 6</td><td>Centred, full width</td></tr><tr><td>Gap between parts</td><td>8</td><td>zone &rarr; progress &rarr; file list</td></tr><tr><td>File list gap</td><td>12</td><td>between items</td></tr></tbody></table></div>
+          <h3>File upload item &middot; _Progressbar</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Part</th><th>Size</th><th>Notes</th></tr></thead><tbody><tr><td>File upload item</td><td>476 &times; 34 (440 inside Upload)</td><td>gap 9</td></tr><tr><td>File icon box</td><td>32 &times; 32 &middot; radius 6</td><td>padding 6 &middot; 20px icon</td></tr><tr><td>File name &rarr; status line</td><td>gap 4</td><td>line heights 16 + 14</td></tr><tr><td>Status icon</td><td>14</td><td>gap 4 to the message</td></tr><tr><td>Remove button</td><td>20 round</td><td>10px &times;</td></tr><tr><td>_Progressbar</td><td>8 / 12 / 16 bar &middot; % label 23</td><td>padding 4 / 0 &middot; gap 12 &rarr; 20 / 20 / 24 tall</td></tr></tbody></table></div>
+          <h3>Visual reference</h3>
+          <p>Real size.</p>
+          <div class="docs-demo fup-refs"><div class="fup-ref"><div class="fup"><div class="fup-zone"><div class="fup-zone__in"><span class="fup-ibtn"><i class="ph ph-upload-simple" aria-hidden="true"></i></span><span class="fup-zone__txt"><span class="fup-title">Upload Inventory</span><span class="fup-help">Click or Drag and Drop .CSV here</span></span></div></div></div><span class="docs-demo__caption">Upload &middot; 440 &times; 160</span></div><div class="fup-ref"><div class="fup"><div class="fup-item fup-item--neutral"><span class="fup-item__ic"><i class="ph ph-file-text" aria-hidden="true"></i></span><span class="fup-item__body"><span class="fup-item__name"><span class="fup-item__stem">final_template_21</span><span class="fup-item__end">0336.CSV</span></span><span class="fup-item__st"><span>Ready to upload</span></span></span><span class="fup-x"><i class="ph ph-x" aria-hidden="true"></i></span></div></div><span class="docs-demo__caption">File item &middot; 440 &times; 34</span></div><div class="fup-ref"><div class="fup-prog" style="width:353px;max-width:100%"><span class="fup-prog__bar"><span class="fup-prog__fill" style="--fup-p:12%"></span></span><span class="fup-prog__n">12%</span></div><span class="docs-demo__caption">Progress &middot; 353 &times; 20</span></div></div>
+        </section>
+        <section id="color-tokens">
+          <h2>Color tokens</h2>
+          <p>Tokens read from the components.</p>
+          <h3>Upload &amp; progress</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Token</th><th>Notes</th></tr></thead><tbody><tr><td>Drop zone background</td><td>Neutrals/Bg/Screen-bg-1 <span class="msg-sw" style="background:#f3f6fa"></span>#f3f6fa</td><td></td></tr><tr><td>Drop zone border</td><td>Primary-text/400 <span class="msg-sw" style="background:#7a8d96"></span>#7a8d96</td><td>1px dashed</td></tr><tr><td>Title</td><td>Primary-text/950 <span class="msg-sw" style="background:#101214"></span>#101214</td><td>SemiBold 14</td></tr><tr><td>Helper</td><td>Primary-text/600 <span class="msg-sw" style="background:#515f69"></span>#515f69</td><td>Medium 12</td></tr><tr><td>Upload icon button</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff<br>border Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4<br>icon Primary-text/800 <span class="msg-sw" style="background:#3e464c"></span>#3e464c</td><td>Neutral Outlined button</td></tr><tr><td>Progress track</td><td>Primary-text/200 <span class="msg-sw" style="background:#cad2d7"></span>#cad2d7</td><td></td></tr><tr><td>Progress fill</td><td>text/text-brand <span class="msg-sw" style="background:#034ced"></span>#034ced</td><td>A text token used as a fill &mdash; Figma flags it: use a fill token (Primary/600 <span class="msg-sw" style="background:#025be5"></span>#025be5)</td></tr><tr><td>Count</td><td>Primary-text/600 <span class="msg-sw" style="background:#515f69"></span>#515f69</td><td>SemiBold 12</td></tr></tbody></table></div>
+          <h3>File upload item &mdash; by State</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>State</th><th>Status icon</th><th>Status text</th></tr></thead><tbody><tr><td>Neutral</td><td>&mdash; (no icon)</td><td>Primary-text/600 <span class="msg-sw" style="background:#515f69"></span>#515f69 &middot; “Ready to upload”</td></tr><tr><td>Success</td><td>CheckCircle &middot; Success/600 <span class="msg-sw" style="background:#009966"></span>#009966</td><td>Success/600 <span class="msg-sw" style="background:#009966"></span>#009966 &middot; “Uploaded successfully”</td></tr><tr><td>Warning</td><td>Warning &middot; Warning/600 <span class="msg-sw" style="background:#d08700"></span>#d08700</td><td>Warning/600 <span class="msg-sw" style="background:#d08700"></span>#d08700 &middot; “Upload pending”</td></tr><tr><td>Error</td><td>WarningCircle &middot; Error/600 <span class="msg-sw" style="background:#e7000b"></span>#e7000b</td><td>Error/600 <span class="msg-sw" style="background:#e7000b"></span>#e7000b &middot; “Upload failed”</td></tr><tr><td>All states</td><td>File icon box Steel Blue/100 <span class="msg-sw" style="background:#f1f6fd"></span>#f1f6fd<br>FileText icon Secondary-text/950 <span class="msg-sw" style="background:#23292e"></span>#23292e</td><td>File name text/text-primary <span class="msg-sw" style="background:#101214"></span>#101214</td></tr><tr><td>Remove (all states)</td><td>Neutrals/White/100 <span class="msg-sw" style="background:#ffffff"></span>#ffffff &middot; border Secondary-text/200 <span class="msg-sw" style="background:#dbdfe4"></span>#dbdfe4</td><td>&times; icon Primary-text/800 <span class="msg-sw" style="background:#3e464c"></span>#3e464c</td></tr></tbody></table></div>
+          <h3>Visual reference</h3>
+          <div class="docs-demo fup-refs"><div class="fup-ref"><div class="fup-item fup-item--neutral"><span class="fup-item__ic"><i class="ph ph-file-text" aria-hidden="true"></i></span><span class="fup-item__body"><span class="fup-item__name"><span class="fup-item__stem">final_template_21</span><span class="fup-item__end">0336.CSV</span></span><span class="fup-item__st"><span>Ready to upload</span></span></span><span class="fup-x"><i class="ph ph-x" aria-hidden="true"></i></span></div><span class="docs-demo__caption">Neutral</span></div><div class="fup-ref"><div class="fup-item fup-item--success"><span class="fup-item__ic"><i class="ph ph-file-text" aria-hidden="true"></i></span><span class="fup-item__body"><span class="fup-item__name"><span class="fup-item__stem">final_template_21</span><span class="fup-item__end">0336.CSV</span></span><span class="fup-item__st"><i class="ph-fill ph-check-circle" aria-hidden="true"></i><span>Uploaded successfully</span></span></span><span class="fup-x"><i class="ph ph-x" aria-hidden="true"></i></span></div><span class="docs-demo__caption">Success</span></div><div class="fup-ref"><div class="fup-item fup-item--warning"><span class="fup-item__ic"><i class="ph ph-file-text" aria-hidden="true"></i></span><span class="fup-item__body"><span class="fup-item__name"><span class="fup-item__stem">final_template_21</span><span class="fup-item__end">0336.CSV</span></span><span class="fup-item__st"><i class="ph-fill ph-warning" aria-hidden="true"></i><span>Upload pending</span></span></span><span class="fup-x"><i class="ph ph-x" aria-hidden="true"></i></span></div><span class="docs-demo__caption">Warning</span></div><div class="fup-ref"><div class="fup-item fup-item--error"><span class="fup-item__ic"><i class="ph ph-file-text" aria-hidden="true"></i></span><span class="fup-item__body"><span class="fup-item__name"><span class="fup-item__stem">final_template_21</span><span class="fup-item__end">0336.CSV</span></span><span class="fup-item__st"><i class="ph-fill ph-warning-circle" aria-hidden="true"></i><span>Upload failed</span></span></span><span class="fup-x"><i class="ph ph-x" aria-hidden="true"></i></span></div><span class="docs-demo__caption">Error</span></div></div>
+          <div class="docs-demo fup-refs fup-refs--zone"><div class="fup-ref"><div class="fup"><div class="fup-zone"><div class="fup-zone__in"><span class="fup-ibtn"><i class="ph ph-upload-simple" aria-hidden="true"></i></span><span class="fup-zone__txt"><span class="fup-title">Upload Inventory</span><span class="fup-help">Click or Drag and Drop .CSV here</span></span></div></div></div><span class="docs-demo__caption">Empty</span></div><div class="fup-ref"><div class="fup"><div class="fup-zone"><div class="fup-zone__in"><span class="fup-ibtn"><i class="ph ph-upload-simple" aria-hidden="true"></i></span><span class="fup-zone__txt"><span class="fup-title">Upload Inventory</span><span class="fup-help">Click or Drag and Drop .CSV here</span></span></div></div><div class="fup-list"><div class="fup-item fup-item--success"><span class="fup-item__ic"><i class="ph ph-file-text" aria-hidden="true"></i></span><span class="fup-item__body"><span class="fup-item__name"><span class="fup-item__stem">final_template_21</span><span class="fup-item__end">0336.CSV</span></span><span class="fup-item__st"><i class="ph-fill ph-check-circle" aria-hidden="true"></i><span>Uploaded successfully</span></span></span><span class="fup-x"><i class="ph ph-x" aria-hidden="true"></i></span></div><div class="fup-item fup-item--error"><span class="fup-item__ic"><i class="ph ph-file-text" aria-hidden="true"></i></span><span class="fup-item__body"><span class="fup-item__name"><span class="fup-item__stem">final_template_21</span><span class="fup-item__end">0336.CSV</span></span><span class="fup-item__st"><i class="ph-fill ph-warning-circle" aria-hidden="true"></i><span>Upload failed</span></span></span><span class="fup-x"><i class="ph ph-x" aria-hidden="true"></i></span></div></div></div><span class="docs-demo__caption">With files</span></div></div>
+        </section>
+        <section id="typography">
+          <h2>Typography</h2>
+          <p>DM Sans throughout. Text styles read from the components.</p>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Element</th><th>Style</th><th>Size / line height</th><th>Weight</th><th>Letter spacing</th></tr></thead><tbody><tr><td>Title</td><td>Body/B2/Semibold</td><td>14 / 18</td><td>600</td><td>0</td></tr><tr><td>Helper</td><td>Body/B3/Medium</td><td>12 / 16</td><td>500</td><td>0.1</td></tr><tr><td>Count (%)</td><td>Body/B3-Compact/Semibold</td><td>12 / 12</td><td>600</td><td>0.1</td></tr><tr><td>File name</td><td>Body/B3/Semibold</td><td>12 / 16</td><td>600</td><td>0.1</td></tr><tr><td>Status &mdash; Neutral</td><td>Small/S0/Regular</td><td>11 / 14</td><td>400</td><td>0.2</td></tr><tr><td>Status &mdash; Success / Warning / Error</td><td>Small/S0/Medium</td><td>11 / 14</td><td>500</td><td>0.2</td></tr></tbody></table></div>
+        </section>
+        <section id="properties">
+          <h2>Properties</h2>
+          <h3>Upload</h3>
+<div class="bx-scroll"><table class="docs-table bx-api"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Progressbar</td><td>true | false</td><td>optional</td><td>true</td><td>Upload progress under the drop zone.</td></tr><tr><td>Slot2</td><td>true | false</td><td>optional</td><td>true</td><td>Shows the file list slot. Due to be renamed “Show file list”.</td></tr><tr><td>Slot</td><td>SLOT</td><td>optional</td><td>2 File upload items</td><td>One item per file.</td></tr><tr><td>Pprgress bar</td><td>Default</td><td>&mdash;</td><td>Default</td><td>A variant with a single value (and a typo in its name); due to be removed.</td></tr><tr><td>Title &middot; Helper</td><td>text layers</td><td>&mdash;</td><td>&mdash;</td><td>Not text properties yet &mdash; edit the layers.</td></tr></tbody></table></div>
+          <h3>File upload item</h3>
+<div class="bx-scroll"><table class="docs-table bx-api"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>State</td><td>Neutral | Success | Warning | Error</td><td>required</td><td>Neutral</td><td>Ready &middot; Uploaded &middot; Pending &middot; Failed.</td></tr><tr><td>Description</td><td>true | false</td><td>optional</td><td>true</td><td>Status line.</td></tr><tr><td>Button</td><td>true | false</td><td>optional</td><td>true</td><td>Remove &times;.</td></tr><tr><td>File name &middot; Status text</td><td>text layers</td><td>&mdash;</td><td>&mdash;</td><td>Not text properties yet.</td></tr></tbody></table></div>
+          <h3>_Progressbar</h3>
+<div class="bx-scroll"><table class="docs-table bx-api"><thead><tr><th>Property</th><th>Values</th><th>Required</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>Size</td><td>Default | medium | Variant3</td><td>required</td><td>Default</td><td>8 / 12 / 16. Due to be renamed Small / Medium / Large.</td></tr><tr><td>Count</td><td>true | false</td><td>optional</td><td>true</td><td>% label.</td></tr></tbody></table></div>
+        </section>
+        <section id="api">
+          <h2>API and behavior</h2>
+          <p><strong>Designers:</strong> place Upload, edit Title / Helper, turn on Progressbar while uploading and Slot2 to show the file list, then set each File upload item’s State. <strong>Developers:</strong> one <code>files</code> array drives the list &mdash; each file carries its own status, progress and message.</p>
+          <pre class="ic-code"><code>&lt;FileUpload
+  accept=".csv,.xlsx"
+  maxSize="50MB"
+  multiple
+  title="Upload sales"
+  helper=".CSV, .XLSX, .XLS · max 50 MB"
+  files={[
+    // status: "ready" | "uploading" | "done" | "error"
+    {
+      name: "final_template_210336.CSV",
+      status: "uploading",
+      progress: 91,               // drives the bar and the Count
+      message: "Upload pending",  // the status line; on "error", the reason
+    },
+  ]}
+  onAdd={addFiles}
+  onRemove={removeFile}      // cancels the upload while it’s running
+/&gt;</code></pre>
+          <h3>State flow</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Step</th><th>Upload shows</th><th>Notes</th></tr></thead><tbody><tr><td>File chosen</td><td>item: Neutral “Ready to upload”</td><td>Validate format / size first.</td></tr><tr><td>Uploading</td><td>Progressbar on &middot; item: Warning “Upload pending”</td><td>Remove = cancel.</td></tr><tr><td>Done</td><td>item: Success “Uploaded successfully”</td><td>Enable the primary action.</td></tr><tr><td>Failed</td><td>item: Error with the reason</td><td>“Wrong format”, “Too large”, “3 rows have errors” + retry / Download errors.</td></tr><tr><td>Multiple files</td><td>one item per file</td><td>Each has its own state.</td></tr><tr><td>Template link</td><td>link inside or above the drop zone</td><td>“Download template / current data” &mdash; prefill with current values when editing existing data.</td></tr><tr><td>Preview</td><td>show parsed rows before confirming</td><td>First ~10 rows in a table (Table-template in the Slot); highlight invalid cells.</td></tr><tr><td>History</td><td>list past uploads with status</td><td>Date, user, file, status; failures show the exact reason (“Missing required columns: …”).</td></tr></tbody></table></div>
+          <h3>Accessibility</h3>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Part</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Drop zone</td><td>button, label “Upload &lt;title&gt;”</td><td>Click / Enter / Space opens the picker.</td></tr><tr><td>Progress</td><td><code>role="progressbar"</code> <code>aria-valuenow</code></td><td></td></tr><tr><td>Status changes</td><td><code>aria-live="polite"</code></td><td>Announce success / failure.</td></tr><tr><td>Remove</td><td><code>aria-label</code> “Remove &lt;file name&gt;”</td><td></td></tr></tbody></table></div>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+<h3>Uploading</h3><div class="docs-demo"><div class="fup-fit"><div class="fup"><div class="fup-zone"><div class="fup-zone__in"><span class="fup-ibtn"><i class="ph ph-upload-simple" aria-hidden="true"></i></span><span class="fup-zone__txt"><span class="fup-title">Upload Inventory</span><span class="fup-help">Click or Drag and Drop .CSV here</span></span></div></div><div class="fup-prog"><span class="fup-prog__bar"><span class="fup-prog__fill" style="--fup-p:91%"></span></span><span class="fup-prog__n">91%</span></div><div class="fup-list"><div class="fup-item fup-item--warning"><span class="fup-item__ic"><i class="ph ph-file-text" aria-hidden="true"></i></span><span class="fup-item__body"><span class="fup-item__name"><span class="fup-item__stem">final_template_21</span><span class="fup-item__end">0336.CSV</span></span><span class="fup-item__st"><i class="ph-fill ph-warning" aria-hidden="true"></i><span>Upload pending</span></span></span><span class="fup-x"><i class="ph ph-x" aria-hidden="true"></i></span></div></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Progressbar</td><td>true</td><td></td></tr><tr><td>Item</td><td>Warning</td><td>Upload pending</td></tr></tbody></table></div>
+<h3>Uploaded</h3><div class="docs-demo"><div class="fup-fit"><div class="fup"><div class="fup-zone"><div class="fup-zone__in"><span class="fup-ibtn"><i class="ph ph-upload-simple" aria-hidden="true"></i></span><span class="fup-zone__txt"><span class="fup-title">Upload Inventory</span><span class="fup-help">Click or Drag and Drop .CSV here</span></span></div></div><div class="fup-list"><div class="fup-item fup-item--success"><span class="fup-item__ic"><i class="ph ph-file-text" aria-hidden="true"></i></span><span class="fup-item__body"><span class="fup-item__name"><span class="fup-item__stem">final_template_21</span><span class="fup-item__end">0336.CSV</span></span><span class="fup-item__st"><i class="ph-fill ph-check-circle" aria-hidden="true"></i><span>Uploaded successfully</span></span></span><span class="fup-x"><i class="ph ph-x" aria-hidden="true"></i></span></div></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Item</td><td>Success</td><td></td></tr></tbody></table></div>
+<h3>Failed</h3><div class="docs-demo"><div class="fup-fit"><div class="fup"><div class="fup-zone"><div class="fup-zone__in"><span class="fup-ibtn"><i class="ph ph-upload-simple" aria-hidden="true"></i></span><span class="fup-zone__txt"><span class="fup-title">Upload Inventory</span><span class="fup-help">Click or Drag and Drop .CSV here</span></span></div></div><div class="fup-list"><div class="fup-item fup-item--error"><span class="fup-item__ic"><i class="ph ph-file-text" aria-hidden="true"></i></span><span class="fup-item__body"><span class="fup-item__name"><span class="fup-item__stem">final_template_21</span><span class="fup-item__end">0336.CSV</span></span><span class="fup-item__st"><i class="ph-fill ph-warning-circle" aria-hidden="true"></i><span>Wrong format — only .csv is allowed</span></span></span><span class="fup-x"><i class="ph ph-x" aria-hidden="true"></i></span></div></div></div></div></div>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody><tr><td>Item</td><td>Error</td><td>Show the reason</td></tr></tbody></table></div>
+        </section>
+        <section id="related">
+          <h2>Related components</h2>
+<div class="bx-scroll"><table class="docs-table"><thead><tr><th>Component</th><th>Use it with Upload for</th></tr></thead><tbody><tr><td><a href="docs-popup.html">Popup</a></td><td>The modal Upload usually sits in, titled “Upload &lt;thing&gt;”, with Upload / Apply as its primary action.</td></tr><tr><td><a href="docs.html">Buttons</a></td><td>The Neutral Outlined round icon buttons (upload, remove), the Action-Button &middot; Naked template link and the primary action.</td></tr><tr><td><a href="docs-table.html">Tables</a></td><td>Table-template for the data preview in the Slot and for the upload history.</td></tr></tbody></table></div>
+        </section>
+        <section id="source">
+          <h2>Source</h2>
+          <p>Values come from the <strong>File upload &mdash; Documentation</strong> frames on the File upload page of the Cube Core Figma file (Anatomy, Property, Color Annotation, Dimensions, API, Usage Guidelines, How to use) and the live <strong>Upload</strong>, <strong>_Progressbar</strong> and <strong>File upload item</strong> components in <em>File upload &middot; components (use these)</em>.</p>
+          <p class="docs-note">Where Figma disagrees with itself or leaves gaps: the colour table lists a grey CheckCircle for Neutral, but the Neutral item has no status icon &mdash; this page follows the component. The progress fill uses text/text-brand (#034ced), a text token; Figma flags it should be a fill token (Primary/600, #025be5) &mdash; the component value is shown. In Figma the fill is always 66px short of the end whatever the Count says; here the fill matches the %. Figma flags its own names for change: “Pprgress bar” (typo, single value, to be removed), “Slot2” (to become “Show file list”) and Size Default / medium / Variant3 (to become Small / Medium / Large); Title, Helper, File name and Status text are text layers, not properties. The upload-icon, remove-button, Count and FileText colours aren’t in the colour table; they’re read from the components. Upload has no template-link option yet, so the template-link pattern adds an Action-Button &middot; Naked next to the drop zone. The Assortment and Offtake layouts are drawn from the product screenshots on the Figma page; the Offtake history adds a Status column built from the File upload item error style.</p>
+        </section>
+      </article>
+    </main>
+    <div class="docs-rail">
+      <aside class="docs-res" aria-label="Resources">
+        <span class="docs-res__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M4 7l8 4.5L20 7M12 11.5v10"/></svg></span>
+        <p class="docs-res__title">Cube Core</p>
+        <a href="https://www.figma.com/design/uqwJCAdk9DTifjrDUgGeOu/Copy-of-GC-Design?node-id=7689-11520" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1 3.1 7.4 4.4v8.9L1 12zM15 3.1 8.6 4.4v8.9L15 12z"/></svg>Figma</a>
+      </aside>
+    <aside class="docs-toc" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul>
+        <li><a href="#dimensions" aria-current="true">Dimensions</a></li>
+        <li><a href="#color-tokens">Color tokens</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#api">API and behavior</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#related">Related components</a></li>
+        <li><a href="#source">Source</a></li>
+        </ul>
+    </aside>
+    </div>
+      </div>
+  </div>
+
+  <!-- ============ Footer ============ -->
+  <footer class="docs-footer">
+    <div class="docs-footer__cols">
+      <div>
+        <h4>Cube Design System</h4>
+        <p>Built and maintained by the GobbleCube design team.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Figma library</a>
+        <a href="#">GitHub</a>
+        <a href="index.html">Design handbook</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#">Contact us</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    <p class="docs-footer__legal">&copy; {{YEAR}} GobbleCube. Privacy &middot; Terms &middot; Accessibility</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Side nav drawer on narrow screens. */
+  var b=document.getElementById('docs-menu'),n=document.getElementById('docs-nav'),
+      s=document.getElementById('docs-scrim'),d=document.getElementById('docs');
+  function set(o){d.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);}
+  if(b){b.addEventListener('click',function(){set(!d.classList.contains('nav-open'));});}
+  if(s){s.addEventListener('click',function(){set(false);});}
+  /* Highlight the on-this-page link for the section in view. */
+  var links=[].slice.call(document.querySelectorAll('.docs-toc a'));
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}
+    });},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.docs-content section[id]').forEach(function(x){io.observe(x);});
+  }
+  /* Anatomy — Figma-style redlines: a dashed outline round each part, a short
+     stem, and a numbered marker on the side named in the container's
+     data-bx-anatomy list (one direction per part, in order). Measured from
+     real layout. A part marked data-center gets its stem at its midpoint. */
+  var NS='http://www.w3.org/2000/svg', STEM=28, R=10;
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function drawAnatomy(){
+    document.querySelectorAll('[data-bx-anatomy]').forEach(function(box){
+      var old=box.querySelector('.bx-anatomy__lines'); if(old) old.remove();
+      var dirs=box.getAttribute('data-bx-anatomy').split(','), c=box.getBoundingClientRect();
+      var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
+      [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
+        var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
+        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
+        svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
+        if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
+        else if(d==='bottom'){ax=x+half;ay=y+h+2;bx=ax;by=ay+STEM;}
+        else if(d==='left'){ax=x-2;ay=y+h/2;bx=ax-STEM;by=ay;}
+        else{ax=x+w+2;ay=y+h/2;bx=ax+STEM;by=ay;}
+        svg.appendChild(mk('line',{x1:ax,y1:ay,x2:bx,y2:by}));
+        var off={top:[0,-R],bottom:[0,R],left:[-R,0],right:[R,0]}[d];
+        svg.appendChild(mk('circle',{cx:bx+off[0],cy:by+off[1],r:R}));
+        var t=mk('text',{x:bx+off[0],y:by+off[1]}); t.textContent=n; svg.appendChild(t);
+      });
+      box.appendChild(svg);
+    });
+  }
+  drawAnatomy();
+  window.addEventListener('load',drawAnatomy);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawAnatomy);
+  var anaT; window.addEventListener('resize',function(){clearTimeout(anaT);anaT=setTimeout(drawAnatomy,150);});
+})();
+</script>
