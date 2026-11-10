@@ -77,6 +77,12 @@ body{
   overflow-x:hidden;
   transition:background-color .45s ease, color .45s ease;
 }
+/* Footer sits at the bottom of the window on short pages: the page is a
+   column at least one viewport tall and <main> takes the spare height.
+   Docs pages have their own shell and footer, so they are left alone. */
+body:not([class^="page-docs"]){display:flex; flex-direction:column; min-height:100vh; min-height:100svh}
+body:not([class^="page-docs"]) > main{flex:1 0 auto}
+body:not([class^="page-docs"]) > .footer{flex:none}
 a{color:inherit; text-decoration:none}
 img{display:block; max-width:100%}
 :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}

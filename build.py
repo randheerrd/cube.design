@@ -248,7 +248,8 @@ INTERNAL_PAGES = {"internal"}
 EDITION = {"index", "philosophy", "principles", "process"}
 
 # Of those, the ones that default to the dark ground. The landing page
-# stays light so its first fold is untouched.
+# stays light so its first fold is untouched. Every docs page (DOCS, below)
+# defaults to dark as well — see page_theme().
 DARK = {"philosophy", "principles", "process"}
 
 # The landing page also gets the design-tool furniture: column grids,
@@ -365,7 +366,7 @@ def page_mode(slug):
 def page_theme(slug):
     """Default theme. Only a default — the head script still lets a stored
     preference override it, so the toggle keeps working everywhere."""
-    return "dark" if slug in DARK else "light"
+    return "dark" if slug in DARK or slug in DOCS else "light"
 
 
 # Pages kept out of the nav and search for now (still built, reachable by URL).
