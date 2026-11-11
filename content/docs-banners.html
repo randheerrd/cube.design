@@ -54,16 +54,19 @@
       <ul>
         <li><a href="docs-accordion.html">Accordion <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-avatar.html">Avatar <span class="docs-nav__new">New</span></a></li>
-        <li><a href="docs-banners.html" aria-current="page">Banner &amp; Toasts</a></li>
         <li><a href="docs-bottomsheet.html">Bottom sheet <span class="docs-nav__new">New</span></a></li>
-        <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-card.html">Card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-slider.html">Slider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-banners.html" aria-current="page">Banner &amp; Toasts</a></li>
+        <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
-        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-dropdown.html">Dropdown</a></li>
         <li><a href="docs-empty-states.html">Empty States</a></li>
-        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-filters.html">Filters</a></li>
         <li><a href="docs-header.html">Header</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
@@ -79,9 +82,7 @@
           </ul>
         </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
-        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
-        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-swimlanes.html">Swimlanes</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
         <li><a href="docs-table.html">Tables</a></li>
@@ -147,6 +148,7 @@
         </a>
       </div>
       <article class="docs-content docs-content--inp docs-content--bt">
+        <nav class="docs-jump" aria-label="Parts of this page"><span>On this page</span><a href="#banner">Banner</a><a href="#toast">Toast</a><a href="#both">Using both</a></nav>
         <section id="at-a-glance">
           <h2>At a glance</h2>
           <p>Two ways to tell people something happened. A <strong>Banner</strong> is a full-width strip at the top of
@@ -162,10 +164,9 @@
             <div><h3>Inline message</h3><p>Information about <strong>one section or field</strong>, placed right next to it &mdash; not a banner or toast. See <a href="docs-messages.html">Message</a>.</p></div>
           </div>
         </section>
-
-        <section id="anatomy">
-          <h2>Anatomy</h2>
-          <h3>Banner</h3>
+        <div class="docs-part" id="banner"><p class="docs-part__eyebrow">Component 1 of 2</p><h2 class="docs-part__title">Banner</h2><p class="docs-part__desc">Page or account status that stays &mdash; an outage, an overdue payment, an announcement. A full-width strip at the top of the page.</p></div>
+        <section id="anatomy-banner">
+          <h2>Banner anatomy</h2>
           <p>Shown: Type = Error, the only type with actions. The bar is full page width; the message sits centred with its
             icon and actions.</p>
           <div class="bx-anatomy" data-bx-anatomy="bottom,top,bottom,top,bottom,top">
@@ -181,8 +182,39 @@
               <tr><td><span class="bx-n">5</span></td><td>Link</td><td>layer</td><td>Optional &mdash; Naked button / link (“View invoice”).</td></tr>
               <tr><td><span class="bx-n">6</span></td><td>Close</td><td><code>Show close</code></td><td>× dismisses the banner. Hide it when the issue must be fixed first (e.g. account suspended).</td></tr>
             </tbody></table></div>
-
-          <h3>Toast</h3>
+        </section>
+        <section id="banner-type">
+          <h2>Banner type</h2>
+          <p>Type sets the sentiment: background, border and icon colour. Pick it from what the message means, not from
+            how loud you want it to be.</p>
+          <div class="bx-options bt-list"><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--error bnr--actions" role="alert"><img class="bnr__icon" src="assets/img/bt/banner-error.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><span class="bnr__btn">Pay now</span><span class="bnr__link">View invoice</span><img class="bnr__close" src="assets/img/bt/banner-close-2.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Error <small>Urgency</small></h3><p>Something is broken or blocked. The only type that can carry an action button and a link.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--warning" role="status"><img class="bnr__glow" src="assets/img/bt/banner-glow.svg" alt="" style="right:-190px;top:-220px"><img class="bnr__glow" src="assets/img/bt/banner-glow.svg" alt="" style="left:-110px;top:-340px"><img class="bnr__icon" src="assets/img/bt/banner-warning.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Warning <small>Important</small></h3><p>Needs attention soon &mdash; an expiring plan, delayed data.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--success" role="status"><img class="bnr__icon" src="assets/img/bt/banner-success.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Success</h3><p>A page-level change completed.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--brand" role="status"><img class="bnr__icon" src="assets/img/bt/banner-brand.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Brand <small>Announcement</small></h3><p>Product news and new features.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--neutral" role="status"><img class="bnr__icon" src="assets/img/bt/banner-neutral.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close-2.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Neutral <small>Information</small></h3><p>Information that needs no action.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--welcome" role="status"><img class="bnr__icon" src="assets/img/bt/banner-welcome.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Welcome <small>Greeting</small></h3><p>Onboarding and festive greetings, on a gradient.</p></div></div></div>
+        </section>
+        <section id="show-close">
+          <h2>Show close</h2>
+          <p>Whether people can dismiss the banner. On by default; turn it off only when the issue has to be fixed first.</p>
+          <div class="bx-options bt-list"><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--neutral" role="status"><img class="bnr__icon" src="assets/img/bt/banner-neutral.svg" alt=""><p class="bnr__msg">Your workspace data refreshes every day at 6:00 AM.</p><img class="bnr__close" src="assets/img/bt/banner-close-2.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Show close = true <small>Default</small></h3><p>People can dismiss it once they’ve read it. Remember the dismissal per person and per message.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--error bnr--noclose bnr--actions" role="alert"><img class="bnr__icon" src="assets/img/bt/banner-error.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><span class="bnr__btn">Pay now</span><span class="bnr__link">View invoice</span></div></div><div class="bx-opt__body"><h3>Show close = false</h3><p>Must-fix issues people can’t dismiss &mdash; account suspended, payment overdue.</p></div></div></div>
+        </section>
+        <section id="behavior-banner">
+          <h2>Banner behavior</h2>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Rule</th><th>What to do</th></tr></thead><tbody>
+              <tr><td>Placement</td><td>Top of the viewport, full width, above the navbar. It pushes the layout down &mdash; never overlaps it.</td></tr>
+              <tr><td>Count</td><td>One at a time. Show the most severe and queue the rest.</td></tr>
+              <tr><td>Dismiss</td><td>× when Show close is on. Remember the dismissal per person and per message.</td></tr>
+              <tr><td>Persistence</td><td>Stays until resolved or dismissed. Show it again if the condition comes back.</td></tr>
+            </tbody></table></div>
+        </section>
+        <section id="how-to-banner">
+          <h2>Adding a banner to a screen</h2>
+          <ol class="bt-steps">
+            <li><strong>Place it at the very top.</strong> Search Assets for “Banner”. Put it at X 0, Y 0 of the screen frame, full width (1440). Move the navbar and page down by the banner height (32 / 36) &mdash; don’t overlap.</li>
+            <li><strong>Pick the Type.</strong> Error, Warning, Success, Brand, Neutral or Welcome. Swap the icon only if a suggested icon fits better.</li>
+            <li><strong>Write the message.</strong> One sentence; bold the key value. Error / Warning: add the action button + link if the person can fix it right away.</li>
+            <li><strong>Decide if it can be closed.</strong> Show close = false for issues that must be fixed (overdue payment, suspension). Otherwise keep the ×.</li>
+          </ol>
+        </section>
+        <div class="docs-part" id="toast"><p class="docs-part__eyebrow">Component 2 of 2</p><h2 class="docs-part__title">Toast</h2><p class="docs-part__desc">Quick feedback on an action the person just took &mdash; saved, exported, failed. A small dark pop-up that goes away on its own.</p></div>
+        <section id="anatomy-toast">
+          <h2>Toast anatomy</h2>
           <p>Shown: Type = Toast-warning, at 1.5×. Every toast shares the same dark surface &mdash; only the icon and the
             timer bar change with Type.</p>
           <div class="bx-anatomy" data-bx-anatomy="left,top,top,right,bottom,right,bottom">
@@ -200,36 +232,13 @@
               <tr><td><span class="bx-n">7</span></td><td>Timer bar</td><td>layer</td><td>4px bar along the bottom in the Type colour. Shrinks from full width to 0 as the toast auto-dismisses.</td></tr>
             </tbody></table></div>
         </section>
-
-        <section id="banner-type">
-          <h2>Banner type</h2>
-          <p>Type sets the sentiment: background, border and icon colour. Pick it from what the message means, not from
-            how loud you want it to be.</p>
-          <div class="bx-options bt-list"><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--error bnr--actions" role="alert"><img class="bnr__icon" src="assets/img/bt/banner-error.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><span class="bnr__btn">Pay now</span><span class="bnr__link">View invoice</span><img class="bnr__close" src="assets/img/bt/banner-close-2.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Error <small>Urgency</small></h3><p>Something is broken or blocked. The only type that can carry an action button and a link.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--warning" role="status"><img class="bnr__glow" src="assets/img/bt/banner-glow.svg" alt="" style="right:-190px;top:-220px"><img class="bnr__glow" src="assets/img/bt/banner-glow.svg" alt="" style="left:-110px;top:-340px"><img class="bnr__icon" src="assets/img/bt/banner-warning.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Warning <small>Important</small></h3><p>Needs attention soon &mdash; an expiring plan, delayed data.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--success" role="status"><img class="bnr__icon" src="assets/img/bt/banner-success.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Success</h3><p>A page-level change completed.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--brand" role="status"><img class="bnr__icon" src="assets/img/bt/banner-brand.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Brand <small>Announcement</small></h3><p>Product news and new features.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--neutral" role="status"><img class="bnr__icon" src="assets/img/bt/banner-neutral.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close-2.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Neutral <small>Information</small></h3><p>Information that needs no action.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--welcome" role="status"><img class="bnr__icon" src="assets/img/bt/banner-welcome.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Welcome <small>Greeting</small></h3><p>Onboarding and festive greetings, on a gradient.</p></div></div></div>
-        </section>
-
-        <section id="show-close">
-          <h2>Show close</h2>
-          <p>Whether people can dismiss the banner. On by default; turn it off only when the issue has to be fixed first.</p>
-          <div class="bx-options bt-list"><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--neutral" role="status"><img class="bnr__icon" src="assets/img/bt/banner-neutral.svg" alt=""><p class="bnr__msg">Your workspace data refreshes every day at 6:00 AM.</p><img class="bnr__close" src="assets/img/bt/banner-close-2.svg" alt="Dismiss"></div></div><div class="bx-opt__body"><h3>Show close = true <small>Default</small></h3><p>People can dismiss it once they’ve read it. Remember the dismissal per person and per message.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="bnr bnr--error bnr--noclose bnr--actions" role="alert"><img class="bnr__icon" src="assets/img/bt/banner-error.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><span class="bnr__btn">Pay now</span><span class="bnr__link">View invoice</span></div></div><div class="bx-opt__body"><h3>Show close = false</h3><p>Must-fix issues people can’t dismiss &mdash; account suspended, payment overdue.</p></div></div></div>
-        </section>
-
         <section id="toast-type">
           <h2>Toast type</h2>
           <p>Type sets the icon and the timer-bar colour. The toast itself is always dark.</p>
           <div class="bx-options bx-options--two"><div class="bx-opt"><div class="bx-opt__stage"><div class="tst tst--success" role="status"><img class="tst__icon" src="assets/img/bt/toast-success.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Main heading</p><p class="tst__desc">Please note the new attribute added will be shown under all the values.</p></div><span class="tst__action">Button<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div><div class="bx-opt__body"><h3>Success</h3><p>The action completed. Auto-dismisses after about 4s.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="tst tst--warning" role="status"><img class="tst__icon" src="assets/img/bt/toast-warning.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Main heading</p><p class="tst__desc">Please note the new attribute added will be shown under all the values.</p></div><span class="tst__action">Button<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div><div class="bx-opt__body"><h3>Warning</h3><p>It worked, with a caveat. Auto-dismisses after about 6s.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="tst tst--progress" role="status"><img class="tst__icon" src="assets/img/bt/toast-progress.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Main heading</p><p class="tst__desc">Please note the new attribute added will be shown under all the values.</p></div><span class="tst__action">Button<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div><div class="bx-opt__body"><h3>Progress</h3><p>A background task is running. Stays until the task ends, then swaps to Success or Error.</p></div></div><div class="bx-opt"><div class="bx-opt__stage"><div class="tst tst--error" role="alert"><img class="tst__icon" src="assets/img/bt/toast-error.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Main heading</p><p class="tst__desc">Please note the new attribute added will be shown under all the values.</p></div><span class="tst__action">Button<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div><div class="bx-opt__body"><h3>Error</h3><p>The action failed. Stays 8s or more, or until closed.</p></div></div></div>
         </section>
-
-        <section id="behavior">
-          <h2>Behavior</h2>
-          <h3>Banner</h3>
-          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Rule</th><th>What to do</th></tr></thead><tbody>
-              <tr><td>Placement</td><td>Top of the viewport, full width, above the navbar. It pushes the layout down &mdash; never overlaps it.</td></tr>
-              <tr><td>Count</td><td>One at a time. Show the most severe and queue the rest.</td></tr>
-              <tr><td>Dismiss</td><td>× when Show close is on. Remember the dismissal per person and per message.</td></tr>
-              <tr><td>Persistence</td><td>Stays until resolved or dismissed. Show it again if the condition comes back.</td></tr>
-            </tbody></table></div>
-          <h3>Toast</h3>
+        <section id="behavior-toast">
+          <h2>Toast behavior</h2>
           <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Rule</th><th>What to do</th></tr></thead><tbody>
               <tr><td>Placement</td><td>Top-right, just below the page header, 24px from the right edge. Stack downward 8px apart, max 3; the oldest drops off.</td></tr>
               <tr><td>Auto-dismiss</td><td>Success ~4s · Warning ~6s · Error 8s+ or until closed. Progress stays until the task ends.</td></tr>
@@ -237,7 +246,16 @@
               <tr><td>Action</td><td>One, optional &mdash; “View”, “Undo”, “Retry”.</td></tr>
             </tbody></table></div>
         </section>
-
+        <section id="how-to-toast">
+          <h2>Adding a toast to a screen</h2>
+          <ol class="bt-steps">
+            <li><strong>Place it top-right.</strong> Search Assets for “Toast”. Place it just below the page header, 24px from the right edge. Several toasts stack downward 8px apart, max 3.</li>
+            <li><strong>Pick the Type.</strong> Success, Warning, Progress or Error &mdash; matching the result. Progress is for background tasks; swap it to Success / Error in the next frame of the flow.</li>
+            <li><strong>Write title, description and action.</strong> Title: what happened. Description: optional, max 2 lines. Action: optional, one verb. Delete the layers you don’t need.</li>
+            <li><strong>Annotate timing.</strong> Note for developers: auto-dismiss (success ~4s, warning ~6s, error 8s+ or until closed), pause on hover.</li>
+          </ol>
+        </section>
+        <div class="docs-part" id="both"><p class="docs-part__eyebrow">Both components</p><h2 class="docs-part__title">Using banners and toasts</h2><p class="docs-part__desc">Guidance that covers both: where each one goes, how they work together, writing and accessibility.</p></div>
         <section id="usage">
           <h2>Common layouts</h2>
           <p>A banner reports status that stays; a toast confirms an action. They can appear together without competing.</p>
@@ -256,7 +274,6 @@
             </figure>
           </div>
         </section>
-
         <section id="dos-donts">
           <h2>Do’s and don’ts</h2>
           <h3>Choosing the right component</h3>
@@ -360,7 +377,6 @@
             </div>
           </div>
         </section>
-
         <section id="content">
           <h2>Writing content</h2>
           <ul>
@@ -372,7 +388,6 @@
             <li><strong>No placeholders</strong> &mdash; never hand off “Main heading” or “Button”.</li>
           </ul>
         </section>
-
         <section id="accessibility">
           <h2>Accessibility</h2>
           <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Topic</th><th>What to do</th></tr></thead><tbody>
@@ -386,24 +401,8 @@
           <p>Every exact value &mdash; dimensions, colour tokens per type and the full property list &mdash; is on the
             <a href="docs-banners-specifications.html">Specifications tab</a>.</p>
         </section>
-
-        <section id="how-to-use">
-          <h2>Adding one to a screen</h2>
-          <h3>Banner</h3>
-          <ol class="bt-steps">
-            <li><strong>Place it at the very top.</strong> Search Assets for “Banner”. Put it at X 0, Y 0 of the screen frame, full width (1440). Move the navbar and page down by the banner height (32 / 36) &mdash; don’t overlap.</li>
-            <li><strong>Pick the Type.</strong> Error, Warning, Success, Brand, Neutral or Welcome. Swap the icon only if a suggested icon fits better.</li>
-            <li><strong>Write the message.</strong> One sentence; bold the key value. Error / Warning: add the action button + link if the person can fix it right away.</li>
-            <li><strong>Decide if it can be closed.</strong> Show close = false for issues that must be fixed (overdue payment, suspension). Otherwise keep the ×.</li>
-          </ol>
-          <h3>Toast</h3>
-          <ol class="bt-steps">
-            <li><strong>Place it top-right.</strong> Search Assets for “Toast”. Place it just below the page header, 24px from the right edge. Several toasts stack downward 8px apart, max 3.</li>
-            <li><strong>Pick the Type.</strong> Success, Warning, Progress or Error &mdash; matching the result. Progress is for background tasks; swap it to Success / Error in the next frame of the flow.</li>
-            <li><strong>Write title, description and action.</strong> Title: what happened. Description: optional, max 2 lines. Action: optional, one verb. Delete the layers you don’t need.</li>
-            <li><strong>Annotate timing.</strong> Note for developers: auto-dismiss (success ~4s, warning ~6s, error 8s+ or until closed), pause on hover.</li>
-          </ol>
-          <h3>Before you hand off</h3>
+        <section id="handoff">
+          <h2>Before you hand off</h2>
           <ul class="bt-check">
             <li>Banner or Toast chosen correctly &mdash; status that stays vs. feedback on an action.</li>
             <li>Type matches the sentiment.</li>
@@ -475,7 +474,7 @@
       var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
       [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
         var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
-        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var zf=(function(e){ /* Safari and older Chrome report boxes inside a CSS-zoomed element without the zoom: scale them back */if(window.__bxZL===undefined){var p=document.createElement('div'),q=document.createElement('div');p.style.cssText='zoom:2;position:absolute;visibility:hidden';q.style.width='10px';p.appendChild(q);document.body.appendChild(p);window.__bxZL=q.getBoundingClientRect().width<15;p.remove();}if(!window.__bxZL)return 1;var z=1;for(;e&&e.nodeType===1;e=e.parentElement){var v=parseFloat(getComputedStyle(e).zoom);if(v&&v!==1)z*=v;}return z;})(el), x=r.left*zf-c.left, y=r.top*zf-c.top, w=r.width*zf, h=r.height*zf, ax, ay, bx, by;
         var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
         svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
         if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}

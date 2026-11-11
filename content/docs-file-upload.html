@@ -54,16 +54,19 @@
       <ul>
         <li><a href="docs-accordion.html">Accordion <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-avatar.html">Avatar <span class="docs-nav__new">New</span></a></li>
-        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
         <li><a href="docs-bottomsheet.html">Bottom sheet <span class="docs-nav__new">New</span></a></li>
-        <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-card.html">Card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-file-upload.html" aria-current="page">File upload <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-slider.html">Slider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
-        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-dropdown.html">Dropdown</a></li>
         <li><a href="docs-empty-states.html">Empty States</a></li>
-        <li><a href="docs-file-upload.html" aria-current="page">File upload <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-filters.html">Filters</a></li>
         <li><a href="docs-header.html">Header</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
@@ -79,9 +82,7 @@
           </ul>
         </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
-        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
-        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-swimlanes.html">Swimlanes</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
         <li><a href="docs-table.html">Tables</a></li>
@@ -156,7 +157,7 @@
             <div><h3>Built from</h3><p>① Upload (the drop zone) &rarr; ② _Progressbar while uploading &rarr; ③ one File upload item per file.</p></div>
             <div><h3>Ends in</h3><p>Success, or Error with a clear reason. Enable the primary action (Upload / Apply) only when every file is valid.</p></div>
           </div>
-          <div class="docs-demo"><div class="dw-play fup-play" id="fup-play"><div class="dw-play__opts" role="group" aria-label="Upload options"><label><input type="checkbox" data-fup-opt="prog" checked>Progressbar</label><label><input type="checkbox" data-fup-opt="list" checked>Slot2 (file list)</label><label><input type="checkbox" data-fup-opt="count" checked>Count</label><label><input type="checkbox" data-fup-opt="desc" checked>Description</label><label><input type="checkbox" data-fup-opt="btn" checked>Button</label></div><div class="dw-play__opts" role="radiogroup" aria-label="File upload item state"><span class="fup-play__lbl">State</span><label><input type="radio" name="fup-state" value="neutral">Neutral</label><label><input type="radio" name="fup-state" value="success">Success</label><label><input type="radio" name="fup-state" value="warning" checked>Warning</label><label><input type="radio" name="fup-state" value="error">Error</label></div><div class="fup-play__stage"><div class="fup" data-fup><input class="fup-file" type="file" accept=".csv,.xlsx,.xls" multiple tabindex="-1" aria-hidden="true" data-fup-file><div class="fup-zone" role="button" tabindex="0" aria-label="Upload Inventory — choose or drop a file" data-fup-zone><div class="fup-zone__in"><span class="fup-ibtn"><i class="ph ph-upload-simple" aria-hidden="true"></i></span><span class="fup-zone__txt"><span class="fup-title">Upload Inventory</span><span class="fup-help">Click or Drag and Drop .CSV here</span></span></div></div><div class="fup-prog" role="progressbar" aria-label="Upload progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="91" data-fup-prog><span class="fup-prog__bar"><span class="fup-prog__fill" style="--fup-p:91%"></span></span><span class="fup-prog__n">91%</span></div><ul class="fup-list" aria-live="polite" data-fup-list></ul></div></div><p class="fup-play__hint">Click the drop zone or drop a file on it: it joins the list as Ready to upload. Remove &times; takes it out.</p></div></div>
+          <div class="docs-demo"><div class="dw-play dw-play--panel fup-play" id="fup-play"><div class="dw-play__opts" role="group" aria-label="File upload properties"><span class="dw-play__grp">Upload</span><label><input type="checkbox" data-fup-opt="prog" checked>Progressbar</label><label><input type="checkbox" data-fup-opt="list" checked>Slot2</label><span class="dw-play__grp">File upload item</span><label>State <select class="dw-play__sel fup-play__sel" data-fup-state aria-label="State"><option value="neutral">Neutral</option><option value="success">Success</option><option value="warning" selected>Warning</option><option value="error">Error</option></select></label><label><input type="checkbox" data-fup-opt="desc" checked>Description</label><label><input type="checkbox" data-fup-opt="btn" checked>Button</label><span class="dw-play__grp">_Progressbar</span><label>Size <select class="dw-play__sel fup-play__sel" data-fup-size aria-label="Progress bar size"><option value="" selected>Small</option><option value="md">Medium</option><option value="lg">Large</option></select></label><label><input type="checkbox" data-fup-opt="count" checked>Count</label></div><div class="dw-play__stage fup-play__stage"><div class="fup" data-fup><input class="fup-file" type="file" accept=".csv,.xlsx,.xls" multiple tabindex="-1" aria-hidden="true" data-fup-file><div class="fup-zone" role="button" tabindex="0" aria-label="Upload Inventory — choose or drop a file" data-fup-zone><div class="fup-zone__in"><span class="fup-ibtn"><i class="ph ph-upload-simple" aria-hidden="true"></i></span><span class="fup-zone__txt"><span class="fup-title">Upload Inventory</span><span class="fup-help">Click or Drag and Drop .CSV here</span></span></div></div><div class="fup-prog" role="progressbar" aria-label="Upload progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="91" data-fup-prog><span class="fup-prog__bar"><span class="fup-prog__fill" style="--fup-p:91%"></span></span><span class="fup-prog__n">91%</span></div><ul class="fup-list" aria-live="polite" data-fup-list></ul></div></div><p class="fup-play__hint">Click the drop zone or drop a file on it: it joins the list as Ready to upload. Remove &times; takes it out.</p></div></div>
         </section>
         <section id="journey">
           <h2>The upload journey</h2>
@@ -311,7 +312,7 @@
       var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
       [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
         var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
-        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var zf=(function(e){ /* Safari and older Chrome report boxes inside a CSS-zoomed element without the zoom: scale them back */if(window.__bxZL===undefined){var p=document.createElement('div'),q=document.createElement('div');p.style.cssText='zoom:2;position:absolute;visibility:hidden';q.style.width='10px';p.appendChild(q);document.body.appendChild(p);window.__bxZL=q.getBoundingClientRect().width<15;p.remove();}if(!window.__bxZL)return 1;var z=1;for(;e&&e.nodeType===1;e=e.parentElement){var v=parseFloat(getComputedStyle(e).zoom);if(v&&v!==1)z*=v;}return z;})(el), x=r.left*zf-c.left, y=r.top*zf-c.top, w=r.width*zf, h=r.height*zf, ax, ay, bx, by;
         var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
         svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
         if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
@@ -363,8 +364,9 @@
   root.querySelectorAll('[data-fup-opt]').forEach(function(cb){
     cb.addEventListener('change',function(){opt[cb.getAttribute('data-fup-opt')]=cb.checked; render();});
   });
-  root.querySelectorAll('input[name="fup-state"]').forEach(function(r){
-    r.addEventListener('change',function(){if(r.checked){state=r.value; render();}});
+  root.querySelector('[data-fup-state]').addEventListener('change',function(e){state=e.target.value; render();});
+  root.querySelector('[data-fup-size]').addEventListener('change',function(e){
+    bar.classList.toggle('fup-prog--md',e.target.value==='md'); bar.classList.toggle('fup-prog--lg',e.target.value==='lg');
   });
   list.addEventListener('click',function(e){
     var b=e.target.closest('.fup-x'); if(!b) return;
@@ -373,7 +375,7 @@
   function add(fl){
     if(!fl||!fl.length) return;
     for(var i=0;i<fl.length;i++) files.push(fl[i].name);
-    state='neutral'; root.querySelector('input[name="fup-state"][value="neutral"]').checked=true;
+    state='neutral'; root.querySelector('[data-fup-state]').value='neutral';
     opt.list=true; root.querySelector('[data-fup-opt="list"]').checked=true; render();
   }
   zone.addEventListener('click',function(){file.click();});

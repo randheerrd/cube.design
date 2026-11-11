@@ -54,16 +54,19 @@
       <ul>
         <li><a href="docs-accordion.html">Accordion <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-avatar.html">Avatar <span class="docs-nav__new">New</span></a></li>
-        <li><a href="docs-banners.html" aria-current="page">Banner &amp; Toasts</a></li>
         <li><a href="docs-bottomsheet.html">Bottom sheet <span class="docs-nav__new">New</span></a></li>
-        <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-card.html">Card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-slider.html">Slider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-banners.html" aria-current="page">Banner &amp; Toasts</a></li>
+        <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
-        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-dropdown.html">Dropdown</a></li>
         <li><a href="docs-empty-states.html">Empty States</a></li>
-        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-filters.html">Filters</a></li>
         <li><a href="docs-header.html">Header</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
@@ -79,9 +82,7 @@
           </ul>
         </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
-        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
-        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-swimlanes.html">Swimlanes</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
         <li><a href="docs-table.html">Tables</a></li>
@@ -147,10 +148,12 @@
         </a>
       </div>
       <article class="docs-content docs-content--inp docs-content--spec docs-content--bt">
-        <section id="dimensions">
-          <h2>Dimensions</h2>
+        <nav class="docs-jump" aria-label="Parts of this page"><span>On this page</span><a href="#banner">Banner</a><a href="#toast">Toast</a><a href="#both">Using both</a></nav>
+        <div class="docs-part" id="banner"><p class="docs-part__eyebrow">Component 1 of 2</p><h2 class="docs-part__title">Banner</h2><p class="docs-part__desc">Page or account status that stays &mdash; an outage, an overdue payment, an announcement. A full-width strip at the top of the page.</p></div>
+        <section id="dimensions-banner">
+          <h2>Banner dimensions</h2>
           <p>All values in px.</p>
-          <h3>Banner</h3>
+          
           <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody>
               <tr><td>Width</td><td>Full page (1440 in mocks)</td><td>⚠ The Figma message frame is fixed at 958px &mdash; it doesn’t stretch.</td></tr>
               <tr><td>Height</td><td>32 · 36 with action button</td><td></td></tr>
@@ -162,7 +165,63 @@
               <tr><td>Close</td><td>14 × 14</td><td>12px from the right edge, vertically centred</td></tr>
               <tr><td>Position</td><td>Top of the viewport, above navbar + page</td><td>Pushes layout down</td></tr>
             </tbody></table></div>
-          <h3>Toast</h3>
+        </section>
+        <section id="color-banner">
+          <h2>Banner color tokens</h2>
+          <p>Tokens read from the components. <span class="bt-raw">⚠</span> marks a raw hex that isn’t bound to a
+            variable yet. Message text is <code>Primary-text/950</code> (Neutral uses <code>Secondary-text/950</code>);
+            bold the key values.</p>
+          
+          <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Type</th><th>Background</th><th>Border</th><th>Icon</th><th>Close (×)</th></tr></thead><tbody>
+              <tr><td>Error</td><td><span class="bt-swatch" style="background:#ffd9d9"></span><code>#FF0000</code> + 85% white <span class="bt-raw">⚠</span></td><td><span class="bt-swatch" style="background:rgba(227,77,77,.15)"></span><code>#FB2C36</code> @15% <span class="bt-raw">⚠</span></td><td><span class="bt-swatch" style="background:#e7000b"></span><code>Error/600</code></td><td><span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code></td></tr>
+              <tr><td>Warning</td><td><span class="bt-swatch" style="background:#fef3c6"></span><code>Warning/100</code> + 2 blurred <code>Warning/500</code> glows</td><td><span class="bt-swatch" style="background:#ffdf20"></span><code>Warning/300</code></td><td><span class="bt-swatch" style="background:#d08700"></span><code>Warning/600</code></td><td><span class="bt-swatch" style="background:#373d42"></span><code>Primary-text/900</code></td></tr>
+              <tr><td>Success</td><td><span class="bt-swatch" style="background:#daf6e3"></span><code>#DAF6E3</code> <span class="bt-raw">⚠</span></td><td><span class="bt-swatch" style="background:#b0efc3"></span><code>#B0EFC3</code> <span class="bt-raw">⚠</span></td><td><span class="bt-swatch" style="background:#008236"></span><code>Success/700</code></td><td><span class="bt-swatch" style="background:#373d42"></span><code>Primary-text/900</code></td></tr>
+              <tr><td>Brand</td><td><span class="bt-swatch" style="background:#d4e2ff"></span><code>Primary/200</code></td><td><span class="bt-swatch" style="background:#a8c5ff"></span><code>Primary/300</code></td><td><span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td><td><span class="bt-swatch" style="background:#373d42"></span><code>Primary-text/900</code></td></tr>
+              <tr><td>Neutral</td><td><span class="bt-swatch" style="background:#e7eef9"></span><code>Accent/Steel Blue/200</code></td><td><span class="bt-swatch" style="background:#e7eef9"></span><code>Accent/Steel Blue/200</code></td><td><span class="bt-swatch" style="background:#5c78a7"></span><code>Accent/Steel Blue/700</code></td><td><span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code></td></tr>
+              <tr><td>Welcome</td><td><span class="bt-swatch" style="background:linear-gradient(118deg,#cfe0ff,#e9d9ff)"></span><code>#CFE0FF → #E9D9FF</code> <span class="bt-raw">⚠</span></td><td><span class="bt-swatch" style="background:linear-gradient(118deg,#a8c5ff,#dab2ff)"></span><code>#A8C5FF → #DAB2FF</code> <span class="bt-raw">⚠</span></td><td><span class="bt-swatch" style="background:linear-gradient(135deg,#006adc,#863bff)"></span>Gradient <code>#006ADC → #863BFF</code></td><td><span class="bt-swatch" style="background:#373d42"></span><code>Primary-text/900</code></td></tr>
+            </tbody></table></div>
+        </section>
+        <section id="properties-banner">
+          <h2>Banner properties</h2>
+          <p>Designers place a Banner at the top of the screen frame, or a Toast at the top-right, pick the Type and edit
+            the text. In code, a Banner is a persistent page-level alert; a Toast is a transient notification from a
+            toast manager (queue, timer, stack).</p>
+          
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Default</th><th>Notes</th></tr></thead><tbody>
+              <tr><td><code>Type</code></td><td>Error | Warning | Success | Brand | Neutral | Welcome</td><td>Error</td><td>Banner sentiment. Required.</td></tr>
+              <tr><td><code>Show close</code></td><td>true | false</td><td>true</td><td>Hide for must-fix issues.</td></tr>
+              <tr><td>Message / actions</td><td>overrides</td><td>&mdash;</td><td>⚠ Not TEXT properties &mdash; edit the layers. Action button + link only in Error.</td></tr>
+            </tbody></table></div>
+          
+          <h3>Behaviour</h3>
+          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Placement</td><td>Top of viewport, full width</td><td>Pushes content down; never overlaps.</td></tr>
+              <tr><td>Count</td><td>One at a time</td><td>Show the most severe; queue the rest.</td></tr>
+              <tr><td>Dismiss</td><td>× (if Show close)</td><td>Remember dismissal per user / per message.</td></tr>
+              <tr><td>Persistence</td><td>Until resolved or dismissed</td><td>Re-show when the condition returns.</td></tr>
+              <tr><td>Semantics</td><td><code>role="status"</code> (info) / <code>"alert"</code> (error)</td><td></td></tr>
+            </tbody></table></div>
+        </section>
+        <section id="examples-banner">
+          <h2>Banner examples</h2><h3 id="ex-overdue">Overdue invoice</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><div class="bt-stage"><div class="bnr bnr--error bnr--noclose bnr--actions" role="alert"><img class="bnr__icon" src="assets/img/bt/banner-error.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><span class="bnr__btn">Pay now</span><span class="bnr__link">View invoice</span></div></div><p>Must-fix account issue.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Banner · Type</td><td>Error</td><td></td></tr>              <tr><td>Show close</td><td>false</td><td>Stays until paid</td></tr>              <tr><td>Action</td><td>“Pay now”</td><td></td></tr>
+            </tbody></table>
+          </div>
+          <h3 id="ex-feature">Feature announcement</h3>
+          <div class="bx-example">
+            <div class="bx-example__stage"><div class="bt-stage"><div class="bnr bnr--brand" role="status"><img class="bnr__icon" src="assets/img/bt/banner-brand.svg" alt=""><p class="bnr__msg">New: Geo Intelligence is now available for all workspaces!</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div><p>Dismissible product news.</p></div>
+            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+              <tr><td>Banner · Type</td><td>Brand</td><td></td></tr>              <tr><td>Show close</td><td>true</td><td></td></tr>
+            </tbody></table>
+          </div>
+        </section>
+        <div class="docs-part" id="toast"><p class="docs-part__eyebrow">Component 2 of 2</p><h2 class="docs-part__title">Toast</h2><p class="docs-part__desc">Quick feedback on an action the person just took &mdash; saved, exported, failed. A small dark pop-up that goes away on its own.</p></div>
+        <section id="dimensions-toast">
+          <h2>Toast dimensions</h2>
+          <p>All values in px.</p>
           <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Attribute</th><th>Value</th><th>Notes</th></tr></thead><tbody>
               <tr><td>Width</td><td>317 (fixed)</td><td></td></tr>
               <tr><td>Height</td><td>Hugs content (≈ 102)</td><td></td></tr>
@@ -173,32 +232,10 @@
               <tr><td>Timer bar</td><td>4 tall · radius 24 · 60% opacity</td><td>Width animates 100% → 0</td></tr>
               <tr><td>Position</td><td>Top-right, below page header</td><td>Stack 8px apart, max 3</td></tr>
             </tbody></table></div>
-          <h3>Visual reference</h3>
-          <p>Real size.</p>
-          <div class="docs-demo bt-ref">
-            <div class="bt-stage"><div class="bnr bnr--neutral" role="status"><img class="bnr__icon" src="assets/img/bt/banner-neutral.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close-2.svg" alt="Dismiss"></div></div>
-            <div class="bt-toasts">
-              <div class="tst-stack"><div class="tst tst--success" role="status"><img class="tst__icon" src="assets/img/bt/toast-success.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Main heading</p><p class="tst__desc">Please note the new attribute added will be shown under all the values.</p></div><span class="tst__action">Button<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div><div class="tst tst--progress" role="status"><img class="tst__icon" src="assets/img/bt/toast-progress.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Main heading</p><p class="tst__desc">Please note the new attribute added will be shown under all the values.</p></div><span class="tst__action">Button<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div>
-            </div>
-            <p class="docs-demo__caption">Banner 1440 × 32 (cropped to the column) · Toast 317 × ~102 · toast stack 8px gap, max 3.</p>
-          </div>
         </section>
-
-        <section id="color-tokens">
-          <h2>Color tokens</h2>
-          <p>Tokens read from the components. <span class="bt-raw">⚠</span> marks a raw hex that isn’t bound to a
-            variable yet. Message text is <code>Primary-text/950</code> (Neutral uses <code>Secondary-text/950</code>);
-            bold the key values.</p>
-          <h3>Banner &mdash; per type</h3>
-          <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Type</th><th>Background</th><th>Border</th><th>Icon</th><th>Close (×)</th></tr></thead><tbody>
-              <tr><td>Error</td><td><span class="bt-swatch" style="background:#ffd9d9"></span><code>#FF0000</code> + 85% white <span class="bt-raw">⚠</span></td><td><span class="bt-swatch" style="background:rgba(227,77,77,.15)"></span><code>#FB2C36</code> @15% <span class="bt-raw">⚠</span></td><td><span class="bt-swatch" style="background:#e7000b"></span><code>Error/600</code></td><td><span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code></td></tr>
-              <tr><td>Warning</td><td><span class="bt-swatch" style="background:#fef3c6"></span><code>Warning/100</code> + 2 blurred <code>Warning/500</code> glows</td><td><span class="bt-swatch" style="background:#ffdf20"></span><code>Warning/300</code></td><td><span class="bt-swatch" style="background:#d08700"></span><code>Warning/600</code></td><td><span class="bt-swatch" style="background:#373d42"></span><code>Primary-text/900</code></td></tr>
-              <tr><td>Success</td><td><span class="bt-swatch" style="background:#daf6e3"></span><code>#DAF6E3</code> <span class="bt-raw">⚠</span></td><td><span class="bt-swatch" style="background:#b0efc3"></span><code>#B0EFC3</code> <span class="bt-raw">⚠</span></td><td><span class="bt-swatch" style="background:#008236"></span><code>Success/700</code></td><td><span class="bt-swatch" style="background:#373d42"></span><code>Primary-text/900</code></td></tr>
-              <tr><td>Brand</td><td><span class="bt-swatch" style="background:#d4e2ff"></span><code>Primary/200</code></td><td><span class="bt-swatch" style="background:#a8c5ff"></span><code>Primary/300</code></td><td><span class="bt-swatch" style="background:#025be5"></span><code>Primary/600</code></td><td><span class="bt-swatch" style="background:#373d42"></span><code>Primary-text/900</code></td></tr>
-              <tr><td>Neutral</td><td><span class="bt-swatch" style="background:#e7eef9"></span><code>Accent/Steel Blue/200</code></td><td><span class="bt-swatch" style="background:#e7eef9"></span><code>Accent/Steel Blue/200</code></td><td><span class="bt-swatch" style="background:#5c78a7"></span><code>Accent/Steel Blue/700</code></td><td><span class="bt-swatch" style="background:#363e45"></span><code>Secondary-text/900</code></td></tr>
-              <tr><td>Welcome</td><td><span class="bt-swatch" style="background:linear-gradient(118deg,#cfe0ff,#e9d9ff)"></span><code>#CFE0FF → #E9D9FF</code> <span class="bt-raw">⚠</span></td><td><span class="bt-swatch" style="background:linear-gradient(118deg,#a8c5ff,#dab2ff)"></span><code>#A8C5FF → #DAB2FF</code> <span class="bt-raw">⚠</span></td><td><span class="bt-swatch" style="background:linear-gradient(135deg,#006adc,#863bff)"></span>Gradient <code>#006ADC → #863BFF</code></td><td><span class="bt-swatch" style="background:#373d42"></span><code>Primary-text/900</code></td></tr>
-            </tbody></table></div>
-          <h3>Toast</h3>
+        <section id="color-toast">
+          <h2>Toast color tokens</h2>
+          <p>Tokens read from the component.</p>
           <p>Same surface for every type &mdash; only the icon and the timer bar change.</p>
           <div class="bx-scroll"><table class="docs-table bt-tokens"><thead><tr><th>Element</th><th>Token / value</th><th>Notes</th></tr></thead><tbody>
               <tr><td>Container</td><td><span class="bt-swatch" style="background:#0f111b"></span><code>#0F111B</code> <span class="bt-raw">⚠</span></td><td>Same as the Navbar dark panel &mdash; should be a token.</td></tr>
@@ -213,32 +250,14 @@
             <p class="docs-demo__caption">Success · Warning · Progress · Error.</p>
           </div>
         </section>
-
-        <section id="properties">
-          <h2>Properties</h2>
-          <p>Designers place a Banner at the top of the screen frame, or a Toast at the top-right, pick the Type and edit
-            the text. In code, a Banner is a persistent page-level alert; a Toast is a transient notification from a
-            toast manager (queue, timer, stack).</p>
-          <h3>Banner</h3>
-          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Default</th><th>Notes</th></tr></thead><tbody>
-              <tr><td><code>Type</code></td><td>Error | Warning | Success | Brand | Neutral | Welcome</td><td>Error</td><td>Banner sentiment. Required.</td></tr>
-              <tr><td><code>Show close</code></td><td>true | false</td><td>true</td><td>Hide for must-fix issues.</td></tr>
-              <tr><td>Message / actions</td><td>overrides</td><td>&mdash;</td><td>⚠ Not TEXT properties &mdash; edit the layers. Action button + link only in Error.</td></tr>
-            </tbody></table></div>
-          <h3>Toast</h3>
+        <section id="properties-toast">
+          <h2>Toast properties</h2>
           <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value(s)</th><th>Default</th><th>Notes</th></tr></thead><tbody>
               <tr><td><code>Type</code></td><td>Toast-success | Toast-warning | Toast-progress | Toast-error</td><td>Toast-success</td><td>Required.</td></tr>
               <tr><td>Title / description / action</td><td>overrides</td><td>&mdash;</td><td>⚠ Not TEXT / BOOLEAN properties &mdash; no way to hide the description or action without editing layers.</td></tr>
             </tbody></table></div>
-          <h3>Behaviour &mdash; Banner</h3>
-          <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
-              <tr><td>Placement</td><td>Top of viewport, full width</td><td>Pushes content down; never overlaps.</td></tr>
-              <tr><td>Count</td><td>One at a time</td><td>Show the most severe; queue the rest.</td></tr>
-              <tr><td>Dismiss</td><td>× (if Show close)</td><td>Remember dismissal per user / per message.</td></tr>
-              <tr><td>Persistence</td><td>Until resolved or dismissed</td><td>Re-show when the condition returns.</td></tr>
-              <tr><td>Semantics</td><td><code>role="status"</code> (info) / <code>"alert"</code> (error)</td><td></td></tr>
-            </tbody></table></div>
-          <h3>Behaviour &mdash; Toast</h3>
+          
+          <h3>Behaviour</h3>
           <div class="bx-scroll"><table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
               <tr><td>Placement</td><td>Top-right, below header</td><td>Stack down, 8px gap, max 3; oldest drops off.</td></tr>
               <tr><td>Auto-dismiss</td><td>success 4s · warning 6s · error 8s+</td><td>Progress stays until the task ends.</td></tr>
@@ -247,24 +266,8 @@
               <tr><td>Semantics</td><td><code>role="status"</code> <code>aria-live="polite"</code> (error: <code>"assertive"</code>)</td><td>Don’t steal focus.</td></tr>
             </tbody></table></div>
         </section>
-
-        <section id="examples">
-          <h2>Configuration examples</h2>
-          <h3 id="ex-overdue">Overdue invoice</h3>
-          <div class="bx-example">
-            <div class="bx-example__stage"><div class="bt-stage"><div class="bnr bnr--error bnr--noclose bnr--actions" role="alert"><img class="bnr__icon" src="assets/img/bt/banner-error.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><span class="bnr__btn">Pay now</span><span class="bnr__link">View invoice</span></div></div><p>Must-fix account issue.</p></div>
-            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
-              <tr><td>Banner · Type</td><td>Error</td><td></td></tr>              <tr><td>Show close</td><td>false</td><td>Stays until paid</td></tr>              <tr><td>Action</td><td>“Pay now”</td><td></td></tr>
-            </tbody></table>
-          </div>
-          <h3 id="ex-feature">Feature announcement</h3>
-          <div class="bx-example">
-            <div class="bx-example__stage"><div class="bt-stage"><div class="bnr bnr--brand" role="status"><img class="bnr__icon" src="assets/img/bt/banner-brand.svg" alt=""><p class="bnr__msg">New: Geo Intelligence is now available for all workspaces!</p><img class="bnr__close" src="assets/img/bt/banner-close.svg" alt="Dismiss"></div></div><p>Dismissible product news.</p></div>
-            <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
-              <tr><td>Banner · Type</td><td>Brand</td><td></td></tr>              <tr><td>Show close</td><td>true</td><td></td></tr>
-            </tbody></table>
-          </div>
-          <h3 id="ex-export">Export finished</h3>
+        <section id="examples-toast">
+          <h2>Toast examples</h2><h3 id="ex-export">Export finished</h3>
           <div class="bx-example">
             <div class="bx-example__stage"><div class="tst tst--success" role="status"><img class="tst__icon" src="assets/img/bt/toast-success.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Report exported</p><p class="tst__desc">Your report is ready in Downloads.</p></div><span class="tst__action">Open<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div><p>Feedback after an action.</p></div>
             <table class="docs-table"><thead><tr><th>Property</th><th>Value</th><th>Notes</th></tr></thead><tbody>
@@ -272,7 +275,18 @@
             </tbody></table>
           </div>
         </section>
-
+        <div class="docs-part" id="both"><p class="docs-part__eyebrow">Both components</p><h2 class="docs-part__title">Banner and Toast together</h2><p class="docs-part__desc">Guidance that covers both: sizes side by side and where the values come from.</p></div>
+        <section id="visual-reference">
+          <h2>Visual reference</h2>
+          <p>Real size.</p>
+          <div class="docs-demo bt-ref">
+            <div class="bt-stage"><div class="bnr bnr--neutral" role="status"><img class="bnr__icon" src="assets/img/bt/banner-neutral.svg" alt=""><p class="bnr__msg">Invoices [INV-CF-2526-880] amounting to <b>Rs. 11,038.90</b> is overdue <b>since 2026-03-08</b>. Request you to please clear this at the earliest to ensure uninterrupted services.</p><img class="bnr__close" src="assets/img/bt/banner-close-2.svg" alt="Dismiss"></div></div>
+            <div class="bt-toasts">
+              <div class="tst-stack"><div class="tst tst--success" role="status"><img class="tst__icon" src="assets/img/bt/toast-success.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Main heading</p><p class="tst__desc">Please note the new attribute added will be shown under all the values.</p></div><span class="tst__action">Button<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div><div class="tst tst--progress" role="status"><img class="tst__icon" src="assets/img/bt/toast-progress.svg" alt=""><div class="tst__body"><div class="tst__text"><p class="tst__title">Main heading</p><p class="tst__desc">Please note the new attribute added will be shown under all the values.</p></div><span class="tst__action">Button<img src="assets/img/bt/toast-arrow.svg" alt=""></span></div><img class="tst__close" src="assets/img/bt/toast-close.svg" alt="Close"><span class="tst__timer"></span></div></div>
+            </div>
+            <p class="docs-demo__caption">Banner 1440 × 32 (cropped to the column) · Toast 317 × ~102 · toast stack 8px gap, max 3.</p>
+          </div>
+        </section>
         <section id="source">
           <h2>Source</h2>
           <p>Anatomy, dimensions, colour tokens and properties are taken from the Banner &amp; Toast documentation page

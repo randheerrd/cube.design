@@ -54,16 +54,19 @@
       <ul>
         <li><a href="docs-accordion.html" aria-current="page">Accordion <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-avatar.html">Avatar <span class="docs-nav__new">New</span></a></li>
-        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
         <li><a href="docs-bottomsheet.html">Bottom sheet <span class="docs-nav__new">New</span></a></li>
-        <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-card.html">Card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-slider.html">Slider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
-        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-dropdown.html">Dropdown</a></li>
         <li><a href="docs-empty-states.html">Empty States</a></li>
-        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-filters.html">Filters</a></li>
         <li><a href="docs-header.html">Header</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
@@ -79,9 +82,7 @@
           </ul>
         </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
-        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
-        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-swimlanes.html">Swimlanes</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
         <li><a href="docs-table.html">Tables</a></li>
@@ -156,7 +157,7 @@
             <div><h3>Three styles</h3><p><strong>Underline</strong> (compact) &lt; <strong>Bordered</strong> &lt; <strong>Prominent</strong> (sections). Match the style to the weight of the content.</p></div>
             <div><h3>Not an accordion</h3><p>Information users need for their main task. Don’t hide it &mdash; show it directly instead.</p></div>
           </div>
-          <div class="docs-demo"><div class="dw-play acd-play" id="acd-play"><div class="dw-play__opts" role="group" aria-label="Accordion options"><label><input type="radio" name="acd-style" value="bordered" checked>Bordered</label><label><input type="radio" name="acd-style" value="underline">Underline</label><label><input type="radio" name="acd-style" value="prominent">Prominent</label><span class="acd-play__sep" aria-hidden="true"></span><label><input type="checkbox" data-acd-opt="open">Expanded</label><label><input type="checkbox" data-acd-opt="desc" checked>Description</label><label><input type="checkbox" data-acd-opt="slot">Show Slot</label></div><div class="acd-play__stage" data-acd-stage></div><template id="acd-play-cards"><div class="acd-item__slot"><div class="acd-card"><img class="acd-card__art" src="assets/img/accordion/card-art-geo.png" alt="" width="447" height="155"><div class="acd-card__panel"><div><p class="acd-card__name">Geo Intelligence</p><p class="acd-card__text">Attribute off-take and share movements to key input metrics. Daily market share included.</p></div><div class="acd-card__foot"><span class="acd-card__status"><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Active for 3 platforms<span class="acd-plat"><img src="assets/img/accordion/platform-blinkit.png" alt="Blinkit" width="16" height="16"><img src="assets/img/accordion/platform-instamart.png" alt="Instamart" width="16" height="16"><img src="assets/img/accordion/platform-zepto.png" alt="Zepto" width="16" height="16"></span></span><span class="acd-card__cta">Manage</span></div></div></div><div class="acd-card"><img class="acd-card__art" src="assets/img/accordion/card-art-perf.png" alt="" width="447" height="155"><div class="acd-card__panel"><div><p class="acd-card__name">Perf Marketing Advanced</p><p class="acd-card__text">Attribute off-take and share movements to key input metrics. Daily market share included.</p></div><div class="acd-card__foot"><span class="acd-card__status"><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Active for 3 platforms<span class="acd-plat"><img src="assets/img/accordion/platform-blinkit.png" alt="Blinkit" width="16" height="16"><img src="assets/img/accordion/platform-instamart.png" alt="Instamart" width="16" height="16"><img src="assets/img/accordion/platform-zepto.png" alt="Zepto" width="16" height="16"></span></span><span class="acd-card__cta">Manage</span></div></div></div></div></template></div></div>
+          <div class="docs-demo"><div class="dw-play dw-play--panel acd-play" id="acd-play"><div class="dw-play__opts" role="group" aria-label="Accordion properties"><label>Style <select class="dw-play__sel acd-play__sel" data-acd-style aria-label="Style"><option value="bordered" selected>Bordered</option><option value="prominent">Prominent</option><option value="underline">Underline</option></select></label><label>State <select class="dw-play__sel acd-play__sel" data-acd-state aria-label="State"><option value="Collapsed" selected>Collapsed</option><option value="Expanded">Expanded</option></select></label><label>Title <input type="text" class="dw-play__txt acd-play__txt" data-acd-title value="How is ROAS calculated ?" aria-label="Title"></label><label>Description <input type="text" class="dw-play__txt acd-play__txt" data-acd-desc value="ROAS is attributed sales divided by ad spend for the selected date range." placeholder="Optional" aria-label="Description"></label><label><input type="checkbox" data-acd-opt="slot">Show Slot</label></div><div class="dw-play__stage acd-play__stage" data-acd-stage></div><template id="acd-play-cards"><div class="acd-item__slot"><div class="acd-card"><img class="acd-card__art" src="assets/img/accordion/card-art-geo.png" alt="" width="447" height="155"><div class="acd-card__panel"><div><p class="acd-card__name">Geo Intelligence</p><p class="acd-card__text">Attribute off-take and share movements to key input metrics. Daily market share included.</p></div><div class="acd-card__foot"><span class="acd-card__status"><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Active for 3 platforms<span class="acd-plat"><img src="assets/img/accordion/platform-blinkit.png" alt="Blinkit" width="16" height="16"><img src="assets/img/accordion/platform-instamart.png" alt="Instamart" width="16" height="16"><img src="assets/img/accordion/platform-zepto.png" alt="Zepto" width="16" height="16"></span></span><span class="acd-card__cta">Manage</span></div></div></div><div class="acd-card"><img class="acd-card__art" src="assets/img/accordion/card-art-perf.png" alt="" width="447" height="155"><div class="acd-card__panel"><div><p class="acd-card__name">Perf Marketing Advanced</p><p class="acd-card__text">Attribute off-take and share movements to key input metrics. Daily market share included.</p></div><div class="acd-card__foot"><span class="acd-card__status"><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Active for 3 platforms<span class="acd-plat"><img src="assets/img/accordion/platform-blinkit.png" alt="Blinkit" width="16" height="16"><img src="assets/img/accordion/platform-instamart.png" alt="Instamart" width="16" height="16"><img src="assets/img/accordion/platform-zepto.png" alt="Zepto" width="16" height="16"></span></span><span class="acd-card__cta">Manage</span></div></div></div></div></template></div></div>
         </section>
         <section id="anatomy">
           <h2>Anatomy</h2>
@@ -302,7 +303,7 @@
       var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
       [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
         var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
-        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var zf=(function(e){ /* Safari and older Chrome report boxes inside a CSS-zoomed element without the zoom: scale them back */if(window.__bxZL===undefined){var p=document.createElement('div'),q=document.createElement('div');p.style.cssText='zoom:2;position:absolute;visibility:hidden';q.style.width='10px';p.appendChild(q);document.body.appendChild(p);window.__bxZL=q.getBoundingClientRect().width<15;p.remove();}if(!window.__bxZL)return 1;var z=1;for(;e&&e.nodeType===1;e=e.parentElement){var v=parseFloat(getComputedStyle(e).zoom);if(v&&v!==1)z*=v;}return z;})(el), x=r.left*zf-c.left, y=r.top*zf-c.top, w=r.width*zf, h=r.height*zf, ax, ay, bx, by;
         var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
         svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
         if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
@@ -337,7 +338,7 @@
     var h=e.target.closest&&e.target.closest('button.acd-item__head'); if(!h) return;
     var acc=h.parentNode, open=!acc.classList.contains('acd-open');
     setOpen(acc,open);
-    var play=acc.closest('.acd-play'); if(play){var c=play.querySelector('[data-acd-opt="open"]'); if(c) c.checked=open;}
+    var play=acc.closest('.acd-play'); if(play){var c=play.querySelector('[data-acd-state]'); if(c) c.value=open?'Expanded':'Collapsed';}
   });
 
   /* Anatomy: a longer stem for the divider marker where there is room. */
@@ -351,28 +352,31 @@
   var play=document.getElementById('acd-play'); if(!play) return;
   var stage=play.querySelector('[data-acd-stage]'), tpl=document.getElementById('acd-play-cards');
   var cards=tpl?tpl.innerHTML:'';
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   function opt(k){var c=play.querySelector('[data-acd-opt="'+k+'"]'); return !!(c&&c.checked);}
   function icon(style){
     if(style==='bordered') return '<span class="acd-item__icon" aria-hidden="true"><i class="ph ph-plus acd-item__off"></i><i class="ph ph-minus acd-item__on"></i></span>';
     return '<span class="'+(style==='underline'?'acd-item__icon':'acd-item__btn')+'" aria-hidden="true"><i class="ph ph-caret-down acd-item__off"></i><i class="ph ph-caret-up acd-item__on"></i></span>';
   }
   function render(){
-    var r=play.querySelector('input[name="acd-style"]:checked'), style=r?r.value:'bordered';
-    var open=opt('open'), desc=opt('desc'), slot=opt('slot');
+    var style=play.querySelector('[data-acd-style]').value||'bordered';
+    var open=play.querySelector('[data-acd-state]').value==='Expanded', slot=opt('slot');
+    var title=esc(play.querySelector('[data-acd-title]').value)||'&nbsp;', desc=esc(play.querySelector('[data-acd-desc]').value.trim());
     var body=(style==='bordered'?'<hr class="acd-item__rule">':'')+
-      (desc?'<p class="acd-item__desc">'+D+'</p>':'')+
+      (desc?'<p class="acd-item__desc">'+desc+'</p>':'')+
       (slot?(style==='prominent'?cards:'<div class="acd-item__slot"><p class="acd-item__slot-text">'+D+'</p></div>'):'');
     stage.innerHTML='<div class="acd-item acd-item--'+style+(open?' acd-open':'')+(style==='prominent'&&slot?' acd-item--fill':'')+'">'+
       '<button class="acd-item__head" type="button" id="acd-play-h" aria-expanded="'+open+'" aria-controls="acd-play-p">'+
-      '<span class="acd-item__title">'+T+'</span>'+icon(style)+'</button>'+
+      '<span class="acd-item__title">'+title+'</span>'+icon(style)+'</button>'+
       '<div class="acd-item__panel" id="acd-play-p" role="region" aria-labelledby="acd-play-h"><div class="acd-item__inner"><div class="acd-item__body">'+body+'</div></div></div></div>';
   }
   play.addEventListener('change',function(e){
-    if(e.target.getAttribute('data-acd-opt')==='open'){
-      var acc=stage.querySelector('.acd-item'); if(acc){setOpen(acc,e.target.checked); return;}
+    if(e.target.hasAttribute('data-acd-state')){
+      var acc=stage.querySelector('.acd-item'); if(acc){setOpen(acc,e.target.value==='Expanded'); return;}
     }
     render();
   });
+  play.addEventListener('input',function(e){ if(e.target.matches('[data-acd-title],[data-acd-desc]')) render(); });
   render();
 })();
 </script>

@@ -54,16 +54,19 @@
       <ul>
         <li><a href="docs-accordion.html">Accordion <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-avatar.html">Avatar <span class="docs-nav__new">New</span></a></li>
-        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
         <li><a href="docs-bottomsheet.html">Bottom sheet <span class="docs-nav__new">New</span></a></li>
-        <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-card.html">Card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-skeleton.html" aria-current="page">Skeleton <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-slider.html">Slider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
-        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-dropdown.html">Dropdown</a></li>
         <li><a href="docs-empty-states.html">Empty States</a></li>
-        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-filters.html">Filters</a></li>
         <li><a href="docs-header.html">Header</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
@@ -79,9 +82,7 @@
           </ul>
         </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
-        <li><a href="docs-skeleton.html" aria-current="page">Skeleton <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
-        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-swimlanes.html">Swimlanes</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
         <li><a href="docs-table.html">Tables</a></li>
@@ -156,7 +157,7 @@
             <div><h3>Built from</h3><p>① Base shapes (Shape = Text · Block · Circle) &rarr; ② Patterns: Text lines, List item, Table cell, Card, Plan card.</p></div>
             <div><h3>Not a skeleton</h3><p>Button actions: a spinner in the <a href="docs.html">button</a>. Long background tasks: a progress <a href="docs-banners.html">toast</a>. No data: an <a href="docs-empty-states.html">empty state</a>.</p></div>
           </div>
-          <div class="docs-demo"><div class="dw-play" id="skl-play"><div class="dw-play__opts" role="group" aria-label="Skeleton options"><label><input type="checkbox" data-skl-opt="loaded">Data loaded</label><label><input type="checkbox" data-skl-opt="shimmer" checked>Shimmer</label><label><input type="checkbox" data-skl-opt="label">Keep known labels</label><button type="button" class="skl-play__btn" data-skl-replay><i class="ph ph-arrow-clockwise" aria-hidden="true"></i>Simulate a load</button></div><div class="skl-play__stage skl-shimmer" data-state="loading" aria-busy="true"><span class="sr-only" aria-live="polite" data-skl-status>Loading …</span><div class="skl-card" aria-hidden="true"><span class="skl-s skl-card__title"></span><span class="skl-s skl-card__value"></span><span class="skl-s skl-card__caption"></span><span class="skl-s skl-card__chart"></span></div><div class="skl-card skl-card--label"><span class="skl-label">Offtake</span><span class="skl-s skl-card__value" aria-hidden="true"></span><span class="skl-s skl-card__caption" aria-hidden="true"></span><span class="skl-s skl-card__chart" aria-hidden="true"></span></div><div class="skl-metric"><span class="skl-label">Offtake</span><span class="skl-metric__value">₹57.4 Lacs</span><span class="skl-metric__delta">▲ +52.3% vs previous period</span><span class="skl-metric__chart" aria-hidden="true"></span></div></div></div><p class="docs-demo__caption">Try it: simulate a load &mdash; nothing shows for the first ~300ms, then the skeleton, then the real card in the same place. Turn on Keep known labels to keep the title as real text.</p></div>
+          <div class="docs-demo"><div class="dw-play dw-play--panel skl-play" id="skl-play"><div class="dw-play__opts" role="group" aria-label="Skeleton properties"><label>Component <select class="dw-play__sel" data-skl-comp aria-label="Component"><option value="shape">Skeleton</option><option value="lines">Skeleton / Text lines</option><option value="li">Skeleton / List item</option><option value="cell">Skeleton / Table cell</option><option value="card" selected>Skeleton / Card</option><option value="plan">Skeleton / Plan card</option></select></label><label hidden>Shape <select class="dw-play__sel" data-skl-shape aria-label="Shape"><option value="text" selected>Text</option><option value="block">Block</option><option value="circle">Circle</option></select></label><label hidden>Lines <select class="dw-play__sel" data-skl-lines aria-label="Lines"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option></select></label><label><input type="checkbox" data-skl-opt="shimmer" checked>Shimmer</label><label data-skl-cardonly><input type="checkbox" data-skl-opt="loaded">Data loaded</label><label data-skl-cardonly><input type="checkbox" data-skl-opt="label">Keep known labels</label><button type="button" class="skl-play__btn" data-skl-replay data-skl-cardonly><i class="ph ph-arrow-clockwise" aria-hidden="true"></i>Simulate a load</button></div><div class="dw-play__stage skl-play__stage skl-shimmer" data-comp="card" data-state="loading" aria-busy="true"><span class="sr-only" aria-live="polite" data-skl-status>Loading …</span><div class="skl-card" aria-hidden="true"><span class="skl-s skl-card__title"></span><span class="skl-s skl-card__value"></span><span class="skl-s skl-card__caption"></span><span class="skl-s skl-card__chart"></span></div><div class="skl-card skl-card--label"><span class="skl-label">Offtake</span><span class="skl-s skl-card__value" aria-hidden="true"></span><span class="skl-s skl-card__caption" aria-hidden="true"></span><span class="skl-s skl-card__chart" aria-hidden="true"></span></div><div class="skl-metric"><span class="skl-label">Offtake</span><span class="skl-metric__value">₹57.4 Lacs</span><span class="skl-metric__delta">▲ +52.3% vs previous period</span><span class="skl-metric__chart" aria-hidden="true"></span></div><div class="skl-play__alt" aria-hidden="true" data-skl-alt hidden></div></div><p class="skl-play__props" aria-live="polite">In Figma: <code data-skl-props>Skeleton / Card</code></p></div><p class="docs-demo__caption">Try it: simulate a load &mdash; nothing shows for the first ~300ms, then the skeleton, then the real card in the same place. Turn on Keep known labels to keep the title as real text. Pick another Component to see the base shapes and the other patterns.</p></div>
         </section>
         <section id="how-built">
           <h2>How skeletons are built</h2>
@@ -288,7 +289,7 @@
       var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
       [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
         var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
-        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var zf=(function(e){ /* Safari and older Chrome report boxes inside a CSS-zoomed element without the zoom: scale them back */if(window.__bxZL===undefined){var p=document.createElement('div'),q=document.createElement('div');p.style.cssText='zoom:2;position:absolute;visibility:hidden';q.style.width='10px';p.appendChild(q);document.body.appendChild(p);window.__bxZL=q.getBoundingClientRect().width<15;p.remove();}if(!window.__bxZL)return 1;var z=1;for(;e&&e.nodeType===1;e=e.parentElement){var v=parseFloat(getComputedStyle(e).zoom);if(v&&v!==1)z*=v;}return z;})(el), x=r.left*zf-c.left, y=r.top*zf-c.top, w=r.width*zf, h=r.height*zf, ax, ay, bx, by;
         var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
         svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
         if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
@@ -311,28 +312,73 @@
 </script>
 <script>
 (function(){
-  /* Skeleton playground: waiting (~300ms, nothing shown) → loading → loaded. */
+  /* Skeleton playground. Component / Shape / Lines are the Figma properties.
+     Skeleton / Card also runs the load flow:
+     waiting (~300ms, nothing shown) → loading → loaded. */
   var p=document.getElementById('skl-play'); if(!p) return;
   var st=p.querySelector('.skl-play__stage'), status=p.querySelector('[data-skl-status]'),
-      btn=p.querySelector('[data-skl-replay]'), box={}, timers=[];
+      btn=p.querySelector('[data-skl-replay]'), alt=p.querySelector('[data-skl-alt]'),
+      comp=p.querySelector('[data-skl-comp]'), shape=p.querySelector('[data-skl-shape]'),
+      lines=p.querySelector('[data-skl-lines]'), props=p.querySelector('[data-skl-props]'),
+      cardOnly=[].slice.call(p.querySelectorAll('[data-skl-cardonly]')), box={}, timers=[];
   [].slice.call(p.querySelectorAll('[data-skl-opt]')).forEach(function(i){box[i.getAttribute('data-skl-opt')]=i;});
+  var S='<span class="skl-s"></span>';
+  function rep(h,n){var o='';for(var i=0;i<n;i++)o+=h;return o;}
+  var NAMES={shape:'Skeleton',lines:'Skeleton / Text lines',li:'Skeleton / List item',
+             cell:'Skeleton / Table cell',card:'Skeleton / Card',plan:'Skeleton / Plan card'};
+  var SHAPES={text:'Text',block:'Block',circle:'Circle'};
+  function altHTML(c){
+    if(c==='shape') return '<div class="skl-tile"><span class="skl-s skl-s--'+(SHAPES[shape.value]?shape.value:'text')+'"></span></div>';
+    if(c==='lines') return '<div class="skl-tile"><div class="skl-lines">'+rep(S,Math.min(3,Math.max(1,+lines.value||1)))+'</div></div>';
+    if(c==='li') return '<div class="skl-tile"><div class="skl-li">'+S+'<span class="skl-li__lines">'+S+S+'</span></div></div>';
+    if(c==='cell') return '<div class="skl-tile"><div class="skl-cell">'+S+S+'</div></div>';
+    if(c==='plan') return '<div class="skl-plan"><div class="skl-plan__group"><span class="skl-s skl-plan__name"></span><span class="skl-s skl-plan__price"></span><span class="skl-s skl-plan__note"></span></div><div class="skl-plan__group skl-plan__group--feats">'+rep('<div class="skl-plan__feat">'+S+S+'</div>',4)+'</div><span class="skl-s skl-plan__btn"></span></div>';
+    return '';
+  }
   function setState(s){
     st.setAttribute('data-state',s);
     st.setAttribute('aria-busy', s==='loaded'?'false':'true');
     status.textContent = s==='loaded' ? 'Loaded' : 'Loading …';
   }
   function clear(){timers.forEach(clearTimeout); timers=[]; btn.disabled=false;}
+  function readout(){
+    var c=comp.value, t=NAMES[c]||NAMES.card;
+    if(c==='shape') t+=' · Shape='+(SHAPES[shape.value]||'Text');
+    else if(c==='lines') t+=' · Lines='+lines.value;
+    else if(c==='card'){
+      if(st.getAttribute('data-state')==='loaded') t='Loaded metric card (replaces Skeleton / Card)';
+      else if(st.getAttribute('data-state')==='waiting') t='Nothing yet (first ~300ms)';
+      else if(box.label.checked) t+=' · title kept as real text';
+    }
+    props.textContent=t;
+  }
   function sync(){
+    var c=NAMES[comp.value]?comp.value:'card', isCard=c==='card';
+    st.setAttribute('data-comp',c);
     st.classList.toggle('skl-shimmer', box.shimmer.checked);
     st.classList.toggle('is-label', box.label.checked);
+    shape.closest('label').hidden = c!=='shape';
+    lines.closest('label').hidden = c!=='lines';
+    cardOnly.forEach(function(e){e.hidden=!isCard;});
+    alt.innerHTML = isCard ? '' : altHTML(c);
+    alt.hidden = isCard;
+    readout();
   }
-  box.loaded.addEventListener('change',function(){clear(); setState(box.loaded.checked?'loaded':'loading');});
+  comp.addEventListener('change',function(){
+    clear();
+    if(comp.value==='card') setState(box.loaded.checked?'loaded':'loading');
+    else setState('loading');
+    sync();
+  });
+  shape.addEventListener('change',sync);
+  lines.addEventListener('change',sync);
+  box.loaded.addEventListener('change',function(){clear(); setState(box.loaded.checked?'loaded':'loading'); readout();});
   box.shimmer.addEventListener('change',sync);
   box.label.addEventListener('change',sync);
   btn.addEventListener('click',function(){
-    clear(); btn.disabled=true; box.loaded.checked=false; setState('waiting');
-    timers.push(setTimeout(function(){setState('loading');},300));
-    timers.push(setTimeout(function(){setState('loaded'); box.loaded.checked=true; btn.disabled=false;},2100));
+    clear(); btn.disabled=true; box.loaded.checked=false; setState('waiting'); readout();
+    timers.push(setTimeout(function(){setState('loading'); readout();},300));
+    timers.push(setTimeout(function(){setState('loaded'); box.loaded.checked=true; btn.disabled=false; readout();},2100));
   });
   sync();
 })();

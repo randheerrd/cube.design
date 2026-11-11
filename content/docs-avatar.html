@@ -54,16 +54,19 @@
       <ul>
         <li><a href="docs-accordion.html">Accordion <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-avatar.html" aria-current="page">Avatar <span class="docs-nav__new">New</span></a></li>
-        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
         <li><a href="docs-bottomsheet.html">Bottom sheet <span class="docs-nav__new">New</span></a></li>
-        <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-card.html">Card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-slider.html">Slider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
-        <li><a href="docs-divider.html">Divider <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-dropdown.html">Dropdown</a></li>
         <li><a href="docs-empty-states.html">Empty States</a></li>
-        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-filters.html">Filters</a></li>
         <li><a href="docs-header.html">Header</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
@@ -79,9 +82,7 @@
           </ul>
         </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
-        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
-        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-swimlanes.html">Swimlanes</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
         <li><a href="docs-table.html">Tables</a></li>
@@ -156,7 +157,7 @@
             <div><h3>Shape</h3><p><strong>Circle</strong> (Roundness = Yes) for people. <strong>Rounded square</strong> (Roundness = No) for brands, platforms and workspaces.</p></div>
             <div><h3>Content</h3><p>The <strong>image</strong> first; if there isn’t one, <strong>initials</strong> from the name, then the <strong>Placeholder</strong>.</p></div>
           </div>
-          <div class="docs-demo"><div class="dw-play av-play" id="av-play"><div class="av-play__opts"><div class="dw-play__opts" role="radiogroup" aria-label="Component"><span class="av-play__k">Component</span><label><input type="radio" name="av-comp" value="single" checked>Avatar/single</label><label><input type="radio" name="av-comp" value="group">Avatar/group</label></div><div class="dw-play__opts" role="radiogroup" aria-label="Size"><span class="av-play__k">Size</span><label><input type="radio" name="av-size" value="36" checked>36px</label><label><input type="radio" name="av-size" value="32">32px</label><label><input type="radio" name="av-size" value="28">28px</label><label><input type="radio" name="av-size" value="24">24px</label><label><input type="radio" name="av-size" value="20">20px</label><label><input type="radio" name="av-size" value="16">16px</label><label><input type="radio" name="av-size" value="12">12px</label></div><div class="dw-play__opts" role="radiogroup" aria-label="Roundness"><span class="av-play__k">Roundness</span><label><input type="radio" name="av-round" value="No" checked>No (square)</label><label><input type="radio" name="av-round" value="Yes">Yes (circle)</label></div><div class="dw-play__opts" role="radiogroup" aria-label="Content"><span class="av-play__k">Content</span><label><input type="radio" name="av-content" value="image" checked>image</label><label><input type="radio" name="av-content" value="initials">initials</label><label><input type="radio" name="av-content" value="ph">Placeholder</label></div></div><div class="av-play__stage av-cq"><div class="av-play__pair"><figure class="av-tile"><div class="av-zoom av-zoom--2" data-av-out aria-hidden="true"><span class="av" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="36" height="36"></span></div><figcaption>Enlarged</figcaption></figure><figure class="av-tile"><div data-av-out aria-hidden="true"><span class="av" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="36" height="36"></span></div><figcaption>Real size</figcaption></figure></div></div><p class="av-play__props" aria-live="polite">In Figma: <code data-av-props>Avatar/single · Size=36px · Roundness=No · _Avatar-base: image</code></p></div></div>
+          <div class="docs-demo"><div class="dw-play dw-play--panel av-play" id="av-play"><div class="dw-play__opts" role="group" aria-label="Avatar properties"><label>Component <select class="dw-play__sel av-play__sel" name="av-comp" aria-label="Component"><option value="single" selected>Avatar/single</option><option value="group">Avatar/group</option></select></label><label>Size <select class="dw-play__sel av-play__sel" name="av-size" aria-label="Size"><option value="36" selected>36px</option><option value="32">32px</option><option value="28">28px</option><option value="24">24px</option><option value="20">20px</option><option value="16">16px</option><option value="12">12px</option></select></label><label>Roundness <select class="dw-play__sel av-play__sel" name="av-round" aria-label="Roundness"><option value="No" selected>No</option><option value="Yes">Yes</option></select></label><span class="dw-play__grp">_Avatar-base</span><label>Property 1 <select class="dw-play__sel av-play__sel" name="av-content" aria-label="Property 1"><option value="image" selected>image</option><option value="initials">initials</option><option value="ph">Placeholder</option></select></label></div><div class="dw-play__stage av-play__stage av-cq"><div class="av-play__pair"><figure class="av-tile"><div class="av-zoom av-zoom--2" data-av-out aria-hidden="true"><span class="av" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="36" height="36"></span></div><figcaption>Enlarged</figcaption></figure><figure class="av-tile"><div data-av-out aria-hidden="true"><span class="av" aria-hidden="true"><img class="av__img" src="assets/img/avatar/flipkart-minutes.png" alt="" width="36" height="36"></span></div><figcaption>Real size</figcaption></figure></div></div><p class="av-play__props" aria-live="polite">In Figma: <code data-av-props>Avatar/single · Size=36px · Roundness=No · _Avatar-base: image</code></p></div></div>
         </section>
         <section id="anatomy">
           <h2>Anatomy</h2>
@@ -297,7 +298,7 @@
       var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
       [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
         var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
-        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var zf=(function(e){ /* Safari and older Chrome report boxes inside a CSS-zoomed element without the zoom: scale them back */if(window.__bxZL===undefined){var p=document.createElement('div'),q=document.createElement('div');p.style.cssText='zoom:2;position:absolute;visibility:hidden';q.style.width='10px';p.appendChild(q);document.body.appendChild(p);window.__bxZL=q.getBoundingClientRect().width<15;p.remove();}if(!window.__bxZL)return 1;var z=1;for(;e&&e.nodeType===1;e=e.parentElement){var v=parseFloat(getComputedStyle(e).zoom);if(v&&v!==1)z*=v;}return z;})(el), x=r.left*zf-c.left, y=r.top*zf-c.top, w=r.width*zf, h=r.height*zf, ax, ay, bx, by;
         var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
         svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
         if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
@@ -324,7 +325,7 @@
   var root=document.getElementById('av-play'); if(!root) return;
   var outs=root.querySelectorAll('[data-av-out]'), props=root.querySelector('[data-av-props]');
   var IMG='assets/img/avatar/flipkart-minutes.png', IC='assets/img/avatar/building.svg';
-  function val(n){var r=root.querySelector('input[name="'+n+'"]:checked'); return r?r.value:'';}
+  function val(n){var r=root.querySelector('[name="'+n+'"]'); return r?r.value:'';}
   function one(size,round,c){
     var s=document.createElement('span');
     s.className='av'+(size!=='36'?' av--'+size:'')+(round?' av--round':'')+(c==='initials'?' av--initials':c==='ph'?' av--ph':'');
