@@ -908,7 +908,7 @@ body[class^="page-docs"],
   padding:var(--spacing-20) var(--spacing-12); background:var(--docs-nav-bg); border-bottom:1px solid var(--hairline);
 }
 .bx-opt__stage.docs-stage--dark{border-radius:0; background:#101214; border-bottom-color:#101214}
-.bx-opt__body{display:flex; flex-direction:column; gap:var(--spacing-8); padding:var(--spacing-14) var(--spacing-14) var(--spacing-16); flex:1}
+.bx-opt__body{display:flex; flex-direction:column; gap:var(--spacing-8); padding:var(--spacing-14) var(--spacing-14) var(--spacing-16); flex:none}
 .bx-opt__body h3,.docs-content .bx-opt__body h3{margin:0; font-size:15px; font-weight:600; color:var(--ink)}
 .bx-opt__body h3 small{margin-left:var(--spacing-6); font-size:11px; font-weight:500; color:var(--docs-link); vertical-align:1px}
 .docs-content .bx-opt__body p{margin:0; font-size:13px; line-height:1.5; color:var(--ink-2)}
@@ -1396,7 +1396,14 @@ body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="pag
    ============================================================ */
 .docs-content--inp .bx-opt{display:flex; flex-direction:column}
 .docs-content--inp .bx-opt__stage{display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:var(--spacing-8); min-height:72px}
-.docs-content--inp .bx-opt__body{flex:1}
+/* Cards in a row stretch to the tallest: the preview takes the extra height, so the caption bands stay one size */
+.bx-opt > .bx-opt__stage{flex:1 1 auto}
+/* Where supported, the cards in a row share two grid tracks (preview, caption), so every caption band
+   in the row is exactly as tall as the tallest one, whatever its line count */
+@supports (grid-template-rows:subgrid){
+  .bx-options > .bx-opt:has(> .bx-opt__stage + .bx-opt__body:last-child){display:grid; grid-row:span 2; grid-template-rows:subgrid; row-gap:0}
+}
+.docs-content--inp .bx-opt__body{flex:none}
 .docs-content--inp .bx-meta{display:flex; flex-wrap:wrap; gap:var(--spacing-4)}
 .docs-content--inp .bx-chip{display:inline-flex; align-items:center; gap:var(--spacing-6); max-width:100%; padding:var(--spacing-2) var(--spacing-6); border-radius:4px; font-family:inherit; font-size:11px; line-height:16px; font-weight:500; letter-spacing:.1px; background:var(--f-panel); border:0; color:var(--f-strong); white-space:normal; overflow-wrap:anywhere}
 .docs-content--inp .bx-chip b{font-size:10px; line-height:16px; font-weight:600; letter-spacing:.2px; text-transform:uppercase}
@@ -4273,12 +4280,23 @@ div.acd-item__head{cursor:default}
 /* image: photo or logo, cropped to fill */
 .av__img{display:block; width:100%; height:100%; object-fit:cover}
 /* initials: Primary/600 letters on Primary/100. In Figma the letters are a
-   fixed-size outlined glyph (16.2 × 9.8, i.e. 14px caps) that does not
-   scale with the avatar — so it is clipped at 16 and 12, as here. */
+   fixed-size outlined glyph (16.2 × 9.8, i.e. 14px caps) that is clipped at
+   16 and 12; here the letters scale with the avatar so they always fit. */
 .av--initials{background:#eaf1ff; color:#025be5; font-size:14px; line-height:1; font-weight:600; letter-spacing:0; white-space:nowrap}
-/* Placeholder: Building icon (Regular, 20px, #515f69) on Steel Blue/100 */
+.av--initials.av--28{font-size:12px}
+.av--initials.av--24{font-size:10px}
+.av--initials.av--20{font-size:8px}
+.av--initials.av--16{font-size:7px; letter-spacing:-.1px}
+.av--initials.av--12{font-size:5px; letter-spacing:-.1px}
+/* Placeholder: Building icon (Regular, 20px, #515f69) on Steel Blue/100,
+   scaled down with the avatar below 32 so it isn't clipped either */
 .av--ph{background:#f1f6fd}
 .av__ic{display:block; flex:none; width:20px; height:20px}
+.av--28 > .av__ic{width:16px; height:16px}
+.av--24 > .av__ic{width:14px; height:14px}
+.av--20 > .av__ic{width:12px; height:12px}
+.av--16 > .av__ic{width:10px; height:10px}
+.av--12 > .av__ic{width:8px; height:8px}
 /* Not a component — the "empty grey square" from the Don'ts. */
 .av--empty{background:#e6eaf0}
 
@@ -5844,6 +5862,8 @@ button.rox-nb,button.rox-x,button.rox-tab,button.rox-btn{cursor:pointer}
   font-size:calc(12px * var(--k)); line-height:calc(16px * var(--k)); font-weight:400; letter-spacing:.1px;
 }
 .sld__h.sld__h--tip .sld__tip,.sld__h.sld__h--active .sld__tip,.sld__h.sld__h--drag .sld__tip{display:block}
+/* Show tooltip = false wins over Active / dragging (playground switches) */
+.sld__h.sld__h--notip .sld__tip{display:none}
 
 /* Live sliders: a larger hit area, grab cursor */
 .sld[data-live]{cursor:pointer}

@@ -412,16 +412,18 @@
   function handle(k,val,cls,disabled,label){
     return '<span class="sld__h sld__h--'+k+(cls?' '+cls:'')+'" role="slider" tabindex="'+(disabled?-1:0)+'" aria-label="'+label+'" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+val+'" aria-valuetext="'+val+'%"'+(disabled?' aria-disabled="true"':'')+'><span class="sld__tip">'+val+'%</span></span>';
   }
+  /* The Show tooltip switches decide: on shows the value, off hides it even in Active or while dragging. */
+  function tipCls(n){return opt(n).checked?'sld__h--tip':'sld__h--notip';}
   function build(){
     var type=tSel.value, state=sSel.value, w=wSel.value, v=mem[type], dis=state==='disabled',
         force=(state==='hover'||state==='active')?'sld__h--'+state:'';
     play.querySelectorAll('[data-sld-for]').forEach(function(l){l.hidden=l.getAttribute('data-sld-for')!==type;});
     var width=w==='fill'?'100%':w+'px', html;
     if(type==='single'){
-      html=handle('e',v.e,[force,opt('tip').checked?'sld__h--tip':''].join(' ').trim(),dis,'Discount');
+      html=handle('e',v.e,[force,tipCls('tip')].join(' ').trim(),dis,'Discount');
     }else{
-      html=handle('s',v.s,opt('tip-s').checked?'sld__h--tip':'',dis,'Discount — minimum')+
-           handle('e',v.e,[force,opt('tip-e').checked?'sld__h--tip':''].join(' ').trim(),dis,'Discount — maximum');
+      html=handle('s',v.s,tipCls('tip-s'),dis,'Discount — minimum')+
+           handle('e',v.e,[force,tipCls('tip-e')].join(' ').trim(),dis,'Discount — maximum');
     }
     box.innerHTML='<div class="sld-field sld-field--play"><div class="sld-field__head"><span class="sld-field__lbl">Discount</span><span class="sld-field__val" data-sld-out></span></div>'+
       '<div class="sld'+(dis?' sld--disabled':'')+'" data-type="'+type+'" data-live data-min="0" data-max="100" data-step="10" data-fmt="%" style="width:'+width+'"><span class="sld__rail"></span><span class="sld__fill"></span>'+html+'</div></div>';
@@ -437,6 +439,8 @@
     else{ t.push('Start='+v.s,'End='+v.e); if(opt('tip-s').checked) t.push('Show start tooltip=true'); if(opt('tip-e').checked) t.push('Show end tooltip=true'); }
     props.textContent=t.join(', ');
   }
+  /* Picking a State resets the tooltips to that variant's Figma default: on in Active, off otherwise. */
+  sSel.addEventListener('change',function(){var on=sSel.value==='active';opt('tip').checked=on;opt('tip-e').checked=on;opt('tip-s').checked=on;});
   [tSel,sSel,wSel,opt('tip'),opt('tip-s'),opt('tip-e')].forEach(function(c){c.addEventListener('change',build);});
   build();
 })();
