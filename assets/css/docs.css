@@ -6228,3 +6228,86 @@ body[class^="page-docs-bar-chart"] .docs-content .bx-opt__stage{padding:var(--sp
   .dw-play--panel.bc-play > :not(.dw-play__opts){grid-column:1}
   .dw-play--panel.bc-play > .dw-play__opts{grid-column:1; grid-row:auto; border-right:0; border-bottom:1px solid var(--f-line,var(--hairline))}
 }
+
+/* ===== Pie chart docs ===== */
+/* ============================================================
+   Pie chart — replica of the Cube Core “Pie chart” donut (Figma
+   8001:27851) and its private _Donut / _Pie legend item. Product
+   colours, fixed in both site themes. Colour: Primary/600 #025be5 ·
+   Purple/600 #9810fa · Green/700 #007a55 · Orange/500 #ff6900 ·
+   Pink/600 #e60076 · Green/600 #009966. Monochrome: Steel Blue
+   800 #445f8d · 600 #728cb6 · 500 #8fa8cc · 400 #bccae2 · 300 #d6e1f2,
+   last segment 200 #e7eef9. Ring: value on a Secondary-text/100 track.
+   ============================================================ */
+.pc,.pc-card{font-family:"Cube Rupee",'DM Sans',var(--font),sans-serif; font-variation-settings:"opsz" 14; color:#101214; text-align:left}
+.pc *{box-sizing:border-box}
+.pc{--d:160px; display:inline-flex; align-items:center; gap:24px; max-width:100%}
+.pc--sm{--d:96px} .pc--md{--d:160px} .pc--lg{--d:240px}
+.pc--bottom{flex-direction:column; gap:16px; width:320px}
+.pc-chart{position:relative; flex:none; width:var(--d); height:var(--d)}
+.pc-donut{display:block; width:100%; height:100%; overflow:visible}
+.pc-donut circle,.pc-donut path{fill:none}
+/* centre: Value + Delta + Sub-text, 2 apart */
+.pc-centre{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; pointer-events:none; white-space:nowrap}
+.pc-val{font-size:18px; line-height:24px; font-weight:600; letter-spacing:0; color:#101214}
+.pc--sm .pc-val{font-size:12px; line-height:16px; letter-spacing:.1px}
+.pc--lg .pc-val{font-size:24px; line-height:32px}
+.pc-delta{display:inline-flex; align-items:center; gap:2px; font-size:10px; line-height:12px; font-weight:600; letter-spacing:.1px; color:#009966}
+.pc-delta img{display:block; width:10px; height:10px; transform:rotate(180deg)}
+.pc-sub{font-size:11px; line-height:14px; font-weight:500; letter-spacing:.2px; color:#515f69}
+/* legend: _Pie legend item rows */
+.pc-legend{display:flex; flex-direction:column; align-items:flex-start; gap:8px; min-width:0}
+.pc--bottom .pc-legend{flex-direction:row; flex-wrap:wrap; justify-content:center; gap:8px 16px; width:100%}
+.pc-item{display:inline-flex; align-items:center; gap:6px; font-size:12px; line-height:16px; letter-spacing:.1px; white-space:nowrap}
+.pc-sw{flex:none; display:block; width:10px; height:10px; border-radius:3px; background:var(--c)}
+.pc-item b{font-weight:600; color:#101214}
+.pc-item span{font-weight:500; color:#515f69}
+.pc-item .ph{font-size:12px; line-height:12px; color:#515f69}
+/* hover (live charts) */
+.pc-live .pc-donut [data-tip],.pc-live .pc-item{transition:opacity .12s ease}
+.pc-live.pc-dim .pc-donut [data-tip]:not(.is-hot),.pc-live.pc-dim .pc-item:not(.is-hot){opacity:.35}
+.pc-live .pc-item,.pc-live .pc-donut [data-tip]{cursor:default}
+/* product surfaces: white in both site themes */
+body[class^="page-docs-pie-chart"] .docs-content .bx-opt__stage,
+body[class^="page-docs-pie-chart"] .docs-content .docs-dodont__stage,
+body[class^="page-docs-pie-chart"] .docs-content .bx-anatomy,
+.pc-play .pc-play__stage,.docs-demo.pc-demo{background-color:#ffffff !important; background-image:none !important}
+body[class^="page-docs-pie-chart"] .docs-content .bx-opt__stage{min-height:200px; padding:var(--spacing-24) var(--spacing-16)}
+.docs-dodont__stage:has(.pc){padding:var(--spacing-24) var(--spacing-20); min-height:240px}
+.bx-opt__stage > .pc,.docs-dodont__stage > .pc{align-self:center; margin:0 auto}
+.pc-row{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:32px; margin:0 auto}
+/* playground */
+.pc-play .pc-play__stage{display:flex; align-items:center; justify-content:center; min-width:0; min-height:380px; box-sizing:border-box; padding:var(--spacing-24)}
+.docs-content .pc-play__props{margin:0; padding:var(--spacing-12) var(--spacing-16); border-top:1px solid var(--f-line,var(--hairline));
+  font-family:'DM Sans',var(--font),sans-serif; font-size:12px; line-height:18px; color:var(--f-text,var(--ink-2)); text-align:center}
+.pc-play .dw-play__opts input[type="text"]{width:118px; box-sizing:border-box}
+/* anatomy */
+.docs-content--inp .bx-anatomy.pc-anatomy{padding:88px 72px 88px}
+.bx-anatomy.pc-anatomy .bx-anatomy__zoom{transform:none}
+/* layouts: chart inside a card */
+.bx-mock.pc-mock{padding:var(--spacing-16); border-color:#e7eef9; background:#f3f6fa}
+.pc-cards{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; width:100%}
+.pc-cards--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.pc-cards,.pc-cards--3{grid-template-columns:minmax(0,1fr)}}
+.pc-card{display:flex; flex-direction:column; gap:16px; box-sizing:border-box; min-width:0; padding:16px 20px 20px; border:1px solid #e3e6ea; border-radius:12px; background:#ffffff}
+.docs-content .pc-card p{margin:0}
+.docs-content .pc-card__title{font-size:14px; line-height:18px; font-weight:600; color:#101214}
+.docs-content .pc-card__sub{margin-top:2px; font-size:12px; line-height:16px; font-weight:400; color:#5f717b}
+.pc-card > .pc{align-self:center}
+/* specifications: references */
+.docs-demo.pc-demo{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:40px; padding:var(--spacing-24)}
+.pc-ref{display:flex; flex-direction:column; align-items:center; gap:var(--spacing-12); min-width:0}
+.pc-ref__lbl{font:500 11px/14px 'DM Sans',var(--font),sans-serif; letter-spacing:.2px; color:#515f69}
+.pc-swatches{display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin:0 auto}
+.pc-swatches figure{margin:0; display:flex; flex-direction:column; align-items:center; gap:6px}
+.pc-swatches figure > i{display:block; width:24px; height:24px; border-radius:6px; background:var(--c)}
+.pc-swatches figcaption{font:500 11px/14px 'DM Sans',var(--font),sans-serif; letter-spacing:.2px; color:#515f69; white-space:nowrap}
+/* anatomy helpers */
+.pc-ana-seg{position:absolute; left:72%; top:12%; width:16%; height:16%; pointer-events:none}
+.docs-content--inp .bx-anatomy.pc-anatomy{padding:96px 150px 96px}
+.docs-content--inp .bx-anatomy.pc-anatomy--item{padding:84px 72px}
+@media (max-width:720px){.docs-content--inp .bx-anatomy.pc-anatomy{padding:96px 120px}}
+.docs-demo:has(> #pc-play) + p{margin-top:var(--spacing-16)}
+.docs-dodont__stage > .pc-row,.bx-opt__stage > .pc-row{align-self:center}
+.docs-dodont__stage > .bc-h{align-self:center}
+.docs-content .bx-usage figure:has(.pc-mock){grid-template-columns:minmax(0,1fr); gap:var(--spacing-12); align-items:stretch}

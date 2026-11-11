@@ -93,6 +93,10 @@ PAGES = [
      "Bar chart guidelines — vertical columns, stacked and combo charts, horizontal bar lists, anatomy and do’s and don’ts."),
     ("docs-bar-chart-specifications", "Bar chart specs", "Bar chart specifications — Cube Design System",
      "Every dimension, colour token and property for Bar chart/Vertical, Bar chart/Horizontal, _Bar and _Bar segment."),
+    ("docs-pie-chart", "Pie chart", "Pie chart — Cube Design System",
+     "Pie chart guidelines — the donut, sizes, legend, Colour vs Monochrome, the centre label, anatomy and do’s and don’ts."),
+    ("docs-pie-chart-specifications", "Pie chart specs", "Pie chart specifications — Cube Design System",
+     "Every dimension, colour token and property for Pie chart, _Donut and _Pie legend item."),
     ("docs-trends", "Trends", "Trends — Cube Design System",
      "Trend guidelines — Trends-composition line chart, metric selection, time steps and the Metric-trends-group KPI row."),
     ("docs-trends-specifications", "Trends specs", "Trends specifications — Cube Design System",
@@ -244,7 +248,7 @@ HIDDEN = {"internal", "craft", "team", "docs", "docs-tooltips", "docs-tooltips-s
           "docs-selection", "docs-selection-specifications",
           "docs-segmented", "docs-segmented-specifications",
           "docs-checkbox", "docs-checkbox-specifications",
-          "docs-accordion", "docs-accordion-specifications", "docs-avatar", "docs-avatar-specifications", "docs-divider", "docs-divider-specifications", "docs-file-upload", "docs-file-upload-specifications", "docs-skeleton", "docs-skeleton-specifications", "docs-subscription-card", "docs-subscription-card-specifications", "docs-card", "docs-card-specifications", "docs-slider", "docs-slider-specifications", "docs-bar-chart", "docs-bar-chart-specifications"}
+          "docs-accordion", "docs-accordion-specifications", "docs-avatar", "docs-avatar-specifications", "docs-divider", "docs-divider-specifications", "docs-file-upload", "docs-file-upload-specifications", "docs-skeleton", "docs-skeleton-specifications", "docs-subscription-card", "docs-subscription-card-specifications", "docs-card", "docs-card-specifications", "docs-slider", "docs-slider-specifications", "docs-bar-chart", "docs-bar-chart-specifications", "docs-pie-chart", "docs-pie-chart-specifications"}
 
 # Guarded by INTERNAL_PASSWORD rather than SITE_PASSWORD.
 INTERNAL_PAGES = {"internal"}
@@ -282,7 +286,7 @@ DOCS = {"docs", "docs-tooltips", "docs-tooltips-specifications", "docs-buttons-s
           "docs-selection", "docs-selection-specifications",
           "docs-segmented", "docs-segmented-specifications",
           "docs-checkbox", "docs-checkbox-specifications",
-          "docs-accordion", "docs-accordion-specifications", "docs-avatar", "docs-avatar-specifications", "docs-divider", "docs-divider-specifications", "docs-file-upload", "docs-file-upload-specifications", "docs-skeleton", "docs-skeleton-specifications", "docs-subscription-card", "docs-subscription-card-specifications", "docs-card", "docs-card-specifications", "docs-slider", "docs-slider-specifications", "docs-bar-chart", "docs-bar-chart-specifications"}
+          "docs-accordion", "docs-accordion-specifications", "docs-avatar", "docs-avatar-specifications", "docs-divider", "docs-divider-specifications", "docs-file-upload", "docs-file-upload-specifications", "docs-skeleton", "docs-skeleton-specifications", "docs-subscription-card", "docs-subscription-card-specifications", "docs-card", "docs-card-specifications", "docs-slider", "docs-slider-specifications", "docs-bar-chart", "docs-bar-chart-specifications", "docs-pie-chart", "docs-pie-chart-specifications"}
 
 
 EDITION_HEAD = (
