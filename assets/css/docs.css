@@ -398,6 +398,11 @@ body[class^="page-docs"],
 }
 .docs-dodont__cap{margin:0; padding:var(--spacing-14) var(--spacing-16); font-size:13px; letter-spacing:0; line-height:1.5; color:var(--ink-2)}
 @media (max-width:680px){.docs-dodont{grid-template-columns:1fr}}
+/* Do / Don't pairs share three grid tracks (header, example, caption), so the
+   example areas and the caption bands line up across the pair */
+@supports (grid-template-rows:subgrid){
+  .docs-dodont > .docs-dodont__card:has(> .docs-dodont__head + .docs-dodont__stage + .docs-dodont__cap:last-child){display:grid; grid-row:span 3; grid-template-rows:subgrid; grid-template-columns:minmax(0,1fr); row-gap:0}
+}
 
 /* ---- anatomy ---- */
 .docs-anatomy{
@@ -776,7 +781,7 @@ body[class^="page-docs"],
 .fb-play__controls .fb-play__row{display:grid; grid-template-columns:1fr 1fr; gap:var(--spacing-12)}
 .fb-play__view{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:var(--spacing-20); padding:var(--spacing-40) var(--spacing-24); min-height:260px}
 .fb-play__view.is-dark{background:#101114}
-.fb-play__name{font-family:var(--font-mono,monospace); font-size:12px; color:var(--ink-2); text-align:center; max-width:52ch}
+.fb-play__name{font-family:'DM Sans',var(--font),sans-serif; font-size:12px; color:var(--ink-2); text-align:center; max-width:52ch}
 .fb-play__view.is-dark .fb-play__name{color:#9aa0aa}
 .fb-filters{display:flex; flex-wrap:wrap; gap:var(--spacing-8); margin:var(--spacing-16) 0}
 .fb-filters button{height:32px; padding:0 var(--spacing-14); border:1px solid var(--hairline); border-radius:999px; background:transparent; color:var(--ink); font:inherit; font-size:13px; cursor:pointer}
@@ -1401,7 +1406,7 @@ body:is([class^="page-docs-inputs"],[class^="page-docs-typography"],[class^="pag
 /* Where supported, the cards in a row share two grid tracks (preview, caption), so every caption band
    in the row is exactly as tall as the tallest one, whatever its line count */
 @supports (grid-template-rows:subgrid){
-  .bx-options > .bx-opt:has(> .bx-opt__stage + .bx-opt__body:last-child){display:grid; grid-row:span 2; grid-template-rows:subgrid; row-gap:0}
+  .bx-options > .bx-opt:has(> .bx-opt__stage + .bx-opt__body:last-child){display:grid; grid-row:span 2; grid-template-rows:subgrid; grid-template-columns:minmax(0,1fr); row-gap:0}
 }
 .docs-content--inp .bx-opt__body{flex:none}
 .docs-content--inp .bx-meta{display:flex; flex-wrap:wrap; gap:var(--spacing-4)}
@@ -4238,7 +4243,7 @@ div.acd-item__head{cursor:default}
 .acd-ref__row{display:grid; grid-template-columns:110px minmax(0,520px); gap:var(--spacing-16,16px); align-items:start}
 .acd-ref__lab{display:flex; flex-direction:column; gap:2px; padding-top:var(--spacing-12,12px)}
 .acd-ref__lab b{font-size:13px; font-weight:600; color:#101214}
-.acd-ref__lab small{font:500 11px/1.4 ui-monospace,"SF Mono",Menlo,monospace; color:#5f6b76}
+.acd-ref__lab small{font:500 11px/1.4 'DM Sans',var(--font),sans-serif; color:#5f6b76}
 .acd-ref .acd-item{width:100%}
 @media (max-width:640px){.acd-ref__row{grid-template-columns:minmax(0,1fr); gap:var(--spacing-6,6px)}.acd-ref__lab{flex-direction:row; gap:8px; padding-top:0}}
 .docs-demo:has(> .acd-ref),.docs-demo:has(> .acd-wide),.docs-demo:has(> .acd-stack){justify-content:center}
@@ -4383,7 +4388,7 @@ div.acd-item__head{cursor:default}
   border:1px solid var(--f-line,var(--hairline)); border-radius:8px; background:#fff; overflow:hidden;
 }
 .docs-content .av-play__props{margin:0; font-size:12px; line-height:16px; color:var(--f-text,var(--ink-2))}
-.av-play__props code{font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; font-weight:400; color:var(--f-ink,var(--ink)); white-space:normal; word-break:break-word}
+.av-play__props code{font-family:'DM Sans',var(--font),sans-serif; font-size:12px; font-weight:400; color:var(--f-ink,var(--ink)); white-space:normal; word-break:break-word}
 @media (max-width:560px){.av-play__k{min-width:0; flex:0 0 100%}}
 
 /* Usage figures: the in-context card sits straight on the figure panel */
@@ -4484,7 +4489,7 @@ div.acd-item__head{cursor:default}
   border-radius:8px; background:#fff; border:1px solid #e8eaee}
 .dvd-play__stage[data-type="horizontal"] .dvd-inline,.dvd-play__stage[data-type="vertical"] .dvd-list{display:none}
 .dvd-play__out{display:flex; flex-direction:column; gap:4px; margin:0; font-size:13px; line-height:18px; color:var(--f-text,var(--ink-2))}
-.docs-content .dvd-play__out code{font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; color:var(--f-ink,var(--ink)); word-break:break-word}
+.docs-content .dvd-play__out code{font-family:'DM Sans',var(--font),sans-serif; font-size:12px; color:var(--f-ink,var(--ink)); word-break:break-word}
 .dvd-play__out .msg-sw{margin-left:0}
 
 /* ---- anatomy: real size, no zoom ---- */
@@ -4497,7 +4502,7 @@ div.acd-item__head{cursor:default}
 .dvd-matrix{width:100%; padding:28px 24px 32px; border-radius:8px; background:#fff}
 .dvd-matrix__grid{display:grid; grid-template-columns:auto repeat(3,minmax(0,1fr)); align-items:center; gap:28px 40px}
 .dvd-matrix__h{font-size:12px; font-weight:600; color:#1a1a1f}
-.dvd-matrix__h small{display:block; margin-top:2px; font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:11px; font-weight:400; color:#666b75}
+.dvd-matrix__h small{display:block; margin-top:2px; font-family:'DM Sans',var(--font),sans-serif; font-size:11px; font-weight:400; color:#666b75}
 .dvd-matrix__r{font-size:12px; font-weight:600; color:#1a1a1f}
 .dvd-matrix__cap{margin-top:28px; font-size:12px; color:#666b75}
 .dvd-matrix__cap:first-child{margin-top:0}
@@ -4588,7 +4593,7 @@ button.fup-x:focus-visible{outline:2px solid #025be5; outline-offset:1px}
 /* ---- File upload item: gap 9 · icon box 32 · name + status · remove 20 ---- */
 .fup-item{display:flex; align-items:center; gap:9px; width:100%; min-width:0}
 .fup-item__ic{display:flex; align-items:center; flex:none; padding:6px; border-radius:6px; background:#f1f6fd; color:#23292e; font-size:20px; line-height:1}
-.fup-item__body{display:flex; flex-direction:column; gap:4px; flex:1 1 0; min-width:0}
+.fup-item__body{display:flex; flex-direction:column; gap:2px; flex:1 1 0; min-width:0}
 /* Body/B3/Semibold — text/text-primary. Long names truncate in the middle: the stem
    ellipsises, the end of the name and the extension stay visible. */
 .fup-item__name{display:flex; min-width:0; font-size:12px; line-height:16px; font-weight:600; letter-spacing:.1px; color:#101214}
@@ -4817,7 +4822,7 @@ button.fup-x:focus-visible{outline:2px solid #025be5; outline-offset:1px}
 .skl-ref__name{font-family:'DM Sans',var(--font),sans-serif; font-size:14px; line-height:normal; font-weight:500; color:#1a1a1f}
 .skl-ref__box{display:flex; align-items:center; justify-content:center; width:100%; min-height:130px; padding:20px; box-sizing:border-box; border-radius:8px; background:#fff}
 .skl-ref__box--page{background:#f3f6fa} /* Neutrals/Bg/Screen-bg-1 */
-.skl-ref__cap{font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; line-height:normal; color:#666b75; text-align:center}
+.skl-ref__cap{font-family:'DM Sans',var(--font),sans-serif; font-size:12px; line-height:normal; color:#666b75; text-align:center}
 
 /* Playground */
 /* data-state: waiting (first ~300ms, nothing shown) → loading → loaded.
@@ -5022,7 +5027,7 @@ button.sbc-chip:focus-visible{outline:2px solid #025be5; outline-offset:2px}
 
 /* Specifications: real-size references with a caption under each */
 .sbc-ref{display:flex; flex-direction:column; align-items:center; gap:var(--spacing-12)}
-.sbc-ref__cap{font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; color:var(--ink-2)}
+.sbc-ref__cap{font-family:'DM Sans',var(--font),sans-serif; font-size:12px; color:var(--ink-2)}
 .docs-demo:has(.sbc-ref){align-items:flex-start; justify-content:center; gap:var(--spacing-32)}
 
 /* ===== Bottom sheet docs (rewrite) ===== */
@@ -5124,7 +5129,7 @@ button.bsh-ib,button.bsh-x,button.bsh-tab{cursor:pointer}
 .bsh-ph--short{flex:none; align-self:flex-start; width:280px; height:72px}
 
 /* ---- screen: the sheet in context (1440 × 1024 frame, Figma 7538:236066) ---- */
-.bsh-screen{position:relative; box-sizing:border-box; width:100%; aspect-ratio:1440/1024; overflow:hidden; background:#f3f6fa}
+.bsh-screen{position:relative; box-sizing:border-box; width:100%; aspect-ratio:1440/1024; overflow:hidden; background:#f3f6fa; border:1px solid #dbdfe4; border-radius:8px}
 .bsh-screen__nav{position:absolute; left:0; top:0; bottom:0; width:17.7778%; background:#0f111b}
 .bsh-screen__page{position:absolute; left:18.8889%; top:3.125%; width:79.8611%; height:93.75%; overflow:hidden; border-radius:8px; background:#fff}
 .bsh-screen__t{position:absolute; left:24px; top:24px; font-size:24px; line-height:normal; font-weight:500; color:#8a8f99; white-space:nowrap}
@@ -5438,7 +5443,7 @@ body[class^="page-docs-bottomsheet"] .docs-content :is(.bx-opt__stage,.docs-dodo
 }
 .crd-play__sel:disabled{opacity:.55; cursor:not-allowed}
 .crd-play__stage{display:flex; justify-content:center; align-items:center; min-height:300px; padding:var(--spacing-8) 0}
-.crd-play__props{margin:0; font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; line-height:18px; color:var(--f-text,var(--ink-2)); text-align:center}
+.crd-play__props{margin:0; font-family:'DM Sans',var(--font),sans-serif; font-size:12px; line-height:18px; color:var(--f-text,var(--ink-2)); text-align:center}
 
 /* Anatomy: draw the card at 1.5× with real layout (zoom) so the redline
    script measures true boxes */
@@ -5452,7 +5457,7 @@ body[class^="page-docs-bottomsheet"] .docs-content :is(.bx-opt__stage,.docs-dodo
 
 /* Specifications: real-size references with a caption under each */
 .crd-ref{display:flex; flex-direction:column; align-items:center; gap:var(--spacing-12)}
-.crd-ref__cap{font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; color:var(--f-text,var(--ink-2))}
+.crd-ref__cap{font-family:'DM Sans',var(--font),sans-serif; font-size:12px; color:var(--f-text,var(--ink-2))}
 .crd-ref__lbl{font-size:12px; line-height:16px; font-weight:600; color:var(--f-ink,var(--ink))}
 .docs-demo:has(.crd-ref){align-items:flex-start; justify-content:center; gap:var(--spacing-32)}
 
@@ -5596,7 +5601,7 @@ button.rox-nb,button.rox-x,button.rox-tab,button.rox-btn{cursor:pointer}
 .rox :is(button,select:not(.rox-sw select)):focus-visible,.rox-open:focus-visible{outline:2px solid #025be5; outline-offset:2px}
 
 /* ---- screen: the overlay in context (page + scrim + panel docked right) ---- */
-.rox-screen{position:relative; box-sizing:border-box; width:100%; aspect-ratio:1440/900; overflow:hidden; background:#f3f6fa}
+.rox-screen{position:relative; box-sizing:border-box; width:100%; aspect-ratio:1440/900; overflow:hidden; background:#f3f6fa; border:1px solid #dbdfe4; border-radius:8px}
 .rox-screen__nav{position:absolute; left:0; top:0; bottom:0; width:17.7778%; background:#0f111b}
 .rox-screen__page{position:absolute; left:18.8889%; top:3.125%; right:1.25%; bottom:3.125%; overflow:hidden; border-radius:8px; background:#fff}
 .rox-screen__t{position:absolute; left:24px; top:24px; font-size:24px; line-height:normal; font-weight:500; color:#8a8f99; white-space:nowrap}
@@ -5646,7 +5651,7 @@ button.rox-nb,button.rox-x,button.rox-tab,button.rox-btn{cursor:pointer}
 .bx-usage figure.rox-fig{display:flex; flex-direction:column; align-items:stretch; gap:16px}
 .rox-stack{display:flex; flex-direction:column; gap:12px; width:100%}
 .rox-stack__lbl{display:block; margin:0 0 6px; font-size:12px; line-height:16px; font-weight:500; color:var(--f-text,var(--ink-2))}
-.rox-dim{display:block; margin-top:10px; text-align:center; font:500 11px/14px ui-monospace,"SF Mono",Menlo,monospace; color:var(--f-muted,var(--ink-2))}
+.rox-dim{display:block; margin-top:10px; text-align:center; font:500 11px/14px 'DM Sans',var(--font),sans-serif; color:var(--f-muted,var(--ink-2))}
 .rox-refs{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; width:100%; align-items:end}
 .rox-refs--two{grid-template-columns:repeat(2,minmax(0,1fr)); max-width:560px; margin:0 auto}
 .rox-refs figure{margin:0; display:flex; flex-direction:column; gap:8px; min-width:0}
@@ -5740,6 +5745,10 @@ button.rox-nb,button.rox-x,button.rox-tab,button.rox-btn{cursor:pointer}
 .rox-dd img{width:14px; height:14px}
 .rox-tc__main{display:flex; flex-direction:column; gap:12px}
 .rox-rchips,.rox-cchips{display:flex; flex-wrap:wrap; align-items:center; gap:8px}
+.rox-rchips--1l{flex-wrap:nowrap; overflow:hidden}   /* single-metric Trend-metric-selector: one row, clipped like the Figma frame */
+/* DM Sans renders ~20px wider than Figma here: tighten gap 8→6 and chip padding 8→7 so all seven chips fit, as in Figma */
+.rox-rchips--1l{gap:6px}
+.rox-rchips--1l .rox-chip{padding:0 7px}
 .rox-chip{box-sizing:border-box; display:inline-flex; align-items:center; gap:4px; height:28px; padding:0 8px; border:1px solid #dbdfe4; border-radius:6px; background:#fff; font-size:12px; line-height:16px; font-weight:500; letter-spacing:.1px; color:#586473; white-space:nowrap}
 .rox-chip img{width:14px; height:14px}
 .rox-chip__ck{box-sizing:border-box; width:14px; height:14px; padding:1px}
@@ -5889,7 +5898,7 @@ button.rox-nb,button.rox-x,button.rox-tab,button.rox-btn{cursor:pointer}
 .sld-play .sld-field--play{max-width:none; width:auto; padding-top:44px}
 .sld-play .sld-field--play:has(.sld[style*="100%"]){width:100%}
 .sld-play__props{margin:0; padding:var(--spacing-12) var(--spacing-16); border-top:1px solid var(--f-line,var(--hairline));
-  font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; line-height:18px; color:var(--f-text,var(--ink-2)); text-align:center}
+  font-family:'DM Sans',var(--font),sans-serif; font-size:12px; line-height:18px; color:var(--f-text,var(--ink-2)); text-align:center}
 
 /* ---------- Anatomy (3×) ---------- */
 .docs-content--inp .bx-anatomy.sld-anatomy{padding:170px 48px 104px}
@@ -5933,7 +5942,7 @@ button.rox-nb,button.rox-x,button.rox-tab,button.rox-btn{cursor:pointer}
 .docs-demo.sld-refs--4{grid-template-columns:repeat(4,minmax(0,1fr))}
 .sld-ref{display:flex; flex-direction:column; align-items:center; gap:var(--spacing-8); min-width:0}
 .sld-ref__lbl{font-size:12px; line-height:16px; font-weight:600; color:var(--f-ink,var(--ink))}
-.sld-ref__cap{font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; color:var(--f-text,var(--ink-2))}
+.sld-ref__cap{font-family:'DM Sans',var(--font),sans-serif; font-size:12px; color:var(--f-text,var(--ink-2))}
 .sld-ref__box{display:flex; align-items:center; justify-content:center; box-sizing:border-box; width:100%; min-height:88px; padding:24px 20px;
   border-radius:8px; background:#ffffff; overflow:hidden}
 .sld-ref__box--tip{padding-top:44px}
@@ -5979,7 +5988,7 @@ button.rox-nb,button.rox-x,button.rox-tab,button.rox-btn{cursor:pointer}
 .rox-play .rox-play__stage > .rox-fit{flex:1 1 auto}
 .rox-play .rox-play__props{margin:0; padding:var(--spacing-12) var(--spacing-16); border-top:1px solid var(--f-line,var(--hairline));
   font-size:12px; line-height:16px; color:var(--f-text,var(--ink-2))}
-.rox-play .rox-play__props code{font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; font-weight:400; color:var(--f-ink,var(--ink)); white-space:normal; word-break:break-word}
+.rox-play .rox-play__props code{font-family:'DM Sans',var(--font),sans-serif; font-size:12px; font-weight:400; color:var(--f-ink,var(--ink)); white-space:normal; word-break:break-word}
 /* hidden properties (another header's, or Level 2/3 at a lower Level) — beats the shared label:has(select|text) display:flex */
 .dw-play--panel.rox-play .dw-play__opts label[hidden]{display:none}
 
@@ -6002,7 +6011,7 @@ button.rox-nb,button.rox-x,button.rox-tab,button.rox-btn{cursor:pointer}
 /* "In Figma: …" readout under the preview. */
 .docs-content .skl-play__props{margin:0; padding:var(--spacing-12,12px) var(--spacing-16,16px); border-top:1px solid var(--f-line,var(--hairline));
   font-size:12px; line-height:16px; color:var(--f-text,var(--ink-2))}
-.skl-play__props code{font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:12px; font-weight:400; color:var(--f-ink,var(--ink)); white-space:normal; word-break:break-word}
+.skl-play__props code{font-family:'DM Sans',var(--font),sans-serif; font-size:12px; font-weight:400; color:var(--f-ink,var(--ink)); white-space:normal; word-break:break-word}
 
 /* Component values are the full Figma names ("Skeleton / Table cell"): let this select take the free width. */
 .skl-play .dw-play__sel[data-skl-comp]{flex:1 1 auto; width:auto; max-width:180px; padding-right:24px; background-position:right 6px center}

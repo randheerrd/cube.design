@@ -345,3 +345,18 @@
   fit(); window.addEventListener('load',fit);
 })();
 </script>
+<script>
+(function(){
+  /* Option previews: a widget header wider than its card (narrow screens)
+     scales down to fit instead of being cut off at the card edge. */
+  var els=[].slice.call(document.querySelectorAll('.bx-opt__stage > .dw-h'));
+  function fit(){els.forEach(function(h){
+    h.style.zoom=''; var st=h.parentElement, cs=getComputedStyle(st),
+        avail=st.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight), w=h.scrollWidth;
+    if(avail>0 && w>avail) h.style.zoom=(Math.floor(avail/w*1000)/1000).toString();
+  });}
+  var t; window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(fit,100);});
+  fit(); window.addEventListener('load',fit);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
+})();
+</script>
