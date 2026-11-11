@@ -89,6 +89,10 @@ PAGES = [
      "Icon guidelines — Phosphor Icons, weights, sizes, colour, approved icons and a searchable library."),
     ("docs-icons-specifications", "Icons specs", "Icons specifications — Cube Design System",
      "Icon tokens, the React Icon wrapper, the registry and setup for Phosphor Icons."),
+    ("docs-bar-chart", "Bar chart", "Bar chart — Cube Design System",
+     "Bar chart guidelines — vertical columns, stacked and combo charts, horizontal bar lists, anatomy and do’s and don’ts."),
+    ("docs-bar-chart-specifications", "Bar chart specs", "Bar chart specifications — Cube Design System",
+     "Every dimension, colour token and property for Bar chart/Vertical, Bar chart/Horizontal, _Bar and _Bar segment."),
     ("docs-trends", "Trends", "Trends — Cube Design System",
      "Trend guidelines — Trends-composition line chart, metric selection, time steps and the Metric-trends-group KPI row."),
     ("docs-trends-specifications", "Trends specs", "Trends specifications — Cube Design System",
@@ -240,7 +244,7 @@ HIDDEN = {"internal", "craft", "team", "docs", "docs-tooltips", "docs-tooltips-s
           "docs-selection", "docs-selection-specifications",
           "docs-segmented", "docs-segmented-specifications",
           "docs-checkbox", "docs-checkbox-specifications",
-          "docs-accordion", "docs-accordion-specifications", "docs-avatar", "docs-avatar-specifications", "docs-divider", "docs-divider-specifications", "docs-file-upload", "docs-file-upload-specifications", "docs-skeleton", "docs-skeleton-specifications", "docs-subscription-card", "docs-subscription-card-specifications", "docs-card", "docs-card-specifications", "docs-slider", "docs-slider-specifications"}
+          "docs-accordion", "docs-accordion-specifications", "docs-avatar", "docs-avatar-specifications", "docs-divider", "docs-divider-specifications", "docs-file-upload", "docs-file-upload-specifications", "docs-skeleton", "docs-skeleton-specifications", "docs-subscription-card", "docs-subscription-card-specifications", "docs-card", "docs-card-specifications", "docs-slider", "docs-slider-specifications", "docs-bar-chart", "docs-bar-chart-specifications"}
 
 # Guarded by INTERNAL_PASSWORD rather than SITE_PASSWORD.
 INTERNAL_PAGES = {"internal"}
@@ -278,7 +282,7 @@ DOCS = {"docs", "docs-tooltips", "docs-tooltips-specifications", "docs-buttons-s
           "docs-selection", "docs-selection-specifications",
           "docs-segmented", "docs-segmented-specifications",
           "docs-checkbox", "docs-checkbox-specifications",
-          "docs-accordion", "docs-accordion-specifications", "docs-avatar", "docs-avatar-specifications", "docs-divider", "docs-divider-specifications", "docs-file-upload", "docs-file-upload-specifications", "docs-skeleton", "docs-skeleton-specifications", "docs-subscription-card", "docs-subscription-card-specifications", "docs-card", "docs-card-specifications", "docs-slider", "docs-slider-specifications"}
+          "docs-accordion", "docs-accordion-specifications", "docs-avatar", "docs-avatar-specifications", "docs-divider", "docs-divider-specifications", "docs-file-upload", "docs-file-upload-specifications", "docs-skeleton", "docs-skeleton-specifications", "docs-subscription-card", "docs-subscription-card-specifications", "docs-card", "docs-card-specifications", "docs-slider", "docs-slider-specifications", "docs-bar-chart", "docs-bar-chart-specifications"}
 
 
 EDITION_HEAD = (
