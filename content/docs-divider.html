@@ -54,16 +54,19 @@
       <ul>
         <li><a href="docs-accordion.html">Accordion <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-avatar.html">Avatar <span class="docs-nav__new">New</span></a></li>
-        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
         <li><a href="docs-bottomsheet.html">Bottom sheet <span class="docs-nav__new">New</span></a></li>
-        <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-card.html">Card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-divider.html" aria-current="page">Divider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-slider.html">Slider <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
+        <li><a href="docs-banners.html">Banner &amp; Toasts</a></li>
+        <li><a href="docs.html">Buttons</a></li>
         <li><a href="docs-chips.html">Chips, Tags &amp; Legends</a></li>
         <li><a href="docs-dates.html">Date Selector</a></li>
-        <li><a href="docs-divider.html" aria-current="page">Divider <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-dropdown.html">Dropdown</a></li>
         <li><a href="docs-empty-states.html">Empty States</a></li>
-        <li><a href="docs-file-upload.html">File upload <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-filters.html">Filters</a></li>
         <li><a href="docs-header.html">Header</a></li>
         <li><a href="docs-inputs.html">Inputs</a></li>
@@ -79,9 +82,7 @@
           </ul>
         </li>
         <li><a href="docs-sidenav.html">Side Nav</a></li>
-        <li><a href="docs-skeleton.html">Skeleton <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-stepper.html">Stepper</a></li>
-        <li><a href="docs-subscription-card.html">Subscription card <span class="docs-nav__new">New</span></a></li>
         <li><a href="docs-swimlanes.html">Swimlanes</a></li>
         <li><a href="docs-tabs.html">Tabs</a></li>
         <li><a href="docs-table.html">Tables</a></li>
@@ -156,7 +157,7 @@
             <div><h3>Three properties</h3><p><strong>type</strong> horizontal | vertical &middot; <strong>Style</strong> Solid | Dashed &middot; <strong>Emphasis</strong> Subtle | Default | Strong.</p></div>
             <div><h3>Pick the emphasis</h3><p><strong>Subtle</strong> for most cases (lists, dense UI), <strong>Default</strong> for cards and accordions, <strong>Strong</strong> for section breaks.</p></div>
           </div>
-          <div class="docs-demo"><div class="dw-play dvd-play" id="dvd-play"><div class="dw-play__opts" role="group" aria-label="Divider properties"><span class="dvd-play__grp" role="radiogroup" aria-label="type"><b>type</b><label><input type="radio" name="dvd-type" value="horizontal" checked>horizontal</label><label><input type="radio" name="dvd-type" value="vertical">vertical</label></span><span class="dvd-play__grp" role="radiogroup" aria-label="Style"><b>Style</b><label><input type="radio" name="dvd-style" value="Solid" checked>Solid</label><label><input type="radio" name="dvd-style" value="Dashed">Dashed</label></span><span class="dvd-play__grp" role="radiogroup" aria-label="Emphasis"><b>Emphasis</b><label><input type="radio" name="dvd-emph" value="Subtle">Subtle</label><label><input type="radio" name="dvd-emph" value="Default" checked>Default</label><label><input type="radio" name="dvd-emph" value="Strong">Strong</label></span></div><div class="dvd-play__stage" data-type="horizontal"><div class="dvd-list"><div class="dvd-list__row">Platform settings</div><div class="dvd dvd--h dvd--default" data-dvd aria-hidden="true"><span class="dvd__line"></span></div><div class="dvd-list__row">Notifications</div><div class="dvd dvd--h dvd--default" data-dvd aria-hidden="true"><span class="dvd__line"></span></div><div class="dvd-list__row">Team members</div><div class="dvd dvd--h dvd--default" data-dvd aria-hidden="true"><span class="dvd__line"></span></div><div class="dvd-list__row">Billing</div></div><div class="dvd-inline"><span>Time Period · MTD</span><div class="dvd dvd--v dvd--default" data-dvd aria-hidden="true"><span class="dvd__line"></span></div><span>Compare with · LM</span><div class="dvd dvd--v dvd--default" data-dvd aria-hidden="true"><span class="dvd__line"></span></div><span>Data till 12 May</span></div></div><p class="dvd-play__out" aria-live="polite"><span>Variant: <code data-dvd-variant>type=horizontal, Style=Solid, Emphasis=Default</code></span><span>Colour: <span class="msg-sw" data-dvd-sw style="background:#cad2d7"></span><code data-dvd-token>Semantics/Primary-text/200 &middot; #CAD2D7</code></span><span>Code: <code data-dvd-code>&lt;Divider orientation="horizontal" variant="solid" emphasis="default" /&gt;</code></span></p></div><p class="docs-demo__caption">Try it: switch the three properties. Horizontal dividers are shown between list rows, vertical ones between inline items.</p></div>
+          <div class="docs-demo"><div class="dw-play dw-play--panel dvd-play" id="dvd-play"><div class="dw-play__opts" role="group" aria-label="Divider properties"><label>type <select class="dw-play__sel dvd-play__sel" name="dvd-type" aria-label="type"><option value="horizontal" selected>horizontal</option><option value="vertical">vertical</option></select></label><label>Style <select class="dw-play__sel dvd-play__sel" name="dvd-style" aria-label="Style"><option value="Solid" selected>Solid</option><option value="Dashed">Dashed</option></select></label><label>Emphasis <select class="dw-play__sel dvd-play__sel" name="dvd-emph" aria-label="Emphasis"><option value="Subtle">Subtle</option><option value="Default" selected>Default</option><option value="Strong">Strong</option></select></label></div><div class="dw-play__stage dvd-play__stage" data-type="horizontal"><div class="dvd-list"><div class="dvd-list__row">Platform settings</div><div class="dvd dvd--h dvd--default" data-dvd aria-hidden="true"><span class="dvd__line"></span></div><div class="dvd-list__row">Notifications</div><div class="dvd dvd--h dvd--default" data-dvd aria-hidden="true"><span class="dvd__line"></span></div><div class="dvd-list__row">Team members</div><div class="dvd dvd--h dvd--default" data-dvd aria-hidden="true"><span class="dvd__line"></span></div><div class="dvd-list__row">Billing</div></div><div class="dvd-inline"><span>Time Period · MTD</span><div class="dvd dvd--v dvd--default" data-dvd aria-hidden="true"><span class="dvd__line"></span></div><span>Compare with · LM</span><div class="dvd dvd--v dvd--default" data-dvd aria-hidden="true"><span class="dvd__line"></span></div><span>Data till 12 May</span></div></div><p class="dvd-play__out" aria-live="polite"><span>Variant: <code data-dvd-variant>type=horizontal, Style=Solid, Emphasis=Default</code></span><span>Colour: <span class="msg-sw" data-dvd-sw style="background:#cad2d7"></span><code data-dvd-token>Semantics/Primary-text/200 &middot; #CAD2D7</code></span><span>Code: <code data-dvd-code>&lt;Divider orientation="horizontal" variant="solid" emphasis="default" /&gt;</code></span></p></div><p class="docs-demo__caption">Try it: change the three properties in the panel. Horizontal dividers are shown between list rows, vertical ones between inline items.</p></div>
         </section>
         <section id="anatomy">
           <h2>Anatomy</h2>
@@ -284,7 +285,7 @@
       var svg=mk('svg',{'class':'bx-anatomy__lines','aria-hidden':'true'});
       [].slice.call(box.querySelectorAll('[data-anatomy]')).forEach(function(el){
         var n=+el.getAttribute('data-anatomy'), d=dirs[n-1]||'top', r=el.getBoundingClientRect();
-        var x=r.left-c.left, y=r.top-c.top, w=r.width, h=r.height, ax, ay, bx, by;
+        var zf=(function(e){ /* Safari and older Chrome report boxes inside a CSS-zoomed element without the zoom: scale them back */if(window.__bxZL===undefined){var p=document.createElement('div'),q=document.createElement('div');p.style.cssText='zoom:2;position:absolute;visibility:hidden';q.style.width='10px';p.appendChild(q);document.body.appendChild(p);window.__bxZL=q.getBoundingClientRect().width<15;p.remove();}if(!window.__bxZL)return 1;var z=1;for(;e&&e.nodeType===1;e=e.parentElement){var v=parseFloat(getComputedStyle(e).zoom);if(v&&v!==1)z*=v;}return z;})(el), x=r.left*zf-c.left, y=r.top*zf-c.top, w=r.width*zf, h=r.height*zf, ax, ay, bx, by;
         var half=el.hasAttribute('data-center')?w/2:Math.min(w/2,18), STEM=+el.getAttribute('data-stem')||28;
         svg.appendChild(mk('rect',{x:x-2,y:y-2,width:w+4,height:h+4}));
         if(d==='top'){ax=x+half;ay=y-2;bx=ax;by=ay-STEM;}
@@ -307,12 +308,13 @@
 </script>
 <script>
 (function(){
-  /* At a glance playground: type / Style / Emphasis radios drive every
-     divider in the stage and the variant / token / code read-out. */
+  /* At a glance playground: the type / Style / Emphasis selects (Figma's
+     variant properties) drive every divider in the stage and the
+     variant / token / code read-out. */
   var root=document.getElementById('dvd-play'); if(!root) return;
   var stage=root.querySelector('.dvd-play__stage');
   var TOK={Subtle:['Semantics/Secondary-text/100','#E8EAEE'],Default:['Semantics/Primary-text/200','#CAD2D7'],Strong:['Semantics/Secondary-text/300','#BFC5CF']};
-  function val(n){var r=root.querySelector('input[name="'+n+'"]:checked');return r?r.value:'';}
+  function val(n){var r=root.querySelector('select[name="'+n+'"]');return r?r.value:'';}
   function update(){
     var t=val('dvd-type'), s=val('dvd-style'), e=val('dvd-emph');
     stage.setAttribute('data-type',t);
@@ -326,7 +328,7 @@
     root.querySelector('[data-dvd-sw]').style.background=TOK[e][1];
     root.querySelector('[data-dvd-code]').textContent='<Divider orientation="'+t+'" variant="'+s.toLowerCase()+'" emphasis="'+e.toLowerCase()+'" />';
   }
-  root.querySelectorAll('input[type="radio"]').forEach(function(r){r.addEventListener('change',update);});
+  root.querySelectorAll('.dw-play__opts select').forEach(function(r){r.addEventListener('change',update);});
   update();
 })();
 </script>
